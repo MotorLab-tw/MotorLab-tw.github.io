@@ -168,6 +168,76 @@ About 區塊**不要**加「由 XXX 創立」「Lead Developer: XXX」等署名�
 - 暫時把 footer 商標聲明改為更顯眼（例如加邊框、放大字級）
 - 等使用者法律諮詢後再做後續處理
 
+### D11. SEO 優化基礎建設（**已實作完成，維護時遵循這套架構**）
+
+**已實作的 SEO 完整清單**：
+
+1. **基礎 meta 標籤**
+   - `<title>` 含品牌名 + 主關鍵字 + 副標
+   - `<meta description>` 約 150 字內，含主要關鍵字
+   - `<meta keywords>` 含中、英、日三語關鍵字
+   - `<link rel="canonical">` 標示正規網址
+   - `<meta robots>` 與 `<meta googlebot>` 明確允許索引
+
+2. **多語言 hreflang**
+   - `<link rel="alternate" hreflang="zh-TW">` 中文版
+   - `<link rel="alternate" hreflang="en">` 英文版（用 `?lang=en` 參數區分）
+   - `<link rel="alternate" hreflang="x-default">` 預設版本
+
+3. **Open Graph + Twitter Card**（完整社群分享卡）
+   - `og:image:alt` 含替代文字（無障礙）
+   - `og:image:type`、`og:image:secure_url` 完整聲明
+   - Twitter Card 使用 `summary_large_image`
+
+4. **三套 JSON-LD 結構化資料**
+   - `Organization` — 工作室資訊（含 contactPoint）
+   - `WebSite` — 網站本體與多語版本
+   - `Product` — MotorLab 產品資訊（含 featureList 9 項功能）
+
+5. **支援檔案**
+   - `sitemap.xml` — 含 `xhtml:link` 多語言 + `image:image` 圖片標籤
+   - `robots.txt` — 含 Disallow 內部文件（HANDOFF/DEPLOYMENT 等）+ AI 訓練爬蟲封鎖（GPTBot/CCBot/anthropic-ai）
+   - `site.webmanifest` — PWA 支援（可加到行動裝置主畫面）
+
+6. **行動裝置**
+   - `theme-color` 在 iOS/Android 工具列顯示品牌色
+   - `apple-mobile-web-app-*` 系列 meta（加到主畫面時的全螢幕模式）
+   - viewport 已設定
+
+**SEO 維護規則（行為不變式）**：
+
+- ❌ **不要拿掉 canonical** — 多版本時必須指向主要版本
+- ❌ **不要在 keywords 加無關詞** — Google 雖然不看 keywords，但堆砌可能傷害品質分
+- ❌ **不要刪除 JSON-LD 任何一塊** — 三套 schema 互補
+- ❌ **不要在 robots.txt 開放 HANDOFF.md / DEPLOYMENT.md** 索引（內部文件不該出現在搜尋結果）
+- ✅ **發布新韌體版本時，同步更新 JSON-LD 的 `softwareVersion`**
+- ✅ **改 title/description 時，主關鍵字「Mini 4WD」「馬達磨合」「MotorLab」要保留**
+- ✅ **改 sitemap.xml 時，記得更新 `<lastmod>` 為當天日期**
+
+**SEO 工具與檢測（建議定期跑）**：
+
+| 工具 | 用途 |
+|---|---|
+| https://search.google.com/search-console | Google 索引狀態與搜尋表現 |
+| https://www.opengraph.xyz/ | OG 卡片預覽（FB/LINE/Twitter） |
+| https://search.google.com/test/rich-results | JSON-LD 結構化資料驗證 |
+| https://pagespeed.web.dev/ | Core Web Vitals 效能評分 |
+| https://validator.w3.org/ | HTML 標準驗證 |
+| https://ahrefs.com/webmaster-tools | 反向連結與關鍵字追蹤（免費） |
+
+**如果使用者問「網站還沒被 Google 找到怎麼辦」**：
+1. 確認已在 Google Search Console 提交 sitemap
+2. 確認 robots.txt 沒擋掉 Googlebot
+3. 用 Search Console 的「網址檢查」工具請求重新索引
+4. 等 1-2 週（新站首次索引時間）
+
+**SEO 改進方向（未來可加）**：
+- [ ] 加上 FAQPage schema（用使用者手冊的 FAQ 內容）
+- [ ] 加上 Breadcrumb schema（如果未來新增子頁面）
+- [ ] 加上 VideoObject schema（如果之後加 Demo 影片）
+- [ ] 開部落格放長文章（最有效但工作量大）
+- [ ] 申請 backlinks（找田宮迷你四驅車相關社群、玩家論壇互相連結）
+
 ---
 
 ## 3. 已否決的路線（**不要再提案**）

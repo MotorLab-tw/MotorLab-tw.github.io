@@ -1,0 +1,45 @@
+{
+  "name": "MotorLab — Mini 4WD® Motor Lab",
+  "short_name": "MotorLab",
+  "description": "為 Mini 4WD® 玩家打造的精密馬達磨合與測試系統",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1d23",
+  "theme_color": "#1a1d23",
+  "lang": "zh-TW",
+  "scope": "/",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "utilities"],
+  "screenshots": [
+    {
+      "src": "/og-image.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "label": "MotorLab 官方網站首頁"
+    }
+  ]
+}

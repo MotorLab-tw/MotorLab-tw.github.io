@@ -1,7 +1,36 @@
 # MotorLab.tw — robots.txt
-# 允許所有搜尋引擎索引整個網站
+# 允許所有合法搜尋引擎索引整個網站
 
 User-agent: *
 Allow: /
+Disallow: /HANDOFF.md
+Disallow: /DEPLOYMENT.md
+Disallow: /CHANGELOG_TEMPLATE.md
+Disallow: /CNAME.example
 
+# Sitemap
 Sitemap: https://motorlab-tw.github.io/sitemap.xml
+
+# 主流搜尋引擎明確列出
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# 禁止某些惡意爬蟲與 AI 訓練爬蟲(可選, 看你的偏好)
+# 如果你不介意內容被 AI 訓練,可以把下面這段刪掉
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
