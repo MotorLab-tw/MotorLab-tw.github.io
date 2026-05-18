@@ -1,0 +1,7 @@
+# MotorLab.tw — robots.txt
+# 允許所有搜尋引擎索引整個網站
+
+User-agent: *
+Allow: /
+
+Sitemap: https://motorlab-tw.github.io/sitemap.xml

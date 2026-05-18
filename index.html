@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html lang="zh-TW" translate="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Language" content="zh-TW">
+<title>MotorLab — Mini 4WD 馬達磨合測試系統</title>
+<meta name="description" content="專為 Mini 4WD® 玩家打造的精密馬達磨合與測試系統。內建 AI 智慧馬達健康管理、軸承阻力測試、電刷接觸穩定診斷。">
+<meta name="author" content="MotorLab.tw">
+<meta name="keywords" content="Mini 4WD, 馬達磨合, 馬達測試, motor break-in, motor test, MotorLab, motor health analyzer">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#1a1d23">
+
+<!-- Open Graph (Facebook, LINE, Discord) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://motorlab-tw.github.io/">
+<meta property="og:title" content="MotorLab — Mini 4WD Motor Lab">
+<meta property="og:description" content="為每一顆馬達建立可量化的健康指紋。十階段磨合、AI 健康管理、軸承衰減分析、電刷穩定診斷。">
+<meta property="og:image" content="https://motorlab-tw.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:site_name" content="MotorLab.tw">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MotorLab — Mini 4WD Motor Lab">
+<meta name="twitter:description" content="為每一顆馬達建立可量化的健康指紋">
+<meta name="twitter:image" content="https://motorlab-tw.github.io/og-image.png">
+
+<!-- 結構化資料 (Google 搜尋結果增強) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "MotorLab.tw",
+  "alternateName": "MotorLab",
+  "url": "https://motorlab-tw.github.io/",
+  "logo": "https://motorlab-tw.github.io/favicon-192.png",
+  "description": "為 Mini 4WD 玩家打造的精密馬達磨合與測試系統",
+  "email": "motorlab.tw@gmail.com",
+  "sameAs": [
+    "https://github.com/MotorLab-tw"
+  ]
+}
+</script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    /* Nord 主題 — 與實機 Web UI 完全一致 */
+    --bg-primary: #1a1d23;
+    --bg-secondary: #2e3440;
+    --bg-tertiary: #3b4252;
+    --bg-elevated: #434c5e;
+    --border: #4c566a;
+    --border-bright: #5e81ac;
+    --text-primary: #eceff4;
+    --text-secondary: #d8dee9;
+    --text-muted: #8fbcbb;
+    --accent-cyan: #88c0d0;     /* 北極藍 — 主要強調色 */
+    --accent-blue: #5e81ac;     /* 邊框藍 */
+    --accent-purple: #b48ead;   /* PRO 紫 */
+    --success: #a3be8c;         /* 運轉中綠 */
+    --warning: #ebcb8b;         /* 警告黃 */
+    --danger: #bf616a;          /* 錯誤紅 */
+    --info: #81a1c1;            /* 資訊藍 */
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: -apple-system, "Microsoft JhengHei", "微軟正黑體", "PingFang TC", sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: 14px;
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  /* 細微網格背景 — 工程儀器感 */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(136, 192, 208, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(136, 192, 208, 0.025) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ===== 導覽列 ===== */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(26, 29, 35, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 24px;
+    max-width: 1180px;
+    margin: 0 auto;
+    gap: 16px;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text-primary);
+    text-decoration: none;
+  }
+  .logo-mark {
+    width: 28px;
+    height: 28px;
+    border: 2px solid var(--accent-cyan);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .logo-mark::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--accent-cyan);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--accent-cyan);
+  }
+  .logo .tag {
+    color: var(--accent-cyan);
+    font-size: 11px;
+    font-weight: normal;
+    border: 1px solid var(--accent-cyan);
+    padding: 1px 6px;
+    border-radius: 3px;
+    margin-left: 4px;
+  }
+  .nav-links {
+    display: flex;
+    gap: 8px;
+    list-style: none;
+  }
+  .nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    transition: all 0.2s;
+  }
+  .nav-links a:hover {
+    background: var(--bg-tertiary);
+    color: var(--accent-cyan);
+  }
+  .lang-switch {
+    display: flex;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    font-size: 12px;
+  }
+  .lang-btn {
+    background: var(--bg-secondary);
+    border: none;
+    color: var(--text-muted);
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s;
+  }
+  .lang-btn.active {
+    background: var(--accent-cyan);
+    color: var(--bg-primary);
+    font-weight: bold;
+  }
+
+  /* ®、™ 等商標上標的全域樣式 */
+  sup {
+    font-size: 0.55em;
+    vertical-align: super;
+    line-height: 0;
+    color: var(--text-muted);
+    margin-left: 1px;
+    font-weight: normal;
+  }
+  h1 sup, h2 sup, h3 sup {
+    color: var(--accent-cyan);
+    opacity: 0.7;
+  }
+
+  /* ===== Hero ===== */
+  .hero {
+    padding: 80px 0 60px;
+    position: relative;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    color: var(--accent-cyan);
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+  .hero-badge::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--success);
+    border-radius: 50%;
+    box-shadow: 0 0 6px var(--success);
+    animation: blink 2s ease-in-out infinite;
+  }
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+  .hero h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: bold;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    letter-spacing: -0.01em;
+  }
+  .hero h1 .accent { color: var(--accent-cyan); }
+  .hero p.lead {
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-bottom: 28px;
+    line-height: 1.75;
+  }
+  .hero-cta {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s;
+    border: 2px solid transparent;
+    font-family: inherit;
+  }
+  .btn-primary {
+    background: var(--accent-blue);
+    color: var(--text-primary);
+    border-color: var(--accent-blue);
+  }
+  .btn-primary:hover {
+    background: var(--accent-cyan);
+    border-color: var(--accent-cyan);
+    color: var(--bg-primary);
+  }
+  .btn-secondary {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    border-color: var(--border);
+  }
+  .btn-secondary:hover {
+    border-color: var(--accent-cyan);
+    color: var(--accent-cyan);
+  }
+  .btn-purchase {
+    /* Gumroad 購買按鈕 — 暫時隱藏 */
+    display: none;
+    background: var(--success);
+    color: var(--bg-primary);
+    border-color: var(--success);
+    font-weight: bold;
+  }
+
+  /* ===== 實機 UI 模擬視窗（Hero 右側） ===== */
+  .device-mockup {
+    background: var(--bg-primary);
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    position: relative;
+  }
+  .mockup-titlebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 12px;
+  }
+  .mockup-url {
+    font-family: monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+  .mockup-dots {
+    display: flex;
+    gap: 6px;
+  }
+  .mockup-dots span {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--bg-elevated);
+  }
+  .mockup-h1 {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+  }
+  .mockup-h1 .pro-tag {
+    background: var(--accent-purple);
+    color: var(--bg-primary);
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    margin-left: 6px;
+    font-weight: bold;
+  }
+  .data-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+  .data-cell {
+    background: var(--bg-secondary);
+    padding: 10px;
+    border-radius: 4px;
+  }
+  .data-cell .label {
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+  .data-cell .value {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 2px;
+    font-family: monospace;
+    color: var(--text-primary);
+  }
+  .data-cell .unit {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-left: 3px;
+  }
+  .status-box {
+    background: var(--bg-secondary);
+    padding: 8px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: var(--success);
+    border-left: 3px solid var(--success);
+  }
+
+  /* ===== 區段標題 ===== */
+  section {
+    padding: 80px 0;
+    position: relative;
+  }
+  .section-header {
+    margin-bottom: 48px;
+    text-align: center;
+  }
+  .section-tag {
+    display: inline-block;
+    color: var(--accent-cyan);
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .section-title {
+    font-size: clamp(26px, 4vw, 38px);
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+  }
+  .section-subtitle {
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+
+  /* ===== 七大功能 ===== */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 16px;
+  }
+  .feature-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px;
+    transition: all 0.25s;
+    position: relative;
+  }
+  .feature-card:hover {
+    border-color: var(--border-bright);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+  .feature-card.pro-only::before {
+    content: 'PRO';
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: var(--accent-purple);
+    color: var(--bg-primary);
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 3px;
+  }
+  .feature-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--bg-tertiary);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+    color: var(--accent-cyan);
+  }
+  .feature-icon svg {
+    width: 22px;
+    height: 22px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+  }
+  .feature-card h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+  }
+  .feature-card p {
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+    line-height: 1.7;
+  }
+  .feature-meta {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px dashed var(--border);
+  }
+  .feature-tag {
+    font-size: 11px;
+    color: var(--text-muted);
+    background: var(--bg-tertiary);
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-family: monospace;
+  }
+
+  /* ===== 版本對比 ===== */
+  .version-compare {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .version-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .version-table thead th {
+    background: var(--bg-tertiary);
+    padding: 20px 16px;
+    text-align: center;
+    font-size: 14px;
+    border-bottom: 2px solid var(--border);
+  }
+  .version-table thead th:first-child {
+    text-align: left;
+    color: var(--text-muted);
+    font-weight: normal;
+  }
+  .version-table thead th.m1-col {
+    color: var(--accent-cyan);
+    font-size: 18px;
+  }
+  .version-table thead th.pro-col {
+    color: var(--accent-purple);
+    font-size: 18px;
+    background: linear-gradient(135deg, var(--bg-tertiary), rgba(180, 142, 173, 0.1));
+  }
+  .version-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border);
+    font-size: 13.5px;
+  }
+  .version-table td:first-child {
+    color: var(--text-secondary);
+  }
+  .version-table td.center {
+    text-align: center;
+  }
+  .check { color: var(--success); font-size: 16px; font-weight: bold; }
+  .cross { color: var(--text-muted); font-size: 16px; }
+  .version-table tbody tr:hover {
+    background: var(--bg-tertiary);
+  }
+  .version-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* ===== 技術能力（不透露電路硬體，只講分析技術） ===== */
+  .tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+  }
+  .tech-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px;
+  }
+  .tech-card .tech-name {
+    color: var(--accent-cyan);
+    font-size: 12px;
+    font-family: monospace;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+  }
+  .tech-card h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .tech-card p {
+    color: var(--text-secondary);
+    font-size: 13.5px;
+    line-height: 1.7;
+  }
+
+  /* ===== Changelog ===== */
+  .changelog {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+  .changelog-item {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 28px;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .changelog-item:first-child { padding-top: 0; }
+  .changelog-item:last-child { border-bottom: none; }
+  .changelog-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .version-badge {
+    font-family: monospace;
+    color: var(--accent-cyan);
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .version-badge.latest::after {
+    content: 'LATEST';
+    background: var(--success);
+    color: var(--bg-primary);
+    font-size: 9px;
+    padding: 1px 6px;
+    border-radius: 3px;
+    margin-left: 6px;
+    font-weight: bold;
+    vertical-align: middle;
+  }
+  .changelog-date {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-family: monospace;
+  }
+  .changelog-content h4 {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+  }
+  .changelog-content ul {
+    list-style: none;
+  }
+  .changelog-content li {
+    font-size: 13px;
+    color: var(--text-secondary);
+    padding: 3px 0 3px 16px;
+    position: relative;
+  }
+  .changelog-content li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--accent-cyan);
+  }
+  .change-type {
+    display: inline-block;
+    font-family: monospace;
+    font-size: 10px;
+    padding: 1px 6px;
+    border-radius: 3px;
+    margin-right: 6px;
+    font-weight: bold;
+  }
+  .change-new { background: rgba(163, 190, 140, 0.18); color: var(--success); }
+  .change-fix { background: rgba(235, 203, 139, 0.18); color: var(--warning); }
+  .change-improve { background: rgba(136, 192, 208, 0.18); color: var(--accent-cyan); }
+  .change-security { background: rgba(180, 142, 173, 0.18); color: var(--accent-purple); }
+
+  /* ===== 關於 ===== */
+  .about-box {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 48px;
+    max-width: 820px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .about-box p {
+    color: var(--text-secondary);
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 16px;
+  }
+  .about-box p.lead {
+    color: var(--text-primary);
+    font-size: 17px;
+  }
+  .about-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 32px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+  }
+  .stat-num {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--accent-cyan);
+    font-family: monospace;
+  }
+  .stat-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 4px;
+  }
+
+  /* ===== 聯絡 ===== */
+  .contact-box {
+    background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+    border: 1px solid var(--border-bright);
+    border-radius: 12px;
+    padding: 56px 40px;
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .contact-box h2 {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+  .contact-box p {
+    color: var(--text-secondary);
+    margin-bottom: 28px;
+  }
+  .contact-methods {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.2s;
+  }
+  .contact-link:hover {
+    border-color: var(--accent-cyan);
+    color: var(--accent-cyan);
+    transform: translateY(-2px);
+  }
+  .contact-link svg {
+    width: 16px;
+    height: 16px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+  }
+
+  /* ===== Footer ===== */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 0;
+    background: var(--bg-secondary);
+  }
+  .footer-trademark {
+    font-size: 11px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px dashed var(--border);
+    max-width: 920px;
+  }
+  .footer-trademark sup {
+    font-size: 9px;
+    color: var(--accent-cyan);
+    margin: 0 1px;
+  }
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+  .footer-inner .mono {
+    font-family: monospace;
+  }
+
+  /* About 區塊獨立工作室聲明 */
+  .about-disclaimer {
+    margin-top: 24px !important;
+    padding: 14px 18px;
+    background: var(--bg-primary);
+    border-left: 3px solid var(--accent-cyan);
+    border-radius: 4px;
+    font-size: 13px !important;
+    color: var(--text-muted) !important;
+    text-align: left;
+    line-height: 1.7 !important;
+  }
+
+  /* ===== RWD ===== */
+  @media (max-width: 880px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    .nav-links { display: none; }
+    .changelog-item {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    .about-box { padding: 32px 24px; }
+    .contact-box { padding: 40px 24px; }
+    .about-stats { grid-template-columns: 1fr; gap: 24px; }
+    .version-table { font-size: 12px; }
+    .version-table td, .version-table th { padding: 12px 8px; }
+  }
+
+  /* 載入動畫 */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.7s, transform 0.7s;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<!-- 導覽列 -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <span class="logo-mark"></span>
+      <span>MotorLab<span class="tag">.tw</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#features" data-i18n="nav.features">功能</a></li>
+      <li><a href="#versions" data-i18n="nav.versions">版本</a></li>
+      <li><a href="#tech" data-i18n="nav.tech">技術</a></li>
+      <li><a href="#changelog" data-i18n="nav.changelog">更新</a></li>
+      <li><a href="#about" data-i18n="nav.about">關於</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">聯絡</a></li>
+    </ul>
+    <div class="lang-switch">
+      <button class="lang-btn active" data-lang="zh">中</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge">
+          <span data-i18n="hero.badge">系統運作中 · v3.0.8</span>
+        </div>
+        <h1 data-i18n="hero.title">
+          為每一顆<br>
+          Mini 4WD<sup>®</sup> 馬達<br>
+          建立<span class="accent">健康指紋</span>
+        </h1>
+        <p class="lead" data-i18n="hero.lead">
+          MotorLab 是為 Mini 4WD<sup>®</sup> 玩家打造的精密馬達磨合與測試系統。從十階段可程式化磨合、軸承衰減量測、電刷接觸穩定診斷，到 AI 馬達健康管理 — 讓每一次調校都可量化、可重複、可比較。
+        </p>
+        <div class="hero-cta">
+          <a href="#features" class="btn btn-primary" data-i18n="hero.cta1">瀏覽功能</a>
+          <a href="#versions" class="btn btn-secondary" data-i18n="hero.cta2">M1 vs PRO</a>
+          <!-- Gumroad 購買連結 — 產品上線後將顯示 -->
+          <a href="#" class="btn btn-purchase" id="purchase-btn" data-i18n="hero.cta3">立即購買</a>
+        </div>
+      </div>
+
+      <!-- 實機 UI 模擬視窗 — 完全複刻 web_pages.h 風格 -->
+      <div class="device-mockup">
+        <div class="mockup-titlebar">
+          <span class="mockup-url">http://192.168.4.1/</span>
+          <div class="mockup-dots"><span></span><span></span><span></span></div>
+        </div>
+        <h2 class="mockup-h1">MotorLab <span class="pro-tag">PRO</span></h2>
+        <div class="data-grid">
+          <div class="data-cell">
+            <div class="label" data-i18n="mock.voltage">電壓</div>
+            <div class="value">2.50<span class="unit">V</span></div>
+          </div>
+          <div class="data-cell">
+            <div class="label" data-i18n="mock.current">電流</div>
+            <div class="value" id="mock-current">1.82<span class="unit">A</span></div>
+          </div>
+          <div class="data-cell">
+            <div class="label" data-i18n="mock.rpm">轉速</div>
+            <div class="value" id="mock-rpm">12,840<span class="unit">RPM</span></div>
+          </div>
+          <div class="data-cell">
+            <div class="label" data-i18n="mock.temp">溫度</div>
+            <div class="value">36.2<span class="unit">°C</span></div>
+          </div>
+        </div>
+        <div class="status-box" data-i18n="mock.status">● 磨合進行中 · 階段 6/10 · 已運行 02:48:33</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 七大功能 -->
+<section id="features">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag" data-i18n="features.tag">CORE FEATURES</div>
+      <h2 class="section-title" data-i18n="features.title">七大專業功能</h2>
+      <p class="section-subtitle" data-i18n="features.subtitle">從磨合到診斷，涵蓋 Mini 4WD 馬達生命週期的每一個關鍵環節。</p>
+    </div>
+
+    <div class="features-grid">
+      <!-- 馬達磨合 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>
+        </div>
+        <h3 data-i18n="f1.title">馬達磨合程式</h3>
+        <p data-i18n="f1.desc">十階段可程式化磨合，每階段獨立設定電壓、運轉方向、運轉時間、冷卻時間與穩定電流容差。模擬實車條件下的低速長時間磨合，讓電刷與整流子達到最佳貼合。</p>
+        <div class="feature-meta">
+          <span class="feature-tag">10 階段</span>
+          <span class="feature-tag" data-i18n="f1.tag2">智慧穩流判定</span>
+          <span class="feature-tag">~5 hr</span>
+        </div>
+      </div>
+
+      <!-- 馬達測試 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>
+        </div>
+        <h3 data-i18n="f2.title">馬達測試程式</h3>
+        <p data-i18n="f2.desc">單階段精密量測。給定電壓、方向、時間，即時觀察電流、轉速、溫度變化，並支援智慧穩流模式 — 電流達穩定即自動結束，效率與精度兼具。</p>
+        <div class="feature-meta">
+          <span class="feature-tag">0–4.5 V</span>
+          <span class="feature-tag" data-i18n="f2.tag2">即時圖表</span>
+          <span class="feature-tag" data-i18n="f2.tag3">雙模式</span>
+        </div>
+      </div>
+
+      <!-- AI 健康管理 (PRO) -->
+      <div class="feature-card pro-only">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 11-6.219-8.56"/><path d="M22 4l-10 10-3-3"/></svg>
+        </div>
+        <h3 data-i18n="f3.title">AI 智慧馬達健康管理</h3>
+        <p data-i18n="f3.desc">為每顆馬達建立基準健康指紋，後續檢測自動比對五大指標：電流特性、轉速衰減、溫升曲線、電流穩定度、振動頻譜分析，合成 0–100 分健康評級並提供文字診斷建議。</p>
+        <div class="feature-meta">
+          <span class="feature-tag" data-i18n="f3.tag1">FFT 頻譜</span>
+          <span class="feature-tag" data-i18n="f3.tag2">雷達圖</span>
+          <span class="feature-tag">20 motors</span>
+        </div>
+      </div>
+
+      <!-- 軸承阻力 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+        </div>
+        <h3 data-i18n="f4.title">軸承阻力測試</h3>
+        <p data-i18n="f4.desc">高速運轉後切斷電源，量測轉速衰減時間常數 τ。衰減越慢，軸承摩擦越小、健康度越高。10 秒完成一次量測，三次取平均可消除環境干擾。</p>
+        <div class="feature-meta">
+          <span class="feature-tag" data-i18n="f4.tag1">衰減 τ 分析</span>
+          <span class="feature-tag" data-i18n="f4.tag2">10 秒/次</span>
+        </div>
+      </div>
+
+      <!-- 電刷接觸 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <h3 data-i18n="f5.title">電刷接觸穩定測試</h3>
+        <p data-i18n="f5.desc">鎖定軸心後低電壓量測電流穩定度，以變異係數（CV%）量化電刷接觸均勻性。三角度循環測試涵蓋整圈整流子，準確抓出打火與磨損熱點。</p>
+        <div class="feature-meta">
+          <span class="feature-tag" data-i18n="f5.tag1">CV 變異係數</span>
+          <span class="feature-tag" data-i18n="f5.tag2">三角度循環</span>
+        </div>
+      </div>
+
+      <!-- 歷史紀錄 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <h3 data-i18n="f6.title">歷史紀錄管理</h3>
+        <p data-i18n="f6.desc">自動儲存最多 50 筆完整磨合紀錄，包含每階段詳細數據。支援 JSON / CSV 匯出、檔案匯入、一鍵套用回磨合頁。所有資料離線儲存於裝置，無雲端依賴。</p>
+        <div class="feature-meta">
+          <span class="feature-tag">JSON / CSV</span>
+          <span class="feature-tag" data-i18n="f6.tag2">離線儲存</span>
+          <span class="feature-tag">50 筆</span>
+        </div>
+      </div>
+
+      <!-- Web UI -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3 data-i18n="f7.title">內建 Web 操作介面</h3>
+        <p data-i18n="f7.desc">裝置自帶 WiFi 熱點與網頁操作介面，手機、平板、筆電皆可使用，無需安裝任何 App。WebSocket 即時數據推送，250ms 更新頻率。</p>
+        <div class="feature-meta">
+          <span class="feature-tag" data-i18n="f7.tag1">免安裝</span>
+          <span class="feature-tag">WebSocket</span>
+          <span class="feature-tag" data-i18n="f7.tag2">跨平台</span>
+        </div>
+      </div>
+
+      <!-- OTA 線上更新 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c2-2 3-5 3-9s-1-7-3-9m0 18c-2-2-3-5-3-9s1-7 3-9"/></svg>
+        </div>
+        <h3 data-i18n="f8.title">線上更新與防偽機制</h3>
+        <p data-i18n="f8.desc">透過家用 WiFi 自動取得最新韌體，內建 HMAC-SHA256 簽章驗證與雙韌體區自動回退機制，更新失敗自動切回前一版，杜絕磚機風險。</p>
+        <div class="feature-meta">
+          <span class="feature-tag">HMAC-SHA256</span>
+          <span class="feature-tag" data-i18n="f8.tag2">自動回退</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 版本對比 -->
+<section id="versions" style="background: rgba(0,0,0,0.15);">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag" data-i18n="versions.tag">EDITIONS</div>
+      <h2 class="section-title" data-i18n="versions.title">M1 與 PRO</h2>
+      <p class="section-subtitle" data-i18n="versions.subtitle">同一台機器，兩種授權層級。隨時可線上升級。</p>
+    </div>
+
+    <div class="version-compare">
+      <table class="version-table">
+        <thead>
+          <tr>
+            <th data-i18n="vt.feature">功能</th>
+            <th class="m1-col">M1</th>
+            <th class="pro-col">PRO</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-i18n="vt.r1">十階段馬達磨合程式</td>
+            <td class="center"><span class="check">✓</span></td>
+            <td class="center"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td data-i18n="vt.r2">單階段馬達測試</td>
+            <td class="center"><span class="check">✓</span></td>
+            <td class="center"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td data-i18n="vt.r3">歷史紀錄（50 筆）</td>
+            <td class="center"><span class="check">✓</span></td>
+            <td class="center"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td data-i18n="vt.r4">軸承阻力測試</td>
+            <td class="center"><span class="check">✓</span></td>
+            <td class="center"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td data-i18n="vt.r5">電刷接觸穩定測試</td>
+            <td class="center"><span class="check">✓</span></td>
+            <td class="center"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td data-i18n="vt.r6">即時 Web 操作介面</td>
+            <td class="center"><span class="check">✓</span></td>
+            <td class="center"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td data-i18n="vt.r7">線上韌體更新</td>
+            <td class="center"><span class="check">✓</span></td>
+            <td class="center"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td data-i18n="vt.r8">AI 智慧馬達健康管理（最多 20 顆）</td>
+            <td class="center"><span class="cross">—</span></td>
+            <td class="center"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td data-i18n="vt.r9">FFT 振動頻譜分析</td>
+            <td class="center"><span class="cross">—</span></td>
+            <td class="center"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td data-i18n="vt.r10">五大指標雷達圖診斷</td>
+            <td class="center"><span class="cross">—</span></td>
+            <td class="center"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td data-i18n="vt.r11">健康趨勢曲線追蹤</td>
+            <td class="center"><span class="cross">—</span></td>
+            <td class="center"><span class="check">✓</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 技術能力 -->
+<section id="tech">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag" data-i18n="tech.tag">TECHNOLOGY</div>
+      <h2 class="section-title" data-i18n="tech.title">內建專業分析技術</h2>
+      <p class="section-subtitle" data-i18n="tech.subtitle">每一項數據都來自業界驗證的量測方法。</p>
+    </div>
+
+    <div class="tech-grid">
+      <div class="tech-card">
+        <div class="tech-name">FFT_ANALYSIS</div>
+        <h4 data-i18n="t1.title">快速傅立葉變換頻譜</h4>
+        <p data-i18n="t1.desc">將馬達電流訊號轉換為頻域，分離出基頻、諧波與雜訊成分。從頻譜特徵即可判讀軸承異音、轉子失衡、整流子缺陷等隱性問題。</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-name">CV_COEFFICIENT</div>
+        <h4 data-i18n="t2.title">變異係數分析</h4>
+        <p data-i18n="t2.desc">統計學標準離散度指標（標準差 / 平均值），用於量化電刷接觸的穩定性。CV 越低代表接觸越均勻、打火越少。</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-name">TAU_DECAY</div>
+        <h4 data-i18n="t3.title">指數衰減時間常數</h4>
+        <p data-i18n="t3.desc">藉由轉速從高峰自由衰減的曲線，回歸出時間常數 τ，反映軸承摩擦係數。常用於精密馬達品管的核心物理量。</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-name">BASELINE_FINGERPRINT</div>
+        <h4 data-i18n="t4.title">基準指紋比對</h4>
+        <p data-i18n="t4.desc">為每顆馬達建立首次量測基準，後續比對皆採同器同馬達原則，排除馬達本身個體差異，純粹反映健康狀態變化。</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-name">STABILITY_LATCH</div>
+        <h4 data-i18n="t5.title">穩定電流鎖定演算法</h4>
+        <p data-i18n="t5.desc">滑動窗口偵測連續 N 秒內電流最大最小差值，達穩定後鎖定數值，避免暫時擾動造成誤判，提升量測重現性。</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-name">NOISE_FLOOR_SUBTRACT</div>
+        <h4 data-i18n="t6.title">雜訊底線扣除</h4>
+        <p data-i18n="t6.desc">量測前先採集儀器本身雜訊基準，後續訊號扣除其平方差，分離出馬達真實訊號變化，讓微小異常也無所遁形。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Changelog -->
+<section id="changelog" style="background: rgba(0,0,0,0.15);">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag" data-i18n="cl.tag">CHANGELOG</div>
+      <h2 class="section-title" data-i18n="cl.title">韌體更新日誌</h2>
+      <p class="section-subtitle" data-i18n="cl.subtitle">所有版本透過線上更新自動推送至已啟用裝置。</p>
+    </div>
+
+    <div class="changelog">
+      <!-- v3.0.8 -->
+      <div class="changelog-item">
+        <div class="changelog-meta">
+          <span class="version-badge latest">v3.0.8</span>
+          <span class="changelog-date">2026-05-18</span>
+        </div>
+        <div class="changelog-content">
+          <h4 data-i18n="cl.v308.title">介面文案精煉</h4>
+          <ul>
+            <li><span class="change-type change-improve" data-i18n="cl.IMPROVE">改進</span><span data-i18n="cl.v308.l1">Web UI 文字精簡、用詞中性化</span></li>
+            <li><span class="change-type change-improve" data-i18n="cl.IMPROVE">改進</span><span data-i18n="cl.v308.l2">移除介面 emoji，視覺更專業俐落</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- v3.0.7 -->
+      <div class="changelog-item">
+        <div class="changelog-meta">
+          <span class="version-badge">v3.0.7</span>
+          <span class="changelog-date">2026-05-17</span>
+        </div>
+        <div class="changelog-content">
+          <h4 data-i18n="cl.v307.title">使用者體驗優化</h4>
+          <ul>
+            <li><span class="change-type change-improve" data-i18n="cl.IMPROVE">改進</span><span data-i18n="cl.v307.l1">技術用詞中性化，新手玩家也能輕鬆閱讀</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- v3.0.6 -->
+      <div class="changelog-item">
+        <div class="changelog-meta">
+          <span class="version-badge">v3.0.6</span>
+          <span class="changelog-date">2026-05-17</span>
+        </div>
+        <div class="changelog-content">
+          <h4 data-i18n="cl.v306.title">一鍵授權升級 · 多項安全強化</h4>
+          <ul>
+            <li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v306.l1">一鍵授權流程：QR Code 掃描 + 自動偵測付款，全程無需手動輸入金鑰</span></li>
+            <li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v306.l2">賽車倒數開機提示音</span></li>
+            <li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v306.l3">工廠重設按鈕 — 僅重設 WiFi 密碼，磨合資料完整保留</span></li>
+            <li><span class="change-type change-security" data-i18n="cl.SECURITY">安全</span><span data-i18n="cl.v306.l4">Session Token、Origin 過濾、登入頻率限制、SHA256 雜湊強化</span></li>
+            <li><span class="change-type change-improve" data-i18n="cl.IMPROVE">改進</span><span data-i18n="cl.v306.l5">繁體中文（臺灣）語系完整化、套用中監視機制</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- v3.0.5 -->
+      <div class="changelog-item">
+        <div class="changelog-meta">
+          <span class="version-badge">v3.0.5</span>
+          <span class="changelog-date">2026-05-16</span>
+        </div>
+        <div class="changelog-content">
+          <h4 data-i18n="cl.v305.title">線上更新穩定性提升</h4>
+          <ul>
+            <li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v305.l1">線上韌體更新：透過家用 WiFi 自動取得最新版本</span></li>
+            <li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v305.l2">工程模式：轉速、電壓、電流校正功能</span></li>
+            <li><span class="change-type change-fix" data-i18n="cl.FIX">修正</span><span data-i18n="cl.v305.l3">已知 WiFi 自動跳過密碼輸入</span></li>
+            <li><span class="change-type change-fix" data-i18n="cl.FIX">修正</span><span data-i18n="cl.v305.l4">韌體重啟時 Web 介面自動重新載入</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- v3.0.0 ~ -->
+      <div class="changelog-item">
+        <div class="changelog-meta">
+          <span class="version-badge">v3.0.0</span>
+          <span class="changelog-date">2026-05-12</span>
+        </div>
+        <div class="changelog-content">
+          <h4 data-i18n="cl.v300.title">MotorLab v3 正式發布</h4>
+          <ul>
+            <li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v300.l1">十階段可程式化馬達磨合系統</span></li>
+            <li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v300.l2">AI 智慧馬達健康管理（PRO）</span></li>
+            <li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v300.l3">軸承阻力測試 · 電刷接觸穩定測試</span></li>
+            <li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v300.l4">內建 Web 操作介面、WebSocket 即時數據推送</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 關於 -->
+<section id="about">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag" data-i18n="about.tag">ABOUT</div>
+      <h2 class="section-title" data-i18n="about.title">關於 MotorLab</h2>
+    </div>
+
+    <div class="about-box">
+      <p class="lead" data-i18n="about.p1">
+        MotorLab 是一個專注於 Mini 4WD<sup>®</sup> 馬達精密測試的獨立工作室。
+      </p>
+      <p data-i18n="about.p2">
+        我們相信，賽道上的每一個百分秒差距，都來自設備、調校與量測方法的長期積累。對玩家而言，「感覺變快」應該是可以被儀器數據驗證的事實，而不是憑經驗的玄學。
+      </p>
+      <p data-i18n="about.p3">
+        從首版原型到第三代 v3 系統，MotorLab 已歷經 15 個里程碑、累計超過 10,000 行韌體程式。每一項功能都經過真實馬達實機驗證，才會發布到使用者手上。
+      </p>
+      <p class="about-disclaimer" data-i18n="about.p4">
+        MotorLab 是獨立工作室，非田宮模型（株式会社タミヤ／TAMIYA, INC.）關聯企業，亦未受其授權或贊助。本產品為相容性測試設備。
+      </p>
+
+      <div class="about-stats">
+        <div>
+          <div class="stat-num">15</div>
+          <div class="stat-label" data-i18n="about.s1">開發里程碑</div>
+        </div>
+        <div>
+          <div class="stat-num">v3.0.8</div>
+          <div class="stat-label" data-i18n="about.s2">當前韌體版本</div>
+        </div>
+        <div>
+          <div class="stat-num">100%</div>
+          <div class="stat-label" data-i18n="about.s3">資料離線儲存</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 聯絡 -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-box">
+      <h2 data-i18n="contact.title">想了解更多？</h2>
+      <p data-i18n="contact.desc">MotorLab 目前處於最後發行準備階段。歡迎透過下列管道與我們聯絡，或關注 GitHub 工作室帳號取得最新進展。</p>
+      <div class="contact-methods">
+        <a href="mailto:motorlab.tw@gmail.com" class="contact-link">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          motorlab.tw@gmail.com
+        </a>
+        <a href="https://github.com/MotorLab-tw" target="_blank" rel="noopener" class="contact-link">
+          <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          GitHub @MotorLab-tw
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-trademark" data-i18n="footer.trademark">
+      "Mini 4WD"<sup>®</sup> 與 "ミニ四駆"<sup>®</sup> 為株式会社タミヤ（TAMIYA, INC.）的註冊商標（日本商標登錄號 第 2168392 號）。MotorLab 為獨立工作室，與株式会社タミヤ無任何關聯，亦未受其授權、贊助或背書。本網站提及之相關名稱僅用於指涉產品適用範圍，所有商標權益歸原權利人所有。
+    </div>
+    <div class="footer-inner">
+      <div>
+        <strong>MotorLab.tw</strong> · <span data-i18n="footer.tagline">Mini 4WD Performance Lab</span>
+      </div>
+      <div class="mono">
+        © 2026 MotorLab · <span data-i18n="footer.firmware">韌體</span> v3.0.8
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ===== 雙語切換 =====
+  const i18n = {
+    zh: {
+      'nav.features': '功能',
+      'nav.versions': '版本',
+      'nav.tech': '技術',
+      'nav.changelog': '更新',
+      'nav.about': '關於',
+      'nav.contact': '聯絡',
+      'hero.badge': '系統運作中 · v3.0.8',
+      'hero.title': '為每一顆<br>Mini 4WD<sup>®</sup> 馬達<br>建立<span class="accent">健康指紋</span>',
+      'hero.lead': 'MotorLab 是為 Mini 4WD<sup>®</sup> 玩家打造的精密馬達磨合與測試系統。從十階段可程式化磨合、軸承衰減量測、電刷接觸穩定診斷,到 AI 馬達健康管理 — 讓每一次調校都可量化、可重複、可比較。',
+      'hero.cta1': '瀏覽功能',
+      'hero.cta2': 'M1 vs PRO',
+      'hero.cta3': '立即購買',
+      'mock.voltage': '電壓',
+      'mock.current': '電流',
+      'mock.rpm': '轉速',
+      'mock.temp': '溫度',
+      'mock.status': '● 磨合進行中 · 階段 6/10 · 已運行 02:48:33',
+      'features.tag': 'CORE FEATURES',
+      'features.title': '七大專業功能',
+      'features.subtitle': '從磨合到診斷,涵蓋 Mini 4WD 馬達生命週期的每一個關鍵環節。',
+      'f1.title': '馬達磨合程式',
+      'f1.desc': '十階段可程式化磨合,每階段獨立設定電壓、運轉方向、運轉時間、冷卻時間與穩定電流容差。模擬實車條件下的低速長時間磨合,讓電刷與整流子達到最佳貼合。',
+      'f1.tag2': '智慧穩流判定',
+      'f2.title': '馬達測試程式',
+      'f2.desc': '單階段精密量測。給定電壓、方向、時間,即時觀察電流、轉速、溫度變化,並支援智慧穩流模式 — 電流達穩定即自動結束,效率與精度兼具。',
+      'f2.tag2': '即時圖表',
+      'f2.tag3': '雙模式',
+      'f3.title': 'AI 智慧馬達健康管理',
+      'f3.desc': '為每顆馬達建立基準健康指紋,後續檢測自動比對五大指標:電流特性、轉速衰減、溫升曲線、電流穩定度、振動頻譜分析,合成 0–100 分健康評級並提供文字診斷建議。',
+      'f3.tag1': 'FFT 頻譜',
+      'f3.tag2': '雷達圖',
+      'f4.title': '軸承阻力測試',
+      'f4.desc': '高速運轉後切斷電源,量測轉速衰減時間常數 τ。衰減越慢,軸承摩擦越小、健康度越高。10 秒完成一次量測,三次取平均可消除環境干擾。',
+      'f4.tag1': '衰減 τ 分析',
+      'f4.tag2': '10 秒/次',
+      'f5.title': '電刷接觸穩定測試',
+      'f5.desc': '鎖定軸心後低電壓量測電流穩定度,以變異係數(CV%)量化電刷接觸均勻性。三角度循環測試涵蓋整圈整流子,準確抓出打火與磨損熱點。',
+      'f5.tag1': 'CV 變異係數',
+      'f5.tag2': '三角度循環',
+      'f6.title': '歷史紀錄管理',
+      'f6.desc': '自動儲存最多 50 筆完整磨合紀錄,包含每階段詳細數據。支援 JSON / CSV 匯出、檔案匯入、一鍵套用回磨合頁。所有資料離線儲存於裝置,無雲端依賴。',
+      'f6.tag2': '離線儲存',
+      'f7.title': '內建 Web 操作介面',
+      'f7.desc': '裝置自帶 WiFi 熱點與網頁操作介面,手機、平板、筆電皆可使用,無需安裝任何 App。WebSocket 即時數據推送,250ms 更新頻率。',
+      'f7.tag1': '免安裝',
+      'f7.tag2': '跨平台',
+      'f8.title': '線上更新與防偽機制',
+      'f8.desc': '透過家用 WiFi 自動取得最新韌體,內建 HMAC-SHA256 簽章驗證與雙韌體區自動回退機制,更新失敗自動切回前一版,杜絕磚機風險。',
+      'f8.tag2': '自動回退',
+      'versions.tag': 'EDITIONS',
+      'versions.title': 'M1 與 PRO',
+      'versions.subtitle': '同一台機器,兩種授權層級。隨時可線上升級。',
+      'vt.feature': '功能',
+      'vt.r1': '十階段馬達磨合程式',
+      'vt.r2': '單階段馬達測試',
+      'vt.r3': '歷史紀錄(50 筆)',
+      'vt.r4': '軸承阻力測試',
+      'vt.r5': '電刷接觸穩定測試',
+      'vt.r6': '即時 Web 操作介面',
+      'vt.r7': '線上韌體更新',
+      'vt.r8': 'AI 智慧馬達健康管理(最多 20 顆)',
+      'vt.r9': 'FFT 振動頻譜分析',
+      'vt.r10': '五大指標雷達圖診斷',
+      'vt.r11': '健康趨勢曲線追蹤',
+      'tech.tag': 'TECHNOLOGY',
+      'tech.title': '內建專業分析技術',
+      'tech.subtitle': '每一項數據都來自業界驗證的量測方法。',
+      't1.title': '快速傅立葉變換頻譜',
+      't1.desc': '將馬達電流訊號轉換為頻域,分離出基頻、諧波與雜訊成分。從頻譜特徵即可判讀軸承異音、轉子失衡、整流子缺陷等隱性問題。',
+      't2.title': '變異係數分析',
+      't2.desc': '統計學標準離散度指標(標準差 / 平均值),用於量化電刷接觸的穩定性。CV 越低代表接觸越均勻、打火越少。',
+      't3.title': '指數衰減時間常數',
+      't3.desc': '藉由轉速從高峰自由衰減的曲線,回歸出時間常數 τ,反映軸承摩擦係數。常用於精密馬達品管的核心物理量。',
+      't4.title': '基準指紋比對',
+      't4.desc': '為每顆馬達建立首次量測基準,後續比對皆採同器同馬達原則,排除馬達本身個體差異,純粹反映健康狀態變化。',
+      't5.title': '穩定電流鎖定演算法',
+      't5.desc': '滑動窗口偵測連續 N 秒內電流最大最小差值,達穩定後鎖定數值,避免暫時擾動造成誤判,提升量測重現性。',
+      't6.title': '雜訊底線扣除',
+      't6.desc': '量測前先採集儀器本身雜訊基準,後續訊號扣除其平方差,分離出馬達真實訊號變化,讓微小異常也無所遁形。',
+      'cl.tag': 'CHANGELOG',
+      'cl.title': '韌體更新日誌',
+      'cl.subtitle': '所有版本透過線上更新自動推送至已啟用裝置。',
+      'cl.NEW': '新增',
+      'cl.FIX': '修正',
+      'cl.IMPROVE': '改進',
+      'cl.SECURITY': '安全',
+      'cl.v308.title': '介面文案精煉',
+      'cl.v308.l1': 'Web UI 文字精簡、用詞中性化',
+      'cl.v308.l2': '移除介面 emoji,視覺更專業俐落',
+      'cl.v307.title': '使用者體驗優化',
+      'cl.v307.l1': '技術用詞中性化,新手玩家也能輕鬆閱讀',
+      'cl.v306.title': '一鍵授權升級 · 多項安全強化',
+      'cl.v306.l1': '一鍵授權流程:QR Code 掃描 + 自動偵測付款,全程無需手動輸入金鑰',
+      'cl.v306.l2': '賽車倒數開機提示音',
+      'cl.v306.l3': '工廠重設按鈕 — 僅重設 WiFi 密碼,磨合資料完整保留',
+      'cl.v306.l4': 'Session Token、Origin 過濾、登入頻率限制、SHA256 雜湊強化',
+      'cl.v306.l5': '繁體中文(臺灣)語系完整化、套用中監視機制',
+      'cl.v305.title': '線上更新穩定性提升',
+      'cl.v305.l1': '線上韌體更新:透過家用 WiFi 自動取得最新版本',
+      'cl.v305.l2': '工程模式:轉速、電壓、電流校正功能',
+      'cl.v305.l3': '已知 WiFi 自動跳過密碼輸入',
+      'cl.v305.l4': '韌體重啟時 Web 介面自動重新載入',
+      'cl.v300.title': 'MotorLab v3 正式發布',
+      'cl.v300.l1': '十階段可程式化馬達磨合系統',
+      'cl.v300.l2': 'AI 智慧馬達健康管理(PRO)',
+      'cl.v300.l3': '軸承阻力測試 · 電刷接觸穩定測試',
+      'cl.v300.l4': '內建 Web 操作介面、WebSocket 即時數據推送',
+      'about.tag': 'ABOUT',
+      'about.title': '關於 MotorLab',
+      'about.p1': 'MotorLab 是一個專注於 Mini 4WD<sup>®</sup> 馬達精密測試的獨立工作室。',
+      'about.p2': '我們相信,賽道上的每一個百分秒差距,都來自設備、調校與量測方法的長期積累。對玩家而言,「感覺變快」應該是可以被儀器數據驗證的事實,而不是憑經驗的玄學。',
+      'about.p3': '從首版原型到第三代 v3 系統,MotorLab 已歷經 15 個里程碑、累計超過 10,000 行韌體程式。每一項功能都經過真實馬達實機驗證,才會發布到使用者手上。',
+      'about.p4': 'MotorLab 是獨立工作室,非田宮模型(株式会社タミヤ／TAMIYA, INC.)關聯企業,亦未受其授權或贊助。本產品為相容性測試設備。',
+      'about.s1': '開發里程碑',
+      'about.s2': '當前韌體版本',
+      'about.s3': '資料離線儲存',
+      'contact.title': '想了解更多?',
+      'contact.desc': 'MotorLab 目前處於最後發行準備階段。歡迎透過下列管道與我們聯絡,或關注 GitHub 工作室帳號取得最新進展。',
+      'footer.tagline': 'Mini 4WD Performance Lab',
+      'footer.firmware': '韌體',
+      'footer.trademark': '"Mini 4WD"<sup>®</sup> 與 "ミニ四駆"<sup>®</sup> 為株式会社タミヤ(TAMIYA, INC.)的註冊商標(日本商標登錄號 第 2168392 號)。MotorLab 為獨立工作室,與株式会社タミヤ無任何關聯,亦未受其授權、贊助或背書。本網站提及之相關名稱僅用於指涉產品適用範圍,所有商標權益歸原權利人所有。'
+    },
+    en: {
+      'nav.features': 'Features',
+      'nav.versions': 'Editions',
+      'nav.tech': 'Tech',
+      'nav.changelog': 'Changelog',
+      'nav.about': 'About',
+      'nav.contact': 'Contact',
+      'hero.badge': 'System running · v3.0.8',
+      'hero.title': 'Build a <span class="accent">health fingerprint</span><br>for every<br>Mini 4WD<sup>®</sup> motor',
+      'hero.lead': 'MotorLab is a precision motor break-in and diagnostic system built for Mini 4WD<sup>®</sup> enthusiasts. From 10-stage programmable break-in to bearing decay analysis, brush contact diagnostics, and AI motor health management — make every tune measurable, repeatable, and comparable.',
+      'hero.cta1': 'Browse Features',
+      'hero.cta2': 'M1 vs PRO',
+      'hero.cta3': 'Buy Now',
+      'mock.voltage': 'Voltage',
+      'mock.current': 'Current',
+      'mock.rpm': 'RPM',
+      'mock.temp': 'Temp',
+      'mock.status': '● Break-in running · Stage 6/10 · 02:48:33 elapsed',
+      'features.tag': 'CORE FEATURES',
+      'features.title': 'Seven Professional Tools',
+      'features.subtitle': 'From break-in to diagnostics, covering every critical phase of the Mini 4WD motor lifecycle.',
+      'f1.title': 'Motor Break-in Program',
+      'f1.desc': 'Ten-stage programmable break-in. Configure voltage, direction, runtime, cooldown, and current tolerance per stage. Simulates real-world low-speed extended operation to bring brushes and commutator into optimal contact.',
+      'f1.tag2': 'Smart stability detection',
+      'f2.title': 'Motor Test Program',
+      'f2.desc': 'Single-stage precision measurement. Set voltage, direction, and duration, then observe real-time current, RPM, and temperature curves. Smart mode auto-ends when current stabilizes — fast and accurate.',
+      'f2.tag2': 'Live charts',
+      'f2.tag3': 'Dual mode',
+      'f3.title': 'AI Motor Health Manager',
+      'f3.desc': 'Establish a baseline fingerprint per motor; subsequent checks compare against five metrics — current profile, RPM decay, thermal rise, current stability, and vibration spectrum — producing a 0–100 health score with diagnostic recommendations.',
+      'f3.tag1': 'FFT spectrum',
+      'f3.tag2': 'Radar chart',
+      'f4.title': 'Bearing Resistance Test',
+      'f4.desc': 'After ramping to peak RPM, cut power and measure decay time constant τ. Slower decay equals lower friction and healthier bearings. 10 seconds per measurement; three-run average eliminates environmental noise.',
+      'f4.tag1': 'τ decay analysis',
+      'f4.tag2': '10s per run',
+      'f5.title': 'Brush Contact Stability',
+      'f5.desc': 'Lock the shaft, apply low voltage, and measure current stability via Coefficient of Variation (CV%). Three-angle rotation covers the full commutator and pinpoints sparking and wear hotspots.',
+      'f5.tag1': 'CV coefficient',
+      'f5.tag2': 'Three-angle sweep',
+      'f6.title': 'Records Management',
+      'f6.desc': 'Auto-stores up to 50 complete break-in records with per-stage detail. JSON / CSV export, file import, one-click re-apply. All data stored locally on the device — no cloud dependency.',
+      'f6.tag2': 'Offline storage',
+      'f7.title': 'Built-in Web Interface',
+      'f7.desc': 'Device hosts its own WiFi hotspot and web UI — phone, tablet, laptop all work without installing any app. WebSocket live data push at 250ms refresh rate.',
+      'f7.tag1': 'No install',
+      'f7.tag2': 'Cross-platform',
+      'f8.title': 'OTA Update & Tamper Protection',
+      'f8.desc': 'Auto-fetches latest firmware via home WiFi. Built-in HMAC-SHA256 signature verification and dual-partition rollback ensure update failures automatically revert to the previous version — no brick risk.',
+      'f8.tag2': 'Auto rollback',
+      'versions.tag': 'EDITIONS',
+      'versions.title': 'M1 and PRO',
+      'versions.subtitle': 'Same hardware, two license tiers. Online upgrade anytime.',
+      'vt.feature': 'Feature',
+      'vt.r1': '10-stage motor break-in program',
+      'vt.r2': 'Single-stage motor test',
+      'vt.r3': 'History records (50 entries)',
+      'vt.r4': 'Bearing resistance test',
+      'vt.r5': 'Brush contact stability test',
+      'vt.r6': 'Live web interface',
+      'vt.r7': 'OTA firmware updates',
+      'vt.r8': 'AI Motor Health Manager (up to 20 motors)',
+      'vt.r9': 'FFT vibration spectrum',
+      'vt.r10': '5-metric radar diagnostic',
+      'vt.r11': 'Health trend tracking',
+      'tech.tag': 'TECHNOLOGY',
+      'tech.title': 'Professional Analysis Built-In',
+      'tech.subtitle': 'Every data point comes from industry-validated measurement methods.',
+      't1.title': 'Fast Fourier Transform Spectrum',
+      't1.desc': 'Convert motor current signal to frequency domain, separating fundamental, harmonics, and noise. Spectral signatures reveal bearing anomalies, rotor imbalance, and commutator defects invisible to the naked eye.',
+      't2.title': 'Coefficient of Variation',
+      't2.desc': 'Standard statistical dispersion measure (σ/μ), used to quantify brush contact stability. Lower CV means more uniform contact and less sparking.',
+      't3.title': 'Exponential Decay Time Constant',
+      't3.desc': 'Regression of free RPM decay curve yields τ — a direct reflection of bearing friction coefficient. A core physical quantity in precision motor QA.',
+      't4.title': 'Baseline Fingerprint Comparison',
+      't4.desc': 'Each motor establishes its own first-measurement baseline. All subsequent comparisons follow same-device-same-motor principle, eliminating individual motor variance to expose pure health changes.',
+      't5.title': 'Stable Current Latch Algorithm',
+      't5.desc': 'Sliding window detects max-min current spread over N consecutive seconds. Once stable, the value latches to prevent transient perturbations from causing misjudgment — boosting repeatability.',
+      't6.title': 'Noise Floor Subtraction',
+      't6.desc': 'Captures the instrument noise baseline before measurement, then subtracts its variance from subsequent signals. Isolates true motor signal variations so even subtle anomalies cannot hide.',
+      'cl.tag': 'CHANGELOG',
+      'cl.title': 'Firmware Release Notes',
+      'cl.subtitle': 'All versions push automatically to activated devices via OTA update.',
+      'cl.NEW': 'NEW',
+      'cl.FIX': 'FIX',
+      'cl.IMPROVE': 'IMPROVE',
+      'cl.SECURITY': 'SECURITY',
+      'cl.v308.title': 'Interface Refinement',
+      'cl.v308.l1': 'Web UI text streamlined and neutralized',
+      'cl.v308.l2': 'Emoji removed for a sharper, more professional look',
+      'cl.v307.title': 'User Experience Polish',
+      'cl.v307.l1': 'Technical jargon neutralized for newcomer accessibility',
+      'cl.v306.title': 'One-Click License · Multi-Layer Security',
+      'cl.v306.l1': 'One-click license flow: QR Code scan + auto-detect payment, no manual key entry',
+      'cl.v306.l2': 'Racing-style countdown boot tone',
+      'cl.v306.l3': 'Factory reset button — only resets WiFi password, break-in data fully preserved',
+      'cl.v306.l4': 'Session Token, Origin filter, login rate limit, SHA256 hash hardening',
+      'cl.v306.l5': 'Complete Traditional Chinese (Taiwan) localization, apply-state watchdog',
+      'cl.v305.title': 'OTA Stability Boost',
+      'cl.v305.l1': 'OTA firmware update via home WiFi auto-fetch',
+      'cl.v305.l2': 'Engineering mode: RPM / voltage / current calibration',
+      'cl.v305.l3': 'Known WiFi networks skip password entry',
+      'cl.v305.l4': 'Web interface auto-reloads after firmware restart',
+      'cl.v300.title': 'MotorLab v3 Official Release',
+      'cl.v300.l1': '10-stage programmable motor break-in system',
+      'cl.v300.l2': 'AI Motor Health Manager (PRO)',
+      'cl.v300.l3': 'Bearing resistance test · Brush stability test',
+      'cl.v300.l4': 'Built-in web interface with WebSocket live data',
+      'about.tag': 'ABOUT',
+      'about.title': 'About MotorLab',
+      'about.p1': 'MotorLab is an independent studio dedicated to precision Mini 4WD<sup>®</sup> motor diagnostics.',
+      'about.p2': 'We believe every hundredth-of-a-second gap on the track comes from long-term accumulation in equipment, tuning, and measurement methodology. For racers, "feels faster" should be a fact verifiable by instrument data — not folklore.',
+      'about.p3': 'From early prototype to the third-generation v3 system, MotorLab has gone through 15 milestones and over 10,000 lines of firmware. Every feature is verified on real motors before reaching users.',
+      'about.p4': 'MotorLab is an independent studio. We are not affiliated with, authorized by, or sponsored by TAMIYA, INC. This product is a compatible third-party testing device.',
+      'about.s1': 'Milestones',
+      'about.s2': 'Current Firmware',
+      'about.s3': 'Offline Storage',
+      'contact.title': 'Want to know more?',
+      'contact.desc': 'MotorLab is currently in final pre-release. Get in touch through any of the channels below, or follow our GitHub studio account for the latest updates.',
+      'footer.tagline': 'Mini 4WD Performance Lab',
+      'footer.firmware': 'Firmware',
+      'footer.trademark': '"Mini 4WD"<sup>®</sup> and "ミニ四駆"<sup>®</sup> are registered trademarks of TAMIYA, INC. (Japan Trademark Registration No. 2168392). MotorLab is an independent studio and has no affiliation with, authorization from, sponsorship by, or endorsement from TAMIYA, INC. References to these names on this site are made solely to indicate product compatibility. All trademark rights belong to their respective owners.'
+    }
+  };
+
+  let currentLang = 'zh';
+  function applyLang(lang) {
+    currentLang = lang;
+    document.documentElement.lang = lang === 'zh' ? 'zh-TW' : 'en';
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (i18n[lang][key]) el.innerHTML = i18n[lang][key];
+    });
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+  }
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+  });
+
+  // ===== 即時數據模擬動畫 =====
+  function updateMockData() {
+    const currentEl = document.getElementById('mock-current');
+    const rpmEl = document.getElementById('mock-rpm');
+    if (currentEl) {
+      const v = (1.75 + Math.random() * 0.15).toFixed(2);
+      currentEl.innerHTML = v + '<span class="unit">A</span>';
+    }
+    if (rpmEl) {
+      const r = Math.floor(12700 + Math.random() * 250);
+      rpmEl.innerHTML = r.toLocaleString() + '<span class="unit">RPM</span>';
+    }
+  }
+  setInterval(updateMockData, 1200);
+
+  // ===== 滾動顯現動畫 =====
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.feature-card, .tech-card, .changelog-item').forEach(el => {
+    el.classList.add('fade-in');
+    io.observe(el);
+  });
+
+  // ===== 顯示購買按鈕(產品上線時把這行的 false 改 true) =====
+  const PRODUCT_LIVE = false;
+  if (PRODUCT_LIVE) {
+    document.getElementById('purchase-btn').style.display = 'inline-flex';
+  }
+</script>
+
+</body>
+</html>

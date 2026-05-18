@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- 漸層底色 -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1d23"/>
+      <stop offset="100%" stop-color="#2e3440"/>
+    </linearGradient>
+    <!-- 網格樣式 -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#88c0d0" stroke-width="0.5" opacity="0.15"/>
+    </pattern>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- 右上裝飾：同心圓 -->
+  <g transform="translate(1020, 130)" opacity="0.15">
+    <circle r="120" fill="none" stroke="#88c0d0" stroke-width="2"/>
+    <circle r="90" fill="none" stroke="#88c0d0" stroke-width="2"/>
+    <circle r="60" fill="none" stroke="#88c0d0" stroke-width="2"/>
+    <circle r="30" fill="none" stroke="#88c0d0" stroke-width="2"/>
+  </g>
+
+  <!-- Logo 標記 -->
+  <g transform="translate(80, 100)">
+    <circle cx="24" cy="24" r="22" fill="none" stroke="#88c0d0" stroke-width="4"/>
+    <circle cx="24" cy="24" r="6" fill="#88c0d0"/>
+  </g>
+
+  <!-- Logo 文字 -->
+  <text x="140" y="135" font-family="-apple-system, 'Microsoft JhengHei', sans-serif" font-size="32" font-weight="bold" fill="#eceff4">
+    MotorLab<tspan fill="#88c0d0">.tw</tspan>
+  </text>
+
+  <!-- 主標題 -->
+  <text x="80" y="280" font-family="sans-serif" font-size="68" font-weight="bold" fill="#eceff4">
+    Mini 4WD<tspan font-size="32" dy="-20">®</tspan><tspan dy="20"> Motor Lab</tspan>
+  </text>
+  <text x="80" y="360" font-family="sans-serif" font-size="46" font-weight="bold" fill="#88c0d0">
+    Build a Health Fingerprint
+  </text>
+  <text x="80" y="408" font-family="sans-serif" font-size="46" font-weight="bold" fill="#88c0d0">
+    for Every Motor
+  </text>
+
+  <!-- 副標 -->
+  <text x="80" y="460" font-family="sans-serif" font-size="22" fill="#d8dee9">
+    10-Stage Break-in · AI Health Manager · Bearing &amp; Brush Diagnostics
+  </text>
+
+  <!-- 底部標籤列 -->
+  <g transform="translate(80, 510)">
+    <!-- M1 標籤 -->
+    <rect x="0" y="0" width="80" height="36" rx="6" fill="#2e3440" stroke="#88c0d0" stroke-width="2"/>
+    <text x="40" y="24" font-family="monospace" font-size="18" font-weight="bold" fill="#88c0d0" text-anchor="middle">M1</text>
+
+    <!-- PRO 標籤 -->
+    <rect x="96" y="0" width="80" height="36" rx="6" fill="#2e3440" stroke="#b48ead" stroke-width="2"/>
+    <text x="136" y="24" font-family="monospace" font-size="18" font-weight="bold" fill="#b48ead" text-anchor="middle">PRO</text>
+
+    <!-- 版本號 -->
+    <text x="200" y="24" font-family="monospace" font-size="16" fill="#8fbcbb">v3.0.8</text>
+  </g>
+
+  <!-- 右下角狀態指示 -->
+  <g transform="translate(1020, 560)">
+    <circle cx="0" cy="0" r="6" fill="#a3be8c"/>
+    <text x="14" y="6" font-family="monospace" font-size="16" fill="#a3be8c">SYSTEM READY</text>
+  </g>
+
+  <!-- 商標聲明（極小字） -->
+  <text x="80" y="600" font-family="sans-serif" font-size="11" fill="#5e81ac" opacity="0.6">
+    Mini 4WD® is a registered trademark of TAMIYA, INC. MotorLab is an independent studio, not affiliated with TAMIYA.
+  </text>
+</svg>
