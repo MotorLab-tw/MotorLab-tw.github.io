@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Language" content="zh-TW">
 <title>MotorLab — Mini 4WD® 馬達磨合測試系統 | 精密馬達診斷工作室</title>
-<meta name="description" content="MotorLab 是專為 Mini 4WD® 玩家打造的精密馬達磨合與測試系統。十階段可程式化磨合、AI 智慧馬達健康管理、FFT 振動頻譜分析、軸承阻力衰減量測、電刷接觸穩定診斷。讓每一次馬達調校都可量化、可重複、可比較。">
+<meta name="description" content="MotorLab — 專為 Mini 4WD® 玩家打造的精密馬達磨合測試系統。九大專業功能:十階段可程式化磨合、AI 健康管理、FFT 頻譜、軸承 τ 衰減、CV 電刷穩定診斷、三層安全保護(抗 EMI、< 100 ms 急停、Watchdog 自動復原)、OTA 線上更新。讓馬達調校可量化。">
 <meta name="author" content="MotorLab.tw">
-<meta name="keywords" content="馬達磨合, 馬達磨合機, 四驅車馬達磨合, 迷你四驅車馬達磨合, 馬達磨合教學, MotorLab, Mini 4WD, 田宮迷你四驅車, 迷你四驅車, ミニ四駆, 四驅車, 馬達測試, 馬達調校, 馬達健康診斷, 洗馬達, 紅二馬達, 黑金剛, Hyper Dash, Plasma Dash, motor break-in, motor test, Tamiya mini 4WD">
+<meta name="keywords" content="馬達磨合, 馬達磨合機, 四驅車馬達磨合, 迷你四驅車馬達磨合, 馬達磨合教學, モーター慣らし, モーター慣らし機, ミニ四駆 モーター慣らし, ミニ四駆のモーター慣らし, モーターブレークイン, MotorLab, Mini 4WD, 田宮迷你四驅車, 迷你四驅車, ミニ四駆, 四驅車, 馬達測試, 馬達調校, 馬達健康診斷, 洗馬達, 紅二馬達, 黑金剛, Hyper Dash, Plasma Dash, 馬達保護, 抗 EMI, 過流保護, 電流急停, Watchdog 自動復原, 安全保護機制, 電磁干擾防護, 馬達燒毀防護, motor break-in, motor test, Tamiya mini 4WD, EMI shielding, overcurrent protection, watchdog recovery, motor safety">
 
 <!-- 正規網址 (避免重複內容問題) -->
 <link rel="canonical" href="https://motorlab-tw.github.io/">
@@ -37,7 +37,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://motorlab-tw.github.io/">
 <meta property="og:title" content="MotorLab — Mini 4WD® 馬達磨合測試系統">
-<meta property="og:description" content="為每一顆 Mini 4WD® 馬達建立可量化的健康指紋。十階段磨合、AI 健康管理、軸承衰減分析、電刷穩定診斷。">
+<meta property="og:description" content="為每一顆 Mini 4WD® 馬達建立可量化的健康指紋。九大專業功能:十階段磨合、AI 健康管理、軸承衰減分析、電刷穩定診斷、三層安全保護機制。">
 <meta property="og:image" content="https://motorlab-tw.github.io/og-image.png">
 <meta property="og:image:secure_url" content="https://motorlab-tw.github.io/og-image.png">
 <meta property="og:image:type" content="image/png">
@@ -138,7 +138,8 @@
     "電刷接觸穩定度 CV 分析",
     "歷史紀錄 50 筆 (JSON / CSV 匯入匯出)",
     "內建 Web 操作介面 (WebSocket 250ms 推送)",
-    "OTA 線上韌體更新 (HMAC-SHA256 簽章)"
+    "OTA 線上韌體更新 (HMAC-SHA256 簽章)",
+    "三層安全保護機制 (抗 EMI、< 100 ms 過流急停、Watchdog 自動復原)"
   ],
   "inLanguage": ["zh-TW", "en"],
   "releaseNotes": "https://motorlab-tw.github.io/#changelog"
@@ -520,7 +521,7 @@
     font-size: 15px;
   }
 
-  /* ===== 八大功能 ===== */
+  /* ===== 九大功能 ===== */
   .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
@@ -1369,12 +1370,12 @@
   </div>
 </section>
 
-<!-- 八大功能 -->
+<!-- 九大功能 -->
 <section id="features">
   <div class="container">
     <div class="section-header">
       <div class="section-tag" data-i18n="features.tag">CORE FEATURES</div>
-      <h2 class="section-title" data-i18n="features.title">八大專業功能</h2>
+      <h2 class="section-title" data-i18n="features.title">九大專業功能</h2>
       <p class="section-subtitle" data-i18n="features.subtitle">從磨合到診斷，涵蓋 Mini 4WD 馬達生命週期的每一個關鍵環節。</p>
     </div>
 
@@ -1488,6 +1489,20 @@
         </div>
       </div>
 
+      <!-- 三層安全保護機制 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <h3 data-i18n="f9.title">三層安全保護機制</h3>
+        <p data-i18n="f9.desc">馬達磨合過程中，馬達產生的強烈電磁干擾(EMI)、水磨合或堵轉時的瞬間電流飆升，都是傷害昂貴競賽馬達的潛在風險。MotorLab 內建三層硬體與韌體聯防機制 — 抗 EMI 電路設計持續被動防護、電流異常 &lt; 100 ms 急停切斷電力、極端干擾導致 MCU 異常時 Watchdog 於數秒內自動重啟。</p>
+        <div class="feature-meta">
+          <span class="feature-tag">EMI_SHIELDING</span>
+          <span class="feature-tag" data-i18n="f9.tag2">&lt; 100 ms 急停</span>
+          <span class="feature-tag" data-i18n="f9.tag3">Watchdog 4s</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -1543,6 +1558,11 @@
           </tr>
           <tr>
             <td data-i18n="vt.r7">線上韌體更新</td>
+            <td class="center"><span class="check">✓</span></td>
+            <td class="center"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td data-i18n="vt.r12">三層安全保護機制</td>
             <td class="center"><span class="check">✓</span></td>
             <td class="center"><span class="check">✓</span></td>
           </tr>
@@ -1611,6 +1631,21 @@
         <div class="tech-name">NOISE_FLOOR_SUBTRACT</div>
         <h4 data-i18n="t6.title">雜訊底線扣除</h4>
         <p data-i18n="t6.desc">量測前先採集儀器本身雜訊基準，後續訊號扣除其平方差，分離出馬達真實訊號變化，讓微小異常也無所遁形。</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-name">EMI_SHIELDING</div>
+        <h4 data-i18n="t7.title">抗 EMI 電路設計</h4>
+        <p data-i18n="t7.desc">電源與感測訊號採用抗 EMI 設計，有效抑制馬達高頻雜訊回灌，避免感測讀值汙染及 MCU 邏輯被誤觸發。</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-name">OVERCURRENT_CUTOFF</div>
+        <h4 data-i18n="t8.title">硬體過流保護(&lt; 100 ms)</h4>
+        <p data-i18n="t8.desc">即時電流監測瞬間超過安全閾值時 &lt; 100 ms 內立即斷電，保護系統及昂貴的競賽馬達。</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-name">WATCHDOG_RECOVERY</div>
+        <h4 data-i18n="t9.title">Watchdog 自動復原</h4>
+        <p data-i18n="t9.desc">即使遇到極端 EMI 雜訊導致 MCU 異常，內建 Watchdog 會在數秒內重啟系統，重啟前所有電力輸出皆強制切斷。</p>
       </div>
     </div>
   </div>
@@ -2066,7 +2101,7 @@
       'mock.temp': '溫度',
       'mock.status': '● 磨合進行中 · 階段 6/10 · 已運行 02:48:33',
       'features.tag': 'CORE FEATURES',
-      'features.title': '八大專業功能',
+      'features.title': '九大專業功能',
       'features.subtitle': '從磨合到診斷,涵蓋 Mini 4WD 馬達生命週期的每一個關鍵環節。',
       'f1.title': '馬達磨合程式',
       'f1.desc': '十階段可程式化磨合,每階段獨立設定電壓、運轉方向、運轉時間、冷卻時間與穩定電流容差。模擬實車條件下的低速長時間磨合,讓電刷與整流子達到最佳貼合。',
@@ -2097,6 +2132,10 @@
       'f8.title': '線上更新與防偽機制',
       'f8.desc': '透過家用 WiFi 自動取得最新韌體,內建 HMAC-SHA256 簽章驗證與雙韌體區自動回退機制,更新失敗自動切回前一版,杜絕磚機風險。',
       'f8.tag2': '自動回退',
+      'f9.title': '三層安全保護機制',
+      'f9.desc': '馬達磨合過程中,馬達產生的強烈電磁干擾(EMI)、水磨合或堵轉時的瞬間電流飆升,都是傷害昂貴競賽馬達的潛在風險。MotorLab 內建三層硬體與韌體聯防機制 — 抗 EMI 電路設計持續被動防護、電流異常 < 100 ms 急停切斷電力、極端干擾導致 MCU 異常時 Watchdog 於數秒內自動重啟。',
+      'f9.tag2': '< 100 ms 急停',
+      'f9.tag3': 'Watchdog 4s',
       'versions.tag': 'EDITIONS',
       'versions.title': 'M1 與 PRO',
       'versions.subtitle': '同一台機器,兩種授權層級。隨時可線上升級。',
@@ -2108,6 +2147,7 @@
       'vt.r5': '電刷接觸穩定測試',
       'vt.r6': '即時 Web 操作介面',
       'vt.r7': '線上韌體更新',
+      'vt.r12': '三層安全保護機制',
       'vt.r8': 'AI 智慧馬達健康管理(最多 20 顆)',
       'vt.r9': 'FFT 振動頻譜分析',
       'vt.r10': '五大指標雷達圖診斷',
@@ -2127,6 +2167,12 @@
       't5.desc': '滑動窗口偵測連續 N 秒內電流最大最小差值,達穩定後鎖定數值,避免暫時擾動造成誤判,提升量測重現性。',
       't6.title': '雜訊底線扣除',
       't6.desc': '量測前先採集儀器本身雜訊基準,後續訊號扣除其平方差,分離出馬達真實訊號變化,讓微小異常也無所遁形。',
+      't7.title': '抗 EMI 電路設計',
+      't7.desc': '電源與感測訊號採用抗 EMI 設計,有效抑制馬達高頻雜訊回灌,避免感測讀值汙染及 MCU 邏輯被誤觸發。',
+      't8.title': '硬體過流保護 (< 100 ms)',
+      't8.desc': '即時電流監測瞬間超過安全閾值時 < 100 ms 內立即斷電,保護系統及昂貴的競賽馬達。',
+      't9.title': 'Watchdog 自動復原',
+      't9.desc': '即使遇到極端 EMI 雜訊導致 MCU 異常,內建 Watchdog 會在數秒內重啟系統,重啟前所有電力輸出皆強制切斷。',
 
       // ===== Guides 教學 =====
       'g.tag': 'KNOWLEDGE BASE',
@@ -2326,7 +2372,7 @@
       'mock.temp': 'Temp',
       'mock.status': '● Break-in running · Stage 6/10 · 02:48:33 elapsed',
       'features.tag': 'CORE FEATURES',
-      'features.title': 'Eight Professional Tools',
+      'features.title': 'Nine Professional Tools',
       'features.subtitle': 'From break-in to diagnostics, covering every critical phase of the Mini 4WD motor lifecycle.',
       'f1.title': 'Motor Break-in Program',
       'f1.desc': 'Ten-stage programmable break-in. Configure voltage, direction, runtime, cooldown, and current tolerance per stage. Simulates real-world low-speed extended operation to bring brushes and commutator into optimal contact.',
@@ -2356,6 +2402,10 @@
       'f7.tag2': 'Cross-platform',
       'f8.title': 'OTA Update & Tamper Protection',
       'f8.desc': 'Auto-fetches latest firmware via home WiFi. Built-in HMAC-SHA256 signature verification and dual-partition rollback ensure update failures automatically revert to the previous version — no brick risk.',
+      'f9.title': 'Triple-Layer Safety Protection',
+      'f9.desc': 'During motor break-in, intense electromagnetic interference (EMI) from the motor, plus current surges from water break-in or rotor lockup, are all real threats to your expensive race motors. MotorLab integrates three layers of hardware + firmware defense: passive EMI shielding circuitry, < 100 ms emergency current cutoff, and Watchdog auto-recovery within seconds even if extreme noise causes MCU anomalies.',
+      'f9.tag2': '< 100 ms cutoff',
+      'f9.tag3': 'Watchdog 4s',
       'f8.tag2': 'Auto rollback',
       'versions.tag': 'EDITIONS',
       'versions.title': 'M1 and PRO',
@@ -2368,6 +2418,7 @@
       'vt.r5': 'Brush contact stability test',
       'vt.r6': 'Live web interface',
       'vt.r7': 'OTA firmware updates',
+      'vt.r12': 'Triple-layer safety protection',
       'vt.r8': 'AI Motor Health Manager (up to 20 motors)',
       'vt.r9': 'FFT vibration spectrum',
       'vt.r10': '5-metric radar diagnostic',
@@ -2387,6 +2438,12 @@
       't5.desc': 'Sliding window detects max-min current spread over N consecutive seconds. Once stable, the value latches to prevent transient perturbations from causing misjudgment — boosting repeatability.',
       't6.title': 'Noise Floor Subtraction',
       't6.desc': 'Captures the instrument noise baseline before measurement, then subtracts its variance from subsequent signals. Isolates true motor signal variations so even subtle anomalies cannot hide.',
+      't7.title': 'EMI Shielding Circuit Design',
+      't7.desc': 'Power and sensor signal lines use anti-EMI design to effectively suppress high-frequency noise from the motor, preventing contamination of sensor readings or MCU logic misfires.',
+      't8.title': 'Hardware Overcurrent Cutoff (< 100 ms)',
+      't8.desc': 'Real-time current monitoring instantly cuts power within < 100 ms when current exceeds safety threshold, protecting both the system and your expensive race motor.',
+      't9.title': 'Watchdog Auto-Recovery',
+      't9.desc': 'Even if extreme EMI noise causes MCU anomalies, the built-in Watchdog reboots the system within seconds. All power outputs are forcibly cut before reboot.',
 
       // ===== Guides =====
       'g.tag': 'KNOWLEDGE BASE',
