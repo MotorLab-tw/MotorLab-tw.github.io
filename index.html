@@ -7,7 +7,7 @@
 <title>MotorLab — Mini 4WD® 馬達磨合測試系統 | 精密馬達診斷工作室</title>
 <meta name="description" content="MotorLab 是專為 Mini 4WD® 玩家打造的精密馬達磨合與測試系統。十階段可程式化磨合、AI 智慧馬達健康管理、FFT 振動頻譜分析、軸承阻力衰減量測、電刷接觸穩定診斷。讓每一次馬達調校都可量化、可重複、可比較。">
 <meta name="author" content="MotorLab.tw">
-<meta name="keywords" content="馬達磨合, 馬達磨合機, MotorLab, Mini 4WD, 田宮迷你四驅車, 迷你四驅車, ミニ四駆, 四驅車, 馬達測試, 馬達調校, 馬達健康診斷, 軸承測試, 電刷測試, FFT 頻譜分析, motor break-in, motor test, motor health analyzer, Tamiya mini 4WD">
+<meta name="keywords" content="馬達磨合, 馬達磨合機, 四驅車馬達磨合, 迷你四驅車馬達磨合, 馬達磨合教學, MotorLab, Mini 4WD, 田宮迷你四驅車, 迷你四驅車, ミニ四駆, 四驅車, 馬達測試, 馬達調校, 馬達健康診斷, 洗馬達, 紅二馬達, 黑金剛, Hyper Dash, Plasma Dash, motor break-in, motor test, Tamiya mini 4WD">
 
 <!-- 正規網址 (避免重複內容問題) -->
 <link rel="canonical" href="https://motorlab-tw.github.io/">
@@ -77,9 +77,6 @@
     "@type": "Country",
     "name": "Taiwan"
   },
-  "sameAs": [
-    "https://github.com/MotorLab-tw"
-  ],
   "contactPoint": {
     "@type": "ContactPoint",
     "email": "motorlab.tw@gmail.com",
@@ -677,6 +674,165 @@
     line-height: 1.7;
   }
 
+  /* ===== 教學知識 Guides ===== */
+  .guides-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    max-width: 920px;
+    margin: 0 auto;
+  }
+  .guide-article {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 32px 36px;
+    transition: border-color 0.2s;
+  }
+  .guide-article:hover {
+    border-color: var(--accent-cyan);
+  }
+  .guide-article > .guide-tag {
+    display: inline-block;
+    color: var(--accent-cyan);
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+    padding: 3px 9px;
+    border: 1px solid var(--accent-cyan);
+    border-radius: 3px;
+  }
+  .guide-article h3 {
+    font-size: 22px;
+    margin: 4px 0 18px;
+    line-height: 1.4;
+  }
+  .guide-article > .guide-lead {
+    color: var(--text-secondary);
+    font-size: 14.5px;
+    line-height: 1.75;
+    margin-bottom: 22px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--border);
+  }
+  .guide-article h4 {
+    color: var(--accent-cyan);
+    font-size: 15.5px;
+    margin: 24px 0 10px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  .guide-article h4::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border: 1px solid var(--accent-cyan);
+    transform: rotate(45deg);
+    flex-shrink: 0;
+  }
+  .guide-article p {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 10px 0;
+  }
+  .guide-article ul {
+    margin: 10px 0 10px 4px;
+    padding-left: 22px;
+  }
+  .guide-article ul li {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 6px 0;
+  }
+  .guide-article ul li strong {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+  .guide-article code {
+    background: var(--bg-tertiary);
+    color: var(--accent-cyan);
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-family: monospace;
+    font-size: 13px;
+  }
+  .guide-warning {
+    background: rgba(208, 135, 112, 0.08);
+    border-left: 3px solid var(--accent-warning);
+    padding: 14px 18px;
+    margin: 18px 0;
+    border-radius: 0 6px 6px 0;
+  }
+  .guide-warning p {
+    margin: 0;
+    color: var(--text-primary);
+    font-size: 13.5px;
+  }
+  .guide-warning p::before {
+    content: '⚠ ';
+    color: var(--accent-warning);
+    font-weight: bold;
+  }
+  .guide-tip {
+    background: rgba(163, 190, 140, 0.08);
+    border-left: 3px solid var(--success);
+    padding: 14px 18px;
+    margin: 18px 0;
+    border-radius: 0 6px 6px 0;
+  }
+  .guide-tip p {
+    margin: 0;
+    color: var(--text-primary);
+    font-size: 13.5px;
+  }
+  .guide-tip p::before {
+    content: '✓ ';
+    color: var(--success);
+    font-weight: bold;
+  }
+  .guide-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 13.5px;
+  }
+  .guide-table th {
+    background: var(--bg-tertiary);
+    color: var(--accent-cyan);
+    text-align: left;
+    padding: 10px 12px;
+    font-weight: 600;
+    font-size: 13px;
+    border-bottom: 1px solid var(--border);
+  }
+  .guide-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-secondary);
+  }
+  .guide-table tr:last-child td {
+    border-bottom: none;
+  }
+  .guide-table td:first-child {
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+
+  /* RWD: 行動裝置 */
+  @media (max-width: 720px) {
+    .guide-article {
+      padding: 22px 20px;
+    }
+    .guide-article h3 {
+      font-size: 19px;
+    }
+  }
+
   /* ===== Changelog ===== */
   .changelog {
     max-width: 820px;
@@ -1142,6 +1298,7 @@
       <li><a href="#features" data-i18n="nav.features">功能</a></li>
       <li><a href="#versions" data-i18n="nav.versions">版本</a></li>
       <li><a href="#tech" data-i18n="nav.tech">技術</a></li>
+      <li><a href="#guides" data-i18n="nav.guides">教學</a></li>
       <li><a href="#changelog" data-i18n="nav.changelog">更新</a></li>
       <li><a href="#about" data-i18n="nav.about">關於</a></li>
       <li><a href="#contact" data-i18n="nav.contact">聯絡</a></li>
@@ -1455,6 +1612,226 @@
   </div>
 </section>
 
+<!-- 教學知識 Guides -->
+<section id="guides">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag" data-i18n="g.tag">KNOWLEDGE BASE</div>
+      <h2 class="section-title" data-i18n="g.title">四驅車馬達磨合教學</h2>
+      <p class="section-subtitle" data-i18n="g.subtitle">從原理到實作,整理迷你四驅車馬達磨合最常見的問題與解答。</p>
+    </div>
+
+    <div class="guides-grid">
+
+      <!-- Guide 1: 完全指南 -->
+      <article class="guide-article">
+        <span class="guide-tag" data-i18n="g1.tag">GUIDE · 完全指南</span>
+        <h3 data-i18n="g1.title">四驅車馬達磨合完全指南:從原理到實作</h3>
+        <p class="guide-lead" data-i18n="g1.lead">迷你四驅車(Mini 4WD)的馬達磨合,是讓新馬達發揮最大潛能的必要程序。本文整理田宮馬達磨合的科學原理、實作步驟、以及為什麼專業車手都要做這道工序。</p>
+
+        <h4 data-i18n="g1.h1">為什麼新馬達一定要磨合?</h4>
+        <p data-i18n="g1.p1">田宮新馬達(無論是紅二 Hyper Dash、黑金剛 Plasma Dash、白頭 Sprint Dash 還是紫頭、橘頭)出廠時,<strong>碳刷(電刷)的接觸面是平的</strong>。但馬達內部的整流子(銅頭)是圓柱形,平面碳刷只能接觸到極小的弧線,實際導電面積非常有限。</p>
+        <p data-i18n="g1.p2">這時直接全速運轉,馬達會因為電刷接觸不良而產生以下狀況:</p>
+        <ul>
+          <li data-i18n="g1.l1"><strong>電流不穩</strong>—碳刷跳動造成電流劇烈起伏,馬達抖動發熱</li>
+          <li data-i18n="g1.l2"><strong>轉速無法發揮</strong>—標稱 19,300 RPM 的紅二,可能只能跑出 14,000 RPM</li>
+          <li data-i18n="g1.l3"><strong>磁鐵退磁風險</strong>—持續高溫會永久降低馬達輸出</li>
+          <li data-i18n="g1.l4"><strong>銅頭過早磨損</strong>—未磨合的硬碰硬接觸會傷整流子</li>
+        </ul>
+        <p data-i18n="g1.p3"><strong>磨合的目的</strong>就是讓平面碳刷漸進磨出與銅頭曲面吻合的「半圓弧凹槽」,讓接觸面積最大化,電流順暢流動,馬達才能達到設計的轉速與扭力。</p>
+
+        <h4 data-i18n="g1.h2">磨合的物理原理</h4>
+        <p data-i18n="g1.p4">直流碳刷馬達的核心數學關係:<code>N = (V − IR) / Kφ</code>(轉速 = (電壓 − 電流×內阻) / 磁通常數)。新馬達的碳刷接觸電阻 R 很高,造成 IR 損失大、轉速 N 上不去。磨合過程實際是<strong>降低接觸電阻、提升能源轉換效率</strong>的物理過程。</p>
+        <p data-i18n="g1.p5">業餘做法是「在水裡用低電壓跑」(俗稱水磨)、或「用乾電池正反向跑」。但這兩種方法的問題是:電壓不可控、時間靠感覺、無法量化進度,結果好壞全憑運氣。</p>
+
+        <h4 data-i18n="g1.h3">專業磨合的 4 個關鍵變數</h4>
+        <p data-i18n="g1.p6">每一次磨合的成功與否,取決於下面 4 個參數的精準控制:</p>
+        <table class="guide-table">
+          <thead>
+            <tr><th data-i18n="g1.t.var">變數</th><th data-i18n="g1.t.role">作用</th><th data-i18n="g1.t.risk">控制不當的後果</th></tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n="g1.t.v1">電壓(V)</td><td data-i18n="g1.t.r1">決定接觸面溫度與壓力</td><td data-i18n="g1.t.x1">過高燒掉碳刷、過低磨不動</td></tr>
+            <tr><td data-i18n="g1.t.v2">時間(min)</td><td data-i18n="g1.t.r2">決定磨合深度</td><td data-i18n="g1.t.x2">不夠則接觸面不完整、過久反而磨穿</td></tr>
+            <tr><td data-i18n="g1.t.v3">方向(±)</td><td data-i18n="g1.t.r3">確保碳刷兩側對稱磨耗</td><td data-i18n="g1.t.x3">單向磨會偏磨,影響耐用度</td></tr>
+            <tr><td data-i18n="g1.t.v4">冷卻(s)</td><td data-i18n="g1.t.r4">避免溫度累積</td><td data-i18n="g1.t.x4">過熱導致磁鐵退磁,輸出永久下降</td></tr>
+          </tbody>
+        </table>
+
+        <h4 data-i18n="g1.h4">標準磨合流程(10 階段建議)</h4>
+        <p data-i18n="g1.p7">業界主流的「漸進升壓」磨合方法,將馬達磨合分成 10 階段、每階段約 30-90 秒、電壓從 1.0V 緩升至 2.4V,並穿插反向運轉與冷卻時間。</p>
+        <div class="guide-tip">
+          <p data-i18n="g1.tip">MotorLab M1/PRO 內建的<strong>十階段可程式化磨合</strong>會自動執行這套流程,每階段可獨立調整電壓、方向、時間、冷卻、與穩定電流容差。並透過<strong>智慧穩流判定</strong>—當電流連續波動小於設定值時自動進入下階段,確保每顆馬達都磨到位。</p>
+        </div>
+
+        <h4 data-i18n="g1.h5">磨合完成的判定標準</h4>
+        <p data-i18n="g1.p8">怎麼知道馬達磨好了?有 4 個觀察點:</p>
+        <ul>
+          <li data-i18n="g1.l5"><strong>電流穩定度</strong>—同一電壓下,電流波動 ≤ ±50mA</li>
+          <li data-i18n="g1.l6"><strong>轉速穩定度</strong>—同樣電壓下,連續 10 秒轉速差異 ≤ 200 RPM</li>
+          <li data-i18n="g1.l7"><strong>溫升曲線平緩</strong>—不再有跳躍性升溫</li>
+          <li data-i18n="g1.l8"><strong>聲音平順</strong>—不再有「滋滋」的不規則噪音</li>
+        </ul>
+      </article>
+
+      <!-- Guide 2: 5 大錯誤 -->
+      <article class="guide-article">
+        <span class="guide-tag" data-i18n="g2.tag">GUIDE · 避免錯誤</span>
+        <h3 data-i18n="g2.title">為什麼業餘車手磨合馬達總是失敗?5 個常見錯誤</h3>
+        <p class="guide-lead" data-i18n="g2.lead">許多新手回鍋玩四驅車,聽說要磨合馬達就拿乾電池亂跑,結果不是馬達燒掉就是跑不快。本文整理最常見的 5 個磨合錯誤與正確做法。</p>
+
+        <h4 data-i18n="g2.h1">錯誤 1:電壓過高、時間過長</h4>
+        <p data-i18n="g2.p1">最常見的錯誤就是<strong>「拿乾電池(1.5V × 2 = 3V)直接讓馬達狂跑半小時」</strong>。看起來合理,實際後果是:</p>
+        <ul>
+          <li data-i18n="g2.l1">3V 對紅二、黑金剛來說已經接近全速,等於沒磨合就直接操</li>
+          <li data-i18n="g2.l2">長時間運轉沒冷卻,溫度可能衝到 80℃ 以上,<strong>磁鐵永久退磁</strong></li>
+          <li data-i18n="g2.l3">碳刷可能在還沒磨成弧形前就燒斷</li>
+        </ul>
+        <div class="guide-warning">
+          <p data-i18n="g2.w1">正確做法:從 1.0V 起步,每階段升 0.15V,單階段不超過 90 秒,每階段間插入 15-30 秒冷卻。</p>
+        </div>
+
+        <h4 data-i18n="g2.h2">錯誤 2:用水磨但水量太多、沒擦乾</h4>
+        <p data-i18n="g2.p2">水磨原理是利用水的高比熱帶走熱量、同時水也是輕度阻尼。但業餘水磨常見問題:</p>
+        <ul>
+          <li data-i18n="g2.l4"><strong>水跑進軸承</strong>—培林軸承生鏽,馬達噪音變大</li>
+          <li data-i18n="g2.l5"><strong>沒徹底擦乾</strong>—內部殘留水分造成電化學腐蝕,壽命大減</li>
+          <li data-i18n="g2.l6"><strong>水質太硬</strong>—礦物質沉積在整流子上,接觸更差</li>
+        </ul>
+        <div class="guide-tip">
+          <p data-i18n="g2.t2">更現代的做法是<strong>「精密電流控制乾磨」</strong>—不接觸液體,純靠電壓電流控制與冷卻時間,徹底避免水損風險。</p>
+        </div>
+
+        <h4 data-i18n="g2.h3">錯誤 3:只磨單一方向</h4>
+        <p data-i18n="g2.p3">許多人磨合時只接正極跑一個方向,結果碳刷只有一邊磨出弧形,另一邊還是平的。實車使用時雖然只往一個方向轉,但<strong>偏磨會造成兩個問題</strong>:</p>
+        <ul>
+          <li data-i18n="g2.l7">電流分配不均,單側碳刷負擔過重提早燒斷</li>
+          <li data-i18n="g2.l8">後續若做反向短跑(練起步)時,未磨合那側會打火花</li>
+        </ul>
+        <p data-i18n="g2.p4"><strong>正確做法</strong>:磨合過程中應安排 30% 左右的反向運轉,讓兩側碳刷對稱磨耗。</p>
+
+        <h4 data-i18n="g2.h4">錯誤 4:磨完不測就拿去跑</h4>
+        <p data-i18n="g2.p5">磨合完成後直接裝車比賽,結果發現「咦,沒比較快?」。原因:<strong>沒做基準量測,根本不知道磨好沒</strong>。</p>
+        <p data-i18n="g2.p6">建議磨合前後都做標準量測(同電壓、同負載條件):</p>
+        <ul>
+          <li data-i18n="g2.l9">空載電流(無負載運轉的穩定電流值)</li>
+          <li data-i18n="g2.l10">穩定轉速(連續 10 秒 RPM 平均值)</li>
+          <li data-i18n="g2.l11">電流變異係數 CV(穩定度指標)</li>
+        </ul>
+        <p data-i18n="g2.p7">磨合後三個數值都應該優於磨合前,否則就是磨合沒到位或方法錯誤。</p>
+
+        <h4 data-i18n="g2.h5">錯誤 5:沒有紀錄,憑感覺判斷</h4>
+        <p data-i18n="g2.p8">最致命的錯誤—<strong>每顆馬達都用「差不多」的感覺磨合,沒留下任何數據</strong>。結果:</p>
+        <ul>
+          <li data-i18n="g2.l12">分不清「這顆是磨好了還是退化了」</li>
+          <li data-i18n="g2.l13">換馬達時無從比較哪顆狀況最佳</li>
+          <li data-i18n="g2.l14">調校軌道時不知道是車的問題還是馬達的問題</li>
+        </ul>
+        <div class="guide-tip">
+          <p data-i18n="g2.t5">建議建立每顆馬達的<strong>健康指紋(Health Fingerprint)</strong>—記錄它在標準條件下的電流、轉速、溫升、振動頻譜。後續任何時間都可比對,精準判斷馬達狀態。這也是 MotorLab PRO 內建 AI 健康管理的核心功能。</p>
+        </div>
+      </article>
+
+      <!-- Guide 3: 馬達特性表 -->
+      <article class="guide-article">
+        <span class="guide-tag" data-i18n="g3.tag">REFERENCE · 馬達速查</span>
+        <h3 data-i18n="g3.title">田宮主流馬達特性與磨合策略對照表</h3>
+        <p class="guide-lead" data-i18n="g3.lead">不同馬達的設計用途、轉速、扭力特性都不同,磨合方式自然也該有差。整理田宮 8 款主流馬達的官方規格與建議磨合策略。</p>
+
+        <h4 data-i18n="g3.h1">入門級馬達(適合新手起手)</h4>
+        <table class="guide-table">
+          <thead>
+            <tr><th data-i18n="g3.t.name">型號</th><th data-i18n="g3.t.spec">負載轉速 / 扭力</th><th data-i18n="g3.t.brush">電刷類型</th><th data-i18n="g3.t.policy">磨合策略</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>黃頭 Light Dash</td><td>9,800 RPM / 10 g·cm</td><td>銅刷</td><td data-i18n="g3.t.p1">低壓短時(1.5V × 5 階段)</td></tr>
+            <tr><td>紫頭 Rev Tuned</td><td>14,300 RPM / 10 g·cm</td><td>銅刷</td><td data-i18n="g3.t.p2">標準 10 階段</td></tr>
+            <tr><td>橘頭 Torque Tuned</td><td>12,000 RPM / 14.5 g·cm</td><td>銅刷</td><td data-i18n="g3.t.p3">標準 + 加強扭力負載</td></tr>
+            <tr><td>灰頭 Atomic Tuned</td><td>13,700 RPM / 10 g·cm</td><td>銅刷</td><td data-i18n="g3.t.p4">標準 10 階段</td></tr>
+          </tbody>
+        </table>
+
+        <h4 data-i18n="g3.h2">進階級馬達(碳刷,可深度磨合)</h4>
+        <table class="guide-table">
+          <thead>
+            <tr><th data-i18n="g3.t.name2">型號</th><th data-i18n="g3.t.spec2">負載轉速 / 扭力</th><th data-i18n="g3.t.brush2">電刷類型</th><th data-i18n="g3.t.policy2">磨合策略</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>紅頭 Hyper Dash 2</td><td>17,300 RPM / 10 g·cm</td><td>碳刷</td><td data-i18n="g3.t.p5">完整 10 階段(必磨)</td></tr>
+            <tr><td>綠頭 Power Dash</td><td>18,100 RPM / 16 g·cm</td><td>碳刷</td><td data-i18n="g3.t.p6">完整 10 階段 + 扭力測試</td></tr>
+            <tr><td>白頭 Sprint Dash</td><td>19,500 RPM / 17.5 g·cm</td><td>碳刷</td><td data-i18n="g3.t.p7">漸進升壓,需特別控溫</td></tr>
+            <tr><td>黑金剛 Plasma Dash</td><td>23,500 RPM / 13 g·cm</td><td>碳刷</td><td data-i18n="g3.t.p8">慢工出細活,2 倍冷卻時間</td></tr>
+          </tbody>
+        </table>
+
+        <h4 data-i18n="g3.h3">磨合策略差異說明</h4>
+        <p data-i18n="g3.p1"><strong>銅刷馬達</strong>(黃頭、紫頭、橘頭、灰頭):碳刷較薄、強度低,不適合高電壓磨合。建議起始電壓 0.8V,最高不超過 2.0V。</p>
+        <p data-i18n="g3.p2"><strong>碳刷馬達</strong>(紅、綠、白、黑金剛):可承受較高磨合電壓,但黑金剛因轉速最高、發熱最快,冷卻時間應延長至一般馬達的兩倍。</p>
+        <div class="guide-warning">
+          <p data-i18n="g3.w1">注意田宮官方競賽規則:禁止拆卸馬達蓋、嚴禁加壓磁力、嚴禁改變電刷導電片長度。磨合屬於合法調整(只是讓接觸面更好),但任何拆解或物理改造都會違規。</p>
+        </div>
+      </article>
+
+      <!-- Guide 4: 洗馬達 vs 磨合 -->
+      <article class="guide-article">
+        <span class="guide-tag" data-i18n="g4.tag">GUIDE · 觀念釐清</span>
+        <h3 data-i18n="g4.title">洗馬達 vs 磨合馬達:差別在哪?什麼時候做?</h3>
+        <p class="guide-lead" data-i18n="g4.lead">「洗馬達」與「磨合馬達」是兩個完全不同的程序,但常被混淆。本文釐清兩者的時機、做法、與目的。</p>
+
+        <h4 data-i18n="g4.h1">兩者的根本差異</h4>
+        <table class="guide-table">
+          <thead>
+            <tr><th data-i18n="g4.t.dim">面向</th><th data-i18n="g4.t.runin">磨合(Run-in)</th><th data-i18n="g4.t.wash">洗馬達(Wash)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n="g4.t.when">時機</td><td data-i18n="g4.t.w1">新馬達第一次使用前</td><td data-i18n="g4.t.w2">用過一段時間,碳渣累積後</td></tr>
+            <tr><td data-i18n="g4.t.goal">目的</td><td data-i18n="g4.t.g1">讓碳刷與銅頭達到最佳接觸</td><td data-i18n="g4.t.g2">清除內部碳渣與舊潤滑油</td></tr>
+            <tr><td data-i18n="g4.t.tool">工具</td><td data-i18n="g4.t.l1">磨合機(可控電源)</td><td data-i18n="g4.t.l2">環保去漬油 / Zippo 打火機油</td></tr>
+            <tr><td data-i18n="g4.t.time">耗時</td><td data-i18n="g4.t.x1">30-60 分鐘</td><td data-i18n="g4.t.x2">10-15 分鐘</td></tr>
+            <tr><td data-i18n="g4.t.after">後續</td><td data-i18n="g4.t.a1">可直接裝車使用</td><td data-i18n="g4.t.a2">必須重新上油(WURTH 超潤等)</td></tr>
+          </tbody>
+        </table>
+
+        <h4 data-i18n="g4.h2">什麼時候該洗馬達?</h4>
+        <ul>
+          <li data-i18n="g4.l1">馬達運轉時有明顯「澀」的感覺</li>
+          <li data-i18n="g4.l2">同電壓下電流明顯增加(內部摩擦變大)</li>
+          <li data-i18n="g4.l3">轉速比新磨好時下降超過 5%</li>
+          <li data-i18n="g4.l4">明顯聽到不正常的雜音或抖動</li>
+          <li data-i18n="g4.l5">出廠的<strong>防鏽保護油</strong>需要清除(新馬達也可洗)</li>
+        </ul>
+
+        <h4 data-i18n="g4.h3">洗馬達標準流程</h4>
+        <ul>
+          <li data-i18n="g4.l6">準備環保去漬油(綠瓶,加油站約 NT$45/0.5L),或 Zippo 油</li>
+          <li data-i18n="g4.l7">將馬達浸泡於去漬油中,輕輕轉動軸心讓油進入內部</li>
+          <li data-i18n="g4.l8">用低電壓(1V 以下)短時間運轉,把碳渣甩出來</li>
+          <li data-i18n="g4.l9">取出徹底吹乾(用無油壓縮空氣),確保無殘留</li>
+          <li data-i18n="g4.l10"><strong>重新滴入潤滑油</strong>(WURTH 超潤 2040 或同等級),否則馬達會更澀</li>
+        </ul>
+
+        <div class="guide-warning">
+          <p data-i18n="g4.w1">注意:洗完馬達不一定會變快!如果磨合本身沒到位,洗完只是把碳渣清掉,該慢的還是會慢。<strong>真正讓馬達快的是「磨合」,洗只是「維護」</strong>。</p>
+        </div>
+
+        <h4 data-i18n="g4.h4">綜合保養週期建議</h4>
+        <p data-i18n="g4.p1">參考國內外進階車手的經驗,以一顆紅二馬達的生命週期為例:</p>
+        <ul>
+          <li data-i18n="g4.l11"><strong>新品入手</strong>—完整磨合 10 階段(MotorLab M1/PRO 自動執行)</li>
+          <li data-i18n="g4.l12"><strong>運行 5-10 場比賽後</strong>—首次洗馬達 + 重新上油</li>
+          <li data-i18n="g4.l13"><strong>每運行 5 場</strong>—簡單上油保養</li>
+          <li data-i18n="g4.l14"><strong>每運行 15-20 場</strong>—完整洗馬達 + 健康指紋複測</li>
+          <li data-i18n="g4.l15"><strong>當複測指標下降 &gt; 10%</strong>—考慮退役換新</li>
+        </ul>
+        <div class="guide-tip">
+          <p data-i18n="g4.t1">這個保養週期透過 MotorLab PRO 的歷史紀錄功能(可存 50 筆量測資料)可以精準追蹤,讓你知道每顆馬達「跑了幾場、衰減多少」,告別憑感覺保養的時代。</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
 <!-- Changelog -->
 <section id="changelog" style="background: rgba(0,0,0,0.15);">
   <div class="container">
@@ -1594,15 +1971,11 @@
   <div class="container">
     <div class="contact-box">
       <h2 data-i18n="contact.title">想了解更多？</h2>
-      <p data-i18n="contact.desc">MotorLab 目前處於最後發行準備階段。歡迎透過下列管道與我們聯絡，或關注 GitHub 工作室帳號取得最新進展。</p>
+      <p data-i18n="contact.desc">MotorLab 目前處於最後發行準備階段。歡迎透過下列管道與我們聯絡。</p>
       <div class="contact-methods">
         <a href="mailto:motorlab.tw@gmail.com" class="contact-link">
           <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           motorlab.tw@gmail.com
-        </a>
-        <a href="https://github.com/MotorLab-tw" target="_blank" rel="noopener" class="contact-link">
-          <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-          GitHub @MotorLab-tw
         </a>
       </div>
     </div>
@@ -1665,6 +2038,7 @@
       'nav.features': '功能',
       'nav.versions': '版本',
       'nav.tech': '技術',
+      'nav.guides': '教學',
       'nav.changelog': '更新',
       'nav.about': '關於',
       'nav.contact': '聯絡',
@@ -1741,6 +2115,132 @@
       't5.desc': '滑動窗口偵測連續 N 秒內電流最大最小差值,達穩定後鎖定數值,避免暫時擾動造成誤判,提升量測重現性。',
       't6.title': '雜訊底線扣除',
       't6.desc': '量測前先採集儀器本身雜訊基準,後續訊號扣除其平方差,分離出馬達真實訊號變化,讓微小異常也無所遁形。',
+
+      // ===== Guides 教學 =====
+      'g.tag': 'KNOWLEDGE BASE',
+      'g.title': '四驅車馬達磨合教學',
+      'g.subtitle': '從原理到實作,整理迷你四驅車馬達磨合最常見的問題與解答。',
+
+      // Guide 1
+      'g1.tag': 'GUIDE · 完全指南',
+      'g1.title': '四驅車馬達磨合完全指南:從原理到實作',
+      'g1.lead': '迷你四驅車(Mini 4WD)的馬達磨合,是讓新馬達發揮最大潛能的必要程序。本文整理田宮馬達磨合的科學原理、實作步驟、以及為什麼專業車手都要做這道工序。',
+      'g1.h1': '為什麼新馬達一定要磨合?',
+      'g1.p1': '田宮新馬達(無論是紅二 Hyper Dash、黑金剛 Plasma Dash、白頭 Sprint Dash 還是紫頭、橘頭)出廠時,<strong>碳刷(電刷)的接觸面是平的</strong>。但馬達內部的整流子(銅頭)是圓柱形,平面碳刷只能接觸到極小的弧線,實際導電面積非常有限。',
+      'g1.p2': '這時直接全速運轉,馬達會因為電刷接觸不良而產生以下狀況:',
+      'g1.l1': '<strong>電流不穩</strong>—碳刷跳動造成電流劇烈起伏,馬達抖動發熱',
+      'g1.l2': '<strong>轉速無法發揮</strong>—標稱 19,300 RPM 的紅二,可能只能跑出 14,000 RPM',
+      'g1.l3': '<strong>磁鐵退磁風險</strong>—持續高溫會永久降低馬達輸出',
+      'g1.l4': '<strong>銅頭過早磨損</strong>—未磨合的硬碰硬接觸會傷整流子',
+      'g1.p3': '<strong>磨合的目的</strong>就是讓平面碳刷漸進磨出與銅頭曲面吻合的「半圓弧凹槽」,讓接觸面積最大化,電流順暢流動,馬達才能達到設計的轉速與扭力。',
+      'g1.h2': '磨合的物理原理',
+      'g1.p4': '直流碳刷馬達的核心數學關係:<code>N = (V − IR) / Kφ</code>(轉速 = (電壓 − 電流×內阻) / 磁通常數)。新馬達的碳刷接觸電阻 R 很高,造成 IR 損失大、轉速 N 上不去。磨合過程實際是<strong>降低接觸電阻、提升能源轉換效率</strong>的物理過程。',
+      'g1.p5': '業餘做法是「在水裡用低電壓跑」(俗稱水磨)、或「用乾電池正反向跑」。但這兩種方法的問題是:電壓不可控、時間靠感覺、無法量化進度,結果好壞全憑運氣。',
+      'g1.h3': '專業磨合的 4 個關鍵變數',
+      'g1.p6': '每一次磨合的成功與否,取決於下面 4 個參數的精準控制:',
+      'g1.t.var': '變數', 'g1.t.role': '作用', 'g1.t.risk': '控制不當的後果',
+      'g1.t.v1': '電壓(V)', 'g1.t.r1': '決定接觸面溫度與壓力', 'g1.t.x1': '過高燒掉碳刷、過低磨不動',
+      'g1.t.v2': '時間(min)', 'g1.t.r2': '決定磨合深度', 'g1.t.x2': '不夠則接觸面不完整、過久反而磨穿',
+      'g1.t.v3': '方向(±)', 'g1.t.r3': '確保碳刷兩側對稱磨耗', 'g1.t.x3': '單向磨會偏磨,影響耐用度',
+      'g1.t.v4': '冷卻(s)', 'g1.t.r4': '避免溫度累積', 'g1.t.x4': '過熱導致磁鐵退磁,輸出永久下降',
+      'g1.h4': '標準磨合流程(10 階段建議)',
+      'g1.p7': '業界主流的「漸進升壓」磨合方法,將馬達磨合分成 10 階段、每階段約 30-90 秒、電壓從 1.0V 緩升至 2.4V,並穿插反向運轉與冷卻時間。',
+      'g1.tip': 'MotorLab M1/PRO 內建的<strong>十階段可程式化磨合</strong>會自動執行這套流程,每階段可獨立調整電壓、方向、時間、冷卻、與穩定電流容差。並透過<strong>智慧穩流判定</strong>—當電流連續波動小於設定值時自動進入下階段,確保每顆馬達都磨到位。',
+      'g1.h5': '磨合完成的判定標準',
+      'g1.p8': '怎麼知道馬達磨好了?有 4 個觀察點:',
+      'g1.l5': '<strong>電流穩定度</strong>—同一電壓下,電流波動 ≤ ±50mA',
+      'g1.l6': '<strong>轉速穩定度</strong>—同樣電壓下,連續 10 秒轉速差異 ≤ 200 RPM',
+      'g1.l7': '<strong>溫升曲線平緩</strong>—不再有跳躍性升溫',
+      'g1.l8': '<strong>聲音平順</strong>—不再有「滋滋」的不規則噪音',
+
+      // Guide 2
+      'g2.tag': 'GUIDE · 避免錯誤',
+      'g2.title': '為什麼業餘車手磨合馬達總是失敗?5 個常見錯誤',
+      'g2.lead': '許多新手回鍋玩四驅車,聽說要磨合馬達就拿乾電池亂跑,結果不是馬達燒掉就是跑不快。本文整理最常見的 5 個磨合錯誤與正確做法。',
+      'g2.h1': '錯誤 1:電壓過高、時間過長',
+      'g2.p1': '最常見的錯誤就是<strong>「拿乾電池(1.5V × 2 = 3V)直接讓馬達狂跑半小時」</strong>。看起來合理,實際後果是:',
+      'g2.l1': '3V 對紅二、黑金剛來說已經接近全速,等於沒磨合就直接操',
+      'g2.l2': '長時間運轉沒冷卻,溫度可能衝到 80℃ 以上,<strong>磁鐵永久退磁</strong>',
+      'g2.l3': '碳刷可能在還沒磨成弧形前就燒斷',
+      'g2.w1': '正確做法:從 1.0V 起步,每階段升 0.15V,單階段不超過 90 秒,每階段間插入 15-30 秒冷卻。',
+      'g2.h2': '錯誤 2:用水磨但水量太多、沒擦乾',
+      'g2.p2': '水磨原理是利用水的高比熱帶走熱量、同時水也是輕度阻尼。但業餘水磨常見問題:',
+      'g2.l4': '<strong>水跑進軸承</strong>—培林軸承生鏽,馬達噪音變大',
+      'g2.l5': '<strong>沒徹底擦乾</strong>—內部殘留水分造成電化學腐蝕,壽命大減',
+      'g2.l6': '<strong>水質太硬</strong>—礦物質沉積在整流子上,接觸更差',
+      'g2.t2': '更現代的做法是<strong>「精密電流控制乾磨」</strong>—不接觸液體,純靠電壓電流控制與冷卻時間,徹底避免水損風險。',
+      'g2.h3': '錯誤 3:只磨單一方向',
+      'g2.p3': '許多人磨合時只接正極跑一個方向,結果碳刷只有一邊磨出弧形,另一邊還是平的。實車使用時雖然只往一個方向轉,但<strong>偏磨會造成兩個問題</strong>:',
+      'g2.l7': '電流分配不均,單側碳刷負擔過重提早燒斷',
+      'g2.l8': '後續若做反向短跑(練起步)時,未磨合那側會打火花',
+      'g2.p4': '<strong>正確做法</strong>:磨合過程中應安排 30% 左右的反向運轉,讓兩側碳刷對稱磨耗。',
+      'g2.h4': '錯誤 4:磨完不測就拿去跑',
+      'g2.p5': '磨合完成後直接裝車比賽,結果發現「咦,沒比較快?」。原因:<strong>沒做基準量測,根本不知道磨好沒</strong>。',
+      'g2.p6': '建議磨合前後都做標準量測(同電壓、同負載條件):',
+      'g2.l9': '空載電流(無負載運轉的穩定電流值)',
+      'g2.l10': '穩定轉速(連續 10 秒 RPM 平均值)',
+      'g2.l11': '電流變異係數 CV(穩定度指標)',
+      'g2.p7': '磨合後三個數值都應該優於磨合前,否則就是磨合沒到位或方法錯誤。',
+      'g2.h5': '錯誤 5:沒有紀錄,憑感覺判斷',
+      'g2.p8': '最致命的錯誤—<strong>每顆馬達都用「差不多」的感覺磨合,沒留下任何數據</strong>。結果:',
+      'g2.l12': '分不清「這顆是磨好了還是退化了」',
+      'g2.l13': '換馬達時無從比較哪顆狀況最佳',
+      'g2.l14': '調校軌道時不知道是車的問題還是馬達的問題',
+      'g2.t5': '建議建立每顆馬達的<strong>健康指紋(Health Fingerprint)</strong>—記錄它在標準條件下的電流、轉速、溫升、振動頻譜。後續任何時間都可比對,精準判斷馬達狀態。這也是 MotorLab PRO 內建 AI 健康管理的核心功能。',
+
+      // Guide 3
+      'g3.tag': 'REFERENCE · 馬達速查',
+      'g3.title': '田宮主流馬達特性與磨合策略對照表',
+      'g3.lead': '不同馬達的設計用途、轉速、扭力特性都不同,磨合方式自然也該有差。整理田宮 8 款主流馬達的官方規格與建議磨合策略。',
+      'g3.h1': '入門級馬達(適合新手起手)',
+      'g3.t.name': '型號', 'g3.t.spec': '負載轉速 / 扭力', 'g3.t.brush': '電刷類型', 'g3.t.policy': '磨合策略',
+      'g3.t.p1': '低壓短時(1.5V × 5 階段)',
+      'g3.t.p2': '標準 10 階段',
+      'g3.t.p3': '標準 + 加強扭力負載',
+      'g3.t.p4': '標準 10 階段',
+      'g3.h2': '進階級馬達(碳刷,可深度磨合)',
+      'g3.t.name2': '型號', 'g3.t.spec2': '負載轉速 / 扭力', 'g3.t.brush2': '電刷類型', 'g3.t.policy2': '磨合策略',
+      'g3.t.p5': '完整 10 階段(必磨)',
+      'g3.t.p6': '完整 10 階段 + 扭力測試',
+      'g3.t.p7': '漸進升壓,需特別控溫',
+      'g3.t.p8': '慢工出細活,2 倍冷卻時間',
+      'g3.h3': '磨合策略差異說明',
+      'g3.p1': '<strong>銅刷馬達</strong>(黃頭、紫頭、橘頭、灰頭):碳刷較薄、強度低,不適合高電壓磨合。建議起始電壓 0.8V,最高不超過 2.0V。',
+      'g3.p2': '<strong>碳刷馬達</strong>(紅、綠、白、黑金剛):可承受較高磨合電壓,但黑金剛因轉速最高、發熱最快,冷卻時間應延長至一般馬達的兩倍。',
+      'g3.w1': '注意田宮官方競賽規則:禁止拆卸馬達蓋、嚴禁加壓磁力、嚴禁改變電刷導電片長度。磨合屬於合法調整(只是讓接觸面更好),但任何拆解或物理改造都會違規。',
+
+      // Guide 4
+      'g4.tag': 'GUIDE · 觀念釐清',
+      'g4.title': '洗馬達 vs 磨合馬達:差別在哪?什麼時候做?',
+      'g4.lead': '「洗馬達」與「磨合馬達」是兩個完全不同的程序,但常被混淆。本文釐清兩者的時機、做法、與目的。',
+      'g4.h1': '兩者的根本差異',
+      'g4.t.dim': '面向', 'g4.t.runin': '磨合(Run-in)', 'g4.t.wash': '洗馬達(Wash)',
+      'g4.t.when': '時機', 'g4.t.w1': '新馬達第一次使用前', 'g4.t.w2': '用過一段時間,碳渣累積後',
+      'g4.t.goal': '目的', 'g4.t.g1': '讓碳刷與銅頭達到最佳接觸', 'g4.t.g2': '清除內部碳渣與舊潤滑油',
+      'g4.t.tool': '工具', 'g4.t.l1': '磨合機(可控電源)', 'g4.t.l2': '環保去漬油 / Zippo 打火機油',
+      'g4.t.time': '耗時', 'g4.t.x1': '30-60 分鐘', 'g4.t.x2': '10-15 分鐘',
+      'g4.t.after': '後續', 'g4.t.a1': '可直接裝車使用', 'g4.t.a2': '必須重新上油(WURTH 超潤等)',
+      'g4.h2': '什麼時候該洗馬達?',
+      'g4.l1': '馬達運轉時有明顯「澀」的感覺',
+      'g4.l2': '同電壓下電流明顯增加(內部摩擦變大)',
+      'g4.l3': '轉速比新磨好時下降超過 5%',
+      'g4.l4': '明顯聽到不正常的雜音或抖動',
+      'g4.l5': '出廠的<strong>防鏽保護油</strong>需要清除(新馬達也可洗)',
+      'g4.h3': '洗馬達標準流程',
+      'g4.l6': '準備環保去漬油(綠瓶,加油站約 NT$45/0.5L),或 Zippo 油',
+      'g4.l7': '將馬達浸泡於去漬油中,輕輕轉動軸心讓油進入內部',
+      'g4.l8': '用低電壓(1V 以下)短時間運轉,把碳渣甩出來',
+      'g4.l9': '取出徹底吹乾(用無油壓縮空氣),確保無殘留',
+      'g4.l10': '<strong>重新滴入潤滑油</strong>(WURTH 超潤 2040 或同等級),否則馬達會更澀',
+      'g4.w1': '注意:洗完馬達不一定會變快!如果磨合本身沒到位,洗完只是把碳渣清掉,該慢的還是會慢。<strong>真正讓馬達快的是「磨合」,洗只是「維護」</strong>。',
+      'g4.h4': '綜合保養週期建議',
+      'g4.p1': '參考國內外進階車手的經驗,以一顆紅二馬達的生命週期為例:',
+      'g4.l11': '<strong>新品入手</strong>—完整磨合 10 階段(MotorLab M1/PRO 自動執行)',
+      'g4.l12': '<strong>運行 5-10 場比賽後</strong>—首次洗馬達 + 重新上油',
+      'g4.l13': '<strong>每運行 5 場</strong>—簡單上油保養',
+      'g4.l14': '<strong>每運行 15-20 場</strong>—完整洗馬達 + 健康指紋複測',
+      'g4.l15': '<strong>當複測指標下降 &gt; 10%</strong>—考慮退役換新',
+      'g4.t1': '這個保養週期透過 MotorLab PRO 的歷史紀錄功能(可存 50 筆量測資料)可以精準追蹤,讓你知道每顆馬達「跑了幾場、衰減多少」,告別憑感覺保養的時代。',
       'cl.tag': 'CHANGELOG',
       'cl.title': '韌體更新日誌',
       'cl.subtitle': '所有版本透過線上更新自動推送至已啟用裝置。',
@@ -1779,7 +2279,7 @@
       'about.s2': '當前韌體版本',
       'about.s3': '資料離線儲存',
       'contact.title': '想了解更多?',
-      'contact.desc': 'MotorLab 目前處於最後發行準備階段。歡迎透過下列管道與我們聯絡,或關注 GitHub 工作室帳號取得最新進展。',
+      'contact.desc': 'MotorLab 目前處於最後發行準備階段。歡迎透過下列管道與我們聯絡。',
       'footer.tagline': 'Mini 4WD Performance Lab',
       'footer.firmware': '韌體',
       'footer.trademark': '"Mini 4WD"<sup>®</sup> 與 "ミニ四駆"<sup>®</sup> 為株式会社タミヤ(TAMIYA, INC.)的註冊商標(日本商標登錄號 第 2168392 號)。MotorLab 為獨立工作室,與株式会社タミヤ無任何關聯,亦未受其授權、贊助或背書。本網站提及之相關名稱僅用於指涉產品適用範圍,所有商標權益歸原權利人所有。'
@@ -1788,6 +2288,7 @@
       'nav.features': 'Features',
       'nav.versions': 'Editions',
       'nav.tech': 'Tech',
+      'nav.guides': 'Guides',
       'nav.changelog': 'Changelog',
       'nav.about': 'About',
       'nav.contact': 'Contact',
@@ -1864,6 +2365,133 @@
       't5.desc': 'Sliding window detects max-min current spread over N consecutive seconds. Once stable, the value latches to prevent transient perturbations from causing misjudgment — boosting repeatability.',
       't6.title': 'Noise Floor Subtraction',
       't6.desc': 'Captures the instrument noise baseline before measurement, then subtracts its variance from subsequent signals. Isolates true motor signal variations so even subtle anomalies cannot hide.',
+
+      // ===== Guides =====
+      'g.tag': 'KNOWLEDGE BASE',
+      'g.title': 'Mini 4WD Motor Break-in Knowledge Base',
+      'g.subtitle': 'From principles to practice — answering the most common questions about Mini 4WD motor break-in.',
+
+      // Guide 1
+      'g1.tag': 'GUIDE · Complete Guide',
+      'g1.title': 'Complete Guide to Mini 4WD Motor Break-in: From Theory to Practice',
+      'g1.lead': 'Motor break-in is the essential procedure that lets a new Mini 4WD motor reach its full potential. This article covers the science, the practical steps, and why pros never skip this process.',
+      'g1.h1': 'Why does every new motor need break-in?',
+      'g1.p1': 'New Tamiya motors (Hyper Dash, Plasma Dash, Sprint Dash, Rev Tuned, Torque Tuned and others) ship with <strong>flat brush contact surfaces</strong>. But the commutator inside is cylindrical — a flat brush only touches a thin arc, severely limiting effective conductive area.',
+      'g1.p2': 'Running at full speed in this state causes:',
+      'g1.l1': '<strong>Unstable current</strong> — brush bounce produces erratic current swings, motor vibrates and overheats',
+      'g1.l2': '<strong>Unrealized RPM</strong> — a Hyper Dash 2 rated 19,300 RPM may only deliver 14,000 RPM',
+      'g1.l3': '<strong>Magnet demagnetization risk</strong> — sustained heat permanently reduces motor output',
+      'g1.l4': '<strong>Premature commutator wear</strong> — hard contact between un-mated surfaces damages the copper',
+      'g1.p3': '<strong>The goal of break-in</strong> is to gradually wear the flat brush into a half-circle arc that matches the commutator surface — maximizing contact area, enabling smooth current flow, and letting the motor reach its designed RPM and torque.',
+      'g1.h2': 'The physics behind break-in',
+      'g1.p4': 'The core equation for DC brushed motors: <code>N = (V − IR) / Kφ</code> (RPM = (Voltage − Current×Resistance) / flux constant). A new motor has high brush contact resistance R, causing large IR losses and reducing RPM N. Break-in physically <strong>reduces contact resistance and improves energy conversion efficiency</strong>.',
+      'g1.p5': 'Amateur methods include "water break-in" (running submerged at low voltage) or "battery break-in" (alternating polarity with dry cells). Both share a common problem: uncontrolled voltage, guess-the-time, no quantified progress. Results are pure luck.',
+      'g1.h3': 'The 4 key variables of professional break-in',
+      'g1.p6': 'Success depends on precise control of these 4 parameters:',
+      'g1.t.var': 'Variable', 'g1.t.role': 'Role', 'g1.t.risk': 'Risk if uncontrolled',
+      'g1.t.v1': 'Voltage (V)', 'g1.t.r1': 'Controls contact temperature & pressure', 'g1.t.x1': 'Too high burns brushes, too low does nothing',
+      'g1.t.v2': 'Time (min)', 'g1.t.r2': 'Determines break-in depth', 'g1.t.x2': 'Too short → incomplete contact; too long → over-wear',
+      'g1.t.v3': 'Direction (±)', 'g1.t.r3': 'Ensures symmetric brush wear', 'g1.t.x3': 'One-way only → uneven wear, shortened life',
+      'g1.t.v4': 'Cooling (s)', 'g1.t.r4': 'Prevents heat buildup', 'g1.t.x4': 'Overheating → permanent magnet demagnetization',
+      'g1.h4': 'Standard break-in procedure (10-stage recommendation)',
+      'g1.p7': 'The mainstream "progressive voltage ramp" method divides break-in into 10 stages of 30-90 seconds each, ramping voltage from 1.0V to 2.4V, with reverse runs and cooling pauses interleaved.',
+      'g1.tip': 'MotorLab M1/PRO\'s built-in <strong>10-stage programmable break-in</strong> automatically executes this protocol. Each stage independently sets voltage, direction, time, cooling, and current stability tolerance. The <strong>smart stable-current latch</strong> auto-advances when current variation falls below threshold, ensuring every motor reaches optimal break-in.',
+      'g1.h5': 'How to know when break-in is complete',
+      'g1.p8': 'Four observation points tell you the motor is ready:',
+      'g1.l5': '<strong>Current stability</strong> — at fixed voltage, current variation ≤ ±50mA',
+      'g1.l6': '<strong>RPM stability</strong> — at fixed voltage, RPM variation over 10s ≤ 200 RPM',
+      'g1.l7': '<strong>Smooth thermal curve</strong> — no sudden temperature jumps',
+      'g1.l8': '<strong>Clean acoustic signature</strong> — no irregular hissing or chattering noise',
+
+      // Guide 2
+      'g2.tag': 'GUIDE · Avoid Mistakes',
+      'g2.title': 'Why Amateur Break-ins Fail: 5 Common Mistakes',
+      'g2.lead': 'Many returning hobbyists hear "break in your motor" and grab dry batteries — only to burn the motor or end up no faster. Here are the 5 most common mistakes and how to fix them.',
+      'g2.h1': 'Mistake 1: Voltage too high, time too long',
+      'g2.p1': 'The most common error: <strong>"Two AA batteries (3V) and let it run for half an hour"</strong>. Sounds reasonable. Actual consequences:',
+      'g2.l1': '3V is near full-speed for Hyper Dash and Plasma Dash — you\'re basically skipping break-in',
+      'g2.l2': 'Sustained running without cooling can reach 80°C+, causing <strong>permanent magnet demagnetization</strong>',
+      'g2.l3': 'Brushes may burn out before forming a proper arc',
+      'g2.w1': 'Correct approach: start at 1.0V, increase by 0.15V per stage, max 90s per stage, 15-30s cooling between stages.',
+      'g2.h2': 'Mistake 2: Water break-in with too much water or no drying',
+      'g2.p2': 'Water break-in uses water\'s high specific heat for cooling, plus mild damping. But amateur water break-ins suffer:',
+      'g2.l4': '<strong>Water enters bearings</strong> — bearings rust, noise increases',
+      'g2.l5': '<strong>Incomplete drying</strong> — residual moisture causes electrochemical corrosion, drastically shortening life',
+      'g2.l6': '<strong>Hard water</strong> — mineral deposits on commutator worsen contact',
+      'g2.t2': 'The modern alternative is <strong>"precision-controlled dry break-in"</strong> — no liquids, just controlled voltage/current/cooling. Completely eliminates water damage risk.',
+      'g2.h3': 'Mistake 3: One-direction only break-in',
+      'g2.p3': 'Many users only run the motor in one direction during break-in. Result: one side of each brush forms an arc; the other stays flat. Even though the car only runs one direction, <strong>asymmetric wear causes two problems</strong>:',
+      'g2.l7': 'Uneven current distribution — overloaded side burns out early',
+      'g2.l8': 'If you ever do reverse runs (e.g. launch practice), the un-broken side will spark',
+      'g2.p4': '<strong>Correct approach</strong>: include ~30% reverse runs during break-in to wear both sides symmetrically.',
+      'g2.h4': 'Mistake 4: Skipping pre/post measurements',
+      'g2.p5': 'You break in, install in the car, race — then realize "huh, no faster?" The reason: <strong>without baseline measurements, you have no idea if break-in worked</strong>.',
+      'g2.p6': 'Measure before and after under identical conditions (same voltage, same load):',
+      'g2.l9': 'No-load current (steady-state current with no mechanical load)',
+      'g2.l10': 'Stable RPM (10-second moving average)',
+      'g2.l11': 'Current Coefficient of Variation (CV) — stability indicator',
+      'g2.p7': 'All three should improve post break-in. If not, break-in was incomplete or wrong.',
+      'g2.h5': 'Mistake 5: No records, judging by feel',
+      'g2.p8': 'The deadliest mistake — <strong>breaking in every motor "roughly the same way" with no data</strong>. Result:',
+      'g2.l12': 'Can\'t tell if a motor is "broken-in well" vs "degraded"',
+      'g2.l13': 'When swapping motors, no way to compare which one is in best shape',
+      'g2.l14': 'When tuning the track, can\'t isolate if the issue is the car or the motor',
+      'g2.t5': 'Build a <strong>Health Fingerprint</strong> for every motor — record its current, RPM, temperature rise, and vibration spectrum under standard conditions. Compare anytime in the future for precise diagnosis. This is the core of MotorLab PRO\'s AI Health Manager.',
+
+      // Guide 3
+      'g3.tag': 'REFERENCE · Motor Lookup',
+      'g3.title': 'Tamiya Motor Specs & Break-in Strategy Reference',
+      'g3.lead': 'Different motors have different designs, RPMs, and torque characteristics — so break-in strategies should differ too. Quick reference for 8 mainstream Tamiya motors.',
+      'g3.h1': 'Entry-level motors (beginner-friendly)',
+      'g3.t.name': 'Model', 'g3.t.spec': 'Load RPM / Torque', 'g3.t.brush': 'Brush Type', 'g3.t.policy': 'Break-in Strategy',
+      'g3.t.p1': 'Low voltage, short stages (1.5V × 5 stages)',
+      'g3.t.p2': 'Standard 10-stage',
+      'g3.t.p3': 'Standard + torque load',
+      'g3.t.p4': 'Standard 10-stage',
+      'g3.h2': 'Advanced motors (carbon brush, deep break-in capable)',
+      'g3.t.name2': 'Model', 'g3.t.spec2': 'Load RPM / Torque', 'g3.t.brush2': 'Brush Type', 'g3.t.policy2': 'Break-in Strategy',
+      'g3.t.p5': 'Full 10-stage (mandatory)',
+      'g3.t.p6': 'Full 10-stage + torque test',
+      'g3.t.p7': 'Progressive ramp, careful temp control',
+      'g3.t.p8': 'Slow & careful, 2× cooling time',
+      'g3.h3': 'Strategy notes',
+      'g3.p1': '<strong>Copper brush motors</strong> (yellow, purple, orange, gray): thin and fragile brushes — not suited for high break-in voltage. Start at 0.8V, max 2.0V.',
+      'g3.p2': '<strong>Carbon brush motors</strong> (red, green, white, Plasma Dash): can take higher break-in voltage, but Plasma Dash runs hottest — double the cooling time.',
+      'g3.w1': 'Tamiya official competition rules: no opening motor case, no magnet boosting, no altering brush conductor length. Break-in is legal (just optimizing existing contact). Any teardown or physical modification disqualifies.',
+
+      // Guide 4
+      'g4.tag': 'GUIDE · Clear Up Confusion',
+      'g4.title': 'Motor Wash vs Motor Break-in: What\'s the Difference?',
+      'g4.lead': '"Motor wash" and "motor break-in" are entirely different procedures, often confused. This article clarifies when, how, and why for each.',
+      'g4.h1': 'The fundamental difference',
+      'g4.t.dim': 'Aspect', 'g4.t.runin': 'Break-in (Run-in)', 'g4.t.wash': 'Wash',
+      'g4.t.when': 'When', 'g4.t.w1': 'Before first use of new motor', 'g4.t.w2': 'After accumulated carbon residue',
+      'g4.t.goal': 'Purpose', 'g4.t.g1': 'Optimize brush-commutator contact', 'g4.t.g2': 'Clean internal carbon dust & old lube',
+      'g4.t.tool': 'Tools', 'g4.t.l1': 'Break-in station (controlled supply)', 'g4.t.l2': 'Stoddard solvent / Zippo fluid',
+      'g4.t.time': 'Duration', 'g4.t.x1': '30-60 min', 'g4.t.x2': '10-15 min',
+      'g4.t.after': 'After', 'g4.t.a1': 'Install in car directly', 'g4.t.a2': 'Must re-lubricate (WURTH HP-2040 etc.)',
+      'g4.h2': 'When to wash a motor?',
+      'g4.l1': 'Motor feels "gritty" when running',
+      'g4.l2': 'Current noticeably increased at the same voltage (more internal friction)',
+      'g4.l3': 'RPM dropped >5% compared to post-break-in baseline',
+      'g4.l4': 'Audible irregular noise or vibration',
+      'g4.l5': 'Factory <strong>anti-rust oil</strong> needs removal (also applies to brand new)',
+      'g4.h3': 'Standard wash procedure',
+      'g4.l6': 'Prepare Stoddard solvent (green bottle, ~NT$45/0.5L) or Zippo fluid',
+      'g4.l7': 'Submerge motor in solvent, rotate shaft gently to let solvent penetrate',
+      'g4.l8': 'Run briefly at low voltage (<1V) to flush out carbon dust',
+      'g4.l9': 'Remove and thoroughly air-dry (oil-free compressed air), ensure no residue',
+      'g4.l10': '<strong>Re-apply lubricant</strong> (WURTH HP-2040 or equivalent), or the motor will feel even draggier',
+      'g4.w1': 'Important: Washing does NOT necessarily make the motor faster! If break-in was inadequate, washing only removes carbon — slow stays slow. <strong>Speed comes from break-in. Washing is maintenance.</strong>',
+      'g4.h4': 'Maintenance schedule recommendation',
+      'g4.p1': 'Based on real-world experience, lifecycle of a Hyper Dash 2 motor:',
+      'g4.l11': '<strong>New unit</strong> — complete 10-stage break-in (MotorLab M1/PRO automated)',
+      'g4.l12': '<strong>After 5-10 races</strong> — first wash + re-lubricate',
+      'g4.l13': '<strong>Every 5 races</strong> — quick re-lubricate',
+      'g4.l14': '<strong>Every 15-20 races</strong> — full wash + health fingerprint re-test',
+      'g4.l15': '<strong>When metrics drop >10%</strong> — consider retirement',
+      'g4.t1': 'This schedule is precisely trackable via MotorLab PRO\'s history feature (stores 50 measurements), so you know exactly "how many races and how much degradation" for each motor — no more guess-based maintenance.',
+
       'cl.tag': 'CHANGELOG',
       'cl.title': 'Firmware Release Notes',
       'cl.subtitle': 'All versions push automatically to activated devices via OTA update.',
@@ -1902,7 +2530,7 @@
       'about.s2': 'Current Firmware',
       'about.s3': 'Offline Storage',
       'contact.title': 'Want to know more?',
-      'contact.desc': 'MotorLab is currently in final pre-release. Get in touch through any of the channels below, or follow our GitHub studio account for the latest updates.',
+      'contact.desc': 'MotorLab is currently in final pre-release. Get in touch through any of the channels below.',
       'footer.tagline': 'Mini 4WD Performance Lab',
       'footer.firmware': 'Firmware',
       'footer.trademark': '"Mini 4WD"<sup>®</sup> and "ミニ四駆"<sup>®</sup> are registered trademarks of TAMIYA, INC. (Japan Trademark Registration No. 2168392). MotorLab is an independent studio and has no affiliation with, authorization from, sponsorship by, or endorsement from TAMIYA, INC. References to these names on this site are made solely to indicate product compatibility. All trademark rights belong to their respective owners.'
