@@ -516,7 +516,7 @@
     font-size: 15px;
   }
 
-  /* ===== 七大功能 ===== */
+  /* ===== 八大功能 ===== */
   .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
@@ -1744,10 +1744,10 @@
             <tr><th data-i18n="g3.t.name">型號</th><th data-i18n="g3.t.spec">負載轉速 / 扭力</th><th data-i18n="g3.t.brush">電刷類型</th><th data-i18n="g3.t.policy">磨合策略</th></tr>
           </thead>
           <tbody>
-            <tr><td>黃頭 Light Dash</td><td>9,800 RPM / 10 g·cm</td><td>銅刷</td><td data-i18n="g3.t.p1">低壓短時(1.5V × 5 階段)</td></tr>
-            <tr><td>紫頭 Rev Tuned</td><td>14,300 RPM / 10 g·cm</td><td>銅刷</td><td data-i18n="g3.t.p2">標準 10 階段</td></tr>
-            <tr><td>橘頭 Torque Tuned</td><td>12,000 RPM / 14.5 g·cm</td><td>銅刷</td><td data-i18n="g3.t.p3">標準 + 加強扭力負載</td></tr>
-            <tr><td>灰頭 Atomic Tuned</td><td>13,700 RPM / 10 g·cm</td><td>銅刷</td><td data-i18n="g3.t.p4">標準 10 階段</td></tr>
+            <tr><td data-i18n="g3.m1.name">黃頭 Light Dash</td><td>9,800 RPM / 10 g·cm</td><td data-i18n="g3.brush.copper">銅刷</td><td data-i18n="g3.t.p1">低壓短時(1.5V × 5 階段)</td></tr>
+            <tr><td data-i18n="g3.m2.name">紫頭 Rev Tuned</td><td>14,300 RPM / 10 g·cm</td><td data-i18n="g3.brush.copper">銅刷</td><td data-i18n="g3.t.p2">標準 10 階段</td></tr>
+            <tr><td data-i18n="g3.m3.name">橘頭 Torque Tuned</td><td>12,000 RPM / 14.5 g·cm</td><td data-i18n="g3.brush.copper">銅刷</td><td data-i18n="g3.t.p3">標準 + 加強扭力負載</td></tr>
+            <tr><td data-i18n="g3.m4.name">灰頭 Atomic Tuned</td><td>13,700 RPM / 10 g·cm</td><td data-i18n="g3.brush.copper">銅刷</td><td data-i18n="g3.t.p4">標準 10 階段</td></tr>
           </tbody>
         </table>
 
@@ -1757,10 +1757,10 @@
             <tr><th data-i18n="g3.t.name2">型號</th><th data-i18n="g3.t.spec2">負載轉速 / 扭力</th><th data-i18n="g3.t.brush2">電刷類型</th><th data-i18n="g3.t.policy2">磨合策略</th></tr>
           </thead>
           <tbody>
-            <tr><td>紅頭 Hyper Dash 2</td><td>17,300 RPM / 10 g·cm</td><td>碳刷</td><td data-i18n="g3.t.p5">完整 10 階段(必磨)</td></tr>
-            <tr><td>綠頭 Power Dash</td><td>18,100 RPM / 16 g·cm</td><td>碳刷</td><td data-i18n="g3.t.p6">完整 10 階段 + 扭力測試</td></tr>
-            <tr><td>白頭 Sprint Dash</td><td>19,500 RPM / 17.5 g·cm</td><td>碳刷</td><td data-i18n="g3.t.p7">漸進升壓,需特別控溫</td></tr>
-            <tr><td>黑金剛 Plasma Dash</td><td>23,500 RPM / 13 g·cm</td><td>碳刷</td><td data-i18n="g3.t.p8">慢工出細活,2 倍冷卻時間</td></tr>
+            <tr><td data-i18n="g3.m5.name">紅頭 Hyper Dash 2</td><td>17,300 RPM / 10 g·cm</td><td data-i18n="g3.brush.carbon">碳刷</td><td data-i18n="g3.t.p5">完整 10 階段(必磨)</td></tr>
+            <tr><td data-i18n="g3.m6.name">綠頭 Power Dash</td><td>18,100 RPM / 16 g·cm</td><td data-i18n="g3.brush.carbon">碳刷</td><td data-i18n="g3.t.p6">完整 10 階段 + 扭力測試</td></tr>
+            <tr><td data-i18n="g3.m7.name">白頭 Sprint Dash</td><td>19,500 RPM / 17.5 g·cm</td><td data-i18n="g3.brush.carbon">碳刷</td><td data-i18n="g3.t.p7">漸進升壓,需特別控溫</td></tr>
+            <tr><td data-i18n="g3.m8.name">黑金剛 Plasma Dash</td><td>23,500 RPM / 13 g·cm</td><td data-i18n="g3.brush.carbon">碳刷</td><td data-i18n="g3.t.p8">慢工出細活,2 倍冷卻時間</td></tr>
           </tbody>
         </table>
 
@@ -2054,7 +2054,7 @@
       'mock.temp': '溫度',
       'mock.status': '● 磨合進行中 · 階段 6/10 · 已運行 02:48:33',
       'features.tag': 'CORE FEATURES',
-      'features.title': '七大專業功能',
+      'features.title': '八大專業功能',
       'features.subtitle': '從磨合到診斷,涵蓋 Mini 4WD 馬達生命週期的每一個關鍵環節。',
       'f1.title': '馬達磨合程式',
       'f1.desc': '十階段可程式化磨合,每階段獨立設定電壓、運轉方向、運轉時間、冷卻時間與穩定電流容差。模擬實車條件下的低速長時間磨合,讓電刷與整流子達到最佳貼合。',
@@ -2194,6 +2194,16 @@
       'g3.lead': '不同馬達的設計用途、轉速、扭力特性都不同,磨合方式自然也該有差。整理田宮 8 款主流馬達的官方規格與建議磨合策略。',
       'g3.h1': '入門級馬達(適合新手起手)',
       'g3.t.name': '型號', 'g3.t.spec': '負載轉速 / 扭力', 'g3.t.brush': '電刷類型', 'g3.t.policy': '磨合策略',
+      'g3.brush.copper': '銅刷',
+      'g3.brush.carbon': '碳刷',
+      'g3.m1.name': '黃頭 Light Dash',
+      'g3.m2.name': '紫頭 Rev Tuned',
+      'g3.m3.name': '橘頭 Torque Tuned',
+      'g3.m4.name': '灰頭 Atomic Tuned',
+      'g3.m5.name': '紅頭 Hyper Dash 2',
+      'g3.m6.name': '綠頭 Power Dash',
+      'g3.m7.name': '白頭 Sprint Dash',
+      'g3.m8.name': '黑金剛 Plasma Dash',
       'g3.t.p1': '低壓短時(1.5V × 5 階段)',
       'g3.t.p2': '標準 10 階段',
       'g3.t.p3': '標準 + 加強扭力負載',
@@ -2304,7 +2314,7 @@
       'mock.temp': 'Temp',
       'mock.status': '● Break-in running · Stage 6/10 · 02:48:33 elapsed',
       'features.tag': 'CORE FEATURES',
-      'features.title': 'Seven Professional Tools',
+      'features.title': 'Eight Professional Tools',
       'features.subtitle': 'From break-in to diagnostics, covering every critical phase of the Mini 4WD motor lifecycle.',
       'f1.title': 'Motor Break-in Program',
       'f1.desc': 'Ten-stage programmable break-in. Configure voltage, direction, runtime, cooldown, and current tolerance per stage. Simulates real-world low-speed extended operation to bring brushes and commutator into optimal contact.',
@@ -2444,6 +2454,16 @@
       'g3.lead': 'Different motors have different designs, RPMs, and torque characteristics — so break-in strategies should differ too. Quick reference for 8 mainstream Tamiya motors.',
       'g3.h1': 'Entry-level motors (beginner-friendly)',
       'g3.t.name': 'Model', 'g3.t.spec': 'Load RPM / Torque', 'g3.t.brush': 'Brush Type', 'g3.t.policy': 'Break-in Strategy',
+      'g3.brush.copper': 'Copper brush',
+      'g3.brush.carbon': 'Carbon brush',
+      'g3.m1.name': 'Yellow · Light Dash',
+      'g3.m2.name': 'Purple · Rev Tuned',
+      'g3.m3.name': 'Orange · Torque Tuned',
+      'g3.m4.name': 'Gray · Atomic Tuned',
+      'g3.m5.name': 'Red · Hyper Dash 2',
+      'g3.m6.name': 'Green · Power Dash',
+      'g3.m7.name': 'White · Sprint Dash',
+      'g3.m8.name': 'Black · Plasma Dash',
       'g3.t.p1': 'Low voltage, short stages (1.5V × 5 stages)',
       'g3.t.p2': 'Standard 10-stage',
       'g3.t.p3': 'Standard + torque load',
