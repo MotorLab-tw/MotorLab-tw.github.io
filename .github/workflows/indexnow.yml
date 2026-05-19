@@ -1,17 +1,21 @@
 name: Notify IndexNow on Push
 
-# 觸發條件:推送到 main 分支時自動執行
+# 觸發條件
 on:
+  # 1) 推送到 main 分支時自動執行
   push:
     branches:
       - main
     paths:
-      # 只在這些檔案有變動時觸發,避免無謂的通知
       - 'index.html'
       - 'sitemap.xml'
       - '*.html'
       - '*.css'
       - '*.js'
+      - '.github/workflows/indexnow.yml'  # workflow 自己被改時也觸發,方便測試
+  
+  # 2) 允許在 GitHub Actions 頁面手動觸發 (按鈕觸發)
+  workflow_dispatch:
 
 jobs:
   notify-indexnow:
