@@ -1,0 +1,63 @@
+name: Notify IndexNow on Push
+
+# 觸發條件:推送到 main 分支時自動執行
+on:
+  push:
+    branches:
+      - main
+    paths:
+      # 只在這些檔案有變動時觸發,避免無謂的通知
+      - 'index.html'
+      - 'sitemap.xml'
+      - '*.html'
+      - '*.css'
+      - '*.js'
+
+jobs:
+  notify-indexnow:
+    name: Send IndexNow Ping
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Notify Bing IndexNow
+        run: |
+          KEY="${{ secrets.INDEXNOW_KEY }}"
+          HOST="motorlab-tw.github.io"
+          KEY_LOCATION="https://${HOST}/${KEY}.txt"
+          
+          echo "→ Sending IndexNow notification to Bing..."
+          echo "→ Host: ${HOST}"
+          echo "→ Key (first 8 chars): ${KEY:0:8}..."
+          echo ""
+          
+          # 使用 POST JSON 方式提交 (Option 2 完整規範)
+          RESPONSE=$(curl -s -w "\n%{http_code}" -X POST "https://api.indexnow.org/IndexNow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -H "Host: api.indexnow.org" \
+            -d "{
+              \"host\": \"${HOST}\",
+              \"key\": \"${KEY}\",
+              \"keyLocation\": \"${KEY_LOCATION}\",
+              \"urlList\": [
+                \"https://${HOST}/\"
+              ]
+            }")
+          
+          HTTP_CODE=$(echo "$RESPONSE" | tail -n 1)
+          BODY=$(echo "$RESPONSE" | sed '$d')
+          
+          echo "← HTTP Status: ${HTTP_CODE}"
+          echo "← Response Body: ${BODY:-<empty>}"
+          
+          # 判斷成功/失敗
+          if [[ "$HTTP_CODE" == "200" || "$HTTP_CODE" == "202" ]]; then
+            echo ""
+            echo "✅ IndexNow notification sent successfully!"
+            echo "✅ Bing will re-crawl your site within minutes."
+            exit 0
+          else
+            echo ""
+            echo "❌ IndexNow notification failed."
+            echo "❌ Check the response above for details."
+            exit 1
+          fi
