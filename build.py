@@ -69,7 +69,7 @@ SEO = {
     },
     "en": {
         "title": "MotorLab — Mini 4WD® Motor Break-in & Diagnostics System",
-        "description": "MotorLab — a precision motor break-in and testing system built for Mini 4WD® racers. Nine professional tools: 10-stage programmable break-in, AI health management, FFT spectrum, bearing tau decay, CV brush stability diagnostics, triple-layer safety protection (EMI shielding, < 100 ms overcurrent cutoff, watchdog recovery) and OTA updates. Make every tune measurable.",
+        "description": "MotorLab — precision motor break-in & diagnostics for Mini 4WD® racers. 10-stage programmable break-in, AI health management, FFT spectrum, bearing τ decay.",
         "og_title": "MotorLab — Mini 4WD® Motor Break-in & Test System",
         "og_desc": "Build a measurable health fingerprint for every Mini 4WD® motor. Nine professional tools: 10-stage break-in, AI health management, bearing decay analysis, brush stability diagnostics and triple-layer safety protection.",
         "tw_title": "MotorLab — Mini 4WD® Motor Lab",
@@ -77,7 +77,7 @@ SEO = {
     },
     "ja": {
         "title": "MotorLab — Mini 4WD® モーター慣らし・テストシステム | 精密モーター診断スタジオ",
-        "description": "MotorLab — Mini 4WD® プレイヤーのために設計された精密モーター慣らし・測定システム。9 つのプロ機能:10 段階プログラム慣らし、AI 健康管理、FFT スペクトル、ベアリング τ 減衰、CV ブラシ安定診断、三層安全保護(耐 EMI、< 100 ms 緊急停止、Watchdog 自動復旧)、OTA オンライン更新。すべての調整を定量化。",
+        "description": "MotorLab — Mini 4WD® プレイヤー向けの精密モーター慣らし・診断システム。10 段階プログラム慣らし、AI 健康管理、FFT スペクトル、ベアリング τ 減衰、CV ブラシ安定診断を搭載。",
         "og_title": "MotorLab — Mini 4WD® モーター慣らし・テストシステム",
         "og_desc": "すべての Mini 4WD® モーターに定量化できる健康指紋を。9 つのプロ機能:10 段階慣らし、AI 健康管理、ベアリング減衰解析、ブラシ安定診断、三層安全保護機構。",
         "tw_title": "MotorLab — Mini 4WD® Motor Lab",
