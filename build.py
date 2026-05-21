@@ -68,7 +68,7 @@ SEO = {
         "tw_desc": "為每一顆 Mini 4WD® 馬達建立可量化的健康指紋",
     },
     "en": {
-        "title": "MotorLab — Mini 4WD® Motor Break-in & Test System | Precision Motor Diagnostics",
+        "title": "MotorLab — Mini 4WD® Motor Break-in & Diagnostics System",
         "description": "MotorLab — a precision motor break-in and testing system built for Mini 4WD® racers. Nine professional tools: 10-stage programmable break-in, AI health management, FFT spectrum, bearing tau decay, CV brush stability diagnostics, triple-layer safety protection (EMI shielding, < 100 ms overcurrent cutoff, watchdog recovery) and OTA updates. Make every tune measurable.",
         "og_title": "MotorLab — Mini 4WD® Motor Break-in & Test System",
         "og_desc": "Build a measurable health fingerprint for every Mini 4WD® motor. Nine professional tools: 10-stage break-in, AI health management, bearing decay analysis, brush stability diagnostics and triple-layer safety protection.",
@@ -140,15 +140,12 @@ def build_lang(src_html, lang, i18n):
         # 缺該語言 key 時 fallback 中文(教學文章 g1~g4)
         text = lang_dict.get(key) or zh_dict.get(key)
         if text is not None:
-            # 用 BeautifulSoup 解析 HTML 片段(文字含 <sup>、<strong> 等)
-            frag = BeautifulSoup(text, "lxml")
+            # 用 html.parser 解析 HTML 片段(文字含 <sup>、<strong> 等)
+            # 不用 lxml:新版 lxml 會把純文字片段自動包進 <p>,破壞 inline 結構
+            frag = BeautifulSoup(text, "html.parser")
             el.clear()
-            body = frag.body
-            if body:
-                for child in list(body.children):
-                    el.append(child)
-            else:
-                el.append(text)
+            for child in list(frag.children):
+                el.append(child)
 
     # --- 3. <title> ---
     if soup.title:
