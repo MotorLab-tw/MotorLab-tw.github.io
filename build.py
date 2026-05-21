@@ -126,7 +126,7 @@ FAQ = {
         },
         {
             "q": "MotorLab 可以分析哪些 Mini 4WD 馬達?",
-            "a": "MotorLab 設計上相容所有 540 / 380 規格的 Mini 4WD® 馬達,包含 Hyper Dash、Plasma Dash、Ultra Dash、紅二、黑金剛等常見型號,並可為每顆馬達建立可比較的健康指紋。",
+            "a": "MotorLab 設計上相容所有 130 規格的 Mini 4WD® 馬達,包含 Hyper Dash、Plasma Dash、Ultra Dash、紅二、黑金剛等常見型號,並可為每顆馬達建立可比較的健康指紋。",
         },
     ],
     "en": [
@@ -152,7 +152,7 @@ FAQ = {
         },
         {
             "q": "Which Mini 4WD motors can MotorLab analyze?",
-            "a": "MotorLab is compatible with all 540 / 380 Mini 4WD® motor formats — including Hyper Dash, Plasma Dash, Ultra Dash, Rev-Tuned, Atomic Tuned and similar models — and builds a comparable health fingerprint for each motor.",
+            "a": "MotorLab is compatible with all 130-size Mini 4WD® motors — including Hyper Dash, Plasma Dash, Ultra Dash, Rev-Tuned, Atomic Tuned and similar models — and builds a comparable health fingerprint for each motor.",
         },
     ],
     "ja": [
@@ -178,7 +178,7 @@ FAQ = {
         },
         {
             "q": "MotorLab はどの Mini 4WD モーターを分析できますか?",
-            "a": "MotorLab は 540 / 380 規格の Mini 4WD® モーター全般に対応し、Hyper Dash、Plasma Dash、Ultra Dash、レブチューン、アトミックチューン等の主要モデルを含みます。各モーターに対して比較可能な健康指紋を構築します。",
+            "a": "MotorLab は 130 サイズの Mini 4WD® モーター全般に対応し、Hyper Dash、Plasma Dash、Ultra Dash、レブチューン、アトミックチューン等の主要モデルを含みます。各モーターに対して比較可能な健康指紋を構築します。",
         },
     ],
 }
