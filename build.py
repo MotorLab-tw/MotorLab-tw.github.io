@@ -66,6 +66,9 @@ SEO = {
         "og_desc": "為每一顆 Mini 4WD® 馬達建立可量化的健康指紋。九大專業功能:十階段磨合、AI 健康管理、軸承衰減分析、電刷穩定診斷、三層安全保護機制。",
         "tw_title": "MotorLab — Mini 4WD® Motor Lab",
         "tw_desc": "為每一顆 Mini 4WD® 馬達建立可量化的健康指紋",
+        "ld_org_desc": "為 Mini 4WD® 玩家打造的精密馬達磨合與測試系統研發工作室",
+        "ld_site_desc": "MotorLab — Mini 4WD® 馬達磨合與精密測試系統官方網站",
+        "ld_app_desc": "Mini 4WD® 馬達磨合與精密測試系統。內建十階段可程式化磨合、AI 智慧馬達健康管理、軸承阻力測試、電刷接觸穩定診斷。",
     },
     "en": {
         "title": "MotorLab — Mini 4WD® Motor Break-in & Diagnostics System",
@@ -74,6 +77,9 @@ SEO = {
         "og_desc": "Build a measurable health fingerprint for every Mini 4WD® motor. Nine professional tools: 10-stage break-in, AI health management, bearing decay analysis, brush stability diagnostics and triple-layer safety protection.",
         "tw_title": "MotorLab — Mini 4WD® Motor Lab",
         "tw_desc": "Build a measurable health fingerprint for every Mini 4WD® motor",
+        "ld_org_desc": "An R&D studio building precision motor break-in and testing systems for Mini 4WD® racers.",
+        "ld_site_desc": "Official site of the MotorLab Mini 4WD® motor break-in and precision testing system.",
+        "ld_app_desc": "Mini 4WD® motor break-in and precision testing system. Includes 10-stage programmable break-in, AI motor health management, bearing resistance analysis and brush contact stability diagnostics.",
     },
     "ja": {
         "title": "MotorLab — Mini 4WD® モーター慣らし・テストシステム | 精密モーター診断スタジオ",
@@ -82,6 +88,9 @@ SEO = {
         "og_desc": "すべての Mini 4WD® モーターに定量化できる健康指紋を。9 つのプロ機能:10 段階慣らし、AI 健康管理、ベアリング減衰解析、ブラシ安定診断、三層安全保護機構。",
         "tw_title": "MotorLab — Mini 4WD® Motor Lab",
         "tw_desc": "すべての Mini 4WD® モーターに定量化できる健康指紋を",
+        "ld_org_desc": "Mini 4WD® プレイヤーのための精密モーター慣らし・測定システムを開発するスタジオ。",
+        "ld_site_desc": "MotorLab — Mini 4WD® モーター慣らし・精密測定システムの公式サイト。",
+        "ld_app_desc": "Mini 4WD® モーター慣らし・精密測定システム。10 段階プログラム慣らし、AI モーター健康管理、ベアリング抵抗解析、ブラシ接触安定診断を内蔵。",
     },
 }
 
@@ -217,17 +226,25 @@ def build_lang(src_html, lang, i18n):
             a.string = labels[l]
             lang_switch.append(a)
 
-    # --- 9. JSON-LD 的 url / inLanguage 更新 ---
+    # --- 9. JSON-LD 的 url / inLanguage / description 更新 ---
+    ld_desc_by_type = {
+        "Organization": seo["ld_org_desc"],
+        "WebSite": seo["ld_site_desc"],
+        "SoftwareApplication": seo["ld_app_desc"],
+    }
     for script in soup.find_all("script", {"type": "application/ld+json"}):
         try:
             data = json.loads(script.string)
         except (json.JSONDecodeError, TypeError):
             continue
-        # 更新 url 為當前語言版本
         if "url" in data:
             data["url"] = cfg["url"]
         if "inLanguage" in data:
             data["inLanguage"] = cfg["html_lang"]
+        # 翻譯 description(避免 en/ja 頁面 JSON-LD 出現中文)
+        type_ = data.get("@type")
+        if type_ in ld_desc_by_type and "description" in data:
+            data["description"] = ld_desc_by_type[type_]
         script.string = json.dumps(data, ensure_ascii=False, indent=2)
 
     # --- 10. 移除母版的語言切換 JS(改用 a 連結後不需要)---
