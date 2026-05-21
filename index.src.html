@@ -1,63 +1,68 @@
 <!DOCTYPE html>
 <html lang="zh-TW" translate="no">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="zh-TW" http-equiv="Content-Language"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Language" content="zh-TW">
 <title>MotorLab — Mini 4WD® 馬達磨合測試系統 | 精密馬達診斷工作室</title>
-<meta content="MotorLab — 專為 Mini 4WD® 玩家打造的精密馬達磨合測試系統。九大專業功能:十階段可程式化磨合、AI 健康管理、FFT 頻譜、軸承 τ 衰減、CV 電刷穩定診斷、三層安全保護(抗 EMI、&lt; 100 ms 急停、Watchdog 自動復原)、OTA 線上更新。讓馬達調校可量化。" name="description"/>
-<meta content="MotorLab.tw" name="author"/>
-<meta content="馬達磨合, 馬達磨合機, 四驅車馬達磨合, 迷你四驅車馬達磨合, 馬達磨合教學, モーター慣らし, モーター慣らし機, ミニ四駆 モーター慣らし, ミニ四駆のモーター慣らし, モーターブレークイン, MotorLab, Mini 4WD, 田宮迷你四驅車, 迷你四驅車, ミニ四駆, 四驅車, 馬達測試, 馬達調校, 馬達健康診斷, 洗馬達, 紅二馬達, 黑金剛, Hyper Dash, Plasma Dash, 馬達保護, 抗 EMI, 過流保護, 電流急停, Watchdog 自動復原, 安全保護機制, 電磁干擾防護, 馬達燒毀防護, motor break-in, motor test, Tamiya mini 4WD, EMI shielding, overcurrent protection, watchdog recovery, motor safety" name="keywords"/>
+<meta name="description" content="MotorLab — 專為 Mini 4WD® 玩家打造的精密馬達磨合測試系統。九大專業功能:十階段可程式化磨合、AI 健康管理、FFT 頻譜、軸承 τ 衰減、CV 電刷穩定診斷、三層安全保護(抗 EMI、< 100 ms 急停、Watchdog 自動復原)、OTA 線上更新。讓馬達調校可量化。">
+<meta name="author" content="MotorLab.tw">
+<meta name="keywords" content="馬達磨合, 馬達磨合機, 四驅車馬達磨合, 迷你四驅車馬達磨合, 馬達磨合教學, モーター慣らし, モーター慣らし機, ミニ四駆 モーター慣らし, ミニ四駆のモーター慣らし, モーターブレークイン, MotorLab, Mini 4WD, 田宮迷你四驅車, 迷你四驅車, ミニ四駆, 四驅車, 馬達測試, 馬達調校, 馬達健康診斷, 洗馬達, 紅二馬達, 黑金剛, Hyper Dash, Plasma Dash, 馬達保護, 抗 EMI, 過流保護, 電流急停, Watchdog 自動復原, 安全保護機制, 電磁干擾防護, 馬達燒毀防護, motor break-in, motor test, Tamiya mini 4WD, EMI shielding, overcurrent protection, watchdog recovery, motor safety">
+
 <!-- 正規網址 (避免重複內容問題) -->
-<link href="https://motorlab-tw.github.io/" rel="canonical"/>
+<link rel="canonical" href="https://motorlab-tw.github.io/">
+
 <!-- 搜尋引擎指示 -->
-<meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
-<meta content="index, follow" name="googlebot"/>
-<meta content="index, follow" name="bingbot"/>
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+<meta name="bingbot" content="index, follow">
+
 <!-- 多語言版本標示 (hreflang) -->
-<link href="https://motorlab-tw.github.io/" hreflang="zh-TW" rel="alternate"/>
-<link href="https://motorlab-tw.github.io/en/" hreflang="en" rel="alternate"/>
-<link href="https://motorlab-tw.github.io/ja/" hreflang="ja" rel="alternate"/>
-<link href="https://motorlab-tw.github.io/" hreflang="x-default" rel="alternate"/>
+<link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/">
+<link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/?lang=en">
+<link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/?lang=ja">
+<link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/">
+
 <!-- Favicon -->
-<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
-<link href="/favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
-<link href="/favicon-192.png" rel="icon" sizes="192x192" type="image/png"/>
-<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
-<link href="/site.webmanifest" rel="manifest"/>
-<meta content="#1a1d23" name="theme-color"/>
-<meta content="yes" name="apple-mobile-web-app-capable"/>
-<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
-<meta content="MotorLab" name="apple-mobile-web-app-title"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#1a1d23">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="MotorLab">
+
 <!-- Open Graph (Facebook, LINE, Discord) -->
-<meta content="website" property="og:type"/>
-<meta content="https://motorlab-tw.github.io/" property="og:url"/>
-<meta content="MotorLab — Mini 4WD® 馬達磨合測試系統" property="og:title"/>
-<meta content="為每一顆 Mini 4WD® 馬達建立可量化的健康指紋。九大專業功能:十階段磨合、AI 健康管理、軸承衰減分析、電刷穩定診斷、三層安全保護機制。" property="og:description"/>
-<meta content="https://motorlab-tw.github.io/og-image.png" property="og:image"/>
-<meta content="https://motorlab-tw.github.io/og-image.png" property="og:image:secure_url"/>
-<meta content="image/png" property="og:image:type"/>
-<meta content="1200" property="og:image:width"/>
-<meta content="630" property="og:image:height"/>
-<meta content="MotorLab — Mini 4WD® 馬達精密測試系統官方網站預覽圖" property="og:image:alt"/>
-<meta content="zh_TW" property="og:locale"/>
-<meta content="en_US" property="og:locale:alternate"/><meta content="ja_JP" property="og:locale:alternate"/>
-<meta content="MotorLab.tw" property="og:site_name"/>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://motorlab-tw.github.io/">
+<meta property="og:title" content="MotorLab — Mini 4WD® 馬達磨合測試系統">
+<meta property="og:description" content="為每一顆 Mini 4WD® 馬達建立可量化的健康指紋。九大專業功能:十階段磨合、AI 健康管理、軸承衰減分析、電刷穩定診斷、三層安全保護機制。">
+<meta property="og:image" content="https://motorlab-tw.github.io/og-image.png">
+<meta property="og:image:secure_url" content="https://motorlab-tw.github.io/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MotorLab — Mini 4WD® 馬達精密測試系統官方網站預覽圖">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:site_name" content="MotorLab.tw">
+
 <!-- Twitter Card -->
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="MotorLab — Mini 4WD® Motor Lab" name="twitter:title"/>
-<meta content="為每一顆 Mini 4WD® 馬達建立可量化的健康指紋" name="twitter:description"/>
-<meta content="https://motorlab-tw.github.io/og-image.png" name="twitter:image"/>
-<meta content="MotorLab 官方網站預覽圖" name="twitter:image:alt"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MotorLab — Mini 4WD® Motor Lab">
+<meta name="twitter:description" content="為每一顆 Mini 4WD® 馬達建立可量化的健康指紋">
+<meta name="twitter:image" content="https://motorlab-tw.github.io/og-image.png">
+<meta name="twitter:image:alt" content="MotorLab 官方網站預覽圖">
+
 <!-- 結構化資料 1: Organization (公司/工作室) -->
-<script type="application/ld+json">{
+<script type="application/ld+json">
+{
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "MotorLab.tw",
-  "alternateName": [
-    "MotorLab",
-    "Mini 4WD Motor Lab"
-  ],
+  "alternateName": ["MotorLab", "Mini 4WD Motor Lab"],
   "url": "https://motorlab-tw.github.io/",
   "logo": {
     "@type": "ImageObject",
@@ -81,34 +86,34 @@
     "@type": "ContactPoint",
     "email": "motorlab.tw@gmail.com",
     "contactType": "customer service",
-    "availableLanguage": [
-      "zh-Hant",
-      "en"
-    ]
+    "availableLanguage": ["zh-Hant", "en"]
   }
-}</script>
+}
+</script>
+
 <!-- 結構化資料 2: WebSite (含網站搜尋功能) -->
-<script type="application/ld+json">{
+<script type="application/ld+json">
+{
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "MotorLab.tw",
   "url": "https://motorlab-tw.github.io/",
   "description": "Mini 4WD 馬達磨合與精密測試系統官方網站",
-  "inLanguage": "zh-TW",
+  "inLanguage": ["zh-TW", "en"],
   "publisher": {
     "@type": "Organization",
     "name": "MotorLab.tw"
   }
-}</script>
+}
+</script>
+
 <!-- 結構化資料 3: SoftwareApplication (產品) -->
-<script type="application/ld+json">{
+<script type="application/ld+json">
+{
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "MotorLab",
-  "alternateName": [
-    "MotorLab M1",
-    "MotorLab PRO"
-  ],
+  "alternateName": ["MotorLab M1", "MotorLab PRO"],
   "description": "Mini 4WD® 馬達磨合與精密測試系統。內建十階段可程式化磨合、AI 智慧馬達健康管理、軸承阻力測試、電刷接觸穩定診斷。",
   "image": "https://motorlab-tw.github.io/og-image.png",
   "url": "https://motorlab-tw.github.io/",
@@ -137,9 +142,10 @@
     "OTA 線上韌體更新 (HMAC-SHA256 簽章)",
     "三層安全保護機制 (抗 EMI、< 100 ms 過流急停、Watchdog 自動復原)"
   ],
-  "inLanguage": "zh-TW",
+  "inLanguage": ["zh-TW", "en"],
   "releaseNotes": "https://motorlab-tw.github.io/#changelog"
-}</script>
+}
+</script>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -1371,832 +1377,919 @@
 </style>
 </head>
 <body>
+
 <!-- ============ 開機過場動畫 ============ -->
 <div id="page-splash" onclick="dismissSplash()">
-<div class="splash-inner">
-<div class="splash-logo">
-<span class="splash-bracket"></span>
-<span class="splash-wheel"></span>
+  <div class="splash-inner">
+    <div class="splash-logo">
+      <span class="splash-bracket"></span>
+      <span class="splash-wheel"></span>
+    </div>
+    <div class="splash-slogan">MotorLab</div>
+    <div class="splash-sub">MINI 4WD® MOTOR LAB · INITIALIZING</div>
+
+    <div class="splash-log">
+      <div class="log-line l1">[<span class="ok">OK</span>] Boot sequence started</div>
+      <div class="log-line l2">[<span class="ok">OK</span>] Loading firmware v3.0.8</div>
+      <div class="log-line l3">[<span class="ok">OK</span>] Sensor calibration complete</div>
+      <div class="log-line l4">[<span class="ok">OK</span>] WebSocket channel ready</div>
+      <div class="log-line l5">[<span class="ok">OK</span>] System online — welcome</div>
+    </div>
+
+    <div class="splash-skip">CLICK ANYWHERE TO SKIP</div>
+  </div>
 </div>
-<div class="splash-slogan">MotorLab</div>
-<div class="splash-sub">MINI 4WD® MOTOR LAB · INITIALIZING</div>
-<div class="splash-log">
-<div class="log-line l1">[<span class="ok">OK</span>] Boot sequence started</div>
-<div class="log-line l2">[<span class="ok">OK</span>] Loading firmware v3.0.8</div>
-<div class="log-line l3">[<span class="ok">OK</span>] Sensor calibration complete</div>
-<div class="log-line l4">[<span class="ok">OK</span>] WebSocket channel ready</div>
-<div class="log-line l5">[<span class="ok">OK</span>] System online — welcome</div>
-</div>
-<div class="splash-skip">CLICK ANYWHERE TO SKIP</div>
-</div>
-</div>
+
 <!-- 導覽列 -->
 <nav>
-<div class="nav-inner">
-<a class="logo" href="#">
-<span class="logo-mark">
-<span class="logo-bracket"></span>
-<span class="logo-wheel"></span>
-</span>
-<span>MotorLab<span class="tag">.tw</span></span>
-</a>
-<ul class="nav-links">
-<li><a data-i18n="nav.features" href="#features">功能</a></li>
-<li><a data-i18n="nav.versions" href="#versions">版本</a></li>
-<li><a data-i18n="nav.tech" href="#tech">技術</a></li>
-<li><a data-i18n="nav.specs" href="#specs">規格</a></li>
-<li><a data-i18n="nav.guides" href="#guides">教學</a></li>
-<li><a data-i18n="nav.changelog" href="#changelog">更新</a></li>
-<li><a data-i18n="nav.about" href="#about">關於</a></li>
-<li><a data-i18n="nav.contact" href="#contact">聯絡</a></li>
-</ul>
-<div class="lang-switch"><a class="lang-btn active" href="/">中</a><a class="lang-btn" href="/en/">EN</a><a class="lang-btn" href="/ja/">JP</a></div>
-</div>
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <span class="logo-mark">
+        <span class="logo-bracket"></span>
+        <span class="logo-wheel"></span>
+      </span>
+      <span>MotorLab<span class="tag">.tw</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#features" data-i18n="nav.features">功能</a></li>
+      <li><a href="#versions" data-i18n="nav.versions">版本</a></li>
+      <li><a href="#tech" data-i18n="nav.tech">技術</a></li>
+      <li><a href="#specs" data-i18n="nav.specs">規格</a></li>
+      <li><a href="#guides" data-i18n="nav.guides">教學</a></li>
+      <li><a href="#changelog" data-i18n="nav.changelog">更新</a></li>
+      <li><a href="#about" data-i18n="nav.about">關於</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">聯絡</a></li>
+    </ul>
+    <div class="lang-switch">
+      <button class="lang-btn active" data-lang="zh">中</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="ja">JP</button>
+    </div>
+  </div>
 </nav>
+
 <!-- Hero -->
 <section class="hero">
-<div class="container">
-<div class="hero-grid">
-<div>
-<div class="hero-badge">
-<span data-i18n="hero.badge">系統運作中 · v3.0.8</span>
-</div>
-<h1 data-i18n="hero.title">為每一顆<br/>Mini 4WD<sup>®</sup> 馬達<br/>建立<span class="accent">健康指紋</span></h1>
-<p class="lead" data-i18n="hero.lead">MotorLab 是為 Mini 4WD<sup>®</sup> 玩家打造的精密馬達磨合與測試系統。從十階段可程式化磨合、軸承衰減量測、電刷接觸穩定診斷,到 AI 馬達健康管理 — 讓每一次調校都可量化、可重複、可比較。</p>
-<div class="hero-cta">
-<a class="btn btn-primary" data-i18n="hero.cta1" href="#features">瀏覽功能</a>
-<a class="btn btn-secondary" data-i18n="hero.cta2" href="#versions">M1 vs PRO</a>
-<!-- Gumroad 購買連結 — 產品上線後將顯示 -->
-<a class="btn btn-purchase" data-i18n="hero.cta3" href="#" id="purchase-btn">立即購買</a>
-</div>
-</div>
-<!-- 實機 UI 模擬視窗 — 完全複刻 web_pages.h 風格 -->
-<div class="device-mockup">
-<div class="mockup-titlebar">
-<span class="mockup-url">http://192.168.4.1/</span>
-<div class="mockup-dots"><span></span><span></span><span></span></div>
-</div>
-<h2 class="mockup-h1">MotorLab <span class="pro-tag">PRO</span></h2>
-<div class="data-grid">
-<div class="data-cell">
-<div class="label" data-i18n="mock.voltage">電壓</div>
-<div class="value">2.50<span class="unit">V</span></div>
-</div>
-<div class="data-cell">
-<div class="label" data-i18n="mock.current">電流</div>
-<div class="value" id="mock-current">1.82<span class="unit">A</span></div>
-</div>
-<div class="data-cell">
-<div class="label" data-i18n="mock.rpm">轉速</div>
-<div class="value" id="mock-rpm">12,840<span class="unit">RPM</span></div>
-</div>
-<div class="data-cell">
-<div class="label" data-i18n="mock.temp">溫度</div>
-<div class="value">36.2<span class="unit">°C</span></div>
-</div>
-</div>
-<div class="status-box" data-i18n="mock.status">● 磨合進行中 · 階段 6/10 · 已運行 02:48:33</div>
-</div>
-</div>
-</div>
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge">
+          <span data-i18n="hero.badge">系統運作中 · v3.0.8</span>
+        </div>
+        <h1 data-i18n="hero.title">
+          為每一顆<br>
+          Mini 4WD<sup>®</sup> 馬達<br>
+          建立<span class="accent">健康指紋</span>
+        </h1>
+        <p class="lead" data-i18n="hero.lead">
+          MotorLab 是為 Mini 4WD<sup>®</sup> 玩家打造的精密馬達磨合與測試系統。從十階段可程式化磨合、軸承衰減量測、電刷接觸穩定診斷，到 AI 馬達健康管理 — 讓每一次調校都可量化、可重複、可比較。
+        </p>
+        <div class="hero-cta">
+          <a href="#features" class="btn btn-primary" data-i18n="hero.cta1">瀏覽功能</a>
+          <a href="#versions" class="btn btn-secondary" data-i18n="hero.cta2">M1 vs PRO</a>
+          <!-- Gumroad 購買連結 — 產品上線後將顯示 -->
+          <a href="#" class="btn btn-purchase" id="purchase-btn" data-i18n="hero.cta3">立即購買</a>
+        </div>
+      </div>
+
+      <!-- 實機 UI 模擬視窗 — 完全複刻 web_pages.h 風格 -->
+      <div class="device-mockup">
+        <div class="mockup-titlebar">
+          <span class="mockup-url">http://192.168.4.1/</span>
+          <div class="mockup-dots"><span></span><span></span><span></span></div>
+        </div>
+        <h2 class="mockup-h1">MotorLab <span class="pro-tag">PRO</span></h2>
+        <div class="data-grid">
+          <div class="data-cell">
+            <div class="label" data-i18n="mock.voltage">電壓</div>
+            <div class="value">2.50<span class="unit">V</span></div>
+          </div>
+          <div class="data-cell">
+            <div class="label" data-i18n="mock.current">電流</div>
+            <div class="value" id="mock-current">1.82<span class="unit">A</span></div>
+          </div>
+          <div class="data-cell">
+            <div class="label" data-i18n="mock.rpm">轉速</div>
+            <div class="value" id="mock-rpm">12,840<span class="unit">RPM</span></div>
+          </div>
+          <div class="data-cell">
+            <div class="label" data-i18n="mock.temp">溫度</div>
+            <div class="value">36.2<span class="unit">°C</span></div>
+          </div>
+        </div>
+        <div class="status-box" data-i18n="mock.status">● 磨合進行中 · 階段 6/10 · 已運行 02:48:33</div>
+      </div>
+    </div>
+  </div>
 </section>
+
 <!-- 九大功能 -->
 <section id="features">
-<div class="container">
-<div class="section-header">
-<div class="section-tag" data-i18n="features.tag">CORE FEATURES</div>
-<h2 class="section-title" data-i18n="features.title">九大專業功能</h2>
-<p class="section-subtitle" data-i18n="features.subtitle">從磨合到診斷,涵蓋 Mini 4WD 馬達生命週期的每一個關鍵環節。</p>
-</div>
-<div class="features-grid">
-<!-- 馬達磨合 -->
-<div class="feature-card">
-<div class="feature-icon">
-<svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="3"></circle><path d="M12 3v3M12 18v3M3 12h3M18 12h3"></path></svg>
-</div>
-<h3 data-i18n="f1.title">馬達磨合程式</h3>
-<p data-i18n="f1.desc">十階段可程式化磨合,每階段獨立設定電壓、運轉方向、運轉時間、冷卻時間與穩定電流容差。模擬實車條件下的低速長時間磨合,讓電刷與整流子達到最佳貼合。</p>
-<div class="feature-meta">
-<span class="feature-tag">10 階段</span>
-<span class="feature-tag" data-i18n="f1.tag2">智慧穩流判定</span>
-<span class="feature-tag">~5 hr</span>
-</div>
-</div>
-<!-- 馬達測試 -->
-<div class="feature-card">
-<div class="feature-icon">
-<svg viewbox="0 0 24 24"><path d="M3 12h4l3-8 4 16 3-8h4"></path></svg>
-</div>
-<h3 data-i18n="f2.title">馬達測試程式</h3>
-<p data-i18n="f2.desc">單階段精密量測。給定電壓、方向、時間,即時觀察電流、轉速、溫度變化,並支援智慧穩流模式 — 電流達穩定即自動結束,效率與精度兼具。</p>
-<div class="feature-meta">
-<span class="feature-tag">0–4.5 V</span>
-<span class="feature-tag" data-i18n="f2.tag2">即時圖表</span>
-<span class="feature-tag" data-i18n="f2.tag3">雙模式</span>
-</div>
-</div>
-<!-- AI 健康管理 (PRO) -->
-<div class="feature-card pro-only">
-<div class="feature-icon">
-<svg viewbox="0 0 24 24"><path d="M21 12a9 9 0 11-6.219-8.56"></path><path d="M22 4l-10 10-3-3"></path></svg>
-</div>
-<h3 data-i18n="f3.title">AI 智慧馬達健康管理</h3>
-<p data-i18n="f3.desc">為每顆馬達建立基準健康指紋,後續檢測自動比對五大指標:電流特性、轉速衰減、溫升曲線、電流穩定度、振動頻譜分析,合成 0–100 分健康評級並提供文字診斷建議。</p>
-<div class="feature-meta">
-<span class="feature-tag" data-i18n="f3.tag1">FFT 頻譜</span>
-<span class="feature-tag" data-i18n="f3.tag2">雷達圖</span>
-<span class="feature-tag">20 motors</span>
-</div>
-</div>
-<!-- 軸承阻力 -->
-<div class="feature-card">
-<div class="feature-icon">
-<svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-</div>
-<h3 data-i18n="f4.title">軸承阻力測試</h3>
-<p data-i18n="f4.desc">高速運轉後切斷電源,量測轉速衰減時間常數 τ。衰減越慢,軸承摩擦越小、健康度越高。10 秒完成一次量測,三次取平均可消除環境干擾。</p>
-<div class="feature-meta">
-<span class="feature-tag" data-i18n="f4.tag1">衰減 τ 分析</span>
-<span class="feature-tag" data-i18n="f4.tag2">10 秒/次</span>
-</div>
-</div>
-<!-- 電刷接觸 -->
-<div class="feature-card">
-<div class="feature-icon">
-<svg viewbox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
-</div>
-<h3 data-i18n="f5.title">電刷接觸穩定測試</h3>
-<p data-i18n="f5.desc">鎖定軸心後低電壓量測電流穩定度,以變異係數(CV%)量化電刷接觸均勻性。三角度循環測試涵蓋整圈整流子,準確抓出打火與磨損熱點。</p>
-<div class="feature-meta">
-<span class="feature-tag" data-i18n="f5.tag1">CV 變異係數</span>
-<span class="feature-tag" data-i18n="f5.tag2">三角度循環</span>
-</div>
-</div>
-<!-- 歷史紀錄 -->
-<div class="feature-card">
-<div class="feature-icon">
-<svg viewbox="0 0 24 24"><path d="M3 3h18v18H3z"></path><path d="M3 9h18M9 21V9"></path></svg>
-</div>
-<h3 data-i18n="f6.title">歷史紀錄管理</h3>
-<p data-i18n="f6.desc">自動儲存最多 50 筆完整磨合紀錄,包含每階段詳細數據。支援 JSON / CSV 匯出、檔案匯入、一鍵套用回磨合頁。所有資料離線儲存於裝置,無雲端依賴。</p>
-<div class="feature-meta">
-<span class="feature-tag">JSON / CSV</span>
-<span class="feature-tag" data-i18n="f6.tag2">離線儲存</span>
-<span class="feature-tag">50 筆</span>
-</div>
-</div>
-<!-- Web UI -->
-<div class="feature-card">
-<div class="feature-icon">
-<svg viewbox="0 0 24 24"><rect height="14" rx="2" width="20" x="2" y="3"></rect><path d="M8 21h8M12 17v4"></path></svg>
-</div>
-<h3 data-i18n="f7.title">內建 Web 操作介面</h3>
-<p data-i18n="f7.desc">裝置自帶 WiFi 熱點與網頁操作介面,手機、平板、筆電皆可使用,無需安裝任何 App。WebSocket 即時數據推送,250ms 更新頻率。</p>
-<div class="feature-meta">
-<span class="feature-tag" data-i18n="f7.tag1">免安裝</span>
-<span class="feature-tag">WebSocket</span>
-<span class="feature-tag" data-i18n="f7.tag2">跨平台</span>
-</div>
-</div>
-<!-- OTA 線上更新 -->
-<div class="feature-card">
-<div class="feature-icon">
-<svg viewbox="0 0 24 24"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c2-2 3-5 3-9s-1-7-3-9m0 18c-2-2-3-5-3-9s1-7 3-9"></path></svg>
-</div>
-<h3 data-i18n="f8.title">線上更新與防偽機制</h3>
-<p data-i18n="f8.desc">透過家用 WiFi 自動取得最新韌體,內建 HMAC-SHA256 簽章驗證與雙韌體區自動回退機制,更新失敗自動切回前一版,杜絕磚機風險。</p>
-<div class="feature-meta">
-<span class="feature-tag">HMAC-SHA256</span>
-<span class="feature-tag" data-i18n="f8.tag2">自動回退</span>
-</div>
-</div>
-<!-- 三層安全保護機制 -->
-<div class="feature-card">
-<div class="feature-icon">
-<svg viewbox="0 0 24 24"><path d="M12 2L4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4z"></path><path d="M9 12l2 2 4-4"></path></svg>
-</div>
-<h3 data-i18n="f9.title">三層安全保護機制</h3>
-<p data-i18n="f9.desc">馬達磨合過程中,馬達產生的強烈電磁干擾(EMI)、水磨合或堵轉時的瞬間電流飆升,都是傷害昂貴競賽馬達的潛在風險。MotorLab 內建三層硬體與韌體聯防機制 — 抗 EMI 電路設計持續被動防護、電流異常 &lt; 100 ms 急停切斷電力、極端干擾導致 MCU 異常時 Watchdog 於數秒內自動重啟。</p>
-<div class="feature-meta">
-<span class="feature-tag">EMI_SHIELDING</span>
-<span class="feature-tag" data-i18n="f9.tag2">&lt; 100 ms 急停</span>
-<span class="feature-tag" data-i18n="f9.tag3">Watchdog 4s</span>
-</div>
-</div>
-</div>
-</div>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag" data-i18n="features.tag">CORE FEATURES</div>
+      <h2 class="section-title" data-i18n="features.title">九大專業功能</h2>
+      <p class="section-subtitle" data-i18n="features.subtitle">從磨合到診斷，涵蓋 Mini 4WD 馬達生命週期的每一個關鍵環節。</p>
+    </div>
+
+    <div class="features-grid">
+      <!-- 馬達磨合 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>
+        </div>
+        <h3 data-i18n="f1.title">馬達磨合程式</h3>
+        <p data-i18n="f1.desc">十階段可程式化磨合，每階段獨立設定電壓、運轉方向、運轉時間、冷卻時間與穩定電流容差。模擬實車條件下的低速長時間磨合，讓電刷與整流子達到最佳貼合。</p>
+        <div class="feature-meta">
+          <span class="feature-tag">10 階段</span>
+          <span class="feature-tag" data-i18n="f1.tag2">智慧穩流判定</span>
+          <span class="feature-tag">~5 hr</span>
+        </div>
+      </div>
+
+      <!-- 馬達測試 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>
+        </div>
+        <h3 data-i18n="f2.title">馬達測試程式</h3>
+        <p data-i18n="f2.desc">單階段精密量測。給定電壓、方向、時間，即時觀察電流、轉速、溫度變化，並支援智慧穩流模式 — 電流達穩定即自動結束，效率與精度兼具。</p>
+        <div class="feature-meta">
+          <span class="feature-tag">0–4.5 V</span>
+          <span class="feature-tag" data-i18n="f2.tag2">即時圖表</span>
+          <span class="feature-tag" data-i18n="f2.tag3">雙模式</span>
+        </div>
+      </div>
+
+      <!-- AI 健康管理 (PRO) -->
+      <div class="feature-card pro-only">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 11-6.219-8.56"/><path d="M22 4l-10 10-3-3"/></svg>
+        </div>
+        <h3 data-i18n="f3.title">AI 智慧馬達健康管理</h3>
+        <p data-i18n="f3.desc">為每顆馬達建立基準健康指紋，後續檢測自動比對五大指標：電流特性、轉速衰減、溫升曲線、電流穩定度、振動頻譜分析，合成 0–100 分健康評級並提供文字診斷建議。</p>
+        <div class="feature-meta">
+          <span class="feature-tag" data-i18n="f3.tag1">FFT 頻譜</span>
+          <span class="feature-tag" data-i18n="f3.tag2">雷達圖</span>
+          <span class="feature-tag">20 motors</span>
+        </div>
+      </div>
+
+      <!-- 軸承阻力 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+        </div>
+        <h3 data-i18n="f4.title">軸承阻力測試</h3>
+        <p data-i18n="f4.desc">高速運轉後切斷電源，量測轉速衰減時間常數 τ。衰減越慢，軸承摩擦越小、健康度越高。10 秒完成一次量測，三次取平均可消除環境干擾。</p>
+        <div class="feature-meta">
+          <span class="feature-tag" data-i18n="f4.tag1">衰減 τ 分析</span>
+          <span class="feature-tag" data-i18n="f4.tag2">10 秒/次</span>
+        </div>
+      </div>
+
+      <!-- 電刷接觸 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <h3 data-i18n="f5.title">電刷接觸穩定測試</h3>
+        <p data-i18n="f5.desc">鎖定軸心後低電壓量測電流穩定度，以變異係數（CV%）量化電刷接觸均勻性。三角度循環測試涵蓋整圈整流子，準確抓出打火與磨損熱點。</p>
+        <div class="feature-meta">
+          <span class="feature-tag" data-i18n="f5.tag1">CV 變異係數</span>
+          <span class="feature-tag" data-i18n="f5.tag2">三角度循環</span>
+        </div>
+      </div>
+
+      <!-- 歷史紀錄 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <h3 data-i18n="f6.title">歷史紀錄管理</h3>
+        <p data-i18n="f6.desc">自動儲存最多 50 筆完整磨合紀錄，包含每階段詳細數據。支援 JSON / CSV 匯出、檔案匯入、一鍵套用回磨合頁。所有資料離線儲存於裝置，無雲端依賴。</p>
+        <div class="feature-meta">
+          <span class="feature-tag">JSON / CSV</span>
+          <span class="feature-tag" data-i18n="f6.tag2">離線儲存</span>
+          <span class="feature-tag">50 筆</span>
+        </div>
+      </div>
+
+      <!-- Web UI -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3 data-i18n="f7.title">內建 Web 操作介面</h3>
+        <p data-i18n="f7.desc">裝置自帶 WiFi 熱點與網頁操作介面，手機、平板、筆電皆可使用，無需安裝任何 App。WebSocket 即時數據推送，250ms 更新頻率。</p>
+        <div class="feature-meta">
+          <span class="feature-tag" data-i18n="f7.tag1">免安裝</span>
+          <span class="feature-tag">WebSocket</span>
+          <span class="feature-tag" data-i18n="f7.tag2">跨平台</span>
+        </div>
+      </div>
+
+      <!-- OTA 線上更新 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c2-2 3-5 3-9s-1-7-3-9m0 18c-2-2-3-5-3-9s1-7 3-9"/></svg>
+        </div>
+        <h3 data-i18n="f8.title">線上更新與防偽機制</h3>
+        <p data-i18n="f8.desc">透過家用 WiFi 自動取得最新韌體，內建 HMAC-SHA256 簽章驗證與雙韌體區自動回退機制，更新失敗自動切回前一版，杜絕磚機風險。</p>
+        <div class="feature-meta">
+          <span class="feature-tag">HMAC-SHA256</span>
+          <span class="feature-tag" data-i18n="f8.tag2">自動回退</span>
+        </div>
+      </div>
+
+      <!-- 三層安全保護機制 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <h3 data-i18n="f9.title">三層安全保護機制</h3>
+        <p data-i18n="f9.desc">馬達磨合過程中，馬達產生的強烈電磁干擾(EMI)、水磨合或堵轉時的瞬間電流飆升，都是傷害昂貴競賽馬達的潛在風險。MotorLab 內建三層硬體與韌體聯防機制 — 抗 EMI 電路設計持續被動防護、電流異常 &lt; 100 ms 急停切斷電力、極端干擾導致 MCU 異常時 Watchdog 於數秒內自動重啟。</p>
+        <div class="feature-meta">
+          <span class="feature-tag">EMI_SHIELDING</span>
+          <span class="feature-tag" data-i18n="f9.tag2">&lt; 100 ms 急停</span>
+          <span class="feature-tag" data-i18n="f9.tag3">Watchdog 4s</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
+
 <!-- 版本對比 -->
 <section id="versions" style="background: rgba(0,0,0,0.15);">
-<div class="container">
-<div class="section-header">
-<div class="section-tag" data-i18n="versions.tag">EDITIONS</div>
-<h2 class="section-title" data-i18n="versions.title">M1 與 PRO</h2>
-<p class="section-subtitle" data-i18n="versions.subtitle">同一台機器,兩種授權層級。隨時可線上升級。</p>
-</div>
-<div class="version-compare">
-<table class="version-table">
-<thead>
-<tr>
-<th data-i18n="vt.feature">功能</th>
-<th class="m1-col">M1</th>
-<th class="pro-col">PRO</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td data-i18n="vt.r1">十階段馬達磨合程式</td>
-<td class="center"><span class="check">✓</span></td>
-<td class="center"><span class="check">✓</span></td>
-</tr>
-<tr>
-<td data-i18n="vt.r2">單階段馬達測試</td>
-<td class="center"><span class="check">✓</span></td>
-<td class="center"><span class="check">✓</span></td>
-</tr>
-<tr>
-<td data-i18n="vt.r3">歷史紀錄(50 筆)</td>
-<td class="center"><span class="check">✓</span></td>
-<td class="center"><span class="check">✓</span></td>
-</tr>
-<tr>
-<td data-i18n="vt.r4">軸承阻力測試</td>
-<td class="center"><span class="check">✓</span></td>
-<td class="center"><span class="check">✓</span></td>
-</tr>
-<tr>
-<td data-i18n="vt.r5">電刷接觸穩定測試</td>
-<td class="center"><span class="check">✓</span></td>
-<td class="center"><span class="check">✓</span></td>
-</tr>
-<tr>
-<td data-i18n="vt.r6">即時 Web 操作介面</td>
-<td class="center"><span class="check">✓</span></td>
-<td class="center"><span class="check">✓</span></td>
-</tr>
-<tr>
-<td data-i18n="vt.r7">線上韌體更新</td>
-<td class="center"><span class="check">✓</span></td>
-<td class="center"><span class="check">✓</span></td>
-</tr>
-<tr>
-<td data-i18n="vt.r12">三層安全保護機制</td>
-<td class="center"><span class="check">✓</span></td>
-<td class="center"><span class="check">✓</span></td>
-</tr>
-<tr>
-<td data-i18n="vt.r8">AI 智慧馬達健康管理(最多 20 顆)</td>
-<td class="center"><span class="cross">—</span></td>
-<td class="center"><span class="check">✓</span></td>
-</tr>
-<tr>
-<td data-i18n="vt.r9">FFT 振動頻譜分析</td>
-<td class="center"><span class="cross">—</span></td>
-<td class="center"><span class="check">✓</span></td>
-</tr>
-<tr>
-<td data-i18n="vt.r10">五大指標雷達圖診斷</td>
-<td class="center"><span class="cross">—</span></td>
-<td class="center"><span class="check">✓</span></td>
-</tr>
-<tr>
-<td data-i18n="vt.r11">健康趨勢曲線追蹤</td>
-<td class="center"><span class="cross">—</span></td>
-<td class="center"><span class="check">✓</span></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag" data-i18n="versions.tag">EDITIONS</div>
+      <h2 class="section-title" data-i18n="versions.title">M1 與 PRO</h2>
+      <p class="section-subtitle" data-i18n="versions.subtitle">同一台機器，兩種授權層級。隨時可線上升級。</p>
+    </div>
+
+    <div class="version-compare">
+      <table class="version-table">
+        <thead>
+          <tr>
+            <th data-i18n="vt.feature">功能</th>
+            <th class="m1-col">M1</th>
+            <th class="pro-col">PRO</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-i18n="vt.r1">十階段馬達磨合程式</td>
+            <td class="center"><span class="check">✓</span></td>
+            <td class="center"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td data-i18n="vt.r2">單階段馬達測試</td>
+            <td class="center"><span class="check">✓</span></td>
+            <td class="center"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td data-i18n="vt.r3">歷史紀錄（50 筆）</td>
+            <td class="center"><span class="check">✓</span></td>
+            <td class="center"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td data-i18n="vt.r4">軸承阻力測試</td>
+            <td class="center"><span class="check">✓</span></td>
+            <td class="center"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td data-i18n="vt.r5">電刷接觸穩定測試</td>
+            <td class="center"><span class="check">✓</span></td>
+            <td class="center"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td data-i18n="vt.r6">即時 Web 操作介面</td>
+            <td class="center"><span class="check">✓</span></td>
+            <td class="center"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td data-i18n="vt.r7">線上韌體更新</td>
+            <td class="center"><span class="check">✓</span></td>
+            <td class="center"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td data-i18n="vt.r12">三層安全保護機制</td>
+            <td class="center"><span class="check">✓</span></td>
+            <td class="center"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td data-i18n="vt.r8">AI 智慧馬達健康管理（最多 20 顆）</td>
+            <td class="center"><span class="cross">—</span></td>
+            <td class="center"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td data-i18n="vt.r9">FFT 振動頻譜分析</td>
+            <td class="center"><span class="cross">—</span></td>
+            <td class="center"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td data-i18n="vt.r10">五大指標雷達圖診斷</td>
+            <td class="center"><span class="cross">—</span></td>
+            <td class="center"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td data-i18n="vt.r11">健康趨勢曲線追蹤</td>
+            <td class="center"><span class="cross">—</span></td>
+            <td class="center"><span class="check">✓</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </section>
+
 <!-- 技術能力 -->
 <section id="tech">
-<div class="container">
-<div class="section-header">
-<div class="section-tag" data-i18n="tech.tag">TECHNOLOGY</div>
-<h2 class="section-title" data-i18n="tech.title">內建專業分析技術</h2>
-<p class="section-subtitle" data-i18n="tech.subtitle">每一項數據都來自業界驗證的量測方法。</p>
-</div>
-<div class="tech-grid">
-<div class="tech-card">
-<div class="tech-name">FFT_ANALYSIS</div>
-<h4 data-i18n="t1.title">快速傅立葉變換頻譜</h4>
-<p data-i18n="t1.desc">將馬達電流訊號轉換為頻域,分離出基頻、諧波與雜訊成分。從頻譜特徵即可判讀軸承異音、轉子失衡、整流子缺陷等隱性問題。</p>
-</div>
-<div class="tech-card">
-<div class="tech-name">CV_COEFFICIENT</div>
-<h4 data-i18n="t2.title">變異係數分析</h4>
-<p data-i18n="t2.desc">統計學標準離散度指標(標準差 / 平均值),用於量化電刷接觸的穩定性。CV 越低代表接觸越均勻、打火越少。</p>
-</div>
-<div class="tech-card">
-<div class="tech-name">TAU_DECAY</div>
-<h4 data-i18n="t3.title">指數衰減時間常數</h4>
-<p data-i18n="t3.desc">藉由轉速從高峰自由衰減的曲線,回歸出時間常數 τ,反映軸承摩擦係數。常用於精密馬達品管的核心物理量。</p>
-</div>
-<div class="tech-card">
-<div class="tech-name">BASELINE_FINGERPRINT</div>
-<h4 data-i18n="t4.title">基準指紋比對</h4>
-<p data-i18n="t4.desc">為每顆馬達建立首次量測基準,後續比對皆採同器同馬達原則,排除馬達本身個體差異,純粹反映健康狀態變化。</p>
-</div>
-<div class="tech-card">
-<div class="tech-name">STABILITY_LATCH</div>
-<h4 data-i18n="t5.title">穩定電流鎖定演算法</h4>
-<p data-i18n="t5.desc">滑動窗口偵測連續 N 秒內電流最大最小差值,達穩定後鎖定數值,避免暫時擾動造成誤判,提升量測重現性。</p>
-</div>
-<div class="tech-card">
-<div class="tech-name">NOISE_FLOOR_SUBTRACT</div>
-<h4 data-i18n="t6.title">雜訊底線扣除</h4>
-<p data-i18n="t6.desc">量測前先採集儀器本身雜訊基準,後續訊號扣除其平方差,分離出馬達真實訊號變化,讓微小異常也無所遁形。</p>
-</div>
-<div class="tech-card">
-<div class="tech-name">EMI_SHIELDING</div>
-<h4 data-i18n="t7.title">抗 EMI 電路設計</h4>
-<p data-i18n="t7.desc">電源與感測訊號採用抗 EMI 設計,有效抑制馬達高頻雜訊回灌,避免感測讀值汙染及 MCU 邏輯被誤觸發。</p>
-</div>
-<div class="tech-card">
-<div class="tech-name">OVERCURRENT_CUTOFF</div>
-<h4 data-i18n="t8.title">硬體過流保護 (&lt; 100 ms)</h4>
-<p data-i18n="t8.desc">即時電流監測瞬間超過安全閾值時 &lt; 100 ms 內立即斷電,保護系統及昂貴的競賽馬達。</p>
-</div>
-<div class="tech-card">
-<div class="tech-name">WATCHDOG_RECOVERY</div>
-<h4 data-i18n="t9.title">Watchdog 自動復原</h4>
-<p data-i18n="t9.desc">即使遇到極端 EMI 雜訊導致 MCU 異常,內建 Watchdog 會在數秒內重啟系統,重啟前所有電力輸出皆強制切斷。</p>
-</div>
-</div>
-</div>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag" data-i18n="tech.tag">TECHNOLOGY</div>
+      <h2 class="section-title" data-i18n="tech.title">內建專業分析技術</h2>
+      <p class="section-subtitle" data-i18n="tech.subtitle">每一項數據都來自業界驗證的量測方法。</p>
+    </div>
+
+    <div class="tech-grid">
+      <div class="tech-card">
+        <div class="tech-name">FFT_ANALYSIS</div>
+        <h4 data-i18n="t1.title">快速傅立葉變換頻譜</h4>
+        <p data-i18n="t1.desc">將馬達電流訊號轉換為頻域，分離出基頻、諧波與雜訊成分。從頻譜特徵即可判讀軸承異音、轉子失衡、整流子缺陷等隱性問題。</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-name">CV_COEFFICIENT</div>
+        <h4 data-i18n="t2.title">變異係數分析</h4>
+        <p data-i18n="t2.desc">統計學標準離散度指標（標準差 / 平均值），用於量化電刷接觸的穩定性。CV 越低代表接觸越均勻、打火越少。</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-name">TAU_DECAY</div>
+        <h4 data-i18n="t3.title">指數衰減時間常數</h4>
+        <p data-i18n="t3.desc">藉由轉速從高峰自由衰減的曲線，回歸出時間常數 τ，反映軸承摩擦係數。常用於精密馬達品管的核心物理量。</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-name">BASELINE_FINGERPRINT</div>
+        <h4 data-i18n="t4.title">基準指紋比對</h4>
+        <p data-i18n="t4.desc">為每顆馬達建立首次量測基準，後續比對皆採同器同馬達原則，排除馬達本身個體差異，純粹反映健康狀態變化。</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-name">STABILITY_LATCH</div>
+        <h4 data-i18n="t5.title">穩定電流鎖定演算法</h4>
+        <p data-i18n="t5.desc">滑動窗口偵測連續 N 秒內電流最大最小差值，達穩定後鎖定數值，避免暫時擾動造成誤判，提升量測重現性。</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-name">NOISE_FLOOR_SUBTRACT</div>
+        <h4 data-i18n="t6.title">雜訊底線扣除</h4>
+        <p data-i18n="t6.desc">量測前先採集儀器本身雜訊基準，後續訊號扣除其平方差，分離出馬達真實訊號變化，讓微小異常也無所遁形。</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-name">EMI_SHIELDING</div>
+        <h4 data-i18n="t7.title">抗 EMI 電路設計</h4>
+        <p data-i18n="t7.desc">電源與感測訊號採用抗 EMI 設計，有效抑制馬達高頻雜訊回灌，避免感測讀值汙染及 MCU 邏輯被誤觸發。</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-name">OVERCURRENT_CUTOFF</div>
+        <h4 data-i18n="t8.title">硬體過流保護(&lt; 100 ms)</h4>
+        <p data-i18n="t8.desc">即時電流監測瞬間超過安全閾值時 &lt; 100 ms 內立即斷電，保護系統及昂貴的競賽馬達。</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-name">WATCHDOG_RECOVERY</div>
+        <h4 data-i18n="t9.title">Watchdog 自動復原</h4>
+        <p data-i18n="t9.desc">即使遇到極端 EMI 雜訊導致 MCU 異常，內建 Watchdog 會在數秒內重啟系統，重啟前所有電力輸出皆強制切斷。</p>
+      </div>
+    </div>
+  </div>
 </section>
+
 <!-- 技術規格 Specifications -->
 <section id="specs" style="background: rgba(0,0,0,0.15);">
-<div class="container">
-<div class="section-header">
-<div class="section-tag" data-i18n="specs.tag">SPECIFICATIONS</div>
-<h2 class="section-title" data-i18n="specs.title">技術規格</h2>
-<p class="section-subtitle" data-i18n="specs.subtitle">完整的硬體與軟體規格,以及各功能的數值輸入範圍。</p>
-</div>
-<!-- 硬體規格 -->
-<div class="spec-block">
-<div class="spec-block-title" data-i18n="specs.hw.title">硬體規格</div>
-<div class="spec-table-wrap">
-<table class="spec-table">
-<thead>
-<tr>
-<th data-i18n="specs.th.item">項目</th>
-<th data-i18n="specs.th.spec">規格</th>
-</tr>
-</thead>
-<tbody>
-<tr><td data-i18n="specs.hw.r1">輸入電源</td><td class="spec-val" data-i18n="specs.hw.v1">DC 5V / 6A · 接頭 5.5 × 2.5 mm</td></tr>
-<tr><td data-i18n="specs.hw.r2">輸出電壓</td><td class="spec-val" data-i18n="specs.hw.v2">DC 4.5V Max / 4A Max</td></tr>
-<tr><td data-i18n="specs.hw.r3">電壓偵測</td><td class="spec-val" data-i18n="specs.hw.v3">0 ~ 36V Max</td></tr>
-<tr><td data-i18n="specs.hw.r4">電流偵測</td><td class="spec-val" data-i18n="specs.hw.v4">-4A ~ +4A Max</td></tr>
-<tr><td data-i18n="specs.hw.r5">轉速偵測</td><td class="spec-val" data-i18n="specs.hw.v5">0 ~ 50,000 RPM</td></tr>
-<tr><td data-i18n="specs.hw.r6">溫度偵測</td><td class="spec-val" data-i18n="specs.hw.v6">-50°C ~ +125°C</td></tr>
-<tr><td data-i18n="specs.hw.r7">散熱風扇</td><td class="spec-val" data-i18n="specs.hw.v7">DC 5V × 2</td></tr>
-</tbody>
-</table>
-</div>
-</div>
-<!-- 軟體規格 -->
-<div class="spec-block">
-<div class="spec-block-title" data-i18n="specs.sw.title">軟體規格</div>
-<div class="spec-table-wrap">
-<table class="spec-table">
-<thead>
-<tr>
-<th data-i18n="specs.th.func">功能</th>
-<th data-i18n="specs.th.cap">階段 / 容量</th>
-</tr>
-</thead>
-<tbody>
-<tr><td data-i18n="specs.sw.r1">馬達磨合程式</td><td class="spec-val" data-i18n="specs.sw.v1">10 階段</td></tr>
-<tr><td data-i18n="specs.sw.r2">馬達測試程式</td><td class="spec-val" data-i18n="specs.sw.v2">單一階段</td></tr>
-<tr><td data-i18n="specs.sw.r3">歷史紀錄</td><td class="spec-val" data-i18n="specs.sw.v3">最多 50 筆</td></tr>
-<tr><td data-i18n="specs.sw.r4">AI 智慧馬達健康管理 (PRO)</td><td class="spec-val" data-i18n="specs.sw.v4">最多 20 顆馬達</td></tr>
-<tr><td data-i18n="specs.sw.r5">軸承阻力測試</td><td class="spec-val" data-i18n="specs.sw.v5">單一階段</td></tr>
-<tr><td data-i18n="specs.sw.r6">電刷接觸穩定測試</td><td class="spec-val" data-i18n="specs.sw.v6">單一階段</td></tr>
-</tbody>
-</table>
-</div>
-</div>
-<!-- 各功能數值輸入範圍 -->
-<div class="spec-block">
-<div class="spec-block-title" data-i18n="specs.range.title">各功能數值輸入範圍</div>
-<!-- 3.1 馬達磨合程式 -->
-<div class="spec-subgroup" data-i18n="specs.range.g1">馬達磨合程式（10 階段,每階段獨立設定）</div>
-<div class="spec-table-wrap">
-<table class="spec-table">
-<thead>
-<tr>
-<th data-i18n="specs.th.param">參數</th>
-<th data-i18n="specs.th.rangeu">範圍</th>
-<th data-i18n="specs.th.unit">單位</th>
-<th data-i18n="specs.th.default">預設</th>
-</tr>
-</thead>
-<tbody>
-<tr><td data-i18n="specs.p.volt">電壓</td><td class="spec-val">0 ~ 4.5 (step 0.1)</td><td class="spec-val">V</td><td data-i18n="specs.d.bystage">依階段</td></tr>
-<tr><td data-i18n="specs.p.dir">運轉方向</td><td data-i18n="specs.v.dir">正轉 / 反轉</td><td>—</td><td data-i18n="specs.d.fwd">正轉</td></tr>
-<tr><td data-i18n="specs.p.runtime">運轉時間</td><td class="spec-val">0 ~ 1800</td><td data-i18n="specs.u.sec">秒</td><td data-i18n="specs.d.bystage">依階段</td></tr>
-<tr><td data-i18n="specs.p.cooltime">冷卻時間</td><td class="spec-val">0 ~ 600</td><td data-i18n="specs.u.sec">秒</td><td data-i18n="specs.d.bystage">依階段</td></tr>
-<tr><td data-i18n="specs.p.tol">穩定電流容差</td><td class="spec-val">2 ~ 50</td><td class="spec-val">±mA</td><td class="spec-val">5</td></tr>
-</tbody>
-</table>
-</div>
-<!-- 3.2 馬達測試程式 -->
-<div class="spec-subgroup" data-i18n="specs.range.g2">馬達測試程式（單一階段）</div>
-<div class="spec-table-wrap">
-<table class="spec-table">
-<thead>
-<tr>
-<th data-i18n="specs.th.param">參數</th>
-<th data-i18n="specs.th.rangeu">範圍</th>
-<th data-i18n="specs.th.unit">單位</th>
-<th data-i18n="specs.th.default">預設</th>
-</tr>
-</thead>
-<tbody>
-<tr><td data-i18n="specs.p.volt">電壓</td><td class="spec-val">0.1 ~ 4.5 (step 0.1)</td><td class="spec-val">V</td><td class="spec-val">3.0</td></tr>
-<tr><td data-i18n="specs.p.dir">運轉方向</td><td data-i18n="specs.v.dir">正轉 / 反轉</td><td>—</td><td data-i18n="specs.d.fwd">正轉</td></tr>
-<tr><td data-i18n="specs.p.runtime">運轉時間</td><td class="spec-val">0 ~ 1800</td><td data-i18n="specs.u.sec">秒</td><td class="spec-val">60</td></tr>
-<tr><td data-i18n="specs.p.tol">穩定電流容差</td><td class="spec-val">2 ~ 50</td><td class="spec-val">±mA</td><td class="spec-val">5</td></tr>
-</tbody>
-</table>
-</div>
-<!-- 3.3 AI 智慧馬達健康管理 -->
-<div class="spec-subgroup" data-i18n="specs.range.g3">AI 智慧馬達健康管理（PRO）</div>
-<div class="spec-table-wrap">
-<table class="spec-table">
-<thead>
-<tr>
-<th data-i18n="specs.th.param">參數</th>
-<th data-i18n="specs.th.rangeu">範圍</th>
-<th data-i18n="specs.th.unit">單位</th>
-<th data-i18n="specs.th.default">預設</th>
-</tr>
-</thead>
-<tbody>
-<tr><td data-i18n="specs.p.vstart">起始電壓</td><td class="spec-val">2.0 ~ 3.0 (step 0.1)</td><td class="spec-val">V</td><td class="spec-val">2.0</td></tr>
-<tr><td data-i18n="specs.p.vstep">電壓間距</td><td class="spec-val">0.1 ~ 0.2 (step 0.01)</td><td class="spec-val">V</td><td class="spec-val">0.2</td></tr>
-</tbody>
-</table>
-</div>
-<div class="spec-note" data-i18n="specs.range.g3note">系統自動以「起始電壓 + 4 × 電壓間距」生成 5 個等距量測點。</div>
-<!-- 3.4 / 3.5 自動程序 -->
-<div class="spec-subgroup" data-i18n="specs.range.g4">軸承阻力測試 · 電刷接觸穩定測試</div>
-<div class="spec-auto" data-i18n="specs.range.g4note">無數值輸入,為全自動量測程序。</div>
-</div>
-</div>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag" data-i18n="specs.tag">SPECIFICATIONS</div>
+      <h2 class="section-title" data-i18n="specs.title">技術規格</h2>
+      <p class="section-subtitle" data-i18n="specs.subtitle">完整的硬體與軟體規格,以及各功能的數值輸入範圍。</p>
+    </div>
+
+    <!-- 硬體規格 -->
+    <div class="spec-block">
+      <div class="spec-block-title" data-i18n="specs.hw.title">硬體規格</div>
+      <div class="spec-table-wrap">
+        <table class="spec-table">
+          <thead>
+            <tr>
+              <th data-i18n="specs.th.item">項目</th>
+              <th data-i18n="specs.th.spec">規格</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n="specs.hw.r1">輸入電源</td><td class="spec-val" data-i18n="specs.hw.v1">DC 5V / 6A · 接頭 5.5 × 2.5 mm</td></tr>
+            <tr><td data-i18n="specs.hw.r2">輸出電壓</td><td class="spec-val" data-i18n="specs.hw.v2">DC 4.5V Max / 4A Max</td></tr>
+            <tr><td data-i18n="specs.hw.r3">電壓偵測</td><td class="spec-val" data-i18n="specs.hw.v3">0 ~ 36V Max</td></tr>
+            <tr><td data-i18n="specs.hw.r4">電流偵測</td><td class="spec-val" data-i18n="specs.hw.v4">-4A ~ +4A Max</td></tr>
+            <tr><td data-i18n="specs.hw.r5">轉速偵測</td><td class="spec-val" data-i18n="specs.hw.v5">0 ~ 50,000 RPM</td></tr>
+            <tr><td data-i18n="specs.hw.r6">溫度偵測</td><td class="spec-val" data-i18n="specs.hw.v6">-50°C ~ +125°C</td></tr>
+            <tr><td data-i18n="specs.hw.r7">散熱風扇</td><td class="spec-val" data-i18n="specs.hw.v7">DC 5V × 2</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 軟體規格 -->
+    <div class="spec-block">
+      <div class="spec-block-title" data-i18n="specs.sw.title">軟體規格</div>
+      <div class="spec-table-wrap">
+        <table class="spec-table">
+          <thead>
+            <tr>
+              <th data-i18n="specs.th.func">功能</th>
+              <th data-i18n="specs.th.cap">階段 / 容量</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n="specs.sw.r1">馬達磨合程式</td><td class="spec-val" data-i18n="specs.sw.v1">10 階段</td></tr>
+            <tr><td data-i18n="specs.sw.r2">馬達測試程式</td><td class="spec-val" data-i18n="specs.sw.v2">單一階段</td></tr>
+            <tr><td data-i18n="specs.sw.r3">歷史紀錄</td><td class="spec-val" data-i18n="specs.sw.v3">最多 50 筆</td></tr>
+            <tr><td data-i18n="specs.sw.r4">AI 智慧馬達健康管理 (PRO)</td><td class="spec-val" data-i18n="specs.sw.v4">最多 20 顆馬達</td></tr>
+            <tr><td data-i18n="specs.sw.r5">軸承阻力測試</td><td class="spec-val" data-i18n="specs.sw.v5">單一階段</td></tr>
+            <tr><td data-i18n="specs.sw.r6">電刷接觸穩定測試</td><td class="spec-val" data-i18n="specs.sw.v6">單一階段</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 各功能數值輸入範圍 -->
+    <div class="spec-block">
+      <div class="spec-block-title" data-i18n="specs.range.title">各功能數值輸入範圍</div>
+
+      <!-- 3.1 馬達磨合程式 -->
+      <div class="spec-subgroup" data-i18n="specs.range.g1">馬達磨合程式（10 階段,每階段獨立設定）</div>
+      <div class="spec-table-wrap">
+        <table class="spec-table">
+          <thead>
+            <tr>
+              <th data-i18n="specs.th.param">參數</th>
+              <th data-i18n="specs.th.rangeu">範圍</th>
+              <th data-i18n="specs.th.unit">單位</th>
+              <th data-i18n="specs.th.default">預設</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n="specs.p.volt">電壓</td><td class="spec-val">0 ~ 4.5 (step 0.1)</td><td class="spec-val">V</td><td data-i18n="specs.d.bystage">依階段</td></tr>
+            <tr><td data-i18n="specs.p.dir">運轉方向</td><td data-i18n="specs.v.dir">正轉 / 反轉</td><td>—</td><td data-i18n="specs.d.fwd">正轉</td></tr>
+            <tr><td data-i18n="specs.p.runtime">運轉時間</td><td class="spec-val">0 ~ 1800</td><td data-i18n="specs.u.sec">秒</td><td data-i18n="specs.d.bystage">依階段</td></tr>
+            <tr><td data-i18n="specs.p.cooltime">冷卻時間</td><td class="spec-val">0 ~ 600</td><td data-i18n="specs.u.sec">秒</td><td data-i18n="specs.d.bystage">依階段</td></tr>
+            <tr><td data-i18n="specs.p.tol">穩定電流容差</td><td class="spec-val">2 ~ 50</td><td class="spec-val">±mA</td><td class="spec-val">5</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 3.2 馬達測試程式 -->
+      <div class="spec-subgroup" data-i18n="specs.range.g2">馬達測試程式（單一階段）</div>
+      <div class="spec-table-wrap">
+        <table class="spec-table">
+          <thead>
+            <tr>
+              <th data-i18n="specs.th.param">參數</th>
+              <th data-i18n="specs.th.rangeu">範圍</th>
+              <th data-i18n="specs.th.unit">單位</th>
+              <th data-i18n="specs.th.default">預設</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n="specs.p.volt">電壓</td><td class="spec-val">0.1 ~ 4.5 (step 0.1)</td><td class="spec-val">V</td><td class="spec-val">3.0</td></tr>
+            <tr><td data-i18n="specs.p.dir">運轉方向</td><td data-i18n="specs.v.dir">正轉 / 反轉</td><td>—</td><td data-i18n="specs.d.fwd">正轉</td></tr>
+            <tr><td data-i18n="specs.p.runtime">運轉時間</td><td class="spec-val">0 ~ 1800</td><td data-i18n="specs.u.sec">秒</td><td class="spec-val">60</td></tr>
+            <tr><td data-i18n="specs.p.tol">穩定電流容差</td><td class="spec-val">2 ~ 50</td><td class="spec-val">±mA</td><td class="spec-val">5</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 3.3 AI 智慧馬達健康管理 -->
+      <div class="spec-subgroup" data-i18n="specs.range.g3">AI 智慧馬達健康管理（PRO）</div>
+      <div class="spec-table-wrap">
+        <table class="spec-table">
+          <thead>
+            <tr>
+              <th data-i18n="specs.th.param">參數</th>
+              <th data-i18n="specs.th.rangeu">範圍</th>
+              <th data-i18n="specs.th.unit">單位</th>
+              <th data-i18n="specs.th.default">預設</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n="specs.p.vstart">起始電壓</td><td class="spec-val">2.0 ~ 3.0 (step 0.1)</td><td class="spec-val">V</td><td class="spec-val">2.0</td></tr>
+            <tr><td data-i18n="specs.p.vstep">電壓間距</td><td class="spec-val">0.1 ~ 0.2 (step 0.01)</td><td class="spec-val">V</td><td class="spec-val">0.2</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="spec-note" data-i18n="specs.range.g3note">系統自動以「起始電壓 + 4 × 電壓間距」生成 5 個等距量測點。</div>
+
+      <!-- 3.4 / 3.5 自動程序 -->
+      <div class="spec-subgroup" data-i18n="specs.range.g4">軸承阻力測試 · 電刷接觸穩定測試</div>
+      <div class="spec-auto" data-i18n="specs.range.g4note">無數值輸入,為全自動量測程序。</div>
+    </div>
+
+  </div>
 </section>
+
 <!-- 教學知識 Guides -->
 <section id="guides">
-<div class="container">
-<div class="section-header">
-<div class="section-tag" data-i18n="g.tag">KNOWLEDGE BASE</div>
-<h2 class="section-title" data-i18n="g.title">四驅車馬達磨合教學</h2>
-<p class="section-subtitle" data-i18n="g.subtitle">從原理到實作,整理迷你四驅車馬達磨合最常見的問題與解答。</p>
-</div>
-<div class="guides-grid">
-<!-- Guide 1: 完全指南 -->
-<article class="guide-article">
-<span class="guide-tag" data-i18n="g1.tag">GUIDE · 完全指南</span>
-<h3 data-i18n="g1.title">四驅車馬達磨合完全指南:從原理到實作</h3>
-<p class="guide-lead" data-i18n="g1.lead">迷你四驅車(Mini 4WD)的馬達磨合,是讓新馬達發揮最大潛能的必要程序。本文整理田宮馬達磨合的科學原理、實作步驟、以及為什麼專業車手都要做這道工序。</p>
-<h4 data-i18n="g1.h1">為什麼新馬達一定要磨合?</h4>
-<p data-i18n="g1.p1">田宮新馬達(無論是紅二 Hyper Dash、黑金剛 Plasma Dash、白頭 Sprint Dash 還是紫頭、橘頭)出廠時,<strong>碳刷(電刷)的接觸面是平的</strong>。但馬達內部的整流子(銅頭)是圓柱形,平面碳刷只能接觸到極小的弧線,實際導電面積非常有限。</p>
-<p data-i18n="g1.p2">這時直接全速運轉,馬達會因為電刷接觸不良而產生以下狀況:</p>
-<ul>
-<li data-i18n="g1.l1"><strong>電流不穩</strong>—碳刷跳動造成電流劇烈起伏,馬達抖動發熱</li>
-<li data-i18n="g1.l2"><strong>轉速無法發揮</strong>—標稱 19,300 RPM 的紅二,可能只能跑出 14,000 RPM</li>
-<li data-i18n="g1.l3"><strong>磁鐵退磁風險</strong>—持續高溫會永久降低馬達輸出</li>
-<li data-i18n="g1.l4"><strong>銅頭過早磨損</strong>—未磨合的硬碰硬接觸會傷整流子</li>
-</ul>
-<p data-i18n="g1.p3"><strong>磨合的目的</strong>就是讓平面碳刷漸進磨出與銅頭曲面吻合的「半圓弧凹槽」,讓接觸面積最大化,電流順暢流動,馬達才能達到設計的轉速與扭力。</p>
-<h4 data-i18n="g1.h2">磨合的物理原理</h4>
-<p data-i18n="g1.p4">直流碳刷馬達的核心數學關係:<code>N = (V − IR) / Kφ</code>(轉速 = (電壓 − 電流×內阻) / 磁通常數)。新馬達的碳刷接觸電阻 R 很高,造成 IR 損失大、轉速 N 上不去。磨合過程實際是<strong>降低接觸電阻、提升能源轉換效率</strong>的物理過程。</p>
-<p data-i18n="g1.p5">業餘做法是「在水裡用低電壓跑」(俗稱水磨)、或「用乾電池正反向跑」。但這兩種方法的問題是:電壓不可控、時間靠感覺、無法量化進度,結果好壞全憑運氣。</p>
-<h4 data-i18n="g1.h3">專業磨合的 4 個關鍵變數</h4>
-<p data-i18n="g1.p6">每一次磨合的成功與否,取決於下面 4 個參數的精準控制:</p>
-<table class="guide-table">
-<thead>
-<tr><th data-i18n="g1.t.var">變數</th><th data-i18n="g1.t.role">作用</th><th data-i18n="g1.t.risk">控制不當的後果</th></tr>
-</thead>
-<tbody>
-<tr><td data-i18n="g1.t.v1">電壓(V)</td><td data-i18n="g1.t.r1">決定接觸面溫度與壓力</td><td data-i18n="g1.t.x1">過高燒掉碳刷、過低磨不動</td></tr>
-<tr><td data-i18n="g1.t.v2">時間(min)</td><td data-i18n="g1.t.r2">決定磨合深度</td><td data-i18n="g1.t.x2">不夠則接觸面不完整、過久反而磨穿</td></tr>
-<tr><td data-i18n="g1.t.v3">方向(±)</td><td data-i18n="g1.t.r3">確保碳刷兩側對稱磨耗</td><td data-i18n="g1.t.x3">單向磨會偏磨,影響耐用度</td></tr>
-<tr><td data-i18n="g1.t.v4">冷卻(s)</td><td data-i18n="g1.t.r4">避免溫度累積</td><td data-i18n="g1.t.x4">過熱導致磁鐵退磁,輸出永久下降</td></tr>
-</tbody>
-</table>
-<h4 data-i18n="g1.h4">標準磨合流程(10 階段建議)</h4>
-<p data-i18n="g1.p7">業界主流的「漸進升壓」磨合方法,將馬達磨合分成 10 階段、每階段約 30-90 秒、電壓從 1.0V 緩升至 2.4V,並穿插反向運轉與冷卻時間。</p>
-<div class="guide-tip">
-<p data-i18n="g1.tip">MotorLab M1/PRO 內建的<strong>十階段可程式化磨合</strong>會自動執行這套流程,每階段可獨立調整電壓、方向、時間、冷卻、與穩定電流容差。並透過<strong>智慧穩流判定</strong>—當電流連續波動小於設定值時自動進入下階段,確保每顆馬達都磨到位。</p>
-</div>
-<h4 data-i18n="g1.h5">磨合完成的判定標準</h4>
-<p data-i18n="g1.p8">怎麼知道馬達磨好了?有 4 個觀察點:</p>
-<ul>
-<li data-i18n="g1.l5"><strong>電流穩定度</strong>—同一電壓下,電流波動 ≤ ±50mA</li>
-<li data-i18n="g1.l6"><strong>轉速穩定度</strong>—同樣電壓下,連續 10 秒轉速差異 ≤ 200 RPM</li>
-<li data-i18n="g1.l7"><strong>溫升曲線平緩</strong>—不再有跳躍性升溫</li>
-<li data-i18n="g1.l8"><strong>聲音平順</strong>—不再有「滋滋」的不規則噪音</li>
-</ul>
-</article>
-<!-- Guide 2: 5 大錯誤 -->
-<article class="guide-article">
-<span class="guide-tag" data-i18n="g2.tag">GUIDE · 避免錯誤</span>
-<h3 data-i18n="g2.title">為什麼業餘車手磨合馬達總是失敗?5 個常見錯誤</h3>
-<p class="guide-lead" data-i18n="g2.lead">許多新手回鍋玩四驅車,聽說要磨合馬達就拿乾電池亂跑,結果不是馬達燒掉就是跑不快。本文整理最常見的 5 個磨合錯誤與正確做法。</p>
-<h4 data-i18n="g2.h1">錯誤 1:電壓過高、時間過長</h4>
-<p data-i18n="g2.p1">最常見的錯誤就是<strong>「拿乾電池(1.5V × 2 = 3V)直接讓馬達狂跑半小時」</strong>。看起來合理,實際後果是:</p>
-<ul>
-<li data-i18n="g2.l1">3V 對紅二、黑金剛來說已經接近全速,等於沒磨合就直接操</li>
-<li data-i18n="g2.l2">長時間運轉沒冷卻,溫度可能衝到 80℃ 以上,<strong>磁鐵永久退磁</strong></li>
-<li data-i18n="g2.l3">碳刷可能在還沒磨成弧形前就燒斷</li>
-</ul>
-<div class="guide-warning">
-<p data-i18n="g2.w1">正確做法:從 1.0V 起步,每階段升 0.15V,單階段不超過 90 秒,每階段間插入 15-30 秒冷卻。</p>
-</div>
-<h4 data-i18n="g2.h2">錯誤 2:用水磨但水量太多、沒擦乾</h4>
-<p data-i18n="g2.p2">水磨原理是利用水的高比熱帶走熱量、同時水也是輕度阻尼。但業餘水磨常見問題:</p>
-<ul>
-<li data-i18n="g2.l4"><strong>水跑進軸承</strong>—培林軸承生鏽,馬達噪音變大</li>
-<li data-i18n="g2.l5"><strong>沒徹底擦乾</strong>—內部殘留水分造成電化學腐蝕,壽命大減</li>
-<li data-i18n="g2.l6"><strong>水質太硬</strong>—礦物質沉積在整流子上,接觸更差</li>
-</ul>
-<div class="guide-tip">
-<p data-i18n="g2.t2">更現代的做法是<strong>「精密電流控制乾磨」</strong>—不接觸液體,純靠電壓電流控制與冷卻時間,徹底避免水損風險。</p>
-</div>
-<h4 data-i18n="g2.h3">錯誤 3:只磨單一方向</h4>
-<p data-i18n="g2.p3">許多人磨合時只接正極跑一個方向,結果碳刷只有一邊磨出弧形,另一邊還是平的。實車使用時雖然只往一個方向轉,但<strong>偏磨會造成兩個問題</strong>:</p>
-<ul>
-<li data-i18n="g2.l7">電流分配不均,單側碳刷負擔過重提早燒斷</li>
-<li data-i18n="g2.l8">後續若做反向短跑(練起步)時,未磨合那側會打火花</li>
-</ul>
-<p data-i18n="g2.p4"><strong>正確做法</strong>:磨合過程中應安排 30% 左右的反向運轉,讓兩側碳刷對稱磨耗。</p>
-<h4 data-i18n="g2.h4">錯誤 4:磨完不測就拿去跑</h4>
-<p data-i18n="g2.p5">磨合完成後直接裝車比賽,結果發現「咦,沒比較快?」。原因:<strong>沒做基準量測,根本不知道磨好沒</strong>。</p>
-<p data-i18n="g2.p6">建議磨合前後都做標準量測(同電壓、同負載條件):</p>
-<ul>
-<li data-i18n="g2.l9">空載電流(無負載運轉的穩定電流值)</li>
-<li data-i18n="g2.l10">穩定轉速(連續 10 秒 RPM 平均值)</li>
-<li data-i18n="g2.l11">電流變異係數 CV(穩定度指標)</li>
-</ul>
-<p data-i18n="g2.p7">磨合後三個數值都應該優於磨合前,否則就是磨合沒到位或方法錯誤。</p>
-<h4 data-i18n="g2.h5">錯誤 5:沒有紀錄,憑感覺判斷</h4>
-<p data-i18n="g2.p8">最致命的錯誤—<strong>每顆馬達都用「差不多」的感覺磨合,沒留下任何數據</strong>。結果:</p>
-<ul>
-<li data-i18n="g2.l12">分不清「這顆是磨好了還是退化了」</li>
-<li data-i18n="g2.l13">換馬達時無從比較哪顆狀況最佳</li>
-<li data-i18n="g2.l14">調校軌道時不知道是車的問題還是馬達的問題</li>
-</ul>
-<div class="guide-tip">
-<p data-i18n="g2.t5">建議建立每顆馬達的<strong>健康指紋(Health Fingerprint)</strong>—記錄它在標準條件下的電流、轉速、溫升、振動頻譜。後續任何時間都可比對,精準判斷馬達狀態。這也是 MotorLab PRO 內建 AI 健康管理的核心功能。</p>
-</div>
-</article>
-<!-- Guide 3: 馬達特性表 -->
-<article class="guide-article">
-<span class="guide-tag" data-i18n="g3.tag">REFERENCE · 馬達速查</span>
-<h3 data-i18n="g3.title">田宮主流馬達特性與磨合策略對照表</h3>
-<p class="guide-lead" data-i18n="g3.lead">不同馬達的設計用途、轉速、扭力特性都不同,磨合方式自然也該有差。整理田宮 8 款主流馬達的官方規格與建議磨合策略。</p>
-<h4 data-i18n="g3.h1">入門級馬達(適合新手起手)</h4>
-<table class="guide-table">
-<thead>
-<tr><th data-i18n="g3.t.name">型號</th><th data-i18n="g3.t.spec">負載轉速 / 扭力</th><th data-i18n="g3.t.brush">電刷類型</th><th data-i18n="g3.t.policy">磨合策略</th></tr>
-</thead>
-<tbody>
-<tr><td data-i18n="g3.m1.name">黃頭 Light Dash</td><td>9,800 RPM / 10 g·cm</td><td data-i18n="g3.brush.copper">銅刷</td><td data-i18n="g3.t.p1">低壓短時(1.5V × 5 階段)</td></tr>
-<tr><td data-i18n="g3.m2.name">紫頭 Rev Tuned</td><td>14,300 RPM / 10 g·cm</td><td data-i18n="g3.brush.copper">銅刷</td><td data-i18n="g3.t.p2">標準 10 階段</td></tr>
-<tr><td data-i18n="g3.m3.name">橘頭 Torque Tuned</td><td>12,000 RPM / 14.5 g·cm</td><td data-i18n="g3.brush.copper">銅刷</td><td data-i18n="g3.t.p3">標準 + 加強扭力負載</td></tr>
-<tr><td data-i18n="g3.m4.name">灰頭 Atomic Tuned</td><td>13,700 RPM / 10 g·cm</td><td data-i18n="g3.brush.copper">銅刷</td><td data-i18n="g3.t.p4">標準 10 階段</td></tr>
-</tbody>
-</table>
-<h4 data-i18n="g3.h2">進階級馬達(碳刷,可深度磨合)</h4>
-<table class="guide-table">
-<thead>
-<tr><th data-i18n="g3.t.name2">型號</th><th data-i18n="g3.t.spec2">負載轉速 / 扭力</th><th data-i18n="g3.t.brush2">電刷類型</th><th data-i18n="g3.t.policy2">磨合策略</th></tr>
-</thead>
-<tbody>
-<tr><td data-i18n="g3.m5.name">紅頭 Hyper Dash 2</td><td>17,300 RPM / 10 g·cm</td><td data-i18n="g3.brush.carbon">碳刷</td><td data-i18n="g3.t.p5">完整 10 階段(必磨)</td></tr>
-<tr><td data-i18n="g3.m6.name">綠頭 Power Dash</td><td>18,100 RPM / 16 g·cm</td><td data-i18n="g3.brush.carbon">碳刷</td><td data-i18n="g3.t.p6">完整 10 階段 + 扭力測試</td></tr>
-<tr><td data-i18n="g3.m7.name">白頭 Sprint Dash</td><td>19,500 RPM / 17.5 g·cm</td><td data-i18n="g3.brush.carbon">碳刷</td><td data-i18n="g3.t.p7">漸進升壓,需特別控溫</td></tr>
-<tr><td data-i18n="g3.m8.name">黑金剛 Plasma Dash</td><td>23,500 RPM / 13 g·cm</td><td data-i18n="g3.brush.carbon">碳刷</td><td data-i18n="g3.t.p8">慢工出細活,2 倍冷卻時間</td></tr>
-</tbody>
-</table>
-<h4 data-i18n="g3.h3">磨合策略差異說明</h4>
-<p data-i18n="g3.p1"><strong>銅刷馬達</strong>(黃頭、紫頭、橘頭、灰頭):碳刷較薄、強度低,不適合高電壓磨合。建議起始電壓 0.8V,最高不超過 2.0V。</p>
-<p data-i18n="g3.p2"><strong>碳刷馬達</strong>(紅、綠、白、黑金剛):可承受較高磨合電壓,但黑金剛因轉速最高、發熱最快,冷卻時間應延長至一般馬達的兩倍。</p>
-<div class="guide-warning">
-<p data-i18n="g3.w1">注意田宮官方競賽規則:禁止拆卸馬達蓋、嚴禁加壓磁力、嚴禁改變電刷導電片長度。磨合屬於合法調整(只是讓接觸面更好),但任何拆解或物理改造都會違規。</p>
-</div>
-</article>
-<!-- Guide 4: 洗馬達 vs 磨合 -->
-<article class="guide-article">
-<span class="guide-tag" data-i18n="g4.tag">GUIDE · 觀念釐清</span>
-<h3 data-i18n="g4.title">洗馬達 vs 磨合馬達:差別在哪?什麼時候做?</h3>
-<p class="guide-lead" data-i18n="g4.lead">「洗馬達」與「磨合馬達」是兩個完全不同的程序,但常被混淆。本文釐清兩者的時機、做法、與目的。</p>
-<h4 data-i18n="g4.h1">兩者的根本差異</h4>
-<table class="guide-table">
-<thead>
-<tr><th data-i18n="g4.t.dim">面向</th><th data-i18n="g4.t.runin">磨合(Run-in)</th><th data-i18n="g4.t.wash">洗馬達(Wash)</th></tr>
-</thead>
-<tbody>
-<tr><td data-i18n="g4.t.when">時機</td><td data-i18n="g4.t.w1">新馬達第一次使用前</td><td data-i18n="g4.t.w2">用過一段時間,碳渣累積後</td></tr>
-<tr><td data-i18n="g4.t.goal">目的</td><td data-i18n="g4.t.g1">讓碳刷與銅頭達到最佳接觸</td><td data-i18n="g4.t.g2">清除內部碳渣與舊潤滑油</td></tr>
-<tr><td data-i18n="g4.t.tool">工具</td><td data-i18n="g4.t.l1">磨合機(可控電源)</td><td data-i18n="g4.t.l2">環保去漬油 / Zippo 打火機油</td></tr>
-<tr><td data-i18n="g4.t.time">耗時</td><td data-i18n="g4.t.x1">30-60 分鐘</td><td data-i18n="g4.t.x2">10-15 分鐘</td></tr>
-<tr><td data-i18n="g4.t.after">後續</td><td data-i18n="g4.t.a1">可直接裝車使用</td><td data-i18n="g4.t.a2">必須重新上油(WURTH 超潤等)</td></tr>
-</tbody>
-</table>
-<h4 data-i18n="g4.h2">什麼時候該洗馬達?</h4>
-<ul>
-<li data-i18n="g4.l1">馬達運轉時有明顯「澀」的感覺</li>
-<li data-i18n="g4.l2">同電壓下電流明顯增加(內部摩擦變大)</li>
-<li data-i18n="g4.l3">轉速比新磨好時下降超過 5%</li>
-<li data-i18n="g4.l4">明顯聽到不正常的雜音或抖動</li>
-<li data-i18n="g4.l5">出廠的<strong>防鏽保護油</strong>需要清除(新馬達也可洗)</li>
-</ul>
-<h4 data-i18n="g4.h3">洗馬達標準流程</h4>
-<ul>
-<li data-i18n="g4.l6">準備環保去漬油(綠瓶,加油站約 NT$45/0.5L),或 Zippo 油</li>
-<li data-i18n="g4.l7">將馬達浸泡於去漬油中,輕輕轉動軸心讓油進入內部</li>
-<li data-i18n="g4.l8">用低電壓(1V 以下)短時間運轉,把碳渣甩出來</li>
-<li data-i18n="g4.l9">取出徹底吹乾(用無油壓縮空氣),確保無殘留</li>
-<li data-i18n="g4.l10"><strong>重新滴入潤滑油</strong>(WURTH 超潤 2040 或同等級),否則馬達會更澀</li>
-</ul>
-<div class="guide-warning">
-<p data-i18n="g4.w1">注意:洗完馬達不一定會變快!如果磨合本身沒到位,洗完只是把碳渣清掉,該慢的還是會慢。<strong>真正讓馬達快的是「磨合」,洗只是「維護」</strong>。</p>
-</div>
-<h4 data-i18n="g4.h4">綜合保養週期建議</h4>
-<p data-i18n="g4.p1">參考國內外進階車手的經驗,以一顆紅二馬達的生命週期為例:</p>
-<ul>
-<li data-i18n="g4.l11"><strong>新品入手</strong>—完整磨合 10 階段(MotorLab M1/PRO 自動執行)</li>
-<li data-i18n="g4.l12"><strong>運行 5-10 場比賽後</strong>—首次洗馬達 + 重新上油</li>
-<li data-i18n="g4.l13"><strong>每運行 5 場</strong>—簡單上油保養</li>
-<li data-i18n="g4.l14"><strong>每運行 15-20 場</strong>—完整洗馬達 + 健康指紋複測</li>
-<li data-i18n="g4.l15"><strong>當複測指標下降 &gt; 10%</strong>—考慮退役換新</li>
-</ul>
-<div class="guide-tip">
-<p data-i18n="g4.t1">這個保養週期透過 MotorLab PRO 的歷史紀錄功能(可存 50 筆量測資料)可以精準追蹤,讓你知道每顆馬達「跑了幾場、衰減多少」,告別憑感覺保養的時代。</p>
-</div>
-</article>
-</div>
-</div>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag" data-i18n="g.tag">KNOWLEDGE BASE</div>
+      <h2 class="section-title" data-i18n="g.title">四驅車馬達磨合教學</h2>
+      <p class="section-subtitle" data-i18n="g.subtitle">從原理到實作,整理迷你四驅車馬達磨合最常見的問題與解答。</p>
+    </div>
+
+    <div class="guides-grid">
+
+      <!-- Guide 1: 完全指南 -->
+      <article class="guide-article">
+        <span class="guide-tag" data-i18n="g1.tag">GUIDE · 完全指南</span>
+        <h3 data-i18n="g1.title">四驅車馬達磨合完全指南:從原理到實作</h3>
+        <p class="guide-lead" data-i18n="g1.lead">迷你四驅車(Mini 4WD)的馬達磨合,是讓新馬達發揮最大潛能的必要程序。本文整理田宮馬達磨合的科學原理、實作步驟、以及為什麼專業車手都要做這道工序。</p>
+
+        <h4 data-i18n="g1.h1">為什麼新馬達一定要磨合?</h4>
+        <p data-i18n="g1.p1">田宮新馬達(無論是紅二 Hyper Dash、黑金剛 Plasma Dash、白頭 Sprint Dash 還是紫頭、橘頭)出廠時,<strong>碳刷(電刷)的接觸面是平的</strong>。但馬達內部的整流子(銅頭)是圓柱形,平面碳刷只能接觸到極小的弧線,實際導電面積非常有限。</p>
+        <p data-i18n="g1.p2">這時直接全速運轉,馬達會因為電刷接觸不良而產生以下狀況:</p>
+        <ul>
+          <li data-i18n="g1.l1"><strong>電流不穩</strong>—碳刷跳動造成電流劇烈起伏,馬達抖動發熱</li>
+          <li data-i18n="g1.l2"><strong>轉速無法發揮</strong>—標稱 19,300 RPM 的紅二,可能只能跑出 14,000 RPM</li>
+          <li data-i18n="g1.l3"><strong>磁鐵退磁風險</strong>—持續高溫會永久降低馬達輸出</li>
+          <li data-i18n="g1.l4"><strong>銅頭過早磨損</strong>—未磨合的硬碰硬接觸會傷整流子</li>
+        </ul>
+        <p data-i18n="g1.p3"><strong>磨合的目的</strong>就是讓平面碳刷漸進磨出與銅頭曲面吻合的「半圓弧凹槽」,讓接觸面積最大化,電流順暢流動,馬達才能達到設計的轉速與扭力。</p>
+
+        <h4 data-i18n="g1.h2">磨合的物理原理</h4>
+        <p data-i18n="g1.p4">直流碳刷馬達的核心數學關係:<code>N = (V − IR) / Kφ</code>(轉速 = (電壓 − 電流×內阻) / 磁通常數)。新馬達的碳刷接觸電阻 R 很高,造成 IR 損失大、轉速 N 上不去。磨合過程實際是<strong>降低接觸電阻、提升能源轉換效率</strong>的物理過程。</p>
+        <p data-i18n="g1.p5">業餘做法是「在水裡用低電壓跑」(俗稱水磨)、或「用乾電池正反向跑」。但這兩種方法的問題是:電壓不可控、時間靠感覺、無法量化進度,結果好壞全憑運氣。</p>
+
+        <h4 data-i18n="g1.h3">專業磨合的 4 個關鍵變數</h4>
+        <p data-i18n="g1.p6">每一次磨合的成功與否,取決於下面 4 個參數的精準控制:</p>
+        <table class="guide-table">
+          <thead>
+            <tr><th data-i18n="g1.t.var">變數</th><th data-i18n="g1.t.role">作用</th><th data-i18n="g1.t.risk">控制不當的後果</th></tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n="g1.t.v1">電壓(V)</td><td data-i18n="g1.t.r1">決定接觸面溫度與壓力</td><td data-i18n="g1.t.x1">過高燒掉碳刷、過低磨不動</td></tr>
+            <tr><td data-i18n="g1.t.v2">時間(min)</td><td data-i18n="g1.t.r2">決定磨合深度</td><td data-i18n="g1.t.x2">不夠則接觸面不完整、過久反而磨穿</td></tr>
+            <tr><td data-i18n="g1.t.v3">方向(±)</td><td data-i18n="g1.t.r3">確保碳刷兩側對稱磨耗</td><td data-i18n="g1.t.x3">單向磨會偏磨,影響耐用度</td></tr>
+            <tr><td data-i18n="g1.t.v4">冷卻(s)</td><td data-i18n="g1.t.r4">避免溫度累積</td><td data-i18n="g1.t.x4">過熱導致磁鐵退磁,輸出永久下降</td></tr>
+          </tbody>
+        </table>
+
+        <h4 data-i18n="g1.h4">標準磨合流程(10 階段建議)</h4>
+        <p data-i18n="g1.p7">業界主流的「漸進升壓」磨合方法,將馬達磨合分成 10 階段、每階段約 30-90 秒、電壓從 1.0V 緩升至 2.4V,並穿插反向運轉與冷卻時間。</p>
+        <div class="guide-tip">
+          <p data-i18n="g1.tip">MotorLab M1/PRO 內建的<strong>十階段可程式化磨合</strong>會自動執行這套流程,每階段可獨立調整電壓、方向、時間、冷卻、與穩定電流容差。並透過<strong>智慧穩流判定</strong>—當電流連續波動小於設定值時自動進入下階段,確保每顆馬達都磨到位。</p>
+        </div>
+
+        <h4 data-i18n="g1.h5">磨合完成的判定標準</h4>
+        <p data-i18n="g1.p8">怎麼知道馬達磨好了?有 4 個觀察點:</p>
+        <ul>
+          <li data-i18n="g1.l5"><strong>電流穩定度</strong>—同一電壓下,電流波動 ≤ ±50mA</li>
+          <li data-i18n="g1.l6"><strong>轉速穩定度</strong>—同樣電壓下,連續 10 秒轉速差異 ≤ 200 RPM</li>
+          <li data-i18n="g1.l7"><strong>溫升曲線平緩</strong>—不再有跳躍性升溫</li>
+          <li data-i18n="g1.l8"><strong>聲音平順</strong>—不再有「滋滋」的不規則噪音</li>
+        </ul>
+      </article>
+
+      <!-- Guide 2: 5 大錯誤 -->
+      <article class="guide-article">
+        <span class="guide-tag" data-i18n="g2.tag">GUIDE · 避免錯誤</span>
+        <h3 data-i18n="g2.title">為什麼業餘車手磨合馬達總是失敗?5 個常見錯誤</h3>
+        <p class="guide-lead" data-i18n="g2.lead">許多新手回鍋玩四驅車,聽說要磨合馬達就拿乾電池亂跑,結果不是馬達燒掉就是跑不快。本文整理最常見的 5 個磨合錯誤與正確做法。</p>
+
+        <h4 data-i18n="g2.h1">錯誤 1:電壓過高、時間過長</h4>
+        <p data-i18n="g2.p1">最常見的錯誤就是<strong>「拿乾電池(1.5V × 2 = 3V)直接讓馬達狂跑半小時」</strong>。看起來合理,實際後果是:</p>
+        <ul>
+          <li data-i18n="g2.l1">3V 對紅二、黑金剛來說已經接近全速,等於沒磨合就直接操</li>
+          <li data-i18n="g2.l2">長時間運轉沒冷卻,溫度可能衝到 80℃ 以上,<strong>磁鐵永久退磁</strong></li>
+          <li data-i18n="g2.l3">碳刷可能在還沒磨成弧形前就燒斷</li>
+        </ul>
+        <div class="guide-warning">
+          <p data-i18n="g2.w1">正確做法:從 1.0V 起步,每階段升 0.15V,單階段不超過 90 秒,每階段間插入 15-30 秒冷卻。</p>
+        </div>
+
+        <h4 data-i18n="g2.h2">錯誤 2:用水磨但水量太多、沒擦乾</h4>
+        <p data-i18n="g2.p2">水磨原理是利用水的高比熱帶走熱量、同時水也是輕度阻尼。但業餘水磨常見問題:</p>
+        <ul>
+          <li data-i18n="g2.l4"><strong>水跑進軸承</strong>—培林軸承生鏽,馬達噪音變大</li>
+          <li data-i18n="g2.l5"><strong>沒徹底擦乾</strong>—內部殘留水分造成電化學腐蝕,壽命大減</li>
+          <li data-i18n="g2.l6"><strong>水質太硬</strong>—礦物質沉積在整流子上,接觸更差</li>
+        </ul>
+        <div class="guide-tip">
+          <p data-i18n="g2.t2">更現代的做法是<strong>「精密電流控制乾磨」</strong>—不接觸液體,純靠電壓電流控制與冷卻時間,徹底避免水損風險。</p>
+        </div>
+
+        <h4 data-i18n="g2.h3">錯誤 3:只磨單一方向</h4>
+        <p data-i18n="g2.p3">許多人磨合時只接正極跑一個方向,結果碳刷只有一邊磨出弧形,另一邊還是平的。實車使用時雖然只往一個方向轉,但<strong>偏磨會造成兩個問題</strong>:</p>
+        <ul>
+          <li data-i18n="g2.l7">電流分配不均,單側碳刷負擔過重提早燒斷</li>
+          <li data-i18n="g2.l8">後續若做反向短跑(練起步)時,未磨合那側會打火花</li>
+        </ul>
+        <p data-i18n="g2.p4"><strong>正確做法</strong>:磨合過程中應安排 30% 左右的反向運轉,讓兩側碳刷對稱磨耗。</p>
+
+        <h4 data-i18n="g2.h4">錯誤 4:磨完不測就拿去跑</h4>
+        <p data-i18n="g2.p5">磨合完成後直接裝車比賽,結果發現「咦,沒比較快?」。原因:<strong>沒做基準量測,根本不知道磨好沒</strong>。</p>
+        <p data-i18n="g2.p6">建議磨合前後都做標準量測(同電壓、同負載條件):</p>
+        <ul>
+          <li data-i18n="g2.l9">空載電流(無負載運轉的穩定電流值)</li>
+          <li data-i18n="g2.l10">穩定轉速(連續 10 秒 RPM 平均值)</li>
+          <li data-i18n="g2.l11">電流變異係數 CV(穩定度指標)</li>
+        </ul>
+        <p data-i18n="g2.p7">磨合後三個數值都應該優於磨合前,否則就是磨合沒到位或方法錯誤。</p>
+
+        <h4 data-i18n="g2.h5">錯誤 5:沒有紀錄,憑感覺判斷</h4>
+        <p data-i18n="g2.p8">最致命的錯誤—<strong>每顆馬達都用「差不多」的感覺磨合,沒留下任何數據</strong>。結果:</p>
+        <ul>
+          <li data-i18n="g2.l12">分不清「這顆是磨好了還是退化了」</li>
+          <li data-i18n="g2.l13">換馬達時無從比較哪顆狀況最佳</li>
+          <li data-i18n="g2.l14">調校軌道時不知道是車的問題還是馬達的問題</li>
+        </ul>
+        <div class="guide-tip">
+          <p data-i18n="g2.t5">建議建立每顆馬達的<strong>健康指紋(Health Fingerprint)</strong>—記錄它在標準條件下的電流、轉速、溫升、振動頻譜。後續任何時間都可比對,精準判斷馬達狀態。這也是 MotorLab PRO 內建 AI 健康管理的核心功能。</p>
+        </div>
+      </article>
+
+      <!-- Guide 3: 馬達特性表 -->
+      <article class="guide-article">
+        <span class="guide-tag" data-i18n="g3.tag">REFERENCE · 馬達速查</span>
+        <h3 data-i18n="g3.title">田宮主流馬達特性與磨合策略對照表</h3>
+        <p class="guide-lead" data-i18n="g3.lead">不同馬達的設計用途、轉速、扭力特性都不同,磨合方式自然也該有差。整理田宮 8 款主流馬達的官方規格與建議磨合策略。</p>
+
+        <h4 data-i18n="g3.h1">入門級馬達(適合新手起手)</h4>
+        <table class="guide-table">
+          <thead>
+            <tr><th data-i18n="g3.t.name">型號</th><th data-i18n="g3.t.spec">負載轉速 / 扭力</th><th data-i18n="g3.t.brush">電刷類型</th><th data-i18n="g3.t.policy">磨合策略</th></tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n="g3.m1.name">黃頭 Light Dash</td><td>9,800 RPM / 10 g·cm</td><td data-i18n="g3.brush.copper">銅刷</td><td data-i18n="g3.t.p1">低壓短時(1.5V × 5 階段)</td></tr>
+            <tr><td data-i18n="g3.m2.name">紫頭 Rev Tuned</td><td>14,300 RPM / 10 g·cm</td><td data-i18n="g3.brush.copper">銅刷</td><td data-i18n="g3.t.p2">標準 10 階段</td></tr>
+            <tr><td data-i18n="g3.m3.name">橘頭 Torque Tuned</td><td>12,000 RPM / 14.5 g·cm</td><td data-i18n="g3.brush.copper">銅刷</td><td data-i18n="g3.t.p3">標準 + 加強扭力負載</td></tr>
+            <tr><td data-i18n="g3.m4.name">灰頭 Atomic Tuned</td><td>13,700 RPM / 10 g·cm</td><td data-i18n="g3.brush.copper">銅刷</td><td data-i18n="g3.t.p4">標準 10 階段</td></tr>
+          </tbody>
+        </table>
+
+        <h4 data-i18n="g3.h2">進階級馬達(碳刷,可深度磨合)</h4>
+        <table class="guide-table">
+          <thead>
+            <tr><th data-i18n="g3.t.name2">型號</th><th data-i18n="g3.t.spec2">負載轉速 / 扭力</th><th data-i18n="g3.t.brush2">電刷類型</th><th data-i18n="g3.t.policy2">磨合策略</th></tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n="g3.m5.name">紅頭 Hyper Dash 2</td><td>17,300 RPM / 10 g·cm</td><td data-i18n="g3.brush.carbon">碳刷</td><td data-i18n="g3.t.p5">完整 10 階段(必磨)</td></tr>
+            <tr><td data-i18n="g3.m6.name">綠頭 Power Dash</td><td>18,100 RPM / 16 g·cm</td><td data-i18n="g3.brush.carbon">碳刷</td><td data-i18n="g3.t.p6">完整 10 階段 + 扭力測試</td></tr>
+            <tr><td data-i18n="g3.m7.name">白頭 Sprint Dash</td><td>19,500 RPM / 17.5 g·cm</td><td data-i18n="g3.brush.carbon">碳刷</td><td data-i18n="g3.t.p7">漸進升壓,需特別控溫</td></tr>
+            <tr><td data-i18n="g3.m8.name">黑金剛 Plasma Dash</td><td>23,500 RPM / 13 g·cm</td><td data-i18n="g3.brush.carbon">碳刷</td><td data-i18n="g3.t.p8">慢工出細活,2 倍冷卻時間</td></tr>
+          </tbody>
+        </table>
+
+        <h4 data-i18n="g3.h3">磨合策略差異說明</h4>
+        <p data-i18n="g3.p1"><strong>銅刷馬達</strong>(黃頭、紫頭、橘頭、灰頭):碳刷較薄、強度低,不適合高電壓磨合。建議起始電壓 0.8V,最高不超過 2.0V。</p>
+        <p data-i18n="g3.p2"><strong>碳刷馬達</strong>(紅、綠、白、黑金剛):可承受較高磨合電壓,但黑金剛因轉速最高、發熱最快,冷卻時間應延長至一般馬達的兩倍。</p>
+        <div class="guide-warning">
+          <p data-i18n="g3.w1">注意田宮官方競賽規則:禁止拆卸馬達蓋、嚴禁加壓磁力、嚴禁改變電刷導電片長度。磨合屬於合法調整(只是讓接觸面更好),但任何拆解或物理改造都會違規。</p>
+        </div>
+      </article>
+
+      <!-- Guide 4: 洗馬達 vs 磨合 -->
+      <article class="guide-article">
+        <span class="guide-tag" data-i18n="g4.tag">GUIDE · 觀念釐清</span>
+        <h3 data-i18n="g4.title">洗馬達 vs 磨合馬達:差別在哪?什麼時候做?</h3>
+        <p class="guide-lead" data-i18n="g4.lead">「洗馬達」與「磨合馬達」是兩個完全不同的程序,但常被混淆。本文釐清兩者的時機、做法、與目的。</p>
+
+        <h4 data-i18n="g4.h1">兩者的根本差異</h4>
+        <table class="guide-table">
+          <thead>
+            <tr><th data-i18n="g4.t.dim">面向</th><th data-i18n="g4.t.runin">磨合(Run-in)</th><th data-i18n="g4.t.wash">洗馬達(Wash)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n="g4.t.when">時機</td><td data-i18n="g4.t.w1">新馬達第一次使用前</td><td data-i18n="g4.t.w2">用過一段時間,碳渣累積後</td></tr>
+            <tr><td data-i18n="g4.t.goal">目的</td><td data-i18n="g4.t.g1">讓碳刷與銅頭達到最佳接觸</td><td data-i18n="g4.t.g2">清除內部碳渣與舊潤滑油</td></tr>
+            <tr><td data-i18n="g4.t.tool">工具</td><td data-i18n="g4.t.l1">磨合機(可控電源)</td><td data-i18n="g4.t.l2">環保去漬油 / Zippo 打火機油</td></tr>
+            <tr><td data-i18n="g4.t.time">耗時</td><td data-i18n="g4.t.x1">30-60 分鐘</td><td data-i18n="g4.t.x2">10-15 分鐘</td></tr>
+            <tr><td data-i18n="g4.t.after">後續</td><td data-i18n="g4.t.a1">可直接裝車使用</td><td data-i18n="g4.t.a2">必須重新上油(WURTH 超潤等)</td></tr>
+          </tbody>
+        </table>
+
+        <h4 data-i18n="g4.h2">什麼時候該洗馬達?</h4>
+        <ul>
+          <li data-i18n="g4.l1">馬達運轉時有明顯「澀」的感覺</li>
+          <li data-i18n="g4.l2">同電壓下電流明顯增加(內部摩擦變大)</li>
+          <li data-i18n="g4.l3">轉速比新磨好時下降超過 5%</li>
+          <li data-i18n="g4.l4">明顯聽到不正常的雜音或抖動</li>
+          <li data-i18n="g4.l5">出廠的<strong>防鏽保護油</strong>需要清除(新馬達也可洗)</li>
+        </ul>
+
+        <h4 data-i18n="g4.h3">洗馬達標準流程</h4>
+        <ul>
+          <li data-i18n="g4.l6">準備環保去漬油(綠瓶,加油站約 NT$45/0.5L),或 Zippo 油</li>
+          <li data-i18n="g4.l7">將馬達浸泡於去漬油中,輕輕轉動軸心讓油進入內部</li>
+          <li data-i18n="g4.l8">用低電壓(1V 以下)短時間運轉,把碳渣甩出來</li>
+          <li data-i18n="g4.l9">取出徹底吹乾(用無油壓縮空氣),確保無殘留</li>
+          <li data-i18n="g4.l10"><strong>重新滴入潤滑油</strong>(WURTH 超潤 2040 或同等級),否則馬達會更澀</li>
+        </ul>
+
+        <div class="guide-warning">
+          <p data-i18n="g4.w1">注意:洗完馬達不一定會變快!如果磨合本身沒到位,洗完只是把碳渣清掉,該慢的還是會慢。<strong>真正讓馬達快的是「磨合」,洗只是「維護」</strong>。</p>
+        </div>
+
+        <h4 data-i18n="g4.h4">綜合保養週期建議</h4>
+        <p data-i18n="g4.p1">參考國內外進階車手的經驗,以一顆紅二馬達的生命週期為例:</p>
+        <ul>
+          <li data-i18n="g4.l11"><strong>新品入手</strong>—完整磨合 10 階段(MotorLab M1/PRO 自動執行)</li>
+          <li data-i18n="g4.l12"><strong>運行 5-10 場比賽後</strong>—首次洗馬達 + 重新上油</li>
+          <li data-i18n="g4.l13"><strong>每運行 5 場</strong>—簡單上油保養</li>
+          <li data-i18n="g4.l14"><strong>每運行 15-20 場</strong>—完整洗馬達 + 健康指紋複測</li>
+          <li data-i18n="g4.l15"><strong>當複測指標下降 &gt; 10%</strong>—考慮退役換新</li>
+        </ul>
+        <div class="guide-tip">
+          <p data-i18n="g4.t1">這個保養週期透過 MotorLab PRO 的歷史紀錄功能(可存 50 筆量測資料)可以精準追蹤,讓你知道每顆馬達「跑了幾場、衰減多少」,告別憑感覺保養的時代。</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
 </section>
+
 <!-- Changelog -->
 <section id="changelog" style="background: rgba(0,0,0,0.15);">
-<div class="container">
-<div class="section-header">
-<div class="section-tag" data-i18n="cl.tag">CHANGELOG</div>
-<h2 class="section-title" data-i18n="cl.title">韌體更新日誌</h2>
-<p class="section-subtitle" data-i18n="cl.subtitle">所有版本透過線上更新自動推送至已啟用裝置。</p>
-</div>
-<div class="changelog">
-<!-- v3.0.8 -->
-<div class="changelog-item">
-<div class="changelog-meta">
-<span class="version-badge latest">v3.0.8</span>
-<span class="changelog-date">2026-05-18</span>
-</div>
-<div class="changelog-content">
-<h4 data-i18n="cl.v308.title">介面文案精煉</h4>
-<ul>
-<li><span class="change-type change-improve" data-i18n="cl.IMPROVE">改進</span><span data-i18n="cl.v308.l1">Web UI 文字精簡、用詞中性化</span></li>
-<li><span class="change-type change-improve" data-i18n="cl.IMPROVE">改進</span><span data-i18n="cl.v308.l2">移除介面 emoji,視覺更專業俐落</span></li>
-</ul>
-</div>
-</div>
-<!-- v3.0.7 -->
-<div class="changelog-item">
-<div class="changelog-meta">
-<span class="version-badge">v3.0.7</span>
-<span class="changelog-date">2026-05-17</span>
-</div>
-<div class="changelog-content">
-<h4 data-i18n="cl.v307.title">使用者體驗優化</h4>
-<ul>
-<li><span class="change-type change-improve" data-i18n="cl.IMPROVE">改進</span><span data-i18n="cl.v307.l1">技術用詞中性化,新手玩家也能輕鬆閱讀</span></li>
-</ul>
-</div>
-</div>
-<!-- v3.0.6 -->
-<div class="changelog-item">
-<div class="changelog-meta">
-<span class="version-badge">v3.0.6</span>
-<span class="changelog-date">2026-05-17</span>
-</div>
-<div class="changelog-content">
-<h4 data-i18n="cl.v306.title">一鍵授權升級 · 多項安全強化</h4>
-<ul>
-<li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v306.l1">一鍵授權流程:QR Code 掃描 + 自動偵測付款,全程無需手動輸入金鑰</span></li>
-<li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v306.l2">賽車倒數開機提示音</span></li>
-<li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v306.l3">工廠重設按鈕 — 僅重設 WiFi 密碼,磨合資料完整保留</span></li>
-<li><span class="change-type change-security" data-i18n="cl.SECURITY">安全</span><span data-i18n="cl.v306.l4">Session Token、Origin 過濾、登入頻率限制、SHA256 雜湊強化</span></li>
-<li><span class="change-type change-improve" data-i18n="cl.IMPROVE">改進</span><span data-i18n="cl.v306.l5">繁體中文(臺灣)語系完整化、套用中監視機制</span></li>
-</ul>
-</div>
-</div>
-<!-- v3.0.5 -->
-<div class="changelog-item">
-<div class="changelog-meta">
-<span class="version-badge">v3.0.5</span>
-<span class="changelog-date">2026-05-16</span>
-</div>
-<div class="changelog-content">
-<h4 data-i18n="cl.v305.title">線上更新穩定性提升</h4>
-<ul>
-<li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v305.l1">線上韌體更新:透過家用 WiFi 自動取得最新版本</span></li>
-<li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v305.l2">工程模式:轉速、電壓、電流校正功能</span></li>
-<li><span class="change-type change-fix" data-i18n="cl.FIX">修正</span><span data-i18n="cl.v305.l3">已知 WiFi 自動跳過密碼輸入</span></li>
-<li><span class="change-type change-fix" data-i18n="cl.FIX">修正</span><span data-i18n="cl.v305.l4">韌體重啟時 Web 介面自動重新載入</span></li>
-</ul>
-</div>
-</div>
-<!-- v3.0.0 ~ -->
-<div class="changelog-item">
-<div class="changelog-meta">
-<span class="version-badge">v3.0.0</span>
-<span class="changelog-date">2026-05-12</span>
-</div>
-<div class="changelog-content">
-<h4 data-i18n="cl.v300.title">MotorLab v3 正式發布</h4>
-<ul>
-<li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v300.l1">十階段可程式化馬達磨合系統</span></li>
-<li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v300.l2">AI 智慧馬達健康管理(PRO)</span></li>
-<li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v300.l3">軸承阻力測試 · 電刷接觸穩定測試</span></li>
-<li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v300.l4">內建 Web 操作介面、WebSocket 即時數據推送</span></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag" data-i18n="cl.tag">CHANGELOG</div>
+      <h2 class="section-title" data-i18n="cl.title">韌體更新日誌</h2>
+      <p class="section-subtitle" data-i18n="cl.subtitle">所有版本透過線上更新自動推送至已啟用裝置。</p>
+    </div>
+
+    <div class="changelog">
+      <!-- v3.0.8 -->
+      <div class="changelog-item">
+        <div class="changelog-meta">
+          <span class="version-badge latest">v3.0.8</span>
+          <span class="changelog-date">2026-05-18</span>
+        </div>
+        <div class="changelog-content">
+          <h4 data-i18n="cl.v308.title">介面文案精煉</h4>
+          <ul>
+            <li><span class="change-type change-improve" data-i18n="cl.IMPROVE">改進</span><span data-i18n="cl.v308.l1">Web UI 文字精簡、用詞中性化</span></li>
+            <li><span class="change-type change-improve" data-i18n="cl.IMPROVE">改進</span><span data-i18n="cl.v308.l2">移除介面 emoji，視覺更專業俐落</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- v3.0.7 -->
+      <div class="changelog-item">
+        <div class="changelog-meta">
+          <span class="version-badge">v3.0.7</span>
+          <span class="changelog-date">2026-05-17</span>
+        </div>
+        <div class="changelog-content">
+          <h4 data-i18n="cl.v307.title">使用者體驗優化</h4>
+          <ul>
+            <li><span class="change-type change-improve" data-i18n="cl.IMPROVE">改進</span><span data-i18n="cl.v307.l1">技術用詞中性化，新手玩家也能輕鬆閱讀</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- v3.0.6 -->
+      <div class="changelog-item">
+        <div class="changelog-meta">
+          <span class="version-badge">v3.0.6</span>
+          <span class="changelog-date">2026-05-17</span>
+        </div>
+        <div class="changelog-content">
+          <h4 data-i18n="cl.v306.title">一鍵授權升級 · 多項安全強化</h4>
+          <ul>
+            <li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v306.l1">一鍵授權流程：QR Code 掃描 + 自動偵測付款，全程無需手動輸入金鑰</span></li>
+            <li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v306.l2">賽車倒數開機提示音</span></li>
+            <li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v306.l3">工廠重設按鈕 — 僅重設 WiFi 密碼，磨合資料完整保留</span></li>
+            <li><span class="change-type change-security" data-i18n="cl.SECURITY">安全</span><span data-i18n="cl.v306.l4">Session Token、Origin 過濾、登入頻率限制、SHA256 雜湊強化</span></li>
+            <li><span class="change-type change-improve" data-i18n="cl.IMPROVE">改進</span><span data-i18n="cl.v306.l5">繁體中文（臺灣）語系完整化、套用中監視機制</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- v3.0.5 -->
+      <div class="changelog-item">
+        <div class="changelog-meta">
+          <span class="version-badge">v3.0.5</span>
+          <span class="changelog-date">2026-05-16</span>
+        </div>
+        <div class="changelog-content">
+          <h4 data-i18n="cl.v305.title">線上更新穩定性提升</h4>
+          <ul>
+            <li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v305.l1">線上韌體更新：透過家用 WiFi 自動取得最新版本</span></li>
+            <li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v305.l2">工程模式：轉速、電壓、電流校正功能</span></li>
+            <li><span class="change-type change-fix" data-i18n="cl.FIX">修正</span><span data-i18n="cl.v305.l3">已知 WiFi 自動跳過密碼輸入</span></li>
+            <li><span class="change-type change-fix" data-i18n="cl.FIX">修正</span><span data-i18n="cl.v305.l4">韌體重啟時 Web 介面自動重新載入</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- v3.0.0 ~ -->
+      <div class="changelog-item">
+        <div class="changelog-meta">
+          <span class="version-badge">v3.0.0</span>
+          <span class="changelog-date">2026-05-12</span>
+        </div>
+        <div class="changelog-content">
+          <h4 data-i18n="cl.v300.title">MotorLab v3 正式發布</h4>
+          <ul>
+            <li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v300.l1">十階段可程式化馬達磨合系統</span></li>
+            <li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v300.l2">AI 智慧馬達健康管理（PRO）</span></li>
+            <li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v300.l3">軸承阻力測試 · 電刷接觸穩定測試</span></li>
+            <li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v300.l4">內建 Web 操作介面、WebSocket 即時數據推送</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
 <!-- 關於 -->
 <section id="about">
-<div class="container">
-<div class="section-header">
-<div class="section-tag" data-i18n="about.tag">ABOUT</div>
-<h2 class="section-title" data-i18n="about.title">關於 MotorLab</h2>
-</div>
-<div class="about-box">
-<p class="lead" data-i18n="about.p1">MotorLab 是一個專注於 Mini 4WD<sup>®</sup> 馬達精密測試的獨立工作室。</p>
-<p data-i18n="about.p2">我們相信,賽道上的每一個百分秒差距,都來自設備、調校與量測方法的長期積累。對玩家而言,「感覺變快」應該是可以被儀器數據驗證的事實,而不是憑經驗的玄學。</p>
-<p data-i18n="about.p3">從首版原型到第三代 v3 系統,MotorLab 已歷經 15 個里程碑、累計超過 10,000 行韌體程式。每一項功能都經過真實馬達實機驗證,才會發布到使用者手上。</p>
-<p class="about-disclaimer" data-i18n="about.p4">MotorLab 是獨立工作室,非田宮模型(株式会社タミヤ／TAMIYA, INC.)關聯企業,亦未受其授權或贊助。本產品為相容性測試設備。</p>
-<div class="about-stats">
-<div>
-<div class="stat-num">15</div>
-<div class="stat-label" data-i18n="about.s1">開發里程碑</div>
-</div>
-<div>
-<div class="stat-num">v3.0.8</div>
-<div class="stat-label" data-i18n="about.s2">當前韌體版本</div>
-</div>
-<div>
-<div class="stat-num">100%</div>
-<div class="stat-label" data-i18n="about.s3">資料離線儲存</div>
-</div>
-</div>
-</div>
-</div>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag" data-i18n="about.tag">ABOUT</div>
+      <h2 class="section-title" data-i18n="about.title">關於 MotorLab</h2>
+    </div>
+
+    <div class="about-box">
+      <p class="lead" data-i18n="about.p1">
+        MotorLab 是一個專注於 Mini 4WD<sup>®</sup> 馬達精密測試的獨立工作室。
+      </p>
+      <p data-i18n="about.p2">
+        我們相信，賽道上的每一個百分秒差距，都來自設備、調校與量測方法的長期積累。對玩家而言，「感覺變快」應該是可以被儀器數據驗證的事實，而不是憑經驗的玄學。
+      </p>
+      <p data-i18n="about.p3">
+        從首版原型到第三代 v3 系統，MotorLab 已歷經 15 個里程碑、累計超過 10,000 行韌體程式。每一項功能都經過真實馬達實機驗證，才會發布到使用者手上。
+      </p>
+      <p class="about-disclaimer" data-i18n="about.p4">
+        MotorLab 是獨立工作室，非田宮模型（株式会社タミヤ／TAMIYA, INC.）關聯企業，亦未受其授權或贊助。本產品為相容性測試設備。
+      </p>
+
+      <div class="about-stats">
+        <div>
+          <div class="stat-num">15</div>
+          <div class="stat-label" data-i18n="about.s1">開發里程碑</div>
+        </div>
+        <div>
+          <div class="stat-num">v3.0.8</div>
+          <div class="stat-label" data-i18n="about.s2">當前韌體版本</div>
+        </div>
+        <div>
+          <div class="stat-num">100%</div>
+          <div class="stat-label" data-i18n="about.s3">資料離線儲存</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
 <!-- 聯絡 -->
 <section id="contact">
-<div class="container">
-<div class="contact-box">
-<h2 data-i18n="contact.title">想了解更多?</h2>
-<p data-i18n="contact.desc">MotorLab 目前處於最後發行準備階段。歡迎透過下列管道與我們聯絡,或追蹤社群帳號取得最新進展。</p>
-<div class="contact-methods">
-<a class="contact-link" href="mailto:motorlab.tw@gmail.com">
-<svg viewbox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+  <div class="container">
+    <div class="contact-box">
+      <h2 data-i18n="contact.title">想了解更多？</h2>
+      <p data-i18n="contact.desc">MotorLab 目前處於最後發行準備階段。歡迎透過下列管道與我們聯絡,或追蹤社群帳號取得最新進展。</p>
+      <div class="contact-methods">
+        <a href="mailto:motorlab.tw@gmail.com" class="contact-link">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           motorlab.tw@gmail.com
         </a>
-<a class="contact-link" href="https://www.instagram.com/motorlab.tw" rel="noopener" target="_blank">
-<svg viewbox="0 0 24 24"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+        <a href="https://www.instagram.com/motorlab.tw" target="_blank" rel="noopener" class="contact-link">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
           Instagram @motorlab.tw
         </a>
-<a class="contact-link" href="https://www.threads.com/@motorlab.tw" rel="noopener" target="_blank">
-<svg viewbox="0 0 24 24"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.308-.883-2.359-.89h-.029c-.844 0-1.992.232-2.721 1.32L7.734 7.847c.98-1.454 2.568-2.256 4.478-2.256h.044c3.194.02 5.097 1.975 5.287 5.388.108.046.216.094.321.142 1.49.7 2.58 1.761 3.154 3.07.797 1.82.871 4.79-1.548 7.158-1.85 1.81-4.094 2.628-7.277 2.65Zm1.003-11.69c-.242 0-.487.007-.739.021-1.836.103-2.98.946-2.916 2.143.067 1.256 1.452 1.839 2.784 1.767 1.224-.065 2.818-.543 3.086-3.71a10.5 10.5 0 0 0-2.215-.221z"></path></svg>
+        <a href="https://www.threads.com/@motorlab.tw" target="_blank" rel="noopener" class="contact-link">
+          <svg viewBox="0 0 24 24"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.308-.883-2.359-.89h-.029c-.844 0-1.992.232-2.721 1.32L7.734 7.847c.98-1.454 2.568-2.256 4.478-2.256h.044c3.194.02 5.097 1.975 5.287 5.388.108.046.216.094.321.142 1.49.7 2.58 1.761 3.154 3.07.797 1.82.871 4.79-1.548 7.158-1.85 1.81-4.094 2.628-7.277 2.65Zm1.003-11.69c-.242 0-.487.007-.739.021-1.836.103-2.98.946-2.916 2.143.067 1.256 1.452 1.839 2.784 1.767 1.224-.065 2.818-.543 3.086-3.71a10.5 10.5 0 0 0-2.215-.221z"/></svg>
           Threads @motorlab.tw
         </a>
-</div>
-</div>
-</div>
+      </div>
+    </div>
+  </div>
 </section>
+
 <!-- Footer -->
 <footer>
-<div class="container">
-<div class="footer-trademark" data-i18n="footer.trademark">"Mini 4WD"<sup>®</sup> 與 "ミニ四駆"<sup>®</sup> 為株式会社タミヤ(TAMIYA, INC.)的註冊商標(日本商標登錄號 第 2168392 號)。MotorLab 為獨立工作室,與株式会社タミヤ無任何關聯,亦未受其授權、贊助或背書。本網站提及之相關名稱僅用於指涉產品適用範圍,所有商標權益歸原權利人所有。</div>
-<div class="footer-inner">
-<div>
-<strong>MotorLab.tw</strong> · <span data-i18n="footer.tagline">Mini 4WD Performance Lab</span>
-</div>
-<div class="mono">
+  <div class="container">
+    <div class="footer-trademark" data-i18n="footer.trademark">
+      "Mini 4WD"<sup>®</sup> 與 "ミニ四駆"<sup>®</sup> 為株式会社タミヤ（TAMIYA, INC.）的註冊商標（日本商標登錄號 第 2168392 號）。MotorLab 為獨立工作室，與株式会社タミヤ無任何關聯，亦未受其授權、贊助或背書。本網站提及之相關名稱僅用於指涉產品適用範圍，所有商標權益歸原權利人所有。
+    </div>
+    <div class="footer-inner">
+      <div>
+        <strong>MotorLab.tw</strong> · <span data-i18n="footer.tagline">Mini 4WD Performance Lab</span>
+      </div>
+      <div class="mono">
         © 2026 MotorLab · <span data-i18n="footer.firmware">韌體</span> v3.0.8
       </div>
-</div>
-</div>
+    </div>
+  </div>
 </footer>
+
 <script>
   // ===== 開機過場動畫 =====
   // 動畫時長 2.5 秒，可點擊跳過
@@ -3109,7 +3202,8 @@
     btn.addEventListener('click', () => selectLang(btn.dataset.lang));
   });
 
-  // 各語言版本為獨立檔案,不需進站自動切換
+  // 進站時套用偵測 / 記憶的語言
+  applyLang(resolveInitialLang());
 
   // ===== 即時數據模擬動畫 =====
   function updateMockData() {
@@ -3143,5 +3237,6 @@
     document.getElementById('purchase-btn').style.display = 'inline-flex';
   }
 </script>
+
 </body>
 </html>

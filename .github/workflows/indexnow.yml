@@ -8,13 +8,15 @@ on:
       - main
     paths:
       - 'index.html'
+      - 'en/index.html'
+      - 'ja/index.html'
       - 'sitemap.xml'
       - '*.html'
       - '*.css'
       - '*.js'
-      - '.github/workflows/indexnow.yml'  # workflow 自己被改時也觸發,方便測試
+      - '.github/workflows/indexnow.yml'
   
-  # 2) 允許在 GitHub Actions 頁面手動觸發 (按鈕觸發)
+  # 2) 允許在 GitHub Actions 頁面手動觸發
   workflow_dispatch:
 
 jobs:
@@ -34,7 +36,7 @@ jobs:
           echo "→ Key (first 8 chars): ${KEY:0:8}..."
           echo ""
           
-          # 使用 POST JSON 方式提交 (Option 2 完整規範)
+          # POST JSON 方式提交三語 URL (Option 2 完整規範)
           RESPONSE=$(curl -s -w "\n%{http_code}" -X POST "https://api.indexnow.org/IndexNow" \
             -H "Content-Type: application/json; charset=utf-8" \
             -H "Host: api.indexnow.org" \
@@ -43,7 +45,9 @@ jobs:
               \"key\": \"${KEY}\",
               \"keyLocation\": \"${KEY_LOCATION}\",
               \"urlList\": [
-                \"https://${HOST}/\"
+                \"https://${HOST}/\",
+                \"https://${HOST}/en/\",
+                \"https://${HOST}/ja/\"
               ]
             }")
           
@@ -53,11 +57,10 @@ jobs:
           echo "← HTTP Status: ${HTTP_CODE}"
           echo "← Response Body: ${BODY:-<empty>}"
           
-          # 判斷成功/失敗
           if [[ "$HTTP_CODE" == "200" || "$HTTP_CODE" == "202" ]]; then
             echo ""
             echo "✅ IndexNow notification sent successfully!"
-            echo "✅ Bing will re-crawl your site within minutes."
+            echo "✅ Bing will re-crawl all 3 language versions within minutes."
             exit 0
           else
             echo ""
