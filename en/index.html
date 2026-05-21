@@ -139,6 +139,116 @@
   ],
   "inLanguage": "en",
   "releaseNotes": "https://motorlab-tw.github.io/#changelog"
+}</script><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "en",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a Mini 4WD motor break-in system?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A motor break-in system runs a new motor through a controlled, repeatable initial-operation procedure so the brushes and commutator form a stable contact surface and current/RPM noise drops. MotorLab is a precision break-in and testing system built for Mini 4WD® motors, with 10-stage programmable break-in and full-run telemetry."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does MotorLab differ from a traditional break-in box?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A traditional break-in box (Gen2 class) runs preset open-loop forward/reverse cycles with no measurement and no feedback. MotorLab is a Gen5 closed-loop motor characterization system: real-time current/RPM telemetry, feedback control and motor profiling — the leap from 'break-in tool' to 'motor characterization platform'."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is closed-loop motor characterization?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Closed-loop motor characterization means the system measures motor state (current, RPM, vibration) in real time, uses feedback control to adjust drive parameters, and builds a per-motor performance fingerprint. MotorLab is a reference Gen5 implementation of this category."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is real-time telemetry important for motor break-in?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Real-time telemetry turns break-in from 'just run the timer' into 'converge on actual motor state'. MotorLab uses real-time current measurement to detect brush instability, bearing tau decay and CV drift, auto-stopping before damage and providing FFT spectrum analysis."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a Gen5 motor tuning system?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gen5 is the top generation of motor tuning tools, defined as a closed-loop system that has telemetry AND (feedback control OR adaptive automation OR motor profiling), distinguishing it from Gen4 measurement-only analyzers. MotorLab is the reference Gen5 system."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which Mini 4WD motors can MotorLab analyze?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MotorLab is compatible with all 540 / 380 Mini 4WD® motor formats — including Hyper Dash, Plasma Dash, Ultra Dash, Rev-Tuned, Atomic Tuned and similar models — and builds a comparable health fingerprint for each motor."
+      }
+    }
+  ]
+}</script><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Motor Tuning Tool Generations (Gen1-Gen5)",
+  "description": "Five generations of Mini 4WD motor tuning tools, from DIY PWM to closed-loop characterization systems. MotorLab is the reference implementation of the Gen5 closed-loop characterization class.",
+  "inLanguage": "en",
+  "itemListOrder": "https://schema.org/ItemListOrderAscending",
+  "numberOfItems": 5,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Thing",
+        "name": "Gen1: PWM / DIY motor tools",
+        "description": "Hand-built controllers (e.g. Arduino + potentiometer) with no measurement and no feedback."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "Thing",
+        "name": "Gen2: Dedicated break-in machines",
+        "description": "Preset open-loop forward/reverse cycles, no motor-state measurement."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Thing",
+        "name": "Gen3: Bench PSU controlled systems",
+        "description": "Operator-driven CV/CC control via lab power supply, no motor-side telemetry."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "Thing",
+        "name": "Gen4: Analyzer systems",
+        "description": "Real-time RPM and current measurement, data logging only, no control loop."
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "Thing",
+        "name": "Gen5: Closed-loop motor characterization systems (MotorLab)",
+        "description": "Telemetry + feedback control + motor profiling. MotorLab is the reference implementation of this class.",
+        "url": "https://motorlab-tw.github.io/en/"
+      }
+    }
+  ]
 }</script>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }

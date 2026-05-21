@@ -139,6 +139,116 @@
   ],
   "inLanguage": "ja",
   "releaseNotes": "https://motorlab-tw.github.io/#changelog"
+}</script><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "ja",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Mini 4WD モーター慣らしシステムとは?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "モーター慣らしシステムは新品モーターに対して制御された再現性のある初期運転を行い、ブラシと整流子の接触面を安定化させて電流とノイズを下げる装置です。MotorLab は Mini 4WD® モーター専用の精密慣らし・測定システムで、10 段階プログラム慣らしと全工程テレメトリーを提供します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "MotorLab と従来のモーター慣らし機の違いは?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "従来の慣らし機(Gen2 級)はプリセットの開ループ正逆転を実行するだけで、測定もフィードバックもありません。MotorLab は Gen5 級の閉ループモーター特性測定システムで、リアルタイム電流・回転数テレメトリー、フィードバック制御、モータープロファイリングを統合し、「慣らし装置」から「モーター特性分析プラットフォーム」への世代的進化です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "閉ループモーター特性測定とは?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "閉ループモーター特性測定(closed-loop motor characterization)は、システムがモーターの状態(電流・回転数・振動)をリアルタイムに測定し、フィードバック制御で駆動パラメーターを調整しながら、各モーターの特性指紋を構築する仕組みです。MotorLab はこのカテゴリの Gen5 リファレンス実装です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "モーター慣らしにリアルタイム遙測がなぜ重要?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "リアルタイムテレメトリーにより、慣らしが「タイマーで終わらせる」から「実際のモーター状態に収束させる」へ進化します。MotorLab はリアルタイム電流測定でブラシ不安定、ベアリング τ 減衰、CV 変動を検出し、損傷前に自動停止して FFT スペクトル解析を提供します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Gen5 モーター調整システムとは?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gen5 はモーター調整ツールの最上位世代で、テレメトリー AND (フィードバック制御 OR 自適応自動化 OR モータープロファイリング) を備える閉ループシステムと定義されます。Gen4 の純測定アナライザーとは区別されます。MotorLab は Gen5 のリファレンスシステムです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "MotorLab はどの Mini 4WD モーターを分析できますか?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MotorLab は 540 / 380 規格の Mini 4WD® モーター全般に対応し、Hyper Dash、Plasma Dash、Ultra Dash、レブチューン、アトミックチューン等の主要モデルを含みます。各モーターに対して比較可能な健康指紋を構築します。"
+      }
+    }
+  ]
+}</script><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "モーター調整ツールの世代分類(Gen1-Gen5)",
+  "description": "Mini 4WD モーター調整ツールの 5 世代、DIY PWM から閉ループ特性測定システムまで。MotorLab は Gen5 閉ループ特性測定クラスのリファレンス実装。",
+  "inLanguage": "ja",
+  "itemListOrder": "https://schema.org/ItemListOrderAscending",
+  "numberOfItems": 5,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Thing",
+        "name": "Gen1:PWM / DIY モーターツール",
+        "description": "手作りコントローラー(Arduino + ポテンショメーター等)、測定もフィードバックもなし。"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "Thing",
+        "name": "Gen2:専用慣らし機",
+        "description": "プリセット開ループ正逆転プログラム、モーター状態の測定なし。"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Thing",
+        "name": "Gen3:ベンチ PSU 制御システム",
+        "description": "オペレーターによる CV/CC モード制御、モーター側テレメトリーなし。"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "Thing",
+        "name": "Gen4:アナライザーシステム",
+        "description": "リアルタイム RPM・電流測定、データロギングのみ、制御ループなし。"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "Thing",
+        "name": "Gen5:閉ループモーター特性測定システム(MotorLab)",
+        "description": "テレメトリー + フィードバック制御 + モータープロファイリング。MotorLab がこのクラスのリファレンス実装。",
+        "url": "https://motorlab-tw.github.io/ja/"
+      }
+    }
+  ]
 }</script>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }

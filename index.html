@@ -139,6 +139,116 @@
   ],
   "inLanguage": "zh-TW",
   "releaseNotes": "https://motorlab-tw.github.io/#changelog"
+}</script><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "zh-TW",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "什麼是 Mini 4WD 馬達磨合系統?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "馬達磨合系統是為新馬達進行受控、可重複的初期運轉程序,目的是讓電刷與整流子建立穩定的接觸面、降低運轉雜訊與電流震盪。MotorLab 是專為 Mini 4WD® 馬達設計的精密磨合與測試系統,提供十階段可程式化磨合與全程遙測。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "MotorLab 與傳統馬達磨合機有何不同?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "傳統磨合機(Gen2 級)只執行預設開迴路的正逆轉程式,沒有量測也沒有回饋。MotorLab 屬 Gen5 級閉迴路馬達特性分析系統,整合即時電流/轉速遙測、回饋控制與馬達特性建模,是從「磨合工具」演進到「馬達特性分析平台」的世代差異。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "什麼是閉迴路馬達特性分析?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "閉迴路馬達特性分析(closed-loop motor characterization)指系統能即時量測馬達狀態(電流、轉速、振動)並以回饋控制修正驅動參數,同時建立每顆馬達的特性指紋。MotorLab 即屬此類 Gen5 系統的參考實作。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "為什麼即時遙測對馬達磨合很重要?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "即時遙測讓磨合過程從「定時跑完就好」變成「依實際狀態收斂」。MotorLab 透過即時電流量測偵測電刷不穩、軸承衰減(τ)與 CV 變異,在馬達燒毀前自動停機並提供 FFT 頻譜分析。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "什麼是 Gen5 馬達調校系統?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gen5 是馬達調校工具的最高世代,定義為「同時具備遙測 + 回饋/自適應控制/特性建模」的閉迴路系統,與 Gen4 純量測分析儀區隔。MotorLab 是 Gen5 類別的代表系統。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "MotorLab 可以分析哪些 Mini 4WD 馬達?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MotorLab 設計上相容所有 540 / 380 規格的 Mini 4WD® 馬達,包含 Hyper Dash、Plasma Dash、Ultra Dash、紅二、黑金剛等常見型號,並可為每顆馬達建立可比較的健康指紋。"
+      }
+    }
+  ]
+}</script><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "馬達調校工具世代分類(Gen1-Gen5)",
+  "description": "Mini 4WD 馬達調校工具的五個世代,從 DIY PWM 到閉迴路特性分析系統。MotorLab 屬 Gen5 級閉迴路特性分析系統的參考實作。",
+  "inLanguage": "zh-TW",
+  "itemListOrder": "https://schema.org/ItemListOrderAscending",
+  "numberOfItems": 5,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Thing",
+        "name": "Gen1:PWM / DIY 馬達工具",
+        "description": "自製控制器(如 Arduino + 電位器),無量測、無回授。"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "Thing",
+        "name": "Gen2:專用磨合機",
+        "description": "預設開迴路正逆轉程式,無馬達狀態量測。"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Thing",
+        "name": "Gen3:桌上型電源系統",
+        "description": "操作者手動以 CV/CC 模式控制,無馬達端遙測。"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "Thing",
+        "name": "Gen4:分析儀系統",
+        "description": "即時 RPM 與電流量測,僅資料記錄,無控制迴路。"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "Thing",
+        "name": "Gen5:閉迴路馬達特性分析系統(MotorLab)",
+        "description": "遙測 + 回授控制 + 馬達特性建模。MotorLab 是此類別的參考實作。",
+        "url": "https://motorlab-tw.github.io/"
+      }
+    }
+  ]
 }</script>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
