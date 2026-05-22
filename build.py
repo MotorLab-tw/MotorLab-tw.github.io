@@ -380,22 +380,39 @@ SLUG_BY_GKEY = {g["key"]: g["slug"] for g in GUIDES}
 GITHUB_REPO = "https://github.com/MotorLab-tw/MotorLab-tw.github.io"
 
 
-# keywords meta(三語共用一份,涵蓋全語言關鍵字)
-KEYWORDS = ("馬達磨合, 馬達磨合機, 四驅車馬達磨合, 迷你四驅車馬達磨合, 馬達磨合教學, "
-            "モーター慣らし, モーター慣らし機, ミニ四駆 モーター慣らし, ミニ四駆のモーター慣らし, "
-            "モーターブレークイン, MotorLab, Mini 4WD, 田宮迷你四驅車, 迷你四驅車, ミニ四駆, "
-            "四驅車, 馬達測試, 馬達調校, 馬達健康診斷, 洗馬達, 紅二馬達, 黑金剛, Hyper Dash, "
-            "Plasma Dash, 馬達保護, 抗 EMI, 過流保護, 電流急停, Watchdog 自動復原, 安全保護機制, "
-            "電磁干擾防護, 馬達燒毀防護, motor break-in, motor test, Tamiya mini 4WD, "
-            "EMI shielding, overcurrent protection, watchdog recovery, motor safety, "
-            # 長尾(zh)
-            "四驅車 馬達磨合, 田宮 馬達磨合, 四驅車 磨合方法, "
-            # 長尾(en)
-            "How to Break in Mini4WD Motors, DIY Mini4WD Motor Analyzer, "
-            "Mini4WD RPM Benchmark and Analysis, Motor Health Monitoring Using RPM Telemetry, "
-            # 長尾(ja)
-            "ミニ四駆 モーター 慣らし, タミヤ モーター 慣らし, "
-            "モーター ブレークイン 方法, ミニ四駆 モーター チューニング")
+# keywords meta(按語言切分)
+# 規則:
+#   zh 頁:zh 原生 + en(品牌/技術詞)
+#   en 頁:en 原生(品牌 + 技術 + 長尾)
+#   ja 頁:ja 原生 + en(品牌/技術詞)
+# 不跨字母系統混入(例如 ja 頁不放中文、zh 頁不放日文)避免稀釋語言信號
+_KW_ZH_NATIVE = (
+    "馬達磨合, 馬達磨合機, 四驅車馬達磨合, 迷你四驅車馬達磨合, 馬達磨合教學, "
+    "田宮迷你四驅車, 迷你四驅車, 四驅車, 馬達測試, 馬達調校, "
+    "馬達健康診斷, 洗馬達, 紅二馬達, 黑金剛, 馬達保護, 抗 EMI, "
+    "過流保護, 電流急停, Watchdog 自動復原, 安全保護機制, "
+    "電磁干擾防護, 馬達燒毀防護, "
+    "四驅車 馬達磨合, 田宮 馬達磨合, 四驅車 磨合方法"
+)
+_KW_EN = (
+    "MotorLab, Mini 4WD, Hyper Dash, Plasma Dash, "
+    "motor break-in, motor test, Tamiya Mini 4WD, "
+    "EMI shielding, overcurrent protection, watchdog recovery, motor safety, "
+    "How to Break in Mini4WD Motors, DIY Mini4WD Motor Analyzer, "
+    "Mini4WD RPM Benchmark and Analysis, Motor Health Monitoring Using RPM Telemetry"
+)
+_KW_JA_NATIVE = (
+    "モーター慣らし, モーター慣らし機, ミニ四駆 モーター慣らし, ミニ四駆のモーター慣らし, "
+    "モーターブレークイン, ミニ四駆, "
+    "ミニ四駆 モーター 慣らし, タミヤ モーター 慣らし, "
+    "モーター ブレークイン 方法, ミニ四駆 モーター チューニング"
+)
+
+KEYWORDS_BY_LANG = {
+    "zh": _KW_ZH_NATIVE + ", " + _KW_EN,
+    "en": _KW_EN,
+    "ja": _KW_JA_NATIVE + ", " + _KW_EN,
+}
 
 
 # ============================================================
@@ -461,7 +478,7 @@ def build_lang(src_html, lang, i18n):
             tag["content"] = content
 
     set_meta("name", "description", seo["description"])
-    set_meta("name", "keywords", KEYWORDS)
+    set_meta("name", "keywords", KEYWORDS_BY_LANG[lang])
     set_meta("http-equiv", "Content-Language", cfg["html_lang"])
     set_meta("property", "og:title", seo["og_title"])
     set_meta("property", "og:description", seo["og_desc"])
@@ -717,7 +734,11 @@ def build_guide_page(slug, lang, src_html, i18n, guide_cfg):
             tag["content"] = content
 
     set_meta("name", "description", g_i18n["description"])
-    set_meta("name", "keywords", g_i18n["keywords"])
+    # keywords:zh/ja 頁附加 en 版關鍵字(品牌與技術詞跨語言通用),en 頁不附加避免重複
+    guide_kw = g_i18n["keywords"]
+    if lang != "en" and "en" in guide_cfg["i18n"]:
+        guide_kw = guide_kw + ", " + guide_cfg["i18n"]["en"]["keywords"]
+    set_meta("name", "keywords", guide_kw)
     set_meta("http-equiv", "Content-Language", cfg["html_lang"])
     set_meta("property", "og:type", "article")
     set_meta("property", "og:url", page_url)
