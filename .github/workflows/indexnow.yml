@@ -54,7 +54,15 @@ jobs:
                 \"https://${HOST}/guides/motor-break-in-guide/\",
                 \"https://${HOST}/guides/motor-break-in-mistakes/\",
                 \"https://${HOST}/guides/tamiya-motor-specs/\",
-                \"https://${HOST}/guides/motor-wash-vs-break-in/\"
+                \"https://${HOST}/guides/motor-wash-vs-break-in/\",
+                \"https://${HOST}/en/guides/motor-break-in-guide/\",
+                \"https://${HOST}/en/guides/motor-break-in-mistakes/\",
+                \"https://${HOST}/en/guides/tamiya-motor-specs/\",
+                \"https://${HOST}/en/guides/motor-wash-vs-break-in/\",
+                \"https://${HOST}/ja/guides/motor-break-in-guide/\",
+                \"https://${HOST}/ja/guides/motor-break-in-mistakes/\",
+                \"https://${HOST}/ja/guides/tamiya-motor-specs/\",
+                \"https://${HOST}/ja/guides/motor-wash-vs-break-in/\"
               ]
             }")
           

@@ -54,30 +54,129 @@
     </image:image>
   </url>
 
-  <!-- 教學分頁(zh)— en/ja 待後續加 -->
+  <!-- 教學分頁(三語各 4 篇)— 每篇 hreflang 三向互指 -->
   <url>
     <loc>https://motorlab-tw.github.io/guides/motor-break-in-guide/</loc>
     <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-break-in-guide/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-break-in-guide/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-break-in-guide/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-break-in-guide/"/>
   </url>
+  <url>
+    <loc>https://motorlab-tw.github.io/en/guides/motor-break-in-guide/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-break-in-guide/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-break-in-guide/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-break-in-guide/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-break-in-guide/"/>
+  </url>
+  <url>
+    <loc>https://motorlab-tw.github.io/ja/guides/motor-break-in-guide/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-break-in-guide/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-break-in-guide/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-break-in-guide/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-break-in-guide/"/>
+  </url>
+
   <url>
     <loc>https://motorlab-tw.github.io/guides/motor-break-in-mistakes/</loc>
     <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-break-in-mistakes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-break-in-mistakes/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-break-in-mistakes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-break-in-mistakes/"/>
   </url>
+  <url>
+    <loc>https://motorlab-tw.github.io/en/guides/motor-break-in-mistakes/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-break-in-mistakes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-break-in-mistakes/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-break-in-mistakes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-break-in-mistakes/"/>
+  </url>
+  <url>
+    <loc>https://motorlab-tw.github.io/ja/guides/motor-break-in-mistakes/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-break-in-mistakes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-break-in-mistakes/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-break-in-mistakes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-break-in-mistakes/"/>
+  </url>
+
   <url>
     <loc>https://motorlab-tw.github.io/guides/tamiya-motor-specs/</loc>
     <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/tamiya-motor-specs/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/tamiya-motor-specs/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/tamiya-motor-specs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/tamiya-motor-specs/"/>
   </url>
+  <url>
+    <loc>https://motorlab-tw.github.io/en/guides/tamiya-motor-specs/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/tamiya-motor-specs/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/tamiya-motor-specs/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/tamiya-motor-specs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/tamiya-motor-specs/"/>
+  </url>
+  <url>
+    <loc>https://motorlab-tw.github.io/ja/guides/tamiya-motor-specs/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/tamiya-motor-specs/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/tamiya-motor-specs/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/tamiya-motor-specs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/tamiya-motor-specs/"/>
+  </url>
+
   <url>
     <loc>https://motorlab-tw.github.io/guides/motor-wash-vs-break-in/</loc>
     <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-wash-vs-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-wash-vs-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-wash-vs-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-wash-vs-break-in/"/>
+  </url>
+  <url>
+    <loc>https://motorlab-tw.github.io/en/guides/motor-wash-vs-break-in/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-wash-vs-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-wash-vs-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-wash-vs-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-wash-vs-break-in/"/>
+  </url>
+  <url>
+    <loc>https://motorlab-tw.github.io/ja/guides/motor-wash-vs-break-in/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-wash-vs-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-wash-vs-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-wash-vs-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-wash-vs-break-in/"/>
   </url>
 
 </urlset>

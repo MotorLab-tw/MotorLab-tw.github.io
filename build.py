@@ -240,6 +240,20 @@ GUIDES = [
                 "breadcrumb": "馬達磨合完全指南",
                 "h1_for_ld": "四驅車馬達磨合完全指南:從原理到實作",
             },
+            "en": {
+                "title": "Mini 4WD Motor Break-in Complete Guide: Principles & Practice | MotorLab",
+                "description": "Complete Mini 4WD motor break-in guide — the physics of brush-commutator seating, four critical control variables, 10-stage standard procedure, and completion criteria. Why every new Tamiya motor needs break-in and the pitfalls of amateur water-soak methods.",
+                "keywords": "motor break-in, Mini 4WD motor break-in, Tamiya motor break-in, motor running-in, motor bedding, 10-stage break-in, motor break-in guide, Hyper Dash break-in, Plasma Dash break-in, carbon brush seating, MotorLab",
+                "breadcrumb": "Motor Break-in Guide",
+                "h1_for_ld": "Mini 4WD Motor Break-in Complete Guide: Principles & Practice",
+            },
+            "ja": {
+                "title": "Mini 4WD モーター慣らし完全ガイド:原理から実践まで | MotorLab",
+                "description": "Mini 4WD モーター慣らしの完全ガイド — ブラシと整流子の接触面形成の物理、4 つの重要制御変数、10 段階標準フロー、完了判定基準。新品モーターに慣らしが必須な理由と、アマチュア水慣らし手法の問題点。",
+                "keywords": "モーター慣らし, ミニ四駆 モーター慣らし, モーターブレークイン, タミヤ モーター慣らし, 10 段階慣らし, ハイパーダッシュ 慣らし, プラズマダッシュ 慣らし, カーボンブラシ 慣らし, MotorLab",
+                "breadcrumb": "モーター慣らし完全ガイド",
+                "h1_for_ld": "Mini 4WD モーター慣らし完全ガイド:原理から実践まで",
+            },
         },
     },
     {
@@ -252,6 +266,20 @@ GUIDES = [
                 "keywords": "馬達磨合錯誤, 業餘馬達磨合失敗, 乾電池磨合馬達, 水磨馬達錯誤, 馬達磨合方向, 馬達燒掉原因, 磁鐵退磁, 馬達健康指紋, 馬達磨合 CV",
                 "breadcrumb": "5 個常見磨合錯誤",
                 "h1_for_ld": "為什麼業餘車手磨合馬達總是失敗?5 個常見錯誤",
+            },
+            "en": {
+                "title": "Why Amateur Motor Break-in Fails: 5 Common Mistakes (Mini 4WD) | MotorLab",
+                "description": "The 5 most common Mini 4WD motor break-in mistakes: random dry-battery runs, excessive water-soak, one-direction-only running, no measurement, no records. Each mistake's consequence and the correct procedure, plus how to build a motor health fingerprint.",
+                "keywords": "motor break-in mistakes, motor break-in failure, dry battery break-in, water-soak motor mistakes, motor break-in direction, motor burnout cause, magnet demagnetization, motor health fingerprint, break-in CV",
+                "breadcrumb": "5 Common Break-in Mistakes",
+                "h1_for_ld": "Why Amateur Motor Break-in Fails: 5 Common Mistakes",
+            },
+            "ja": {
+                "title": "アマチュアのモーター慣らしが失敗する理由:5 つのよくある間違い | MotorLab",
+                "description": "Mini 4WD モーター慣らしで最も多い 5 つの間違い:乾電池で適当に回す、水慣らしの水量過多、片方向だけ、測定せず実走、感覚頼り。各間違いの結果と正しい手順、モーター健康指紋の構築方法。",
+                "keywords": "モーター慣らし 間違い, モーター慣らし 失敗, 乾電池 モーター慣らし, 水慣らし 間違い, モーター慣らし 方向, モーター 焼損 原因, 磁石 減磁, モーター 健康指紋, 慣らし CV",
+                "breadcrumb": "5 つの慣らしミス",
+                "h1_for_ld": "アマチュアのモーター慣らしが失敗する理由:5 つのよくある間違い",
             },
         },
     },
@@ -266,6 +294,20 @@ GUIDES = [
                 "breadcrumb": "田宮馬達速查表",
                 "h1_for_ld": "田宮主流馬達特性與磨合策略對照表",
             },
+            "en": {
+                "title": "Tamiya Mini 4WD Motor Specs & Break-in Strategy Reference | MotorLab",
+                "description": "Official specs and recommended break-in strategy for 8 mainstream Tamiya Mini 4WD motors: Hyper Dash, Plasma Dash, Rev-Tuned, Torque-Tuned, Atomic-Tuned, Power Dash, Sprint Dash, Light Dash. Copper-brush vs carbon-brush break-in differences and Tamiya competition rules.",
+                "keywords": "Tamiya motor specs, Tamiya Mini 4WD motors, Hyper Dash 2, Plasma Dash, Rev-Tuned, Torque-Tuned, Atomic-Tuned, Power Dash, Sprint Dash, Light Dash, copper vs carbon brush, Tamiya motor break-in, Tamiya competition rules",
+                "breadcrumb": "Tamiya Motor Reference",
+                "h1_for_ld": "Tamiya Mini 4WD Motor Specs & Break-in Strategy Reference",
+            },
+            "ja": {
+                "title": "タミヤ Mini 4WD 主要モーター特性と慣らし戦略対照表 | MotorLab",
+                "description": "タミヤの主要 8 種類の Mini 4WD モーター(ハイパーダッシュ、プラズマダッシュ、レブチューン、トルクチューン、アトミックチューン、パワーダッシュ、スプリントダッシュ、ライトダッシュ)の公式スペックと推奨慣らし戦略。銅ブラシとカーボンブラシの慣らし差、タミヤ公式競技ルール。",
+                "keywords": "タミヤ モーター 規格, タミヤ モーター, ハイパーダッシュ 2, プラズマダッシュ, レブチューン, トルクチューン, アトミックチューン, パワーダッシュ, スプリントダッシュ, ライトダッシュ, 銅ブラシ カーボンブラシ, タミヤ モーター慣らし, タミヤ 公式ルール",
+                "breadcrumb": "タミヤ モーター速査",
+                "h1_for_ld": "タミヤ Mini 4WD 主要モーター特性と慣らし戦略対照表",
+            },
         },
     },
     {
@@ -279,9 +321,57 @@ GUIDES = [
                 "breadcrumb": "洗馬達 vs 磨合馬達",
                 "h1_for_ld": "洗馬達 vs 磨合馬達:差別在哪?什麼時候做?",
             },
+            "en": {
+                "title": "Motor Wash vs Motor Break-in: What's the Difference? When to Do Each | MotorLab",
+                "description": "'Motor wash' and 'motor break-in' are two completely different procedures often confused. Clarifies the timing, method, and purpose of each, when to wash, the standard wash procedure, and lifecycle maintenance recommendations for a Hyper Dash 2 motor.",
+                "keywords": "motor wash, motor wash vs break-in, Mini 4WD motor wash, motor maintenance cycle, motor lubrication, naphtha wash, WURTH motor lube, Hyper Dash maintenance, motor retirement criteria",
+                "breadcrumb": "Motor Wash vs Break-in",
+                "h1_for_ld": "Motor Wash vs Motor Break-in: What's the Difference? When to Do Each",
+            },
+            "ja": {
+                "title": "モーター洗浄 vs モーター慣らし:違いはどこ?いつやる? | MotorLab",
+                "description": "「モーター洗浄」と「モーター慣らし」は全く異なる手順だが、混同されやすい。両者のタイミング、方法、目的の違いを明確化。洗浄すべきタイミング、標準洗浄手順、ハイパーダッシュ 2 のライフサイクル保守提案。",
+                "keywords": "モーター洗浄, モーター洗浄 vs 慣らし, ミニ四駆 モーター洗浄, モーター メンテナンス周期, モーター 注油, ナフサ洗浄, WURTH モーターオイル, ハイパーダッシュ メンテナンス, モーター リタイア判定",
+                "breadcrumb": "モーター洗浄 vs 慣らし",
+                "h1_for_ld": "モーター洗浄 vs モーター慣らし:違いはどこ?いつやる?",
+            },
         },
     },
 ]
+
+# UI 字串(教學頁面通用元件:nav / 麵包屑 / 分頁 / GitHub 連結)
+UI_STRINGS = {
+    "zh": {
+        "back_home": "← 回首頁",
+        "bc_home": "首頁",
+        "bc_guides": "教學",
+        "prev": "← 上一篇",
+        "next": "下一篇 →",
+        "home_label": "回教學首頁",
+        "read_more": "閱讀完整文章 →",
+        "source_text": "在 GitHub 查看本頁原始碼:",
+    },
+    "en": {
+        "back_home": "← Back to home",
+        "bc_home": "Home",
+        "bc_guides": "Guides",
+        "prev": "← Previous",
+        "next": "Next →",
+        "home_label": "Back to guides",
+        "read_more": "Read full article →",
+        "source_text": "View source on GitHub: ",
+    },
+    "ja": {
+        "back_home": "← ホームへ戻る",
+        "bc_home": "ホーム",
+        "bc_guides": "ガイド",
+        "prev": "← 前の記事",
+        "next": "次の記事 →",
+        "home_label": "ガイド一覧へ",
+        "read_more": "全文を読む →",
+        "source_text": "GitHub でソースを見る:",
+    },
+}
 
 # slug 與 g{n} 的快速反查
 SLUG_BY_GKEY = {g["key"]: g["slug"] for g in GUIDES}
@@ -507,9 +597,8 @@ def build_lang(src_html, lang, i18n):
     }
     _append_ld_script(itemlist_schema)
 
-    # --- 9c. 首頁 #guides 卡片化(zh only,獨立教學頁的對應 hub)---
-    if lang == "zh":
-        _transform_guides_to_cards(soup)
+    # --- 9c. 首頁 #guides 卡片化(三語通用,獨立教學頁的對應 hub)---
+    _transform_guides_to_cards(soup, lang)
 
     # --- 10. 移除母版的語言切換 JS(改用 a 連結後不需要)---
     # 保留其他 JS,只把 applyLang/i18n 相關移除可選 — 這裡保留以降低風險,
@@ -525,10 +614,13 @@ def build_lang(src_html, lang, i18n):
 
 
 # ============================================================
-# 首頁 #guides 區段 → 卡片索引轉換 (zh only)
+# 首頁 #guides 區段 → 卡片索引轉換(三語通用)
 # 每個 article 從「全文展開」縮成「tag + h3 + lead + 閱讀完整文章」
+# 連結指向對應語言的 /guides/<slug>/ 或 /<lang>/guides/<slug>/
 # ============================================================
-def _transform_guides_to_cards(soup):
+def _transform_guides_to_cards(soup, lang):
+    lang_prefix = "" if lang == "zh" else f"/{lang}"
+    read_more = UI_STRINGS[lang]["read_more"]
     for art in soup.select("article.guide-article"):
         tag_el = art.select_one(".guide-tag")
         gkey_full = tag_el.get("data-i18n", "") if tag_el else ""
@@ -551,8 +643,11 @@ def _transform_guides_to_cards(soup):
         for k in keepers:
             art.append(k)
         # 接「閱讀完整文章 →」連結
-        link = soup.new_tag("a", attrs={"class": "guide-card-link", "href": f"/guides/{slug}/"})
-        link.string = "閱讀完整文章 →"
+        link = soup.new_tag("a", attrs={
+            "class": "guide-card-link",
+            "href": f"{lang_prefix}/guides/{slug}/",
+        })
+        link.string = read_more
         art.append(link)
 
 
@@ -564,7 +659,10 @@ def build_guide_page(slug, lang, src_html, i18n, guide_cfg):
     soup = BeautifulSoup(src_html, "lxml")
     cfg = LANGS[lang]
     g_i18n = guide_cfg["i18n"][lang]
-    page_url = f"{SITE}/guides/{slug}/"
+    ui = UI_STRINGS[lang]
+    lang_prefix = "" if lang == "zh" else f"/{lang}"
+    page_url = f"{SITE}{lang_prefix}/guides/{slug}/"
+    home_url = f"{SITE}{lang_prefix}/"
 
     # 1. <html lang>
     soup.html["lang"] = cfg["html_lang"]
@@ -625,11 +723,20 @@ def build_guide_page(slug, lang, src_html, i18n, guide_cfg):
     if canon:
         canon["href"] = page_url
 
-    # 7. hreflang (現階段只有 zh-TW;en/ja guide 出爐後再補)
+    # 7. hreflang 三向互指 + x-default(三語 guide 都已存在)
     head = soup.head
-    for hl in (cfg["html_lang"], "x-default"):
-        link = soup.new_tag("link", attrs={"rel": "alternate", "hreflang": hl, "href": page_url})
+    for hl_lang, hl_cfg in LANGS.items():
+        hl_attr = hl_cfg["html_lang"]
+        hl_prefix = "" if hl_lang == "zh" else f"/{hl_lang}"
+        hl_url = f"{SITE}{hl_prefix}/guides/{slug}/"
+        link = soup.new_tag("link", attrs={"rel": "alternate", "hreflang": hl_attr, "href": hl_url})
         head.append(link)
+    # x-default 指 zh
+    link = soup.new_tag("link", attrs={
+        "rel": "alternate", "hreflang": "x-default",
+        "href": f"{SITE}/guides/{slug}/",
+    })
+    head.append(link)
 
     # 8. Article + BreadcrumbList JSON-LD
     article_ld = {
@@ -653,8 +760,8 @@ def build_guide_page(slug, lang, src_html, i18n, guide_cfg):
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "首頁", "item": SITE + "/"},
-            {"@type": "ListItem", "position": 2, "name": "教學", "item": SITE + "/#guides"},
+            {"@type": "ListItem", "position": 1, "name": ui["bc_home"], "item": home_url},
+            {"@type": "ListItem", "position": 2, "name": ui["bc_guides"], "item": f"{home_url}#guides"},
             {"@type": "ListItem", "position": 3, "name": g_i18n["breadcrumb"], "item": page_url},
         ],
     }
@@ -667,12 +774,12 @@ def build_guide_page(slug, lang, src_html, i18n, guide_cfg):
     soup.body.clear()
     soup.body["class"] = "guide-page"
 
-    # 9a. minimal sticky nav
+    # 9a. minimal sticky nav(語言對應的 home URL)
     nav_html = (
-        '<nav class="guide-nav"><div class="container">'
-        '<a class="brand" href="/"><span>MotorLab<span class="tag">.tw</span></span></a>'
-        '<a class="back-link" href="/">← 回首頁</a>'
-        '</div></nav>'
+        f'<nav class="guide-nav"><div class="container">'
+        f'<a class="brand" href="{home_url}"><span>MotorLab<span class="tag">.tw</span></span></a>'
+        f'<a class="back-link" href="{home_url}">{ui["back_home"]}</a>'
+        f'</div></nav>'
     )
     soup.body.append(BeautifulSoup(nav_html, "html.parser"))
 
@@ -682,15 +789,15 @@ def build_guide_page(slug, lang, src_html, i18n, guide_cfg):
 
     bc_html = (
         f'<nav class="breadcrumb" aria-label="Breadcrumb">'
-        f'<a href="/">首頁</a><span class="sep">/</span>'
-        f'<a href="/#guides">教學</a><span class="sep">/</span>'
+        f'<a href="{home_url}">{ui["bc_home"]}</a><span class="sep">/</span>'
+        f'<a href="{home_url}#guides">{ui["bc_guides"]}</a><span class="sep">/</span>'
         f'<span class="current">{g_i18n["breadcrumb"]}</span>'
         f'</nav>'
     )
     container.append(BeautifulSoup(bc_html, "html.parser"))
     container.append(target_article)
 
-    # Pagination
+    # Pagination(連結用對應語言的 breadcrumb 名稱)
     idx = next((i for i, g in enumerate(GUIDES) if g["key"] == guide_cfg["key"]), -1)
     prev_g = GUIDES[idx - 1] if idx > 0 else None
     next_g = GUIDES[idx + 1] if idx < len(GUIDES) - 1 else None
@@ -701,28 +808,30 @@ def build_guide_page(slug, lang, src_html, i18n, guide_cfg):
                 f'<div class="{css_class}"><span class="label">{label}</span>'
                 f'<span class="disabled">—</span></div>'
             )
-        g_label = g["i18n"]["zh"]["breadcrumb"]
+        # 若目的 guide 沒有該語言翻譯,fallback 到 zh
+        g_label = g["i18n"].get(lang, g["i18n"]["zh"])["breadcrumb"]
         return (
             f'<div class="{css_class}">'
-            f'<a href="/guides/{g["slug"]}/">'
+            f'<a href="{lang_prefix}/guides/{g["slug"]}/">'
             f'<span class="label">{label}</span><span>{g_label}</span>'
             f'</a></div>'
         )
 
     pag_html = (
         '<div class="guide-pagination">'
-        + _link_cell(prev_g, "← 上一篇", "left")
-        + '<div class="center"><a href="/#guides">'
-          '<span class="label">︿</span><span>回教學首頁</span></a></div>'
-        + _link_cell(next_g, "下一篇 →", "right")
+        + _link_cell(prev_g, ui["prev"], "left")
+        + f'<div class="center"><a href="{home_url}#guides">'
+          f'<span class="label">︿</span><span>{ui["home_label"]}</span></a></div>'
+        + _link_cell(next_g, ui["next"], "right")
         + '</div>'
     )
     container.append(BeautifulSoup(pag_html, "html.parser"))
 
-    # GitHub source link
-    gh_url = f"{GITHUB_REPO}/blob/main/guides/{slug}/index.html"
+    # GitHub source link(指向實際輸出路徑)
+    disk_path = f"{lang}/guides/{slug}/index.html" if lang != "zh" else f"guides/{slug}/index.html"
+    gh_url = f"{GITHUB_REPO}/blob/main/{disk_path}"
     src_html_p = (
-        f'<p class="guide-source">在 GitHub 查看本頁原始碼:'
+        f'<p class="guide-source">{ui["source_text"]}'
         f'<a href="{gh_url}" rel="noopener" target="_blank">'
         f'{gh_url.replace("https://", "")}</a></p>'
     )
