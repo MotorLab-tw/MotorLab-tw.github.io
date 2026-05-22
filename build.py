@@ -337,6 +337,33 @@ GUIDES = [
             },
         },
     },
+    {
+        "slug": "racing-motor-break-in",
+        "key": "g5",
+        "i18n": {
+            "zh": {
+                "title": "為什麼磨馬達決定四驅車比賽勝負?競賽水準的磨合差距 | MotorLab",
+                "description": "從競賽角度切入:為什麼業餘磨合方式在比賽中行不通、JCO 等大型賽事的實戰場景、健康指紋與成對配對的競技價值。把馬達準備從「手感」轉成「數據」的關鍵思維。",
+                "keywords": "四驅車比賽磨馬達, 馬達磨合 比賽, JCO 馬達準備, 馬達成對配對, 馬達健康指紋, MotorLab",
+                "breadcrumb": "比賽磨合的重要性",
+                "h1_for_ld": "為什麼磨馬達決定四驅車比賽勝負?競賽水準的磨合差距",
+            },
+            "en": {
+                "title": "Why Break-in Decides Mini 4WD Race Outcomes: Competitive Edge Most Racers Miss | MotorLab",
+                "description": "From a racing perspective: why amateur break-in methods fail at sanctioned events, real-season scenarios at JCO and similar competitions, the competitive value of health fingerprints and pair matching. Moving motor prep from \"feel\" to \"data\".",
+                "keywords": "Mini 4WD race motor break-in, competition motor preparation, Japan Cup motor selection, motor pair matching, motor health fingerprint, MotorLab",
+                "breadcrumb": "Why Break-in Matters in Racing",
+                "h1_for_ld": "Why Break-in Decides Mini 4WD Race Outcomes: The Competitive Edge Most Racers Miss",
+            },
+            "ja": {
+                "title": "なぜモーター慣らしが Mini 4WD レースの勝敗を決めるのか:競技レベルの慣らし格差 | MotorLab",
+                "description": "競技視点から:なぜアマチュア慣らし手法が本番で通用しないのか、JCO 等の主要大会での実戦シナリオ、ヘルスフィンガープリントとペアマッチングの競技価値。モーター準備を「感覚」から「データ」へ移行する鍵。",
+                "keywords": "ミニ四駆 レース モーター慣らし, 競技 モーター 準備, JCO モーター 選定, モーター ペアマッチング, ヘルスフィンガープリント, MotorLab",
+                "breadcrumb": "レースにおける慣らしの重要性",
+                "h1_for_ld": "なぜモーター慣らしが Mini 4WD レースの勝敗を決めるのか:競技レベルの慣らし格差",
+            },
+        },
+    },
 ]
 
 # UI 字串(教學頁面通用元件:nav / 麵包屑 / 分頁)
