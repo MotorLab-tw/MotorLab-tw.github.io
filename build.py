@@ -364,6 +364,33 @@ GUIDES = [
             },
         },
     },
+    {
+        "slug": "racing-prep-techniques",
+        "key": "g6",
+        "i18n": {
+            "zh": {
+                "title": "四驅車競技進階技巧:常勝玩家不寫在書上的 5 個準備細節 | MotorLab",
+                "description": "整理 5 個競技圈實際在使用、卻很少被系統化寫出來的進階準備技巧:馬達編號管理、電池×馬達配對、跑道屬性適配、賽前熱機、電池冷卻輪替。把比賽當系統工程處理的具體做法。",
+                "keywords": "四驅車進階技巧, 電池馬達配對, 跑道馬達選擇, 賽前熱機, 充電池輪替, MotorLab",
+                "breadcrumb": "競技進階技巧",
+                "h1_for_ld": "四驅車競技進階技巧:常勝玩家不寫在書上的 5 個準備細節",
+            },
+            "en": {
+                "title": "Advanced Mini 4WD Racing: 5 Prep Details Winners Quietly Do | MotorLab",
+                "description": "Five preparation techniques actually used by competitive Mini 4WD racers but rarely written about: motor numbering and logbooks, battery-motor pairing, track-type motor selection, pre-race conditioning, between-heat battery rotation. Treating racing as systems engineering.",
+                "keywords": "Mini 4WD advanced racing techniques, motor battery pairing, track motor selection, pre-race conditioning, battery rotation, MotorLab",
+                "breadcrumb": "Advanced Racing Prep",
+                "h1_for_ld": "Advanced Mini 4WD Racing: 5 Prep Details Winners Quietly Do (But Don't Write About)",
+            },
+            "ja": {
+                "title": "ミニ四駆 競技上級者が実は静かにやっている 5 つの準備テクニック | MotorLab",
+                "description": "競技シーンで実際に使われているが、ほとんど体系的に書かれていない 5 つの準備テクニック:モーター番号管理、電池×モーターのペアリング、コース特性別モーター選定、レース前ウォームアップ、レース間電池ローテーション。レースをシステム工学として扱う具体的手法。",
+                "keywords": "ミニ四駆 上級テクニック, 電池モーター ペア, コース別 モーター, レース前 ウォームアップ, 電池ローテーション, MotorLab",
+                "breadcrumb": "競技準備テクニック",
+                "h1_for_ld": "ミニ四駆 競技上級者が実は静かにやっている 5 つの準備テクニック",
+            },
+        },
+    },
 ]
 
 # UI 字串(教學頁面通用元件:nav / 麵包屑 / 分頁)
