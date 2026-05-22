@@ -387,7 +387,15 @@ KEYWORDS = ("馬達磨合, 馬達磨合機, 四驅車馬達磨合, 迷你四驅�
             "四驅車, 馬達測試, 馬達調校, 馬達健康診斷, 洗馬達, 紅二馬達, 黑金剛, Hyper Dash, "
             "Plasma Dash, 馬達保護, 抗 EMI, 過流保護, 電流急停, Watchdog 自動復原, 安全保護機制, "
             "電磁干擾防護, 馬達燒毀防護, motor break-in, motor test, Tamiya mini 4WD, "
-            "EMI shielding, overcurrent protection, watchdog recovery, motor safety")
+            "EMI shielding, overcurrent protection, watchdog recovery, motor safety, "
+            # 長尾(zh)
+            "四驅車 馬達磨合, 田宮 馬達磨合, 四驅車 磨合方法, "
+            # 長尾(en)
+            "How to Break in Mini4WD Motors, DIY Mini4WD Motor Analyzer, "
+            "Mini4WD RPM Benchmark and Analysis, Motor Health Monitoring Using RPM Telemetry, "
+            # 長尾(ja)
+            "ミニ四駆 モーター 慣らし, タミヤ モーター 慣らし, "
+            "モーター ブレークイン 方法, ミニ四駆 モーター チューニング")
 
 
 # ============================================================
