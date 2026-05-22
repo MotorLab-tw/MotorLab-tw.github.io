@@ -339,7 +339,7 @@ GUIDES = [
     },
 ]
 
-# UI 字串(教學頁面通用元件:nav / 麵包屑 / 分頁 / GitHub 連結)
+# UI 字串(教學頁面通用元件:nav / 麵包屑 / 分頁)
 UI_STRINGS = {
     "zh": {
         "back_home": "← 回首頁",
@@ -349,7 +349,6 @@ UI_STRINGS = {
         "next": "下一篇 →",
         "home_label": "回教學首頁",
         "read_more": "閱讀完整文章 →",
-        "source_text": "在 GitHub 查看本頁原始碼:",
     },
     "en": {
         "back_home": "← Back to home",
@@ -359,7 +358,6 @@ UI_STRINGS = {
         "next": "Next →",
         "home_label": "Back to guides",
         "read_more": "Read full article →",
-        "source_text": "View source on GitHub: ",
     },
     "ja": {
         "back_home": "← ホームへ戻る",
@@ -369,15 +367,11 @@ UI_STRINGS = {
         "next": "次の記事 →",
         "home_label": "ガイド一覧へ",
         "read_more": "全文を読む →",
-        "source_text": "GitHub でソースを見る:",
     },
 }
 
 # slug 與 g{n} 的快速反查
 SLUG_BY_GKEY = {g["key"]: g["slug"] for g in GUIDES}
-
-# GitHub 原始碼連結 base
-GITHUB_REPO = "https://github.com/MotorLab-tw/MotorLab-tw.github.io"
 
 
 # keywords meta(按語言切分)
@@ -855,16 +849,6 @@ def build_guide_page(slug, lang, src_html, i18n, guide_cfg):
         + '</div>'
     )
     container.append(BeautifulSoup(pag_html, "html.parser"))
-
-    # GitHub source link(指向實際輸出路徑)
-    disk_path = f"{lang}/guides/{slug}/index.html" if lang != "zh" else f"guides/{slug}/index.html"
-    gh_url = f"{GITHUB_REPO}/blob/main/{disk_path}"
-    src_html_p = (
-        f'<p class="guide-source">{ui["source_text"]}'
-        f'<a href="{gh_url}" rel="noopener" target="_blank">'
-        f'{gh_url.replace("https://", "")}</a></p>'
-    )
-    container.append(BeautifulSoup(src_html_p, "html.parser"))
 
     main_el.append(container)
     soup.body.append(main_el)
