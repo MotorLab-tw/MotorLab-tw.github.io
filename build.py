@@ -391,6 +391,33 @@ GUIDES = [
             },
         },
     },
+    {
+        "slug": "motor-analysis-methodology",
+        "key": "g7",
+        "i18n": {
+            "zh": {
+                "title": "從手感到數據:馬達分析的三支柱方法論 | MotorLab",
+                "description": "把馬達調校從「手感」轉成系統工程的三步驟方法論:量測、比較、健康判斷。介紹 MotorLab 整個分析系統背後的概念框架、5 個核心量測指標、3 種比較方式、4 個健康維度與 Health Score 評估邏輯。",
+                "keywords": "馬達分析方法論, 馬達量測, 馬達比較, 馬達健康評估, Health Score, MotorLab",
+                "breadcrumb": "三支柱方法論",
+                "h1_for_ld": "從手感到數據:馬達分析的三支柱方法論",
+            },
+            "en": {
+                "title": "From Feel to Data: A Three-Pillar Methodology for Motor Analysis | MotorLab",
+                "description": "A three-step methodology that turns motor analysis from 'feel' into systems engineering: measurement, comparison, health assessment. Covers the conceptual framework behind MotorLab's analysis system, the 5 core measurement metrics, 3 comparison types, and 4 health dimensions with Health Score logic.",
+                "keywords": "motor analysis methodology, motor measurement, motor comparison, motor health assessment, Health Score, MotorLab",
+                "breadcrumb": "Three-Pillar Methodology",
+                "h1_for_ld": "From Feel to Data: A Three-Pillar Methodology for Motor Analysis",
+            },
+            "ja": {
+                "title": "感覚からデータへ:モーター分析の三本柱方法論 | MotorLab",
+                "description": "モーターチューニングを「感覚」からシステム工学へ変える 3 ステップ方法論:測定、比較、健康判定。MotorLab の分析システムを支える概念フレームワーク、5 つの中核測定指標、3 つの比較方式、4 つの健康次元と Health Score 評価ロジック。",
+                "keywords": "モーター分析方法論, モーター測定, モーター比較, モーター健康評価, Health Score, MotorLab",
+                "breadcrumb": "三本柱方法論",
+                "h1_for_ld": "感覚からデータへ:モーター分析の三本柱方法論",
+            },
+        },
+    },
 ]
 
 # UI 字串(教學頁面通用元件:nav / 麵包屑 / 分頁)

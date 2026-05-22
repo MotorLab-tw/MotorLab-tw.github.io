@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="zh-TW" translate="no">
+<html lang="ja" translate="no">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="zh-TW" http-equiv="Content-Language"/>
-<title>四驅車競技進階技巧:常勝玩家不寫在書上的 5 個準備細節 | MotorLab</title>
-<meta content="整理 5 個競技圈實際在使用、卻很少被系統化寫出來的進階準備技巧:馬達編號管理、電池×馬達配對、跑道屬性適配、賽前熱機、電池冷卻輪替。把比賽當系統工程處理的具體做法。" name="description"/>
+<meta content="ja" http-equiv="Content-Language"/>
+<title>感覚からデータへ:モーター分析の三本柱方法論 | MotorLab</title>
+<meta content="モーターチューニングを「感覚」からシステム工学へ変える 3 ステップ方法論:測定、比較、健康判定。MotorLab の分析システムを支える概念フレームワーク、5 つの中核測定指標、3 つの比較方式、4 つの健康次元と Health Score 評価ロジック。" name="description"/>
 <meta content="MotorLab.tw" name="author"/>
-<meta content="四驅車進階技巧, 電池馬達配對, 跑道馬達選擇, 賽前熱機, 充電池輪替, MotorLab, Mini 4WD advanced racing techniques, motor battery pairing, track motor selection, pre-race conditioning, battery rotation, MotorLab" name="keywords"/>
+<meta content="モーター分析方法論, モーター測定, モーター比較, モーター健康評価, Health Score, MotorLab, motor analysis methodology, motor measurement, motor comparison, motor health assessment, Health Score, MotorLab" name="keywords"/>
 <!-- 正規網址 (避免重複內容問題) -->
-<link href="https://motorlab-tw.github.io/guides/racing-prep-techniques/" rel="canonical"/>
+<link href="https://motorlab-tw.github.io/ja/guides/motor-analysis-methodology/" rel="canonical"/>
 <!-- 搜尋引擎指示 -->
 <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
 <meta content="index, follow" name="googlebot"/>
@@ -31,22 +31,22 @@
 <meta content="MotorLab" name="apple-mobile-web-app-title"/>
 <!-- Open Graph (Facebook, LINE, Discord) -->
 <meta content="article" property="og:type"/>
-<meta content="https://motorlab-tw.github.io/guides/racing-prep-techniques/" property="og:url"/>
-<meta content="四驅車競技進階技巧:常勝玩家不寫在書上的 5 個準備細節 | MotorLab" property="og:title"/>
-<meta content="整理 5 個競技圈實際在使用、卻很少被系統化寫出來的進階準備技巧:馬達編號管理、電池×馬達配對、跑道屬性適配、賽前熱機、電池冷卻輪替。把比賽當系統工程處理的具體做法。" property="og:description"/>
+<meta content="https://motorlab-tw.github.io/ja/guides/motor-analysis-methodology/" property="og:url"/>
+<meta content="感覚からデータへ:モーター分析の三本柱方法論 | MotorLab" property="og:title"/>
+<meta content="モーターチューニングを「感覚」からシステム工学へ変える 3 ステップ方法論:測定、比較、健康判定。MotorLab の分析システムを支える概念フレームワーク、5 つの中核測定指標、3 つの比較方式、4 つの健康次元と Health Score 評価ロジック。" property="og:description"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" property="og:image"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" property="og:image:secure_url"/>
 <meta content="image/png" property="og:image:type"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
 <meta content="MotorLab — Mini 4WD® 馬達精密測試系統官方網站預覽圖" property="og:image:alt"/>
-<meta content="zh_TW" property="og:locale"/>
+<meta content="ja_JP" property="og:locale"/>
 <meta content="en_US" property="og:locale:alternate"/>
 <meta content="MotorLab.tw" property="og:site_name"/>
 <!-- Twitter Card -->
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="四驅車競技進階技巧:常勝玩家不寫在書上的 5 個準備細節 | MotorLab" name="twitter:title"/>
-<meta content="整理 5 個競技圈實際在使用、卻很少被系統化寫出來的進階準備技巧:馬達編號管理、電池×馬達配對、跑道屬性適配、賽前熱機、電池冷卻輪替。把比賽當系統工程處理的具體做法。" name="twitter:description"/>
+<meta content="感覚からデータへ:モーター分析の三本柱方法論 | MotorLab" name="twitter:title"/>
+<meta content="モーターチューニングを「感覚」からシステム工学へ変える 3 ステップ方法論:測定、比較、健康判定。MotorLab の分析システムを支える概念フレームワーク、5 つの中核測定指標、3 つの比較方式、4 つの健康次元と Health Score 評価ロジック。" name="twitter:description"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" name="twitter:image"/>
 <meta content="MotorLab 官方網站預覽圖" name="twitter:image:alt"/>
 <!-- 結構化資料 1: Organization (公司/工作室) -->
@@ -1417,17 +1417,17 @@
     .splash-slogan { letter-spacing: 3px; }
   }
 </style>
-<link href="https://motorlab-tw.github.io/guides/racing-prep-techniques/" hreflang="zh-TW" rel="alternate"/><link href="https://motorlab-tw.github.io/en/guides/racing-prep-techniques/" hreflang="en" rel="alternate"/><link href="https://motorlab-tw.github.io/ja/guides/racing-prep-techniques/" hreflang="ja" rel="alternate"/><link href="https://motorlab-tw.github.io/guides/racing-prep-techniques/" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
+<link href="https://motorlab-tw.github.io/guides/motor-analysis-methodology/" hreflang="zh-TW" rel="alternate"/><link href="https://motorlab-tw.github.io/en/guides/motor-analysis-methodology/" hreflang="en" rel="alternate"/><link href="https://motorlab-tw.github.io/ja/guides/motor-analysis-methodology/" hreflang="ja" rel="alternate"/><link href="https://motorlab-tw.github.io/guides/motor-analysis-methodology/" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "四驅車競技進階技巧:常勝玩家不寫在書上的 5 個準備細節",
-  "description": "整理 5 個競技圈實際在使用、卻很少被系統化寫出來的進階準備技巧:馬達編號管理、電池×馬達配對、跑道屬性適配、賽前熱機、電池冷卻輪替。把比賽當系統工程處理的具體做法。",
-  "keywords": "四驅車進階技巧, 電池馬達配對, 跑道馬達選擇, 賽前熱機, 充電池輪替, MotorLab",
-  "inLanguage": "zh-TW",
-  "url": "https://motorlab-tw.github.io/guides/racing-prep-techniques/",
+  "headline": "感覚からデータへ:モーター分析の三本柱方法論",
+  "description": "モーターチューニングを「感覚」からシステム工学へ変える 3 ステップ方法論:測定、比較、健康判定。MotorLab の分析システムを支える概念フレームワーク、5 つの中核測定指標、3 つの比較方式、4 つの健康次元と Health Score 評価ロジック。",
+  "keywords": "モーター分析方法論, モーター測定, モーター比較, モーター健康評価, Health Score, MotorLab",
+  "inLanguage": "ja",
+  "url": "https://motorlab-tw.github.io/ja/guides/motor-analysis-methodology/",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://motorlab-tw.github.io/guides/racing-prep-techniques/"
+    "@id": "https://motorlab-tw.github.io/ja/guides/motor-analysis-methodology/"
   },
   "author": {
     "@type": "Organization",
@@ -1452,82 +1452,121 @@
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "首頁",
-      "item": "https://motorlab-tw.github.io/"
+      "name": "ホーム",
+      "item": "https://motorlab-tw.github.io/ja/"
     },
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "教學",
-      "item": "https://motorlab-tw.github.io/#guides"
+      "name": "ガイド",
+      "item": "https://motorlab-tw.github.io/ja/#guides"
     },
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "競技進階技巧",
-      "item": "https://motorlab-tw.github.io/guides/racing-prep-techniques/"
+      "name": "三本柱方法論",
+      "item": "https://motorlab-tw.github.io/ja/guides/motor-analysis-methodology/"
     }
   ]
 }</script></head>
-<body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/">← 回首頁</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/">首頁</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/#guides">教學</a><span class="sep">/</span><span class="current">競技進階技巧</span></nav><article class="guide-article">
-<span class="guide-tag" data-i18n="g6.tag">GUIDE · 進階準備</span>
-<h3 data-i18n="g6.title">四驅車競技進階技巧:常勝玩家不寫在書上的 5 個準備細節</h3>
-<p class="guide-lead" data-i18n="g6.lead">看過很多四驅車磨合教學、看過很多改裝指南,但比賽現場常勝的那群人,做的事情通常不會出現在公開文章裡。本文整理 5 個真正在競技圈被使用、卻很少被系統化寫出來的進階準備細節。沒有花俏理論,全部是賽事可驗證的實務。</p>
-<h4 data-i18n="g6.h1">1. 為每顆馬達編號、寫履歷</h4>
-<p data-i18n="g6.p1">職業車手不會「拿一顆紅二就上場」。他們會:</p>
+<body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/ja/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/ja/">← ホームへ戻る</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/ja/">ホーム</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/ja/#guides">ガイド</a><span class="sep">/</span><span class="current">三本柱方法論</span></nav><article class="guide-article">
+<span class="guide-tag" data-i18n="g7.tag">GUIDE · 方法論</span>
+<h3 data-i18n="g7.title">感覚からデータへ:モーター分析の三本柱方法論</h3>
+<p class="guide-lead" data-i18n="g7.lead">多くのレーサーは経験で判断します — 「走らせた感覚がいい」「音がそれっぽい」。問題は、経験は引き継げず、再現できず、検証もできないこと。本記事ではモーター分析を「感覚」からシステム工学へ変える 3 ステップの方法論を紹介します:<strong>測定、比較、健康判定</strong>。これが MotorLab の分析システム全体を支える概念フレームワークです。</p>
+<h4 data-i18n="g7.h1">なぜモーター分析に方法論が必要か</h4>
+<p data-i18n="g7.p1">モーターチューニングでよくある問題:</p>
 <ul>
-<li data-i18n="g6.l1">每顆馬達貼上識別貼紙(如 HD2-#03)或寫在側面</li>
-<li data-i18n="g6.l2">建立紀錄本(紙本或表格):購入日、磨合日、量測值、每次出賽的對戰場、洗馬達次數</li>
-<li data-i18n="g6.l3">退役時也記錄「退役原因」—衰減超標、撞擊損壞、銅頭磨耗</li>
+<li data-i18n="g7.l1">異なる電圧で RPM を測ると結論が矛盾する</li>
+<li data-i18n="g7.l2">「慣らし完了」した 2 個のモーターのデータが比較できない</li>
+<li data-i18n="g7.l3">レース前にモーターが遅くなったが、何が変わったか説明できない</li>
 </ul>
-<p data-i18n="g6.p2"><strong>為什麼重要</strong>:當你手上有 15 顆紅二,沒有編號就等於沒有資料。決賽時想挑「最快的那顆」根本不可能。</p>
-<h4 data-i18n="g6.h2">2. 把電池當馬達的「另一半」</h4>
-<p data-i18n="g6.p3">很多人忽略:充電池的衰減速度比馬達快、且兩顆同包裝的電池容量也會差到 5–10%。職業車手的標準作法:</p>
+<p data-i18n="g7.p2">問題の根本は「やり方が間違っている」ではなく、<strong>共通の分析フレームワークがない</strong>こと。</p>
+<h4 data-i18n="g7.h2">第 1 の柱:測定(Measurement)</h4>
+<p data-i18n="g7.p3">測定の目的は「数値を取る」ことではなく、<strong>再現可能なテスト環境を再構築する</strong>こと。</p>
+<p data-i18n="g7.std"><strong>測定基準(固定が必須)</strong>:</p>
 <ul>
-<li data-i18n="g6.l4">充電池<strong>永遠成對使用</strong>,並在電池上標號(同包裝的兩顆稱為 P1、P2)</li>
-<li data-i18n="g6.l5">每次充電後測<strong>內阻</strong>與<strong>靜置電壓</strong>,落差大的對組不使用</li>
-<li data-i18n="g6.l6"><strong>特定電池組搭配特定馬達</strong>—因為馬達的負載特性與電池的放電曲線會互相影響,最佳組合需要實測找出</li>
-<li data-i18n="g6.l7">大會用電池組保留一組「決賽專用」,不在預賽消耗</li>
+<li data-i18n="g7.b1">電圧条件 — 固定または段階制御、電源内部抵抗を記録</li>
+<li data-i18n="g7.b2">時間条件 — warm-up 手順を統一、測定時間窓を固定</li>
+<li data-i18n="g7.b3">環境条件 — 温度・負荷を統一</li>
 </ul>
-<h4 data-i18n="g6.h3">3. 跑道屬性決定馬達種類</h4>
-<p data-i18n="g6.p4">不同跑道適合不同馬達特性,這個概念來自日本 JCO 賽事的長期觀察:</p>
+<p data-i18n="g7.p4"><strong>MotorLab の 5 つの中核測定指標</strong>:</p>
 <table class="guide-table">
 <thead>
-<tr><th data-i18n="g6.t.track">跑道類型</th><th data-i18n="g6.t.motor">適合的馬達特性</th></tr>
+<tr><th data-i18n="g7.m.metric">指標</th><th data-i18n="g7.m.reflect">反映する内容</th></tr>
 </thead>
 <tbody>
-<tr><td data-i18n="g6.t.r1t">長直線多</td><td data-i18n="g6.t.r1m">高 RPM、低扭力</td></tr>
-<tr><td data-i18n="g6.t.r2t">連續彎道多</td><td data-i18n="g6.t.r2m">中 RPM、高扭力</td></tr>
-<tr><td data-i18n="g6.t.r3t">立體跳台</td><td data-i18n="g6.t.r3m">高扭力、低 RPM 衝起跳</td></tr>
-<tr><td data-i18n="g6.t.r4t">高速混合</td><td data-i18n="g6.t.r4m">平衡型</td></tr>
+<tr><td data-i18n="g7.m.r1n">電流(Current)</td><td data-i18n="g7.m.r1r">抵抗と効率</td></tr>
+<tr><td data-i18n="g7.m.r2n">回転数(RPM)</td><td data-i18n="g7.m.r2r">出力能力</td></tr>
+<tr><td data-i18n="g7.m.r3n">温度上昇(Thermal)</td><td data-i18n="g7.m.r3r">エネルギー損失</td></tr>
+<tr><td data-i18n="g7.m.r4n">安定性(Stability)</td><td data-i18n="g7.m.r4r">システム一貫性</td></tr>
+<tr><td data-i18n="g7.m.r5n">振動(Vibration)</td><td data-i18n="g7.m.r5r">機械健康</td></tr>
 </tbody>
 </table>
-<p data-i18n="g6.p5"><strong>重點</strong>:不是「越快越好」。在連續彎道跑道用高轉速、低扭力的馬達,車身可能根本壓不住,反而慢。</p>
-<h4 data-i18n="g6.h4">4. 賽前 5 分鐘的「熱機」與校驗</h4>
-<p data-i18n="g6.p6">磨好的馬達不代表「進入大會直接最佳狀態」。職業車手在 staging 區會做:</p>
+<div class="guide-tip">
+<p data-i18n="g7.q1">測定はデータ収集ではない。<strong>環境再構築</strong>である。</p>
+</div>
+<h4 data-i18n="g7.h3">第 2 の柱:比較(Comparison)</h4>
+<p data-i18n="g7.p5">単一の数値には意味がない — 18,500 RPM は「良い」のか「悪い」のか?答えは常に「何に対して」。</p>
+<p data-i18n="g7.p6"><strong>3 つの比較方式</strong>:</p>
 <ul>
-<li data-i18n="g6.l8">用比賽用電池跑 3–5 分鐘<strong>低負載熱機</strong>(讓油膜均勻、軸承到工作溫度)</li>
-<li data-i18n="g6.l9">用測量工具(或聽聲音)<strong>比對與賽前一週的基準值</strong>,落差超過 3% 就考慮換馬達</li>
-<li data-i18n="g6.l10">確認沒有「運送途中軸偏」造成的異常震動</li>
+<li data-i18n="g7.c1"><strong>自己比較(時系列)</strong> — 最も重要。同じモーターの第 1、10、30 回目テストの変化。絶対値ではなく、<strong>トレンドの方向</strong>を見る。</li>
+<li data-i18n="g7.c2"><strong>群体比較(Benchmark)</strong> — 個体横断。同型モーターの群体と比較。percentile ランキング、ベースラインからの乖離量を出力。</li>
+<li data-i18n="g7.c3"><strong>効率比較(Efficiency)</strong> — モデル横断。RPM/Current や Output per Watt を比較 — 単一極値による誤導を回避。</li>
 </ul>
-<p data-i18n="g6.p7">這 5 分鐘的目的不是磨合,是把馬達從「庫存狀態」帶到「比賽狀態」。</p>
-<h4 data-i18n="g6.h5">5. 連續比賽間的電池冷卻輪替</h4>
-<p data-i18n="g6.p8">連續 3 場比賽用同一組電池會有顯著電壓下降,原因是電池內阻隨溫度升高而上升。職業作法:</p>
+<p data-i18n="g7.p7"><strong>よくある誤った比較</strong>:異なる電圧で RPM を直接比較、異なる負荷条件下での対照、ピーク値だけ見て平均値を無視、時間軸の欠落。</p>
+<div class="guide-tip">
+<p data-i18n="g7.q2">比較は大きさの評価ではない。<strong>乖離の計算</strong>である。</p>
+</div>
+<h4 data-i18n="g7.h4">第 3 の柱:健康判定(Health Assessment)</h4>
+<p data-i18n="g7.p8">健康は「速さ」ではなく、「<strong>予測可能な挙動を維持できているか</strong>」。</p>
+<p data-i18n="g7.p9"><strong>4 つの健康次元</strong>:</p>
+<table class="guide-table">
+<thead>
+<tr><th data-i18n="g7.hd.dim">次元</th><th data-i18n="g7.hd.obs">観察点</th></tr>
+</thead>
+<tbody>
+<tr><td data-i18n="g7.hd.r1d">性能(Performance)</td><td data-i18n="g7.hd.r1o">RPM トレンド、出力衰退率</td></tr>
+<tr><td data-i18n="g7.hd.r2d">効率(Efficiency)</td><td data-i18n="g7.hd.r2o">電流上昇トレンド、エネルギー損失比</td></tr>
+<tr><td data-i18n="g7.hd.r3d">安定性(Stability)</td><td data-i18n="g7.hd.r3o">RPM 変動、電流ノイズ</td></tr>
+<tr><td data-i18n="g7.hd.r4d">機械(Mechanical)</td><td data-i18n="g7.hd.r4o">振動量、異常周波数パターン</td></tr>
+</tbody>
+</table>
+<p data-i18n="g7.p10"><strong>3 つの健康状態</strong>:</p>
 <ul>
-<li data-i18n="g6.l11">至少準備 3 組充電電池,<strong>比賽間輪替</strong>,讓每組有 15–20 分鐘冷卻時間</li>
-<li data-i18n="g6.l12">賽前用<strong>保冷袋或冷氣風口</strong>主動降溫到室溫以下</li>
-<li data-i18n="g6.l13">電壓表確認賽前實際靜置電壓 ≥ 1.4V/顆,低於就換組</li>
+<li data-i18n="g7.s1"><strong>正常</strong> — 緩やかな変化、滑らかな曲線</li>
+<li data-i18n="g7.s2"><strong>衰退</strong> — 安定した下降トレンド、効率低下</li>
+<li data-i18n="g7.s3"><strong>異常</strong> — 突発的乖離、信号不安定</li>
 </ul>
-<p data-i18n="g6.p9">這 5 個技巧的共通點是:<strong>把「比賽」當成「系統工程」處理</strong>,而不是「比賽當天再臨機應變」。常勝玩家比較少的不是技巧,而是更早把這些細節制度化。</p>
-</article><div class="guide-pagination"><div class="left"><a href="/guides/racing-motor-break-in/"><span class="label">← 上一篇</span><span>比賽磨合的重要性</span></a></div><div class="center"><a href="https://motorlab-tw.github.io/#guides"><span class="label">︿</span><span>回教學首頁</span></a></div><div class="right"><a href="/guides/motor-analysis-methodology/"><span class="label">下一篇 →</span><span>三支柱方法論</span></a></div></div></div></main><footer>
+<p data-i18n="g7.p11"><strong>Health Score(0–100)</strong> — ベースライン乖離度に基づく総合指標:</p>
+<ul>
+<li data-i18n="g7.r1"><strong>90–100</strong>:ベースライン安定</li>
+<li data-i18n="g7.r2"><strong>70–90</strong>:通常運用</li>
+<li data-i18n="g7.r3"><strong>50–70</strong>:衰退段階</li>
+<li data-i18n="g7.r4"><strong>&lt; 50</strong>:異常 / 引退領域</li>
+</ul>
+<div class="guide-tip">
+<p data-i18n="g7.q3">健康は単点値ではない。<strong>軌跡の評価</strong>である。</p>
+</div>
+<h4 data-i18n="g7.h5">三本柱の連動</h4>
+<div class="guide-tip">
+<p data-i18n="g7.chain"><strong>測定</strong> → 再現可能な標準環境を確立<br/><strong>比較</strong> → ベースラインからの乖離を計算<br/><strong>健康</strong> → 時間軸上の軌跡状態を評価</p>
+</div>
+<p data-i18n="g7.p12">3 つは完全な鎖を構成する:測定がなければ比較の基盤がなく、比較がなければ健康判定ができず、健康判定がなければ感覚に戻るしかない。</p>
+<h4 data-i18n="g7.h6">核心思想</h4>
+<p data-i18n="g7.p13">MotorLab の真の核心は「モーター性能を上げる」ことではなく:</p>
+<div class="guide-tip">
+<p data-i18n="g7.q4">見えない感覚を、測定可能で比較可能なシステム状態に変換すること。</p>
+</div>
+<p data-i18n="g7.p14">性能向上は結果に過ぎず、方法論こそが基盤。再現可能に測定し、客観的に比較し、定量的に健康を判定できれば、モーターチューニングは運ではなく工学になります。</p>
+</article><div class="guide-pagination"><div class="left"><a href="/ja/guides/racing-prep-techniques/"><span class="label">← 前の記事</span><span>競技準備テクニック</span></a></div><div class="center"><a href="https://motorlab-tw.github.io/ja/#guides"><span class="label">︿</span><span>ガイド一覧へ</span></a></div><div class="right"><span class="label">次の記事 →</span><span class="disabled">—</span></div></div></div></main><footer>
 <div class="container">
-<div class="footer-trademark" data-i18n="footer.trademark">"Mini 4WD"<sup>®</sup> 與 "ミニ四駆"<sup>®</sup> 為株式会社タミヤ(TAMIYA, INC.)的註冊商標(日本商標登錄號 第 2168392 號)。MotorLab 為獨立工作室,與株式会社タミヤ無任何關聯,亦未受其授權、贊助或背書。本網站提及之相關名稱僅用於指涉產品適用範圍,所有商標權益歸原權利人所有。</div>
+<div class="footer-trademark" data-i18n="footer.trademark">「Mini 4WD」<sup>®</sup> および「ミニ四駆」<sup>®</sup> は株式会社タミヤ（TAMIYA, INC.）の登録商標です（日本商標登録番号 第 2168392 号）。MotorLab は独立系スタジオであり、株式会社タミヤとは一切の関連がなく、その許諾・協賛・推奨も受けていません。本サイトでの当該名称への言及は、製品の適用範囲を示す目的のみで行われており、すべての商標権は各権利者に帰属します。</div>
 <div class="footer-inner">
 <div>
 <strong>MotorLab.tw</strong> · <span data-i18n="footer.tagline">Mini 4WD Performance Lab</span>
 </div>
 <div class="mono">
-        © 2026 MotorLab · <span data-i18n="footer.firmware">韌體</span> v3.0.8
+        © 2026 MotorLab · <span data-i18n="footer.firmware">ファームウェア</span> v3.0.8
       </div>
 </div>
 </div>
