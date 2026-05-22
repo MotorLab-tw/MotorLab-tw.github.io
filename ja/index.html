@@ -1047,6 +1047,156 @@
     }
   }
 
+  /* ===== 教學分頁專用 (zh-only at the moment) ===== */
+  /* 首頁卡片連結 */
+  .guide-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+    color: var(--accent-cyan);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .guide-card-link:hover {
+    border-bottom-color: var(--accent-cyan);
+  }
+  /* 獨立教學頁:最小 sticky nav */
+  .guide-nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(26, 29, 35, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 0;
+  }
+  .guide-nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .guide-nav .brand {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 17px;
+  }
+  .guide-nav .brand .tag {
+    color: var(--accent-cyan);
+  }
+  .guide-nav .back-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+  }
+  .guide-nav .back-link:hover {
+    color: var(--accent-cyan);
+  }
+  /* 麵包屑 */
+  .breadcrumb {
+    margin: 28px 0 18px;
+    font-size: 13px;
+    color: var(--text-muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+  }
+  .breadcrumb a {
+    color: var(--text-secondary);
+    text-decoration: none;
+  }
+  .breadcrumb a:hover {
+    color: var(--accent-cyan);
+  }
+  .breadcrumb .sep {
+    color: var(--border);
+  }
+  .breadcrumb .current {
+    color: var(--text-primary);
+  }
+  /* 教學頁 article 全幅 */
+  .guide-page main {
+    padding: 0 0 60px;
+  }
+  .guide-page .guide-article {
+    max-width: 920px;
+    margin: 0 auto 32px;
+  }
+  /* 上一篇 / 回首頁 / 下一篇 */
+  .guide-pagination {
+    max-width: 920px;
+    margin: 32px auto 24px;
+    padding: 22px 24px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 16px;
+    align-items: center;
+  }
+  .guide-pagination a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .guide-pagination a:hover {
+    color: var(--accent-cyan);
+  }
+  .guide-pagination .label {
+    color: var(--text-muted);
+    font-size: 11px;
+    font-family: monospace;
+    letter-spacing: 0.1em;
+  }
+  .guide-pagination .center {
+    text-align: center;
+  }
+  .guide-pagination .right {
+    text-align: right;
+  }
+  .guide-pagination .right a {
+    align-items: flex-end;
+  }
+  .guide-pagination a.disabled {
+    color: var(--text-muted);
+    pointer-events: none;
+    opacity: 0.4;
+  }
+  /* GitHub 原始碼連結 */
+  .guide-source {
+    max-width: 920px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+  .guide-source a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--border);
+  }
+  .guide-source a:hover {
+    color: var(--accent-cyan);
+    border-bottom-color: var(--accent-cyan);
+  }
+  @media (max-width: 720px) {
+    .guide-pagination {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    .guide-pagination .right { text-align: center; }
+    .guide-pagination .right a { align-items: center; }
+  }
+
   /* ===== Changelog ===== */
   .changelog {
     max-width: 820px;

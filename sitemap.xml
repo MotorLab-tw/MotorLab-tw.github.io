@@ -54,4 +54,30 @@
     </image:image>
   </url>
 
+  <!-- 教學分頁(zh)— en/ja 待後續加 -->
+  <url>
+    <loc>https://motorlab-tw.github.io/guides/motor-break-in-guide/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://motorlab-tw.github.io/guides/motor-break-in-mistakes/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://motorlab-tw.github.io/guides/tamiya-motor-specs/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://motorlab-tw.github.io/guides/motor-wash-vs-break-in/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

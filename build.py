@@ -222,6 +222,74 @@ GEN_COMPARISON = {
 }
 
 
+# ============================================================
+# 教學文章分頁設定(/guides/<slug>/ 獨立頁,zh 先建,en/ja 後續)
+# 每篇主關鍵字不同 → 無 cannibalization
+# slug 用英文 → 跨語言時 en/ja 共用同結構
+# prev/next 形成循環導覽
+# ============================================================
+GUIDES = [
+    {
+        "slug": "motor-break-in-guide",
+        "key": "g1",
+        "i18n": {
+            "zh": {
+                "title": "四驅車馬達磨合完全指南:從原理到實作 | MotorLab",
+                "description": "迷你四驅車(Mini 4WD)馬達磨合完整指南 — 田宮馬達磨合的科學原理、4 個關鍵變數、10 階段標準流程、磨合完成判定標準。為什麼新馬達一定要磨合,以及業餘水磨方法的問題在哪。",
+                "keywords": "馬達磨合, 四驅車馬達磨合, 迷你四驅車馬達磨合, 馬達磨合原理, 馬達磨合 10 階段, 田宮馬達磨合, 馬達磨合教學, 紅二磨合, 黑金剛磨合, 碳刷磨合, motor break-in, MotorLab",
+                "breadcrumb": "馬達磨合完全指南",
+                "h1_for_ld": "四驅車馬達磨合完全指南:從原理到實作",
+            },
+        },
+    },
+    {
+        "slug": "motor-break-in-mistakes",
+        "key": "g2",
+        "i18n": {
+            "zh": {
+                "title": "業餘車手磨合馬達總是失敗?5 個常見錯誤與正確做法 | MotorLab",
+                "description": "整理迷你四驅車車手磨合馬達最常見的 5 個錯誤:乾電池亂跑、水磨水量太多、單向磨合、不測就跑、憑感覺判斷。每一個錯誤的後果與正確做法,以及如何建立馬達健康指紋。",
+                "keywords": "馬達磨合錯誤, 業餘馬達磨合失敗, 乾電池磨合馬達, 水磨馬達錯誤, 馬達磨合方向, 馬達燒掉原因, 磁鐵退磁, 馬達健康指紋, 馬達磨合 CV",
+                "breadcrumb": "5 個常見磨合錯誤",
+                "h1_for_ld": "為什麼業餘車手磨合馬達總是失敗?5 個常見錯誤",
+            },
+        },
+    },
+    {
+        "slug": "tamiya-motor-specs",
+        "key": "g3",
+        "i18n": {
+            "zh": {
+                "title": "田宮主流馬達特性與磨合策略對照表 | 紅二/黑金剛/紫頭速查 | MotorLab",
+                "description": "田宮 8 款主流 Mini 4WD 馬達(紅二 Hyper Dash、黑金剛 Plasma Dash、紫頭 Rev Tuned、橘頭 Torque Tuned 等)的官方規格與建議磨合策略對照表。銅刷與碳刷馬達的磨合差異,以及田宮競賽合規規則。",
+                "keywords": "田宮馬達規格, 田宮馬達, 紅二 Hyper Dash, 黑金剛 Plasma Dash, 紫頭 Rev Tuned, 橘頭 Torque Tuned, 灰頭 Atomic Tuned, 綠頭 Power Dash, 白頭 Sprint Dash, 銅刷碳刷差別, 田宮馬達磨合, 田宮競賽規則",
+                "breadcrumb": "田宮馬達速查表",
+                "h1_for_ld": "田宮主流馬達特性與磨合策略對照表",
+            },
+        },
+    },
+    {
+        "slug": "motor-wash-vs-break-in",
+        "key": "g4",
+        "i18n": {
+            "zh": {
+                "title": "洗馬達 vs 磨合馬達:差別在哪?什麼時候做? | MotorLab",
+                "description": "「洗馬達」與「磨合馬達」是兩個完全不同的程序,但常被混淆。釐清兩者的時機、做法、目的差異,什麼時候該洗、洗馬達標準流程、紅二馬達生命週期保養建議。",
+                "keywords": "洗馬達, 洗馬達 vs 磨合, 四驅車洗馬達, 馬達保養週期, 馬達上油, 環保去漬油, WURTH 超潤, 紅二保養, 馬達退役判定",
+                "breadcrumb": "洗馬達 vs 磨合馬達",
+                "h1_for_ld": "洗馬達 vs 磨合馬達:差別在哪?什麼時候做?",
+            },
+        },
+    },
+]
+
+# slug 與 g{n} 的快速反查
+SLUG_BY_GKEY = {g["key"]: g["slug"] for g in GUIDES}
+
+# GitHub 原始碼連結 base
+GITHUB_REPO = "https://github.com/MotorLab-tw/MotorLab-tw.github.io"
+
+
 # keywords meta(三語共用一份,涵蓋全語言關鍵字)
 KEYWORDS = ("馬達磨合, 馬達磨合機, 四驅車馬達磨合, 迷你四驅車馬達磨合, 馬達磨合教學, "
             "モーター慣らし, モーター慣らし機, ミニ四駆 モーター慣らし, ミニ四駆のモーター慣らし, "
@@ -439,6 +507,10 @@ def build_lang(src_html, lang, i18n):
     }
     _append_ld_script(itemlist_schema)
 
+    # --- 9c. 首頁 #guides 卡片化(zh only,獨立教學頁的對應 hub)---
+    if lang == "zh":
+        _transform_guides_to_cards(soup)
+
     # --- 10. 移除母版的語言切換 JS(改用 a 連結後不需要)---
     # 保留其他 JS,只把 applyLang/i18n 相關移除可選 — 這裡保留以降低風險,
     # 但把進站自動套用改為不執行(各檔案已是該語言)
@@ -450,6 +522,220 @@ def build_lang(src_html, lang, i18n):
         "  // 各語言版本為獨立檔案,不需進站自動切換"
     )
     return html_out
+
+
+# ============================================================
+# 首頁 #guides 區段 → 卡片索引轉換 (zh only)
+# 每個 article 從「全文展開」縮成「tag + h3 + lead + 閱讀完整文章」
+# ============================================================
+def _transform_guides_to_cards(soup):
+    for art in soup.select("article.guide-article"):
+        tag_el = art.select_one(".guide-tag")
+        gkey_full = tag_el.get("data-i18n", "") if tag_el else ""
+        gkey = gkey_full.split(".")[0] if "." in gkey_full else ""
+        slug = SLUG_BY_GKEY.get(gkey)
+        if not slug:
+            continue
+        # 只保留 tag / h3 / guide-lead 三個子元素
+        keepers = []
+        for child in list(art.children):
+            if not hasattr(child, "name") or child.name is None:
+                continue
+            cls = child.get("class") or []
+            if (child.name == "span" and "guide-tag" in cls) or \
+               child.name == "h3" or \
+               (child.name == "p" and "guide-lead" in cls):
+                keepers.append(child)
+        for child in list(art.children):
+            child.extract()
+        for k in keepers:
+            art.append(k)
+        # 接「閱讀完整文章 →」連結
+        link = soup.new_tag("a", attrs={"class": "guide-card-link", "href": f"/guides/{slug}/"})
+        link.string = "閱讀完整文章 →"
+        art.append(link)
+
+
+# ============================================================
+# 獨立教學分頁產生器:/guides/<slug>/index.html
+# 完全沿用首頁的 <head> + <style>(視覺一致),body 換成 guide layout
+# ============================================================
+def build_guide_page(slug, lang, src_html, i18n, guide_cfg):
+    soup = BeautifulSoup(src_html, "lxml")
+    cfg = LANGS[lang]
+    g_i18n = guide_cfg["i18n"][lang]
+    page_url = f"{SITE}/guides/{slug}/"
+
+    # 1. <html lang>
+    soup.html["lang"] = cfg["html_lang"]
+
+    # 2. i18n fill (走完整流程以確保 footer 等共用元件正確)
+    lang_dict = i18n.get(lang, {})
+    zh_dict = i18n["zh"]
+    for el in soup.select("[data-i18n]"):
+        key = el.get("data-i18n")
+        text = lang_dict.get(key) or zh_dict.get(key)
+        if text is not None:
+            frag = BeautifulSoup(text, "html.parser")
+            el.clear()
+            for child in list(frag.children):
+                el.append(child)
+
+    # 3. 找到目標教學 article (透過 .guide-tag 的 data-i18n key prefix)
+    target_article = None
+    for art in soup.select("article.guide-article"):
+        tag_el = art.select_one(".guide-tag")
+        if tag_el and tag_el.get("data-i18n", "").startswith(guide_cfg["key"] + "."):
+            target_article = art.extract()
+            break
+    if target_article is None:
+        raise RuntimeError(f"找不到教學 article: key={guide_cfg['key']}")
+
+    # 4. 保留 footer
+    footer_el = soup.find("footer")
+    footer_extracted = footer_el.extract() if footer_el else None
+
+    # 5. 砍掉現有 JSON-LD 與 hreflang(加 guide 專用的)
+    for s in soup.find_all("script", {"type": "application/ld+json"}):
+        s.decompose()
+    for tag in soup.find_all("link", {"rel": "alternate"}):
+        tag.decompose()
+
+    # 6. <title> / meta / canonical
+    if soup.title:
+        soup.title.string = g_i18n["title"]
+
+    def set_meta(attr, attr_val, content):
+        tag = soup.find("meta", {attr: attr_val})
+        if tag:
+            tag["content"] = content
+
+    set_meta("name", "description", g_i18n["description"])
+    set_meta("name", "keywords", g_i18n["keywords"])
+    set_meta("http-equiv", "Content-Language", cfg["html_lang"])
+    set_meta("property", "og:type", "article")
+    set_meta("property", "og:url", page_url)
+    set_meta("property", "og:title", g_i18n["title"])
+    set_meta("property", "og:description", g_i18n["description"])
+    set_meta("property", "og:locale", cfg["og_locale"])
+    set_meta("name", "twitter:title", g_i18n["title"])
+    set_meta("name", "twitter:description", g_i18n["description"])
+
+    canon = soup.find("link", {"rel": "canonical"})
+    if canon:
+        canon["href"] = page_url
+
+    # 7. hreflang (現階段只有 zh-TW;en/ja guide 出爐後再補)
+    head = soup.head
+    for hl in (cfg["html_lang"], "x-default"):
+        link = soup.new_tag("link", attrs={"rel": "alternate", "hreflang": hl, "href": page_url})
+        head.append(link)
+
+    # 8. Article + BreadcrumbList JSON-LD
+    article_ld = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": g_i18n["h1_for_ld"],
+        "description": g_i18n["description"],
+        "keywords": g_i18n["keywords"],
+        "inLanguage": cfg["html_lang"],
+        "url": page_url,
+        "mainEntityOfPage": {"@type": "WebPage", "@id": page_url},
+        "author": {"@type": "Organization", "name": "MotorLab.tw", "url": SITE + "/"},
+        "publisher": {
+            "@type": "Organization",
+            "name": "MotorLab.tw",
+            "logo": {"@type": "ImageObject", "url": f"{SITE}/favicon-192.png", "width": 192, "height": 192},
+        },
+        "image": f"{SITE}/og-image.png",
+    }
+    breadcrumb_ld = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "首頁", "item": SITE + "/"},
+            {"@type": "ListItem", "position": 2, "name": "教學", "item": SITE + "/#guides"},
+            {"@type": "ListItem", "position": 3, "name": g_i18n["breadcrumb"], "item": page_url},
+        ],
+    }
+    for data in (article_ld, breadcrumb_ld):
+        s = soup.new_tag("script", attrs={"type": "application/ld+json"})
+        s.string = json.dumps(data, ensure_ascii=False, indent=2)
+        head.append(s)
+
+    # 9. 換 <body>
+    soup.body.clear()
+    soup.body["class"] = "guide-page"
+
+    # 9a. minimal sticky nav
+    nav_html = (
+        '<nav class="guide-nav"><div class="container">'
+        '<a class="brand" href="/"><span>MotorLab<span class="tag">.tw</span></span></a>'
+        '<a class="back-link" href="/">← 回首頁</a>'
+        '</div></nav>'
+    )
+    soup.body.append(BeautifulSoup(nav_html, "html.parser"))
+
+    # 9b. main(breadcrumb + article + pagination + GitHub link)
+    main_el = soup.new_tag("main")
+    container = soup.new_tag("div", attrs={"class": "container"})
+
+    bc_html = (
+        f'<nav class="breadcrumb" aria-label="Breadcrumb">'
+        f'<a href="/">首頁</a><span class="sep">/</span>'
+        f'<a href="/#guides">教學</a><span class="sep">/</span>'
+        f'<span class="current">{g_i18n["breadcrumb"]}</span>'
+        f'</nav>'
+    )
+    container.append(BeautifulSoup(bc_html, "html.parser"))
+    container.append(target_article)
+
+    # Pagination
+    idx = next((i for i, g in enumerate(GUIDES) if g["key"] == guide_cfg["key"]), -1)
+    prev_g = GUIDES[idx - 1] if idx > 0 else None
+    next_g = GUIDES[idx + 1] if idx < len(GUIDES) - 1 else None
+
+    def _link_cell(g, label, css_class):
+        if g is None:
+            return (
+                f'<div class="{css_class}"><span class="label">{label}</span>'
+                f'<span class="disabled">—</span></div>'
+            )
+        g_label = g["i18n"]["zh"]["breadcrumb"]
+        return (
+            f'<div class="{css_class}">'
+            f'<a href="/guides/{g["slug"]}/">'
+            f'<span class="label">{label}</span><span>{g_label}</span>'
+            f'</a></div>'
+        )
+
+    pag_html = (
+        '<div class="guide-pagination">'
+        + _link_cell(prev_g, "← 上一篇", "left")
+        + '<div class="center"><a href="/#guides">'
+          '<span class="label">︿</span><span>回教學首頁</span></a></div>'
+        + _link_cell(next_g, "下一篇 →", "right")
+        + '</div>'
+    )
+    container.append(BeautifulSoup(pag_html, "html.parser"))
+
+    # GitHub source link
+    gh_url = f"{GITHUB_REPO}/blob/main/guides/{slug}/index.html"
+    src_html_p = (
+        f'<p class="guide-source">在 GitHub 查看本頁原始碼:'
+        f'<a href="{gh_url}" rel="noopener" target="_blank">'
+        f'{gh_url.replace("https://", "")}</a></p>'
+    )
+    container.append(BeautifulSoup(src_html_p, "html.parser"))
+
+    main_el.append(container)
+    soup.body.append(main_el)
+
+    # 9c. footer
+    if footer_extracted is not None:
+        soup.body.append(footer_extracted)
+
+    return str(soup)
 
 
 # ============================================================
@@ -485,7 +771,24 @@ def main():
         print(f"  ✅ {out_path:<22} {size:>9,} bytes  ({cfg['html_lang']})")
 
     print()
-    print("完成!3 個語言版本已產生。")
+    print("=== 教學分頁(/guides/<slug>/)===")
+    for guide in GUIDES:
+        for lang in ("zh", "en", "ja"):
+            if lang not in guide["i18n"]:
+                continue  # 該語言尚未撰寫該篇 → 跳過
+            slug = guide["slug"]
+            lang_prefix = "" if lang == "zh" else f"{lang}/"
+            out_dir = f"{lang_prefix}guides/{slug}"
+            out_path = f"{out_dir}/index.html"
+            os.makedirs(out_dir, exist_ok=True)
+            html_out = build_guide_page(slug, lang, src_html, i18n, guide)
+            with open(out_path, "w", encoding="utf-8") as f:
+                f.write(html_out)
+            size = len(html_out.encode("utf-8"))
+            print(f"  ✅ {out_path:<55} {size:>9,} bytes  ({lang})")
+
+    print()
+    print("完成!3 個語言版本 + 教學分頁已產生。")
     print("=" * 55)
 
 

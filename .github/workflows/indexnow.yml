@@ -10,6 +10,9 @@ on:
       - 'index.html'
       - 'en/index.html'
       - 'ja/index.html'
+      - 'guides/**/index.html'
+      - 'en/guides/**/index.html'
+      - 'ja/guides/**/index.html'
       - 'sitemap.xml'
       - '*.html'
       - '*.css'
@@ -47,7 +50,11 @@ jobs:
               \"urlList\": [
                 \"https://${HOST}/\",
                 \"https://${HOST}/en/\",
-                \"https://${HOST}/ja/\"
+                \"https://${HOST}/ja/\",
+                \"https://${HOST}/guides/motor-break-in-guide/\",
+                \"https://${HOST}/guides/motor-break-in-mistakes/\",
+                \"https://${HOST}/guides/tamiya-motor-specs/\",
+                \"https://${HOST}/guides/motor-wash-vs-break-in/\"
               ]
             }")
           
