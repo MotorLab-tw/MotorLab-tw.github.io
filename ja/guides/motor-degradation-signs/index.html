@@ -4,12 +4,12 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="ja" http-equiv="Content-Language"/>
-<title>感覚からデータへ:モーター分析の三本柱方法論 | MotorLab</title>
-<meta content="モーターチューニングを「感覚」からシステム工学へ変える 3 ステップ方法論:測定、比較、健康判定。MotorLab の分析システムを支える概念フレームワーク、5 つの中核測定指標、3 つの比較方式、4 つの健康次元と Health Score 評価ロジック。" name="description"/>
+<title>ミニ四駆 モーター衰退の 8 サインと引退判定 | MotorLab</title>
+<meta content="モーター衰退の 8 サイン(性能・音・外観)と RPM 低下 4 段階閾値(&lt; 5% / 5-10% / 10-20% / &gt; 20%)による引退判定。ベースライン構築後、洗浄・引退・続行を定量的に判断、本番でモーターが死ぬ前に対処可能。" name="description"/>
 <meta content="MotorLab.tw" name="author"/>
-<meta content="モーター分析方法論, モーター測定, モーター比較, モーター健康評価, Health Score, MotorLab, motor analysis methodology, motor measurement, motor comparison, motor health assessment, Health Score, MotorLab" name="keywords"/>
+<meta content="モーター 衰退 サイン, モーター 引退 判定, モーター 寿命, RPM 低下 モーター, モーター 異常 診断, MotorLab, Mini 4WD motor degradation signs, motor retirement, motor lifespan, RPM drop motor, motor failure diagnosis, MotorLab" name="keywords"/>
 <!-- 正規網址 (避免重複內容問題) -->
-<link href="https://motorlab-tw.github.io/ja/guides/motor-analysis-methodology/" rel="canonical"/>
+<link href="https://motorlab-tw.github.io/ja/guides/motor-degradation-signs/" rel="canonical"/>
 <!-- 搜尋引擎指示 -->
 <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
 <meta content="index, follow" name="googlebot"/>
@@ -31,9 +31,9 @@
 <meta content="MotorLab" name="apple-mobile-web-app-title"/>
 <!-- Open Graph (Facebook, LINE, Discord) -->
 <meta content="article" property="og:type"/>
-<meta content="https://motorlab-tw.github.io/ja/guides/motor-analysis-methodology/" property="og:url"/>
-<meta content="感覚からデータへ:モーター分析の三本柱方法論 | MotorLab" property="og:title"/>
-<meta content="モーターチューニングを「感覚」からシステム工学へ変える 3 ステップ方法論:測定、比較、健康判定。MotorLab の分析システムを支える概念フレームワーク、5 つの中核測定指標、3 つの比較方式、4 つの健康次元と Health Score 評価ロジック。" property="og:description"/>
+<meta content="https://motorlab-tw.github.io/ja/guides/motor-degradation-signs/" property="og:url"/>
+<meta content="ミニ四駆 モーター衰退の 8 サインと引退判定 | MotorLab" property="og:title"/>
+<meta content="モーター衰退の 8 サイン(性能・音・外観)と RPM 低下 4 段階閾値(&lt; 5% / 5-10% / 10-20% / &gt; 20%)による引退判定。ベースライン構築後、洗浄・引退・続行を定量的に判断、本番でモーターが死ぬ前に対処可能。" property="og:description"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" property="og:image"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" property="og:image:secure_url"/>
 <meta content="image/png" property="og:image:type"/>
@@ -45,8 +45,8 @@
 <meta content="MotorLab.tw" property="og:site_name"/>
 <!-- Twitter Card -->
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="感覚からデータへ:モーター分析の三本柱方法論 | MotorLab" name="twitter:title"/>
-<meta content="モーターチューニングを「感覚」からシステム工学へ変える 3 ステップ方法論:測定、比較、健康判定。MotorLab の分析システムを支える概念フレームワーク、5 つの中核測定指標、3 つの比較方式、4 つの健康次元と Health Score 評価ロジック。" name="twitter:description"/>
+<meta content="ミニ四駆 モーター衰退の 8 サインと引退判定 | MotorLab" name="twitter:title"/>
+<meta content="モーター衰退の 8 サイン(性能・音・外観)と RPM 低下 4 段階閾値(&lt; 5% / 5-10% / 10-20% / &gt; 20%)による引退判定。ベースライン構築後、洗浄・引退・続行を定量的に判断、本番でモーターが死ぬ前に対処可能。" name="twitter:description"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" name="twitter:image"/>
 <meta content="MotorLab 官方網站預覽圖" name="twitter:image:alt"/>
 <!-- 結構化資料 1: Organization (公司/工作室) -->
@@ -1417,17 +1417,17 @@
     .splash-slogan { letter-spacing: 3px; }
   }
 </style>
-<link href="https://motorlab-tw.github.io/guides/motor-analysis-methodology/" hreflang="zh-TW" rel="alternate"/><link href="https://motorlab-tw.github.io/en/guides/motor-analysis-methodology/" hreflang="en" rel="alternate"/><link href="https://motorlab-tw.github.io/ja/guides/motor-analysis-methodology/" hreflang="ja" rel="alternate"/><link href="https://motorlab-tw.github.io/guides/motor-analysis-methodology/" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
+<link href="https://motorlab-tw.github.io/guides/motor-degradation-signs/" hreflang="zh-TW" rel="alternate"/><link href="https://motorlab-tw.github.io/en/guides/motor-degradation-signs/" hreflang="en" rel="alternate"/><link href="https://motorlab-tw.github.io/ja/guides/motor-degradation-signs/" hreflang="ja" rel="alternate"/><link href="https://motorlab-tw.github.io/guides/motor-degradation-signs/" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "感覚からデータへ:モーター分析の三本柱方法論",
-  "description": "モーターチューニングを「感覚」からシステム工学へ変える 3 ステップ方法論:測定、比較、健康判定。MotorLab の分析システムを支える概念フレームワーク、5 つの中核測定指標、3 つの比較方式、4 つの健康次元と Health Score 評価ロジック。",
-  "keywords": "モーター分析方法論, モーター測定, モーター比較, モーター健康評価, Health Score, MotorLab",
+  "headline": "ミニ四駆 モーター衰退の 8 サインと引退判定",
+  "description": "モーター衰退の 8 サイン(性能・音・外観)と RPM 低下 4 段階閾値(< 5% / 5-10% / 10-20% / > 20%)による引退判定。ベースライン構築後、洗浄・引退・続行を定量的に判断、本番でモーターが死ぬ前に対処可能。",
+  "keywords": "モーター 衰退 サイン, モーター 引退 判定, モーター 寿命, RPM 低下 モーター, モーター 異常 診断, MotorLab",
   "inLanguage": "ja",
-  "url": "https://motorlab-tw.github.io/ja/guides/motor-analysis-methodology/",
+  "url": "https://motorlab-tw.github.io/ja/guides/motor-degradation-signs/",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://motorlab-tw.github.io/ja/guides/motor-analysis-methodology/"
+    "@id": "https://motorlab-tw.github.io/ja/guides/motor-degradation-signs/"
   },
   "author": {
     "@type": "Organization",
@@ -1464,101 +1464,73 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "三本柱方法論",
-      "item": "https://motorlab-tw.github.io/ja/guides/motor-analysis-methodology/"
+      "name": "モーター衰退と引退",
+      "item": "https://motorlab-tw.github.io/ja/guides/motor-degradation-signs/"
     }
   ]
 }</script></head>
-<body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/ja/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/ja/">← ホームへ戻る</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/ja/">ホーム</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/ja/#guides">ガイド</a><span class="sep">/</span><span class="current">三本柱方法論</span></nav><article class="guide-article">
-<span class="guide-tag" data-i18n="g7.tag">GUIDE · 方法論</span>
-<h3 data-i18n="g7.title">感覚からデータへ:モーター分析の三本柱方法論</h3>
-<p class="guide-lead" data-i18n="g7.lead">多くのレーサーは経験で判断します — 「走らせた感覚がいい」「音がそれっぽい」。問題は、経験は引き継げず、再現できず、検証もできないこと。本記事ではモーター分析を「感覚」からシステム工学へ変える 3 ステップの方法論を紹介します:<strong>測定、比較、健康判定</strong>。これが MotorLab の分析システム全体を支える概念フレームワークです。</p>
-<h4 data-i18n="g7.h1">なぜモーター分析に方法論が必要か</h4>
-<p data-i18n="g7.p1">モーターチューニングでよくある問題:</p>
+<body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/ja/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/ja/">← ホームへ戻る</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/ja/">ホーム</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/ja/#guides">ガイド</a><span class="sep">/</span><span class="current">モーター衰退と引退</span></nav><article class="guide-article">
+<span class="guide-tag" data-i18n="g8.tag">GUIDE · 故障診断</span>
+<h3 data-i18n="g8.title">ミニ四駆 モーター衰退の 8 サインと引退判定</h3>
+<p class="guide-lead" data-i18n="g8.lead">慣らし完了モーターも永久に最高性能を保つわけではありません。第 5 レース頃から衰退が始まりますが、多くのレーサーは「明らかに走らない」状態になってから気づきます。本記事ではモーター衰退の 8 サイン + 引退判定の閾値を整理。本番でモーターが死ぬ前に「洗う・引退・続行」の判断ができるようになります。</p>
+<h4 data-i18n="g8.h1">モーターはなぜ衰退するのか</h4>
+<p data-i18n="g8.p1">衰退はランダムではなく、3 つの物理プロセスの蓄積です:</p>
 <ul>
-<li data-i18n="g7.l1">異なる電圧で RPM を測ると結論が矛盾する</li>
-<li data-i18n="g7.l2">「慣らし完了」した 2 個のモーターのデータが比較できない</li>
-<li data-i18n="g7.l3">レース前にモーターが遅くなったが、何が変わったか説明できない</li>
+<li data-i18n="g8.l1"><strong>ブラシと整流子(コミュテーター)の摩耗</strong>—接触面が回転のたびに微量摩耗、接触抵抗が上昇、IR 損失が増えて実効出力 RPM が低下</li>
+<li data-i18n="g8.l2"><strong>高温による磁石の減磁</strong>—閾値温度(タミヤ ND 磁石で約 80℃)を持続的に超えると磁束が永久的に低下、出力能力が不可逆に低下</li>
+<li data-i18n="g8.l3"><strong>内部 copper dust の蓄積と arcing</strong>—摩耗したブラシ材料が内部に散布、整流子間隙でのアークを強化、接触面ダメージを加速</li>
 </ul>
-<p data-i18n="g7.p2">問題の根本は「やり方が間違っている」ではなく、<strong>共通の分析フレームワークがない</strong>こと。</p>
-<h4 data-i18n="g7.h2">第 1 の柱:測定(Measurement)</h4>
-<p data-i18n="g7.p3">測定の目的は「数値を取る」ことではなく、<strong>再現可能なテスト環境を再構築する</strong>こと。</p>
-<p data-i18n="g7.std"><strong>測定基準(固定が必須)</strong>:</p>
+<p data-i18n="g8.p2">ベアリング摩耗も「モーター異常」と混同されやすいですが、厳密にはシャーシ部品の問題(モーター本体ではない)。</p>
+<h4 data-i18n="g8.h2">A 類:性能サイン(3 つの定量観察)</h4>
+<p data-i18n="g8.a1"><strong>1. 同電圧での RPM 低下</strong>—最も直接的な衰退指標。ベースライン測定後、定期的に再測定:</p>
 <ul>
-<li data-i18n="g7.b1">電圧条件 — 固定または段階制御、電源内部抵抗を記録</li>
-<li data-i18n="g7.b2">時間条件 — warm-up 手順を統一、測定時間窓を固定</li>
-<li data-i18n="g7.b3">環境条件 — 温度・負荷を統一</li>
+<li data-i18n="g8.a1l1"><strong>&lt; 5%</strong>:正常摩耗</li>
+<li data-i18n="g8.a1l2"><strong>5–10%</strong>:初期衰退(まだ救済可能)</li>
+<li data-i18n="g8.a1l3"><strong>10–20%</strong>:明確な衰退</li>
+<li data-i18n="g8.a1l4"><strong>&gt; 20%</strong>:EoL(end of life)接近</li>
 </ul>
-<p data-i18n="g7.p4"><strong>MotorLab の 5 つの中核測定指標</strong>:</p>
+<p data-i18n="g8.a2"><strong>2. 起動遅延</strong>—通電から RPM 安定までの時間が長くなる。新品は 0.5–1 秒、衰退モーターは 2 秒以上かかることも。</p>
+<p data-i18n="g8.a3"><strong>3. 同電池で同コースを走るラップ数が減る</strong>—同型番電池、同コース、同モーターで、ベースラインよりラップ数が少ない = 効率低下。</p>
+<h4 data-i18n="g8.h3">B 類:音と手感のサイン(3 つの感覚観察)</h4>
+<div class="guide-tip">
+<p data-i18n="g8.b_note">音の判断は主観的で、各モーターの新品時の音色も異なります。ここでは原理のみ列挙し、読者自身が対照感覚を構築する(同じモーターの新品時と現状を比較)ことを前提とします。文字による音の模倣はしません。</p>
+</div>
+<p data-i18n="g8.b4"><strong>4. 運転音が不規則化する</strong>—原理:ブラシと整流子の接触不安定により arcing が強化、電流がパルス化、運転音のリズム感が損なわれる。</p>
+<p data-i18n="g8.b5"><strong>5. 高周波の引っ掻き音が顕著</strong>—原理:ブラシが薄くなることでスプリング圧力分布が変化、ブラシと整流子の接触面で異常摩擦が発生。</p>
+<p data-i18n="g8.b6"><strong>6. 同条件下での温度上昇が顕著</strong>—原理:接触抵抗の上昇 → IR 損失の増加 → エネルギーが熱に変換される割合が増加。手感でベースラインより熱ければ明確なシグナル。</p>
+<h4 data-i18n="g8.h4">C 類:外観と機械サイン(2 つの非分解検査)</h4>
+<p data-i18n="g8.c7"><strong>7. モーター端子片の変色または焼け跡</strong>—端子片の露出金属が黄ばみ、黒ずみ、青い焼け跡を呈する = 高温イベント経験あり。</p>
+<p data-i18n="g8.c8"><strong>8. 無電源で軸心を手回し、新品より抵抗が明らかに大きい</strong>—同型番の新品と比較テスト。新品はスムーズに回転、衰退モーターは「渋い」「カクカク」感(磁石の不均衡、ブラシの粘着、軸受抵抗のいずれか)。</p>
+<div class="guide-tip">
+<p data-i18n="g8.adv"><strong>進階補足</strong>:定量観察(電流 CV、FFT 異常周波数帯など)はより精密なデータ側サインです。測定方法は<a href="../motor-analysis-methodology/">三本柱方法論</a>を参照。</p>
+</div>
+<h4 data-i18n="g8.h5">判断マトリクス:洗う、引退、それとも続行?</h4>
 <table class="guide-table">
 <thead>
-<tr><th data-i18n="g7.m.metric">指標</th><th data-i18n="g7.m.reflect">反映する内容</th></tr>
+<tr><th data-i18n="g8.t.state">状態</th><th data-i18n="g8.t.rpm">RPM 低下幅</th><th data-i18n="g8.t.other">その他のサイン</th><th data-i18n="g8.t.action">処置</th></tr>
 </thead>
 <tbody>
-<tr><td data-i18n="g7.m.r1n">電流(Current)</td><td data-i18n="g7.m.r1r">抵抗と効率</td></tr>
-<tr><td data-i18n="g7.m.r2n">回転数(RPM)</td><td data-i18n="g7.m.r2r">出力能力</td></tr>
-<tr><td data-i18n="g7.m.r3n">温度上昇(Thermal)</td><td data-i18n="g7.m.r3r">エネルギー損失</td></tr>
-<tr><td data-i18n="g7.m.r4n">安定性(Stability)</td><td data-i18n="g7.m.r4r">システム一貫性</td></tr>
-<tr><td data-i18n="g7.m.r5n">振動(Vibration)</td><td data-i18n="g7.m.r5r">機械健康</td></tr>
+<tr><td data-i18n="g8.t.r1s">正常摩耗</td><td data-i18n="g8.t.r1r">&lt; 5%</td><td data-i18n="g8.t.r1o">なし</td><td data-i18n="g8.t.r1a">続行</td></tr>
+<tr><td data-i18n="g8.t.r2s">初期衰退</td><td data-i18n="g8.t.r2r">5–10%</td><td data-i18n="g8.t.r2o">渋い感じあり</td><td data-i18n="g8.t.r2a"><a href="../motor-wash-vs-break-in/">洗浄 + 注油</a></td></tr>
+<tr><td data-i18n="g8.t.r3s">引退候補</td><td data-i18n="g8.t.r3r">10–20%</td><td data-i18n="g8.t.r3o">複数サインあり</td><td data-i18n="g8.t.r3a">練習用、公式戦不可</td></tr>
+<tr><td data-i18n="g8.t.r4s">EoL 確定</td><td data-i18n="g8.t.r4r">&gt; 20% / 起動失敗 / 顕著な過熱</td><td data-i18n="g8.t.r4o">—</td><td data-i18n="g8.t.r4a">引退</td></tr>
 </tbody>
 </table>
-<div class="guide-tip">
-<p data-i18n="g7.q1">測定はデータ収集ではない。<strong>環境再構築</strong>である。</p>
-</div>
-<h4 data-i18n="g7.h3">第 2 の柱:比較(Comparison)</h4>
-<p data-i18n="g7.p5">単一の数値には意味がない — 18,500 RPM は「良い」のか「悪い」のか?答えは常に「何に対して」。</p>
-<p data-i18n="g7.p6"><strong>3 つの比較方式</strong>:</p>
+<h4 data-i18n="g8.h6">モーターを速く殺す 3 つの定番ミス</h4>
+<p data-i18n="g8.p3">これらは日本のミニ四駆コミュニティで長年観察されている「モーターキラー」シナリオ:</p>
+<ol>
+<li data-i18n="g8.e1"><strong>コースアウト後、タイヤロック状態での粗暴な回収</strong>—車輪がコースに引っかかった状態で引き抜くと、逆トルクがモーター内部構造を直撃</li>
+<li data-i18n="g8.e2"><strong>回転中の車輪を手で押さえる</strong>—「止めて確認したい」だけでも、押さえる = stall。電流が瞬間爆増、温度上昇</li>
+<li data-i18n="g8.e3"><strong>Cold start 全速</strong>—モーターがウォームアップする前に 3V 全速、内部油膜が均一に分布する前に高負荷 → uneven brush wear</li>
+</ol>
+<h4 data-i18n="g8.h7">引退モーターの処置</h4>
 <ul>
-<li data-i18n="g7.c1"><strong>自己比較(時系列)</strong> — 最も重要。同じモーターの第 1、10、30 回目テストの変化。絶対値ではなく、<strong>トレンドの方向</strong>を見る。</li>
-<li data-i18n="g7.c2"><strong>群体比較(Benchmark)</strong> — 個体横断。同型モーターの群体と比較。percentile ランキング、ベースラインからの乖離量を出力。</li>
-<li data-i18n="g7.c3"><strong>効率比較(Efficiency)</strong> — モデル横断。RPM/Current や Output per Watt を比較 — 単一極値による誤導を回避。</li>
+<li data-i18n="g8.r1"><strong>arcing と整流子の grooves は不可逆</strong>—どれだけ洗浄、リコンディションしても内部接触面の物理損傷は復元不可</li>
+<li data-i18n="g8.r2"><strong>適した用途</strong>:練習用車、解体教材(ブラシ摩耗パターンを観察して経験値を構築)</li>
+<li data-i18n="g8.r3"><strong>適さない用途</strong>:リコンディション後の公式戦投入 — 表面修復のみで内部損傷は残り、リスクプロファイルが予測不能になる</li>
+<li data-i18n="g8.r4"><strong>考え方</strong>:モーター EoL は失敗ではなく、ミニ四駆競技の正常な循環。プロレーサーは平均でシーズンあたり 5–10 個のモーターを引退させます。コストであり、損失ではない。</li>
 </ul>
-<p data-i18n="g7.p7"><strong>よくある誤った比較</strong>:異なる電圧で RPM を直接比較、異なる負荷条件下での対照、ピーク値だけ見て平均値を無視、時間軸の欠落。</p>
-<div class="guide-tip">
-<p data-i18n="g7.q2">比較は大きさの評価ではない。<strong>乖離の計算</strong>である。</p>
-</div>
-<h4 data-i18n="g7.h4">第 3 の柱:健康判定(Health Assessment)</h4>
-<p data-i18n="g7.p8">健康は「速さ」ではなく、「<strong>予測可能な挙動を維持できているか</strong>」。</p>
-<p data-i18n="g7.p9"><strong>4 つの健康次元</strong>:</p>
-<table class="guide-table">
-<thead>
-<tr><th data-i18n="g7.hd.dim">次元</th><th data-i18n="g7.hd.obs">観察点</th></tr>
-</thead>
-<tbody>
-<tr><td data-i18n="g7.hd.r1d">性能(Performance)</td><td data-i18n="g7.hd.r1o">RPM トレンド、出力衰退率</td></tr>
-<tr><td data-i18n="g7.hd.r2d">効率(Efficiency)</td><td data-i18n="g7.hd.r2o">電流上昇トレンド、エネルギー損失比</td></tr>
-<tr><td data-i18n="g7.hd.r3d">安定性(Stability)</td><td data-i18n="g7.hd.r3o">RPM 変動、電流ノイズ</td></tr>
-<tr><td data-i18n="g7.hd.r4d">機械(Mechanical)</td><td data-i18n="g7.hd.r4o">振動量、異常周波数パターン</td></tr>
-</tbody>
-</table>
-<p data-i18n="g7.p10"><strong>3 つの健康状態</strong>:</p>
-<ul>
-<li data-i18n="g7.s1"><strong>正常</strong> — 緩やかな変化、滑らかな曲線</li>
-<li data-i18n="g7.s2"><strong>衰退</strong> — 安定した下降トレンド、効率低下</li>
-<li data-i18n="g7.s3"><strong>異常</strong> — 突発的乖離、信号不安定</li>
-</ul>
-<p data-i18n="g7.p11"><strong>Health Score(0–100)</strong> — ベースライン乖離度に基づく総合指標:</p>
-<ul>
-<li data-i18n="g7.r1"><strong>90–100</strong>:ベースライン安定</li>
-<li data-i18n="g7.r2"><strong>70–90</strong>:通常運用</li>
-<li data-i18n="g7.r3"><strong>50–70</strong>:衰退段階</li>
-<li data-i18n="g7.r4"><strong>&lt; 50</strong>:異常 / 引退領域</li>
-</ul>
-<div class="guide-tip">
-<p data-i18n="g7.q3">健康は単点値ではない。<strong>軌跡の評価</strong>である。</p>
-</div>
-<h4 data-i18n="g7.h5">三本柱の連動</h4>
-<div class="guide-tip">
-<p data-i18n="g7.chain"><strong>測定</strong> → 再現可能な標準環境を確立<br/><strong>比較</strong> → ベースラインからの乖離を計算<br/><strong>健康</strong> → 時間軸上の軌跡状態を評価</p>
-</div>
-<p data-i18n="g7.p12">3 つは完全な鎖を構成する:測定がなければ比較の基盤がなく、比較がなければ健康判定ができず、健康判定がなければ感覚に戻るしかない。</p>
-<h4 data-i18n="g7.h6">核心思想</h4>
-<p data-i18n="g7.p13">MotorLab の真の核心は「モーター性能を上げる」ことではなく:</p>
-<div class="guide-tip">
-<p data-i18n="g7.q4">見えない感覚を、測定可能で比較可能なシステム状態に変換すること。</p>
-</div>
-<p data-i18n="g7.p14">性能向上は結果に過ぎず、方法論こそが基盤。再現可能に測定し、客観的に比較し、定量的に健康を判定できれば、モーターチューニングは運ではなく工学になります。</p>
-</article><div class="guide-pagination"><div class="left"><a href="/ja/guides/racing-prep-techniques/"><span class="label">← 前の記事</span><span>競技準備テクニック</span></a></div><div class="center"><a href="https://motorlab-tw.github.io/ja/#guides"><span class="label">︿</span><span>ガイド一覧へ</span></a></div><div class="right"><a href="/ja/guides/motor-degradation-signs/"><span class="label">次の記事 →</span><span>モーター衰退と引退</span></a></div></div></div></main><footer>
+</article><div class="guide-pagination"><div class="left"><a href="/ja/guides/motor-analysis-methodology/"><span class="label">← 前の記事</span><span>三本柱方法論</span></a></div><div class="center"><a href="https://motorlab-tw.github.io/ja/#guides"><span class="label">︿</span><span>ガイド一覧へ</span></a></div><div class="right"><span class="label">次の記事 →</span><span class="disabled">—</span></div></div></div></main><footer>
 <div class="container">
 <div class="footer-trademark" data-i18n="footer.trademark">「Mini 4WD」<sup>®</sup> および「ミニ四駆」<sup>®</sup> は株式会社タミヤ（TAMIYA, INC.）の登録商標です（日本商標登録番号 第 2168392 号）。MotorLab は独立系スタジオであり、株式会社タミヤとは一切の関連がなく、その許諾・協賛・推奨も受けていません。本サイトでの当該名称への言及は、製品の適用範囲を示す目的のみで行われており、すべての商標権は各権利者に帰属します。</div>
 <div class="footer-inner">

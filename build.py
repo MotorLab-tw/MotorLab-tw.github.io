@@ -418,6 +418,33 @@ GUIDES = [
             },
         },
     },
+    {
+        "slug": "motor-degradation-signs",
+        "key": "g8",
+        "i18n": {
+            "zh": {
+                "title": "四驅車馬達衰退的 8 個徵兆與退役判定門檻 | MotorLab",
+                "description": "整理 8 個馬達衰退徵兆(性能、聲音、外觀)與 RPM 下降 4 段門檻(< 5% / 5-10% / 10-20% / > 20%)的退役判定。建立 baseline 後可量化判斷該洗、該退役、還是繼續用,避免本番前發現馬達失效。",
+                "keywords": "馬達衰退徵兆, 馬達退役判定, 馬達壽命, RPM 下降 馬達, 馬達異常 診斷, MotorLab",
+                "breadcrumb": "馬達衰退與退役",
+                "h1_for_ld": "四驅車馬達衰退的 8 個徵兆與退役判定門檻",
+            },
+            "en": {
+                "title": "8 Signs Your Mini 4WD Motor Is Dying — When to Wash vs Retire | MotorLab",
+                "description": "Eight motor degradation signs (performance, sound/feel, external) and a 4-tier RPM-drop threshold (< 5% / 5-10% / 10-20% / > 20%) for retirement judgment. Build a baseline and quantify when to wash, retire, or keep using — instead of discovering failure on race day.",
+                "keywords": "Mini 4WD motor degradation signs, motor retirement, motor lifespan, RPM drop motor, motor failure diagnosis, MotorLab",
+                "breadcrumb": "Motor Degradation & Retirement",
+                "h1_for_ld": "8 Signs Your Mini 4WD Motor Is Dying — When to Wash vs Retire",
+            },
+            "ja": {
+                "title": "ミニ四駆 モーター衰退の 8 サインと引退判定 | MotorLab",
+                "description": "モーター衰退の 8 サイン(性能・音・外観)と RPM 低下 4 段階閾値(< 5% / 5-10% / 10-20% / > 20%)による引退判定。ベースライン構築後、洗浄・引退・続行を定量的に判断、本番でモーターが死ぬ前に対処可能。",
+                "keywords": "モーター 衰退 サイン, モーター 引退 判定, モーター 寿命, RPM 低下 モーター, モーター 異常 診断, MotorLab",
+                "breadcrumb": "モーター衰退と引退",
+                "h1_for_ld": "ミニ四駆 モーター衰退の 8 サインと引退判定",
+            },
+        },
+    },
 ]
 
 # UI 字串(教學頁面通用元件:nav / 麵包屑 / 分頁)

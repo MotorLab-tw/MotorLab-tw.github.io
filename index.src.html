@@ -2453,6 +2453,77 @@
         <p data-i18n="g7.p14">性能提升只是結果,方法論才是基礎。當你能可重現地量測、能客觀地比較、能定量地判斷健康,馬達調校就不再是運氣,而是工程。</p>
       </article>
 
+      <!-- Guide 8: 馬達衰退徵兆與退役判定 -->
+      <article class="guide-article">
+        <span class="guide-tag" data-i18n="g8.tag">GUIDE · 故障診斷</span>
+        <h3 data-i18n="g8.title">四驅車馬達衰退的 8 個徵兆與退役判定門檻</h3>
+        <p class="guide-lead" data-i18n="g8.lead">新馬達磨好後不會永久維持狀態。從第 5 場比賽開始,馬達就會逐漸衰退,但很多車手要等到「明顯跑不動」才發現。本文整理 8 個衰退徵兆 + 退役判定門檻,讓你在馬達真正報廢前就能做出處置決策(洗、退役、或繼續用)。</p>
+
+        <h4 data-i18n="g8.h1">為什麼馬達會衰退</h4>
+        <p data-i18n="g8.p1">衰退不是隨機事件,而是 3 個物理過程的累積:</p>
+        <ul>
+          <li data-i18n="g8.l1"><strong>碳刷與整流子(銅頭)摩耗</strong>—接觸面在每次轉動中微量磨損,接觸電阻逐漸上升,IR 損失增加,有效輸出 RPM 下降</li>
+          <li data-i18n="g8.l2"><strong>高溫造成磁鐵退磁</strong>—持續超過閾值溫度(田宮 ND 磁鐵約 80℃)會永久降低磁通量,輸出能力不可逆下降</li>
+          <li data-i18n="g8.l3"><strong>內部 copper dust 累積與 arcing</strong>—brush 摩耗的銅粉散落在內部,在 commutator 表面間隙加劇電弧,進一步傷害接觸面</li>
+        </ul>
+        <p data-i18n="g8.p2">軸承摩耗也會混進「馬達異常」的判斷,但嚴格說是車體零件問題(不是馬達本身)。</p>
+
+        <h4 data-i18n="g8.h2">A 類:性能徵兆(3 個量化觀察)</h4>
+        <p data-i18n="g8.a1"><strong>1. 同電壓 RPM 下降</strong>—最直接的衰退指標。建立 baseline 後定期重測,門檻:</p>
+        <ul>
+          <li data-i18n="g8.a1l1"><strong>&lt; 5%</strong>:正常磨耗</li>
+          <li data-i18n="g8.a1l2"><strong>5–10%</strong>:早期衰退(可能還可救)</li>
+          <li data-i18n="g8.a1l3"><strong>10–20%</strong>:明顯衰退</li>
+          <li data-i18n="g8.a1l4"><strong>&gt; 20%</strong>:接近 EoL(end of life)</li>
+        </ul>
+        <p data-i18n="g8.a2"><strong>2. 啟動延遲</strong>—從通電到 RPM 達到穩定所需時間變長。新品約 0.5–1 秒,衰退馬達可能 2 秒以上才穩定。</p>
+        <p data-i18n="g8.a3"><strong>3. 同電池跑同跑道圈數減少</strong>—相同型號電池、相同跑道、同顆馬達,跑的圈數比 baseline 少 = 效率下降。</p>
+
+        <h4 data-i18n="g8.h3">B 類:聲音與手感徵兆(3 個感官觀察)</h4>
+        <div class="guide-tip">
+          <p data-i18n="g8.b_note">聲音判斷主觀且每顆馬達原始音色不同,這裡只列出原理,讓你自己建立對照感(同顆馬達新品與現況比),不嘗試文字模擬聲音。</p>
+        </div>
+        <p data-i18n="g8.b4"><strong>4. 運轉聲音不規則化</strong>—原理:brush-commutator 接觸不穩造成 arcing 加劇,電流脈衝化反映在運轉聲音的節奏感變差。</p>
+        <p data-i18n="g8.b5"><strong>5. 高頻刮擦聲明顯</strong>—原理:brush 變薄使 spring 壓力分布改變,brush 與 commutator 的接觸面異常摩擦。</p>
+        <p data-i18n="g8.b6"><strong>6. 同條件下溫升明顯</strong>—原理:接觸電阻上升 → IR 損失增加 → 能量轉換為熱的比例上升。手感比 baseline 燙是明確訊號。</p>
+
+        <h4 data-i18n="g8.h4">C 類:外觀與機械徵兆(2 個不拆解可檢)</h4>
+        <p data-i18n="g8.c7"><strong>7. 馬達端子片變色或出現過熱痕跡</strong>—端子片外露金屬出現變黃、發黑、或藍色火痕 = 曾經歷高溫事件。</p>
+        <p data-i18n="g8.c8"><strong>8. 無電源手轉軸心,阻力比新品明顯大</strong>—拿同型號新品做對照測試。新品手轉應該很順,衰退馬達會明顯感覺「澀」、「卡卡」(magnet field 失衡、brush 黏滯、或軸承拉摩擦)。</p>
+        <div class="guide-tip">
+          <p data-i18n="g8.adv"><strong>進階補充</strong>:量化觀察(CV 電流變異係數、FFT 異常頻段等)是更精準的數據徵兆,操作方法詳見<a href="../motor-analysis-methodology/">三支柱方法論</a>。</p>
+        </div>
+
+        <h4 data-i18n="g8.h5">處置決策:該洗、該退役、還是繼續用?</h4>
+        <table class="guide-table">
+          <thead>
+            <tr><th data-i18n="g8.t.state">狀態</th><th data-i18n="g8.t.rpm">RPM 下降幅度</th><th data-i18n="g8.t.other">其他徵兆</th><th data-i18n="g8.t.action">處置</th></tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n="g8.t.r1s">正常磨耗</td><td data-i18n="g8.t.r1r">&lt; 5%</td><td data-i18n="g8.t.r1o">無</td><td data-i18n="g8.t.r1a">繼續使用</td></tr>
+            <tr><td data-i18n="g8.t.r2s">早期衰退</td><td data-i18n="g8.t.r2r">5–10%</td><td data-i18n="g8.t.r2o">可能有澀感</td><td data-i18n="g8.t.r2a"><a href="../motor-wash-vs-break-in/">洗馬達 + 重新上油</a></td></tr>
+            <tr><td data-i18n="g8.t.r3s">退役候選</td><td data-i18n="g8.t.r3r">10–20%</td><td data-i18n="g8.t.r3o">多個徵兆並存</td><td data-i18n="g8.t.r3a">練習用,不上正式賽</td></tr>
+            <tr><td data-i18n="g8.t.r4s">確認 EoL</td><td data-i18n="g8.t.r4r">&gt; 20% / 啟動失敗 / 顯著過熱</td><td data-i18n="g8.t.r4o">—</td><td data-i18n="g8.t.r4a">退役</td></tr>
+          </tbody>
+        </table>
+
+        <h4 data-i18n="g8.h6">加速衰退的 3 個常見錯誤</h4>
+        <p data-i18n="g8.p3">這些是日文 Mini 4WD 圈長期觀察的「快速燒馬達」場景:</p>
+        <ol>
+          <li data-i18n="g8.e1"><strong>跑道脫出後粗暴回收</strong>—タイヤロック(車輪被卡死)狀態下硬拉,反扭力直接傷馬達內部結構</li>
+          <li data-i18n="g8.e2"><strong>強制按住轉動中的車輪</strong>—即使只是「想停下來檢查」,按住正在轉的車輪 = stall,瞬間電流爆增、過熱</li>
+          <li data-i18n="g8.e3"><strong>Cold start 全速跑</strong>—馬達還沒熱身就 3V 全速,內部油膜尚未均勻分布,造成 uneven brush wear</li>
+        </ol>
+
+        <h4 data-i18n="g8.h7">退役馬達怎麼辦</h4>
+        <ul>
+          <li data-i18n="g8.r1"><strong>arcing 與 commutator grooves 不可逆</strong>—無論怎麼洗、怎麼整新,內部接觸面的物理損傷無法復原</li>
+          <li data-i18n="g8.r2"><strong>適合場景</strong>:練習用車、教學用解體標本(看 brush 磨耗模式建立經驗值)</li>
+          <li data-i18n="g8.r3"><strong>不適合</strong>:整新後上正式賽(只能修表面,內部損傷仍在,且風險不可預測)</li>
+          <li data-i18n="g8.r4"><strong>心態</strong>:馬達 EoL 不是失敗,是 Mini 4WD 競技的正常循環。職業車手平均每賽季退役 5–10 顆馬達,這是成本不是損失。</li>
+        </ul>
+      </article>
+
     </div>
   </div>
 </section>
@@ -3068,6 +3139,49 @@
       'g7.q4': '把不可見的手感,變成可量化的系統狀態。',
       'g7.p14': '性能提升只是結果,方法論才是基礎。當你能可重現地量測、能客觀地比較、能定量地判斷健康,馬達調校就不再是運氣,而是工程。',
 
+      'g8.tag': 'GUIDE · 故障診斷',
+      'g8.title': '四驅車馬達衰退的 8 個徵兆與退役判定門檻',
+      'g8.lead': '新馬達磨好後不會永久維持狀態。從第 5 場比賽開始,馬達就會逐漸衰退,但很多車手要等到「明顯跑不動」才發現。本文整理 8 個衰退徵兆 + 退役判定門檻,讓你在馬達真正報廢前就能做出處置決策(洗、退役、或繼續用)。',
+      'g8.h1': '為什麼馬達會衰退',
+      'g8.p1': '衰退不是隨機事件,而是 3 個物理過程的累積:',
+      'g8.l1': '<strong>碳刷與整流子(銅頭)摩耗</strong>—接觸面在每次轉動中微量磨損,接觸電阻逐漸上升,IR 損失增加,有效輸出 RPM 下降',
+      'g8.l2': '<strong>高溫造成磁鐵退磁</strong>—持續超過閾值溫度(田宮 ND 磁鐵約 80℃)會永久降低磁通量,輸出能力不可逆下降',
+      'g8.l3': '<strong>內部 copper dust 累積與 arcing</strong>—brush 摩耗的銅粉散落在內部,在 commutator 表面間隙加劇電弧,進一步傷害接觸面',
+      'g8.p2': '軸承摩耗也會混進「馬達異常」的判斷,但嚴格說是車體零件問題(不是馬達本身)。',
+      'g8.h2': 'A 類:性能徵兆(3 個量化觀察)',
+      'g8.a1': '<strong>1. 同電壓 RPM 下降</strong>—最直接的衰退指標。建立 baseline 後定期重測,門檻:',
+      'g8.a1l1': '<strong>&lt; 5%</strong>:正常磨耗',
+      'g8.a1l2': '<strong>5–10%</strong>:早期衰退(可能還可救)',
+      'g8.a1l3': '<strong>10–20%</strong>:明顯衰退',
+      'g8.a1l4': '<strong>&gt; 20%</strong>:接近 EoL(end of life)',
+      'g8.a2': '<strong>2. 啟動延遲</strong>—從通電到 RPM 達到穩定所需時間變長。新品約 0.5–1 秒,衰退馬達可能 2 秒以上才穩定。',
+      'g8.a3': '<strong>3. 同電池跑同跑道圈數減少</strong>—相同型號電池、相同跑道、同顆馬達,跑的圈數比 baseline 少 = 效率下降。',
+      'g8.h3': 'B 類:聲音與手感徵兆(3 個感官觀察)',
+      'g8.b_note': '聲音判斷主觀且每顆馬達原始音色不同,這裡只列出原理,讓你自己建立對照感(同顆馬達新品與現況比),不嘗試文字模擬聲音。',
+      'g8.b4': '<strong>4. 運轉聲音不規則化</strong>—原理:brush-commutator 接觸不穩造成 arcing 加劇,電流脈衝化反映在運轉聲音的節奏感變差。',
+      'g8.b5': '<strong>5. 高頻刮擦聲明顯</strong>—原理:brush 變薄使 spring 壓力分布改變,brush 與 commutator 的接觸面異常摩擦。',
+      'g8.b6': '<strong>6. 同條件下溫升明顯</strong>—原理:接觸電阻上升 → IR 損失增加 → 能量轉換為熱的比例上升。手感比 baseline 燙是明確訊號。',
+      'g8.h4': 'C 類:外觀與機械徵兆(2 個不拆解可檢)',
+      'g8.c7': '<strong>7. 馬達端子片變色或出現過熱痕跡</strong>—端子片外露金屬出現變黃、發黑、或藍色火痕 = 曾經歷高溫事件。',
+      'g8.c8': '<strong>8. 無電源手轉軸心,阻力比新品明顯大</strong>—拿同型號新品做對照測試。新品手轉應該很順,衰退馬達會明顯感覺「澀」、「卡卡」(magnet field 失衡、brush 黏滯、或軸承拉摩擦)。',
+      'g8.adv': '<strong>進階補充</strong>:量化觀察(CV 電流變異係數、FFT 異常頻段等)是更精準的數據徵兆,操作方法詳見<a href="../motor-analysis-methodology/">三支柱方法論</a>。',
+      'g8.h5': '處置決策:該洗、該退役、還是繼續用?',
+      'g8.t.state': '狀態', 'g8.t.rpm': 'RPM 下降幅度', 'g8.t.other': '其他徵兆', 'g8.t.action': '處置',
+      'g8.t.r1s': '正常磨耗', 'g8.t.r1r': '&lt; 5%', 'g8.t.r1o': '無', 'g8.t.r1a': '繼續使用',
+      'g8.t.r2s': '早期衰退', 'g8.t.r2r': '5–10%', 'g8.t.r2o': '可能有澀感', 'g8.t.r2a': '<a href="../motor-wash-vs-break-in/">洗馬達 + 重新上油</a>',
+      'g8.t.r3s': '退役候選', 'g8.t.r3r': '10–20%', 'g8.t.r3o': '多個徵兆並存', 'g8.t.r3a': '練習用,不上正式賽',
+      'g8.t.r4s': '確認 EoL', 'g8.t.r4r': '&gt; 20% / 啟動失敗 / 顯著過熱', 'g8.t.r4o': '—', 'g8.t.r4a': '退役',
+      'g8.h6': '加速衰退的 3 個常見錯誤',
+      'g8.p3': '這些是日文 Mini 4WD 圈長期觀察的「快速燒馬達」場景:',
+      'g8.e1': '<strong>跑道脫出後粗暴回收</strong>—タイヤロック(車輪被卡死)狀態下硬拉,反扭力直接傷馬達內部結構',
+      'g8.e2': '<strong>強制按住轉動中的車輪</strong>—即使只是「想停下來檢查」,按住正在轉的車輪 = stall,瞬間電流爆增、過熱',
+      'g8.e3': '<strong>Cold start 全速跑</strong>—馬達還沒熱身就 3V 全速,內部油膜尚未均勻分布,造成 uneven brush wear',
+      'g8.h7': '退役馬達怎麼辦',
+      'g8.r1': '<strong>arcing 與 commutator grooves 不可逆</strong>—無論怎麼洗、怎麼整新,內部接觸面的物理損傷無法復原',
+      'g8.r2': '<strong>適合場景</strong>:練習用車、教學用解體標本(看 brush 磨耗模式建立經驗值)',
+      'g8.r3': '<strong>不適合</strong>:整新後上正式賽(只能修表面,內部損傷仍在,且風險不可預測)',
+      'g8.r4': '<strong>心態</strong>:馬達 EoL 不是失敗,是 Mini 4WD 競技的正常循環。職業車手平均每賽季退役 5–10 顆馬達,這是成本不是損失。',
+
       'cl.tag': 'CHANGELOG',
       'cl.title': '韌體更新日誌',
       'cl.subtitle': '所有版本透過線上更新自動推送至已啟用裝置。',
@@ -3511,6 +3625,49 @@
       'g7.p13': 'MotorLab\'s real core isn\'t "making motors faster." It\'s:',
       'g7.q4': 'Converting invisible feel into measurable and comparable system states.',
       'g7.p14': 'Performance improvement is a result — the methodology is the foundation. When you can reproducibly measure, objectively compare, and quantitatively assess health, motor tuning stops being luck and becomes engineering.',
+
+      'g8.tag': 'GUIDE · Diagnostics',
+      'g8.title': '8 Signs Your Mini 4WD Motor Is Dying — When to Wash vs Retire',
+      'g8.lead': 'A broken-in motor doesn\'t stay at peak forever. From around the 5th race onward, degradation begins — but most racers wait until the motor is obviously dead before noticing. This article covers 8 degradation signs plus retirement thresholds, so you can make the right call (wash, retire, or keep using) before a motor truly fails on race day.',
+      'g8.h1': 'Why motors degrade',
+      'g8.p1': 'Degradation isn\'t random. It\'s three physical processes accumulating:',
+      'g8.l1': '<strong>Brush and commutator wear</strong> — Contact surfaces lose material on every rotation. Contact resistance rises, IR losses increase, and effective output RPM drops.',
+      'g8.l2': '<strong>Magnet degradation from heat</strong> — Sustained temperatures above the threshold (~80°C for Tamiya ND magnets) permanently reduce magnetic flux. Output capability drops irreversibly.',
+      'g8.l3': '<strong>Internal copper dust and arcing</strong> — Worn brush material scatters inside the motor, intensifying arcs in the commutator gap, accelerating contact-surface damage further.',
+      'g8.p2': 'Bearing wear gets mixed into "motor abnormality" judgments, but strictly speaking it\'s a chassis component issue — not the motor itself.',
+      'g8.h2': 'Category A: Performance (3 quantified observations)',
+      'g8.a1': '<strong>1. RPM drop at the same voltage</strong> — The most direct indicator. Establish a baseline and re-measure periodically:',
+      'g8.a1l1': '<strong>&lt; 5%</strong>: Normal wear',
+      'g8.a1l2': '<strong>5–10%</strong>: Early degradation (may be recoverable)',
+      'g8.a1l3': '<strong>10–20%</strong>: Significant degradation',
+      'g8.a1l4': '<strong>&gt; 20%</strong>: Near end-of-life (EoL)',
+      'g8.a2': '<strong>2. Startup delay</strong> — Time from power-on to stable RPM lengthens. A new motor stabilizes in 0.5–1 second; a degraded motor may take 2+ seconds.',
+      'g8.a3': '<strong>3. Fewer laps per battery, same track</strong> — Same battery model, same track, same motor — fewer laps than baseline means efficiency has dropped.',
+      'g8.h3': 'Category B: Sound and feel (3 sensory observations)',
+      'g8.b_note': 'Sound judgment is subjective and every motor has its own original tone. This section gives only the underlying principles. Build your own internal reference (comparing the same motor\'s new vs current state) rather than trying to match words to sounds.',
+      'g8.b4': '<strong>4. Operating sound becomes irregular</strong> — Principle: Brush–commutator contact instability intensifies arcing, pulsing the current. This shows up as loss of rhythmic consistency in the motor\'s hum.',
+      'g8.b5': '<strong>5. Pronounced high-frequency scraping</strong> — Principle: As brushes thin, spring pressure distribution shifts, causing abnormal friction between brush and commutator.',
+      'g8.b6': '<strong>6. Noticeably higher temperature rise at the same conditions</strong> — Principle: Higher contact resistance → higher IR loss → more energy converted to heat. If it feels hotter than baseline to the touch, that\'s a clear signal.',
+      'g8.h4': 'Category C: External and mechanical signs (2 — no disassembly required)',
+      'g8.c7': '<strong>7. Terminal-tab discoloration or burn marks</strong> — Exposed metal terminals showing yellowing, blackening, or blue burn marks = the motor has experienced a high-temperature event.',
+      'g8.c8': '<strong>8. Higher manual-rotation resistance than a new unit</strong> — Test against a new motor of the same type. A new motor\'s shaft spins freely; a degraded one feels "sticky" or "draggy" (from magnet imbalance, brush stiction, or bearing friction).',
+      'g8.adv': '<strong>Advanced note</strong>: Quantified observations (current CV — coefficient of variation — and FFT abnormal frequency bands) are more precise data-side signs. See <a href="../motor-analysis-methodology/">the three-pillar methodology</a> for the measurement approach.',
+      'g8.h5': 'Decision matrix: Wash, retire, or keep using?',
+      'g8.t.state': 'State', 'g8.t.rpm': 'RPM drop', 'g8.t.other': 'Other signs', 'g8.t.action': 'Action',
+      'g8.t.r1s': 'Normal wear', 'g8.t.r1r': '&lt; 5%', 'g8.t.r1o': 'None', 'g8.t.r1a': 'Keep using',
+      'g8.t.r2s': 'Early degradation', 'g8.t.r2r': '5–10%', 'g8.t.r2o': 'Possibly sluggish feel', 'g8.t.r2a': '<a href="../motor-wash-vs-break-in/">Wash + re-lubricate</a>',
+      'g8.t.r3s': 'Retirement candidate', 'g8.t.r3r': '10–20%', 'g8.t.r3o': 'Multiple signs present', 'g8.t.r3a': 'Practice only, not for sanctioned races',
+      'g8.t.r4s': 'Confirmed EoL', 'g8.t.r4r': '&gt; 20% / startup failure / significant overheat', 'g8.t.r4o': '—', 'g8.t.r4a': 'Retire',
+      'g8.h6': '3 Common ways to kill a motor faster',
+      'g8.p3': 'These are well-known "motor-killer" scenarios from the Japanese Mini 4WD community:',
+      'g8.e1': '<strong>Rough recovery after a course-out with locked wheels</strong> — Pulling a car whose wheels are jammed against the track reverses torque directly into the motor\'s internals.',
+      'g8.e2': '<strong>Holding down a spinning wheel by hand</strong> — Even just to "stop and check," pressing on a rotating wheel = stall. Current spikes instantly, temperature soars.',
+      'g8.e3': '<strong>Cold-start full throttle</strong> — Running 3V from the moment of power-on, before internal oil films distribute evenly, causes uneven brush wear.',
+      'g8.h7': 'What to do with a retired motor',
+      'g8.r1': '<strong>Arcing damage and commutator grooves are irreversible</strong> — No amount of washing or reconditioning restores physical surface damage inside.',
+      'g8.r2': '<strong>Good uses</strong>: Practice cars, dissection samples for learning (study brush wear patterns to calibrate your eye).',
+      'g8.r3': '<strong>Bad uses</strong>: Reconditioning for sanctioned racing — surface cleanup doesn\'t fix internal damage, and the risk profile becomes unpredictable.',
+      'g8.r4': '<strong>Mindset</strong>: Motor EoL isn\'t a failure — it\'s normal in the Mini 4WD competition cycle. Pro racers retire 5–10 motors per season on average. It\'s a cost, not a loss.',
 
       'cl.tag': 'CHANGELOG',
       'cl.title': 'Firmware Release Notes',
@@ -4013,6 +4170,49 @@
       'g7.p13': 'MotorLab の真の核心は「モーター性能を上げる」ことではなく:',
       'g7.q4': '見えない感覚を、測定可能で比較可能なシステム状態に変換すること。',
       'g7.p14': '性能向上は結果に過ぎず、方法論こそが基盤。再現可能に測定し、客観的に比較し、定量的に健康を判定できれば、モーターチューニングは運ではなく工学になります。',
+
+      'g8.tag': 'GUIDE · 故障診断',
+      'g8.title': 'ミニ四駆 モーター衰退の 8 サインと引退判定',
+      'g8.lead': '慣らし完了モーターも永久に最高性能を保つわけではありません。第 5 レース頃から衰退が始まりますが、多くのレーサーは「明らかに走らない」状態になってから気づきます。本記事ではモーター衰退の 8 サイン + 引退判定の閾値を整理。本番でモーターが死ぬ前に「洗う・引退・続行」の判断ができるようになります。',
+      'g8.h1': 'モーターはなぜ衰退するのか',
+      'g8.p1': '衰退はランダムではなく、3 つの物理プロセスの蓄積です:',
+      'g8.l1': '<strong>ブラシと整流子(コミュテーター)の摩耗</strong>—接触面が回転のたびに微量摩耗、接触抵抗が上昇、IR 損失が増えて実効出力 RPM が低下',
+      'g8.l2': '<strong>高温による磁石の減磁</strong>—閾値温度(タミヤ ND 磁石で約 80℃)を持続的に超えると磁束が永久的に低下、出力能力が不可逆に低下',
+      'g8.l3': '<strong>内部 copper dust の蓄積と arcing</strong>—摩耗したブラシ材料が内部に散布、整流子間隙でのアークを強化、接触面ダメージを加速',
+      'g8.p2': 'ベアリング摩耗も「モーター異常」と混同されやすいですが、厳密にはシャーシ部品の問題(モーター本体ではない)。',
+      'g8.h2': 'A 類:性能サイン(3 つの定量観察)',
+      'g8.a1': '<strong>1. 同電圧での RPM 低下</strong>—最も直接的な衰退指標。ベースライン測定後、定期的に再測定:',
+      'g8.a1l1': '<strong>&lt; 5%</strong>:正常摩耗',
+      'g8.a1l2': '<strong>5–10%</strong>:初期衰退(まだ救済可能)',
+      'g8.a1l3': '<strong>10–20%</strong>:明確な衰退',
+      'g8.a1l4': '<strong>&gt; 20%</strong>:EoL(end of life)接近',
+      'g8.a2': '<strong>2. 起動遅延</strong>—通電から RPM 安定までの時間が長くなる。新品は 0.5–1 秒、衰退モーターは 2 秒以上かかることも。',
+      'g8.a3': '<strong>3. 同電池で同コースを走るラップ数が減る</strong>—同型番電池、同コース、同モーターで、ベースラインよりラップ数が少ない = 効率低下。',
+      'g8.h3': 'B 類:音と手感のサイン(3 つの感覚観察)',
+      'g8.b_note': '音の判断は主観的で、各モーターの新品時の音色も異なります。ここでは原理のみ列挙し、読者自身が対照感覚を構築する(同じモーターの新品時と現状を比較)ことを前提とします。文字による音の模倣はしません。',
+      'g8.b4': '<strong>4. 運転音が不規則化する</strong>—原理:ブラシと整流子の接触不安定により arcing が強化、電流がパルス化、運転音のリズム感が損なわれる。',
+      'g8.b5': '<strong>5. 高周波の引っ掻き音が顕著</strong>—原理:ブラシが薄くなることでスプリング圧力分布が変化、ブラシと整流子の接触面で異常摩擦が発生。',
+      'g8.b6': '<strong>6. 同条件下での温度上昇が顕著</strong>—原理:接触抵抗の上昇 → IR 損失の増加 → エネルギーが熱に変換される割合が増加。手感でベースラインより熱ければ明確なシグナル。',
+      'g8.h4': 'C 類:外観と機械サイン(2 つの非分解検査)',
+      'g8.c7': '<strong>7. モーター端子片の変色または焼け跡</strong>—端子片の露出金属が黄ばみ、黒ずみ、青い焼け跡を呈する = 高温イベント経験あり。',
+      'g8.c8': '<strong>8. 無電源で軸心を手回し、新品より抵抗が明らかに大きい</strong>—同型番の新品と比較テスト。新品はスムーズに回転、衰退モーターは「渋い」「カクカク」感(磁石の不均衡、ブラシの粘着、軸受抵抗のいずれか)。',
+      'g8.adv': '<strong>進階補足</strong>:定量観察(電流 CV、FFT 異常周波数帯など)はより精密なデータ側サインです。測定方法は<a href="../motor-analysis-methodology/">三本柱方法論</a>を参照。',
+      'g8.h5': '判断マトリクス:洗う、引退、それとも続行?',
+      'g8.t.state': '状態', 'g8.t.rpm': 'RPM 低下幅', 'g8.t.other': 'その他のサイン', 'g8.t.action': '処置',
+      'g8.t.r1s': '正常摩耗', 'g8.t.r1r': '&lt; 5%', 'g8.t.r1o': 'なし', 'g8.t.r1a': '続行',
+      'g8.t.r2s': '初期衰退', 'g8.t.r2r': '5–10%', 'g8.t.r2o': '渋い感じあり', 'g8.t.r2a': '<a href="../motor-wash-vs-break-in/">洗浄 + 注油</a>',
+      'g8.t.r3s': '引退候補', 'g8.t.r3r': '10–20%', 'g8.t.r3o': '複数サインあり', 'g8.t.r3a': '練習用、公式戦不可',
+      'g8.t.r4s': 'EoL 確定', 'g8.t.r4r': '&gt; 20% / 起動失敗 / 顕著な過熱', 'g8.t.r4o': '—', 'g8.t.r4a': '引退',
+      'g8.h6': 'モーターを速く殺す 3 つの定番ミス',
+      'g8.p3': 'これらは日本のミニ四駆コミュニティで長年観察されている「モーターキラー」シナリオ:',
+      'g8.e1': '<strong>コースアウト後、タイヤロック状態での粗暴な回収</strong>—車輪がコースに引っかかった状態で引き抜くと、逆トルクがモーター内部構造を直撃',
+      'g8.e2': '<strong>回転中の車輪を手で押さえる</strong>—「止めて確認したい」だけでも、押さえる = stall。電流が瞬間爆増、温度上昇',
+      'g8.e3': '<strong>Cold start 全速</strong>—モーターがウォームアップする前に 3V 全速、内部油膜が均一に分布する前に高負荷 → uneven brush wear',
+      'g8.h7': '引退モーターの処置',
+      'g8.r1': '<strong>arcing と整流子の grooves は不可逆</strong>—どれだけ洗浄、リコンディションしても内部接触面の物理損傷は復元不可',
+      'g8.r2': '<strong>適した用途</strong>:練習用車、解体教材(ブラシ摩耗パターンを観察して経験値を構築)',
+      'g8.r3': '<strong>適さない用途</strong>:リコンディション後の公式戦投入 — 表面修復のみで内部損傷は残り、リスクプロファイルが予測不能になる',
+      'g8.r4': '<strong>考え方</strong>:モーター EoL は失敗ではなく、ミニ四駆競技の正常な循環。プロレーサーは平均でシーズンあたり 5–10 個のモーターを引退させます。コストであり、損失ではない。',
     }
   };
 
