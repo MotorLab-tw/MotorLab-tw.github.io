@@ -487,6 +487,7 @@ UI_STRINGS = {
         "next": "下一篇 →",
         "home_label": "回教學首頁",
         "read_more": "閱讀完整文章 →",
+        "byline": "作者:MotorLab Team",
         "bc_section": {
             "guides": "教學",
             "benchmarks": "效能對比",
@@ -503,6 +504,7 @@ UI_STRINGS = {
         "next": "Next →",
         "home_label": "Back to guides",
         "read_more": "Read full article →",
+        "byline": "Written by MotorLab Team",
         "bc_section": {
             "guides": "Guides",
             "benchmarks": "Benchmarks",
@@ -519,6 +521,7 @@ UI_STRINGS = {
         "next": "次の記事 →",
         "home_label": "ガイド一覧へ",
         "read_more": "全文を読む →",
+        "byline": "著者:MotorLab Team",
         "bc_section": {
             "guides": "ガイド",
             "benchmarks": "ベンチマーク",
@@ -879,6 +882,13 @@ def build_guide_page(slug, lang, src_html, i18n, guide_cfg):
     if title_h3 is not None:
         title_h3.name = "h1"
 
+    # 3c. 在 H1 後插入作者署名(MotorLab Team,三語對應 byline 文字)
+    #     僅獨立頁顯示,首頁 card 不顯示(card 結構只保留 tag/h3/lead)
+    if title_h3 is not None:
+        byline = soup.new_tag("p", attrs={"class": "guide-byline"})
+        byline.string = ui["byline"]
+        title_h3.insert_after(byline)
+
     # 4. 保留 footer
     footer_el = soup.find("footer")
     footer_extracted = footer_el.extract() if footer_el else None
@@ -942,7 +952,7 @@ def build_guide_page(slug, lang, src_html, i18n, guide_cfg):
         "inLanguage": cfg["html_lang"],
         "url": page_url,
         "mainEntityOfPage": {"@type": "WebPage", "@id": page_url},
-        "author": {"@type": "Organization", "name": "MotorLab.tw", "url": SITE + "/"},
+        "author": {"@type": "Organization", "name": "MotorLab Team", "url": SITE + "/"},
         "publisher": {
             "@type": "Organization",
             "name": "MotorLab.tw",

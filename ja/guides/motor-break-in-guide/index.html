@@ -934,6 +934,16 @@
     max-width: 920px;
     margin: 0 auto 32px;
   }
+  /* 文章作者署名 (build_guide_page 動態插入,僅獨立文章頁顯示) */
+  .guide-byline {
+    color: var(--text-muted);
+    font-size: 12.5px;
+    font-family: monospace;
+    letter-spacing: 0.05em;
+    margin: -10px 0 22px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--border);
+  }
   /* 上一篇 / 回首頁 / 下一篇 */
   .guide-pagination {
     max-width: 920px;
@@ -1433,7 +1443,7 @@
   },
   "author": {
     "@type": "Organization",
-    "name": "MotorLab.tw",
+    "name": "MotorLab Team",
     "url": "https://motorlab-tw.github.io/"
   },
   "publisher": {
@@ -1473,7 +1483,7 @@
 }</script></head>
 <body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/ja/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/ja/">← ホームへ戻る</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/ja/">ホーム</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/ja/#guides">ガイド</a><span class="sep">/</span><span class="current">モーター慣らし完全ガイド</span></nav><article class="guide-article">
 <span class="guide-tag" data-i18n="g1.tag">GUIDE · 完全ガイド</span>
-<h1 data-i18n="g1.title">Mini 4WD モーター慣らし完全ガイド:原理から実践まで</h1>
+<h1 data-i18n="g1.title">Mini 4WD モーター慣らし完全ガイド:原理から実践まで</h1><p class="guide-byline">著者:MotorLab Team</p>
 <p class="guide-lead" data-i18n="g1.lead">ミニ四駆(Mini 4WD)のモーター慣らしは、新品モーターの最大ポテンシャルを引き出すために必須の手順です。本記事ではタミヤ製モーター慣らしの科学的原理、実践ステップ、そしてプロレーサーがこの工程を欠かさない理由を解説します。</p>
 <h4 data-i18n="g1.h1">なぜ新品モーターに慣らしが必須なのか?</h4>
 <p data-i18n="g1.p1">タミヤ製新品モーター(ハイパーダッシュ 2、プラズマダッシュ、スプリントダッシュ、レブチューン、トルクチューンなど)は出荷時、<strong>カーボンブラシの接触面が平面</strong>です。しかしモーター内部の整流子(コミュテーター)は円柱形のため、平面ブラシは極小の弧線でしか接触できず、実効導電面積は非常に限られています。</p>
