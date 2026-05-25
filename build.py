@@ -445,18 +445,55 @@ GUIDES = [
             },
         },
     },
+    # ---------- g9:田宮全 15 款馬達規格對照(/benchmarks/ 首篇,D23 分類)----------
+    {
+        "slug": "tamiya-motor-full-lineup",
+        "key": "g9",
+        "type": "benchmarks",
+        "i18n": {
+            "zh": {
+                "title": "田宮 Mini 4WD® 全 15 款馬達規格對照表(含 PRO 系列)| MotorLab",
+                "description": "田宮(TAMIYA, INC.)Mini 4WD® 全 15 款馬達官方規格對照表 — 標準系列 9 款(單軸)+ PRO 系列 6 款(雙軸)。整理 RPM、扭力(mN·m)、電流(A)、Speed/Torque 等級、官方比賽合規限制與對應 MotorLab 磨合策略。",
+                "keywords": "田宮馬達, 田宮 15 款馬達, 田宮馬達規格, Mini 4WD PRO 馬達, 雙軸馬達, 單軸馬達, 田宮馬達對照表, Hyper-Dash PRO, Mach-Dash PRO, Plasma-Dash, Ultra-Dash, Power-Dash, Sprint-Dash, 田宮比賽合規, 紅二, 黑金剛",
+                "breadcrumb": "全 15 款馬達規格",
+                "h1_for_ld": "田宮 Mini 4WD® 全 15 款馬達規格對照表(含 PRO 系列)",
+            },
+            "en": {
+                "title": "Tamiya Mini 4WD® Motor Full Lineup: All 15 Models Spec Comparison | MotorLab",
+                "description": "Official spec comparison for all 15 Tamiya Mini 4WD® motors — 9 standard single-shaft motors plus 6 Mini 4WD PRO double-shaft motors. Covers RPM, torque (mN·m), current (A), Speed/Torque ratings, official race compliance and matching MotorLab break-in strategy.",
+                "keywords": "Tamiya Mini 4WD motors, Tamiya 15 motors, Mini 4WD PRO motors, double-shaft motor, single-shaft motor, Tamiya motor specifications, Hyper-Dash PRO, Mach-Dash PRO, Plasma-Dash, Ultra-Dash, Power-Dash, Sprint-Dash, Tamiya race compliance, Tamiya motor comparison table",
+                "breadcrumb": "Full Lineup (15 Motors)",
+                "h1_for_ld": "Tamiya Mini 4WD® Motor Full Lineup: All 15 Models Spec Comparison",
+            },
+            "ja": {
+                "title": "タミヤ Mini 4WD® 全 15 種モーター規格対照表(PRO シリーズ含む)| MotorLab",
+                "description": "タミヤ(TAMIYA, INC.)Mini 4WD® 全 15 種モーターの公式スペック対照表 — 標準シリーズ 9 種(片軸)と Mini 4WD PRO シリーズ 6 種(両軸)。RPM、トルク(mN·m)、電流(A)、Speed/Torque 評価、公式競技ルール、対応する MotorLab 慣らし戦略を網羅。",
+                "keywords": "タミヤ モーター, タミヤ 15 種 モーター, ミニ四駆 PRO モーター, 両軸モーター, 片軸モーター, タミヤ モーター 規格, ハイパーダッシュ PRO, マッハダッシュ PRO, プラズマダッシュ, ウルトラダッシュ, パワーダッシュ, スプリントダッシュ, タミヤ 公式競技ルール, ミニ四駆 モーター 対照表",
+                "breadcrumb": "全 15 種モーター規格",
+                "h1_for_ld": "タミヤ Mini 4WD® 全 15 種モーター規格対照表(PRO シリーズ含む)",
+            },
+        },
+    },
 ]
 
 # UI 字串(教學頁面通用元件:nav / 麵包屑 / 分頁)
+#   bc_section:依文章 type 的麵包屑中段標籤,對應 HANDOFF D23 五個分類資料夾
 UI_STRINGS = {
     "zh": {
         "back_home": "← 回首頁",
         "bc_home": "首頁",
-        "bc_guides": "教學",
+        "bc_guides": "教學",  # 舊鍵保留(向後相容,新文章用 bc_section)
         "prev": "← 上一篇",
         "next": "下一篇 →",
         "home_label": "回教學首頁",
         "read_more": "閱讀完整文章 →",
+        "bc_section": {
+            "guides": "教學",
+            "benchmarks": "效能對比",
+            "system": "系統",
+            "docs": "文件",
+            "knowledge_base": "知識庫",
+        },
     },
     "en": {
         "back_home": "← Back to home",
@@ -466,6 +503,13 @@ UI_STRINGS = {
         "next": "Next →",
         "home_label": "Back to guides",
         "read_more": "Read full article →",
+        "bc_section": {
+            "guides": "Guides",
+            "benchmarks": "Benchmarks",
+            "system": "System",
+            "docs": "Docs",
+            "knowledge_base": "Knowledge Base",
+        },
     },
     "ja": {
         "back_home": "← ホームへ戻る",
@@ -475,11 +519,20 @@ UI_STRINGS = {
         "next": "次の記事 →",
         "home_label": "ガイド一覧へ",
         "read_more": "全文を読む →",
+        "bc_section": {
+            "guides": "ガイド",
+            "benchmarks": "ベンチマーク",
+            "system": "システム",
+            "docs": "ドキュメント",
+            "knowledge_base": "ナレッジベース",
+        },
     },
 }
 
 # slug 與 g{n} 的快速反查
 SLUG_BY_GKEY = {g["key"]: g["slug"] for g in GUIDES}
+# 文章 type 的快速反查(D23 分類,default 為 guides 維持向後相容)
+TYPE_BY_GKEY = {g["key"]: g.get("type", "guides") for g in GUIDES}
 
 
 # keywords meta(按語言切分)
@@ -769,10 +822,11 @@ def _transform_guides_to_cards(soup, lang):
             child.extract()
         for k in keepers:
             art.append(k)
-        # 接「閱讀完整文章 →」連結
+        # 接「閱讀完整文章 →」連結(用文章的 type 決定資料夾)
+        article_type = TYPE_BY_GKEY.get(gkey, "guides")
         link = soup.new_tag("a", attrs={
             "class": "guide-card-link",
-            "href": f"{lang_prefix}/guides/{slug}/",
+            "href": f"{lang_prefix}/{article_type}/{slug}/",
         })
         link.string = read_more
         art.append(link)
@@ -787,8 +841,10 @@ def build_guide_page(slug, lang, src_html, i18n, guide_cfg):
     cfg = LANGS[lang]
     g_i18n = guide_cfg["i18n"][lang]
     ui = UI_STRINGS[lang]
+    article_type = guide_cfg.get("type", "guides")
+    section_label = ui["bc_section"].get(article_type, ui["bc_guides"])
     lang_prefix = "" if lang == "zh" else f"/{lang}"
-    page_url = f"{SITE}{lang_prefix}/guides/{slug}/"
+    page_url = f"{SITE}{lang_prefix}/{article_type}/{slug}/"
     home_url = f"{SITE}{lang_prefix}/"
 
     # 1. <html lang>
@@ -854,18 +910,18 @@ def build_guide_page(slug, lang, src_html, i18n, guide_cfg):
     if canon:
         canon["href"] = page_url
 
-    # 7. hreflang 三向互指 + x-default(三語 guide 都已存在)
+    # 7. hreflang 三向互指 + x-default(三語版 URL 用文章 type)
     head = soup.head
     for hl_lang, hl_cfg in LANGS.items():
         hl_attr = hl_cfg["html_lang"]
         hl_prefix = "" if hl_lang == "zh" else f"/{hl_lang}"
-        hl_url = f"{SITE}{hl_prefix}/guides/{slug}/"
+        hl_url = f"{SITE}{hl_prefix}/{article_type}/{slug}/"
         link = soup.new_tag("link", attrs={"rel": "alternate", "hreflang": hl_attr, "href": hl_url})
         head.append(link)
     # x-default 指 zh
     link = soup.new_tag("link", attrs={
         "rel": "alternate", "hreflang": "x-default",
-        "href": f"{SITE}/guides/{slug}/",
+        "href": f"{SITE}/{article_type}/{slug}/",
     })
     head.append(link)
 
@@ -892,7 +948,7 @@ def build_guide_page(slug, lang, src_html, i18n, guide_cfg):
         "@type": "BreadcrumbList",
         "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": ui["bc_home"], "item": home_url},
-            {"@type": "ListItem", "position": 2, "name": ui["bc_guides"], "item": f"{home_url}#guides"},
+            {"@type": "ListItem", "position": 2, "name": section_label, "item": f"{home_url}#guides"},
             {"@type": "ListItem", "position": 3, "name": g_i18n["breadcrumb"], "item": page_url},
         ],
     }
@@ -921,7 +977,7 @@ def build_guide_page(slug, lang, src_html, i18n, guide_cfg):
     bc_html = (
         f'<nav class="breadcrumb" aria-label="Breadcrumb">'
         f'<a href="{home_url}">{ui["bc_home"]}</a><span class="sep">/</span>'
-        f'<a href="{home_url}#guides">{ui["bc_guides"]}</a><span class="sep">/</span>'
+        f'<a href="{home_url}#guides">{section_label}</a><span class="sep">/</span>'
         f'<span class="current">{g_i18n["breadcrumb"]}</span>'
         f'</nav>'
     )
@@ -941,9 +997,10 @@ def build_guide_page(slug, lang, src_html, i18n, guide_cfg):
             )
         # 若目的 guide 沒有該語言翻譯,fallback 到 zh
         g_label = g["i18n"].get(lang, g["i18n"]["zh"])["breadcrumb"]
+        g_type = g.get("type", "guides")
         return (
             f'<div class="{css_class}">'
-            f'<a href="{lang_prefix}/guides/{g["slug"]}/">'
+            f'<a href="{lang_prefix}/{g_type}/{g["slug"]}/">'
             f'<span class="label">{label}</span><span>{g_label}</span>'
             f'</a></div>'
         )
@@ -1001,14 +1058,15 @@ def main():
         print(f"  ✅ {out_path:<22} {size:>9,} bytes  ({cfg['html_lang']})")
 
     print()
-    print("=== 教學分頁(/guides/<slug>/)===")
+    print("=== 文章分頁(/{type}/<slug>/,D23 分類)===")
     for guide in GUIDES:
+        article_type = guide.get("type", "guides")
         for lang in ("zh", "en", "ja"):
             if lang not in guide["i18n"]:
                 continue  # 該語言尚未撰寫該篇 → 跳過
             slug = guide["slug"]
             lang_prefix = "" if lang == "zh" else f"{lang}/"
-            out_dir = f"{lang_prefix}guides/{slug}"
+            out_dir = f"{lang_prefix}{article_type}/{slug}"
             out_path = f"{out_dir}/index.html"
             os.makedirs(out_dir, exist_ok=True)
             html_out = build_guide_page(slug, lang, src_html, i18n, guide)

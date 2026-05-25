@@ -329,4 +329,40 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-degradation-signs/"/>
   </url>
 
+  <!-- ============================================================ -->
+  <!-- /benchmarks/ — D23 分類首篇                                    -->
+  <!-- ============================================================ -->
+
+  <!-- g9: tamiya-motor-full-lineup(2026-05-25 published,/benchmarks/ 首篇) -->
+  <url>
+    <loc>https://motorlab-tw.github.io/benchmarks/tamiya-motor-full-lineup/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/benchmarks/tamiya-motor-full-lineup/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/benchmarks/tamiya-motor-full-lineup/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/benchmarks/tamiya-motor-full-lineup/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/benchmarks/tamiya-motor-full-lineup/"/>
+  </url>
+  <url>
+    <loc>https://motorlab-tw.github.io/en/benchmarks/tamiya-motor-full-lineup/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/benchmarks/tamiya-motor-full-lineup/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/benchmarks/tamiya-motor-full-lineup/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/benchmarks/tamiya-motor-full-lineup/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/benchmarks/tamiya-motor-full-lineup/"/>
+  </url>
+  <url>
+    <loc>https://motorlab-tw.github.io/ja/benchmarks/tamiya-motor-full-lineup/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/benchmarks/tamiya-motor-full-lineup/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/benchmarks/tamiya-motor-full-lineup/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/benchmarks/tamiya-motor-full-lineup/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/benchmarks/tamiya-motor-full-lineup/"/>
+  </url>
+
 </urlset>
