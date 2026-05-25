@@ -241,7 +241,7 @@ GUIDES = [
                 "h1_for_ld": "四驅車馬達磨合完全指南:從原理到實作",
             },
             "en": {
-                "title": "Mini 4WD Motor Break-in Complete Guide: Principles & Practice | MotorLab",
+                "title": "Mini 4WD Motor Break-in Guide: Principles & Practice | MotorLab",
                 "description": "Complete Mini 4WD motor break-in guide — the physics of brush-commutator seating, four critical control variables, 10-stage standard procedure, and completion criteria. Why every new Tamiya motor needs break-in and the pitfalls of amateur water-soak methods.",
                 "keywords": "motor break-in, Mini 4WD motor break-in, Tamiya motor break-in, motor running-in, motor bedding, 10-stage break-in, motor break-in guide, Hyper Dash break-in, Plasma Dash break-in, carbon brush seating, MotorLab",
                 "breadcrumb": "Motor Break-in Guide",
@@ -268,7 +268,7 @@ GUIDES = [
                 "h1_for_ld": "為什麼業餘車手磨合馬達總是失敗?5 個常見錯誤",
             },
             "en": {
-                "title": "Why Amateur Motor Break-in Fails: 5 Common Mistakes (Mini 4WD) | MotorLab",
+                "title": "5 Mini 4WD Motor Break-in Mistakes Amateurs Make | MotorLab",
                 "description": "The 5 most common Mini 4WD motor break-in mistakes: random dry-battery runs, excessive water-soak, one-direction-only running, no measurement, no records. Each mistake's consequence and the correct procedure, plus how to build a motor health fingerprint.",
                 "keywords": "motor break-in mistakes, motor break-in failure, dry battery break-in, water-soak motor mistakes, motor break-in direction, motor burnout cause, magnet demagnetization, motor health fingerprint, break-in CV",
                 "breadcrumb": "5 Common Break-in Mistakes",
@@ -322,7 +322,7 @@ GUIDES = [
                 "h1_for_ld": "洗馬達 vs 磨合馬達:差別在哪?什麼時候做?",
             },
             "en": {
-                "title": "Motor Wash vs Motor Break-in: What's the Difference? When to Do Each | MotorLab",
+                "title": "Motor Wash vs Break-in: What's the Difference? | MotorLab",
                 "description": "'Motor wash' and 'motor break-in' are two completely different procedures often confused. Clarifies the timing, method, and purpose of each, when to wash, the standard wash procedure, and lifecycle maintenance recommendations for a Hyper Dash 2 motor.",
                 "keywords": "motor wash, motor wash vs break-in, Mini 4WD motor wash, motor maintenance cycle, motor lubrication, naphtha wash, WURTH motor lube, Hyper Dash maintenance, motor retirement criteria",
                 "breadcrumb": "Motor Wash vs Break-in",
@@ -349,7 +349,7 @@ GUIDES = [
                 "h1_for_ld": "為什麼磨馬達決定四驅車比賽勝負?競賽水準的磨合差距",
             },
             "en": {
-                "title": "Why Break-in Decides Mini 4WD Race Outcomes: Competitive Edge Most Racers Miss | MotorLab",
+                "title": "Why Motor Break-in Decides Mini 4WD Race Outcomes | MotorLab",
                 "description": "From a racing perspective: why amateur break-in methods fail at sanctioned events, real-season scenarios at JCO and similar competitions, the competitive value of health fingerprints and pair matching. Moving motor prep from \"feel\" to \"data\".",
                 "keywords": "Mini 4WD race motor break-in, competition motor preparation, Japan Cup motor selection, motor pair matching, motor health fingerprint, MotorLab",
                 "breadcrumb": "Why Break-in Matters in Racing",
@@ -403,7 +403,7 @@ GUIDES = [
                 "h1_for_ld": "從手感到數據:馬達分析的三支柱方法論",
             },
             "en": {
-                "title": "From Feel to Data: A Three-Pillar Methodology for Motor Analysis | MotorLab",
+                "title": "From Feel to Data: A Methodology for Motor Analysis | MotorLab",
                 "description": "A three-step methodology that turns motor analysis from 'feel' into systems engineering: measurement, comparison, health assessment. Covers the conceptual framework behind MotorLab's analysis system, the 5 core measurement metrics, 3 comparison types, and 4 health dimensions with Health Score logic.",
                 "keywords": "motor analysis methodology, motor measurement, motor comparison, motor health assessment, Health Score, MotorLab",
                 "breadcrumb": "Three-Pillar Methodology",
@@ -430,7 +430,7 @@ GUIDES = [
                 "h1_for_ld": "四驅車馬達衰退的 8 個徵兆與退役判定門檻",
             },
             "en": {
-                "title": "8 Signs Your Mini 4WD Motor Is Dying — When to Wash vs Retire | MotorLab",
+                "title": "8 Signs Your Mini 4WD Motor Is Dying: Wash vs Retire | MotorLab",
                 "description": "Eight motor degradation signs (performance, sound/feel, external) and a 4-tier RPM-drop threshold (< 5% / 5-10% / 10-20% / > 20%) for retirement judgment. Build a baseline and quantify when to wash, retire, or keep using — instead of discovering failure on race day.",
                 "keywords": "Mini 4WD motor degradation signs, motor retirement, motor lifespan, RPM drop motor, motor failure diagnosis, MotorLab",
                 "breadcrumb": "Motor Degradation & Retirement",
@@ -459,7 +459,7 @@ GUIDES = [
                 "h1_for_ld": "田宮 Mini 4WD® 全 15 款馬達規格對照表(含 PRO 系列)",
             },
             "en": {
-                "title": "Tamiya Mini 4WD® Motor Full Lineup: All 15 Models Spec Comparison | MotorLab",
+                "title": "Tamiya Mini 4WD® Motor Full Lineup: All 15 Models | MotorLab",
                 "description": "Official spec comparison for all 15 Tamiya Mini 4WD® motors — 9 standard single-shaft motors plus 6 Mini 4WD PRO double-shaft motors. Covers RPM, torque (mN·m), current (A), Speed/Torque ratings, official race compliance and matching MotorLab break-in strategy.",
                 "keywords": "Tamiya Mini 4WD motors, Tamiya 15 motors, Mini 4WD PRO motors, double-shaft motor, single-shaft motor, Tamiya motor specifications, Hyper-Dash PRO, Mach-Dash PRO, Plasma-Dash, Ultra-Dash, Power-Dash, Sprint-Dash, Tamiya race compliance, Tamiya motor comparison table",
                 "breadcrumb": "Full Lineup (15 Motors)",
@@ -871,6 +871,13 @@ def build_guide_page(slug, lang, src_html, i18n, guide_cfg):
             break
     if target_article is None:
         raise RuntimeError(f"找不到教學 article: key={guide_cfg['key']}")
+
+    # 3b. 獨立頁面把文章標題從 <h3> 升級成 <h1>(SEO:每頁應有單一 H1)
+    # 母版維持 <h3> 因為它在首頁 card grid 是次級標題;build_guide_page 在
+    # 抽出來變成獨立頁時必須是 <h1>(Bing/Google 都把缺 H1 列為警告)
+    title_h3 = target_article.find("h3")
+    if title_h3 is not None:
+        title_h3.name = "h1"
 
     # 4. 保留 footer
     footer_el = soup.find("footer")
