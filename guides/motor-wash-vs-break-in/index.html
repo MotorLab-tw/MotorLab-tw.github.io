@@ -694,11 +694,12 @@
   }
 
   /* ===== 教學知識 Guides ===== */
+  /* 多欄 auto-fit:hub 頁多卡會自動填滿頁寬,單篇 article 頁不受影響(走下面 container > .guide-article 規則)*/
   .guides-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 32px;
-    max-width: 920px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    max-width: 1180px;
     margin: 0 auto;
   }
   .guide-article {
@@ -930,9 +931,15 @@
   .guide-page main {
     padding: 0 0 60px;
   }
-  .guide-page .guide-article {
+  /* 單篇 article 頁:article 是 container 直接子元素 → 限寬 + 置中(閱讀寬度)
+     hub 頁:article 在 .guides-grid 內 → 不限寬,讓 grid 子元素填滿格子 */
+  .guide-page .container > .guide-article {
     max-width: 920px;
     margin: 0 auto 32px;
+  }
+  .guide-page .guides-grid .guide-article {
+    max-width: none;
+    margin: 0;
   }
   /* Hub 頁面標題與描述(/guides/, /benchmarks/, /methodology/ 各 hub 頂部) */
   .hub-header {
