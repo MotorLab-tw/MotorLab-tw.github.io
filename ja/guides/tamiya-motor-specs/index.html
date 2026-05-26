@@ -934,6 +934,95 @@
     max-width: 920px;
     margin: 0 auto 32px;
   }
+  /* Hub 頁面標題與描述(/guides/, /benchmarks/, /methodology/ 各 hub 頂部) */
+  .hub-header {
+    max-width: 920px;
+    margin: 28px auto 28px;
+    text-align: center;
+  }
+  .hub-header h1 {
+    font-size: clamp(28px, 4vw, 38px);
+    margin: 0 0 14px;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+  }
+  .hub-header .hub-lead {
+    color: var(--text-secondary);
+    font-size: 15px;
+    line-height: 1.75;
+    margin: 0 auto;
+    max-width: 720px;
+  }
+  /* 首頁 #guides 區塊:3 個大 hub 入口卡片(A 案,各連到 hub 頁) */
+  .hub-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+  .hub-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 32px 30px 26px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s, transform 0.2s, background 0.2s;
+    min-height: 240px;
+  }
+  .hub-card:hover {
+    border-color: var(--accent-cyan);
+    background: var(--bg-tertiary);
+    transform: translateY(-2px);
+  }
+  .hub-card-tag {
+    display: inline-block;
+    color: var(--accent-cyan);
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    padding: 3px 9px;
+    border: 1px solid var(--accent-cyan);
+    border-radius: 3px;
+    align-self: flex-start;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+  }
+  .hub-card-title {
+    font-size: 22px;
+    color: var(--text-primary);
+    margin: 0 0 14px;
+    line-height: 1.3;
+    font-weight: 600;
+  }
+  .hub-card-desc {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0 0 22px;
+    flex: 1;
+  }
+  .hub-card-meta {
+    color: var(--accent-cyan);
+    font-size: 13.5px;
+    font-family: monospace;
+    letter-spacing: 0.04em;
+    border-top: 1px solid var(--border);
+    padding-top: 14px;
+  }
+  @media (max-width: 880px) {
+    .hub-cards {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    .hub-card {
+      min-height: auto;
+      padding: 24px 22px 20px;
+    }
+  }
   /* 文章作者署名 (build_guide_page 動態插入,僅獨立文章頁顯示) */
   .guide-byline {
     color: var(--text-muted);

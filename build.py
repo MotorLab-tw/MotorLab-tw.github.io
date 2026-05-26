@@ -488,12 +488,14 @@ UI_STRINGS = {
         "home_label": "回教學首頁",
         "read_more": "閱讀完整文章 →",
         "byline": "作者:MotorLab Team",
+        "hub_count": "{n} 篇文章 →",
         "bc_section": {
             "guides": "教學",
             "benchmarks": "效能對比",
             "system": "系統",
             "docs": "文件",
             "knowledge_base": "知識庫",
+            "methodology": "方法論",
         },
     },
     "en": {
@@ -505,12 +507,14 @@ UI_STRINGS = {
         "home_label": "Back to guides",
         "read_more": "Read full article →",
         "byline": "Written by MotorLab Team",
+        "hub_count": "{n} articles →",
         "bc_section": {
             "guides": "Guides",
             "benchmarks": "Benchmarks",
             "system": "System",
             "docs": "Docs",
             "knowledge_base": "Knowledge Base",
+            "methodology": "Methodology",
         },
     },
     "ja": {
@@ -522,12 +526,14 @@ UI_STRINGS = {
         "home_label": "ガイド一覧へ",
         "read_more": "全文を読む →",
         "byline": "著者:MotorLab Team",
+        "hub_count": "{n} 件の記事 →",
         "bc_section": {
             "guides": "ガイド",
             "benchmarks": "ベンチマーク",
             "system": "システム",
             "docs": "ドキュメント",
             "knowledge_base": "ナレッジベース",
+            "methodology": "方法論",
         },
     },
 }
@@ -536,6 +542,101 @@ UI_STRINGS = {
 SLUG_BY_GKEY = {g["key"]: g["slug"] for g in GUIDES}
 # 文章 type 的快速反查(D23 分類,default 為 guides 維持向後相容)
 TYPE_BY_GKEY = {g["key"]: g.get("type", "guides") for g in GUIDES}
+
+# ============================================================
+# HUBS:首頁知識庫的 3 個入口分類 + 對應的獨立 hub 頁面
+#   URL:    /{lang_prefix}/{slug}/index.html
+#   include:該 hub 收錄的 article g-key 列表(虛擬 curation,不動原文章 URL)
+# 注意:guides / benchmarks hub 的 slug 與 D23 type 同名 — hub 頁正好放在
+#       type 資料夾根目錄(/guides/index.html 同時是 hub 與 type 列表)。
+#       methodology 是純 curation hub,實體文章仍住原本的 /guides/ 下。
+# ============================================================
+HUBS = [
+    {
+        "slug": "guides",
+        "include": ["g1", "g2", "g4"],
+        "i18n": {
+            "zh": {
+                "title": "教學 — Mini 4WD® 馬達磨合與調校教學系列 | MotorLab",
+                "description": "Mini 4WD® 馬達磨合的系統化教學系列 — 從新馬達為何要磨合的物理原理、4 個關鍵變數、10 階段標準流程、5 個常見錯誤,到「洗馬達 vs 磨合」的觀念釐清。",
+                "h1": "教學",
+                "lead": "從馬達磨合的科學原理、實作步驟、常見錯誤,到保養觀念。為新手與回鍋玩家準備的系統化教學系列。",
+                "keywords": "馬達磨合教學, 馬達磨合教程, 四驅車馬達教學, 馬達磨合 how-to, Mini 4WD 教學",
+            },
+            "en": {
+                "title": "Mini 4WD® Motor Tuning Guides | MotorLab",
+                "description": "Systematic guides for Mini 4WD® motor break-in — the physics of brush seating, 4 critical control variables, 10-stage standard procedure, 5 common mistakes, and the wash-vs-break-in concept.",
+                "h1": "Guides",
+                "lead": "How-to articles covering the physics, practical steps, common mistakes, and maintenance concepts behind Mini 4WD motor tuning. For new and returning racers.",
+                "keywords": "Mini 4WD motor tuning guides, motor break-in tutorial, how to break in Mini 4WD motors, Tamiya motor guides",
+            },
+            "ja": {
+                "title": "Mini 4WD® モーター調整ガイド集 | MotorLab",
+                "description": "Mini 4WD® モーター慣らしの体系的ガイド集 — 新品モーターに慣らしが必要な物理原理、4 つの重要制御変数、10 段階標準フロー、よくある間違い、洗浄 vs 慣らしの概念整理。",
+                "h1": "ガイド",
+                "lead": "モーター慣らしの科学的原理、実践手順、よくある間違い、メンテナンス概念を網羅。初心者から復帰勢まで向けの体系的ガイド集。",
+                "keywords": "ミニ四駆 モーター 慣らし ガイド, モーター 調整 how-to, タミヤ モーター ガイド, ブレークイン 手順",
+            },
+        },
+    },
+    {
+        "slug": "benchmarks",
+        "include": ["g3", "g9"],
+        "i18n": {
+            "zh": {
+                "title": "效能對比 — 田宮 Mini 4WD® 馬達規格速查 | MotorLab",
+                "description": "田宮 Mini 4WD® 馬達官方規格速查與磨合策略對照 — 涵蓋 8 款主流入門/進階馬達,以及全 15 款 PRO + 標準系列完整對照(RPM、扭力、電流、比賽合規)。",
+                "h1": "效能對比",
+                "lead": "Mini 4WD 各款馬達的官方規格速查與性能對照,協助你依車架類型與賽道特性挑選最佳搭配。",
+                "keywords": "田宮馬達規格對照, Mini 4WD 馬達速查, Tamiya motor specs, Mini 4WD PRO 馬達, 紅二, 黑金剛, Hyper Dash, Plasma Dash",
+            },
+            "en": {
+                "title": "Tamiya Mini 4WD® Motor Specs & Benchmarks | MotorLab",
+                "description": "Quick-reference tables and benchmarks for Tamiya Mini 4WD® motors. 8 mainstream motors with break-in strategy, and the full 15-model PRO + standard lineup with RPM, torque, current and race compliance.",
+                "h1": "Benchmarks",
+                "lead": "Official specs and benchmarks for Mini 4WD motors. Pick the right motor for your chassis and course profile.",
+                "keywords": "Tamiya Mini 4WD motor specs, Mini 4WD PRO motors, motor benchmarks, Hyper-Dash PRO, Plasma-Dash, Sprint-Dash, Tamiya motor comparison",
+            },
+            "ja": {
+                "title": "タミヤ Mini 4WD® モーター規格対照 | MotorLab",
+                "description": "タミヤ Mini 4WD® モーターの公式スペック速査と慣らし戦略対照表 — 主要 8 種モーター + 全 15 種 PRO・標準シリーズの RPM、トルク、電流、公式競技ルールを網羅。",
+                "h1": "ベンチマーク",
+                "lead": "タミヤ Mini 4WD モーターの公式仕様とベンチマーク対照。シャーシタイプとコース特性に応じたモーター選びに。",
+                "keywords": "タミヤ ミニ四駆 モーター 規格, Mini 4WD PRO モーター, モーター ベンチマーク, ハイパーダッシュ PRO, プラズマダッシュ, スプリントダッシュ",
+            },
+        },
+    },
+    {
+        "slug": "methodology",
+        "include": ["g5", "g6", "g7", "g8"],
+        "i18n": {
+            "zh": {
+                "title": "方法論 — Mini 4WD® 馬達分析與比賽策略 | MotorLab",
+                "description": "從感覺到數據的進階方法論 — 為什麼磨合決定比賽勝負、5 個進階準備技巧、馬達分析三支柱、衰退徵兆與退役判定。職業車手的系統化思維。",
+                "h1": "方法論",
+                "lead": "進階分析方法與比賽策略系列 — 把馬達調校從「感覺」推進到「數據」,從個別技巧推進到系統化方法論。",
+                "keywords": "馬達分析方法論, 馬達調校方法論, Mini 4WD 比賽策略, 馬達健康指紋, RPM 分析, 進階馬達準備",
+            },
+            "en": {
+                "title": "Mini 4WD® Motor Analysis Methodology | MotorLab",
+                "description": "From feel to data — advanced methodology: why break-in decides race outcomes, 5 prep techniques winners use, three-pillar analysis framework, and degradation diagnostics.",
+                "h1": "Methodology",
+                "lead": "Advanced analysis methodology and competitive strategy — moving motor tuning from feel-based to data-driven, from individual tips to systematic frameworks.",
+                "keywords": "Mini 4WD motor analysis methodology, motor tuning methodology, racing strategy, motor health fingerprint, RPM analysis",
+            },
+            "ja": {
+                "title": "Mini 4WD® モーター分析方法論 | MotorLab",
+                "description": "感覚からデータへ — 上級者向け方法論:なぜ慣らしがレース結果を決めるか、勝者がやる 5 つの準備技、3 支柱分析フレームワーク、衰退診断。",
+                "h1": "方法論",
+                "lead": "上級分析方法論と競技戦略 — モーター調整を「感覚」から「データ」へ、個別テクニックから体系的フレームワークへ。",
+                "keywords": "ミニ四駆 モーター 分析 方法論, モーター 調整 方法論, レース 戦略, モーター 健康指紋, RPM 分析",
+            },
+        },
+    },
+]
+
+# guide key → hub slug 反查(讓首頁卡片轉換知道每張卡屬於哪個 hub)
+HUB_BY_GKEY = {g_key: h["slug"] for h in HUBS for g_key in h["include"]}
 
 
 # keywords meta(按語言切分)
@@ -797,42 +898,53 @@ def build_lang(src_html, lang, i18n):
 
 
 # ============================================================
-# 首頁 #guides 區段 → 卡片索引轉換(三語通用)
-# 每個 article 從「全文展開」縮成「tag + h3 + lead + 閱讀完整文章」
-# 連結指向對應語言的 /guides/<slug>/ 或 /<lang>/guides/<slug>/
+# 首頁 #guides 區段 → 3 個大 hub 入口卡片(A 案,D27)
+# 不在首頁列文章 cards;使用者點 hub 卡進入對應的 hub 頁(/guides/, /benchmarks/, /methodology/)
 # ============================================================
 def _transform_guides_to_cards(soup, lang):
     lang_prefix = "" if lang == "zh" else f"/{lang}"
-    read_more = UI_STRINGS[lang]["read_more"]
-    for art in soup.select("article.guide-article"):
-        tag_el = art.select_one(".guide-tag")
-        gkey_full = tag_el.get("data-i18n", "") if tag_el else ""
-        gkey = gkey_full.split(".")[0] if "." in gkey_full else ""
-        slug = SLUG_BY_GKEY.get(gkey)
-        if not slug:
+    ui = UI_STRINGS[lang]
+
+    # 找 guides-grid(原本含 9 個 article),整塊換成 hub-cards 容器
+    grid = soup.find("div", class_="guides-grid")
+    if grid is None:
+        return
+    parent = grid.parent
+    grid_index = list(parent.contents).index(grid)
+    grid.extract()  # 砍掉原本 9 個 article guide-article(連同容器)
+
+    hub_cards = soup.new_tag("div", attrs={"class": "hub-cards"})
+    for h in HUBS:
+        hub_slug = h["slug"]
+        if lang not in h["i18n"]:
             continue
-        # 只保留 tag / h3 / guide-lead 三個子元素
-        keepers = []
-        for child in list(art.children):
-            if not hasattr(child, "name") or child.name is None:
-                continue
-            cls = child.get("class") or []
-            if (child.name == "span" and "guide-tag" in cls) or \
-               child.name == "h3" or \
-               (child.name == "p" and "guide-lead" in cls):
-                keepers.append(child)
-        for child in list(art.children):
-            child.extract()
-        for k in keepers:
-            art.append(k)
-        # 接「閱讀完整文章 →」連結(用文章的 type 決定資料夾)
-        article_type = TYPE_BY_GKEY.get(gkey, "guides")
-        link = soup.new_tag("a", attrs={
-            "class": "guide-card-link",
-            "href": f"{lang_prefix}/{article_type}/{slug}/",
+        h_i18n = h["i18n"][lang]
+        card = soup.new_tag("a", attrs={
+            "class": "hub-card",
+            "href": f"{lang_prefix}/{hub_slug}/",
         })
-        link.string = read_more
-        art.append(link)
+        # tag(slug 大寫,brand-neutral,跨語言通用)
+        tag = soup.new_tag("span", attrs={"class": "hub-card-tag"})
+        tag.string = hub_slug.upper()
+        card.append(tag)
+        # 標題(用 bc_section label,例如「教學」)
+        title = soup.new_tag("h3", attrs={"class": "hub-card-title"})
+        title.string = ui["bc_section"].get(hub_slug, h_i18n["h1"])
+        card.append(title)
+        # 描述(用 hub.i18n.lead)
+        desc = soup.new_tag("p", attrs={"class": "hub-card-desc"})
+        desc_frag = BeautifulSoup(h_i18n["lead"], "html.parser")
+        for child in list(desc_frag.children):
+            desc.append(child)
+        card.append(desc)
+        # 文章數(例如「3 篇文章 →」)
+        meta = soup.new_tag("div", attrs={"class": "hub-card-meta"})
+        n = len(h["include"])
+        meta.string = ui["hub_count"].format(n=n)
+        card.append(meta)
+        hub_cards.append(card)
+
+    parent.insert(grid_index, hub_cards)
 
 
 # ============================================================
@@ -1043,6 +1155,222 @@ def build_guide_page(slug, lang, src_html, i18n, guide_cfg):
 
 
 # ============================================================
+# Hub 頁面產生器:/{lang_prefix}/{hub_slug}/index.html
+#   列出該 hub include 的所有 article 卡片(連結到文章實體 URL)
+#   完全沿用 .guide-page CSS,layout 與 guide-page 一致
+# ============================================================
+def _card_for_guide_on_hub(soup, src_html, i18n, guide_cfg, lang):
+    """產生 hub 頁面上某篇 guide 的 card(同 _transform_guides_to_cards 的單張)"""
+    cfg = LANGS[lang]
+    lang_dict = i18n.get(lang, {})
+    zh_dict = i18n["zh"]
+    g_key = guide_cfg["key"]
+    g_i18n = guide_cfg["i18n"].get(lang, guide_cfg["i18n"]["zh"])
+    article_type = guide_cfg.get("type", "guides")
+    lang_prefix = "" if lang == "zh" else f"/{lang}"
+    href = f"{lang_prefix}/{article_type}/{guide_cfg['slug']}/"
+
+    # 從來源裡找該 guide 的 article block,抽出 tag/h3/lead 三段
+    fresh = BeautifulSoup(src_html, "lxml")
+    for el in fresh.select("[data-i18n]"):
+        key = el.get("data-i18n")
+        if not key.startswith(g_key + "."):
+            continue
+        text = lang_dict.get(key) or zh_dict.get(key)
+        if text is not None:
+            frag = BeautifulSoup(text, "html.parser")
+            el.clear()
+            for child in list(frag.children):
+                el.append(child)
+
+    target = None
+    for art in fresh.select("article.guide-article"):
+        t = art.select_one(".guide-tag")
+        if t and t.get("data-i18n", "").startswith(g_key + "."):
+            target = art
+            break
+    if target is None:
+        return None
+
+    # 新組裝 card(tag + h3 + lead + read-more link)— 都用 soup 的 builder
+    new_card = soup.new_tag("article", attrs={"class": "guide-article"})
+    for sel in (".guide-tag", "h3", ".guide-lead"):
+        node = target.select_one(sel)
+        if node is not None:
+            new_card.append(BeautifulSoup(str(node), "html.parser"))
+    link = soup.new_tag("a", attrs={"class": "guide-card-link", "href": href})
+    link.string = UI_STRINGS[lang]["read_more"]
+    new_card.append(link)
+    return new_card
+
+
+def build_hub_page(hub_cfg, lang, src_html, i18n):
+    """產生 hub 索引頁(/{lang_prefix}/{hub_slug}/index.html)"""
+    soup = BeautifulSoup(src_html, "lxml")
+    cfg = LANGS[lang]
+    ui = UI_STRINGS[lang]
+    slug = hub_cfg["slug"]
+    h_i18n = hub_cfg["i18n"][lang]
+    lang_prefix = "" if lang == "zh" else f"/{lang}"
+    page_url = f"{SITE}{lang_prefix}/{slug}/"
+    home_url = f"{SITE}{lang_prefix}/"
+    section_label = ui["bc_section"].get(slug, slug)
+    kb_label = ui["bc_section"]["knowledge_base"]
+
+    # 1. <html lang>
+    soup.html["lang"] = cfg["html_lang"]
+
+    # 2. 砍現有 JSON-LD 與 hreflang
+    for s in soup.find_all("script", {"type": "application/ld+json"}):
+        s.decompose()
+    for tag in soup.find_all("link", {"rel": "alternate"}):
+        tag.decompose()
+
+    # 3. 留 footer,清掉 body 其他
+    footer_el = soup.find("footer")
+    footer_extracted = footer_el.extract() if footer_el else None
+
+    # 4. <title> / meta / canonical
+    if soup.title:
+        soup.title.string = h_i18n["title"]
+
+    def set_meta(attr, attr_val, content):
+        tag = soup.find("meta", {attr: attr_val})
+        if tag:
+            tag["content"] = content
+
+    set_meta("name", "description", h_i18n["description"])
+    # zh/ja 頁附加 en keywords(品牌通用)
+    kw = h_i18n["keywords"]
+    if lang != "en" and "en" in hub_cfg["i18n"]:
+        kw = kw + ", " + hub_cfg["i18n"]["en"]["keywords"]
+    set_meta("name", "keywords", kw)
+    set_meta("http-equiv", "Content-Language", cfg["html_lang"])
+    set_meta("property", "og:type", "website")
+    set_meta("property", "og:url", page_url)
+    set_meta("property", "og:title", h_i18n["title"])
+    set_meta("property", "og:description", h_i18n["description"])
+    set_meta("property", "og:locale", cfg["og_locale"])
+    set_meta("name", "twitter:title", h_i18n["title"])
+    set_meta("name", "twitter:description", h_i18n["description"])
+
+    canon = soup.find("link", {"rel": "canonical"})
+    if canon:
+        canon["href"] = page_url
+
+    # 5. hreflang 三向 + x-default
+    head = soup.head
+    for hl_lang, hl_cfg in LANGS.items():
+        hl_prefix = "" if hl_lang == "zh" else f"/{hl_lang}"
+        hl_url = f"{SITE}{hl_prefix}/{slug}/"
+        head.append(soup.new_tag("link", attrs={
+            "rel": "alternate", "hreflang": hl_cfg["html_lang"], "href": hl_url
+        }))
+    head.append(soup.new_tag("link", attrs={
+        "rel": "alternate", "hreflang": "x-default", "href": f"{SITE}/{slug}/"
+    }))
+
+    # 6. JSON-LD: CollectionPage + BreadcrumbList + ItemList
+    items_for_ld = []
+    for g_key in hub_cfg["include"]:
+        g_cfg = next((g for g in GUIDES if g["key"] == g_key), None)
+        if g_cfg is None:
+            continue
+        g_lang = g_cfg["i18n"].get(lang, g_cfg["i18n"]["zh"])
+        g_type = g_cfg.get("type", "guides")
+        g_url = f"{SITE}{lang_prefix}/{g_type}/{g_cfg['slug']}/"
+        items_for_ld.append({
+            "@type": "ListItem",
+            "position": len(items_for_ld) + 1,
+            "url": g_url,
+            "name": g_lang.get("h1_for_ld", g_lang["title"]),
+        })
+
+    collection_ld = {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": h_i18n["title"],
+        "description": h_i18n["description"],
+        "inLanguage": cfg["html_lang"],
+        "url": page_url,
+        "isPartOf": {"@type": "WebSite", "name": "MotorLab.tw", "url": SITE + "/"},
+        "mainEntity": {
+            "@type": "ItemList",
+            "numberOfItems": len(items_for_ld),
+            "itemListElement": items_for_ld,
+        },
+    }
+    breadcrumb_ld = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": ui["bc_home"], "item": home_url},
+            {"@type": "ListItem", "position": 2, "name": kb_label, "item": f"{home_url}#guides"},
+            {"@type": "ListItem", "position": 3, "name": section_label, "item": page_url},
+        ],
+    }
+    for data in (collection_ld, breadcrumb_ld):
+        s = soup.new_tag("script", attrs={"type": "application/ld+json"})
+        s.string = json.dumps(data, ensure_ascii=False, indent=2)
+        head.append(s)
+
+    # 7. <body>:nav + breadcrumb + h1 + lead + cards grid + footer
+    soup.body.clear()
+    soup.body["class"] = "guide-page"
+
+    nav_html = (
+        f'<nav class="guide-nav"><div class="container">'
+        f'<a class="brand" href="{home_url}"><span>MotorLab<span class="tag">.tw</span></span></a>'
+        f'<a class="back-link" href="{home_url}">{ui["back_home"]}</a>'
+        f'</div></nav>'
+    )
+    soup.body.append(BeautifulSoup(nav_html, "html.parser"))
+
+    main_el = soup.new_tag("main")
+    container = soup.new_tag("div", attrs={"class": "container"})
+
+    bc_html = (
+        f'<nav class="breadcrumb" aria-label="Breadcrumb">'
+        f'<a href="{home_url}">{ui["bc_home"]}</a><span class="sep">/</span>'
+        f'<a href="{home_url}#guides">{kb_label}</a><span class="sep">/</span>'
+        f'<span class="current">{section_label}</span>'
+        f'</nav>'
+    )
+    container.append(BeautifulSoup(bc_html, "html.parser"))
+
+    # Hub header(h1 + lead)
+    header = soup.new_tag("div", attrs={"class": "hub-header"})
+    h1 = soup.new_tag("h1")
+    h1.string = h_i18n["h1"]
+    header.append(h1)
+    lead = soup.new_tag("p", attrs={"class": "hub-lead"})
+    lead_frag = BeautifulSoup(h_i18n["lead"], "html.parser")
+    for child in list(lead_frag.children):
+        lead.append(child)
+    header.append(lead)
+    container.append(header)
+
+    # 卡片網格
+    grid = soup.new_tag("div", attrs={"class": "guides-grid"})
+    for g_key in hub_cfg["include"]:
+        g_cfg = next((g for g in GUIDES if g["key"] == g_key), None)
+        if g_cfg is None:
+            continue
+        card = _card_for_guide_on_hub(soup, src_html, i18n, g_cfg, lang)
+        if card is not None:
+            grid.append(card)
+    container.append(grid)
+
+    main_el.append(container)
+    soup.body.append(main_el)
+
+    if footer_extracted is not None:
+        soup.body.append(footer_extracted)
+
+    return str(soup)
+
+
+# ============================================================
 # 主程式
 # ============================================================
 def main():
@@ -1093,7 +1421,23 @@ def main():
             print(f"  ✅ {out_path:<55} {size:>9,} bytes  ({lang})")
 
     print()
-    print("完成!3 個語言版本 + 教學分頁已產生。")
+    print("=== Hub 索引頁(/{hub_slug}/,D27 curation)===")
+    for hub in HUBS:
+        for lang in ("zh", "en", "ja"):
+            if lang not in hub["i18n"]:
+                continue
+            lang_prefix = "" if lang == "zh" else f"{lang}/"
+            out_dir = f"{lang_prefix}{hub['slug']}"
+            out_path = f"{out_dir}/index.html"
+            os.makedirs(out_dir, exist_ok=True)
+            html_out = build_hub_page(hub, lang, src_html, i18n)
+            with open(out_path, "w", encoding="utf-8") as f:
+                f.write(html_out)
+            size = len(html_out.encode("utf-8"))
+            print(f"  ✅ {out_path:<45} {size:>9,} bytes  ({lang})")
+
+    print()
+    print("完成!3 個語言版本 + 教學分頁 + 3 個 hub 索引頁已產生。")
     print("=" * 55)
 
 

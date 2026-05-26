@@ -25,6 +25,16 @@ on:
       - 'knowledge_base/**/index.html'
       - 'en/knowledge_base/**/index.html'
       - 'ja/knowledge_base/**/index.html'
+      - 'methodology/**/index.html'
+      - 'en/methodology/**/index.html'
+      - 'ja/methodology/**/index.html'
+      # Hub 索引頁(D27,/{hub}/index.html)
+      - 'guides/index.html'
+      - 'en/guides/index.html'
+      - 'ja/guides/index.html'
+      - 'benchmarks/index.html'
+      - 'en/benchmarks/index.html'
+      - 'ja/benchmarks/index.html'
       - 'sitemap.xml'
       - '*.html'
       - '*.css'
@@ -63,6 +73,15 @@ jobs:
                 \"https://${HOST}/\",
                 \"https://${HOST}/en/\",
                 \"https://${HOST}/ja/\",
+                \"https://${HOST}/guides/\",
+                \"https://${HOST}/en/guides/\",
+                \"https://${HOST}/ja/guides/\",
+                \"https://${HOST}/benchmarks/\",
+                \"https://${HOST}/en/benchmarks/\",
+                \"https://${HOST}/ja/benchmarks/\",
+                \"https://${HOST}/methodology/\",
+                \"https://${HOST}/en/methodology/\",
+                \"https://${HOST}/ja/methodology/\",
                 \"https://${HOST}/guides/motor-break-in-guide/\",
                 \"https://${HOST}/guides/motor-break-in-mistakes/\",
                 \"https://${HOST}/guides/tamiya-motor-specs/\",

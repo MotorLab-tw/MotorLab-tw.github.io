@@ -1129,6 +1129,95 @@
     max-width: 920px;
     margin: 0 auto 32px;
   }
+  /* Hub 頁面標題與描述(/guides/, /benchmarks/, /methodology/ 各 hub 頂部) */
+  .hub-header {
+    max-width: 920px;
+    margin: 28px auto 28px;
+    text-align: center;
+  }
+  .hub-header h1 {
+    font-size: clamp(28px, 4vw, 38px);
+    margin: 0 0 14px;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+  }
+  .hub-header .hub-lead {
+    color: var(--text-secondary);
+    font-size: 15px;
+    line-height: 1.75;
+    margin: 0 auto;
+    max-width: 720px;
+  }
+  /* 首頁 #guides 區塊:3 個大 hub 入口卡片(A 案,各連到 hub 頁) */
+  .hub-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+  .hub-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 32px 30px 26px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s, transform 0.2s, background 0.2s;
+    min-height: 240px;
+  }
+  .hub-card:hover {
+    border-color: var(--accent-cyan);
+    background: var(--bg-tertiary);
+    transform: translateY(-2px);
+  }
+  .hub-card-tag {
+    display: inline-block;
+    color: var(--accent-cyan);
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    padding: 3px 9px;
+    border: 1px solid var(--accent-cyan);
+    border-radius: 3px;
+    align-self: flex-start;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+  }
+  .hub-card-title {
+    font-size: 22px;
+    color: var(--text-primary);
+    margin: 0 0 14px;
+    line-height: 1.3;
+    font-weight: 600;
+  }
+  .hub-card-desc {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0 0 22px;
+    flex: 1;
+  }
+  .hub-card-meta {
+    color: var(--accent-cyan);
+    font-size: 13.5px;
+    font-family: monospace;
+    letter-spacing: 0.04em;
+    border-top: 1px solid var(--border);
+    padding-top: 14px;
+  }
+  @media (max-width: 880px) {
+    .hub-cards {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    .hub-card {
+      min-height: auto;
+      padding: 24px 22px 20px;
+    }
+  }
   /* 文章作者署名 (build_guide_page 動態插入,僅獨立文章頁顯示) */
   .guide-byline {
     color: var(--text-muted);
@@ -2111,26 +2200,7 @@
 <h2 class="section-title" data-i18n="g.title">四驅車知識庫</h2>
 <p class="section-subtitle" data-i18n="g.subtitle">從原理到實作,整理迷你四驅車馬達磨合最常見的問題與解答。</p>
 </div>
-<div class="guides-grid">
-<!-- Guide 1: 完全指南 -->
-<article class="guide-article"><span class="guide-tag" data-i18n="g1.tag">GUIDE · 完全指南</span><h3 data-i18n="g1.title">四驅車馬達磨合完全指南:從原理到實作</h3><p class="guide-lead" data-i18n="g1.lead">迷你四驅車(Mini 4WD)的馬達磨合,是讓新馬達發揮最大潛能的必要程序。本文整理田宮馬達磨合的科學原理、實作步驟、以及為什麼專業車手都要做這道工序。</p><a class="guide-card-link" href="/guides/motor-break-in-guide/">閱讀完整文章 →</a></article>
-<!-- Guide 2: 5 大錯誤 -->
-<article class="guide-article"><span class="guide-tag" data-i18n="g2.tag">GUIDE · 避免錯誤</span><h3 data-i18n="g2.title">為什麼業餘車手磨合馬達總是失敗?5 個常見錯誤</h3><p class="guide-lead" data-i18n="g2.lead">許多新手回鍋玩四驅車,聽說要磨合馬達就拿乾電池亂跑,結果不是馬達燒掉就是跑不快。本文整理最常見的 5 個磨合錯誤與正確做法。</p><a class="guide-card-link" href="/guides/motor-break-in-mistakes/">閱讀完整文章 →</a></article>
-<!-- Guide 3: 馬達特性表 -->
-<article class="guide-article"><span class="guide-tag" data-i18n="g3.tag">REFERENCE · 馬達速查</span><h3 data-i18n="g3.title">田宮主流馬達特性與磨合策略對照表</h3><p class="guide-lead" data-i18n="g3.lead">不同馬達的設計用途、轉速、扭力特性都不同,磨合方式自然也該有差。整理田宮 8 款主流馬達的官方規格與建議磨合策略。</p><a class="guide-card-link" href="/guides/tamiya-motor-specs/">閱讀完整文章 →</a></article>
-<!-- Guide 4: 洗馬達 vs 磨合 -->
-<article class="guide-article"><span class="guide-tag" data-i18n="g4.tag">GUIDE · 觀念釐清</span><h3 data-i18n="g4.title">洗馬達 vs 磨合馬達:差別在哪?什麼時候做?</h3><p class="guide-lead" data-i18n="g4.lead">「洗馬達」與「磨合馬達」是兩個完全不同的程序,但常被混淆。本文釐清兩者的時機、做法、與目的。</p><a class="guide-card-link" href="/guides/motor-wash-vs-break-in/">閱讀完整文章 →</a></article>
-<!-- Guide 5: 比賽磨合的重要性 -->
-<article class="guide-article"><span class="guide-tag" data-i18n="g5.tag">GUIDE · 競賽脈絡</span><h3 data-i18n="g5.title">為什麼磨馬達決定四驅車比賽勝負?競賽水準的磨合差距</h3><p class="guide-lead" data-i18n="g5.lead">迷你四驅車比賽看似只是讓車跑完一圈,實際上 0.1 秒的差距就決定誰能上台。在這個微秒級的競爭裡,「馬達磨合」是大多數車手忽略、卻決定性影響成績的環節。本文從競賽角度切入,解釋為什麼業餘磨合方式在比賽中行不通、職業選手如何看待馬達準備。</p><a class="guide-card-link" href="/guides/racing-motor-break-in/">閱讀完整文章 →</a></article>
-<!-- Guide 6: 競技進階技巧 -->
-<article class="guide-article"><span class="guide-tag" data-i18n="g6.tag">GUIDE · 進階準備</span><h3 data-i18n="g6.title">四驅車競技進階技巧:常勝玩家不寫在書上的 5 個準備細節</h3><p class="guide-lead" data-i18n="g6.lead">看過很多四驅車磨合教學、看過很多改裝指南,但比賽現場常勝的那群人,做的事情通常不會出現在公開文章裡。本文整理 5 個真正在競技圈被使用、卻很少被系統化寫出來的進階準備細節。沒有花俏理論,全部是賽事可驗證的實務。</p><a class="guide-card-link" href="/guides/racing-prep-techniques/">閱讀完整文章 →</a></article>
-<!-- Guide 7: 三支柱方法論 -->
-<article class="guide-article"><span class="guide-tag" data-i18n="g7.tag">GUIDE · 方法論</span><h3 data-i18n="g7.title">從手感到數據:馬達分析的三支柱方法論</h3><p class="guide-lead" data-i18n="g7.lead">大多數車手憑經驗判斷馬達狀態—「跑起來感覺不錯」「聽聲音差不多」。問題是經驗無法傳承、無法重現、也無法驗證。本文介紹一套把馬達分析從「手感」轉成系統工程的三步驟方法論:<strong>量測、比較、健康判斷</strong>。這是 MotorLab 整個分析系統背後的概念框架。</p><a class="guide-card-link" href="/guides/motor-analysis-methodology/">閱讀完整文章 →</a></article>
-<!-- Guide 8: 馬達衰退徵兆與退役判定 -->
-<article class="guide-article"><span class="guide-tag" data-i18n="g8.tag">GUIDE · 故障診斷</span><h3 data-i18n="g8.title">四驅車馬達衰退的 8 個徵兆與退役判定門檻</h3><p class="guide-lead" data-i18n="g8.lead">新馬達磨好後不會永久維持狀態。從第 5 場比賽開始,馬達就會逐漸衰退,但很多車手要等到「明顯跑不動」才發現。本文整理 8 個衰退徵兆 + 退役判定門檻,讓你在馬達真正報廢前就能做出處置決策(洗、退役、或繼續用)。</p><a class="guide-card-link" href="/guides/motor-degradation-signs/">閱讀完整文章 →</a></article>
-<!-- Guide 9: 田宮全 15 款馬達規格對照(benchmarks,D23 首篇) -->
-<article class="guide-article"><span class="guide-tag" data-i18n="g9.tag">REFERENCE · 全馬達速查</span><h3 data-i18n="g9.title">田宮 Mini 4WD® 全 15 款馬達規格對照表(含 PRO 系列)</h3><p class="guide-lead" data-i18n="g9.lead">田宮(TAMIYA, INC.)目前推出的 Mini 4WD® 馬達共 15 款,涵蓋 <strong>Mini 4WD 標準系列 9 款(單軸)</strong>與 <strong>Mini 4WD PRO 系列 6 款(雙軸)</strong>。本對照表整理官方公布的 RPM、扭力(mN·m)、電流(A)規格,並標註比賽合規限制與對應 MotorLab 磨合策略,協助你依車架類型與賽道特性挑馬達。</p><a class="guide-card-link" href="/benchmarks/tamiya-motor-full-lineup/">閱讀完整文章 →</a></article>
-</div>
+<div class="hub-cards"><a class="hub-card" href="/guides/"><span class="hub-card-tag">GUIDES</span><h3 class="hub-card-title">教學</h3><p class="hub-card-desc">從馬達磨合的科學原理、實作步驟、常見錯誤,到保養觀念。為新手與回鍋玩家準備的系統化教學系列。</p><div class="hub-card-meta">3 篇文章 →</div></a><a class="hub-card" href="/benchmarks/"><span class="hub-card-tag">BENCHMARKS</span><h3 class="hub-card-title">效能對比</h3><p class="hub-card-desc">Mini 4WD 各款馬達的官方規格速查與性能對照,協助你依車架類型與賽道特性挑選最佳搭配。</p><div class="hub-card-meta">2 篇文章 →</div></a><a class="hub-card" href="/methodology/"><span class="hub-card-tag">METHODOLOGY</span><h3 class="hub-card-title">方法論</h3><p class="hub-card-desc">進階分析方法與比賽策略系列 — 把馬達調校從「感覺」推進到「數據」,從個別技巧推進到系統化方法論。</p><div class="hub-card-meta">4 篇文章 →</div></a></div>
 </div>
 </section>
 <!-- Changelog -->

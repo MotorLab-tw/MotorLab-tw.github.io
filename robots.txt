@@ -21,6 +21,5 @@ Allow: /
 User-agent: DuckDuckBot
 Allow: /
 
-# 禁止某些惡意爬蟲與 AI 訓練爬蟲(可選, 看你的偏好)
-# 如果你不介意內容被 AI 訓練,可以把下面這段刪掉
+
 
