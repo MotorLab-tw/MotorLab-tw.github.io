@@ -416,4 +416,51 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/benchmarks/tamiya-motor-full-lineup/"/>
   </url>
 
+  <!-- /system/ pages (D23 system: 商品外觀/設計) -->
+  <url>
+    <loc>https://motorlab-tw.github.io/system/product-design/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/system/product-design/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/system/product-design/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/system/product-design/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/system/product-design/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/og/MotorLab_V1-1.png</image:loc>
+      <image:title>MotorLab 馬達磨合機外觀設計</image:title>
+      <image:caption>低調黑一體機身、對稱護柱、嵌入式字標的 Mini 4WD 精密測試機</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://motorlab-tw.github.io/en/system/product-design/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/system/product-design/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/system/product-design/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/system/product-design/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/system/product-design/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/og/MotorLab_V1-1.png</image:loc>
+      <image:title>MotorLab Motor Break-in Machine — Exterior Design</image:title>
+      <image:caption>A matte-black Mini 4WD precision test rig with symmetric guard pillars</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://motorlab-tw.github.io/ja/system/product-design/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/system/product-design/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/system/product-design/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/system/product-design/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/system/product-design/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/og/MotorLab_V1-1.png</image:loc>
+      <image:title>MotorLab モーター慣らし機の外観デザイン</image:title>
+      <image:caption>マットブラック一体ボディと左右対称ガードピラーの Mini 4WD 精密テスト機</image:caption>
+    </image:image>
+  </url>
+
 </urlset>

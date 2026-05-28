@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" translate="no">
+<html lang="ja" translate="no">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="en" http-equiv="Content-Language"/>
-<title>Mini 4WD Motor Break-in Guide: Principles &amp; Practice | MotorLab</title>
-<meta content="Complete Mini 4WD motor break-in guide — the physics of brush-commutator seating, four critical control variables, 10-stage standard procedure, and completion criteria. Why every new Tamiya motor needs break-in and the pitfalls of amateur water-soak methods." name="description"/>
+<meta content="ja" http-equiv="Content-Language"/>
+<title>モーター慣らし機の外観デザイン:Mini 4WD® 精密テスト機 | MotorLab</title>
+<meta content="MotorLab モーター慣らし機の外観デザイン紹介 — 低反射のマットブラック一体ボディ、左右対称のガードピラー、埋め込みワードマーク、前面クランプ、側面アクティブ冷却。160 × 81 × 90 mm のデスクトップサイズ、実機 Web UI と同じ工学計器のデザイン言語。" name="description"/>
 <meta content="MotorLab.tw" name="author"/>
-<meta content="motor break-in, Mini 4WD motor break-in, Tamiya motor break-in, motor running-in, motor bedding, 10-stage break-in, motor break-in guide, Hyper Dash break-in, Plasma Dash break-in, carbon brush seating, MotorLab" name="keywords"/>
+<meta content="MotorLab 外観, モーター慣らし機 デザイン, ミニ四駆 モーター テスト機, デスクトップ モーター測定機, MotorLab product design, motor break-in machine design, Mini 4WD motor tester, desktop motor test rig, matte black enclosure" name="keywords"/>
 <!-- 正規網址 (避免重複內容問題) -->
-<link href="https://motorlab-tw.github.io/en/guides/motor-break-in-guide/" rel="canonical"/>
+<link href="https://motorlab-tw.github.io/ja/system/product-design/" rel="canonical"/>
 <!-- 搜尋引擎指示 -->
 <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
 <meta content="index, follow" name="googlebot"/>
@@ -30,23 +30,23 @@
 <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
 <meta content="MotorLab" name="apple-mobile-web-app-title"/>
 <!-- Open Graph (Facebook, LINE, Discord) -->
-<meta content="article" property="og:type"/>
-<meta content="https://motorlab-tw.github.io/en/guides/motor-break-in-guide/" property="og:url"/>
-<meta content="Mini 4WD Motor Break-in Guide: Principles &amp; Practice | MotorLab" property="og:title"/>
-<meta content="Complete Mini 4WD motor break-in guide — the physics of brush-commutator seating, four critical control variables, 10-stage standard procedure, and completion criteria. Why every new Tamiya motor needs break-in and the pitfalls of amateur water-soak methods." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://motorlab-tw.github.io/ja/system/product-design/" property="og:url"/>
+<meta content="モーター慣らし機の外観デザイン:Mini 4WD® 精密テスト機 | MotorLab" property="og:title"/>
+<meta content="MotorLab モーター慣らし機の外観デザイン紹介 — 低反射のマットブラック一体ボディ、左右対称のガードピラー、埋め込みワードマーク、前面クランプ、側面アクティブ冷却。160 × 81 × 90 mm のデスクトップサイズ、実機 Web UI と同じ工学計器のデザイン言語。" property="og:description"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" property="og:image"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" property="og:image:secure_url"/>
 <meta content="image/png" property="og:image:type"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
 <meta content="MotorLab — Mini 4WD® 馬達精密測試系統官方網站預覽圖" property="og:image:alt"/>
-<meta content="en_US" property="og:locale"/>
+<meta content="ja_JP" property="og:locale"/>
 <meta content="en_US" property="og:locale:alternate"/>
 <meta content="MotorLab.tw" property="og:site_name"/>
 <!-- Twitter Card -->
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Mini 4WD Motor Break-in Guide: Principles &amp; Practice | MotorLab" name="twitter:title"/>
-<meta content="Complete Mini 4WD motor break-in guide — the physics of brush-commutator seating, four critical control variables, 10-stage standard procedure, and completion criteria. Why every new Tamiya motor needs break-in and the pitfalls of amateur water-soak methods." name="twitter:description"/>
+<meta content="モーター慣らし機の外観デザイン:Mini 4WD® 精密テスト機 | MotorLab" name="twitter:title"/>
+<meta content="MotorLab モーター慣らし機の外観デザイン紹介 — 低反射のマットブラック一体ボディ、左右対称のガードピラー、埋め込みワードマーク、前面クランプ、側面アクティブ冷却。160 × 81 × 90 mm のデスクトップサイズ、実機 Web UI と同じ工学計器のデザイン言語。" name="twitter:description"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" name="twitter:image"/>
 <meta content="MotorLab 官方網站預覽圖" name="twitter:image:alt"/>
 <!-- 結構化資料 1: Organization (公司/工作室) -->
@@ -1606,34 +1606,22 @@
     .sys-hero { padding: 24px 0 40px; }
   }
 </style>
-<link href="https://motorlab-tw.github.io/guides/motor-break-in-guide/" hreflang="zh-TW" rel="alternate"/><link href="https://motorlab-tw.github.io/en/guides/motor-break-in-guide/" hreflang="en" rel="alternate"/><link href="https://motorlab-tw.github.io/ja/guides/motor-break-in-guide/" hreflang="ja" rel="alternate"/><link href="https://motorlab-tw.github.io/guides/motor-break-in-guide/" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
+<link href="https://motorlab-tw.github.io/system/product-design/" hreflang="zh-TW" rel="alternate"/><link href="https://motorlab-tw.github.io/en/system/product-design/" hreflang="en" rel="alternate"/><link href="https://motorlab-tw.github.io/ja/system/product-design/" hreflang="ja" rel="alternate"/><link href="https://motorlab-tw.github.io/system/product-design/" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
   "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Mini 4WD Motor Break-in Complete Guide: Principles & Practice",
-  "description": "Complete Mini 4WD motor break-in guide — the physics of brush-commutator seating, four critical control variables, 10-stage standard procedure, and completion criteria. Why every new Tamiya motor needs break-in and the pitfalls of amateur water-soak methods.",
-  "keywords": "motor break-in, Mini 4WD motor break-in, Tamiya motor break-in, motor running-in, motor bedding, 10-stage break-in, motor break-in guide, Hyper Dash break-in, Plasma Dash break-in, carbon brush seating, MotorLab",
-  "inLanguage": "en",
-  "url": "https://motorlab-tw.github.io/en/guides/motor-break-in-guide/",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://motorlab-tw.github.io/en/guides/motor-break-in-guide/"
-  },
-  "author": {
-    "@type": "Organization",
-    "name": "MotorLab Team",
+  "@type": "WebPage",
+  "name": "MotorLab モーター慣らし機の外観デザイン",
+  "description": "MotorLab モーター慣らし機の外観デザイン紹介 — 低反射のマットブラック一体ボディ、左右対称のガードピラー、埋め込みワードマーク、前面クランプ、側面アクティブ冷却。160 × 81 × 90 mm のデスクトップサイズ、実機 Web UI と同じ工学計器のデザイン言語。",
+  "inLanguage": "ja",
+  "url": "https://motorlab-tw.github.io/ja/system/product-design/",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "MotorLab.tw",
     "url": "https://motorlab-tw.github.io/"
   },
-  "publisher": {
-    "@type": "Organization",
-    "name": "MotorLab.tw",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://motorlab-tw.github.io/favicon-192.png",
-      "width": 192,
-      "height": 192
-    }
-  },
-  "image": "https://motorlab-tw.github.io/og-image.png"
+  "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "https://motorlab-tw.github.io/images/og/MotorLab_V1-1.png"
+  }
 }</script><script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -1641,75 +1629,28 @@
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "Home",
-      "item": "https://motorlab-tw.github.io/en/"
+      "name": "ホーム",
+      "item": "https://motorlab-tw.github.io/ja/"
     },
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Guides",
-      "item": "https://motorlab-tw.github.io/en/#guides"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Motor Break-in Guide",
-      "item": "https://motorlab-tw.github.io/en/guides/motor-break-in-guide/"
+      "name": "外観デザイン",
+      "item": "https://motorlab-tw.github.io/ja/system/product-design/"
     }
   ]
 }</script></head>
-<body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/en/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/en/">← Back to home</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/en/">Home</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/en/#guides">Guides</a><span class="sep">/</span><span class="current">Motor Break-in Guide</span></nav><article class="guide-article">
-<span class="guide-tag" data-i18n="g1.tag">GUIDE · Complete Guide</span>
-<h1 data-i18n="g1.title">Complete Guide to Mini 4WD Motor Break-in: From Theory to Practice</h1><p class="guide-byline">Written by MotorLab Team</p>
-<p class="guide-lead" data-i18n="g1.lead">Motor break-in is the essential procedure that lets a new Mini 4WD motor reach its full potential. This article covers the science, the practical steps, and why pros never skip this process.</p>
-<h4 data-i18n="g1.h1">Why does every new motor need break-in?</h4>
-<p data-i18n="g1.p1">New Tamiya motors (Hyper Dash, Plasma Dash, Sprint Dash, Rev Tuned, Torque Tuned and others) ship with <strong>flat brush contact surfaces</strong>. But the commutator inside is cylindrical — a flat brush only touches a thin arc, severely limiting effective conductive area.</p>
-<p data-i18n="g1.p2">Running at full speed in this state causes:</p>
-<ul>
-<li data-i18n="g1.l1"><strong>Unstable current</strong> — brush bounce produces erratic current swings, motor vibrates and overheats</li>
-<li data-i18n="g1.l2"><strong>Unrealized RPM</strong> — a Hyper Dash 2 rated 19,300 RPM may only deliver 14,000 RPM</li>
-<li data-i18n="g1.l3"><strong>Magnet demagnetization risk</strong> — sustained heat permanently reduces motor output</li>
-<li data-i18n="g1.l4"><strong>Premature commutator wear</strong> — hard contact between un-mated surfaces damages the copper</li>
-</ul>
-<p data-i18n="g1.p3"><strong>The goal of break-in</strong> is to gradually wear the flat brush into a half-circle arc that matches the commutator surface — maximizing contact area, enabling smooth current flow, and letting the motor reach its designed RPM and torque.</p>
-<h4 data-i18n="g1.h2">The physics behind break-in</h4>
-<p data-i18n="g1.p4">The core equation for DC brushed motors: <code>N = (V − IR) / Kφ</code> (RPM = (Voltage − Current×Resistance) / flux constant). A new motor has high brush contact resistance R, causing large IR losses and reducing RPM N. Break-in physically <strong>reduces contact resistance and improves energy conversion efficiency</strong>.</p>
-<p data-i18n="g1.p5">Amateur methods include "water break-in" (running submerged at low voltage) or "battery break-in" (alternating polarity with dry cells). Both share a common problem: uncontrolled voltage, guess-the-time, no quantified progress. Results are pure luck.</p>
-<h4 data-i18n="g1.h3">The 4 key variables of professional break-in</h4>
-<p data-i18n="g1.p6">Success depends on precise control of these 4 parameters:</p>
-<table class="guide-table">
-<thead>
-<tr><th data-i18n="g1.t.var">Variable</th><th data-i18n="g1.t.role">Role</th><th data-i18n="g1.t.risk">Risk if uncontrolled</th></tr>
-</thead>
-<tbody>
-<tr><td data-i18n="g1.t.v1">Voltage (V)</td><td data-i18n="g1.t.r1">Controls contact temperature &amp; pressure</td><td data-i18n="g1.t.x1">Too high burns brushes, too low does nothing</td></tr>
-<tr><td data-i18n="g1.t.v2">Time (min)</td><td data-i18n="g1.t.r2">Determines break-in depth</td><td data-i18n="g1.t.x2">Too short → incomplete contact; too long → over-wear</td></tr>
-<tr><td data-i18n="g1.t.v3">Direction (±)</td><td data-i18n="g1.t.r3">Ensures symmetric brush wear</td><td data-i18n="g1.t.x3">One-way only → uneven wear, shortened life</td></tr>
-<tr><td data-i18n="g1.t.v4">Cooling (s)</td><td data-i18n="g1.t.r4">Prevents heat buildup</td><td data-i18n="g1.t.x4">Overheating → permanent magnet demagnetization</td></tr>
-</tbody>
-</table>
-<h4 data-i18n="g1.h4">Standard break-in procedure (10-stage recommendation)</h4>
-<p data-i18n="g1.p7">The mainstream "progressive voltage ramp" method divides break-in into 10 stages of 30-90 seconds each, ramping voltage from 1.0V to 2.4V, with reverse runs and cooling pauses interleaved.</p>
-<div class="guide-tip">
-<p data-i18n="g1.tip">MotorLab M1/PRO's built-in <strong>10-stage programmable break-in</strong> automatically executes this protocol. Each stage independently sets voltage, direction, time, cooling, and current stability tolerance. The <strong>smart stable-current latch</strong> auto-advances when current variation falls below threshold, ensuring every motor reaches optimal break-in.</p>
-</div>
-<h4 data-i18n="g1.h5">How to know when break-in is complete</h4>
-<p data-i18n="g1.p8">Four observation points tell you the motor is ready:</p>
-<ul>
-<li data-i18n="g1.l5"><strong>Current stability</strong> — at fixed voltage, current variation ≤ ±50mA</li>
-<li data-i18n="g1.l6"><strong>RPM stability</strong> — at fixed voltage, RPM variation over 10s ≤ 200 RPM</li>
-<li data-i18n="g1.l7"><strong>Smooth thermal curve</strong> — no sudden temperature jumps</li>
-<li data-i18n="g1.l8"><strong>Clean acoustic signature</strong> — no irregular hissing or chattering noise</li>
-</ul>
-</article><div class="guide-pagination"><div class="left"><span class="label">← Previous</span><span class="disabled">—</span></div><div class="center"><a href="https://motorlab-tw.github.io/en/#guides"><span class="label">︿</span><span>Back to guides</span></a></div><div class="right"><a href="/en/guides/motor-break-in-mistakes/"><span class="label">Next →</span><span>5 Common Break-in Mistakes</span></a></div></div></div></main><footer>
+<body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/ja/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/ja/">← ホームへ戻る</a></div></nav><main><section class="sys-hero"><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/ja/">ホーム</a><span class="sep">/</span><span class="current">外観デザイン</span></nav><div class="sys-hero-grid"><div><div class="sys-eyebrow">Product Design</div><h1 class="sys-hero-title">すべての<br/><span class="sys-accent">Mini 4WD<span class="sys-reg">®</span> モーター</span>のために<br/>生まれた精密テスト機</h1><p class="sys-hero-p">低反射のマットブラックボディ、左右対称のガードピラー、埋め込みワードマーク —— MotorLab の外観は Web UI の工学計器の言語を受け継ぎ、「卓上ラボ」の精密さを一つひとつの折り線に込めています。</p><div class="sys-chips"><span class="sys-chip m1">M1</span><span class="sys-chip pro">PRO</span><span class="sys-chip">サイズ <b>160 × 81 × 90 mm</b></span><span class="sys-chip">仕上げ <b>マットブラック</b></span></div></div><div class="sys-panel"><img alt="MotorLab モーター慣らし機の外観デザイン" src="/images/og/MotorLab_V1-1.png"/></div></div></div></section><section class="sys-section"><div class="container"><div class="sys-eyebrow">Design Language</div><h2 class="sys-h2">家電ではなく、卓上の計測器</h2><p class="sys-lead">ボディは低反射のマットブラックの塊。左右対称で厚みのあるガードピラーがコアモジュールを包み、運搬時は取っ手に、稼働時は構造保護になります。露出する要素(クランプ、センサー座、冷却口、ステータスランプ)はすべて端正な折り線の中に収められ、装飾を排して工学的な質感だけを残しました。</p></div></section><section class="sys-section sys-band"><div class="container"><div class="sys-eyebrow">Exterior Highlights</div><h2 class="sys-h2">すべてのディテールに機能がある</h2><p class="sys-lead">外観で見えるすべてのデザインが、実際の用途に対応しています —— クランプ、冷却からステータス表示まで。</p><div class="sys-feature-grid"><div class="sys-fcard"><div class="sys-num">01</div><h3>マットブラック一体ボディ</h3><p>面取りされた折り線を備えた厚みのある塊。低反射の表面が卓上の雑光を抑え、前面に埋め込まれた「MotorLab」ワードマークがブランドを造形と一体化させます。</p></div><div class="sys-fcard"><div class="sys-num">02</div><h3>左右対称のガードピラー</h3><p>2 本のピラーは取っ手と保護を兼ね、運搬時は握りやすく、稼働時はコアモジュールを守り、全体を力学的にバランスさせます。</p></div><div class="sys-fcard"><div class="sys-num">03</div><h3><span class="sys-dot sys-dot-red"></span>前面モータークランプ</h3><p>前面のアノダイズドクランプとセンサー座。モーターを置くだけで即座に位置決めされ、視覚的な焦点であり、測定精度の起点でもあります。</p></div><div class="sys-fcard"><div class="sys-num">04</div><h3><span class="sys-dot sys-dot-cyan"></span>側面アクティブ冷却</h3><p>側面に内蔵された冷却ファンと導風口が、長時間の慣らしでも安定した動作温度を保ちます。風路はシルエットの内側に収められています。</p></div><div class="sys-fcard"><div class="sys-num">05</div><h3><span class="sys-dot sys-dot-blue"></span>カスタム多色インジケーター</h3><p>電源と稼働状態を一目で識別。ミニマルな単一光源が、計器グレードの抑制を表現します。</p></div><div class="sys-fcard"><div class="sys-num">06</div><h3>コンパクトな卓上サイズ</h3><p>160 × 81 × 90 mm のコンパクトな体積で片手で移動でき、どんな作業机や整備台にも収まります。</p></div></div></div></section><section class="sys-section"><div class="container"><div class="sys-eyebrow">Gallery</div><h2 class="sys-h2">360°、すべての面を見る</h2><div class="sys-gallery-grid"><div class="sys-gitem"><div class="sys-panel"><img alt="正面" src="/images/og/MotorLab_V1-2.png"/></div><div class="sys-cap"><b>正面 <span>FRONT</span></b>対称のピラーが中央のクランプモジュールを包み、ワードマークとステータスランプが一列に並びます。</div></div><div class="sys-gitem"><div class="sys-panel"><img alt="装着" src="/images/og/MotorLab_V1-5.png"/></div><div class="sys-cap"><b>装着 <span>MOUNTED</span></b>クランプにモーターを置き、センサー座を固定した実使用状態。</div></div><div class="sys-gitem"><div class="sys-panel"><img alt="冷却面" src="/images/og/MotorLab_V1-3.png"/></div><div class="sys-cap"><b>冷却面 <span>SIDE</span></b>側面の冷却ファンとざぐり穴の固定点 — 工学構造が一目で分かります。</div></div><div class="sys-gitem"><div class="sys-panel"><img alt="上面" src="/images/og/MotorLab_V1-4.png"/></div><div class="sys-cap"><b>上面 <span>TOP</span></b>センサー座とクランプ軸が上下で揃った、整然としたレイアウト。</div></div></div></div></section><section class="sys-section sys-band"><div class="container"><div class="sys-eyebrow">Dimensions</div><h2 class="sys-h2">三面図と寸法</h2><p class="sys-lead">完全な三面図と立体図、寸法はすべてミリメートル(mm)表記。</p><div class="sys-dim-wrap"><div class="sys-panel"><img alt="三面図と寸法" src="/images/og/MotorLab_dimensions.png"/></div><div class="sys-dim-specs"><div class="sys-dim-row"><span class="k">長さ Length</span><span class="v">160 <small>mm</small></span></div><div class="sys-dim-row"><span class="k">幅 Width</span><span class="v">81 <small>mm</small></span></div><div class="sys-dim-row"><span class="k">高さ Height</span><span class="v">90 <small>mm</small></span></div><div class="sys-dim-row"><span class="k">仕上げ Finish</span><span class="v">マットブラック</span></div></div></div></div></section></main><footer>
 <div class="container">
-<div class="footer-trademark" data-i18n="footer.trademark">"Mini 4WD"<sup>®</sup> and "ミニ四駆"<sup>®</sup> are registered trademarks of TAMIYA, INC. (Japan Trademark Registration No. 2168392). MotorLab is an independent studio and has no affiliation with, authorization from, sponsorship by, or endorsement from TAMIYA, INC. References to these names on this site are made solely to indicate product compatibility. All trademark rights belong to their respective owners.</div>
+<div class="footer-trademark" data-i18n="footer.trademark">
+      "Mini 4WD"<sup>®</sup> 與 "ミニ四駆"<sup>®</sup> 為株式会社タミヤ（TAMIYA, INC.）的註冊商標（日本商標登錄號 第 2168392 號）。MotorLab 為獨立工作室，與株式会社タミヤ無任何關聯，亦未受其授權、贊助或背書。本網站提及之相關名稱僅用於指涉產品適用範圍，所有商標權益歸原權利人所有。
+    </div>
 <div class="footer-inner">
 <div>
 <strong>MotorLab.tw</strong> · <span data-i18n="footer.tagline">Mini 4WD Performance Lab</span>
 </div>
 <div class="mono">
-        © 2026 MotorLab · <span data-i18n="footer.firmware">Firmware</span> v3.0.8
+        © 2026 MotorLab · <span data-i18n="footer.firmware">韌體</span> v3.0.8
       </div>
 </div>
 </div>

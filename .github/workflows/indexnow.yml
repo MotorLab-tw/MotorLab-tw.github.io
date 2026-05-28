@@ -108,7 +108,10 @@ jobs:
                 \"https://${HOST}/ja/guides/racing-prep-techniques/\",
                 \"https://${HOST}/ja/guides/motor-analysis-methodology/\",
                 \"https://${HOST}/ja/guides/motor-degradation-signs/\",
-                \"https://${HOST}/ja/benchmarks/tamiya-motor-full-lineup/\"
+                \"https://${HOST}/ja/benchmarks/tamiya-motor-full-lineup/\",
+                \"https://${HOST}/system/product-design/\",
+                \"https://${HOST}/en/system/product-design/\",
+                \"https://${HOST}/ja/system/product-design/\"
               ]
             }")
           

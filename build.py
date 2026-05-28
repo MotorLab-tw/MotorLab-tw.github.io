@@ -639,6 +639,157 @@ HUBS = [
 HUB_BY_GKEY = {g_key: h["slug"] for h in HUBS for g_key in h["include"]}
 
 
+# ============================================================
+# SYSTEM:商品外觀/系統介紹頁(/system/<slug>/,D23 system 分類)
+#   build_system_page() 產生圖文展示頁,內容皆在此 config(不在母版),
+#   CSS 用母版 <style> 的 .sys-* 類別,沿用 .guide-page 的 nav/breadcrumb/footer。
+#   images 為三語共用;features / gallery / dim_rows 為各語言 list。
+#   dot:特色卡標題前的小圓點(對應實機可見元件顏色)— "" 表無圓點。
+# ============================================================
+SYSTEM = {
+    "slug": "product-design",
+    "type": "system",
+    "images": {
+        "hero": "/images/og/MotorLab_V1-1.png",
+        "gallery": [
+            "/images/og/MotorLab_V1-2.png",
+            "/images/og/MotorLab_V1-5.png",
+            "/images/og/MotorLab_V1-3.png",
+            "/images/og/MotorLab_V1-4.png",
+        ],
+        "dimensions": "/images/og/MotorLab_dimensions.png",
+    },
+    "i18n": {
+        "zh": {
+            "title": "馬達磨合機外觀設計:Mini 4WD® 精密測試機 | MotorLab",
+            "description": "MotorLab 馬達磨合機的外觀設計介紹 — 低調黑一體機身、對稱雙側護柱、嵌入式字標、前置馬達夾持模組與側向主動散熱。160 × 81 × 90 mm 桌面尺寸,延續實機 Web UI 的工程儀器設計語言。",
+            "keywords": "MotorLab 外觀, 馬達磨合機 外觀, 馬達磨合機 設計, 桌上馬達測試機, Mini 4WD 馬達磨合機",
+            "breadcrumb": "商品外觀",
+            "h1_for_ld": "MotorLab 馬達磨合機外觀設計",
+            "eyebrow": "Product Design · 商品外觀",
+            "hero_title": "為每一顆<br><span class='sys-accent'>Mini 4WD<span class='sys-reg'>®</span> 馬達</span><br>而生的精密測試機",
+            "hero_p": "低調黑機身、對稱護柱、嵌入式字標 —— MotorLab 的外觀延續 Web UI 的工程儀器語言,把「桌上實驗室」的精密感做進每一道折線。",
+            "chips": ["尺寸 <b>160 × 81 × 90 mm</b>", "機身 <b>低調黑</b>"],
+            "dl_eyebrow": "Design Language · 設計語言",
+            "dl_h2": "不是電器,是一台桌上實驗儀器",
+            "dl_p": "機身採用低反光的低調黑塊體。形體上以對稱、厚實的雙側護柱包覆核心模組,既是搬運時的提把,也是運轉時的結構保護;所有外露元件(夾具、感測座、散熱口、狀態燈)都被收進俐落的折線之中,沒有多餘裝飾,只留下工程感。",
+            "feat_eyebrow": "Exterior Highlights · 外觀特色",
+            "feat_h2": "每一個細節都有功能",
+            "feat_lead": "外觀上看得到的每一處設計,都對應一個實際用途 —— 從夾持、散熱到狀態提示。",
+            "features": [
+                {"dot": "", "t": "低調黑機身", "d": "厚實塊體搭配導角折線,低反光表面減少桌面雜光干擾;正面嵌入式「MotorLab」字標,品牌識別一體成形。"},
+                {"dot": "", "t": "對稱雙側護柱", "d": "兩側立柱兼具提把與防護機能,搬運時好握、運轉時保護核心模組,也讓整體視覺維持力學上的對稱平衡。"},
+                {"dot": "sys-dot-red", "t": "前置馬達夾持模組", "d": "正面陽極夾具搭配感測座,馬達一放即定位,是整台機器的視覺焦點,也是量測精度的起點。"},
+                {"dot": "sys-dot-cyan", "t": "側向主動散熱", "d": "側面內嵌散熱風扇與導風開口,長時間磨合也能維持穩定工作溫度,風道收在機身輪廓之內不破壞造型。"},
+                {"dot": "sys-dot-blue", "t": "自訂多彩指示燈", "d": "一眼辨識電源與運轉狀態;極簡的單點光源,呼應儀器級的克制美學。"},
+                {"dot": "", "t": "精巧桌面尺寸", "d": "160 × 81 × 90 mm 的緊湊體積,單手可移動,輕鬆融入任何工作桌或維修檯,不佔空間。"},
+            ],
+            "gal_eyebrow": "Gallery · 多角度檢視",
+            "gal_h2": "360° 看清每一面",
+            "gallery_caps": [
+                {"b": "正視", "tag": "FRONT", "d": "對稱護柱包覆中央夾持模組,字標與狀態燈一字排開。"},
+                {"b": "裝載", "tag": "MOUNTED", "d": "馬達置入夾具、鎖上感測座的實際使用狀態。"},
+                {"b": "散熱面", "tag": "SIDE", "d": "側向散熱風扇與沉孔鎖點,工程結構一覽無遺。"},
+                {"b": "俯視", "tag": "TOP", "d": "感測座與夾持軸線由上而下對齊,佈局工整。"},
+            ],
+            "dim_eyebrow": "Dimensions · 尺寸與結構",
+            "dim_h2": "三視圖與尺寸",
+            "dim_lead": "完整三視圖 + 立體圖,所有尺寸以毫米(mm)標示。",
+            "dim_rows": [
+                {"k": "長度 Length", "v": "160", "u": "mm"},
+                {"k": "寬度 Width", "v": "81", "u": "mm"},
+                {"k": "高度 Height", "v": "90", "u": "mm"},
+                {"k": "機身配色 Finish", "v": "低調黑", "u": ""},
+            ],
+        },
+        "en": {
+            "title": "Mini 4WD Motor Break-in Machine: Hardware Design | MotorLab",
+            "description": "Inside the exterior design of the MotorLab Mini 4WD® motor break-in machine — a low-key matte-black unibody, symmetric guard pillars, embedded wordmark, front clamp module and side active cooling. A compact 160 × 81 × 90 mm desktop instrument.",
+            "keywords": "MotorLab product design, motor break-in machine design, Mini 4WD motor tester, desktop motor test rig, matte black enclosure",
+            "breadcrumb": "Product Design",
+            "h1_for_ld": "MotorLab Motor Break-in Machine — Exterior Design",
+            "eyebrow": "Product Design",
+            "hero_title": "A precision rig built<br>for every <span class='sys-accent'>Mini 4WD<span class='sys-reg'>®</span> motor</span>",
+            "hero_p": "Low-key matte black body, symmetric guard pillars, an embedded wordmark — MotorLab's exterior carries the engineering-instrument language of its Web UI, folding desktop-lab precision into every chamfered edge.",
+            "chips": ["Size <b>160 × 81 × 90 mm</b>", "Finish <b>Matte black</b>"],
+            "dl_eyebrow": "Design Language",
+            "dl_h2": "Not an appliance — a desktop lab instrument",
+            "dl_p": "The body is a low-reflection matte-black block. Symmetric, substantial guard pillars wrap the core module — a carry handle when moving it, structural protection while running. Every exposed element (clamp, sensor seat, cooling vent, status light) is tucked into clean folds: no decoration, only engineering.",
+            "feat_eyebrow": "Exterior Highlights",
+            "feat_h2": "Every detail has a function",
+            "feat_lead": "Every visible design choice on the exterior maps to a real purpose — from clamping and cooling to status indication.",
+            "features": [
+                {"dot": "", "t": "Matte black unibody", "d": "A solid block with chamfered folds; the low-reflection surface cuts desktop glare, and the front-embedded “MotorLab” wordmark makes branding part of the form."},
+                {"dot": "", "t": "Symmetric guard pillars", "d": "The two pillars double as a carry handle and protection — easy to grip when moving, shielding the core module while running, and keeping the whole form mechanically balanced."},
+                {"dot": "sys-dot-red", "t": "Front motor-clamp module", "d": "An anodized clamp plus sensor seat on the front: drop a motor in and it locates instantly — the visual focal point, and the starting point of measurement accuracy."},
+                {"dot": "sys-dot-cyan", "t": "Side active cooling", "d": "A built-in fan and air channel on the side hold a stable working temperature through long break-in runs, with the airflow path tucked inside the silhouette."},
+                {"dot": "sys-dot-blue", "t": "Custom multi-color indicator", "d": "Read power and run state at a glance; a minimal single point of light, echoing the instrument-grade restraint."},
+                {"dot": "", "t": "Compact desktop size", "d": "At 160 × 81 × 90 mm it moves with one hand and slips onto any workbench or repair desk without taking over the space."},
+            ],
+            "gal_eyebrow": "Gallery",
+            "gal_h2": "See every face, 360°",
+            "gallery_caps": [
+                {"b": "Front", "tag": "FRONT", "d": "Symmetric pillars wrap the central clamp module; wordmark and status light line up across the face."},
+                {"b": "Mounted", "tag": "MOUNTED", "d": "A motor seated in the clamp with the sensor seat locked down — the actual in-use state."},
+                {"b": "Cooling side", "tag": "SIDE", "d": "Side cooling fan and counterbored mounting points — the engineering structure laid bare."},
+                {"b": "Top", "tag": "TOP", "d": "Sensor seat and clamp axis align top-to-bottom; a tidy layout."},
+            ],
+            "dim_eyebrow": "Dimensions",
+            "dim_h2": "Three views & dimensions",
+            "dim_lead": "Full three-view drawing plus an isometric view, all dimensions in millimetres (mm).",
+            "dim_rows": [
+                {"k": "Length", "v": "160", "u": "mm"},
+                {"k": "Width", "v": "81", "u": "mm"},
+                {"k": "Height", "v": "90", "u": "mm"},
+                {"k": "Finish", "v": "Matte black", "u": ""},
+            ],
+        },
+        "ja": {
+            "title": "モーター慣らし機の外観デザイン:Mini 4WD® 精密テスト機 | MotorLab",
+            "description": "MotorLab モーター慣らし機の外観デザイン紹介 — 低反射のマットブラック一体ボディ、左右対称のガードピラー、埋め込みワードマーク、前面クランプ、側面アクティブ冷却。160 × 81 × 90 mm のデスクトップサイズ、実機 Web UI と同じ工学計器のデザイン言語。",
+            "keywords": "MotorLab 外観, モーター慣らし機 デザイン, ミニ四駆 モーター テスト機, デスクトップ モーター測定機",
+            "breadcrumb": "外観デザイン",
+            "h1_for_ld": "MotorLab モーター慣らし機の外観デザイン",
+            "eyebrow": "Product Design",
+            "hero_title": "すべての<br><span class='sys-accent'>Mini 4WD<span class='sys-reg'>®</span> モーター</span>のために<br>生まれた精密テスト機",
+            "hero_p": "低反射のマットブラックボディ、左右対称のガードピラー、埋め込みワードマーク —— MotorLab の外観は Web UI の工学計器の言語を受け継ぎ、「卓上ラボ」の精密さを一つひとつの折り線に込めています。",
+            "chips": ["サイズ <b>160 × 81 × 90 mm</b>", "仕上げ <b>マットブラック</b>"],
+            "dl_eyebrow": "Design Language",
+            "dl_h2": "家電ではなく、卓上の計測器",
+            "dl_p": "ボディは低反射のマットブラックの塊。左右対称で厚みのあるガードピラーがコアモジュールを包み、運搬時は取っ手に、稼働時は構造保護になります。露出する要素(クランプ、センサー座、冷却口、ステータスランプ)はすべて端正な折り線の中に収められ、装飾を排して工学的な質感だけを残しました。",
+            "feat_eyebrow": "Exterior Highlights",
+            "feat_h2": "すべてのディテールに機能がある",
+            "feat_lead": "外観で見えるすべてのデザインが、実際の用途に対応しています —— クランプ、冷却からステータス表示まで。",
+            "features": [
+                {"dot": "", "t": "マットブラック一体ボディ", "d": "面取りされた折り線を備えた厚みのある塊。低反射の表面が卓上の雑光を抑え、前面に埋め込まれた「MotorLab」ワードマークがブランドを造形と一体化させます。"},
+                {"dot": "", "t": "左右対称のガードピラー", "d": "2 本のピラーは取っ手と保護を兼ね、運搬時は握りやすく、稼働時はコアモジュールを守り、全体を力学的にバランスさせます。"},
+                {"dot": "sys-dot-red", "t": "前面モータークランプ", "d": "前面のアノダイズドクランプとセンサー座。モーターを置くだけで即座に位置決めされ、視覚的な焦点であり、測定精度の起点でもあります。"},
+                {"dot": "sys-dot-cyan", "t": "側面アクティブ冷却", "d": "側面に内蔵された冷却ファンと導風口が、長時間の慣らしでも安定した動作温度を保ちます。風路はシルエットの内側に収められています。"},
+                {"dot": "sys-dot-blue", "t": "カスタム多色インジケーター", "d": "電源と稼働状態を一目で識別。ミニマルな単一光源が、計器グレードの抑制を表現します。"},
+                {"dot": "", "t": "コンパクトな卓上サイズ", "d": "160 × 81 × 90 mm のコンパクトな体積で片手で移動でき、どんな作業机や整備台にも収まります。"},
+            ],
+            "gal_eyebrow": "Gallery",
+            "gal_h2": "360°、すべての面を見る",
+            "gallery_caps": [
+                {"b": "正面", "tag": "FRONT", "d": "対称のピラーが中央のクランプモジュールを包み、ワードマークとステータスランプが一列に並びます。"},
+                {"b": "装着", "tag": "MOUNTED", "d": "クランプにモーターを置き、センサー座を固定した実使用状態。"},
+                {"b": "冷却面", "tag": "SIDE", "d": "側面の冷却ファンとざぐり穴の固定点 — 工学構造が一目で分かります。"},
+                {"b": "上面", "tag": "TOP", "d": "センサー座とクランプ軸が上下で揃った、整然としたレイアウト。"},
+            ],
+            "dim_eyebrow": "Dimensions",
+            "dim_h2": "三面図と寸法",
+            "dim_lead": "完全な三面図と立体図、寸法はすべてミリメートル(mm)表記。",
+            "dim_rows": [
+                {"k": "長さ Length", "v": "160", "u": "mm"},
+                {"k": "幅 Width", "v": "81", "u": "mm"},
+                {"k": "高さ Height", "v": "90", "u": "mm"},
+                {"k": "仕上げ Finish", "v": "マットブラック", "u": ""},
+            ],
+        },
+    },
+}
+
+
 # keywords meta(按語言切分)
 # 規則:
 #   zh 頁:zh 原生 + en(品牌/技術詞)
@@ -784,6 +935,14 @@ def build_lang(src_html, lang, i18n):
         href = tag.get("href", "")
         if href.startswith("/") and not href.startswith("//"):
             pass  # 已是絕對路徑,OK
+
+    # --- 7c. 內部跨頁連結(nav 的 data-syslink)改寫成對應語言的 URL ---
+    # 母版寫 zh 絕對路徑;en/ja 首頁要連到 /en/.. 、/ja/.. 的同頁
+    sys_prefix = "" if lang == "zh" else f"/{lang}"
+    sys_href = f"{sys_prefix}/{SYSTEM.get('type', 'system')}/{SYSTEM['slug']}/"
+    for a in soup.select("a[data-syslink]"):
+        a["href"] = sys_href
+        del a["data-syslink"]
 
     # --- 8. 語言切換:button → a 連結 ---
     lang_switch = soup.find("div", class_="lang-switch")
@@ -1371,6 +1530,206 @@ def build_hub_page(hub_cfg, lang, src_html, i18n):
 
 
 # ============================================================
+# 商品外觀頁產生器:/{lang_prefix}/system/<slug>/index.html
+#   圖文展示頁(hero + 設計語言 + 特色 + gallery + 尺寸),內容全部來自 SYSTEM config。
+#   沿用母版 <head>/<style> 與 .guide-page 的 guide-nav / breadcrumb / footer。
+# ============================================================
+def build_system_page(sys_cfg, lang, src_html, i18n):
+    soup = BeautifulSoup(src_html, "lxml")
+    cfg = LANGS[lang]
+    ui = UI_STRINGS[lang]
+    slug = sys_cfg["slug"]
+    page_type = sys_cfg.get("type", "system")
+    s = sys_cfg["i18n"][lang]
+    imgs = sys_cfg["images"]
+    lang_prefix = "" if lang == "zh" else f"/{lang}"
+    page_url = f"{SITE}{lang_prefix}/{page_type}/{slug}/"
+    home_url = f"{SITE}{lang_prefix}/"
+
+    # 1. <html lang>
+    soup.html["lang"] = cfg["html_lang"]
+
+    # 2. 砍現有 JSON-LD 與 hreflang(加本頁專用的)
+    for sc in soup.find_all("script", {"type": "application/ld+json"}):
+        sc.decompose()
+    for tag in soup.find_all("link", {"rel": "alternate"}):
+        tag.decompose()
+
+    # 3. 留 footer(含 D10 商標聲明),清掉 body 其他
+    footer_el = soup.find("footer")
+    footer_extracted = footer_el.extract() if footer_el else None
+
+    # 4. <title> / meta / canonical
+    if soup.title:
+        soup.title.string = s["title"]
+
+    def set_meta(attr, attr_val, content):
+        tag = soup.find("meta", {attr: attr_val})
+        if tag:
+            tag["content"] = content
+
+    set_meta("name", "description", s["description"])
+    kw = s["keywords"]
+    if lang != "en" and "en" in sys_cfg["i18n"]:
+        kw = kw + ", " + sys_cfg["i18n"]["en"]["keywords"]
+    set_meta("name", "keywords", kw)
+    set_meta("http-equiv", "Content-Language", cfg["html_lang"])
+    set_meta("property", "og:type", "website")
+    set_meta("property", "og:url", page_url)
+    set_meta("property", "og:title", s["title"])
+    set_meta("property", "og:description", s["description"])
+    set_meta("property", "og:locale", cfg["og_locale"])
+    set_meta("name", "twitter:title", s["title"])
+    set_meta("name", "twitter:description", s["description"])
+
+    canon = soup.find("link", {"rel": "canonical"})
+    if canon:
+        canon["href"] = page_url
+
+    # 5. hreflang 三向 + x-default
+    head = soup.head
+    for hl_lang, hl_cfg in LANGS.items():
+        hl_prefix = "" if hl_lang == "zh" else f"/{hl_lang}"
+        hl_url = f"{SITE}{hl_prefix}/{page_type}/{slug}/"
+        head.append(soup.new_tag("link", attrs={
+            "rel": "alternate", "hreflang": hl_cfg["html_lang"], "href": hl_url
+        }))
+    head.append(soup.new_tag("link", attrs={
+        "rel": "alternate", "hreflang": "x-default", "href": f"{SITE}/{page_type}/{slug}/"
+    }))
+
+    # 6. JSON-LD: WebPage(primaryImageOfPage)+ BreadcrumbList
+    webpage_ld = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": s["h1_for_ld"],
+        "description": s["description"],
+        "inLanguage": cfg["html_lang"],
+        "url": page_url,
+        "isPartOf": {"@type": "WebSite", "name": "MotorLab.tw", "url": SITE + "/"},
+        "primaryImageOfPage": {"@type": "ImageObject", "url": SITE + imgs["hero"]},
+    }
+    breadcrumb_ld = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": ui["bc_home"], "item": home_url},
+            {"@type": "ListItem", "position": 2, "name": s["breadcrumb"], "item": page_url},
+        ],
+    }
+    for data in (webpage_ld, breadcrumb_ld):
+        sc = soup.new_tag("script", attrs={"type": "application/ld+json"})
+        sc.string = json.dumps(data, ensure_ascii=False, indent=2)
+        head.append(sc)
+
+    # 7. <body>:nav + hero + 設計語言 + 特色 + gallery + 尺寸 + footer
+    soup.body.clear()
+    soup.body["class"] = "guide-page"
+
+    nav_html = (
+        f'<nav class="guide-nav"><div class="container">'
+        f'<a class="brand" href="{home_url}"><span>MotorLab<span class="tag">.tw</span></span></a>'
+        f'<a class="back-link" href="{home_url}">{ui["back_home"]}</a>'
+        f'</div></nav>'
+    )
+    soup.body.append(BeautifulSoup(nav_html, "html.parser"))
+
+    main_el = soup.new_tag("main")
+
+    # 7a. Hero(breadcrumb + h1 + p + chips + 立體圖)
+    bc_html = (
+        f'<nav class="breadcrumb" aria-label="Breadcrumb">'
+        f'<a href="{home_url}">{ui["bc_home"]}</a><span class="sep">/</span>'
+        f'<span class="current">{s["breadcrumb"]}</span>'
+        f'</nav>'
+    )
+    chips_html = "".join(f'<span class="sys-chip">{c}</span>' for c in s["chips"])
+    hero_html = (
+        f'<section class="sys-hero"><div class="container">{bc_html}'
+        f'<div class="sys-hero-grid"><div>'
+        f'<div class="sys-eyebrow">{s["eyebrow"]}</div>'
+        f'<h1 class="sys-hero-title">{s["hero_title"]}</h1>'
+        f'<p class="sys-hero-p">{s["hero_p"]}</p>'
+        f'<div class="sys-chips">'
+        f'<span class="sys-chip m1">M1</span><span class="sys-chip pro">PRO</span>{chips_html}'
+        f'</div></div>'
+        f'<div class="sys-panel"><img src="{imgs["hero"]}" alt="{s["h1_for_ld"]}"></div>'
+        f'</div></div></section>'
+    )
+    main_el.append(BeautifulSoup(hero_html, "html.parser"))
+
+    # 7b. 設計語言
+    dl_html = (
+        f'<section class="sys-section"><div class="container">'
+        f'<div class="sys-eyebrow">{s["dl_eyebrow"]}</div>'
+        f'<h2 class="sys-h2">{s["dl_h2"]}</h2>'
+        f'<p class="sys-lead">{s["dl_p"]}</p>'
+        f'</div></section>'
+    )
+    main_el.append(BeautifulSoup(dl_html, "html.parser"))
+
+    # 7c. 外觀特色
+    fcards = ""
+    for i, f in enumerate(s["features"], 1):
+        dot = f'<span class="sys-dot {f["dot"]}"></span>' if f["dot"] else ""
+        fcards += (
+            f'<div class="sys-fcard"><div class="sys-num">{i:02d}</div>'
+            f'<h3>{dot}{f["t"]}</h3><p>{f["d"]}</p></div>'
+        )
+    feat_html = (
+        f'<section class="sys-section sys-band"><div class="container">'
+        f'<div class="sys-eyebrow">{s["feat_eyebrow"]}</div>'
+        f'<h2 class="sys-h2">{s["feat_h2"]}</h2>'
+        f'<p class="sys-lead">{s["feat_lead"]}</p>'
+        f'<div class="sys-feature-grid">{fcards}</div>'
+        f'</div></section>'
+    )
+    main_el.append(BeautifulSoup(feat_html, "html.parser"))
+
+    # 7d. 多角度 gallery
+    gitems = ""
+    for img, cap in zip(imgs["gallery"], s["gallery_caps"]):
+        gitems += (
+            f'<div class="sys-gitem"><div class="sys-panel"><img src="{img}" alt="{cap["b"]}"></div>'
+            f'<div class="sys-cap"><b>{cap["b"]} <span>{cap["tag"]}</span></b>{cap["d"]}</div></div>'
+        )
+    gal_html = (
+        f'<section class="sys-section"><div class="container">'
+        f'<div class="sys-eyebrow">{s["gal_eyebrow"]}</div>'
+        f'<h2 class="sys-h2">{s["gal_h2"]}</h2>'
+        f'<div class="sys-gallery-grid">{gitems}</div>'
+        f'</div></section>'
+    )
+    main_el.append(BeautifulSoup(gal_html, "html.parser"))
+
+    # 7e. 尺寸與結構
+    drows = ""
+    for r in s["dim_rows"]:
+        unit = f' <small>{r["u"]}</small>' if r["u"] else ""
+        drows += (
+            f'<div class="sys-dim-row"><span class="k">{r["k"]}</span>'
+            f'<span class="v">{r["v"]}{unit}</span></div>'
+        )
+    dim_html = (
+        f'<section class="sys-section sys-band"><div class="container">'
+        f'<div class="sys-eyebrow">{s["dim_eyebrow"]}</div>'
+        f'<h2 class="sys-h2">{s["dim_h2"]}</h2>'
+        f'<p class="sys-lead">{s["dim_lead"]}</p>'
+        f'<div class="sys-dim-wrap">'
+        f'<div class="sys-panel"><img src="{imgs["dimensions"]}" alt="{s["dim_h2"]}"></div>'
+        f'<div class="sys-dim-specs">{drows}</div>'
+        f'</div></div></section>'
+    )
+    main_el.append(BeautifulSoup(dim_html, "html.parser"))
+
+    soup.body.append(main_el)
+    if footer_extracted is not None:
+        soup.body.append(footer_extracted)
+
+    return str(soup)
+
+
+# ============================================================
 # 主程式
 # ============================================================
 def main():
@@ -1437,7 +1796,23 @@ def main():
             print(f"  ✅ {out_path:<45} {size:>9,} bytes  ({lang})")
 
     print()
-    print("完成!3 個語言版本 + 教學分頁 + 3 個 hub 索引頁已產生。")
+    print("=== 商品外觀頁(/system/<slug>/,D23 system 分類)===")
+    sys_type = SYSTEM.get("type", "system")
+    for lang in ("zh", "en", "ja"):
+        if lang not in SYSTEM["i18n"]:
+            continue
+        lang_prefix = "" if lang == "zh" else f"{lang}/"
+        out_dir = f"{lang_prefix}{sys_type}/{SYSTEM['slug']}"
+        out_path = f"{out_dir}/index.html"
+        os.makedirs(out_dir, exist_ok=True)
+        html_out = build_system_page(SYSTEM, lang, src_html, i18n)
+        with open(out_path, "w", encoding="utf-8") as f:
+            f.write(html_out)
+        size = len(html_out.encode("utf-8"))
+        print(f"  ✅ {out_path:<45} {size:>9,} bytes  ({lang})")
+
+    print()
+    print("完成!3 個語言版本 + 教學分頁 + 3 個 hub 索引頁 + 商品外觀頁已產生。")
     print("=" * 55)
 
 
