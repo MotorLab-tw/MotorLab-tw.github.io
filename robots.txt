@@ -1,13 +1,6 @@
 # MotorLab.tw — robots.txt
 # 允許所有合法搜尋引擎索引整個網站
 
-User-agent: *
-Allow: /
-Disallow: /HANDOFF.md
-Disallow: /DEPLOYMENT.md
-Disallow: /CHANGELOG_TEMPLATE.md
-Disallow: /CNAME.example
-
 # Sitemap
 Sitemap: https://motorlab-tw.github.io/sitemap.xml
 
