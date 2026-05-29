@@ -1422,27 +1422,22 @@
       grid-template-columns: 1fr;
       gap: 40px;
     }
-    /* 手機:頂列只留 logo + ☰;選單與語言切換收進下滑面板 */
-    .nav-inner { flex-wrap: wrap; }
-    .nav-toggle { display: flex; order: 2; margin-left: auto; }
+    /* 手機:頂列 = logo + 語言切換 + ☰;只有選單連結收進下滑面板 */
+    .nav-inner { flex-wrap: wrap; gap: 10px; padding-left: 16px; padding-right: 16px; }
+    .logo { font-size: 16px; gap: 8px; }
+    .lang-switch { order: 2; margin-left: auto; }
+    .nav-toggle { display: flex; order: 3; }
     .nav-links {
       display: none;
-      order: 3;
+      order: 4;
       flex-basis: 100%;
       flex-direction: column;
       gap: 0;
-      margin-top: 10px;
+      margin-top: 4px;
       padding-top: 8px;
       border-top: 1px solid var(--border);
     }
-    .lang-switch {
-      display: none;
-      order: 4;
-      margin: 14px 0 4px;
-      align-self: flex-start;
-    }
-    nav.nav-open .nav-links,
-    nav.nav-open .lang-switch { display: flex; }
+    nav.nav-open .nav-links { display: flex; }
     .nav-links li { width: 100%; }
     .nav-links a { display: block; padding: 13px 8px; border-radius: 6px; font-size: 15px; }
     nav.nav-open .nav-toggle .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
