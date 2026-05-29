@@ -62,18 +62,26 @@ def compose_product(path, out):
     minc = arr.min(2)
     maxc = arr.max(2)
     sat = maxc - minc
+    bri = arr.mean(2)
 
-    # Interior pure-white = either logo paint (neutral surroundings) or a
-    # see-through pocket in the mount (surrounded by the saturated red clamp).
-    # Classify each blob by the saturation of its neighbouring ring.
-    interior = (minc >= 245) & ~border
+    # Solid bright-metallic blobs (the clamp) — erode first so thin AA edges
+    # around the logo letters don't count, leaving only chunky metal regions.
+    metal = (~border) & (bri >= 138) & (bri <= 238) & (sat < 40) & (minc < 238)
+    metal_zone = ndimage.binary_dilation(
+        ndimage.binary_erosion(metal, iterations=3), iterations=5)
+
+    # Interior near-white = either logo paint (sits on the dark housing) or a
+    # see-through pocket in the mount (hugs the clamp: red OR bare metal).
+    interior = (minc >= 240) & ~border
     lbl, n = ndimage.label(interior)
     logo = np.zeros_like(interior)
     pocket = np.zeros_like(interior)
     for cid in range(1, n + 1):
         comp = lbl == cid
         ring = ndimage.binary_dilation(comp, iterations=4) & ~comp
-        if sat[ring].max() > 80:          # touches the red clamp -> backdrop pocket
+        touches_red = sat[ring].max() > 80
+        touches_metal = (ring & metal_zone).sum() / max(ring.sum(), 1) > 0.08
+        if touches_red or touches_metal:   # backdrop pocket around the clamp
             pocket |= comp
         else:                              # surrounded by housing -> logo paint
             logo |= comp
@@ -115,6 +123,6 @@ if __name__ == "__main__":
     import os
     os.makedirs("images/og", exist_ok=True)
     for n in range(1, 6):
-        compose_product(f"images/MotorLab_V1-{n}.png", f"images/og/MotorLab_V1-{n}.png")
+        compose_product(f"images/MotorLab_V1-{n}.jpg", f"images/og/MotorLab_V1-{n}.png")
     compose_blueprint("images/MotorLab_3D_20260515.PNG", "images/og/MotorLab_dimensions.png")
     print("done")
