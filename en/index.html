@@ -388,6 +388,27 @@
     background: var(--bg-tertiary);
     color: var(--accent-cyan);
   }
+  /* 手機漢堡按鈕(桌機隱藏,<880px 顯示) */
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .nav-toggle .bar {
+    width: 22px;
+    height: 2px;
+    margin: 0 auto;
+    background: var(--text-primary);
+    border-radius: 2px;
+    transition: transform 0.25s, opacity 0.2s;
+  }
   .lang-switch {
     display: flex;
     border: 1px solid var(--border);
@@ -1505,7 +1526,32 @@
       grid-template-columns: 1fr;
       gap: 40px;
     }
-    .nav-links { display: none; }
+    /* 手機:頂列只留 logo + ☰;選單與語言切換收進下滑面板 */
+    .nav-inner { flex-wrap: wrap; }
+    .nav-toggle { display: flex; order: 2; margin-left: auto; }
+    .nav-links {
+      display: none;
+      order: 3;
+      flex-basis: 100%;
+      flex-direction: column;
+      gap: 0;
+      margin-top: 10px;
+      padding-top: 8px;
+      border-top: 1px solid var(--border);
+    }
+    .lang-switch {
+      display: none;
+      order: 4;
+      margin: 14px 0 4px;
+      align-self: flex-start;
+    }
+    nav.nav-open .nav-links,
+    nav.nav-open .lang-switch { display: flex; }
+    .nav-links li { width: 100%; }
+    .nav-links a { display: block; padding: 13px 8px; border-radius: 6px; font-size: 15px; }
+    nav.nav-open .nav-toggle .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    nav.nav-open .nav-toggle .bar:nth-child(2) { opacity: 0; }
+    nav.nav-open .nav-toggle .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
     .changelog-item {
       grid-template-columns: 1fr;
       gap: 12px;
@@ -1832,7 +1878,7 @@
 </span>
 <span>MotorLab<span class="tag">.tw</span></span>
 </a>
-<ul class="nav-links">
+<ul class="nav-links" id="nav-links">
 <li><a data-i18n="nav.features" href="#features">Features</a></li>
 <li><a data-i18n="nav.versions" href="#versions">Editions</a></li>
 <li><a data-i18n="nav.tech" href="#tech">Tech</a></li>
@@ -1843,6 +1889,9 @@
 <li><a data-i18n="nav.about" href="#about">About</a></li>
 <li><a data-i18n="nav.contact" href="#contact">Contact</a></li>
 </ul>
+<button aria-controls="nav-links" aria-expanded="false" aria-label="Menu" class="nav-toggle" type="button">
+<span class="bar"></span><span class="bar"></span><span class="bar"></span>
+</button>
 <div class="lang-switch"><a class="lang-btn" href="/">中</a><a class="lang-btn active" href="/en/">EN</a><a class="lang-btn" href="/ja/">JP</a></div>
 </div>
 </nav>
@@ -4191,6 +4240,25 @@
   if (PRODUCT_LIVE) {
     document.getElementById('purchase-btn').style.display = 'inline-flex';
   }
+
+  // ===== 手機漢堡選單開關 =====
+  (function () {
+    const navEl = document.querySelector('nav');
+    const toggle = document.querySelector('.nav-toggle');
+    if (!navEl || !toggle) return;
+    const setOpen = (open) => {
+      navEl.classList.toggle('nav-open', open);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    };
+    toggle.addEventListener('click', () => setOpen(!navEl.classList.contains('nav-open')));
+    // 點選單連結後自動收合
+    navEl.querySelectorAll('.nav-links a').forEach((a) =>
+      a.addEventListener('click', () => setOpen(false)));
+    // 視窗放大回桌機寬度時重置
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 880) setOpen(false);
+    });
+  })();
 </script>
 </body>
 </html>

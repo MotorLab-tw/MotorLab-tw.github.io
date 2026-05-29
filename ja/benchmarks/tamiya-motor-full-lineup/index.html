@@ -193,6 +193,27 @@
     background: var(--bg-tertiary);
     color: var(--accent-cyan);
   }
+  /* 手機漢堡按鈕(桌機隱藏,<880px 顯示) */
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .nav-toggle .bar {
+    width: 22px;
+    height: 2px;
+    margin: 0 auto;
+    background: var(--text-primary);
+    border-radius: 2px;
+    transition: transform 0.25s, opacity 0.2s;
+  }
   .lang-switch {
     display: flex;
     border: 1px solid var(--border);
@@ -1310,7 +1331,32 @@
       grid-template-columns: 1fr;
       gap: 40px;
     }
-    .nav-links { display: none; }
+    /* 手機:頂列只留 logo + ☰;選單與語言切換收進下滑面板 */
+    .nav-inner { flex-wrap: wrap; }
+    .nav-toggle { display: flex; order: 2; margin-left: auto; }
+    .nav-links {
+      display: none;
+      order: 3;
+      flex-basis: 100%;
+      flex-direction: column;
+      gap: 0;
+      margin-top: 10px;
+      padding-top: 8px;
+      border-top: 1px solid var(--border);
+    }
+    .lang-switch {
+      display: none;
+      order: 4;
+      margin: 14px 0 4px;
+      align-self: flex-start;
+    }
+    nav.nav-open .nav-links,
+    nav.nav-open .lang-switch { display: flex; }
+    .nav-links li { width: 100%; }
+    .nav-links a { display: block; padding: 13px 8px; border-radius: 6px; font-size: 15px; }
+    nav.nav-open .nav-toggle .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    nav.nav-open .nav-toggle .bar:nth-child(2) { opacity: 0; }
+    nav.nav-open .nav-toggle .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
     .changelog-item {
       grid-template-columns: 1fr;
       gap: 12px;
