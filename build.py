@@ -658,6 +658,7 @@ SYSTEM = {
             "/images/og/MotorLab_V1-4.png",
         ],
         "dimensions": "/images/og/MotorLab_dimensions.png",
+        "xray": "/images/og/MotorLab_V1-6.png",
     },
     "i18n": {
         "zh": {
@@ -701,6 +702,9 @@ SYSTEM = {
                 {"k": "高度 Height", "v": "90", "u": "mm"},
                 {"k": "機身配色 Finish", "v": "低調黑", "u": ""},
             ],
+            "inside_eyebrow": "Inside · 機殼之下",
+            "inside_h2": "機殼之下,一切都對稱收齊",
+            "inside_lead": "半透視視角下的內部佈局 —— 雙離心風扇主動散熱、置中的控制電路板、前置馬達夾持與感測機構,全部對稱收進機身輪廓之內。緊湊而有條理的堆疊,是穩定散熱與量測精度的基礎。",
         },
         "en": {
             "title": "Mini 4WD Motor Break-in Machine: Hardware Design | MotorLab",
@@ -743,6 +747,9 @@ SYSTEM = {
                 {"k": "Height", "v": "90", "u": "mm"},
                 {"k": "Finish", "v": "Matte black", "u": ""},
             ],
+            "inside_eyebrow": "Inside · Under the shell",
+            "inside_h2": "Under the shell, everything packs in symmetrically",
+            "inside_lead": "A see-through view of the internal layout — dual centrifugal fans for active cooling, a centered control board, and the front motor-clamp and sensing mechanism, all packed symmetrically inside the shell. A compact, orderly stack is what keeps cooling stable and measurement precise.",
         },
         "ja": {
             "title": "モーター慣らし機の外観デザイン:Mini 4WD® 精密テスト機 | MotorLab",
@@ -785,6 +792,9 @@ SYSTEM = {
                 {"k": "高さ Height", "v": "90", "u": "mm"},
                 {"k": "仕上げ Finish", "v": "マットブラック", "u": ""},
             ],
+            "inside_eyebrow": "Inside · シェルの下",
+            "inside_h2": "シェルの下、すべてが左右対称に収まる",
+            "inside_lead": "半透視で見た内部レイアウト —— 2 基の遠心ファンによるアクティブ冷却、中央の制御基板、前面のモータークランプとセンサー機構を、すべてシェル内に左右対称に収めています。コンパクトで整然とした積層が、安定した冷却と測定精度の土台です。",
         },
     },
 }
@@ -1721,6 +1731,17 @@ def build_system_page(sys_cfg, lang, src_html, i18n):
         f'</div></div></section>'
     )
     main_el.append(BeautifulSoup(dim_html, "html.parser"))
+
+    # 7f. 內部結構(半透視 X 光視角)
+    inside_html = (
+        f'<section class="sys-section"><div class="container">'
+        f'<div class="sys-eyebrow">{s["inside_eyebrow"]}</div>'
+        f'<h2 class="sys-h2">{s["inside_h2"]}</h2>'
+        f'<p class="sys-lead">{s["inside_lead"]}</p>'
+        f'<div class="sys-panel" style="margin-top:40px"><img src="{imgs["xray"]}" alt="{s["inside_h2"]}"></div>'
+        f'</div></section>'
+    )
+    main_el.append(BeautifulSoup(inside_html, "html.parser"))
 
     soup.body.append(main_el)
     if footer_extracted is not None:

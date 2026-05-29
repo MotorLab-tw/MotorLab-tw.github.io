@@ -122,7 +122,7 @@ def compose_blueprint(path, out):
 if __name__ == "__main__":
     import os
     os.makedirs("images/og", exist_ok=True)
-    for n in range(1, 6):
+    for n in range(1, 7):
         compose_product(f"images/MotorLab_V1-{n}.jpg", f"images/og/MotorLab_V1-{n}.png")
     compose_blueprint("images/MotorLab_3D_20260515.PNG", "images/og/MotorLab_dimensions.png")
     print("done")
