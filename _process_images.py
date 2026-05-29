@@ -71,7 +71,9 @@ def compose_product(path, out):
         ndimage.binary_erosion(metal, iterations=3), iterations=5)
 
     # Interior near-white = either logo paint (sits on the dark housing) or a
-    # see-through pocket in the mount (hugs the clamp: red OR bare metal).
+    # see-through pocket in the mount. A pocket is flagged when it (a) hugs the
+    # red clamp, (b) hugs bare metal, or (c) is a chunky blob (a window) — the
+    # last survives a 6px erosion, whereas thin logo strokes erode to nothing.
     interior = (minc >= 240) & ~border
     lbl, n = ndimage.label(interior)
     logo = np.zeros_like(interior)
@@ -81,7 +83,8 @@ def compose_product(path, out):
         ring = ndimage.binary_dilation(comp, iterations=4) & ~comp
         touches_red = sat[ring].max() > 80
         touches_metal = (ring & metal_zone).sum() / max(ring.sum(), 1) > 0.08
-        if touches_red or touches_metal:   # backdrop pocket around the clamp
+        chunky = ndimage.binary_erosion(comp, iterations=6).sum() / comp.sum() > 0.15
+        if touches_red or touches_metal or chunky:   # backdrop pocket, not logo
             pocket |= comp
         else:                              # surrounded by housing -> logo paint
             logo |= comp
