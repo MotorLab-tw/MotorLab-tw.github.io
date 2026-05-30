@@ -112,7 +112,7 @@
   "description": "Mini 4WD® モーター慣らし・精密測定システム。10 段階プログラム慣らし、AI モーター健康管理、ベアリング抵抗解析、ブラシ接触安定診断を内蔵。",
   "image": "https://motorlab-tw.github.io/og-image.png",
   "url": "https://motorlab-tw.github.io/ja/",
-  "softwareVersion": "v3.0.8",
+  "softwareVersion": "v3.1.0",
   "applicationCategory": "EngineeringApplication",
   "applicationSubCategory": "Motor Testing & Diagnostics",
   "operatingSystem": "Cross-platform (WiFi + Web Browser)",
@@ -1855,7 +1855,7 @@
 <div class="splash-sub">MINI 4WD® MOTOR LAB · INITIALIZING</div>
 <div class="splash-log">
 <div class="log-line l1">[<span class="ok">OK</span>] Boot sequence started</div>
-<div class="log-line l2">[<span class="ok">OK</span>] Loading firmware v3.0.8</div>
+<div class="log-line l2">[<span class="ok">OK</span>] Loading firmware v3.1.0</div>
 <div class="log-line l3">[<span class="ok">OK</span>] Sensor calibration complete</div>
 <div class="log-line l4">[<span class="ok">OK</span>] WebSocket channel ready</div>
 <div class="log-line l5">[<span class="ok">OK</span>] System online — welcome</div>
@@ -1896,7 +1896,7 @@
 <div class="hero-grid">
 <div>
 <div class="hero-badge">
-<span data-i18n="hero.badge">システム稼働中 · v3.0.8</span>
+<span data-i18n="hero.badge">システム稼働中 · v3.1.0</span>
 </div>
 <h1 data-i18n="hero.title">すべての<br/>Mini 4WD<sup>®</sup> モーターに<br/><span class="accent">健康指紋</span>を</h1>
 <p class="lead" data-i18n="hero.lead">MotorLab は Mini 4WD<sup>®</sup> プレイヤーのために設計された精密モーター慣らし・測定システムです。10 段階プログラム慣らし、ベアリング減衰測定、ブラシ接触安定診断、AI モーター健康管理まで — すべての調整を定量化・再現・比較できます。</p>
@@ -2345,10 +2345,26 @@
 <p class="section-subtitle" data-i18n="cl.subtitle">すべてのバージョンはオンライン更新で有効化済み端末へ自動配信されます。</p>
 </div>
 <div class="changelog">
+<!-- v3.1.0 -->
+<div class="changelog-item">
+<div class="changelog-meta">
+<span class="version-badge latest">v3.1.0</span>
+<span class="changelog-date">2026-05-30</span>
+</div>
+<div class="changelog-content">
+<h4 data-i18n="cl.v310.title">履歴記録のセキュリティ強化</h4>
+<ul>
+<li><span class="change-type change-new" data-i18n="cl.NEW">新規</span><span data-i18n="cl.v310.l1">履歴のエクスポート / インポートに署名検証を必須化</span></li>
+<li><span class="change-type change-new" data-i18n="cl.NEW">新規</span><span data-i18n="cl.v310.l2">記録の拡張フィールド:モーター型番、備考、ユーザー名、国</span></li>
+<li><span class="change-type change-improve" data-i18n="cl.IMPROVE">改善</span><span data-i18n="cl.v310.l3">慣らしページの「今回の慣らし名」をモーター型番ドロップダウン + 備考の 2 カラム並列に変更</span></li>
+<li><span class="change-type change-new" data-i18n="cl.NEW">新規</span><span data-i18n="cl.v310.l4">システム設定に「ユーザー設定」セクションを追加</span></li>
+</ul>
+</div>
+</div>
 <!-- v3.0.8 -->
 <div class="changelog-item">
 <div class="changelog-meta">
-<span class="version-badge latest">v3.0.8</span>
+<span class="version-badge">v3.0.8</span>
 <span class="changelog-date">2026-05-18</span>
 </div>
 <div class="changelog-content">
@@ -2369,55 +2385,6 @@
 <h4 data-i18n="cl.v307.title">ユーザー体験の最適化</h4>
 <ul>
 <li><span class="change-type change-improve" data-i18n="cl.IMPROVE">改善</span><span data-i18n="cl.v307.l1">技術用語を中立化、初心者プレイヤーも読みやすく</span></li>
-</ul>
-</div>
-</div>
-<!-- v3.0.6 -->
-<div class="changelog-item">
-<div class="changelog-meta">
-<span class="version-badge">v3.0.6</span>
-<span class="changelog-date">2026-05-17</span>
-</div>
-<div class="changelog-content">
-<h4 data-i18n="cl.v306.title">ワンタップライセンスアップグレード · 複数のセキュリティ強化</h4>
-<ul>
-<li><span class="change-type change-new" data-i18n="cl.NEW">新規</span><span data-i18n="cl.v306.l1">ワンタップライセンスフロー：QR コードスキャン + 自動決済検出、手動キー入力不要</span></li>
-<li><span class="change-type change-new" data-i18n="cl.NEW">新規</span><span data-i18n="cl.v306.l2">レースカウントダウン起動音</span></li>
-<li><span class="change-type change-new" data-i18n="cl.NEW">新規</span><span data-i18n="cl.v306.l3">工場リセットボタン — WiFi パスワードのみリセット、慣らしデータは完全保持</span></li>
-<li><span class="change-type change-security" data-i18n="cl.SECURITY">セキュリティ</span><span data-i18n="cl.v306.l4">Session Token、Origin フィルタ、ログイン頻度制限、SHA256 ハッシュ強化</span></li>
-<li><span class="change-type change-improve" data-i18n="cl.IMPROVE">改善</span><span data-i18n="cl.v306.l5">繁体字中国語（台湾）ロケールの完全化、適用中の監視機構</span></li>
-</ul>
-</div>
-</div>
-<!-- v3.0.5 -->
-<div class="changelog-item">
-<div class="changelog-meta">
-<span class="version-badge">v3.0.5</span>
-<span class="changelog-date">2026-05-16</span>
-</div>
-<div class="changelog-content">
-<h4 data-i18n="cl.v305.title">オンライン更新の安定性向上</h4>
-<ul>
-<li><span class="change-type change-new" data-i18n="cl.NEW">新規</span><span data-i18n="cl.v305.l1">オンラインファームウェア更新：家庭用 WiFi で最新版を自動取得</span></li>
-<li><span class="change-type change-new" data-i18n="cl.NEW">新規</span><span data-i18n="cl.v305.l2">エンジニアリングモード：回転数・電圧・電流校正機能</span></li>
-<li><span class="change-type change-fix" data-i18n="cl.FIX">修正</span><span data-i18n="cl.v305.l3">既知の WiFi はパスワード入力を自動スキップ</span></li>
-<li><span class="change-type change-fix" data-i18n="cl.FIX">修正</span><span data-i18n="cl.v305.l4">ファームウェア再起動時に Web インターフェースを自動再読み込み</span></li>
-</ul>
-</div>
-</div>
-<!-- v3.0.0 ~ -->
-<div class="changelog-item">
-<div class="changelog-meta">
-<span class="version-badge">v3.0.0</span>
-<span class="changelog-date">2026-05-12</span>
-</div>
-<div class="changelog-content">
-<h4 data-i18n="cl.v300.title">MotorLab v3 正式リリース</h4>
-<ul>
-<li><span class="change-type change-new" data-i18n="cl.NEW">新規</span><span data-i18n="cl.v300.l1">10 段階プログラムモーター慣らしシステム</span></li>
-<li><span class="change-type change-new" data-i18n="cl.NEW">新規</span><span data-i18n="cl.v300.l2">AI スマートモーター健康管理（PRO）</span></li>
-<li><span class="change-type change-new" data-i18n="cl.NEW">新規</span><span data-i18n="cl.v300.l3">ベアリング抵抗テスト · ブラシ接触安定テスト</span></li>
-<li><span class="change-type change-new" data-i18n="cl.NEW">新規</span><span data-i18n="cl.v300.l4">内蔵 Web 操作インターフェース、WebSocket リアルタイムデータ配信</span></li>
 </ul>
 </div>
 </div>
@@ -2442,7 +2409,7 @@
 <div class="stat-label" data-i18n="about.s1">開発マイルストーン</div>
 </div>
 <div>
-<div class="stat-num">v3.0.8</div>
+<div class="stat-num">v3.1.0</div>
 <div class="stat-label" data-i18n="about.s2">現行ファームウェアバージョン</div>
 </div>
 <div>
@@ -2485,7 +2452,7 @@
 <strong>MotorLab.tw</strong> · <span data-i18n="footer.tagline">Mini 4WD Performance Lab</span>
 </div>
 <div class="mono">
-        © 2026 MotorLab · <span data-i18n="footer.firmware">ファームウェア</span> v3.0.8
+        © 2026 MotorLab · <span data-i18n="footer.firmware">ファームウェア</span> v3.1.0
       </div>
 </div>
 </div>
@@ -2535,7 +2502,7 @@
       'nav.changelog': '更新',
       'nav.about': '關於',
       'nav.contact': '聯絡',
-      'hero.badge': '系統運作中 · v3.0.8',
+      'hero.badge': '系統運作中 · v3.1.0',
       'hero.title': '為每一顆<br>Mini 4WD<sup>®</sup> 馬達<br>建立<span class="accent">健康指紋</span>',
       'hero.lead': 'MotorLab 是為 Mini 4WD<sup>®</sup> 玩家打造的精密馬達磨合與測試系統。從十階段可程式化磨合、軸承衰減量測、電刷接觸穩定診斷,到 AI 馬達健康管理 — 讓每一次調校都可量化、可重複、可比較。',
       'hero.cta1': '瀏覽功能',
@@ -3024,6 +2991,11 @@
       'cl.FIX': '修正',
       'cl.IMPROVE': '改進',
       'cl.SECURITY': '安全',
+      'cl.v310.title': '歷史紀錄安全強化',
+      'cl.v310.l1': '歷史紀錄匯出 / 匯入需通過簽章驗證',
+      'cl.v310.l2': '紀錄擴充欄位:馬達型號、備註、使用者名稱、國家',
+      'cl.v310.l3': '磨合頁「本次磨合名稱」改為馬達型號下拉 + 備註兩欄並排',
+      'cl.v310.l4': '系統設定「使用者設定」區塊',
       'cl.v308.title': '介面文案精煉',
       'cl.v308.l1': 'Web UI 文字精簡、用詞中性化',
       'cl.v308.l2': '移除介面 emoji,視覺更專業俐落',
@@ -3070,7 +3042,7 @@
       'nav.changelog': 'Changelog',
       'nav.about': 'About',
       'nav.contact': 'Contact',
-      'hero.badge': 'System running · v3.0.8',
+      'hero.badge': 'System running · v3.1.0',
       'hero.title': 'Build a <span class="accent">health fingerprint</span><br>for every<br>Mini 4WD<sup>®</sup> motor',
       'hero.lead': 'MotorLab is a precision motor break-in and diagnostic system built for Mini 4WD<sup>®</sup> enthusiasts. From 10-stage programmable break-in to bearing decay analysis, brush contact diagnostics, and AI motor health management — make every tune measurable, repeatable, and comparable.',
       'hero.cta1': 'Browse Features',
@@ -3559,6 +3531,11 @@
       'cl.FIX': 'FIX',
       'cl.IMPROVE': 'IMPROVE',
       'cl.SECURITY': 'SECURITY',
+      'cl.v310.title': 'Hardened History Records',
+      'cl.v310.l1': 'History export / import now requires signature verification',
+      'cl.v310.l2': 'Extended record fields: motor model, notes, username, country',
+      'cl.v310.l3': 'Break-in session name replaced with motor-model dropdown + notes (side-by-side)',
+      'cl.v310.l4': 'New "User settings" section in System Settings',
       'cl.v308.title': 'Interface Refinement',
       'cl.v308.l1': 'Web UI text streamlined and neutralized',
       'cl.v308.l2': 'Emoji removed for a sharper, more professional look',
@@ -3605,7 +3582,7 @@
       'nav.changelog': '更新履歴',
       'nav.about': '概要',
       'nav.contact': 'お問い合わせ',
-      'hero.badge': 'システム稼働中 · v3.0.8',
+      'hero.badge': 'システム稼働中 · v3.1.0',
       'hero.title': 'すべての<br>Mini 4WD<sup>®</sup> モーターに<br><span class="accent">健康指紋</span>を',
       'hero.lead': 'MotorLab は Mini 4WD<sup>®</sup> プレイヤーのために設計された精密モーター慣らし・測定システムです。10 段階プログラム慣らし、ベアリング減衰測定、ブラシ接触安定診断、AI モーター健康管理まで — すべての調整を定量化・再現・比較できます。',
       'hero.cta1': '機能を見る',
@@ -3743,6 +3720,11 @@
       'cl.FIX': '修正',
       'cl.IMPROVE': '改善',
       'cl.SECURITY': 'セキュリティ',
+      'cl.v310.title': '履歴記録のセキュリティ強化',
+      'cl.v310.l1': '履歴のエクスポート / インポートに署名検証を必須化',
+      'cl.v310.l2': '記録の拡張フィールド:モーター型番、備考、ユーザー名、国',
+      'cl.v310.l3': '慣らしページの「今回の慣らし名」をモーター型番ドロップダウン + 備考の 2 カラム並列に変更',
+      'cl.v310.l4': 'システム設定に「ユーザー設定」セクションを追加',
       'cl.v308.title': 'インターフェース文言の洗練',
       'cl.v308.l1': 'Web UI テキストの簡潔化、中立的な表現に調整',
       'cl.v308.l2': 'インターフェースの絵文字を削除、より洗練された外観に',
