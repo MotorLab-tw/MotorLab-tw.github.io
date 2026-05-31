@@ -19,6 +19,9 @@ on:
       - 'system/**/index.html'
       - 'en/system/**/index.html'
       - 'ja/system/**/index.html'
+      - 'lab/index.html'
+      - 'en/lab/index.html'
+      - 'ja/lab/index.html'
       - 'docs/**/index.html'
       - 'en/docs/**/index.html'
       - 'ja/docs/**/index.html'
@@ -111,7 +114,10 @@ jobs:
                 \"https://${HOST}/ja/benchmarks/tamiya-motor-full-lineup/\",
                 \"https://${HOST}/system/product-design/\",
                 \"https://${HOST}/en/system/product-design/\",
-                \"https://${HOST}/ja/system/product-design/\"
+                \"https://${HOST}/ja/system/product-design/\",
+                \"https://${HOST}/lab/\",
+                \"https://${HOST}/en/lab/\",
+                \"https://${HOST}/ja/lab/\"
               ]
             }")
           

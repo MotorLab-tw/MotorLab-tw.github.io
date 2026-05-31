@@ -794,6 +794,169 @@ SYSTEM = {
 }
 
 
+# /lab/ 馬達型號篩選下拉清單(對齊磨合機韌體預設型號;"Other" 收尾)
+# 三語共用(型號為英文專名,不在地化)。新增韌體型號時同步更新此處。
+LAB_MOTOR_MODELS = [
+    "Torque-Tuned 2 PRO", "Light-Dash PRO", "Atomic-Tuned 2 PRO", "Hyper-Dash PRO",
+    "Rev-Tuned 2 PRO", "Mach-Dash PRO",
+    "Torque-Tuned 2", "Light-Dash", "Sprint-Dash", "Atomic-Tuned 2", "Hyper-Dash 3",
+    "Ultra-Dash", "Rev-Tuned 2", "Power-Dash", "Plasma-Dash", "Other",
+]
+
+# ============================================================
+# LAB:全球磨合資料上傳/下載平台(/lab/,互動式 app 頁)
+#   build_lab_page() 產生靜態殼 + 內嵌 app JS;後端是 Google Apps Script
+#   (見 docs repo 的 LAB_UPLOAD_PLAN.md / gas/Code.gs)。
+#   內容皆在此 config(不在母版),CSS 用母版 <style> 的 .lab-* 類別,
+#   沿用 .guide-page 的 guide-nav / breadcrumb / footer(含 D10 商標聲明)。
+#   "api_url":部署 GAS Web App 後把 /exec URL 填進來,再跑 build.py。
+#   守 D6(不洩漏硬體型號)、D10(Mini 4WD®)、D13(不強調地域)。
+# ============================================================
+LAB = {
+    "api_url": "https://script.google.com/macros/s/AKfycbwhKscBnh5EdzIjQP90wwWbm-AqWyeWm9pTE071mHpxHLOCEyoCOMudW89p3WTax-qi/exec",
+    "i18n": {
+        "zh": {
+            "title": "全球馬達磨合資料庫:上傳/下載紀錄 | MotorLab",
+            "description": "上傳你的 Mini 4WD® 馬達磨合機實測紀錄或下載全球玩家分享、經簽章驗證的磨合資料。下載原檔可直接匯入馬達磨合機重現。",
+            "keywords": "馬達磨合資料, 馬達磨合紀錄分享, Mini 4WD 磨合數據, 馬達磨合設定下載, 磨合配方分享",
+            "breadcrumb": "資料庫",
+            "h1_for_ld": "全球馬達磨合資料庫",
+            "eyebrow": "Data Lab · 全球磨合資料庫",
+            "hero_title": "上傳・下載<br><span class='lab-accent'>全球 Mini 4WD<span class='lab-reg'>®</span> 馬達磨合資料</span>",
+            "hero_p": "把磨合機產出的實測紀錄分享給全世界或下載別人的馬達磨合配方 —— 每筆紀錄含完整 10 階段設定與結果,下載原檔可直接匯入你的磨合機重現。",
+            "up_eyebrow": "Upload · 上傳",
+            "up_h2": "分享你的磨合紀錄",
+            "up_p": "選擇馬達磨合機匯出的 .json 檔。系統會在伺服器端驗證簽章、只有未經竄改的紀錄會被收錄。",
+            "up_btn": "選擇檔案上傳",
+            "up_hint": "或把 .json 檔拖曳到這裡",
+            "tos": "上傳即表示你同意公開分享此紀錄。紀錄中的署名/國家欄位由你的磨合機設定,預設為匿名。如需移除已上傳的紀錄,請來信 motorlab.tw@gmail.com。",
+            "ls_eyebrow": "Browse · 瀏覽",
+            "ls_h2": "全球玩家的磨合紀錄",
+            "f_motor": "馬達型號篩選",
+            "f_country": "國家篩選",
+            "f_comp_all": "全部",
+            "f_comp_yes": "僅完整磨合",
+            "f_comp_no": "僅中斷紀錄",
+            "f_refresh": "重新整理",
+            "ls_loading": "載入中…",
+            "js": {
+                "no_api": "資料服務尚未設定(管理員請填入 GAS 網址)。",
+                "uploading": "上傳並驗證中…",
+                "up_ok": "上傳成功,已收錄!",
+                "up_dup": "這筆紀錄已經在資料庫裡了。",
+                "up_err": "上傳失敗",
+                "err_network": "網路錯誤,請稍後再試。",
+                "empty": "目前沒有符合條件的紀錄。",
+                "loading": "載入中…",
+                "preparing": "準備下載原檔…",
+                "c_motor": "馬達型號",
+                "c_owner": "分享者",
+                "c_country": "國家",
+                "c_rpm": "最高轉速 R.P.M",
+                "c_rpm_avg": "平均轉速 R.P.M",
+                "c_current": "穩定電流 mA",
+                "c_date": "磨合日期",
+                "anon": "匿名",
+                "incomplete": "中斷",
+                "download": "下載原檔"
+            }
+        },
+        "en": {
+            "title": "Global Motor Break-in Data Library | MotorLab",
+            "description": "Upload your Mini 4WD® motor break-in records or download signature-verified data shared by racers worldwide. Download the original file to re-import into your machine.",
+            "keywords": "motor break-in data, Mini 4WD break-in records, motor tuning data sharing, break-in profile download, Mini 4WD telemetry",
+            "breadcrumb": "Data Library",
+            "h1_for_ld": "Global Motor Break-in Data Library",
+            "eyebrow": "Data Lab",
+            "hero_title": "Upload &amp; download<br><span class='lab-accent'>Mini 4WD<span class='lab-reg'>®</span> break-in data, worldwide</span>",
+            "hero_p": "Share your machine's real measurement records with the world or download someone else's break-in profile — each record carries the full 10-stage settings and results, and the original file re-imports straight into your machine.",
+            "up_eyebrow": "Upload",
+            "up_h2": "Share your break-in record",
+            "up_p": "Pick the .json file your machine exported. Signatures are verified server-side — only untampered records are accepted.",
+            "up_btn": "Choose a file to upload",
+            "up_hint": "or drag a .json file here",
+            "tos": "Uploading means you agree to share this record publicly. The name/country fields come from your machine's settings and default to anonymous. To remove an uploaded record, email motorlab.tw@gmail.com.",
+            "ls_eyebrow": "Browse",
+            "ls_h2": "Break-in records from racers worldwide",
+            "f_motor": "Filter by motor",
+            "f_country": "Filter by country",
+            "f_comp_all": "All",
+            "f_comp_yes": "Completed only",
+            "f_comp_no": "Interrupted only",
+            "f_refresh": "Refresh",
+            "ls_loading": "Loading…",
+            "js": {
+                "no_api": "Data service not configured yet (admin: set the GAS URL).",
+                "uploading": "Uploading and verifying…",
+                "up_ok": "Uploaded and added!",
+                "up_dup": "This record is already in the library.",
+                "up_err": "Upload failed",
+                "err_network": "Network error, please try again.",
+                "empty": "No records match your filters.",
+                "loading": "Loading…",
+                "preparing": "Preparing the original file…",
+                "c_motor": "Motor",
+                "c_owner": "Shared by",
+                "c_country": "Country",
+                "c_rpm": "Max R.P.M",
+                "c_rpm_avg": "Avg R.P.M",
+                "c_current": "Stable mA",
+                "c_date": "Break-in date",
+                "anon": "Anonymous",
+                "incomplete": "Interrupted",
+                "download": "Download"
+            }
+        },
+        "ja": {
+            "title": "グローバル モーター慣らしデータ庫 | MotorLab",
+            "description": "Mini 4WD® モーター慣らし機の実測記録をアップロード、または世界中のレーサーが共有した署名検証済みデータをダウンロード。元ファイルをマシンに再インポートできます。",
+            "keywords": "モーター慣らし データ, ミニ四駆 慣らし 記録 共有, モーター 調整 データ, 慣らし 設定 ダウンロード, ミニ四駆 テレメトリ",
+            "breadcrumb": "データ庫",
+            "h1_for_ld": "グローバル モーター慣らしデータ庫",
+            "eyebrow": "Data Lab · データ庫",
+            "hero_title": "アップロード・ダウンロード<br><span class='lab-accent'>世界の Mini 4WD<span class='lab-reg'>®</span> 慣らしデータ</span>",
+            "hero_p": "マシンの実測記録を世界に共有、あるいは誰かの慣らしレシピをダウンロード —— 各記録は 10 段階の設定と結果を含み、元ファイルはそのままマシンに再インポートできます。",
+            "up_eyebrow": "Upload · アップロード",
+            "up_h2": "あなたの慣らし記録を共有",
+            "up_p": "マシンが書き出した .json ファイルを選択。署名はサーバー側で検証され、改ざんのない記録のみ収録されます。",
+            "up_btn": "ファイルを選択してアップロード",
+            "up_hint": "または .json ファイルをここにドラッグ",
+            "tos": "アップロードはこの記録の公開共有に同意したことを意味します。名前/国の欄はマシン設定由来で、初期値は匿名です。記録の削除は motorlab.tw@gmail.com までご連絡ください。",
+            "ls_eyebrow": "Browse · 一覧",
+            "ls_h2": "世界のレーサーの慣らし記録",
+            "f_motor": "モーターで絞り込み",
+            "f_country": "国で絞り込み",
+            "f_comp_all": "すべて",
+            "f_comp_yes": "完走のみ",
+            "f_comp_no": "中断のみ",
+            "f_refresh": "更新",
+            "ls_loading": "読み込み中…",
+            "js": {
+                "no_api": "データサービス未設定(管理者:GAS URL を設定してください)。",
+                "uploading": "アップロードして検証中…",
+                "up_ok": "アップロード完了、収録しました!",
+                "up_dup": "この記録はすでにデータ庫にあります。",
+                "up_err": "アップロード失敗",
+                "err_network": "ネットワークエラー、後でお試しください。",
+                "empty": "条件に合う記録がありません。",
+                "loading": "読み込み中…",
+                "preparing": "元ファイルを準備中…",
+                "c_motor": "モーター",
+                "c_owner": "共有者",
+                "c_country": "国",
+                "c_rpm": "最高回転数 R.P.M",
+                "c_rpm_avg": "平均回転数 R.P.M",
+                "c_current": "安定電流 mA",
+                "c_date": "慣らし日",
+                "anon": "匿名",
+                "incomplete": "中断",
+                "download": "ダウンロード"
+            }
+        }
+    }
+}
+
+
 # keywords meta(按語言切分)
 # 規則:
 #   zh 頁:zh 原生 + en(品牌/技術詞)
@@ -947,6 +1110,14 @@ def build_lang(src_html, lang, i18n):
     for a in soup.select("a[data-syslink]"):
         a["href"] = sys_href
         del a["data-syslink"]
+
+    # --- 7d. 內部跨頁連結(nav 的 data-lablink)改寫成對應語言的 URL ---
+    # /lab/ 全球磨合資料平台(LAB_UPLOAD_PLAN);頂層 /lab/,各語言加前綴
+    lab_prefix = "" if lang == "zh" else f"/{lang}"
+    lab_href = f"{lab_prefix}/lab/"
+    for a in soup.select("a[data-lablink]"):
+        a["href"] = lab_href
+        del a["data-lablink"]
 
     # --- 8. 語言切換:button → a 連結 ---
     lang_switch = soup.find("div", class_="lang-switch")
@@ -1734,6 +1905,345 @@ def build_system_page(sys_cfg, lang, src_html, i18n):
 
 
 # ============================================================
+# /lab/ 全球磨合資料平台:內嵌 app JS(__佔位__ 由 build_lab_page 取代)
+#   後端 API 是 Google Apps Script(見 docs repo gas/Code.gs)。
+#   上傳走 base64 + text/plain(規避 GAS CORS preflight);下載 passthrough。
+# ============================================================
+LAB_APP_JS = r"""
+(function () {
+  var API = "__API_URL__";
+  var T = __I18N_JSON__;
+  function $(id) { return document.getElementById(id); }
+  function hasApi() { return API && API.indexOf("PUT_") !== 0; }
+  function apiq(qs) { return API + (API.indexOf("?") < 0 ? "?" : "&") + qs; }
+
+  function setStatus(msg, kind) {
+    var el = $("lab-status");
+    if (!el) return;
+    el.textContent = msg || "";
+    el.className = "lab-status" + (kind ? " " + kind : "");
+  }
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+    });
+  }
+  function fmtNum(n) {
+    if (n === "" || n == null || isNaN(n)) return "—";
+    return Number(n).toLocaleString();
+  }
+  function abToB64(buf) {
+    var bytes = new Uint8Array(buf), bin = "", chunk = 0x8000;
+    for (var i = 0; i < bytes.length; i += chunk) {
+      bin += String.fromCharCode.apply(null, bytes.subarray(i, i + chunk));
+    }
+    return btoa(bin);
+  }
+  function b64ToBlob(b64) {
+    var bin = atob(b64), len = bin.length, bytes = new Uint8Array(len);
+    for (var i = 0; i < len; i++) bytes[i] = bin.charCodeAt(i);
+    return new Blob([bytes], { type: "application/json" });
+  }
+
+  function upload(file) {
+    if (!hasApi()) { setStatus(T.no_api, "err"); return; }
+    if (!file) return;
+    setStatus(T.uploading, "");
+    var fr = new FileReader();
+    fr.onload = function () {
+      var body = JSON.stringify({ file_b64: abToB64(fr.result), filename: file.name || "", hp: ($("lab-hp") || {}).value || "" });
+      fetch(API, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: body })
+        .then(function (r) { return r.json(); })
+        .then(function (d) {
+          if (d.ok && d.dup) setStatus(T.up_dup, "warn");
+          else if (d.ok) { setStatus(T.up_ok, "ok"); loadList(); }
+          else setStatus(T.up_err + (d.err ? ": " + d.err : ""), "err");
+        })
+        .catch(function () { setStatus(T.err_network, "err"); });
+    };
+    fr.readAsArrayBuffer(file);
+  }
+
+  function render(items) {
+    var box = $("lab-results");
+    if (!box) return;
+    if (!items || !items.length) { box.innerHTML = '<p class="lab-muted">' + esc(T.empty) + "</p>"; return; }
+    var h = '<table class="lab-table"><thead><tr>' +
+      "<th>" + esc(T.c_motor) + "</th><th>" + esc(T.c_owner) + "</th><th>" + esc(T.c_country) +
+      "</th><th>" + esc(T.c_rpm) + "</th><th>" + esc(T.c_rpm_avg) + "</th><th>" + esc(T.c_current) +
+      "</th><th>" + esc(T.c_date) + "</th><th></th></tr></thead><tbody>";
+    items.forEach(function (it) {
+      var owner = (it.owner_name && it.owner_name !== "--") ? it.owner_name : T.anon;
+      var country = (it.owner_country && it.owner_country !== "--") ? it.owner_country : "—";
+      var date = String(it.timestamp_start || "").replace("T", " ").slice(0, 16);
+      var comp = (it.completed === true || it.completed === "true");
+      var badge = comp ? "" : ' <span class="lab-tag-warn">' + esc(T.incomplete) + "</span>";
+      h += "<tr><td><b>" + esc(it.motor_model || "—") + "</b>" + badge +
+        '<div class="lab-sub">' + esc(it.user_label || "") + "</div></td>" +
+        "<td>" + esc(owner) + "</td><td>" + esc(country) + "</td>" +
+        '<td class="lab-mono">' + fmtNum(it.rpm_max_overall) + "</td>" +
+        '<td class="lab-mono">' + fmtNum(it.rpm_avg_overall) + "</td>" +
+        '<td class="lab-mono">' + fmtNum(it.stable_current_overall) + "</td>" +
+        '<td class="lab-mono">' + esc(date) + "</td>" +
+        '<td class="lab-row-actions">' +
+        '<button type="button" class="lab-btn lab-btn-sm" data-dl="' + esc(it.content_sha256) + '">' + esc(T.download) + "</button>" +
+        "</td></tr>";
+    });
+    box.innerHTML = h + "</tbody></table>";
+  }
+
+  var ALL = [];  // 後端抓回的全量紀錄(快取),篩選在前端即時做(方案 B)
+
+  function applyFilter() {
+    var m = (($("lab-f-motor") || {}).value || "").trim().toLowerCase();
+    var c = (($("lab-f-country") || {}).value || "").trim().toLowerCase();
+    var cp = ($("lab-f-completed") || {}).value || "";
+    var out = ALL.filter(function (it) {
+      if (m && String(it.motor_model || "").toLowerCase() !== m) return false;  // 下拉:精確相等
+      if (c && String(it.owner_country || "").toLowerCase().indexOf(c) < 0) return false;  // 國家:子字串
+      if (cp) {
+        var done = (it.completed === true || it.completed === "true");
+        if (cp === "true" && !done) return false;
+        if (cp === "false" && done) return false;
+      }
+      return true;
+    });
+    render(out);
+  }
+
+  function loadList() {
+    var box = $("lab-results");
+    if (!box) return;
+    if (!hasApi()) { box.innerHTML = '<p class="lab-muted">' + esc(T.no_api) + "</p>"; return; }
+    box.innerHTML = '<p class="lab-muted">' + esc(T.loading) + "</p>";
+    fetch(apiq("action=list&limit=200")).then(function (r) { return r.json(); }).then(function (d) {
+      if (d.ok) { ALL = d.items || []; applyFilter(); }
+      else box.innerHTML = '<p class="lab-muted">' + esc(d.err || T.err_network) + "</p>";
+    }).catch(function () { box.innerHTML = '<p class="lab-muted">' + esc(T.err_network) + "</p>"; });
+  }
+
+  function download(sha) {
+    if (!hasApi()) { setStatus(T.no_api, "err"); return; }
+    setStatus(T.preparing, "");
+    fetch(apiq("action=get&sha=" + encodeURIComponent(sha)))
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        if (!d.ok) { setStatus(d.err || T.err_network, "err"); return; }
+        var url = URL.createObjectURL(b64ToBlob(d.file_b64));
+        var a = document.createElement("a");
+        a.href = url; a.download = d.filename || (sha + ".json");
+        document.body.appendChild(a); a.click(); document.body.removeChild(a);
+        URL.revokeObjectURL(url); setStatus("", "");
+      }).catch(function () { setStatus(T.err_network, "err"); });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = $("lab-upload-btn"), file = $("lab-file"), drop = $("lab-drop");
+    if (btn && file) btn.addEventListener("click", function () { file.click(); });
+    if (file) file.addEventListener("change", function () {
+      if (file.files && file.files[0]) { upload(file.files[0]); file.value = ""; }
+    });
+    if (drop) {
+      ["dragover", "dragenter"].forEach(function (ev) {
+        drop.addEventListener(ev, function (e) { e.preventDefault(); drop.classList.add("lab-drag"); });
+      });
+      ["dragleave", "drop"].forEach(function (ev) {
+        drop.addEventListener(ev, function (e) { e.preventDefault(); drop.classList.remove("lab-drag"); });
+      });
+      drop.addEventListener("drop", function (e) {
+        var f = e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0];
+        if (f) upload(f);
+      });
+    }
+    var rf = $("lab-refresh");
+    if (rf) rf.addEventListener("click", loadList);
+    // 即時篩選:輸入框打字即篩(從快取),不再每次打 GAS
+    var fm = $("lab-f-motor"), fc = $("lab-f-country"), fcp = $("lab-f-completed");
+    if (fm) fm.addEventListener("change", applyFilter);   // 下拉用 change
+    if (fc) fc.addEventListener("input", applyFilter);    // 文字框用 input
+    if (fcp) fcp.addEventListener("change", applyFilter);
+    var res = $("lab-results");
+    if (res) res.addEventListener("click", function (e) {
+      var dl = e.target.getAttribute("data-dl");
+      if (dl) download(dl);
+    });
+    loadList();
+  });
+})();
+"""
+
+
+def build_lab_page(lab_cfg, lang, src_html, i18n):
+    """產生 /lab/ 全球磨合資料平台頁(互動式 app,沿用 .guide-page 殼)。"""
+    soup = BeautifulSoup(src_html, "lxml")
+    cfg = LANGS[lang]
+    ui = UI_STRINGS[lang]
+    s = lab_cfg["i18n"][lang]
+    lang_prefix = "" if lang == "zh" else f"/{lang}"
+    page_url = f"{SITE}{lang_prefix}/lab/"
+    home_url = f"{SITE}{lang_prefix}/"
+
+    # 1. <html lang>
+    soup.html["lang"] = cfg["html_lang"]
+
+    # 2. 砍現有 JSON-LD 與 hreflang
+    for sc in soup.find_all("script", {"type": "application/ld+json"}):
+        sc.decompose()
+    for tag in soup.find_all("link", {"rel": "alternate"}):
+        tag.decompose()
+
+    # 3. 留 footer(含 D10 商標聲明)
+    footer_el = soup.find("footer")
+    footer_extracted = footer_el.extract() if footer_el else None
+
+    # 4. <title> / meta / canonical
+    if soup.title:
+        soup.title.string = s["title"]
+
+    def set_meta(attr, attr_val, content):
+        tag = soup.find("meta", {attr: attr_val})
+        if tag:
+            tag["content"] = content
+
+    set_meta("name", "description", s["description"])
+    kw = s["keywords"]
+    if lang != "en" and "en" in lab_cfg["i18n"]:
+        kw = kw + ", " + lab_cfg["i18n"]["en"]["keywords"]
+    set_meta("name", "keywords", kw)
+    set_meta("http-equiv", "Content-Language", cfg["html_lang"])
+    set_meta("property", "og:type", "website")
+    set_meta("property", "og:url", page_url)
+    set_meta("property", "og:title", s["title"])
+    set_meta("property", "og:description", s["description"])
+    set_meta("property", "og:locale", cfg["og_locale"])
+    set_meta("name", "twitter:title", s["title"])
+    set_meta("name", "twitter:description", s["description"])
+
+    canon = soup.find("link", {"rel": "canonical"})
+    if canon:
+        canon["href"] = page_url
+
+    # 5. hreflang 三向 + x-default
+    head = soup.head
+    for hl_lang, hl_cfg in LANGS.items():
+        hl_prefix = "" if hl_lang == "zh" else f"/{hl_lang}"
+        head.append(soup.new_tag("link", attrs={
+            "rel": "alternate", "hreflang": hl_cfg["html_lang"], "href": f"{SITE}{hl_prefix}/lab/"
+        }))
+    head.append(soup.new_tag("link", attrs={
+        "rel": "alternate", "hreflang": "x-default", "href": f"{SITE}/lab/"
+    }))
+
+    # 6. JSON-LD: WebApplication + BreadcrumbList
+    webapp_ld = {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": s["h1_for_ld"],
+        "description": s["description"],
+        "inLanguage": cfg["html_lang"],
+        "url": page_url,
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Web",
+        "isPartOf": {"@type": "WebSite", "name": "MotorLab.tw", "url": SITE + "/"},
+    }
+    breadcrumb_ld = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": ui["bc_home"], "item": home_url},
+            {"@type": "ListItem", "position": 2, "name": s["breadcrumb"], "item": page_url},
+        ],
+    }
+    for data in (webapp_ld, breadcrumb_ld):
+        sc = soup.new_tag("script", attrs={"type": "application/ld+json"})
+        sc.string = json.dumps(data, ensure_ascii=False, indent=2)
+        head.append(sc)
+
+    # 7. <body>:guide-nav + app 主體 + footer
+    soup.body.clear()
+    soup.body["class"] = "guide-page"
+
+    nav_html = (
+        f'<nav class="guide-nav"><div class="container">'
+        f'<a class="brand" href="{home_url}"><span>MotorLab<span class="tag">.tw</span></span></a>'
+        f'<a class="back-link" href="{home_url}">{ui["back_home"]}</a>'
+        f'</div></nav>'
+    )
+    soup.body.append(BeautifulSoup(nav_html, "html.parser"))
+
+    main_el = soup.new_tag("main")
+
+    # 7a. Hero
+    bc_html = (
+        f'<nav class="breadcrumb" aria-label="Breadcrumb">'
+        f'<a href="{home_url}">{ui["bc_home"]}</a><span class="sep">/</span>'
+        f'<span class="current">{s["breadcrumb"]}</span></nav>'
+    )
+    hero_html = (
+        f'<section class="lab-hero"><div class="container">{bc_html}'
+        f'<div class="lab-eyebrow">{s["eyebrow"]}</div>'
+        f'<h1 class="lab-hero-title">{s["hero_title"]}</h1>'
+        f'<p class="lab-hero-p">{s["hero_p"]}</p>'
+        f'</div></section>'
+    )
+    main_el.append(BeautifulSoup(hero_html, "html.parser"))
+
+    # 7b. 上傳區(含 honeypot 隱藏欄位)
+    up_html = (
+        f'<section class="lab-section"><div class="container">'
+        f'<div class="lab-eyebrow">{s["up_eyebrow"]}</div>'
+        f'<h2 class="lab-h2">{s["up_h2"]}</h2>'
+        f'<p class="lab-lead">{s["up_p"]}</p>'
+        f'<div class="lab-upload" id="lab-drop">'
+        f'<input type="file" id="lab-file" accept=".json,application/json" hidden>'
+        f'<input type="text" id="lab-hp" class="lab-hp" tabindex="-1" autocomplete="off" aria-hidden="true">'
+        f'<button type="button" class="lab-btn lab-btn-primary" id="lab-upload-btn">{s["up_btn"]}</button>'
+        f'<p class="lab-drop-hint">{s["up_hint"]}</p>'
+        f'</div>'
+        f'<div class="lab-status" id="lab-status" role="status" aria-live="polite"></div>'
+        f'<p class="lab-tos">{s["tos"]}</p>'
+        f'</div></section>'
+    )
+    main_el.append(BeautifulSoup(up_html, "html.parser"))
+
+    # 7c. 篩選 + 列表
+    list_html = (
+        f'<section class="lab-section lab-band"><div class="container">'
+        f'<div class="lab-eyebrow">{s["ls_eyebrow"]}</div>'
+        f'<h2 class="lab-h2">{s["ls_h2"]}</h2>'
+        f'<div class="lab-filters">'
+        f'<select id="lab-f-motor" class="lab-input">'
+        f'<option value="">{s["f_motor"]}</option>'
+        + "".join(f'<option value="{m}">{m}</option>' for m in LAB_MOTOR_MODELS) +
+        f'</select>'
+        f'<input type="text" id="lab-f-country" class="lab-input" placeholder="{s["f_country"]}">'
+        f'<select id="lab-f-completed" class="lab-input">'
+        f'<option value="">{s["f_comp_all"]}</option>'
+        f'<option value="true">{s["f_comp_yes"]}</option>'
+        f'<option value="false">{s["f_comp_no"]}</option>'
+        f'</select>'
+        f'<button type="button" class="lab-btn" id="lab-refresh">{s["f_refresh"]}</button>'
+        f'</div>'
+        f'<div class="lab-results" id="lab-results"><p class="lab-muted">{s["ls_loading"]}</p></div>'
+        f'</div></section>'
+    )
+    main_el.append(BeautifulSoup(list_html, "html.parser"))
+
+    soup.body.append(main_el)
+    if footer_extracted is not None:
+        soup.body.append(footer_extracted)
+
+    # 8. 內嵌 app script(注入 API URL 與該語言的 JS 字串)
+    app_js = LAB_APP_JS.replace("__API_URL__", lab_cfg["api_url"])
+    app_js = app_js.replace("__I18N_JSON__", json.dumps(s["js"], ensure_ascii=False))
+    script_tag = soup.new_tag("script")
+    script_tag.string = app_js
+    soup.body.append(script_tag)
+
+    return str(soup)
+
+
+# ============================================================
 # 主程式
 # ============================================================
 def main():
@@ -1816,7 +2326,24 @@ def main():
         print(f"  ✅ {out_path:<45} {size:>9,} bytes  ({lang})")
 
     print()
-    print("完成!3 個語言版本 + 教學分頁 + 3 個 hub 索引頁 + 商品外觀頁已產生。")
+    print("=== 全球磨合資料平台(/lab/,GAS 後端)===")
+    for lang in ("zh", "en", "ja"):
+        if lang not in LAB["i18n"]:
+            continue
+        lang_prefix = "" if lang == "zh" else f"{lang}/"
+        out_dir = f"{lang_prefix}lab"
+        out_path = f"{out_dir}/index.html"
+        os.makedirs(out_dir, exist_ok=True)
+        html_out = build_lab_page(LAB, lang, src_html, i18n)
+        with open(out_path, "w", encoding="utf-8") as f:
+            f.write(html_out)
+        size = len(html_out.encode("utf-8"))
+        print(f"  ✅ {out_path:<45} {size:>9,} bytes  ({lang})")
+    if LAB["api_url"].startswith("PUT_"):
+        print("  ⚠ LAB['api_url'] 尚未設定 — /lab/ 上線前要填入 GAS Web App URL")
+
+    print()
+    print("完成!3 個語言版本 + 教學分頁 + 3 個 hub 索引頁 + 商品外觀頁 + /lab/ 已產生。")
     print("=" * 55)
 
 

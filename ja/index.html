@@ -1841,6 +1841,83 @@
     .sys-section { padding: 52px 0; }
     .sys-hero { padding: 24px 0 40px; }
   }
+
+  /* ===================================================================
+     全球磨合資料平台 /lab/(build_lab_page 產生,lab- 前綴避免衝突;
+     沿用 .guide-page 的 nav/breadcrumb/footer。後端為 GAS。)
+     =================================================================== */
+  .lab-hero { padding: 32px 0 8px; }
+  .lab-eyebrow {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", "Consolas", monospace;
+    font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase;
+    color: var(--accent-cyan); margin-bottom: 16px;
+  }
+  .lab-hero-title { font-size: clamp(28px, 5vw, 44px); font-weight: 800; line-height: 1.2; margin-bottom: 18px; }
+  .lab-accent { color: var(--accent-cyan); }
+  .lab-reg { font-size: 0.5em; vertical-align: super; }
+  .lab-hero-p { color: var(--text-secondary); max-width: 760px; font-size: clamp(15px, 2vw, 17px); line-height: 1.7; }
+  .lab-section { padding: 56px 0; }
+  .lab-band { background: linear-gradient(180deg, transparent, rgba(46,52,64,0.40), transparent); }
+  .lab-h2 { font-size: clamp(24px, 4vw, 34px); font-weight: 700; line-height: 1.25; margin-bottom: 14px; }
+  .lab-lead { color: var(--text-secondary); max-width: 720px; font-size: clamp(15px, 2vw, 17px); line-height: 1.7; margin-bottom: 24px; }
+
+  /* 上傳區 */
+  .lab-upload {
+    border: 2px dashed var(--accent-blue); border-radius: 16px;
+    padding: 40px 24px; text-align: center; background: rgba(46,52,64,0.30);
+    transition: border-color .15s, background .15s;
+  }
+  .lab-upload.lab-drag { border-color: var(--accent-cyan); background: rgba(136,192,208,0.10); }
+  .lab-drop-hint { color: var(--text-muted); font-size: 14px; margin-top: 14px; }
+  .lab-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+  .lab-status { margin-top: 18px; font-size: 15px; min-height: 22px; }
+  .lab-status.ok { color: var(--success); }
+  .lab-status.warn { color: var(--warning); }
+  .lab-status.err { color: var(--danger); }
+  .lab-tos { color: var(--text-muted); font-size: 13px; line-height: 1.6; margin-top: 24px; max-width: 720px; }
+
+  /* 按鈕 */
+  .lab-btn {
+    display: inline-block; cursor: pointer; border: 1px solid var(--accent-blue);
+    background: var(--bg-tertiary); color: var(--text-primary);
+    border-radius: 10px; padding: 12px 22px; font-size: 15px; font-weight: 600;
+    transition: background .15s, border-color .15s;
+  }
+  .lab-btn:hover { background: var(--accent-blue); }
+  .lab-btn-primary { background: var(--accent-blue); border-color: var(--accent-cyan); }
+  .lab-btn-primary:hover { background: var(--accent-cyan); color: var(--bg-primary); }
+  .lab-btn-sm { padding: 7px 14px; font-size: 13px; }
+
+  /* 篩選列 */
+  .lab-filters { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 24px; }
+  .lab-input {
+    background: var(--bg-secondary); border: 1px solid var(--border);
+    color: var(--text-primary); border-radius: 10px; padding: 10px 14px; font-size: 14px; min-width: 160px;
+  }
+  .lab-input:focus { outline: none; border-color: var(--accent-cyan); }
+
+  /* 結果列表 */
+  .lab-results { overflow-x: auto; }
+  .lab-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .lab-table th {
+    text-align: left; padding: 12px 14px; border-bottom: 2px solid var(--border);
+    color: var(--accent-cyan); font-size: 12px; letter-spacing: 1px; white-space: nowrap;
+  }
+  .lab-table td { padding: 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .lab-table tr:hover td { background: rgba(136,192,208,0.05); }
+  .lab-sub { color: var(--text-muted); font-size: 12px; margin-top: 4px; }
+  .lab-mono { font-family: ui-monospace, "SF Mono", "Cascadia Code", "Consolas", monospace; white-space: nowrap; }
+  .lab-row-actions { white-space: nowrap; text-align: right; }
+  .lab-tag-warn {
+    display: inline-block; font-size: 11px; color: var(--warning);
+    border: 1px solid var(--warning); border-radius: 6px; padding: 1px 7px; margin-left: 6px; vertical-align: middle;
+  }
+  .lab-muted { color: var(--text-muted); padding: 24px 0; }
+
+  @media (max-width: 880px) {
+    .lab-section { padding: 40px 0; }
+    .lab-filters .lab-input { min-width: 0; flex: 1 1 140px; }
+  }
 </style>
 </head>
 <body>
@@ -1879,6 +1956,7 @@
 <li><a data-i18n="nav.tech" href="#tech">技術</a></li>
 <li><a data-i18n="nav.specs" href="#specs">仕様</a></li>
 <li><a data-i18n="nav.design" href="/ja/system/product-design/">外観</a></li>
+<li><a data-i18n="nav.lab" href="/ja/lab/">データ庫</a></li>
 <li><a data-i18n="nav.guides" href="#guides">ナレッジベース</a></li>
 <li><a data-i18n="nav.changelog" href="#changelog">更新履歴</a></li>
 <li><a data-i18n="nav.about" href="#about">概要</a></li>
@@ -2498,6 +2576,7 @@
       'nav.tech': '技術',
       'nav.specs': '規格',
       'nav.design': '外觀',
+      'nav.lab': '資料庫',
       'nav.guides': '知識庫',
       'nav.changelog': '更新',
       'nav.about': '關於',
@@ -3038,6 +3117,7 @@
       'nav.tech': 'Tech',
       'nav.specs': 'Specs',
       'nav.design': 'Design',
+      'nav.lab': 'Data Lab',
       'nav.guides': 'Knowledge Base',
       'nav.changelog': 'Changelog',
       'nav.about': 'About',
@@ -3578,6 +3658,7 @@
       'nav.tech': '技術',
       'nav.specs': '仕様',
       'nav.design': '外観',
+      'nav.lab': 'データ庫',
       'nav.guides': 'ナレッジベース',
       'nav.changelog': '更新履歴',
       'nav.about': '概要',
