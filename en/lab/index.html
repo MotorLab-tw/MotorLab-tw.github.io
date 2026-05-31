@@ -459,7 +459,7 @@
     font-size: 15px;
   }
 
-  /* ===== 九大功能 ===== */
+  /* ===== 十大功能 ===== */
   .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
@@ -534,6 +534,37 @@
     padding: 2px 8px;
     border-radius: 3px;
     font-family: monospace;
+  }
+  /* 第 10 個功能卡片:可點連到 /lab/ */
+  a.feature-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  a.feature-card-link:hover {
+    border-color: var(--accent-cyan);
+  }
+  .feature-tag.feature-go {
+    color: var(--accent-cyan);
+    background: transparent;
+    border: 1px solid var(--accent-blue);
+  }
+
+  /* ===== 全球馬達磨合資料庫導流入口 ===== */
+  .datalab-cta { padding: 56px 0; background: rgba(0,0,0,0.15); }
+  .dlcta-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 32px; flex-wrap: wrap;
+    background: linear-gradient(135deg, rgba(94,129,172,0.18), rgba(136,192,208,0.10));
+    border: 1px solid var(--accent-blue);
+    border-radius: 14px; padding: 36px 40px;
+  }
+  .dlcta-text { flex: 1 1 420px; }
+  .dlcta-title { font-size: clamp(22px, 3.5vw, 30px); font-weight: 700; margin: 12px 0 12px; }
+  .dlcta-desc { color: var(--text-secondary); font-size: clamp(14px, 2vw, 16px); line-height: 1.7; max-width: 640px; }
+  .dlcta-btn { white-space: nowrap; flex-shrink: 0; }
+  @media (max-width: 880px) {
+    .dlcta-inner { padding: 28px 24px; }
   }
 
   /* ===== 版本對比 ===== */
@@ -1756,7 +1787,7 @@
     }
   ]
 }</script></head>
-<body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/en/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/en/">← Back to home</a></div></nav><main><section class="lab-hero"><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/en/">Home</a><span class="sep">/</span><span class="current">Data Library</span></nav><div class="lab-eyebrow">Data Lab</div><h1 class="lab-hero-title">Upload &amp; download<br/><span class="lab-accent">Mini 4WD<span class="lab-reg">®</span> break-in data, worldwide</span></h1><p class="lab-hero-p">Share your machine's real measurement records with the world or download someone else's break-in profile — each record carries the full 10-stage settings and results, and the original file re-imports straight into your machine.</p></div></section><section class="lab-section"><div class="container"><div class="lab-eyebrow">Upload</div><h2 class="lab-h2">Share your break-in record</h2><p class="lab-lead">Pick the .json file your machine exported. Signatures are verified server-side — only untampered records are accepted.</p><div class="lab-upload" id="lab-drop"><input accept=".json,application/json" hidden="" id="lab-file" type="file"/><input aria-hidden="true" autocomplete="off" class="lab-hp" id="lab-hp" tabindex="-1" type="text"/><button class="lab-btn lab-btn-primary" id="lab-upload-btn" type="button">Choose a file to upload</button><p class="lab-drop-hint">or drag a .json file here</p></div><div aria-live="polite" class="lab-status" id="lab-status" role="status"></div><p class="lab-tos">Uploading means you agree to share this record publicly. The name/country fields come from your machine's settings and default to anonymous. To remove an uploaded record, email motorlab.tw@gmail.com.</p></div></section><section class="lab-section lab-band"><div class="container"><div class="lab-eyebrow">Browse</div><h2 class="lab-h2">Break-in records from racers worldwide</h2><div class="lab-filters"><select class="lab-input" id="lab-f-motor"><option value="">Filter by motor</option><option value="Torque-Tuned 2 PRO">Torque-Tuned 2 PRO</option><option value="Light-Dash PRO">Light-Dash PRO</option><option value="Atomic-Tuned 2 PRO">Atomic-Tuned 2 PRO</option><option value="Hyper-Dash PRO">Hyper-Dash PRO</option><option value="Rev-Tuned 2 PRO">Rev-Tuned 2 PRO</option><option value="Mach-Dash PRO">Mach-Dash PRO</option><option value="Torque-Tuned 2">Torque-Tuned 2</option><option value="Light-Dash">Light-Dash</option><option value="Sprint-Dash">Sprint-Dash</option><option value="Atomic-Tuned 2">Atomic-Tuned 2</option><option value="Hyper-Dash 3">Hyper-Dash 3</option><option value="Ultra-Dash">Ultra-Dash</option><option value="Rev-Tuned 2">Rev-Tuned 2</option><option value="Power-Dash">Power-Dash</option><option value="Plasma-Dash">Plasma-Dash</option><option value="Other">Other</option></select><input class="lab-input" id="lab-f-country" placeholder="Filter by country" type="text"/><select class="lab-input" id="lab-f-completed"><option value="">All</option><option value="true">Completed only</option><option value="false">Interrupted only</option></select><button class="lab-btn" id="lab-refresh" type="button">Refresh</button></div><div class="lab-results" id="lab-results"><p class="lab-muted">Loading…</p></div></div></section></main><footer>
+<body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/en/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/en/">← Back to home</a></div></nav><main><section class="lab-hero"><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/en/">Home</a><span class="sep">/</span><span class="current">Data Library</span></nav><div class="lab-eyebrow">Data Lab</div><h1 class="lab-hero-title">Upload &amp; download<br/><span class="lab-accent">Mini 4WD<span class="lab-reg">®</span> break-in data, worldwide</span></h1><p class="lab-hero-p">Share the break-in profiles your motor break-in machine produces with the world, or download someone else's profile — the original file re-imports straight into your machine.</p></div></section><section class="lab-section"><div class="container"><div class="lab-eyebrow">Upload</div><h2 class="lab-h2">Share your break-in record</h2><p class="lab-lead">Pick the .json file your machine exported. Signatures are verified server-side — only untampered records are accepted.</p><div class="lab-upload" id="lab-drop"><input accept=".json,application/json" hidden="" id="lab-file" type="file"/><input aria-hidden="true" autocomplete="off" class="lab-hp" id="lab-hp" tabindex="-1" type="text"/><button class="lab-btn lab-btn-primary" id="lab-upload-btn" type="button">Choose a file to upload</button><p class="lab-drop-hint">or drag a .json file here</p></div><div aria-live="polite" class="lab-status" id="lab-status" role="status"></div><p class="lab-tos">Uploading means you agree to share this record publicly. The name/country fields are set in your motor break-in machine's system settings and default to anonymous. To remove an uploaded record, email motorlab.tw@gmail.com.</p></div></section><section class="lab-section lab-band"><div class="container"><div class="lab-eyebrow">Browse</div><h2 class="lab-h2">Break-in records from racers worldwide</h2><p class="lab-lead">All profiles in this library are submitted by MotorLab users worldwide. Download and use them at your own discretion.</p><div class="lab-filters"><select class="lab-input" id="lab-f-motor"><option value="">Filter by motor</option><option value="Torque-Tuned 2 PRO">Torque-Tuned 2 PRO</option><option value="Light-Dash PRO">Light-Dash PRO</option><option value="Atomic-Tuned 2 PRO">Atomic-Tuned 2 PRO</option><option value="Hyper-Dash PRO">Hyper-Dash PRO</option><option value="Rev-Tuned 2 PRO">Rev-Tuned 2 PRO</option><option value="Mach-Dash PRO">Mach-Dash PRO</option><option value="Torque-Tuned 2">Torque-Tuned 2</option><option value="Light-Dash">Light-Dash</option><option value="Sprint-Dash">Sprint-Dash</option><option value="Atomic-Tuned 2">Atomic-Tuned 2</option><option value="Hyper-Dash 3">Hyper-Dash 3</option><option value="Ultra-Dash">Ultra-Dash</option><option value="Rev-Tuned 2">Rev-Tuned 2</option><option value="Power-Dash">Power-Dash</option><option value="Plasma-Dash">Plasma-Dash</option><option value="Other">Other</option></select><input class="lab-input" id="lab-f-country" placeholder="Filter by country" type="text"/><select class="lab-input" id="lab-f-completed"><option value="">All</option><option value="true">Completed only</option><option value="false">Interrupted only</option></select><button class="lab-btn" id="lab-refresh" type="button">Refresh</button></div><div class="lab-results" id="lab-results"><p class="lab-muted">Loading…</p></div></div></section></main><footer>
 <div class="container">
 <div class="footer-trademark" data-i18n="footer.trademark">
       "Mini 4WD"<sup>®</sup> 與 "ミニ四駆"<sup>®</sup> 為株式会社タミヤ（TAMIYA, INC.）的註冊商標（日本商標登錄號 第 2168392 號）。MotorLab 為獨立工作室，與株式会社タミヤ無任何關聯，亦未受其授權、贊助或背書。本網站提及之相關名稱僅用於指涉產品適用範圍，所有商標權益歸原權利人所有。

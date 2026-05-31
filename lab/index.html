@@ -459,7 +459,7 @@
     font-size: 15px;
   }
 
-  /* ===== 九大功能 ===== */
+  /* ===== 十大功能 ===== */
   .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
@@ -534,6 +534,37 @@
     padding: 2px 8px;
     border-radius: 3px;
     font-family: monospace;
+  }
+  /* 第 10 個功能卡片:可點連到 /lab/ */
+  a.feature-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  a.feature-card-link:hover {
+    border-color: var(--accent-cyan);
+  }
+  .feature-tag.feature-go {
+    color: var(--accent-cyan);
+    background: transparent;
+    border: 1px solid var(--accent-blue);
+  }
+
+  /* ===== 全球馬達磨合資料庫導流入口 ===== */
+  .datalab-cta { padding: 56px 0; background: rgba(0,0,0,0.15); }
+  .dlcta-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 32px; flex-wrap: wrap;
+    background: linear-gradient(135deg, rgba(94,129,172,0.18), rgba(136,192,208,0.10));
+    border: 1px solid var(--accent-blue);
+    border-radius: 14px; padding: 36px 40px;
+  }
+  .dlcta-text { flex: 1 1 420px; }
+  .dlcta-title { font-size: clamp(22px, 3.5vw, 30px); font-weight: 700; margin: 12px 0 12px; }
+  .dlcta-desc { color: var(--text-secondary); font-size: clamp(14px, 2vw, 16px); line-height: 1.7; max-width: 640px; }
+  .dlcta-btn { white-space: nowrap; flex-shrink: 0; }
+  @media (max-width: 880px) {
+    .dlcta-inner { padding: 28px 24px; }
   }
 
   /* ===== 版本對比 ===== */
@@ -1756,7 +1787,7 @@
     }
   ]
 }</script></head>
-<body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/">← 回首頁</a></div></nav><main><section class="lab-hero"><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/">首頁</a><span class="sep">/</span><span class="current">資料庫</span></nav><div class="lab-eyebrow">Data Lab · 全球磨合資料庫</div><h1 class="lab-hero-title">上傳・下載<br/><span class="lab-accent">全球 Mini 4WD<span class="lab-reg">®</span> 馬達磨合資料</span></h1><p class="lab-hero-p">把磨合機產出的實測紀錄分享給全世界或下載別人的馬達磨合配方 —— 每筆紀錄含完整 10 階段設定與結果,下載原檔可直接匯入你的磨合機重現。</p></div></section><section class="lab-section"><div class="container"><div class="lab-eyebrow">Upload · 上傳</div><h2 class="lab-h2">分享你的磨合紀錄</h2><p class="lab-lead">選擇馬達磨合機匯出的 .json 檔。系統會在伺服器端驗證簽章、只有未經竄改的紀錄會被收錄。</p><div class="lab-upload" id="lab-drop"><input accept=".json,application/json" hidden="" id="lab-file" type="file"/><input aria-hidden="true" autocomplete="off" class="lab-hp" id="lab-hp" tabindex="-1" type="text"/><button class="lab-btn lab-btn-primary" id="lab-upload-btn" type="button">選擇檔案上傳</button><p class="lab-drop-hint">或把 .json 檔拖曳到這裡</p></div><div aria-live="polite" class="lab-status" id="lab-status" role="status"></div><p class="lab-tos">上傳即表示你同意公開分享此紀錄。紀錄中的署名/國家欄位由你的磨合機設定,預設為匿名。如需移除已上傳的紀錄,請來信 motorlab.tw@gmail.com。</p></div></section><section class="lab-section lab-band"><div class="container"><div class="lab-eyebrow">Browse · 瀏覽</div><h2 class="lab-h2">全球玩家的磨合紀錄</h2><div class="lab-filters"><select class="lab-input" id="lab-f-motor"><option value="">馬達型號篩選</option><option value="Torque-Tuned 2 PRO">Torque-Tuned 2 PRO</option><option value="Light-Dash PRO">Light-Dash PRO</option><option value="Atomic-Tuned 2 PRO">Atomic-Tuned 2 PRO</option><option value="Hyper-Dash PRO">Hyper-Dash PRO</option><option value="Rev-Tuned 2 PRO">Rev-Tuned 2 PRO</option><option value="Mach-Dash PRO">Mach-Dash PRO</option><option value="Torque-Tuned 2">Torque-Tuned 2</option><option value="Light-Dash">Light-Dash</option><option value="Sprint-Dash">Sprint-Dash</option><option value="Atomic-Tuned 2">Atomic-Tuned 2</option><option value="Hyper-Dash 3">Hyper-Dash 3</option><option value="Ultra-Dash">Ultra-Dash</option><option value="Rev-Tuned 2">Rev-Tuned 2</option><option value="Power-Dash">Power-Dash</option><option value="Plasma-Dash">Plasma-Dash</option><option value="Other">Other</option></select><input class="lab-input" id="lab-f-country" placeholder="國家篩選" type="text"/><select class="lab-input" id="lab-f-completed"><option value="">全部</option><option value="true">僅完整磨合</option><option value="false">僅中斷紀錄</option></select><button class="lab-btn" id="lab-refresh" type="button">重新整理</button></div><div class="lab-results" id="lab-results"><p class="lab-muted">載入中…</p></div></div></section></main><footer>
+<body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/">← 回首頁</a></div></nav><main><section class="lab-hero"><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/">首頁</a><span class="sep">/</span><span class="current">資料庫</span></nav><div class="lab-eyebrow">Data Lab · 全球馬達磨合資料庫</div><h1 class="lab-hero-title">上傳・下載<br/><span class="lab-accent">全球 Mini 4WD<span class="lab-reg">®</span> 馬達磨合資料</span></h1><p class="lab-hero-p">把馬達磨合機產出的磨合配方紀錄分享給全世界或下載別人的配方,下載原檔可直接匯入你的馬達磨合機重現。</p></div></section><section class="lab-section"><div class="container"><div class="lab-eyebrow">Upload · 上傳</div><h2 class="lab-h2">分享你的磨合紀錄</h2><p class="lab-lead">選擇馬達磨合機匯出的 .json 檔。系統會在伺服器端驗證簽章、只有未經竄改的紀錄會被收錄。</p><div class="lab-upload" id="lab-drop"><input accept=".json,application/json" hidden="" id="lab-file" type="file"/><input aria-hidden="true" autocomplete="off" class="lab-hp" id="lab-hp" tabindex="-1" type="text"/><button class="lab-btn lab-btn-primary" id="lab-upload-btn" type="button">選擇檔案上傳</button><p class="lab-drop-hint">或把 .json 檔拖曳到這裡</p></div><div aria-live="polite" class="lab-status" id="lab-status" role="status"></div><p class="lab-tos">上傳即表示你同意公開分享此紀錄。紀錄中的署名/國家欄位在你的馬達磨合機系統設定中設置,系統預設為匿名。如需移除已上傳的紀錄,請來信 motorlab.tw@gmail.com。</p></div></section><section class="lab-section lab-band"><div class="container"><div class="lab-eyebrow">Browse · 瀏覽</div><h2 class="lab-h2">全球玩家的磨合紀錄</h2><p class="lab-lead">馬達磨合資料庫中所有的配方檔由全球 MotorLab 使用者提供,使用者自行評估下載使用。</p><div class="lab-filters"><select class="lab-input" id="lab-f-motor"><option value="">馬達型號篩選</option><option value="Torque-Tuned 2 PRO">Torque-Tuned 2 PRO</option><option value="Light-Dash PRO">Light-Dash PRO</option><option value="Atomic-Tuned 2 PRO">Atomic-Tuned 2 PRO</option><option value="Hyper-Dash PRO">Hyper-Dash PRO</option><option value="Rev-Tuned 2 PRO">Rev-Tuned 2 PRO</option><option value="Mach-Dash PRO">Mach-Dash PRO</option><option value="Torque-Tuned 2">Torque-Tuned 2</option><option value="Light-Dash">Light-Dash</option><option value="Sprint-Dash">Sprint-Dash</option><option value="Atomic-Tuned 2">Atomic-Tuned 2</option><option value="Hyper-Dash 3">Hyper-Dash 3</option><option value="Ultra-Dash">Ultra-Dash</option><option value="Rev-Tuned 2">Rev-Tuned 2</option><option value="Power-Dash">Power-Dash</option><option value="Plasma-Dash">Plasma-Dash</option><option value="Other">Other</option></select><input class="lab-input" id="lab-f-country" placeholder="國家篩選" type="text"/><select class="lab-input" id="lab-f-completed"><option value="">全部</option><option value="true">僅完整磨合</option><option value="false">僅中斷紀錄</option></select><button class="lab-btn" id="lab-refresh" type="button">重新整理</button></div><div class="lab-results" id="lab-results"><p class="lab-muted">載入中…</p></div></div></section></main><footer>
 <div class="container">
 <div class="footer-trademark" data-i18n="footer.trademark">
       "Mini 4WD"<sup>®</sup> 與 "ミニ四駆"<sup>®</sup> 為株式会社タミヤ（TAMIYA, INC.）的註冊商標（日本商標登錄號 第 2168392 號）。MotorLab 為獨立工作室，與株式会社タミヤ無任何關聯，亦未受其授權、贊助或背書。本網站提及之相關名稱僅用於指涉產品適用範圍，所有商標權益歸原權利人所有。
