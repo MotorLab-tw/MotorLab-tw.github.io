@@ -1739,6 +1739,10 @@
     text-align: left; padding: 12px 14px; border-bottom: 2px solid var(--border);
     color: var(--accent-cyan); font-size: 12px; letter-spacing: 1px; white-space: nowrap;
   }
+  .lab-count { color: var(--text-muted); font-size: 13px; margin-left: auto; align-self: center; white-space: nowrap; }
+  .lab-pager { display: flex; gap: 12px; align-items: center; justify-content: center; margin-top: 20px; }
+  .lab-pager .lab-btn[disabled] { opacity: 0.4; cursor: default; }
+  .lab-page-ind { color: var(--text-muted); font-size: 13px; font-family: ui-monospace, "Consolas", monospace; }
   .lab-table td { padding: 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
   .lab-table tr:hover td { background: rgba(136,192,208,0.05); }
   .lab-sub { color: var(--text-muted); font-size: 12px; margin-top: 4px; }
@@ -1787,7 +1791,7 @@
     }
   ]
 }</script></head>
-<body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/">← 回首頁</a></div></nav><main><section class="lab-hero"><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/">首頁</a><span class="sep">/</span><span class="current">資料庫</span></nav><div class="lab-eyebrow">Data Lab · 全球馬達磨合資料庫</div><h1 class="lab-hero-title">上傳・下載<br/><span class="lab-accent">全球 Mini 4WD<span class="lab-reg">®</span> 馬達磨合資料</span></h1><p class="lab-hero-p">把馬達磨合機產出的磨合配方紀錄分享給全世界或下載別人的配方,下載原檔可直接匯入你的馬達磨合機重現。</p></div></section><section class="lab-section"><div class="container"><div class="lab-eyebrow">Upload · 上傳</div><h2 class="lab-h2">分享你的磨合紀錄</h2><p class="lab-lead">選擇馬達磨合機匯出的 .json 檔。系統會在伺服器端驗證簽章、只有未經竄改的紀錄會被收錄。</p><div class="lab-upload" id="lab-drop"><input accept=".json,application/json" hidden="" id="lab-file" type="file"/><input aria-hidden="true" autocomplete="off" class="lab-hp" id="lab-hp" tabindex="-1" type="text"/><button class="lab-btn lab-btn-primary" id="lab-upload-btn" type="button">選擇檔案上傳</button><p class="lab-drop-hint">或把 .json 檔拖曳到這裡</p></div><div aria-live="polite" class="lab-status" id="lab-status" role="status"></div><p class="lab-tos">上傳即表示你同意公開分享此紀錄。紀錄中的署名/國家欄位在你的馬達磨合機系統設定中設置,系統預設為匿名。如需移除已上傳的紀錄,請來信 motorlab.tw@gmail.com。</p></div></section><section class="lab-section lab-band"><div class="container"><div class="lab-eyebrow">Browse · 瀏覽</div><h2 class="lab-h2">全球玩家的磨合紀錄</h2><p class="lab-lead">馬達磨合資料庫中所有的配方檔由全球 MotorLab 使用者提供,使用者自行評估下載使用。</p><div class="lab-filters"><select class="lab-input" id="lab-f-motor"><option value="">馬達型號篩選</option><option value="Torque-Tuned 2 PRO">Torque-Tuned 2 PRO</option><option value="Light-Dash PRO">Light-Dash PRO</option><option value="Atomic-Tuned 2 PRO">Atomic-Tuned 2 PRO</option><option value="Hyper-Dash PRO">Hyper-Dash PRO</option><option value="Rev-Tuned 2 PRO">Rev-Tuned 2 PRO</option><option value="Mach-Dash PRO">Mach-Dash PRO</option><option value="Torque-Tuned 2">Torque-Tuned 2</option><option value="Light-Dash">Light-Dash</option><option value="Sprint-Dash">Sprint-Dash</option><option value="Atomic-Tuned 2">Atomic-Tuned 2</option><option value="Hyper-Dash 3">Hyper-Dash 3</option><option value="Ultra-Dash">Ultra-Dash</option><option value="Rev-Tuned 2">Rev-Tuned 2</option><option value="Power-Dash">Power-Dash</option><option value="Plasma-Dash">Plasma-Dash</option><option value="Other">Other</option></select><input class="lab-input" id="lab-f-country" placeholder="國家篩選" type="text"/><select class="lab-input" id="lab-f-completed"><option value="">全部</option><option value="true">僅完整磨合</option><option value="false">僅中斷紀錄</option></select><button class="lab-btn" id="lab-refresh" type="button">重新整理</button></div><div class="lab-results" id="lab-results"><p class="lab-muted">載入中…</p></div></div></section></main><footer>
+<body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/">← 回首頁</a></div></nav><main><section class="lab-hero"><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/">首頁</a><span class="sep">/</span><span class="current">資料庫</span></nav><div class="lab-eyebrow">Data Lab · 全球馬達磨合資料庫</div><h1 class="lab-hero-title">上傳・下載<br/><span class="lab-accent">全球 Mini 4WD<span class="lab-reg">®</span> 馬達磨合資料</span></h1><p class="lab-hero-p">把馬達磨合機產出的磨合配方紀錄分享給全世界或下載別人的配方,下載原檔可直接匯入你的馬達磨合機重現。</p></div></section><section class="lab-section"><div class="container"><div class="lab-eyebrow">Upload · 上傳</div><h2 class="lab-h2">分享你的磨合紀錄</h2><p class="lab-lead">選擇馬達磨合機匯出的 .json 檔。系統會在伺服器端驗證簽章、只有未經竄改的紀錄會被收錄。</p><div class="lab-upload" id="lab-drop"><input accept=".json,application/json" hidden="" id="lab-file" type="file"/><input aria-hidden="true" autocomplete="off" class="lab-hp" id="lab-hp" tabindex="-1" type="text"/><button class="lab-btn lab-btn-primary" id="lab-upload-btn" type="button">選擇檔案上傳</button><p class="lab-drop-hint">或把 .json 檔拖曳到這裡</p></div><div aria-live="polite" class="lab-status" id="lab-status" role="status"></div><p class="lab-tos">上傳即表示你同意公開分享此紀錄。紀錄中的署名/國家欄位在你的馬達磨合機系統設定中設置,系統預設為匿名。如需移除已上傳的紀錄,請來信 motorlab.tw@gmail.com。</p></div></section><section class="lab-section lab-band"><div class="container"><div class="lab-eyebrow">Browse · 瀏覽</div><h2 class="lab-h2">全球玩家的磨合紀錄</h2><p class="lab-lead">馬達磨合資料庫中所有的配方檔由全球 MotorLab 使用者提供,使用者自行評估下載使用。</p><div class="lab-filters"><select class="lab-input" id="lab-f-motor"><option value="">馬達型號篩選</option><option value="Torque-Tuned 2 PRO">Torque-Tuned 2 PRO</option><option value="Light-Dash PRO">Light-Dash PRO</option><option value="Atomic-Tuned 2 PRO">Atomic-Tuned 2 PRO</option><option value="Hyper-Dash PRO">Hyper-Dash PRO</option><option value="Rev-Tuned 2 PRO">Rev-Tuned 2 PRO</option><option value="Mach-Dash PRO">Mach-Dash PRO</option><option value="Torque-Tuned 2">Torque-Tuned 2</option><option value="Light-Dash">Light-Dash</option><option value="Sprint-Dash">Sprint-Dash</option><option value="Atomic-Tuned 2">Atomic-Tuned 2</option><option value="Hyper-Dash 3">Hyper-Dash 3</option><option value="Ultra-Dash">Ultra-Dash</option><option value="Rev-Tuned 2">Rev-Tuned 2</option><option value="Power-Dash">Power-Dash</option><option value="Plasma-Dash">Plasma-Dash</option><option value="Other">Other</option></select><input class="lab-input" id="lab-f-country" placeholder="國家篩選" type="text"/><select class="lab-input" id="lab-f-completed"><option value="">全部</option><option value="true">僅完整磨合</option><option value="false">僅中斷紀錄</option></select><select aria-label="排序" class="lab-input" id="lab-f-sort"><option value="">排序</option><option value="rpm_max_overall|-1">最高轉速 R.P.M ▼</option><option value="rpm_max_overall|1">最高轉速 R.P.M ▲</option><option value="rpm_avg_overall|-1">平均轉速 R.P.M ▼</option><option value="rpm_avg_overall|1">平均轉速 R.P.M ▲</option><option value="stable_current_overall|-1">穩定電流 mA ▼</option><option value="stable_current_overall|1">穩定電流 mA ▲</option></select><select aria-label="顯示" class="lab-input" id="lab-f-pagesize"><option value="10">顯示 10</option><option value="50">顯示 50</option><option value="100">顯示 100</option></select><button class="lab-btn" id="lab-refresh" type="button">重新整理</button><div class="lab-count" id="lab-count"></div></div><div class="lab-results" id="lab-results"><p class="lab-muted">載入中…</p></div><div class="lab-pager" id="lab-pager"></div></div></section></main><footer>
 <div class="container">
 <div class="footer-trademark" data-i18n="footer.trademark">
       "Mini 4WD"<sup>®</sup> 與 "ミニ四駆"<sup>®</sup> 為株式会社タミヤ（TAMIYA, INC.）的註冊商標（日本商標登錄號 第 2168392 號）。MotorLab 為獨立工作室，與株式会社タミヤ無任何關聯，亦未受其授權、贊助或背書。本網站提及之相關名稱僅用於指涉產品適用範圍，所有商標權益歸原權利人所有。
@@ -1804,7 +1808,7 @@
 </footer><script>
 (function () {
   var API = "https://script.google.com/macros/s/AKfycbwhKscBnh5EdzIjQP90wwWbm-AqWyeWm9pTE071mHpxHLOCEyoCOMudW89p3WTax-qi/exec";
-  var T = {"no_api": "資料服務尚未設定(管理員請填入 GAS 網址)。", "uploading": "上傳並驗證中…", "up_ok": "上傳成功,已收錄!", "up_dup": "這筆紀錄已經在資料庫裡了。", "up_err": "上傳失敗", "err_network": "網路錯誤,請稍後再試。", "empty": "目前沒有符合條件的紀錄。", "loading": "載入中…", "preparing": "準備下載原檔…", "c_motor": "馬達型號", "c_owner": "分享者", "c_country": "國家", "c_rpm": "最高轉速 R.P.M", "c_rpm_avg": "平均轉速 R.P.M", "c_current": "穩定電流 mA", "c_date": "磨合日期", "anon": "匿名", "incomplete": "中斷", "download": "下載原檔"};
+  var T = {"no_api": "資料服務尚未設定(管理員請填入 GAS 網址)。", "uploading": "上傳並驗證中…", "up_ok": "上傳成功,已收錄!", "up_dup": "這筆紀錄已經在資料庫裡了。", "up_err": "上傳失敗", "err_network": "網路錯誤,請稍後再試。", "empty": "目前沒有符合條件的紀錄。", "loading": "載入中…", "preparing": "準備下載原檔…", "c_motor": "馬達型號", "c_owner": "分享者", "c_country": "國家", "c_rpm": "最高轉速 R.P.M", "c_rpm_avg": "平均轉速 R.P.M", "c_current": "穩定電流 mA", "c_date": "磨合日期", "anon": "匿名", "incomplete": "中斷", "download": "下載原檔", "count": "共 {shown} / {total} 筆", "prev": "上一頁", "next": "下一頁"};
   function $(id) { return document.getElementById(id); }
   function hasApi() { return API && API.indexOf("PUT_") !== 0; }
   function apiq(qs) { return API + (API.indexOf("?") < 0 ? "?" : "&") + qs; }
@@ -1856,6 +1860,17 @@
     fr.readAsArrayBuffer(file);
   }
 
+  // 可排序欄位 → 取值函式(數值欄轉 Number,日期欄按字串)
+  var SORT_GETTERS = {
+    rpm_max_overall: function (it) { return Number(it.rpm_max_overall) || 0; },
+    rpm_avg_overall: function (it) { return Number(it.rpm_avg_overall) || 0; },
+    stable_current_overall: function (it) { return Number(it.stable_current_overall) || 0; }
+  };
+  var sortKey = "";   // 目前排序欄位(空 = 不排序,維持後端「新到舊」),由下拉選單驅動
+  var sortDir = -1;   // 1 升冪 / -1 降冪
+  var page = 1;       // 目前頁碼(1-based)
+  var lastFiltered = [];  // 最近一次篩選+排序後的完整結果(供翻頁用)
+
   function render(items) {
     var box = $("lab-results");
     if (!box) return;
@@ -1884,12 +1899,17 @@
     box.innerHTML = h + "</tbody></table>";
   }
 
-  var ALL = [];  // 後端抓回的全量紀錄(快取),篩選在前端即時做(方案 B)
+  var ALL = [];  // 後端抓回的全量紀錄(快取),篩選/排序/分頁在前端即時做(方案 B)
 
   function applyFilter() {
+    page = 1;  // 任何篩選/排序/筆數變更都回到第 1 頁
     var m = (($("lab-f-motor") || {}).value || "").trim().toLowerCase();
     var c = (($("lab-f-country") || {}).value || "").trim().toLowerCase();
     var cp = ($("lab-f-completed") || {}).value || "";
+    // 排序下拉:值格式 "key|dir"(dir = 1 升 / -1 降);空 = 不排序
+    var sv = ($("lab-f-sort") || {}).value || "";
+    if (sv) { var parts = sv.split("|"); sortKey = parts[0]; sortDir = (parts[1] === "1") ? 1 : -1; }
+    else { sortKey = ""; }
     var out = ALL.filter(function (it) {
       if (m && String(it.motor_model || "").toLowerCase() !== m) return false;  // 下拉:精確相等
       if (c && String(it.owner_country || "").toLowerCase().indexOf(c) < 0) return false;  // 國家:子字串
@@ -1900,7 +1920,52 @@
       }
       return true;
     });
-    render(out);
+    // 排序(若有選欄位);否則維持後端回傳順序(新到舊)
+    if (sortKey && SORT_GETTERS[sortKey]) {
+      var get = SORT_GETTERS[sortKey];
+      out.sort(function (a, b) { return (get(a) - get(b)) * sortDir; });
+    }
+    lastFiltered = out;
+    renderPage();
+  }
+
+  // 依目前 page + 顯示筆數切頁渲染 + 更新計數 + 翻頁列
+  function renderPage() {
+    var out = lastFiltered;
+    var total = out.length;
+    var size = parseInt(($("lab-f-pagesize") || {}).value, 10) || 10;
+    var pages = Math.max(1, Math.ceil(total / size));
+    if (page > pages) page = pages;
+    if (page < 1) page = 1;
+    var start = (page - 1) * size;
+    var shown = out.slice(start, start + size);
+    render(shown);
+    var cnt = $("lab-count");
+    if (cnt) {
+      // 顯示「目前頁區間 / 總數」,例:11–20 / 50
+      var from = total ? start + 1 : 0;
+      var to = start + shown.length;
+      cnt.textContent = T.count.replace("{shown}", from + "–" + to).replace("{total}", total);
+    }
+    renderPager(pages);
+  }
+
+  function renderPager(pages) {
+    var el = $("lab-pager");
+    if (!el) return;
+    if (pages <= 1) { el.innerHTML = ""; return; }
+    el.innerHTML =
+      '<button type="button" class="lab-btn lab-btn-sm" id="lab-prev"' + (page <= 1 ? " disabled" : "") + ">‹ " + esc(T.prev) + "</button>" +
+      '<span class="lab-page-ind">' + page + " / " + pages + "</span>" +
+      '<button type="button" class="lab-btn lab-btn-sm" id="lab-next"' + (page >= pages ? " disabled" : "") + ">" + esc(T.next) + " ›</button>";
+    var pv = $("lab-prev"), nx = $("lab-next");
+    if (pv) pv.addEventListener("click", function () { if (page > 1) { page--; renderPage(); scrollTop(); } });
+    if (nx) nx.addEventListener("click", function () { page++; renderPage(); scrollTop(); });
+  }
+
+  function scrollTop() {
+    var b = $("lab-results");
+    if (b && b.scrollIntoView) b.scrollIntoView({ block: "start" });
   }
 
   function loadList() {
@@ -1950,10 +2015,13 @@
     var rf = $("lab-refresh");
     if (rf) rf.addEventListener("click", loadList);
     // 即時篩選:輸入框打字即篩(從快取),不再每次打 GAS
-    var fm = $("lab-f-motor"), fc = $("lab-f-country"), fcp = $("lab-f-completed");
+    var fm = $("lab-f-motor"), fc = $("lab-f-country"), fcp = $("lab-f-completed"),
+        fps = $("lab-f-pagesize"), fsort = $("lab-f-sort");
     if (fm) fm.addEventListener("change", applyFilter);   // 下拉用 change
     if (fc) fc.addEventListener("input", applyFilter);    // 文字框用 input
     if (fcp) fcp.addEventListener("change", applyFilter);
+    if (fps) fps.addEventListener("change", applyFilter); // 顯示筆數
+    if (fsort) fsort.addEventListener("change", applyFilter); // 排序下拉
     var res = $("lab-results");
     if (res) res.addEventListener("click", function (e) {
       var dl = e.target.getAttribute("data-dl");

@@ -838,6 +838,11 @@ LAB = {
             "f_comp_all": "全部",
             "f_comp_yes": "僅完整磨合",
             "f_comp_no": "僅中斷紀錄",
+            "f_sort": "排序",
+            "f_show": "顯示",
+            "c_rpm": "最高轉速 R.P.M",
+            "c_rpm_avg": "平均轉速 R.P.M",
+            "c_current": "穩定電流 mA",
             "f_refresh": "重新整理",
             "ls_loading": "載入中…",
             "js": {
@@ -859,7 +864,10 @@ LAB = {
                 "c_date": "磨合日期",
                 "anon": "匿名",
                 "incomplete": "中斷",
-                "download": "下載原檔"
+                "download": "下載原檔",
+                "count": "共 {shown} / {total} 筆",
+                "prev": "上一頁",
+                "next": "下一頁"
             }
         },
         "en": {
@@ -885,6 +893,11 @@ LAB = {
             "f_comp_all": "All",
             "f_comp_yes": "Completed only",
             "f_comp_no": "Interrupted only",
+            "f_sort": "Sort",
+            "f_show": "Show",
+            "c_rpm": "Max R.P.M",
+            "c_rpm_avg": "Avg R.P.M",
+            "c_current": "Stable mA",
             "f_refresh": "Refresh",
             "ls_loading": "Loading…",
             "js": {
@@ -906,7 +919,10 @@ LAB = {
                 "c_date": "Break-in date",
                 "anon": "Anonymous",
                 "incomplete": "Interrupted",
-                "download": "Download"
+                "download": "Download",
+                "count": "{shown} / {total} records",
+                "prev": "Prev",
+                "next": "Next"
             }
         },
         "ja": {
@@ -932,6 +948,11 @@ LAB = {
             "f_comp_all": "すべて",
             "f_comp_yes": "完走のみ",
             "f_comp_no": "中断のみ",
+            "f_sort": "並べ替え",
+            "f_show": "表示",
+            "c_rpm": "最高回転数 R.P.M",
+            "c_rpm_avg": "平均回転数 R.P.M",
+            "c_current": "安定電流 mA",
             "f_refresh": "更新",
             "ls_loading": "読み込み中…",
             "js": {
@@ -953,7 +974,10 @@ LAB = {
                 "c_date": "慣らし日",
                 "anon": "匿名",
                 "incomplete": "中断",
-                "download": "ダウンロード"
+                "download": "ダウンロード",
+                "count": "{shown} / {total} 件",
+                "prev": "前へ",
+                "next": "次へ"
             }
         }
     }
@@ -1967,6 +1991,17 @@ LAB_APP_JS = r"""
     fr.readAsArrayBuffer(file);
   }
 
+  // 可排序欄位 → 取值函式(數值欄轉 Number,日期欄按字串)
+  var SORT_GETTERS = {
+    rpm_max_overall: function (it) { return Number(it.rpm_max_overall) || 0; },
+    rpm_avg_overall: function (it) { return Number(it.rpm_avg_overall) || 0; },
+    stable_current_overall: function (it) { return Number(it.stable_current_overall) || 0; }
+  };
+  var sortKey = "";   // 目前排序欄位(空 = 不排序,維持後端「新到舊」),由下拉選單驅動
+  var sortDir = -1;   // 1 升冪 / -1 降冪
+  var page = 1;       // 目前頁碼(1-based)
+  var lastFiltered = [];  // 最近一次篩選+排序後的完整結果(供翻頁用)
+
   function render(items) {
     var box = $("lab-results");
     if (!box) return;
@@ -1995,12 +2030,17 @@ LAB_APP_JS = r"""
     box.innerHTML = h + "</tbody></table>";
   }
 
-  var ALL = [];  // 後端抓回的全量紀錄(快取),篩選在前端即時做(方案 B)
+  var ALL = [];  // 後端抓回的全量紀錄(快取),篩選/排序/分頁在前端即時做(方案 B)
 
   function applyFilter() {
+    page = 1;  // 任何篩選/排序/筆數變更都回到第 1 頁
     var m = (($("lab-f-motor") || {}).value || "").trim().toLowerCase();
     var c = (($("lab-f-country") || {}).value || "").trim().toLowerCase();
     var cp = ($("lab-f-completed") || {}).value || "";
+    // 排序下拉:值格式 "key|dir"(dir = 1 升 / -1 降);空 = 不排序
+    var sv = ($("lab-f-sort") || {}).value || "";
+    if (sv) { var parts = sv.split("|"); sortKey = parts[0]; sortDir = (parts[1] === "1") ? 1 : -1; }
+    else { sortKey = ""; }
     var out = ALL.filter(function (it) {
       if (m && String(it.motor_model || "").toLowerCase() !== m) return false;  // 下拉:精確相等
       if (c && String(it.owner_country || "").toLowerCase().indexOf(c) < 0) return false;  // 國家:子字串
@@ -2011,7 +2051,52 @@ LAB_APP_JS = r"""
       }
       return true;
     });
-    render(out);
+    // 排序(若有選欄位);否則維持後端回傳順序(新到舊)
+    if (sortKey && SORT_GETTERS[sortKey]) {
+      var get = SORT_GETTERS[sortKey];
+      out.sort(function (a, b) { return (get(a) - get(b)) * sortDir; });
+    }
+    lastFiltered = out;
+    renderPage();
+  }
+
+  // 依目前 page + 顯示筆數切頁渲染 + 更新計數 + 翻頁列
+  function renderPage() {
+    var out = lastFiltered;
+    var total = out.length;
+    var size = parseInt(($("lab-f-pagesize") || {}).value, 10) || 10;
+    var pages = Math.max(1, Math.ceil(total / size));
+    if (page > pages) page = pages;
+    if (page < 1) page = 1;
+    var start = (page - 1) * size;
+    var shown = out.slice(start, start + size);
+    render(shown);
+    var cnt = $("lab-count");
+    if (cnt) {
+      // 顯示「目前頁區間 / 總數」,例:11–20 / 50
+      var from = total ? start + 1 : 0;
+      var to = start + shown.length;
+      cnt.textContent = T.count.replace("{shown}", from + "–" + to).replace("{total}", total);
+    }
+    renderPager(pages);
+  }
+
+  function renderPager(pages) {
+    var el = $("lab-pager");
+    if (!el) return;
+    if (pages <= 1) { el.innerHTML = ""; return; }
+    el.innerHTML =
+      '<button type="button" class="lab-btn lab-btn-sm" id="lab-prev"' + (page <= 1 ? " disabled" : "") + ">‹ " + esc(T.prev) + "</button>" +
+      '<span class="lab-page-ind">' + page + " / " + pages + "</span>" +
+      '<button type="button" class="lab-btn lab-btn-sm" id="lab-next"' + (page >= pages ? " disabled" : "") + ">" + esc(T.next) + " ›</button>";
+    var pv = $("lab-prev"), nx = $("lab-next");
+    if (pv) pv.addEventListener("click", function () { if (page > 1) { page--; renderPage(); scrollTop(); } });
+    if (nx) nx.addEventListener("click", function () { page++; renderPage(); scrollTop(); });
+  }
+
+  function scrollTop() {
+    var b = $("lab-results");
+    if (b && b.scrollIntoView) b.scrollIntoView({ block: "start" });
   }
 
   function loadList() {
@@ -2061,10 +2146,13 @@ LAB_APP_JS = r"""
     var rf = $("lab-refresh");
     if (rf) rf.addEventListener("click", loadList);
     // 即時篩選:輸入框打字即篩(從快取),不再每次打 GAS
-    var fm = $("lab-f-motor"), fc = $("lab-f-country"), fcp = $("lab-f-completed");
+    var fm = $("lab-f-motor"), fc = $("lab-f-country"), fcp = $("lab-f-completed"),
+        fps = $("lab-f-pagesize"), fsort = $("lab-f-sort");
     if (fm) fm.addEventListener("change", applyFilter);   // 下拉用 change
     if (fc) fc.addEventListener("input", applyFilter);    // 文字框用 input
     if (fcp) fcp.addEventListener("change", applyFilter);
+    if (fps) fps.addEventListener("change", applyFilter); // 顯示筆數
+    if (fsort) fsort.addEventListener("change", applyFilter); // 排序下拉
     var res = $("lab-results");
     if (res) res.addEventListener("click", function (e) {
       var dl = e.target.getAttribute("data-dl");
@@ -2226,9 +2314,25 @@ def build_lab_page(lab_cfg, lang, src_html, i18n):
         f'<option value="true">{s["f_comp_yes"]}</option>'
         f'<option value="false">{s["f_comp_no"]}</option>'
         f'</select>'
+        f'<select id="lab-f-sort" class="lab-input" aria-label="{s["f_sort"]}">'
+        f'<option value="">{s["f_sort"]}</option>'
+        f'<option value="rpm_max_overall|-1">{s["c_rpm"]} ▼</option>'
+        f'<option value="rpm_max_overall|1">{s["c_rpm"]} ▲</option>'
+        f'<option value="rpm_avg_overall|-1">{s["c_rpm_avg"]} ▼</option>'
+        f'<option value="rpm_avg_overall|1">{s["c_rpm_avg"]} ▲</option>'
+        f'<option value="stable_current_overall|-1">{s["c_current"]} ▼</option>'
+        f'<option value="stable_current_overall|1">{s["c_current"]} ▲</option>'
+        f'</select>'
+        f'<select id="lab-f-pagesize" class="lab-input" aria-label="{s["f_show"]}">'
+        f'<option value="10">{s["f_show"]} 10</option>'
+        f'<option value="50">{s["f_show"]} 50</option>'
+        f'<option value="100">{s["f_show"]} 100</option>'
+        f'</select>'
         f'<button type="button" class="lab-btn" id="lab-refresh">{s["f_refresh"]}</button>'
+        f'<div class="lab-count" id="lab-count"></div>'
         f'</div>'
         f'<div class="lab-results" id="lab-results"><p class="lab-muted">{s["ls_loading"]}</p></div>'
+        f'<div class="lab-pager" id="lab-pager"></div>'
         f'</div></section>'
     )
     main_el.append(BeautifulSoup(list_html, "html.parser"))
