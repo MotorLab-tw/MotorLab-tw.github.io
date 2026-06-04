@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="zh-TW" translate="no">
+<html lang="en" translate="no">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="zh-TW" http-equiv="Content-Language"/>
-<title>四驅車軌道分析與馬達選型:高速軌/技術軌/立體軌 | MotorLab</title>
-<meta content="用可量化的「軌道區段比例法」分析任何一條 Mini 4WD® 賽道:拆成直線、彎道、特殊三種區段判斷高速軌/技術軌/立體軌,對應馬達、齒比與輪徑。附 2025 田宮 Japan Cup 官方賽道實例分析。" name="description"/>
+<meta content="en" http-equiv="Content-Language"/>
+<title>Why Mini 4WD Cars Crash: The 3-Trigger Risk Model | MotorLab</title>
+<meta content="Mini 4WD crashes (course-outs) are not random — they happen when speed, track geometry and vehicle stability triggers stack past a critical threshold. This article gives a Speed/Geometry/Stability trigger model, an on-site risk-counting method, common crash combinations and matching setup fixes." name="description"/>
 <meta content="MotorLab.tw" name="author"/>
-<meta content="四驅車軌道分析, 馬達選型, 高速軌, 技術軌, 立體軌, 軌道類型, 齒比選擇, 田宮賽道, Japan Cup 2025, Mini 4WD 賽道攻略, 馬達轉速扭力, 賽道區段比例, Mini 4WD track analysis, motor selection, high-speed course, technical course, 3D course, gear ratio selection, Tamiya circuit, Japan Cup 2025, Mini 4WD course strategy, motor RPM torque, track section ratio" name="keywords"/>
+<meta content="Mini 4WD setup, Mini 4WD crash, course out, track analysis, Tamiya Mini 4WD, braking setup, gear ratio, center of gravity, stability tuning, racing setup strategy, cornering speed control, trigger model" name="keywords"/>
 <!-- 正規網址 (避免重複內容問題) -->
-<link href="https://motorlab-tw.github.io/guides/track-analysis-motor-selection/" rel="canonical"/>
+<link href="https://motorlab-tw.github.io/en/guides/crash-risk-trigger-model/" rel="canonical"/>
 <!-- 搜尋引擎指示 -->
 <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
 <meta content="index, follow" name="googlebot"/>
@@ -31,22 +31,22 @@
 <meta content="MotorLab" name="apple-mobile-web-app-title"/>
 <!-- Open Graph (Facebook, LINE, Discord) -->
 <meta content="article" property="og:type"/>
-<meta content="https://motorlab-tw.github.io/guides/track-analysis-motor-selection/" property="og:url"/>
-<meta content="四驅車軌道分析與馬達選型:高速軌/技術軌/立體軌 | MotorLab" property="og:title"/>
-<meta content="用可量化的「軌道區段比例法」分析任何一條 Mini 4WD® 賽道:拆成直線、彎道、特殊三種區段判斷高速軌/技術軌/立體軌,對應馬達、齒比與輪徑。附 2025 田宮 Japan Cup 官方賽道實例分析。" property="og:description"/>
+<meta content="https://motorlab-tw.github.io/en/guides/crash-risk-trigger-model/" property="og:url"/>
+<meta content="Why Mini 4WD Cars Crash: The 3-Trigger Risk Model | MotorLab" property="og:title"/>
+<meta content="Mini 4WD crashes (course-outs) are not random — they happen when speed, track geometry and vehicle stability triggers stack past a critical threshold. This article gives a Speed/Geometry/Stability trigger model, an on-site risk-counting method, common crash combinations and matching setup fixes." property="og:description"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" property="og:image"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" property="og:image:secure_url"/>
 <meta content="image/png" property="og:image:type"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
 <meta content="MotorLab — Mini 4WD® 馬達精密測試系統官方網站預覽圖" property="og:image:alt"/>
-<meta content="zh_TW" property="og:locale"/>
+<meta content="en_US" property="og:locale"/>
 <meta content="en_US" property="og:locale:alternate"/>
 <meta content="MotorLab.tw" property="og:site_name"/>
 <!-- Twitter Card -->
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="四驅車軌道分析與馬達選型:高速軌/技術軌/立體軌 | MotorLab" name="twitter:title"/>
-<meta content="用可量化的「軌道區段比例法」分析任何一條 Mini 4WD® 賽道:拆成直線、彎道、特殊三種區段判斷高速軌/技術軌/立體軌,對應馬達、齒比與輪徑。附 2025 田宮 Japan Cup 官方賽道實例分析。" name="twitter:description"/>
+<meta content="Why Mini 4WD Cars Crash: The 3-Trigger Risk Model | MotorLab" name="twitter:title"/>
+<meta content="Mini 4WD crashes (course-outs) are not random — they happen when speed, track geometry and vehicle stability triggers stack past a critical threshold. This article gives a Speed/Geometry/Stability trigger model, an on-site risk-counting method, common crash combinations and matching setup fixes." name="twitter:description"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" name="twitter:image"/>
 <meta content="MotorLab 官方網站預覽圖" name="twitter:image:alt"/>
 <!-- 結構化資料 1: Organization (公司/工作室) -->
@@ -1759,17 +1759,17 @@
     .lab-filters .lab-input { min-width: 0; flex: 1 1 140px; }
   }
 </style>
-<link href="https://motorlab-tw.github.io/guides/track-analysis-motor-selection/" hreflang="zh-TW" rel="alternate"/><link href="https://motorlab-tw.github.io/en/guides/track-analysis-motor-selection/" hreflang="en" rel="alternate"/><link href="https://motorlab-tw.github.io/ja/guides/track-analysis-motor-selection/" hreflang="ja" rel="alternate"/><link href="https://motorlab-tw.github.io/guides/track-analysis-motor-selection/" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
+<link href="https://motorlab-tw.github.io/guides/crash-risk-trigger-model/" hreflang="zh-TW" rel="alternate"/><link href="https://motorlab-tw.github.io/en/guides/crash-risk-trigger-model/" hreflang="en" rel="alternate"/><link href="https://motorlab-tw.github.io/ja/guides/crash-risk-trigger-model/" hreflang="ja" rel="alternate"/><link href="https://motorlab-tw.github.io/guides/crash-risk-trigger-model/" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "四驅車軌道分析與馬達選型:用區段比例判斷高速軌/技術軌/立體軌",
-  "description": "用可量化的「軌道區段比例法」分析任何一條 Mini 4WD® 賽道:拆成直線、彎道、特殊三種區段判斷高速軌/技術軌/立體軌,對應馬達、齒比與輪徑。附 2025 田宮 Japan Cup 官方賽道實例分析。",
-  "keywords": "四驅車軌道分析, 馬達選型, 高速軌, 技術軌, 立體軌, 軌道類型, 齒比選擇, 田宮賽道, Japan Cup 2025, Mini 4WD 賽道攻略, 馬達轉速扭力, 賽道區段比例",
-  "inLanguage": "zh-TW",
-  "url": "https://motorlab-tw.github.io/guides/track-analysis-motor-selection/",
+  "headline": "Why Mini 4WD Cars Crash: The Speed / Geometry / Stability Trigger Model",
+  "description": "Mini 4WD crashes (course-outs) are not random — they happen when speed, track geometry and vehicle stability triggers stack past a critical threshold. This article gives a Speed/Geometry/Stability trigger model, an on-site risk-counting method, common crash combinations and matching setup fixes.",
+  "keywords": "Mini 4WD setup, Mini 4WD crash, course out, track analysis, Tamiya Mini 4WD, braking setup, gear ratio, center of gravity, stability tuning, racing setup strategy, cornering speed control, trigger model",
+  "inLanguage": "en",
+  "url": "https://motorlab-tw.github.io/en/guides/crash-risk-trigger-model/",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://motorlab-tw.github.io/guides/track-analysis-motor-selection/"
+    "@id": "https://motorlab-tw.github.io/en/guides/crash-risk-trigger-model/"
   },
   "author": {
     "@type": "Organization",
@@ -1794,114 +1794,117 @@
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "首頁",
-      "item": "https://motorlab-tw.github.io/"
+      "name": "Home",
+      "item": "https://motorlab-tw.github.io/en/"
     },
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "教學",
-      "item": "https://motorlab-tw.github.io/#guides"
+      "name": "Guides",
+      "item": "https://motorlab-tw.github.io/en/#guides"
     },
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "軌道分析與馬達選型",
-      "item": "https://motorlab-tw.github.io/guides/track-analysis-motor-selection/"
+      "name": "Crash Risk Trigger Model",
+      "item": "https://motorlab-tw.github.io/en/guides/crash-risk-trigger-model/"
     }
   ]
 }</script></head>
-<body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/">← 回首頁</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/">首頁</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/#guides">教學</a><span class="sep">/</span><span class="current">軌道分析與馬達選型</span></nav><article class="guide-article">
-<span class="guide-tag" data-i18n="g10.tag">GUIDE · 賽道戰略</span>
-<h1 data-i18n="g10.title">四驅車軌道分析與馬達選型:用區段比例判斷高速軌 / 技術軌 / 立體軌</h1><p class="guide-byline">編輯者:MotorLab Team</p>
-<p class="guide-lead" data-i18n="g10.lead">同一顆馬達在不同軌道的表現天差地遠 —— 高速軌的冠軍馬達搬到立體軌可能連完賽都困難。本文提出一套可量化的「軌道區段比例法」:把任何一條 Mini 4WD<sup>®</sup> 軌道拆成直線、彎道、特殊三種區段,用比例判斷它屬於高速軌、技術軌還是立體軌,再對應到最適合的馬達、齒比與輪徑。</p>
-<h4 data-i18n="g10.h1">為什麼選馬達要從「讀懂軌道」開始</h4>
-<p data-i18n="g10.p1">馬達選型最大的誤區,是<strong>只看馬達規格、不看軌道特性</strong>。一顆 27,000 RPM 的衝刺型馬達,在滿是急彎與跳台的立體軌上只會不斷飛出賽道;反過來,高扭力馬達在長直線軌道上又會被高轉速馬達拉開。</p>
-<p data-i18n="g10.p2">日本與歐美進階社群,普遍用「<strong>先讀懂賽道、再決定 setting</strong>」的順序思考(田宮官方 Setup Guide 也明言要「Study the course」)。但多數攻略停在<strong>定性</strong>描述(「這段是難關」),缺乏可量化、可重複的分類方法。本文補上這個缺口。</p>
-<h4 data-i18n="g10.h2">軌道的三種基本區段</h4>
-<p data-i18n="g10.p3">任何 Mini 4WD<sup>®</sup> 軌道,無論多複雜,都能拆成三種基本區段:</p>
-<table class="guide-table">
-<thead>
-<tr><th data-i18n="g10.t.seg">區段類型</th><th data-i18n="g10.t.inc">包含</th><th data-i18n="g10.t.need">對馬達的需求</th></tr>
-</thead>
-<tbody>
-<tr><td data-i18n="g10.seg1">直線(S)</td><td data-i18n="g10.inc1">直線道、長緩彎</td><td data-i18n="g10.need1">高轉速 → 衝最高速</td></tr>
-<tr><td data-i18n="g10.seg2">彎道(C)</td><td data-i18n="g10.inc2">一般彎、連續數位彎、髮夾彎</td><td data-i18n="g10.need2">加速力 → 出彎再加速</td></tr>
-<tr><td data-i18n="g10.seg3">特殊(X)</td><td data-i18n="g10.inc3">坡道、立體彎、跳台、波浪、變換道</td><td data-i18n="g10.need3">高扭力 → 克服阻力與重力</td></tr>
-</tbody>
-</table>
+<body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/en/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/en/">← Back to home</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/en/">Home</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/en/#guides">Guides</a><span class="sep">/</span><span class="current">Crash Risk Trigger Model</span></nav><article class="guide-article">
+<span class="guide-tag" data-i18n="g11.tag">GUIDE · Race Strategy</span>
+<h1 data-i18n="g11.title">Why Mini 4WD Cars Crash: The Speed / Geometry / Stability Trigger Model</h1><p class="guide-byline">Edited by MotorLab Team</p>
+<p class="guide-lead" data-i18n="g11.lead">Crashes (course-outs) in racing are often dismissed as "bad luck," but they are predictable — the result of speed, track geometry and vehicle stability triggers stacking past a critical threshold. This article breaks crashes into the Speed / Geometry / Stability triggers, gives an on-site method to quickly count risk, and maps setup fixes to each risk level.</p>
+<h4 data-i18n="g11.h1">Crashes Aren't Random — They're Stacked Conditions</h4>
 <div class="guide-tip">
-<p data-i18n="g10.tip1">數區段的單位建議用「賽道節」(田宮 Junior Circuit 一節 = 一塊軌道板),同類連續區段合併成一個計數單位。</p>
+<p data-i18n="g11.core"><strong>Core idea</strong>: a crash is not a random event, but the result of "speed trigger + geometry trigger + stability trigger" stacking past a critical threshold.</p>
 </div>
-<h4 data-i18n="g10.h3">用比例分類:高速軌、技術軌、立體軌</h4>
-<p data-i18n="g10.p4">把三種區段各自佔比數出來,用以下門檻判斷(三類名稱均為日 / 英 / 台社群通用用語):</p>
+<p data-i18n="g11.p1">Most racers blame a crash on "this motor is too fast" or "bad luck" and then blindly slow down or swap motors — treating symptoms, not the cause. What you should actually do is <strong>identify how many risk triggers each corner / slope / jump hits at once</strong>: the same jump that a car clears cleanly under one trigger almost always crashes under three. The value here is making that judgment systematic and countable.</p>
+<h4 data-i18n="g11.h2">Speed Trigger</h4>
+<p data-i18n="g11.p2">Speed-related crash causes — kinetic energy exceeding what the track can absorb.</p>
 <table class="guide-table">
 <thead>
-<tr><th data-i18n="g10.t.type">軌道類型</th><th data-i18n="g10.t.term">社群用語</th><th data-i18n="g10.t.cond">判斷條件</th><th data-i18n="g10.t.feat">特徵</th></tr>
+<tr><th data-i18n="g11.t.concept">Standardized concept</th><th data-i18n="g11.t.slang">Racer slang</th><th data-i18n="g11.t.fix">Recommended fix</th></tr>
 </thead>
 <tbody>
-<tr><td data-i18n="g10.c1.type">高速軌</td><td data-i18n="g10.c1.term">スピード / High Speed</td><td data-i18n="g10.c1.cond">直線 S 主導(≥ 50%)</td><td data-i18n="g10.c1.feat">長直線多、彎緩、幾乎無立體區段</td></tr>
-<tr><td data-i18n="g10.c2.type">技術軌</td><td data-i18n="g10.c2.term">テクニカル / Technical</td><td data-i18n="g10.c2.cond">彎道 C 主導</td><td data-i18n="g10.c2.feat">急彎/連續彎密集,考驗過彎與出彎加速</td></tr>
-<tr><td data-i18n="g10.c3.type">立體軌</td><td data-i18n="g10.c3.term">立体コース / 3D course</td><td data-i18n="g10.c3.cond">特殊 X 主導</td><td data-i18n="g10.c3.feat">坡道/跳台/波浪密集,現代賽道主流</td></tr>
+<tr><td data-i18n="g11.sp1.c">Corner entry too fast</td><td data-i18n="g11.sp1.s">over-speed into corner</td><td data-i18n="g11.sp1.f">Lower gear ratio / brake earlier / cap top speed</td></tr>
+<tr><td data-i18n="g11.sp2.c">Insufficient braking</td><td data-i18n="g11.sp2.s">insufficient braking downhill</td><td data-i18n="g11.sp2.f">Stronger brakes / longer braking distance / earlier intervention</td></tr>
+<tr><td data-i18n="g11.sp3.c">Jump take-off energy too high</td><td data-i18n="g11.sp3.s">over-speed jump</td><td data-i18n="g11.sp3.f">Brake before take-off / lower output / tune accel curve</td></tr>
 </tbody>
 </table>
-<p data-i18n="g10.p5">多數真實賽道是混合型,以<strong>佔比最高的區段</strong>決定主分類;若兩種接近,取需求較嚴苛者(通常立體 &gt; 技術 &gt; 高速)。</p>
-<h4 data-i18n="g10.h4">三類軌道的馬達選型對照</h4>
-<p data-i18n="g10.p6">馬達規格詳見 <a href="/benchmarks/tamiya-motor-full-lineup/">田宮全 15 款馬達規格對照表</a>:</p>
+<h4 data-i18n="g11.h3">Geometry Trigger</h4>
+<p data-i18n="g11.p3">Crash causes from track shape — curvature or elevation changes too fast for the car to recover its attitude.</p>
 <table class="guide-table">
 <thead>
-<tr><th data-i18n="g10.t.type2">軌道類型</th><th data-i18n="g10.t.char">馬達特性</th><th data-i18n="g10.t.rec">推薦馬達(標準系列)</th><th data-i18n="g10.t.gear">齒比</th><th data-i18n="g10.t.wheel">輪徑</th></tr>
+<tr><th data-i18n="g11.t.concept2">Standardized concept</th><th data-i18n="g11.t.slang2">Racer slang</th><th data-i18n="g11.t.fix2">Recommended fix</th></tr>
 </thead>
 <tbody>
-<tr><td data-i18n="g10.m1.type">高速軌</td><td data-i18n="g10.m1.char">高轉速、最高速優先</td><td>Sprint-Dash, Rev-Tuned 2</td><td>3.5:1 / 3.7:1</td><td data-i18n="g10.m1.wheel">大徑輪</td></tr>
-<tr><td data-i18n="g10.m2.type">技術軌</td><td data-i18n="g10.m2.char">速度扭力平衡、出彎加速</td><td>Atomic-Tuned 2, Hyper-Dash 3</td><td>4:1 / 4.2:1</td><td data-i18n="g10.m2.wheel">中徑輪</td></tr>
-<tr><td data-i18n="g10.m3.type">立體軌</td><td data-i18n="g10.m3.char">高扭力、著地再加速</td><td>Torque-Tuned 2, Power-Dash</td><td>4.5:1 / 5:1</td><td data-i18n="g10.m3.wheel">小徑輪</td></tr>
+<tr><td data-i18n="g11.ge1.c">Curvature changes too fast (straight → sharp turn)</td><td data-i18n="g11.ge1.s">sharp transition</td><td data-i18n="g11.ge1.f">Brake earlier / outer guide / add brakes</td></tr>
+<tr><td data-i18n="g11.ge2.c">Side force on landing (jump into corner)</td><td data-i18n="g11.ge2.s">jump into corner</td><td data-i18n="g11.ge2.f">Landing brake / lower CG / change wheel dia.</td></tr>
+<tr><td data-i18n="g11.ge3.c">Attitude not recovered (continuous undulation)</td><td data-i18n="g11.ge3.s">undulating section</td><td data-i18n="g11.ge3.f">Raise rigidity / slow down / steady braking</td></tr>
+<tr><td data-i18n="g11.ge4.c">Forced steering change (lane changer / fork)</td><td data-i18n="g11.ge4.s">lane changer</td><td data-i18n="g11.ge4.f">Stronger guide rollers / slow down / add stability</td></tr>
 </tbody>
 </table>
-<div class="guide-tip">
-<p data-i18n="g10.tip2"><strong>PRO 車架(雙軸)</strong>對應:高速軌 Mach-Dash PRO、技術軌 Hyper-Dash PRO / Atomic-Tuned 2 PRO、立體軌 Torque-Tuned 2 PRO。<strong>立體軌的反直覺</strong>:跳台密集時「太快反而是最大的敵人」—— 過快會跳過頭、著地失控,此時寧可選扭力型 + 強力煞車,也不要盲目堆轉速。</p>
-</div>
-<p data-i18n="g10.p7"><strong>核心原理</strong>:轉速與扭力天生互斥(15 款田宮馬達 RPM 1.2 萬–2.8 萬 對扭力 1.0–2.0 mN·m 呈反比)。選型就是在「軌道需要極速還是加速」之間取捨。</p>
-<h4 data-i18n="g10.h5">實例:2025 田宮 Japan Cup「Wakening Venom Circuit 2025」</h4>
-<p data-i18n="g10.p8">以 2025 年田宮官方賽道實際示範比例法。該賽道(巳年蛇形主題,全長約 212m)主要區段:</p>
+<h4 data-i18n="g11.h4">Stability Trigger</h4>
+<p data-i18n="g11.p4">Crash causes from the car itself — physical configuration that amplifies instability under disturbance.</p>
 <table class="guide-table">
 <thead>
-<tr><th data-i18n="g10.t.no">#</th><th data-i18n="g10.t.sec">區段名</th><th data-i18n="g10.t.cls">類型</th></tr>
+<tr><th data-i18n="g11.t.concept3">Standardized concept</th><th data-i18n="g11.t.slang3">Racer slang</th><th data-i18n="g11.t.fix3">Recommended fix</th></tr>
 </thead>
 <tbody>
-<tr><td>1</td><td>Snake Raise Stretch<span data-i18n="g10.s1.note">(四連直線)</span></td><td data-i18n="g10.s1.cls">直線 S</td></tr>
-<tr><td>2</td><td>XLARGE Slope<span data-i18n="g10.s2.note">(上坡 + 跳台)</span></td><td data-i18n="g10.s2.cls">特殊 X</td></tr>
-<tr><td>3</td><td>D.D. Wave<span data-i18n="g10.s3.note">(波浪 + 下坡)</span></td><td data-i18n="g10.s3.cls">特殊 X</td></tr>
-<tr><td>4</td><td>Slither Road<span data-i18n="g10.s4.note">(滾落 + 波浪)</span></td><td data-i18n="g10.s4.cls">特殊 X</td></tr>
-<tr><td>5</td><td>Yamaha Revs Changer<span data-i18n="g10.s5.note">(變換道)</span></td><td data-i18n="g10.s5.cls">特殊 X</td></tr>
-<tr><td>6</td><td>Blurn Straight<span data-i18n="g10.s6.note">(直線 + 三連跳)</span></td><td data-i18n="g10.s6.cls">特殊 X</td></tr>
-<tr><td>7</td><td>FDK Variable Togro<span data-i18n="g10.s7.note">(270° 大迴轉)</span></td><td data-i18n="g10.s7.cls">彎道 C</td></tr>
-<tr><td>8</td><td>Advan Climax Snake<span data-i18n="g10.s8.note">(連續平面彎)</span></td><td data-i18n="g10.s8.cls">彎道 C</td></tr>
+<tr><td data-i18n="g11.st1.c">Center of gravity too high</td><td data-i18n="g11.st1.s">high CG</td><td data-i18n="g11.st1.f">Lower CG / rebalance weight / lower ride height</td></tr>
+<tr><td data-i18n="g11.st2.c">Insufficient lateral support (narrow base)</td><td data-i18n="g11.st2.s">narrow base</td><td data-i18n="g11.st2.f">Widen track / outer support</td></tr>
+<tr><td data-i18n="g11.st3.c">Braking curve mismatch</td><td data-i18n="g11.st3.s">braking imbalance</td><td data-i18n="g11.st3.f">Adjust brake hardness / front-rear split</td></tr>
+<tr><td data-i18n="g11.st4.c">Vibration amplification (low rigidity)</td><td data-i18n="g11.st4.s">low rigidity</td><td data-i18n="g11.st4.f">Reinforce chassis / reduce resonance</td></tr>
+<tr><td data-i18n="g11.st5.c">Dynamic asymmetry (uneven weight)</td><td data-i18n="g11.st5.s">imbalance</td><td data-i18n="g11.st5.f">Adjust CG / left-right symmetry</td></tr>
 </tbody>
 </table>
-<p data-i18n="g10.p9"><strong>比例計算</strong>:直線 1/8(12.5%)、彎道 2/8(25%)、<strong>特殊 5/8(62.5%)</strong>。特殊區段 X 大幅主導 → <strong>判定為立體軌</strong>(波浪/坡道/跳台密集)。</p>
-<p data-i18n="g10.p10"><strong>選型建議</strong>:依上表,立體軌優先高扭力 + 著地再加速能力 —— 標準系列可選 <strong>Power-Dash / Hyper-Dash 3</strong>,搭配 4.5:1 偏高扭齒比與小徑輪;煞車系統要為連續跳台與波浪段特別強化。由於後段趨近平面高速,若煞車控制夠成熟,也可選平衡型 Atomic-Tuned 2 在後段搶速度 —— 這正是立體軌「速度 vs 控制」的經典取捨。</p>
-<h4 data-i18n="g10.h6">三步驟完成軌道分析</h4>
+<h4 data-i18n="g11.h5">Risk-Counting Model: Count Simultaneous Triggers</h4>
+<p data-i18n="g11.p5">For <strong>every</strong> key structure on the track (corner / slope / jump / lane changer), count how many triggers it hits at once:</p>
+<table class="guide-table">
+<thead>
+<tr><th data-i18n="g11.t.cnt">Triggers at once</th><th data-i18n="g11.t.state">State</th><th data-i18n="g11.t.result">Outcome</th><th data-i18n="g11.t.strat">Strategy</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>0–1</strong></td><td data-i18n="g11.r1.state">Safe zone</td><td data-i18n="g11.r1.result">Passes stably</td><td data-i18n="g11.r1.strat">Can run aggressive setup</td></tr>
+<tr><td><strong>2</strong></td><td data-i18n="g11.r2.state">Risk zone</td><td data-i18n="g11.r2.result">Unstable</td><td data-i18n="g11.r2.strat">Setup needs adjustment</td></tr>
+<tr><td><strong>3</strong></td><td data-i18n="g11.r3.state">Danger zone</td><td data-i18n="g11.r3.result">High crash probability</td><td data-i18n="g11.r3.strat">Must run conservative</td></tr>
+</tbody>
+</table>
+<h4 data-i18n="g11.h6">Common Guaranteed-Crash Combos (Case Studies)</h4>
+<p data-i18n="g11.p6">Typical scenarios where three triggers stack:</p>
+<table class="guide-table">
+<thead>
+<tr><th data-i18n="g11.t.combo">Combo</th><th data-i18n="g11.t.scene">Scene</th><th data-i18n="g11.t.res2">Outcome</th><th data-i18n="g11.t.fix4">Recommended fix</th></tr>
+</thead>
+<tbody>
+<tr><td data-i18n="g11.k1.combo">High speed + sharp turn + high CG</td><td data-i18n="g11.k1.scene">Straight into corner</td><td data-i18n="g11.k1.res">Almost certain crash</td><td data-i18n="g11.k1.fix">Slow down + lower CG + add brakes</td></tr>
+<tr><td data-i18n="g11.k2.combo">Downhill + jump + weak brakes</td><td data-i18n="g11.k2.scene">Jump off slope</td><td data-i18n="g11.k2.res">Loss of control in air</td><td data-i18n="g11.k2.fix">Stronger brakes + lower speed</td></tr>
+<tr><td data-i18n="g11.k3.combo">Waves + high speed + low rigidity</td><td data-i18n="g11.k3.scene">Continuous section</td><td data-i18n="g11.k3.res">Cumulative bounce-out</td><td data-i18n="g11.k3.fix">Raise rigidity + slow down</td></tr>
+<tr><td data-i18n="g11.k4.combo">Jump + turn + light car</td><td data-i18n="g11.k4.scene">Jump into corner</td><td data-i18n="g11.k4.res">Roll-over on landing</td><td data-i18n="g11.k4.fix">Add weight + stabilize landing</td></tr>
+</tbody>
+</table>
+<h4 data-i18n="g11.h7">Three-Step Workflow</h4>
 <ul>
-<li data-i18n="g10.l1"><strong>數區段</strong> —— 拿賽道圖或現場走一圈,每節標 S / C / X,連續同類合併。</li>
-<li data-i18n="g10.l2"><strong>算比例</strong> —— 算 S% / C% / X%,套用上方門檻判定軌道類型。</li>
-<li data-i18n="g10.l3"><strong>對選型</strong> —— 用對照表選馬達 + 齒比 + 輪徑,再依習慣微調。</li>
+<li data-i18n="g11.l1"><strong>Scan the track</strong> — mark four key structures: jumps, sharp turns, waves, lane changers.</li>
+<li data-i18n="g11.l2"><strong>Read triggers</strong> — for each structure, check the three triggers: Speed / Geometry / Stability.</li>
+<li data-i18n="g11.l3"><strong>Count risk</strong> — 0–1 aggressive setup, 2 balanced setup, 3 conservative setup.</li>
 </ul>
 <div class="guide-tip">
-<p data-i18n="g10.tip3">選對馬達「類型」只是第一步 —— 同型號兩顆馬達的實際轉速與扭力,可能因個體差異與磨合狀態差 10% 以上。為每顆馬達建立可量化的健康指紋(實測轉速、電流、軸承衰減 τ),才能在同類馬達中挑出狀態最佳的下場。延伸:<a href="/guides/motor-analysis-methodology/">馬達分析的三支柱方法論</a>、<a href="/guides/tamiya-motor-specs/">田宮主流馬達特性與磨合策略對照</a>。</p>
+<p data-i18n="g11.tip">Risk-counting helps you decide fast on-site, but "how much to slow down, how hard to brake" still needs data — the same motor model can differ over 10% in actual output, and brake/ballast effects vary car to car. Log the RPM, current and attitude data from each practice run to turn "conservative / aggressive" from a feeling into a repeatable setup. Further reading: <a href="/en/guides/track-analysis-motor-selection/">Mini 4WD track analysis &amp; motor selection</a>, <a href="/en/guides/motor-analysis-methodology/">the three-pillar methodology for motor analysis</a>.</p>
 </div>
 <div class="guide-warning">
-<p data-i18n="g10.warn"><strong>影響比賽結果的關鍵因素眾多</strong> —— 除了馬達與軌道類型,還包括車架剛性、滾輪配置、煞車設定、電池狀態、輪胎抓地、過彎路線、甚至當天溫濕度與賽道接縫狀況。本文的「區段比例法」與賽道分析僅提供快速縮小馬達候選範圍的思考框架,<strong>範例分析僅供參考之用</strong>,實際參賽請以練習圈實測數據與個人經驗為準。</p>
+<p data-i18n="g11.warn">The worked example is for reference only; for actual competition, rely on practice-run data and personal experience. Many factors affect crashes — this three-trigger model provides a framework to quickly assess risk, not a formula that guarantees no crashes.</p>
 </div>
-</article><div class="guide-pagination"><div class="left"><a href="/benchmarks/tamiya-motor-full-lineup/"><span class="label">← 上一篇</span><span>全 15 款馬達規格</span></a></div><div class="center"><a href="https://motorlab-tw.github.io/#guides"><span class="label">︿</span><span>回教學首頁</span></a></div><div class="right"><a href="/guides/crash-risk-trigger-model/"><span class="label">下一篇 →</span><span>飛車風險判定模型</span></a></div></div></div></main><footer>
+</article><div class="guide-pagination"><div class="left"><a href="/en/guides/track-analysis-motor-selection/"><span class="label">← Previous</span><span>Track Analysis &amp; Motor Selection</span></a></div><div class="center"><a href="https://motorlab-tw.github.io/en/#guides"><span class="label">︿</span><span>Back to guides</span></a></div><div class="right"><span class="label">Next →</span><span class="disabled">—</span></div></div></div></main><footer>
 <div class="container">
-<div class="footer-trademark" data-i18n="footer.trademark">"Mini 4WD"<sup>®</sup> 與 "ミニ四駆"<sup>®</sup> 為株式会社タミヤ(TAMIYA, INC.)的註冊商標(日本商標登錄號 第 2168392 號)。MotorLab 為獨立工作室,與株式会社タミヤ無任何關聯,亦未受其授權、贊助或背書。本網站提及之相關名稱僅用於指涉產品適用範圍,所有商標權益歸原權利人所有。</div>
+<div class="footer-trademark" data-i18n="footer.trademark">"Mini 4WD"<sup>®</sup> and "ミニ四駆"<sup>®</sup> are registered trademarks of TAMIYA, INC. (Japan Trademark Registration No. 2168392). MotorLab is an independent studio and has no affiliation with, authorization from, sponsorship by, or endorsement from TAMIYA, INC. References to these names on this site are made solely to indicate product compatibility. All trademark rights belong to their respective owners.</div>
 <div class="footer-inner">
 <div>
 <strong>MotorLab.tw</strong> · <span data-i18n="footer.tagline">Mini 4WD Performance Lab</span>
 </div>
 <div class="mono">
-        © 2026 MotorLab · <span data-i18n="footer.firmware">韌體</span> v3.1.0
+        © 2026 MotorLab · <span data-i18n="footer.firmware">Firmware</span> v3.1.0
       </div>
 </div>
 </div>

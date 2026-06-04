@@ -503,6 +503,35 @@ GUIDES = [
             },
         },
     },
+    # ---------- g11:飛車風險判定模型(methodology hub)----------
+    {
+        "slug": "crash-risk-trigger-model",
+        "key": "g11",
+        "type": "guides",
+        "i18n": {
+            "zh": {
+                "title": "四驅車為什麼會飛車?Speed/Geometry/Stability 三觸發模型 | MotorLab",
+                "description": "四驅車比賽飛車(出軌)不是運氣,而是速度、賽道幾何、車體穩定性三種觸發疊加超過臨界的結果。本文提供 Speed/Geometry/Stability 三觸發判定模型、現場風險計數法、常見必飛組合與對應改裝對策。",
+                "keywords": "四驅車飛車, Mini 4WD 改裝, 賽道分析, 四驅車設定, 飛車原因, 田宮日本杯, 煞車調整, 重心調整, 齒比設定, 賽道判讀, 出軌, 觸發模型",
+                "breadcrumb": "飛車風險判定模型",
+                "h1_for_ld": "四驅車為什麼會飛車?Speed / Geometry / Stability 三觸發判定模型",
+            },
+            "en": {
+                "title": "Why Mini 4WD Cars Crash: The 3-Trigger Risk Model | MotorLab",
+                "description": "Mini 4WD crashes (course-outs) are not random — they happen when speed, track geometry and vehicle stability triggers stack past a critical threshold. This article gives a Speed/Geometry/Stability trigger model, an on-site risk-counting method, common crash combinations and matching setup fixes.",
+                "keywords": "Mini 4WD setup, Mini 4WD crash, course out, track analysis, Tamiya Mini 4WD, braking setup, gear ratio, center of gravity, stability tuning, racing setup strategy, cornering speed control, trigger model",
+                "breadcrumb": "Crash Risk Trigger Model",
+                "h1_for_ld": "Why Mini 4WD Cars Crash: The Speed / Geometry / Stability Trigger Model",
+            },
+            "ja": {
+                "title": "ミニ四駆がコースアウトする原因?3-Trigger 判定モデル | MotorLab",
+                "description": "ミニ四駆のコースアウトは偶然ではなく、スピード・コース形状・車体安定性の 3 要因が重なり臨界を超えた結果。本記事は Speed/Geometry/Stability の 3-Trigger 判定モデル、レース現場でのリスク計数法、よくあるコースアウトパターンと対応セッティングを解説します。",
+                "keywords": "ミニ四駆 コースアウト 原因, セッティング, ジャパンカップ, ブレーキ調整, 重心, ギア比, 安定性, コーナー対策, 速度制御, トリガーモデル, ミニ四駆 改造",
+                "breadcrumb": "コースアウト判定モデル",
+                "h1_for_ld": "ミニ四駆がコースアウトする原因?Speed / Geometry / Stability 3-Trigger モデル",
+            },
+        },
+    },
 ]
 
 # UI 字串(教學頁面通用元件:nav / 麵包屑 / 分頁)
@@ -637,7 +666,7 @@ HUBS = [
     },
     {
         "slug": "methodology",
-        "include": ["g5", "g6", "g7", "g8", "g10"],
+        "include": ["g5", "g6", "g7", "g8", "g10", "g11"],
         "i18n": {
             "zh": {
                 "title": "方法論 — Mini 4WD® 馬達分析與比賽策略 | MotorLab",
