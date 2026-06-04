@@ -474,6 +474,35 @@ GUIDES = [
             },
         },
     },
+    # ---------- g10:軌道分析與馬達選型(methodology hub)----------
+    {
+        "slug": "track-analysis-motor-selection",
+        "key": "g10",
+        "type": "guides",
+        "i18n": {
+            "zh": {
+                "title": "四驅車軌道分析與馬達選型:高速軌/技術軌/立體軌 | MotorLab",
+                "description": "用可量化的「軌道區段比例法」分析任何一條 Mini 4WD® 賽道:拆成直線、彎道、特殊三種區段判斷高速軌/技術軌/立體軌,對應馬達、齒比與輪徑。附 2025 田宮 Japan Cup 官方賽道實例分析。",
+                "keywords": "四驅車軌道分析, 馬達選型, 高速軌, 技術軌, 立體軌, 軌道類型, 齒比選擇, 田宮賽道, Japan Cup 2025, Mini 4WD 賽道攻略, 馬達轉速扭力, 賽道區段比例",
+                "breadcrumb": "軌道分析與馬達選型",
+                "h1_for_ld": "四驅車軌道分析與馬達選型:用區段比例判斷高速軌/技術軌/立體軌",
+            },
+            "en": {
+                "title": "Mini 4WD Track Analysis & Motor Selection by Section Ratio | MotorLab",
+                "description": "A quantifiable section-ratio method to analyze any Mini 4WD® track: break it into straights, curves and special sections to classify it as high-speed, technical or 3D, then match motor, gear ratio and wheel diameter. Includes a worked analysis of the official 2025 Tamiya Japan Cup circuit.",
+                "keywords": "Mini 4WD track analysis, motor selection, high-speed course, technical course, 3D course, gear ratio selection, Tamiya circuit, Japan Cup 2025, Mini 4WD course strategy, motor RPM torque, track section ratio",
+                "breadcrumb": "Track Analysis & Motor Selection",
+                "h1_for_ld": "Mini 4WD Track Analysis & Motor Selection by Section Ratio",
+            },
+            "ja": {
+                "title": "Mini 4WD コース分析とモーター選び:高速/テクニカル/立体 | MotorLab",
+                "description": "定量化できる「コース区間比率法」であらゆる Mini 4WD® コースを分析:ストレート・カーブ・特殊区間に分解して高速コース/テクニカルコース/立体コースを判定し、モーター・ギア比・タイヤ径を対応づけ。2025 タミヤ ジャパンカップ公式コースの実例分析付き。",
+                "keywords": "ミニ四駆 コース分析, モーター 選び方, 高速コース, テクニカルコース, 立体コース, ギア比 選び方, タミヤ コース, ジャパンカップ 2025, ミニ四駆 コース攻略, モーター 回転数 トルク, コース 区間比率",
+                "breadcrumb": "コース分析とモーター選び",
+                "h1_for_ld": "Mini 4WD コース分析とモーター選び:区間比率で高速/テクニカル/立体を判定",
+            },
+        },
+    },
 ]
 
 # UI 字串(教學頁面通用元件:nav / 麵包屑 / 分頁)
@@ -608,7 +637,7 @@ HUBS = [
     },
     {
         "slug": "methodology",
-        "include": ["g5", "g6", "g7", "g8"],
+        "include": ["g5", "g6", "g7", "g8", "g10"],
         "i18n": {
             "zh": {
                 "title": "方法論 — Mini 4WD® 馬達分析與比賽策略 | MotorLab",
