@@ -516,7 +516,7 @@ UI_STRINGS = {
         "next": "下一篇 →",
         "home_label": "回教學首頁",
         "read_more": "閱讀完整文章 →",
-        "byline": "作者:MotorLab Team",
+        "byline": "編輯者:MotorLab Team",
         "hub_count": "{n} 篇文章 →",
         "bc_section": {
             "guides": "教學",
@@ -535,7 +535,7 @@ UI_STRINGS = {
         "next": "Next →",
         "home_label": "Back to guides",
         "read_more": "Read full article →",
-        "byline": "Written by MotorLab Team",
+        "byline": "Edited by MotorLab Team",
         "hub_count": "{n} articles →",
         "bc_section": {
             "guides": "Guides",
@@ -554,7 +554,7 @@ UI_STRINGS = {
         "next": "次の記事 →",
         "home_label": "ガイド一覧へ",
         "read_more": "全文を読む →",
-        "byline": "著者:MotorLab Team",
+        "byline": "編集者:MotorLab Team",
         "hub_count": "{n} 件の記事 →",
         "bc_section": {
             "guides": "ガイド",
