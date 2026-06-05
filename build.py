@@ -242,7 +242,7 @@ GUIDES = [
             },
             "en": {
                 "title": "Mini 4WD Motor Break-in Guide: Principles & Practice | MotorLab",
-                "description": "Complete Mini 4WD motor break-in guide — the physics of brush-commutator seating, four critical control variables, 10-stage standard procedure, and completion criteria. Why every new Tamiya motor needs break-in and the pitfalls of amateur water-soak methods.",
+                "description": "Complete Mini 4WD motor break-in guide: the physics of brush seating, 4 control variables, the 10-stage procedure, and how to tell when break-in is done.",
                 "keywords": "motor break-in, Mini 4WD motor break-in, Tamiya motor break-in, motor running-in, motor bedding, 10-stage break-in, motor break-in guide, Hyper Dash break-in, Plasma Dash break-in, carbon brush seating, MotorLab",
                 "breadcrumb": "Motor Break-in Guide",
                 "h1_for_ld": "Mini 4WD Motor Break-in Complete Guide: Principles & Practice",
@@ -269,7 +269,7 @@ GUIDES = [
             },
             "en": {
                 "title": "5 Mini 4WD Motor Break-in Mistakes Amateurs Make | MotorLab",
-                "description": "The 5 most common Mini 4WD motor break-in mistakes: random dry-battery runs, excessive water-soak, one-direction-only running, no measurement, no records. Each mistake's consequence and the correct procedure, plus how to build a motor health fingerprint.",
+                "description": "The 5 most common Mini 4WD motor break-in mistakes — dry-battery runs, over water-soak, one-direction running, no measurement, no records — and the fixes.",
                 "keywords": "motor break-in mistakes, motor break-in failure, dry battery break-in, water-soak motor mistakes, motor break-in direction, motor burnout cause, magnet demagnetization, motor health fingerprint, break-in CV",
                 "breadcrumb": "5 Common Break-in Mistakes",
                 "h1_for_ld": "Why Amateur Motor Break-in Fails: 5 Common Mistakes",
@@ -296,7 +296,7 @@ GUIDES = [
             },
             "en": {
                 "title": "Tamiya Mini 4WD Motor Specs & Break-in Strategy Reference | MotorLab",
-                "description": "Official specs and recommended break-in strategy for 8 mainstream Tamiya Mini 4WD motors: Hyper Dash, Plasma Dash, Rev-Tuned, Torque-Tuned, Atomic-Tuned, Power Dash, Sprint Dash, Light Dash. Copper-brush vs carbon-brush break-in differences and Tamiya competition rules.",
+                "description": "Official specs and break-in strategy for 8 mainstream Tamiya Mini 4WD motors (Hyper Dash, Plasma Dash, Rev-Tuned and more), plus copper vs carbon brushes.",
                 "keywords": "Tamiya motor specs, Tamiya Mini 4WD motors, Hyper Dash 2, Plasma Dash, Rev-Tuned, Torque-Tuned, Atomic-Tuned, Power Dash, Sprint Dash, Light Dash, copper vs carbon brush, Tamiya motor break-in, Tamiya competition rules",
                 "breadcrumb": "Tamiya Motor Reference",
                 "h1_for_ld": "Tamiya Mini 4WD Motor Specs & Break-in Strategy Reference",
@@ -323,7 +323,7 @@ GUIDES = [
             },
             "en": {
                 "title": "Motor Wash vs Break-in: What's the Difference? | MotorLab",
-                "description": "'Motor wash' and 'motor break-in' are two completely different procedures often confused. Clarifies the timing, method, and purpose of each, when to wash, the standard wash procedure, and lifecycle maintenance recommendations for a Hyper Dash 2 motor.",
+                "description": "Motor wash vs motor break-in: two different procedures often confused. The timing, method and purpose of each, when to wash, and a Mini 4WD motor care cycle.",
                 "keywords": "motor wash, motor wash vs break-in, Mini 4WD motor wash, motor maintenance cycle, motor lubrication, naphtha wash, WURTH motor lube, Hyper Dash maintenance, motor retirement criteria",
                 "breadcrumb": "Motor Wash vs Break-in",
                 "h1_for_ld": "Motor Wash vs Motor Break-in: What's the Difference? When to Do Each",
@@ -350,7 +350,7 @@ GUIDES = [
             },
             "en": {
                 "title": "Why Motor Break-in Decides Mini 4WD Race Outcomes | MotorLab",
-                "description": "From a racing perspective: why amateur break-in methods fail at sanctioned events, real-season scenarios at JCO and similar competitions, the competitive value of health fingerprints and pair matching. Moving motor prep from \"feel\" to \"data\".",
+                "description": "From a racing angle: why amateur break-in fails at sanctioned Mini 4WD events, and the competitive value of health fingerprints and motor pair matching.",
                 "keywords": "Mini 4WD race motor break-in, competition motor preparation, Japan Cup motor selection, motor pair matching, motor health fingerprint, MotorLab",
                 "breadcrumb": "Why Break-in Matters in Racing",
                 "h1_for_ld": "Why Break-in Decides Mini 4WD Race Outcomes: The Competitive Edge Most Racers Miss",
@@ -377,7 +377,7 @@ GUIDES = [
             },
             "en": {
                 "title": "Advanced Mini 4WD Racing: 5 Prep Details Winners Quietly Do | MotorLab",
-                "description": "Five preparation techniques actually used by competitive Mini 4WD racers but rarely written about: motor numbering and logbooks, battery-motor pairing, track-type motor selection, pre-race conditioning, between-heat battery rotation. Treating racing as systems engineering.",
+                "description": "5 advanced Mini 4WD race-prep details winners rarely write down — beyond the motor: bearings, rollers, braking, weight and pre-race checks that decide podiums.",
                 "keywords": "Mini 4WD advanced racing techniques, motor battery pairing, track motor selection, pre-race conditioning, battery rotation, MotorLab",
                 "breadcrumb": "Advanced Racing Prep",
                 "h1_for_ld": "Advanced Mini 4WD Racing: 5 Prep Details Winners Quietly Do (But Don't Write About)",
@@ -404,7 +404,7 @@ GUIDES = [
             },
             "en": {
                 "title": "From Feel to Data: A Methodology for Motor Analysis | MotorLab",
-                "description": "A three-step methodology that turns motor analysis from 'feel' into systems engineering: measurement, comparison, health assessment. Covers the conceptual framework behind MotorLab's analysis system, the 5 core measurement metrics, 3 comparison types, and 4 health dimensions with Health Score logic.",
+                "description": "From feel to data: a three-pillar methodology for Mini 4WD motor analysis — baseline, repeatable testing, and historical comparison to judge condition.",
                 "keywords": "motor analysis methodology, motor measurement, motor comparison, motor health assessment, Health Score, MotorLab",
                 "breadcrumb": "Three-Pillar Methodology",
                 "h1_for_ld": "From Feel to Data: A Three-Pillar Methodology for Motor Analysis",
@@ -431,7 +431,7 @@ GUIDES = [
             },
             "en": {
                 "title": "8 Signs Your Mini 4WD Motor Is Dying: Wash vs Retire | MotorLab",
-                "description": "Eight motor degradation signs (performance, sound/feel, external) and a 4-tier RPM-drop threshold (< 5% / 5-10% / 10-20% / > 20%) for retirement judgment. Build a baseline and quantify when to wash, retire, or keep using — instead of discovering failure on race day.",
+                "description": "8 signs your Mini 4WD motor is dying, and when to wash vs retire — performance/sound/visual cues plus RPM-drop thresholds to decide before a race.",
                 "keywords": "Mini 4WD motor degradation signs, motor retirement, motor lifespan, RPM drop motor, motor failure diagnosis, MotorLab",
                 "breadcrumb": "Motor Degradation & Retirement",
                 "h1_for_ld": "8 Signs Your Mini 4WD Motor Is Dying — When to Wash vs Retire",
@@ -460,7 +460,7 @@ GUIDES = [
             },
             "en": {
                 "title": "Tamiya Mini 4WD® Motor Full Lineup: All 15 Models | MotorLab",
-                "description": "Official spec comparison for all 15 Tamiya Mini 4WD® motors — 9 standard single-shaft motors plus 6 Mini 4WD PRO double-shaft motors. Covers RPM, torque (mN·m), current (A), Speed/Torque ratings, official race compliance and matching MotorLab break-in strategy.",
+                "description": "Spec comparison for all 15 Tamiya Mini 4WD motors — 9 standard + 6 PRO: RPM, torque, current, Speed/Torque ratings, race compliance and break-in strategy.",
                 "keywords": "Tamiya Mini 4WD motors, Tamiya 15 motors, Mini 4WD PRO motors, double-shaft motor, single-shaft motor, Tamiya motor specifications, Hyper-Dash PRO, Mach-Dash PRO, Plasma-Dash, Ultra-Dash, Power-Dash, Sprint-Dash, Tamiya race compliance, Tamiya motor comparison table",
                 "breadcrumb": "Full Lineup (15 Motors)",
                 "h1_for_ld": "Tamiya Mini 4WD® Motor Full Lineup: All 15 Models Spec Comparison",
@@ -489,7 +489,7 @@ GUIDES = [
             },
             "en": {
                 "title": "Mini 4WD Track Analysis & Motor Selection by Section Ratio | MotorLab",
-                "description": "A quantifiable section-ratio method to analyze any Mini 4WD® track: break it into straights, curves and special sections to classify it as high-speed, technical or 3D, then match motor, gear ratio and wheel diameter. Includes a worked analysis of the official 2025 Tamiya Japan Cup circuit.",
+                "description": "A section-ratio method to classify any Mini 4WD track as high-speed, technical or 3D, then match motor, gear ratio and wheel. With a Japan Cup example.",
                 "keywords": "Mini 4WD track analysis, motor selection, high-speed course, technical course, 3D course, gear ratio selection, Tamiya circuit, Japan Cup 2025, Mini 4WD course strategy, motor RPM torque, track section ratio",
                 "breadcrumb": "Track Analysis & Motor Selection",
                 "h1_for_ld": "Mini 4WD Track Analysis & Motor Selection by Section Ratio",
@@ -518,7 +518,7 @@ GUIDES = [
             },
             "en": {
                 "title": "Why Mini 4WD Cars Crash: The 3-Trigger Risk Model | MotorLab",
-                "description": "Mini 4WD crashes (course-outs) are not random — they happen when speed, track geometry and vehicle stability triggers stack past a critical threshold. This article gives a Speed/Geometry/Stability trigger model, an on-site risk-counting method, common crash combinations and matching setup fixes.",
+                "description": "Mini 4WD crashes aren't random: they happen when Speed, Geometry and Stability triggers stack past a threshold. A trigger model with on-site risk counting.",
                 "keywords": "Mini 4WD setup, Mini 4WD crash, course out, track analysis, Tamiya Mini 4WD, braking setup, gear ratio, center of gravity, stability tuning, racing setup strategy, cornering speed control, trigger model",
                 "breadcrumb": "Crash Risk Trigger Model",
                 "h1_for_ld": "Why Mini 4WD Cars Crash: The Speed / Geometry / Stability Trigger Model",
@@ -623,7 +623,7 @@ HUBS = [
             },
             "en": {
                 "title": "Mini 4WD® Motor Tuning Guides | MotorLab",
-                "description": "Systematic guides for Mini 4WD® motor break-in — the physics of brush seating, 4 critical control variables, 10-stage standard procedure, 5 common mistakes, and the wash-vs-break-in concept.",
+                "description": "Systematic Mini 4WD motor break-in guides: the physics, the 10-stage procedure, common mistakes and wash-vs-break-in. For new and returning racers.",
                 "h1": "Guides",
                 "lead": "How-to articles covering the physics, practical steps, common mistakes, and maintenance concepts behind Mini 4WD motor tuning. For new and returning racers.",
                 "keywords": "Mini 4WD motor tuning guides, motor break-in tutorial, how to break in Mini 4WD motors, Tamiya motor guides",
@@ -650,7 +650,7 @@ HUBS = [
             },
             "en": {
                 "title": "Tamiya Mini 4WD® Motor Specs & Benchmarks | MotorLab",
-                "description": "Quick-reference tables and benchmarks for Tamiya Mini 4WD® motors. 8 mainstream motors with break-in strategy, and the full 15-model PRO + standard lineup with RPM, torque, current and race compliance.",
+                "description": "Quick-reference specs and benchmarks for Tamiya Mini 4WD motors: 8 mainstream models plus the full 15-motor PRO + standard lineup with RPM, torque and current.",
                 "h1": "Benchmarks",
                 "lead": "Official specs and benchmarks for Mini 4WD motors. Pick the right motor for your chassis and course profile.",
                 "keywords": "Tamiya Mini 4WD motor specs, Mini 4WD PRO motors, motor benchmarks, Hyper-Dash PRO, Plasma-Dash, Sprint-Dash, Tamiya motor comparison",
@@ -677,7 +677,7 @@ HUBS = [
             },
             "en": {
                 "title": "Mini 4WD® Motor Analysis Methodology | MotorLab",
-                "description": "From feel to data — advanced methodology: why break-in decides race outcomes, 5 prep techniques winners use, three-pillar analysis framework, and degradation diagnostics.",
+                "description": "Advanced Mini 4WD analysis methodology and race strategy: prep techniques, a three-pillar framework, degradation signs and crash prevention.",
                 "h1": "Methodology",
                 "lead": "Advanced analysis methodology and competitive strategy — moving motor tuning from feel-based to data-driven, from individual tips to systematic frameworks.",
                 "keywords": "Mini 4WD motor analysis methodology, motor tuning methodology, racing strategy, motor health fingerprint, RPM analysis",
@@ -764,7 +764,7 @@ SYSTEM = {
         },
         "en": {
             "title": "Mini 4WD Motor Break-in Machine: Hardware Design | MotorLab",
-            "description": "Inside the exterior design of the MotorLab Mini 4WD® motor break-in machine — a low-key matte-black unibody, symmetric guard pillars, embedded wordmark, front clamp module and side active cooling. A compact 160 × 81 × 90 mm desktop instrument.",
+            "description": "The exterior design of the MotorLab Mini 4WD® break-in machine: a low-key matte-black unibody with front clamp module and active cooling, 160x81x90 mm.",
             "keywords": "MotorLab product design, motor break-in machine design, Mini 4WD motor tester, desktop motor test rig, matte black enclosure",
             "breadcrumb": "Product Design",
             "h1_for_ld": "MotorLab Motor Break-in Machine — Exterior Design",
@@ -930,7 +930,7 @@ LAB = {
         },
         "en": {
             "title": "Global Motor Break-in Data Library | MotorLab",
-            "description": "Upload your Mini 4WD® motor break-in records or download signature-verified data shared by racers worldwide. Download the original file to re-import into your machine.",
+            "description": "Upload your Mini 4WD® motor break-in records or download signature-verified data shared by racers worldwide — re-import the original file into your machine.",
             "keywords": "motor break-in data, Mini 4WD break-in records, motor tuning data sharing, break-in profile download, Mini 4WD telemetry",
             "breadcrumb": "Data Library",
             "h1_for_ld": "Global Motor Break-in Data Library",
