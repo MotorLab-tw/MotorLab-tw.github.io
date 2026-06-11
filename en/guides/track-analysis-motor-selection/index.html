@@ -789,7 +789,8 @@
     padding-bottom: 18px;
     border-bottom: 1px solid var(--border);
   }
-  .guide-article h4 {
+  .guide-article h4,
+  .guide-article h2 {
     color: var(--accent-cyan);
     font-size: 15.5px;
     margin: 24px 0 10px;
@@ -797,7 +798,8 @@
     align-items: baseline;
     gap: 10px;
   }
-  .guide-article h4::before {
+  .guide-article h4::before,
+  .guide-article h2::before {
     content: '';
     display: inline-block;
     width: 8px;
@@ -1815,10 +1817,10 @@
 <span class="guide-tag" data-i18n="g10.tag">GUIDE · Race Strategy</span>
 <h1 data-i18n="g10.title">Mini 4WD Track Analysis &amp; Motor Selection by Section Ratio</h1><p class="guide-byline">Edited by MotorLab Team</p>
 <p class="guide-lead" data-i18n="g10.lead">The same motor can perform wildly differently on different tracks — a high-speed-course winner may struggle to even finish on a 3D course. This article introduces a quantifiable "track section-ratio method": break any Mini 4WD<sup>®</sup> track into straight, curve and special sections, use the ratios to classify it as high-speed, technical or 3D, then match the right motor, gear ratio and wheel diameter.</p>
-<h4 data-i18n="g10.h1">Why Motor Selection Starts With "Reading the Track"</h4>
+<h2 data-i18n="g10.h1">Why Motor Selection Starts With "Reading the Track"</h2>
 <p data-i18n="g10.p1">The biggest mistake in motor selection is <strong>looking only at motor specs, not at track characteristics</strong>. A 27,000 RPM sprint motor will just keep flying off a 3D course full of sharp turns and jumps; conversely, a high-torque motor gets out-run by high-RPM motors on long straights.</p>
 <p data-i18n="g10.p2">Advanced communities in Japan and the West think in the order "<strong>read the course first, then decide the setting</strong>" (Tamiya's official Setup Guide also says "Study the course"). But most guides stop at <strong>qualitative</strong> descriptions ("this section is the tricky bit") and lack a quantifiable, repeatable classification method. This article fills that gap.</p>
-<h4 data-i18n="g10.h2">The Three Basic Section Types</h4>
+<h2 data-i18n="g10.h2">The Three Basic Section Types</h2>
 <p data-i18n="g10.p3">Any Mini 4WD<sup>®</sup> track, however complex, breaks down into three basic section types:</p>
 <table class="guide-table">
 <thead>
@@ -1833,7 +1835,7 @@
 <div class="guide-tip">
 <p data-i18n="g10.tip1">Count sections in "track panels" (one Tamiya Junior Circuit panel = one unit); merge consecutive same-type sections into one count.</p>
 </div>
-<h4 data-i18n="g10.h3">Classify by Ratio: High-Speed, Technical, 3D</h4>
+<h2 data-i18n="g10.h3">Classify by Ratio: High-Speed, Technical, 3D</h2>
 <p data-i18n="g10.p4">Count each section type's share, then classify using these thresholds (all three names are common terms across JP / EN / TW communities):</p>
 <table class="guide-table">
 <thead>
@@ -1846,7 +1848,7 @@
 </tbody>
 </table>
 <p data-i18n="g10.p5">Most real tracks are mixed; classify by <strong>the section type with the highest share</strong>. If two are close, take the more demanding one (usually 3D &gt; Technical &gt; High-Speed).</p>
-<h4 data-i18n="g10.h4">Motor Selection by Track Type</h4>
+<h2 data-i18n="g10.h4">Motor Selection by Track Type</h2>
 <p data-i18n="g10.p6">Motor specs in the <a href="/en/benchmarks/tamiya-motor-full-lineup/">Tamiya 15-motor full lineup table</a>:</p>
 <table class="guide-table">
 <thead>
@@ -1862,7 +1864,7 @@
 <p data-i18n="g10.tip2"><strong>PRO chassis (double-shaft)</strong> equivalents: High-Speed → Mach-Dash PRO; Technical → Hyper-Dash PRO / Atomic-Tuned 2 PRO; 3D → Torque-Tuned 2 PRO. <strong>The 3D-course counterintuition</strong>: with dense jumps, "being too fast is the greatest enemy" — over-speed means overjumping and loss of control. Better to pick a torque motor + strong brakes than blindly chase RPM.</p>
 </div>
 <p data-i18n="g10.p7"><strong>Core principle</strong>: RPM and torque are inherently opposed (across 15 Tamiya motors, RPM 12k–28k inversely tracks torque 1.0–2.0 mN·m). Selection is the trade-off between whether the track needs top speed or acceleration.</p>
-<h4 data-i18n="g10.h5">Worked Example: 2025 Tamiya Japan Cup "Wakening Venom Circuit 2025"</h4>
+<h2 data-i18n="g10.h5">Worked Example: 2025 Tamiya Japan Cup "Wakening Venom Circuit 2025"</h2>
 <p data-i18n="g10.p8">Let's apply the ratio method to the official 2025 Tamiya circuit (snake-themed for the Year of the Snake, ~212m long). Main sections:</p>
 <table class="guide-table">
 <thead>
@@ -1881,7 +1883,7 @@
 </table>
 <p data-i18n="g10.p9"><strong>Ratio</strong>: straights 1/8 (12.5%), curves 2/8 (25%), <strong>special 5/8 (62.5%)</strong>. Special sections X dominate heavily → <strong>classified as a 3D course</strong> (dense waves/slopes/jumps).</p>
 <p data-i18n="g10.p10"><strong>Selection</strong>: per the table, a 3D course prioritizes high torque + landing re-acceleration — from the standard series pick <strong>Power-Dash / Hyper-Dash 3</strong> with a 4.5:1 torque-biased ratio and small wheels; reinforce the brake system for the consecutive jumps and wave sections. Since the back half flattens toward speed, mature brake control lets you run a balanced Atomic-Tuned 2 to grab speed there — the classic 3D-course "speed vs control" trade-off.</p>
-<h4 data-i18n="g10.h6">Three Steps to Analyze a Track</h4>
+<h2 data-i18n="g10.h6">Three Steps to Analyze a Track</h2>
 <ul>
 <li data-i18n="g10.l1"><strong>Count sections</strong> — from the track map or a walk-around, tag each panel S / C / X, merge consecutive same-type.</li>
 <li data-i18n="g10.l2"><strong>Compute ratios</strong> — calculate S% / C% / X% and apply the thresholds above.</li>

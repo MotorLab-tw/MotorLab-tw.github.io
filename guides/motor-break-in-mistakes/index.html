@@ -789,7 +789,8 @@
     padding-bottom: 18px;
     border-bottom: 1px solid var(--border);
   }
-  .guide-article h4 {
+  .guide-article h4,
+  .guide-article h2 {
     color: var(--accent-cyan);
     font-size: 15.5px;
     margin: 24px 0 10px;
@@ -797,7 +798,8 @@
     align-items: baseline;
     gap: 10px;
   }
-  .guide-article h4::before {
+  .guide-article h4::before,
+  .guide-article h2::before {
     content: '';
     display: inline-block;
     width: 8px;
@@ -1815,7 +1817,7 @@
 <span class="guide-tag" data-i18n="g2.tag">GUIDE · 避免錯誤</span>
 <h1 data-i18n="g2.title">為什麼業餘車手磨合馬達總是失敗?5 個常見錯誤</h1><p class="guide-byline">編輯者:MotorLab Team</p>
 <p class="guide-lead" data-i18n="g2.lead">許多新手回鍋玩四驅車,聽說要磨合馬達就拿乾電池亂跑,結果不是馬達燒掉就是跑不快。本文整理最常見的 5 個磨合錯誤與正確做法。</p>
-<h4 data-i18n="g2.h1">錯誤 1:電壓過高、時間過長</h4>
+<h2 data-i18n="g2.h1">錯誤 1:電壓過高、時間過長</h2>
 <p data-i18n="g2.p1">最常見的錯誤就是<strong>「拿乾電池(1.5V × 2 = 3V)直接讓馬達狂跑半小時」</strong>。看起來合理,實際後果是:</p>
 <ul>
 <li data-i18n="g2.l1">3V 對紅二、黑金剛來說已經接近全速,等於沒磨合就直接操</li>
@@ -1825,7 +1827,7 @@
 <div class="guide-warning">
 <p data-i18n="g2.w1">正確做法:從 1.0V 起步,每階段升 0.15V,單階段不超過 90 秒,每階段間插入 15-30 秒冷卻。</p>
 </div>
-<h4 data-i18n="g2.h2">錯誤 2:用水磨但水量太多、沒擦乾</h4>
+<h2 data-i18n="g2.h2">錯誤 2:用水磨但水量太多、沒擦乾</h2>
 <p data-i18n="g2.p2">水磨原理是利用水的高比熱帶走熱量、同時水也是輕度阻尼。但業餘水磨常見問題:</p>
 <ul>
 <li data-i18n="g2.l4"><strong>水跑進軸承</strong>—培林軸承生鏽,馬達噪音變大</li>
@@ -1835,14 +1837,14 @@
 <div class="guide-tip">
 <p data-i18n="g2.t2">更現代的做法是<strong>「精密電流控制乾磨」</strong>—不接觸液體,純靠電壓電流控制與冷卻時間,徹底避免水損風險。</p>
 </div>
-<h4 data-i18n="g2.h3">錯誤 3:只磨單一方向</h4>
+<h2 data-i18n="g2.h3">錯誤 3:只磨單一方向</h2>
 <p data-i18n="g2.p3">許多人磨合時只接正極跑一個方向,結果碳刷只有一邊磨出弧形,另一邊還是平的。實車使用時雖然只往一個方向轉,但<strong>偏磨會造成兩個問題</strong>:</p>
 <ul>
 <li data-i18n="g2.l7">電流分配不均,單側碳刷負擔過重提早燒斷</li>
 <li data-i18n="g2.l8">後續若做反向短跑(練起步)時,未磨合那側會打火花</li>
 </ul>
 <p data-i18n="g2.p4"><strong>正確做法</strong>:磨合過程中應安排 30% 左右的反向運轉,讓兩側碳刷對稱磨耗。</p>
-<h4 data-i18n="g2.h4">錯誤 4:磨完不測就拿去跑</h4>
+<h2 data-i18n="g2.h4">錯誤 4:磨完不測就拿去跑</h2>
 <p data-i18n="g2.p5">磨合完成後直接裝車比賽,結果發現「咦,沒比較快?」。原因:<strong>沒做基準量測,根本不知道磨好沒</strong>。</p>
 <p data-i18n="g2.p6">建議磨合前後都做標準量測(同電壓、同負載條件):</p>
 <ul>
@@ -1851,7 +1853,7 @@
 <li data-i18n="g2.l11">電流變異係數 CV(穩定度指標)</li>
 </ul>
 <p data-i18n="g2.p7">磨合後三個數值都應該優於磨合前,否則就是磨合沒到位或方法錯誤。</p>
-<h4 data-i18n="g2.h5">錯誤 5:沒有紀錄,憑感覺判斷</h4>
+<h2 data-i18n="g2.h5">錯誤 5:沒有紀錄,憑感覺判斷</h2>
 <p data-i18n="g2.p8">最致命的錯誤—<strong>每顆馬達都用「差不多」的感覺磨合,沒留下任何數據</strong>。結果:</p>
 <ul>
 <li data-i18n="g2.l12">分不清「這顆是磨好了還是退化了」</li>

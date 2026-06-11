@@ -789,7 +789,8 @@
     padding-bottom: 18px;
     border-bottom: 1px solid var(--border);
   }
-  .guide-article h4 {
+  .guide-article h4,
+  .guide-article h2 {
     color: var(--accent-cyan);
     font-size: 15.5px;
     margin: 24px 0 10px;
@@ -797,7 +798,8 @@
     align-items: baseline;
     gap: 10px;
   }
-  .guide-article h4::before {
+  .guide-article h4::before,
+  .guide-article h2::before {
     content: '';
     display: inline-block;
     width: 8px;
@@ -1815,7 +1817,7 @@
 <span class="guide-tag" data-i18n="g7.tag">GUIDE · 方法論</span>
 <h1 data-i18n="g7.title">感覚からデータへ:モーター分析の三本柱方法論</h1><p class="guide-byline">編集者:MotorLab Team</p>
 <p class="guide-lead" data-i18n="g7.lead">多くのレーサーは経験で判断します — 「走らせた感覚がいい」「音がそれっぽい」。問題は、経験は引き継げず、再現できず、検証もできないこと。本記事ではモーター分析を「感覚」からシステム工学へ変える 3 ステップの方法論を紹介します:<strong>測定、比較、健康判定</strong>。これが MotorLab の分析システム全体を支える概念フレームワークです。</p>
-<h4 data-i18n="g7.h1">なぜモーター分析に方法論が必要か</h4>
+<h2 data-i18n="g7.h1">なぜモーター分析に方法論が必要か</h2>
 <p data-i18n="g7.p1">モーターチューニングでよくある問題:</p>
 <ul>
 <li data-i18n="g7.l1">異なる電圧で RPM を測ると結論が矛盾する</li>
@@ -1823,7 +1825,7 @@
 <li data-i18n="g7.l3">レース前にモーターが遅くなったが、何が変わったか説明できない</li>
 </ul>
 <p data-i18n="g7.p2">問題の根本は「やり方が間違っている」ではなく、<strong>共通の分析フレームワークがない</strong>こと。</p>
-<h4 data-i18n="g7.h2">第 1 の柱:測定(Measurement)</h4>
+<h2 data-i18n="g7.h2">第 1 の柱:測定(Measurement)</h2>
 <p data-i18n="g7.p3">測定の目的は「数値を取る」ことではなく、<strong>再現可能なテスト環境を再構築する</strong>こと。</p>
 <p data-i18n="g7.std"><strong>測定基準(固定が必須)</strong>:</p>
 <ul>
@@ -1847,7 +1849,7 @@
 <div class="guide-tip">
 <p data-i18n="g7.q1">測定はデータ収集ではない。<strong>環境再構築</strong>である。</p>
 </div>
-<h4 data-i18n="g7.h3">第 2 の柱:比較(Comparison)</h4>
+<h2 data-i18n="g7.h3">第 2 の柱:比較(Comparison)</h2>
 <p data-i18n="g7.p5">単一の数値には意味がない — 18,500 RPM は「良い」のか「悪い」のか?答えは常に「何に対して」。</p>
 <p data-i18n="g7.p6"><strong>3 つの比較方式</strong>:</p>
 <ul>
@@ -1859,7 +1861,7 @@
 <div class="guide-tip">
 <p data-i18n="g7.q2">比較は大きさの評価ではない。<strong>乖離の計算</strong>である。</p>
 </div>
-<h4 data-i18n="g7.h4">第 3 の柱:健康判定(Health Assessment)</h4>
+<h2 data-i18n="g7.h4">第 3 の柱:健康判定(Health Assessment)</h2>
 <p data-i18n="g7.p8">健康は「速さ」ではなく、「<strong>予測可能な挙動を維持できているか</strong>」。</p>
 <p data-i18n="g7.p9"><strong>4 つの健康次元</strong>:</p>
 <table class="guide-table">
@@ -1889,12 +1891,12 @@
 <div class="guide-tip">
 <p data-i18n="g7.q3">健康は単点値ではない。<strong>軌跡の評価</strong>である。</p>
 </div>
-<h4 data-i18n="g7.h5">三本柱の連動</h4>
+<h2 data-i18n="g7.h5">三本柱の連動</h2>
 <div class="guide-tip">
 <p data-i18n="g7.chain"><strong>測定</strong> → 再現可能な標準環境を確立<br/><strong>比較</strong> → ベースラインからの乖離を計算<br/><strong>健康</strong> → 時間軸上の軌跡状態を評価</p>
 </div>
 <p data-i18n="g7.p12">3 つは完全な鎖を構成する:測定がなければ比較の基盤がなく、比較がなければ健康判定ができず、健康判定がなければ感覚に戻るしかない。</p>
-<h4 data-i18n="g7.h6">核心思想</h4>
+<h2 data-i18n="g7.h6">核心思想</h2>
 <p data-i18n="g7.p13">MotorLab の真の核心は「モーター性能を上げる」ことではなく:</p>
 <div class="guide-tip">
 <p data-i18n="g7.q4">見えない感覚を、測定可能で比較可能なシステム状態に変換すること。</p>

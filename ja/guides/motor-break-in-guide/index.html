@@ -789,7 +789,8 @@
     padding-bottom: 18px;
     border-bottom: 1px solid var(--border);
   }
-  .guide-article h4 {
+  .guide-article h4,
+  .guide-article h2 {
     color: var(--accent-cyan);
     font-size: 15.5px;
     margin: 24px 0 10px;
@@ -797,7 +798,8 @@
     align-items: baseline;
     gap: 10px;
   }
-  .guide-article h4::before {
+  .guide-article h4::before,
+  .guide-article h2::before {
     content: '';
     display: inline-block;
     width: 8px;
@@ -1815,7 +1817,7 @@
 <span class="guide-tag" data-i18n="g1.tag">GUIDE · 完全ガイド</span>
 <h1 data-i18n="g1.title">Mini 4WD モーター慣らし完全ガイド:原理から実践まで</h1><p class="guide-byline">編集者:MotorLab Team</p>
 <p class="guide-lead" data-i18n="g1.lead">ミニ四駆(Mini 4WD)のモーター慣らしは、新品モーターの最大ポテンシャルを引き出すために必須の手順です。本記事ではタミヤ製モーター慣らしの科学的原理、実践ステップ、そしてプロレーサーがこの工程を欠かさない理由を解説します。</p>
-<h4 data-i18n="g1.h1">なぜ新品モーターに慣らしが必須なのか?</h4>
+<h2 data-i18n="g1.h1">なぜ新品モーターに慣らしが必須なのか?</h2>
 <p data-i18n="g1.p1">タミヤ製新品モーター(ハイパーダッシュ 2、プラズマダッシュ、スプリントダッシュ、レブチューン、トルクチューンなど)は出荷時、<strong>カーボンブラシの接触面が平面</strong>です。しかしモーター内部の整流子(コミュテーター)は円柱形のため、平面ブラシは極小の弧線でしか接触できず、実効導電面積は非常に限られています。</p>
 <p data-i18n="g1.p2">この状態で全速運転すると、ブラシ接触不良により以下の状況が発生します:</p>
 <ul>
@@ -1825,10 +1827,10 @@
 <li data-i18n="g1.l4"><strong>整流子の早期摩耗</strong>—慣らしなしの硬接触は整流子を傷める</li>
 </ul>
 <p data-i18n="g1.p3"><strong>慣らしの目的</strong>は、平面ブラシを段階的に整流子の曲面と合う「半円弧の凹み」に削り出し、接触面積を最大化して電流をスムーズに流し、モーターが設計通りの回転数とトルクに到達できるようにすることです。</p>
-<h4 data-i18n="g1.h2">慣らしの物理原理</h4>
+<h2 data-i18n="g1.h2">慣らしの物理原理</h2>
 <p data-i18n="g1.p4">DC カーボンブラシモーターの核心となる数式関係:<code>N = (V − IR) / Kφ</code>(回転数 =(電圧 − 電流×内部抵抗)/ 磁束定数)。新品モーターはブラシ接触抵抗 R が大きく、IR 損失が大きいため回転数 N が上がりません。慣らしのプロセスは実質的に<strong>接触抵抗を下げ、エネルギー変換効率を高める</strong>物理過程です。</p>
 <p data-i18n="g1.p5">アマチュア手法には「水中で低電圧運転する」(俗に水慣らし)、「乾電池で正逆回転させる」などがあります。しかしこれらの問題は:電圧が制御できない、時間が感覚頼り、進捗を定量化できない — 結果の良し悪しは運任せです。</p>
-<h4 data-i18n="g1.h3">プロの慣らしにおける 4 つの重要変数</h4>
+<h2 data-i18n="g1.h3">プロの慣らしにおける 4 つの重要変数</h2>
 <p data-i18n="g1.p6">一回ごとの慣らしの成否は、以下 4 つのパラメータの精密制御にかかっています:</p>
 <table class="guide-table">
 <thead>
@@ -1841,12 +1843,12 @@
 <tr><td data-i18n="g1.t.v4">冷却(s)</td><td data-i18n="g1.t.r4">温度蓄積を回避</td><td data-i18n="g1.t.x4">過熱は磁石減磁を引き起こし、出力が永久低下</td></tr>
 </tbody>
 </table>
-<h4 data-i18n="g1.h4">標準慣らしフロー(10 段階推奨)</h4>
+<h2 data-i18n="g1.h4">標準慣らしフロー(10 段階推奨)</h2>
 <p data-i18n="g1.p7">業界主流の「段階昇圧」慣らし手法では、モーター慣らしを 10 段階に分け、各段階約 30〜90 秒、電圧を 1.0V から 2.4V まで緩やかに上げ、逆回転と冷却時間を挟みます。</p>
 <div class="guide-tip">
 <p data-i18n="g1.tip">MotorLab M1/PRO 内蔵の<strong>10 段階プログラム慣らし</strong>は本フローを自動実行し、各段階で電圧・方向・時間・冷却・安定電流公差を個別に調整できます。さらに<strong>スマート安定電流判定</strong>—電流の連続変動が設定値以下になると自動で次段階へ進み、すべてのモーターを確実に仕上げます。</p>
 </div>
-<h4 data-i18n="g1.h5">慣らし完了の判定基準</h4>
+<h2 data-i18n="g1.h5">慣らし完了の判定基準</h2>
 <p data-i18n="g1.p8">モーター慣らしが完了したかをどう判断するか?以下 4 つの観察ポイントがあります:</p>
 <ul>
 <li data-i18n="g1.l5"><strong>電流安定度</strong>—同一電圧下で電流変動 ≤ ±50mA</li>

@@ -789,7 +789,8 @@
     padding-bottom: 18px;
     border-bottom: 1px solid var(--border);
   }
-  .guide-article h4 {
+  .guide-article h4,
+  .guide-article h2 {
     color: var(--accent-cyan);
     font-size: 15.5px;
     margin: 24px 0 10px;
@@ -797,7 +798,8 @@
     align-items: baseline;
     gap: 10px;
   }
-  .guide-article h4::before {
+  .guide-article h4::before,
+  .guide-article h2::before {
     content: '';
     display: inline-block;
     width: 8px;
@@ -1815,9 +1817,9 @@
 <span class="guide-tag" data-i18n="g9.tag">REFERENCE · 全馬達速查</span>
 <h1 data-i18n="g9.title">田宮 Mini 4WD® 全 15 款馬達規格對照表(含 PRO 系列)</h1><p class="guide-byline">編輯者:MotorLab Team</p>
 <p class="guide-lead" data-i18n="g9.lead">田宮(TAMIYA, INC.)目前推出的 Mini 4WD® 馬達共 15 款,涵蓋 <strong>Mini 4WD 標準系列 9 款(單軸)</strong>與 <strong>Mini 4WD PRO 系列 6 款(雙軸)</strong>。本對照表整理官方公布的 RPM、扭力(mN·m)、電流(A)規格,並標註比賽合規限制與對應 MotorLab 磨合策略,協助你依車架類型與賽道特性挑馬達。</p>
-<h4 data-i18n="g9.h1">Mini 4WD 系列 vs Mini 4WD PRO 系列</h4>
+<h2 data-i18n="g9.h1">Mini 4WD 系列 vs Mini 4WD PRO 系列</h2>
 <p data-i18n="g9.p1"><strong>Mini 4WD PRO</strong> 馬達是<strong>雙軸(double-shaft)</strong>設計,直接驅動前後輪;只能用於 Mini 4WD PRO 車架(MS / MA / VS / FM-A / MA-A 等)。<strong>Mini 4WD 標準系列</strong>是<strong>單軸(single-shaft)</strong>設計,透過傳動軸驅動四輪;用於 Mini 4WD 標準車架(Type 5、SX、TZ、AR 等)。兩系列馬達物理上不可互換。</p>
-<h4 data-i18n="g9.h2">Mini 4WD PRO 系列(雙軸,6 款)</h4>
+<h2 data-i18n="g9.h2">Mini 4WD PRO 系列(雙軸,6 款)</h2>
 <table class="guide-table">
 <thead>
 <tr>
@@ -1840,7 +1842,7 @@
 <tr><td>Mach-Dash PRO</td><td>★★★</td><td>★★</td><td>2.4–3.0V</td><td>20,000–24,500</td><td>1.3–1.8</td><td>2.6–3.5</td><td data-i18n="g9.pro6.note">高轉高性能,進階玩家(建議小徑輪)</td></tr>
 </tbody>
 </table>
-<h4 data-i18n="g9.h3">Mini 4WD 標準系列(單軸,9 款)</h4>
+<h2 data-i18n="g9.h3">Mini 4WD 標準系列(單軸,9 款)</h2>
 <table class="guide-table">
 <thead>
 <tr>
@@ -1866,12 +1868,12 @@
 <tr><td>Plasma-Dash</td><td>★★★★</td><td>★★★</td><td>2.4–3.0V</td><td>25,000–28,000</td><td>1.4–1.9</td><td>4.1–5.2</td><td data-i18n="g9.std9.note">⚠ 最高轉速 + 高扭力,內建散熱端蓋,日本官方比賽<strong>禁用</strong></td></tr>
 </tbody>
 </table>
-<h4 data-i18n="g9.h4">官方比賽合規與適用情境</h4>
+<h2 data-i18n="g9.h4">官方比賽合規與適用情境</h2>
 <p data-i18n="g9.p4">田宮官方比賽(Japan Cup / 田宮公式戰)對馬達使用有兩層限制:<strong>(1)車架配對</strong> — PRO 車架只能用 PRO 馬達,標準車架只能用標準馬達;<strong>(2)型號禁用</strong> — 部分極端高轉馬達在日本官方賽事禁用(見下警告)。海外賽事規則因地而異,請以當地賽事公告為準。</p>
 <div class="guide-warning">
 <p data-i18n="g9.w1"><strong>日本官方比賽禁用</strong>:Ultra-Dash 與 Plasma-Dash 因電流與轉速超出田宮 Japan Cup 規則上限,被田宮認定為「not for use in official Tamiya races in Japan」。可用於極速時間挑戰(Top Speed Record)等非官方場合,但不可登錄於日本官方賽事。台灣等海外賽事規則不同,請查當地主辦單位公告。</p>
 </div>
-<h4 data-i18n="g9.h5">對應 MotorLab 磨合策略</h4>
+<h2 data-i18n="g9.h5">對應 MotorLab 磨合策略</h2>
 <p data-i18n="g9.p5">本表 15 款馬達都可用 MotorLab M1/PRO 的<strong>十階段可程式化磨合</strong>處理,但建議依電流區間調整參數:</p>
 <ul>
 <li data-i18n="g9.s1"><strong>低電流組(&lt; 2.5A)</strong> — Torque-Tuned 2 系列、Atomic-Tuned 2 系列、Light-Dash 系列、Rev-Tuned 2 系列:標準 10 階段、起始 1.0V、最高 2.4V。</li>

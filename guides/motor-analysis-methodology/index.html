@@ -789,7 +789,8 @@
     padding-bottom: 18px;
     border-bottom: 1px solid var(--border);
   }
-  .guide-article h4 {
+  .guide-article h4,
+  .guide-article h2 {
     color: var(--accent-cyan);
     font-size: 15.5px;
     margin: 24px 0 10px;
@@ -797,7 +798,8 @@
     align-items: baseline;
     gap: 10px;
   }
-  .guide-article h4::before {
+  .guide-article h4::before,
+  .guide-article h2::before {
     content: '';
     display: inline-block;
     width: 8px;
@@ -1815,7 +1817,7 @@
 <span class="guide-tag" data-i18n="g7.tag">GUIDE · 方法論</span>
 <h1 data-i18n="g7.title">從手感到數據:馬達分析的三支柱方法論</h1><p class="guide-byline">編輯者:MotorLab Team</p>
 <p class="guide-lead" data-i18n="g7.lead">大多數車手憑經驗判斷馬達狀態—「跑起來感覺不錯」「聽聲音差不多」。問題是經驗無法傳承、無法重現、也無法驗證。本文介紹一套把馬達分析從「手感」轉成系統工程的三步驟方法論:<strong>量測、比較、健康判斷</strong>。這是 MotorLab 整個分析系統背後的概念框架。</p>
-<h4 data-i18n="g7.h1">為什麼馬達分析需要方法論</h4>
+<h2 data-i18n="g7.h1">為什麼馬達分析需要方法論</h2>
 <p data-i18n="g7.p1">馬達調校的常見問題:</p>
 <ul>
 <li data-i18n="g7.l1">不同電壓下測 RPM,結論互相矛盾</li>
@@ -1823,7 +1825,7 @@
 <li data-i18n="g7.l3">比賽前發現馬達變慢,但說不出哪裡變了</li>
 </ul>
 <p data-i18n="g7.p2">這些問題的根源不是「方法錯」,而是<strong>沒有共同的分析框架</strong>。</p>
-<h4 data-i18n="g7.h2">第一支柱:量測(Measurement)</h4>
+<h2 data-i18n="g7.h2">第一支柱:量測(Measurement)</h2>
 <p data-i18n="g7.p3">量測的目的不是「拿到數字」,而是<strong>重建一個可重現的測試環境</strong>。</p>
 <p data-i18n="g7.std"><strong>量測標準(必須固定)</strong>:</p>
 <ul>
@@ -1847,7 +1849,7 @@
 <div class="guide-tip">
 <p data-i18n="g7.q1">量測不是資料收集,而是<strong>環境重建</strong>。</p>
 </div>
-<h4 data-i18n="g7.h3">第二支柱:比較(Comparison)</h4>
+<h2 data-i18n="g7.h3">第二支柱:比較(Comparison)</h2>
 <p data-i18n="g7.p5">單一數值沒有意義—18,500 RPM 是「好」還是「壞」?答案永遠是「相對於什麼」。</p>
 <p data-i18n="g7.p6"><strong>3 種比較方式</strong>:</p>
 <ul>
@@ -1859,7 +1861,7 @@
 <div class="guide-tip">
 <p data-i18n="g7.q2">比較不是大小評估,而是<strong>偏離計算</strong>。</p>
 </div>
-<h4 data-i18n="g7.h4">第三支柱:健康判斷(Health Assessment)</h4>
+<h2 data-i18n="g7.h4">第三支柱:健康判斷(Health Assessment)</h2>
 <p data-i18n="g7.p8">健康不是「快不快」,而是「<strong>是否還能維持可預測的行為</strong>」。</p>
 <p data-i18n="g7.p9"><strong>4 個健康維度</strong>:</p>
 <table class="guide-table">
@@ -1889,12 +1891,12 @@
 <div class="guide-tip">
 <p data-i18n="g7.q3">健康不是單點數值,而是<strong>軌跡評估</strong>。</p>
 </div>
-<h4 data-i18n="g7.h5">三支柱的連動</h4>
+<h2 data-i18n="g7.h5">三支柱的連動</h2>
 <div class="guide-tip">
 <p data-i18n="g7.chain"><strong>量測</strong> → 建立可重現的標準環境<br/><strong>比較</strong> → 計算與基準的偏離程度<br/><strong>健康</strong> → 評估時間軸上的軌跡狀態</p>
 </div>
 <p data-i18n="g7.p12">三者構成完整鏈:沒有量測就沒有比較基礎,沒有比較就無法判斷健康,沒有健康評估就只能憑感覺決策。</p>
-<h4 data-i18n="g7.h6">核心思想</h4>
+<h2 data-i18n="g7.h6">核心思想</h2>
 <p data-i18n="g7.p13">MotorLab 的真正核心不是「提升馬達性能」,而是:</p>
 <div class="guide-tip">
 <p data-i18n="g7.q4">把不可見的手感,變成可量化的系統狀態。</p>

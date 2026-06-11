@@ -789,7 +789,8 @@
     padding-bottom: 18px;
     border-bottom: 1px solid var(--border);
   }
-  .guide-article h4 {
+  .guide-article h4,
+  .guide-article h2 {
     color: var(--accent-cyan);
     font-size: 15.5px;
     margin: 24px 0 10px;
@@ -797,7 +798,8 @@
     align-items: baseline;
     gap: 10px;
   }
-  .guide-article h4::before {
+  .guide-article h4::before,
+  .guide-article h2::before {
     content: '';
     display: inline-block;
     width: 8px;
@@ -1815,12 +1817,12 @@
 <span class="guide-tag" data-i18n="g11.tag">GUIDE · Race Strategy</span>
 <h1 data-i18n="g11.title">Why Mini 4WD Cars Crash: The Speed / Geometry / Stability Trigger Model</h1><p class="guide-byline">Edited by MotorLab Team</p>
 <p class="guide-lead" data-i18n="g11.lead">Crashes (course-outs) in racing are often dismissed as "bad luck," but they are predictable — the result of speed, track geometry and vehicle stability triggers stacking past a critical threshold. This article breaks crashes into the Speed / Geometry / Stability triggers, gives an on-site method to quickly count risk, and maps setup fixes to each risk level.</p>
-<h4 data-i18n="g11.h1">Crashes Aren't Random — They're Stacked Conditions</h4>
+<h2 data-i18n="g11.h1">Crashes Aren't Random — They're Stacked Conditions</h2>
 <div class="guide-tip">
 <p data-i18n="g11.core"><strong>Core idea</strong>: a crash is not a random event, but the result of "speed trigger + geometry trigger + stability trigger" stacking past a critical threshold.</p>
 </div>
 <p data-i18n="g11.p1">Most racers blame a crash on "this motor is too fast" or "bad luck" and then blindly slow down or swap motors — treating symptoms, not the cause. What you should actually do is <strong>identify how many risk triggers each corner / slope / jump hits at once</strong>: the same jump that a car clears cleanly under one trigger almost always crashes under three. The value here is making that judgment systematic and countable.</p>
-<h4 data-i18n="g11.h2">Speed Trigger</h4>
+<h2 data-i18n="g11.h2">Speed Trigger</h2>
 <p data-i18n="g11.p2">Speed-related crash causes — kinetic energy exceeding what the track can absorb.</p>
 <table class="guide-table">
 <thead>
@@ -1832,7 +1834,7 @@
 <tr><td data-i18n="g11.sp3.c">Jump take-off energy too high</td><td data-i18n="g11.sp3.s">over-speed jump</td><td data-i18n="g11.sp3.f">Brake before take-off / lower output / tune accel curve</td></tr>
 </tbody>
 </table>
-<h4 data-i18n="g11.h3">Geometry Trigger</h4>
+<h2 data-i18n="g11.h3">Geometry Trigger</h2>
 <p data-i18n="g11.p3">Crash causes from track shape — curvature or elevation changes too fast for the car to recover its attitude.</p>
 <table class="guide-table">
 <thead>
@@ -1845,7 +1847,7 @@
 <tr><td data-i18n="g11.ge4.c">Forced steering change (lane changer / fork)</td><td data-i18n="g11.ge4.s">lane changer</td><td data-i18n="g11.ge4.f">Stronger guide rollers / slow down / add stability</td></tr>
 </tbody>
 </table>
-<h4 data-i18n="g11.h4">Stability Trigger</h4>
+<h2 data-i18n="g11.h4">Stability Trigger</h2>
 <p data-i18n="g11.p4">Crash causes from the car itself — physical configuration that amplifies instability under disturbance.</p>
 <table class="guide-table">
 <thead>
@@ -1859,7 +1861,7 @@
 <tr><td data-i18n="g11.st5.c">Dynamic asymmetry (uneven weight)</td><td data-i18n="g11.st5.s">imbalance</td><td data-i18n="g11.st5.f">Adjust CG / left-right symmetry</td></tr>
 </tbody>
 </table>
-<h4 data-i18n="g11.h5">Risk-Counting Model: Count Simultaneous Triggers</h4>
+<h2 data-i18n="g11.h5">Risk-Counting Model: Count Simultaneous Triggers</h2>
 <p data-i18n="g11.p5">For <strong>every</strong> key structure on the track (corner / slope / jump / lane changer), count how many triggers it hits at once:</p>
 <table class="guide-table">
 <thead>
@@ -1871,7 +1873,7 @@
 <tr><td><strong>3</strong></td><td data-i18n="g11.r3.state">Danger zone</td><td data-i18n="g11.r3.result">High crash probability</td><td data-i18n="g11.r3.strat">Must run conservative</td></tr>
 </tbody>
 </table>
-<h4 data-i18n="g11.h6">Common Guaranteed-Crash Combos (Case Studies)</h4>
+<h2 data-i18n="g11.h6">Common Guaranteed-Crash Combos (Case Studies)</h2>
 <p data-i18n="g11.p6">Typical scenarios where three triggers stack:</p>
 <table class="guide-table">
 <thead>
@@ -1884,7 +1886,7 @@
 <tr><td data-i18n="g11.k4.combo">Jump + turn + light car</td><td data-i18n="g11.k4.scene">Jump into corner</td><td data-i18n="g11.k4.res">Roll-over on landing</td><td data-i18n="g11.k4.fix">Add weight + stabilize landing</td></tr>
 </tbody>
 </table>
-<h4 data-i18n="g11.h7">Three-Step Workflow</h4>
+<h2 data-i18n="g11.h7">Three-Step Workflow</h2>
 <ul>
 <li data-i18n="g11.l1"><strong>Scan the track</strong> — mark four key structures: jumps, sharp turns, waves, lane changers.</li>
 <li data-i18n="g11.l2"><strong>Read triggers</strong> — for each structure, check the three triggers: Speed / Geometry / Stability.</li>

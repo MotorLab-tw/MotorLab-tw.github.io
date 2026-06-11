@@ -789,7 +789,8 @@
     padding-bottom: 18px;
     border-bottom: 1px solid var(--border);
   }
-  .guide-article h4 {
+  .guide-article h4,
+  .guide-article h2 {
     color: var(--accent-cyan);
     font-size: 15.5px;
     margin: 24px 0 10px;
@@ -797,7 +798,8 @@
     align-items: baseline;
     gap: 10px;
   }
-  .guide-article h4::before {
+  .guide-article h4::before,
+  .guide-article h2::before {
     content: '';
     display: inline-block;
     width: 8px;
@@ -1815,7 +1817,7 @@
 <span class="guide-tag" data-i18n="g1.tag">GUIDE · Complete Guide</span>
 <h1 data-i18n="g1.title">Complete Guide to Mini 4WD Motor Break-in: From Theory to Practice</h1><p class="guide-byline">Edited by MotorLab Team</p>
 <p class="guide-lead" data-i18n="g1.lead">Motor break-in is the essential procedure that lets a new Mini 4WD motor reach its full potential. This article covers the science, the practical steps, and why pros never skip this process.</p>
-<h4 data-i18n="g1.h1">Why does every new motor need break-in?</h4>
+<h2 data-i18n="g1.h1">Why does every new motor need break-in?</h2>
 <p data-i18n="g1.p1">New Tamiya motors (Hyper Dash, Plasma Dash, Sprint Dash, Rev Tuned, Torque Tuned and others) ship with <strong>flat brush contact surfaces</strong>. But the commutator inside is cylindrical — a flat brush only touches a thin arc, severely limiting effective conductive area.</p>
 <p data-i18n="g1.p2">Running at full speed in this state causes:</p>
 <ul>
@@ -1825,10 +1827,10 @@
 <li data-i18n="g1.l4"><strong>Premature commutator wear</strong> — hard contact between un-mated surfaces damages the copper</li>
 </ul>
 <p data-i18n="g1.p3"><strong>The goal of break-in</strong> is to gradually wear the flat brush into a half-circle arc that matches the commutator surface — maximizing contact area, enabling smooth current flow, and letting the motor reach its designed RPM and torque.</p>
-<h4 data-i18n="g1.h2">The physics behind break-in</h4>
+<h2 data-i18n="g1.h2">The physics behind break-in</h2>
 <p data-i18n="g1.p4">The core equation for DC brushed motors: <code>N = (V − IR) / Kφ</code> (RPM = (Voltage − Current×Resistance) / flux constant). A new motor has high brush contact resistance R, causing large IR losses and reducing RPM N. Break-in physically <strong>reduces contact resistance and improves energy conversion efficiency</strong>.</p>
 <p data-i18n="g1.p5">Amateur methods include "water break-in" (running submerged at low voltage) or "battery break-in" (alternating polarity with dry cells). Both share a common problem: uncontrolled voltage, guess-the-time, no quantified progress. Results are pure luck.</p>
-<h4 data-i18n="g1.h3">The 4 key variables of professional break-in</h4>
+<h2 data-i18n="g1.h3">The 4 key variables of professional break-in</h2>
 <p data-i18n="g1.p6">Success depends on precise control of these 4 parameters:</p>
 <table class="guide-table">
 <thead>
@@ -1841,12 +1843,12 @@
 <tr><td data-i18n="g1.t.v4">Cooling (s)</td><td data-i18n="g1.t.r4">Prevents heat buildup</td><td data-i18n="g1.t.x4">Overheating → permanent magnet demagnetization</td></tr>
 </tbody>
 </table>
-<h4 data-i18n="g1.h4">Standard break-in procedure (10-stage recommendation)</h4>
+<h2 data-i18n="g1.h4">Standard break-in procedure (10-stage recommendation)</h2>
 <p data-i18n="g1.p7">The mainstream "progressive voltage ramp" method divides break-in into 10 stages of 30-90 seconds each, ramping voltage from 1.0V to 2.4V, with reverse runs and cooling pauses interleaved.</p>
 <div class="guide-tip">
 <p data-i18n="g1.tip">MotorLab M1/PRO's built-in <strong>10-stage programmable break-in</strong> automatically executes this protocol. Each stage independently sets voltage, direction, time, cooling, and current stability tolerance. The <strong>smart stable-current latch</strong> auto-advances when current variation falls below threshold, ensuring every motor reaches optimal break-in.</p>
 </div>
-<h4 data-i18n="g1.h5">How to know when break-in is complete</h4>
+<h2 data-i18n="g1.h5">How to know when break-in is complete</h2>
 <p data-i18n="g1.p8">Four observation points tell you the motor is ready:</p>
 <ul>
 <li data-i18n="g1.l5"><strong>Current stability</strong> — at fixed voltage, current variation ≤ ±50mA</li>

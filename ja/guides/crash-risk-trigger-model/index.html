@@ -789,7 +789,8 @@
     padding-bottom: 18px;
     border-bottom: 1px solid var(--border);
   }
-  .guide-article h4 {
+  .guide-article h4,
+  .guide-article h2 {
     color: var(--accent-cyan);
     font-size: 15.5px;
     margin: 24px 0 10px;
@@ -797,7 +798,8 @@
     align-items: baseline;
     gap: 10px;
   }
-  .guide-article h4::before {
+  .guide-article h4::before,
+  .guide-article h2::before {
     content: '';
     display: inline-block;
     width: 8px;
@@ -1815,12 +1817,12 @@
 <span class="guide-tag" data-i18n="g11.tag">GUIDE · レース戦略</span>
 <h1 data-i18n="g11.title">ミニ四駆がコースアウトする原因?Speed / Geometry / Stability 3-Trigger モデル</h1><p class="guide-byline">編集者:MotorLab Team</p>
 <p class="guide-lead" data-i18n="g11.lead">レースでのコースアウトは「運が悪い」と片づけられがちですが、実は予測可能です —— スピード・コース形状・車体安定性の 3 つのトリガーが重なり、臨界条件を超えた結果です。本記事はコースアウトを Speed / Geometry / Stability の 3 トリガーに分解し、レース現場で素早くリスクを数える方法と、リスクレベル別のセッティング対策を解説します。</p>
-<h4 data-i18n="g11.h1">コースアウトは偶然ではなく、条件の重なり</h4>
+<h2 data-i18n="g11.h1">コースアウトは偶然ではなく、条件の重なり</h2>
 <div class="guide-tip">
 <p data-i18n="g11.core"><strong>核心の考え方</strong>:コースアウトは偶然ではなく、「スピードトリガー + ジオメトリトリガー + 安定性トリガー」が重なり臨界条件を超えた結果です。</p>
 </div>
 <p data-i18n="g11.p1">多くのレーサーはコースアウトを「このモーターが速すぎる」「運が悪い」のせいにして、やみくもに減速したりモーターを替えたりします —— 対症療法に過ぎません。本当にすべきは<strong>各カーブ/スロープ/ジャンプが同時にいくつのトリガーを引いているかを見極める</strong>こと:同じジャンプでも、トリガー 1 つなら安定して飛び越えるのに、3 つ重なるとほぼ確実にコースアウトします。本記事の価値は、この判断を体系化・計数可能にすることです。</p>
-<h4 data-i18n="g11.h2">スピードトリガー(Speed Trigger)</h4>
+<h2 data-i18n="g11.h2">スピードトリガー(Speed Trigger)</h2>
 <p data-i18n="g11.p2">スピード関連のコースアウト要因 —— 運動エネルギーがコースの吸収範囲を超える。</p>
 <table class="guide-table">
 <thead>
@@ -1832,7 +1834,7 @@
 <tr><td data-i18n="g11.sp3.c">ジャンプの運動エネルギー過大</td><td data-i18n="g11.sp3.s">ジャンプ過多速度</td><td data-i18n="g11.sp3.f">手前でブレーキ / 出力を下げる / 加速カーブ調整</td></tr>
 </tbody>
 </table>
-<h4 data-i18n="g11.h3">ジオメトリトリガー(Geometry Trigger)</h4>
+<h2 data-i18n="g11.h3">ジオメトリトリガー(Geometry Trigger)</h2>
 <p data-i18n="g11.p3">コース形状によるコースアウト要因 —— 曲率や高低差の変化が速すぎ、車が姿勢を整えきれない。</p>
 <table class="guide-table">
 <thead>
@@ -1845,7 +1847,7 @@
 <tr><td data-i18n="g11.ge4.c">強制的な進路変化(レーンチェンジ/分岐)</td><td data-i18n="g11.ge4.s">レーンチェンジ</td><td data-i18n="g11.ge4.f">ガイドローラー強化 / 減速 / 安定性追加</td></tr>
 </tbody>
 </table>
-<h4 data-i18n="g11.h4">安定性トリガー(Stability Trigger)</h4>
+<h2 data-i18n="g11.h4">安定性トリガー(Stability Trigger)</h2>
 <p data-i18n="g11.p4">車体自体のコースアウト要因 —— 物理的な構成が外乱時に不安定さを増幅する。</p>
 <table class="guide-table">
 <thead>
@@ -1859,7 +1861,7 @@
 <tr><td data-i18n="g11.st5.c">動的非対称(重量バランス不均)</td><td data-i18n="g11.st5.s">バランス悪い</td><td data-i18n="g11.st5.f">重心調整 / 左右対称</td></tr>
 </tbody>
 </table>
-<h4 data-i18n="g11.h5">リスク計数モデル:同時トリガー数を数える</h4>
+<h2 data-i18n="g11.h5">リスク計数モデル:同時トリガー数を数える</h2>
 <p data-i18n="g11.p5">コース上の<strong>すべての</strong>重要構造(カーブ/スロープ/ジャンプ/レーンチェンジ)について、同時にいくつのトリガーを引くか数えます:</p>
 <table class="guide-table">
 <thead>
@@ -1871,7 +1873,7 @@
 <tr><td><strong>3</strong></td><td data-i18n="g11.r3.state">危険圏</td><td data-i18n="g11.r3.result">高確率でコースアウト</td><td data-i18n="g11.r3.strat">保守的にすべき</td></tr>
 </tbody>
 </table>
-<h4 data-i18n="g11.h6">よくある必アウトの組み合わせ(実戦判例)</h4>
+<h2 data-i18n="g11.h6">よくある必アウトの組み合わせ(実戦判例)</h2>
 <p data-i18n="g11.p6">3 トリガーが重なる典型的なシーン:</p>
 <table class="guide-table">
 <thead>
@@ -1884,7 +1886,7 @@
 <tr><td data-i18n="g11.k4.combo">ジャンプ + コーナー + 車軽い</td><td data-i18n="g11.k4.scene">ジャンプ後コーナー</td><td data-i18n="g11.k4.res">着地で転倒</td><td data-i18n="g11.k4.fix">増量 + 着地安定</td></tr>
 </tbody>
 </table>
-<h4 data-i18n="g11.h7">3 ステップの使い方</h4>
+<h2 data-i18n="g11.h7">3 ステップの使い方</h2>
 <ul>
 <li data-i18n="g11.l1"><strong>コーススキャン</strong> —— 4 つの重要構造をマーク:ジャンプ、急カーブ、ウェーブ、レーンチェンジ。</li>
 <li data-i18n="g11.l2"><strong>トリガー判読</strong> —— 各構造について 3 大トリガーをチェック:Speed / Geometry / Stability。</li>

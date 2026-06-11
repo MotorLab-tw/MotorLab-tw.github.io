@@ -789,7 +789,8 @@
     padding-bottom: 18px;
     border-bottom: 1px solid var(--border);
   }
-  .guide-article h4 {
+  .guide-article h4,
+  .guide-article h2 {
     color: var(--accent-cyan);
     font-size: 15.5px;
     margin: 24px 0 10px;
@@ -797,7 +798,8 @@
     align-items: baseline;
     gap: 10px;
   }
-  .guide-article h4::before {
+  .guide-article h4::before,
+  .guide-article h2::before {
     content: '';
     display: inline-block;
     width: 8px;
@@ -1815,7 +1817,7 @@
 <span class="guide-tag" data-i18n="g3.tag">REFERENCE · モーター速査</span>
 <h1 data-i18n="g3.title">タミヤ主要モーター特性と慣らし戦略対照表</h1><p class="guide-byline">編集者:MotorLab Team</p>
 <p class="guide-lead" data-i18n="g3.lead">モーターによって設計用途・回転数・トルク特性が異なるため、慣らし方法も当然変わります。タミヤ主要 8 モーターの公式仕様と推奨慣らし戦略をまとめました。</p>
-<h4 data-i18n="g3.h1">入門級モーター(初心者の最初の一本に最適)</h4>
+<h2 data-i18n="g3.h1">入門級モーター(初心者の最初の一本に最適)</h2>
 <table class="guide-table">
 <thead>
 <tr><th data-i18n="g3.t.name">型式</th><th data-i18n="g3.t.spec">負荷回転数 / トルク</th><th data-i18n="g3.t.brush">ブラシ種類</th><th data-i18n="g3.t.policy">慣らし戦略</th></tr>
@@ -1827,7 +1829,7 @@
 <tr><td data-i18n="g3.m4.name">グレー · アトミックチューン</td><td>13,700 RPM / 10 g·cm</td><td data-i18n="g3.brush.copper">銅ブラシ</td><td data-i18n="g3.t.p4">標準 10 段階</td></tr>
 </tbody>
 </table>
-<h4 data-i18n="g3.h2">上級モーター(カーボンブラシ、深い慣らし可能)</h4>
+<h2 data-i18n="g3.h2">上級モーター(カーボンブラシ、深い慣らし可能)</h2>
 <table class="guide-table">
 <thead>
 <tr><th data-i18n="g3.t.name2">型式</th><th data-i18n="g3.t.spec2">負荷回転数 / トルク</th><th data-i18n="g3.t.brush2">ブラシ種類</th><th data-i18n="g3.t.policy2">慣らし戦略</th></tr>
@@ -1839,7 +1841,7 @@
 <tr><td data-i18n="g3.m8.name">ブラック · プラズマダッシュ</td><td>23,500 RPM / 13 g·cm</td><td data-i18n="g3.brush.carbon">カーボンブラシ</td><td data-i18n="g3.t.p8">じっくり丁寧に、2 倍の冷却時間</td></tr>
 </tbody>
 </table>
-<h4 data-i18n="g3.h3">慣らし戦略の差異解説</h4>
+<h2 data-i18n="g3.h3">慣らし戦略の差異解説</h2>
 <p data-i18n="g3.p1"><strong>銅ブラシモーター</strong>(イエロー、パープル、オレンジ、グレー):ブラシが薄く強度が低いため、高電圧慣らしには不向き。開始電圧 0.8V、最高 2.0V までを推奨。</p>
 <p data-i18n="g3.p2"><strong>カーボンブラシモーター</strong>(レッド、グリーン、ホワイト、ブラック):高めの慣らし電圧に耐えられますが、プラズマダッシュは回転数が最も高く発熱も最速のため、冷却時間は通常モーターの 2 倍に延ばすこと。</p>
 <div class="guide-warning">

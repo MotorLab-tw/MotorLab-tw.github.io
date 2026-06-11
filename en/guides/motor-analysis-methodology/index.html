@@ -789,7 +789,8 @@
     padding-bottom: 18px;
     border-bottom: 1px solid var(--border);
   }
-  .guide-article h4 {
+  .guide-article h4,
+  .guide-article h2 {
     color: var(--accent-cyan);
     font-size: 15.5px;
     margin: 24px 0 10px;
@@ -797,7 +798,8 @@
     align-items: baseline;
     gap: 10px;
   }
-  .guide-article h4::before {
+  .guide-article h4::before,
+  .guide-article h2::before {
     content: '';
     display: inline-block;
     width: 8px;
@@ -1815,7 +1817,7 @@
 <span class="guide-tag" data-i18n="g7.tag">GUIDE · Methodology</span>
 <h1 data-i18n="g7.title">From Feel to Data: A Three-Pillar Methodology for Motor Analysis</h1><p class="guide-byline">Edited by MotorLab Team</p>
 <p class="guide-lead" data-i18n="g7.lead">Most racers rely on experience — "feels good," "sounds right." The problem with experience is that it can't be transferred, reproduced, or verified. This article introduces a three-step methodology that turns motor analysis from "feel" into systems engineering: <strong>measurement, comparison, health assessment</strong>. It's the conceptual framework behind MotorLab's entire analysis system.</p>
-<h4 data-i18n="g7.h1">Why motor analysis needs a methodology</h4>
+<h2 data-i18n="g7.h1">Why motor analysis needs a methodology</h2>
 <p data-i18n="g7.p1">Common problems in motor tuning:</p>
 <ul>
 <li data-i18n="g7.l1">Testing RPM at different voltages leads to contradictory conclusions</li>
@@ -1823,7 +1825,7 @@
 <li data-i18n="g7.l3">Pre-race the motor feels slower, but you can't say what changed</li>
 </ul>
 <p data-i18n="g7.p2">The root cause isn't "wrong technique" — it's the <strong>absence of a shared analytical framework</strong>.</p>
-<h4 data-i18n="g7.h2">Pillar 1: Measurement</h4>
+<h2 data-i18n="g7.h2">Pillar 1: Measurement</h2>
 <p data-i18n="g7.p3">The goal of measurement isn't "to get numbers." It's to <strong>reconstruct a reproducible test environment</strong>.</p>
 <p data-i18n="g7.std"><strong>Measurement standards (must be fixed)</strong>:</p>
 <ul>
@@ -1847,7 +1849,7 @@
 <div class="guide-tip">
 <p data-i18n="g7.q1">Measurement is not data collection. It is <strong>environment reconstruction</strong>.</p>
 </div>
-<h4 data-i18n="g7.h3">Pillar 2: Comparison</h4>
+<h2 data-i18n="g7.h3">Pillar 2: Comparison</h2>
 <p data-i18n="g7.p5">A single number means nothing — is 18,500 RPM "good" or "bad"? The answer is always "relative to what."</p>
 <p data-i18n="g7.p6"><strong>Three comparison types</strong>:</p>
 <ul>
@@ -1859,7 +1861,7 @@
 <div class="guide-tip">
 <p data-i18n="g7.q2">Comparison is not magnitude evaluation. It is <strong>deviation calculation</strong>.</p>
 </div>
-<h4 data-i18n="g7.h4">Pillar 3: Health Assessment</h4>
+<h2 data-i18n="g7.h4">Pillar 3: Health Assessment</h2>
 <p data-i18n="g7.p8">Health isn't "how fast" — it's "<strong>can the motor still produce predictable behavior</strong>."</p>
 <p data-i18n="g7.p9"><strong>Four health dimensions</strong>:</p>
 <table class="guide-table">
@@ -1889,12 +1891,12 @@
 <div class="guide-tip">
 <p data-i18n="g7.q3">Health is not a snapshot value. It is a <strong>trajectory evaluation</strong>.</p>
 </div>
-<h4 data-i18n="g7.h5">How the three pillars connect</h4>
+<h2 data-i18n="g7.h5">How the three pillars connect</h2>
 <div class="guide-tip">
 <p data-i18n="g7.chain"><strong>Measurement</strong> → defines reproducible environment<br/><strong>Comparison</strong> → calculates deviation from baseline<br/><strong>Health</strong> → evaluates trajectory state over time</p>
 </div>
 <p data-i18n="g7.p12">The three form a complete chain: without measurement there's no basis for comparison, without comparison there's no way to assess health, without health assessment you're back to deciding by feel.</p>
-<h4 data-i18n="g7.h6">Core idea</h4>
+<h2 data-i18n="g7.h6">Core idea</h2>
 <p data-i18n="g7.p13">MotorLab's real core isn't "making motors faster." It's:</p>
 <div class="guide-tip">
 <p data-i18n="g7.q4">Converting invisible feel into measurable and comparable system states.</p>

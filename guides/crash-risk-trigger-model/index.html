@@ -789,7 +789,8 @@
     padding-bottom: 18px;
     border-bottom: 1px solid var(--border);
   }
-  .guide-article h4 {
+  .guide-article h4,
+  .guide-article h2 {
     color: var(--accent-cyan);
     font-size: 15.5px;
     margin: 24px 0 10px;
@@ -797,7 +798,8 @@
     align-items: baseline;
     gap: 10px;
   }
-  .guide-article h4::before {
+  .guide-article h4::before,
+  .guide-article h2::before {
     content: '';
     display: inline-block;
     width: 8px;
@@ -1815,12 +1817,12 @@
 <span class="guide-tag" data-i18n="g11.tag">GUIDE · 賽道戰略</span>
 <h1 data-i18n="g11.title">四驅車為什麼會飛車?Speed / Geometry / Stability 三觸發判定模型</h1><p class="guide-byline">編輯者:MotorLab Team</p>
 <p class="guide-lead" data-i18n="g11.lead">飛車(出軌)在比賽中常被當成「運氣不好」,但它其實是可預測的 —— 由速度、賽道幾何、車體穩定性三種觸發因子疊加、超過臨界條件的結果。本文把飛車拆成 Speed / Geometry / Stability 三大觸發,提供比賽現場快速計數風險的方法,並對應不同風險等級給出改裝對策。</p>
-<h4 data-i18n="g11.h1">飛車不是隨機,是條件疊加</h4>
+<h2 data-i18n="g11.h1">飛車不是隨機,是條件疊加</h2>
 <div class="guide-tip">
 <p data-i18n="g11.core"><strong>核心觀念</strong>:飛車不是隨機事件,而是「速度觸發 + 幾何觸發 + 穩定性觸發」疊加後超過臨界條件的結果。</p>
 </div>
 <p data-i18n="g11.p1">多數玩家把飛車歸因於「這顆馬達太衝」或「運氣差」,於是盲目降速或換馬達 —— 治標不治本。真正該做的是<strong>辨識每個彎/坡/跳台同時觸發了幾個風險因子</strong>:同一個跳台,單一觸發時車子穩穩飛過,三個觸發同時出現時就幾乎必飛。本文的價值在於把這套判斷系統化、可計數。</p>
-<h4 data-i18n="g11.h2">動力觸發(Speed Trigger)</h4>
+<h2 data-i18n="g11.h2">動力觸發(Speed Trigger)</h2>
 <p data-i18n="g11.p2">速度相關的飛車成因 —— 動能過高超過賽道可吸收的範圍。</p>
 <table class="guide-table">
 <thead>
@@ -1832,7 +1834,7 @@
 <tr><td data-i18n="g11.sp3.c">起跳動能過高</td><td data-i18n="g11.sp3.s">飛太遠 / 起飛太猛</td><td data-i18n="g11.sp3.f">前段煞車 / 降輸出 / 調整加速曲線</td></tr>
 </tbody>
 </table>
-<h4 data-i18n="g11.h3">幾何觸發(Geometry Trigger)</h4>
+<h2 data-i18n="g11.h3">幾何觸發(Geometry Trigger)</h2>
 <p data-i18n="g11.p3">賽道形狀造成的飛車成因 —— 路徑曲率或高低差變化過快,車子來不及調整姿態。</p>
 <table class="guide-table">
 <thead>
@@ -1845,7 +1847,7 @@
 <tr><td data-i18n="g11.ge4.c">強制導向變化(變軌/分岔)</td><td data-i18n="g11.ge4.s">變道會撞</td><td data-i18n="g11.ge4.f">強化導輪 / 降速 / 增穩定性</td></tr>
 </tbody>
 </table>
-<h4 data-i18n="g11.h4">穩定觸發(Stability Trigger)</h4>
+<h2 data-i18n="g11.h4">穩定觸發(Stability Trigger)</h2>
 <p data-i18n="g11.p4">車體本身的飛車成因 —— 物理配置讓車子在受擾動時放大不穩。</p>
 <table class="guide-table">
 <thead>
@@ -1859,7 +1861,7 @@
 <tr><td data-i18n="g11.st5.c">動態不對稱(配重不均)</td><td data-i18n="g11.st5.s">左右不平</td><td data-i18n="g11.st5.f">調整重心 / 左右對稱</td></tr>
 </tbody>
 </table>
-<h4 data-i18n="g11.h5">風險計數模型:數出同時觸發幾個</h4>
+<h2 data-i18n="g11.h5">風險計數模型:數出同時觸發幾個</h2>
 <p data-i18n="g11.p5">對賽道上<strong>每一個</strong>關鍵結構(彎/坡/跳台/變軌),數它同時命中幾個觸發:</p>
 <table class="guide-table">
 <thead>
@@ -1871,7 +1873,7 @@
 <tr><td><strong>3</strong></td><td data-i18n="g11.r3.state">危險區</td><td data-i18n="g11.r3.result">高機率飛車</td><td data-i18n="g11.r3.strat">必須保守設定</td></tr>
 </tbody>
 </table>
-<h4 data-i18n="g11.h6">常見必飛組合(實戰判例)</h4>
+<h2 data-i18n="g11.h6">常見必飛組合(實戰判例)</h2>
 <p data-i18n="g11.p6">三觸發疊加的典型場景:</p>
 <table class="guide-table">
 <thead>
@@ -1884,7 +1886,7 @@
 <tr><td data-i18n="g11.k4.combo">跳台 + 轉彎 + 車輕</td><td data-i18n="g11.k4.scene">跳台接彎</td><td data-i18n="g11.k4.res">落地翻車</td><td data-i18n="g11.k4.fix">增重 + 穩定落地</td></tr>
 </tbody>
 </table>
-<h4 data-i18n="g11.h7">三步驟使用流程</h4>
+<h2 data-i18n="g11.h7">三步驟使用流程</h2>
 <ul>
 <li data-i18n="g11.l1"><strong>賽道掃描</strong> —— 標記四種關鍵結構:跳台、急彎、波浪、變軌。</li>
 <li data-i18n="g11.l2"><strong>觸發判讀</strong> —— 對每個結構檢查三大觸發:Speed / Geometry / Stability。</li>

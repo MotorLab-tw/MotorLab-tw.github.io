@@ -789,7 +789,8 @@
     padding-bottom: 18px;
     border-bottom: 1px solid var(--border);
   }
-  .guide-article h4 {
+  .guide-article h4,
+  .guide-article h2 {
     color: var(--accent-cyan);
     font-size: 15.5px;
     margin: 24px 0 10px;
@@ -797,7 +798,8 @@
     align-items: baseline;
     gap: 10px;
   }
-  .guide-article h4::before {
+  .guide-article h4::before,
+  .guide-article h2::before {
     content: '';
     display: inline-block;
     width: 8px;
@@ -1815,7 +1817,7 @@
 <span class="guide-tag" data-i18n="g8.tag">GUIDE · 故障診断</span>
 <h1 data-i18n="g8.title">ミニ四駆 モーター衰退の 8 サインと引退判定</h1><p class="guide-byline">編集者:MotorLab Team</p>
 <p class="guide-lead" data-i18n="g8.lead">慣らし完了モーターも永久に最高性能を保つわけではありません。第 5 レース頃から衰退が始まりますが、多くのレーサーは「明らかに走らない」状態になってから気づきます。本記事ではモーター衰退の 8 サイン + 引退判定の閾値を整理。本番でモーターが死ぬ前に「洗う・引退・続行」の判断ができるようになります。</p>
-<h4 data-i18n="g8.h1">モーターはなぜ衰退するのか</h4>
+<h2 data-i18n="g8.h1">モーターはなぜ衰退するのか</h2>
 <p data-i18n="g8.p1">衰退はランダムではなく、3 つの物理プロセスの蓄積です:</p>
 <ul>
 <li data-i18n="g8.l1"><strong>ブラシと整流子(コミュテーター)の摩耗</strong>—接触面が回転のたびに微量摩耗、接触抵抗が上昇、IR 損失が増えて実効出力 RPM が低下</li>
@@ -1823,7 +1825,7 @@
 <li data-i18n="g8.l3"><strong>内部 copper dust の蓄積と arcing</strong>—摩耗したブラシ材料が内部に散布、整流子間隙でのアークを強化、接触面ダメージを加速</li>
 </ul>
 <p data-i18n="g8.p2">ベアリング摩耗も「モーター異常」と混同されやすいですが、厳密にはシャーシ部品の問題(モーター本体ではない)。</p>
-<h4 data-i18n="g8.h2">A 類:性能サイン(3 つの定量観察)</h4>
+<h2 data-i18n="g8.h2">A 類:性能サイン(3 つの定量観察)</h2>
 <p data-i18n="g8.a1"><strong>1. 同電圧での RPM 低下</strong>—最も直接的な衰退指標。ベースライン測定後、定期的に再測定:</p>
 <ul>
 <li data-i18n="g8.a1l1"><strong>&lt; 5%</strong>:正常摩耗</li>
@@ -1833,20 +1835,20 @@
 </ul>
 <p data-i18n="g8.a2"><strong>2. 起動遅延</strong>—通電から RPM 安定までの時間が長くなる。新品は 0.5–1 秒、衰退モーターは 2 秒以上かかることも。</p>
 <p data-i18n="g8.a3"><strong>3. 同電池で同コースを走るラップ数が減る</strong>—同型番電池、同コース、同モーターで、ベースラインよりラップ数が少ない = 効率低下。</p>
-<h4 data-i18n="g8.h3">B 類:音と手感のサイン(3 つの感覚観察)</h4>
+<h2 data-i18n="g8.h3">B 類:音と手感のサイン(3 つの感覚観察)</h2>
 <div class="guide-tip">
 <p data-i18n="g8.b_note">音の判断は主観的で、各モーターの新品時の音色も異なります。ここでは原理のみ列挙し、読者自身が対照感覚を構築する(同じモーターの新品時と現状を比較)ことを前提とします。文字による音の模倣はしません。</p>
 </div>
 <p data-i18n="g8.b4"><strong>4. 運転音が不規則化する</strong>—原理:ブラシと整流子の接触不安定により arcing が強化、電流がパルス化、運転音のリズム感が損なわれる。</p>
 <p data-i18n="g8.b5"><strong>5. 高周波の引っ掻き音が顕著</strong>—原理:ブラシが薄くなることでスプリング圧力分布が変化、ブラシと整流子の接触面で異常摩擦が発生。</p>
 <p data-i18n="g8.b6"><strong>6. 同条件下での温度上昇が顕著</strong>—原理:接触抵抗の上昇 → IR 損失の増加 → エネルギーが熱に変換される割合が増加。手感でベースラインより熱ければ明確なシグナル。</p>
-<h4 data-i18n="g8.h4">C 類:外観と機械サイン(2 つの非分解検査)</h4>
+<h2 data-i18n="g8.h4">C 類:外観と機械サイン(2 つの非分解検査)</h2>
 <p data-i18n="g8.c7"><strong>7. モーター端子片の変色または焼け跡</strong>—端子片の露出金属が黄ばみ、黒ずみ、青い焼け跡を呈する = 高温イベント経験あり。</p>
 <p data-i18n="g8.c8"><strong>8. 無電源で軸心を手回し、新品より抵抗が明らかに大きい</strong>—同型番の新品と比較テスト。新品はスムーズに回転、衰退モーターは「渋い」「カクカク」感(磁石の不均衡、ブラシの粘着、軸受抵抗のいずれか)。</p>
 <div class="guide-tip">
 <p data-i18n="g8.adv"><strong>進階補足</strong>:定量観察(電流 CV、FFT 異常周波数帯など)はより精密なデータ側サインです。測定方法は<a href="../motor-analysis-methodology/">三本柱方法論</a>を参照。</p>
 </div>
-<h4 data-i18n="g8.h5">判断マトリクス:洗う、引退、それとも続行?</h4>
+<h2 data-i18n="g8.h5">判断マトリクス:洗う、引退、それとも続行?</h2>
 <table class="guide-table">
 <thead>
 <tr><th data-i18n="g8.t.state">状態</th><th data-i18n="g8.t.rpm">RPM 低下幅</th><th data-i18n="g8.t.other">その他のサイン</th><th data-i18n="g8.t.action">処置</th></tr>
@@ -1858,14 +1860,14 @@
 <tr><td data-i18n="g8.t.r4s">EoL 確定</td><td data-i18n="g8.t.r4r">&gt; 20% / 起動失敗 / 顕著な過熱</td><td data-i18n="g8.t.r4o">—</td><td data-i18n="g8.t.r4a">引退</td></tr>
 </tbody>
 </table>
-<h4 data-i18n="g8.h6">モーターを速く殺す 3 つの定番ミス</h4>
+<h2 data-i18n="g8.h6">モーターを速く殺す 3 つの定番ミス</h2>
 <p data-i18n="g8.p3">これらは日本のミニ四駆コミュニティで長年観察されている「モーターキラー」シナリオ:</p>
 <ol>
 <li data-i18n="g8.e1"><strong>コースアウト後、タイヤロック状態での粗暴な回収</strong>—車輪がコースに引っかかった状態で引き抜くと、逆トルクがモーター内部構造を直撃</li>
 <li data-i18n="g8.e2"><strong>回転中の車輪を手で押さえる</strong>—「止めて確認したい」だけでも、押さえる = stall。電流が瞬間爆増、温度上昇</li>
 <li data-i18n="g8.e3"><strong>Cold start 全速</strong>—モーターがウォームアップする前に 3V 全速、内部油膜が均一に分布する前に高負荷 → uneven brush wear</li>
 </ol>
-<h4 data-i18n="g8.h7">引退モーターの処置</h4>
+<h2 data-i18n="g8.h7">引退モーターの処置</h2>
 <ul>
 <li data-i18n="g8.r1"><strong>arcing と整流子の grooves は不可逆</strong>—どれだけ洗浄、リコンディションしても内部接触面の物理損傷は復元不可</li>
 <li data-i18n="g8.r2"><strong>適した用途</strong>:練習用車、解体教材(ブラシ摩耗パターンを観察して経験値を構築)</li>

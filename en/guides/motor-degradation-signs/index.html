@@ -789,7 +789,8 @@
     padding-bottom: 18px;
     border-bottom: 1px solid var(--border);
   }
-  .guide-article h4 {
+  .guide-article h4,
+  .guide-article h2 {
     color: var(--accent-cyan);
     font-size: 15.5px;
     margin: 24px 0 10px;
@@ -797,7 +798,8 @@
     align-items: baseline;
     gap: 10px;
   }
-  .guide-article h4::before {
+  .guide-article h4::before,
+  .guide-article h2::before {
     content: '';
     display: inline-block;
     width: 8px;
@@ -1815,7 +1817,7 @@
 <span class="guide-tag" data-i18n="g8.tag">GUIDE · Diagnostics</span>
 <h1 data-i18n="g8.title">8 Signs Your Mini 4WD Motor Is Dying — When to Wash vs Retire</h1><p class="guide-byline">Edited by MotorLab Team</p>
 <p class="guide-lead" data-i18n="g8.lead">A broken-in motor doesn't stay at peak forever. From around the 5th race onward, degradation begins — but most racers wait until the motor is obviously dead before noticing. This article covers 8 degradation signs plus retirement thresholds, so you can make the right call (wash, retire, or keep using) before a motor truly fails on race day.</p>
-<h4 data-i18n="g8.h1">Why motors degrade</h4>
+<h2 data-i18n="g8.h1">Why motors degrade</h2>
 <p data-i18n="g8.p1">Degradation isn't random. It's three physical processes accumulating:</p>
 <ul>
 <li data-i18n="g8.l1"><strong>Brush and commutator wear</strong> — Contact surfaces lose material on every rotation. Contact resistance rises, IR losses increase, and effective output RPM drops.</li>
@@ -1823,7 +1825,7 @@
 <li data-i18n="g8.l3"><strong>Internal copper dust and arcing</strong> — Worn brush material scatters inside the motor, intensifying arcs in the commutator gap, accelerating contact-surface damage further.</li>
 </ul>
 <p data-i18n="g8.p2">Bearing wear gets mixed into "motor abnormality" judgments, but strictly speaking it's a chassis component issue — not the motor itself.</p>
-<h4 data-i18n="g8.h2">Category A: Performance (3 quantified observations)</h4>
+<h2 data-i18n="g8.h2">Category A: Performance (3 quantified observations)</h2>
 <p data-i18n="g8.a1"><strong>1. RPM drop at the same voltage</strong> — The most direct indicator. Establish a baseline and re-measure periodically:</p>
 <ul>
 <li data-i18n="g8.a1l1"><strong>&lt; 5%</strong>: Normal wear</li>
@@ -1833,20 +1835,20 @@
 </ul>
 <p data-i18n="g8.a2"><strong>2. Startup delay</strong> — Time from power-on to stable RPM lengthens. A new motor stabilizes in 0.5–1 second; a degraded motor may take 2+ seconds.</p>
 <p data-i18n="g8.a3"><strong>3. Fewer laps per battery, same track</strong> — Same battery model, same track, same motor — fewer laps than baseline means efficiency has dropped.</p>
-<h4 data-i18n="g8.h3">Category B: Sound and feel (3 sensory observations)</h4>
+<h2 data-i18n="g8.h3">Category B: Sound and feel (3 sensory observations)</h2>
 <div class="guide-tip">
 <p data-i18n="g8.b_note">Sound judgment is subjective and every motor has its own original tone. This section gives only the underlying principles. Build your own internal reference (comparing the same motor's new vs current state) rather than trying to match words to sounds.</p>
 </div>
 <p data-i18n="g8.b4"><strong>4. Operating sound becomes irregular</strong> — Principle: Brush–commutator contact instability intensifies arcing, pulsing the current. This shows up as loss of rhythmic consistency in the motor's hum.</p>
 <p data-i18n="g8.b5"><strong>5. Pronounced high-frequency scraping</strong> — Principle: As brushes thin, spring pressure distribution shifts, causing abnormal friction between brush and commutator.</p>
 <p data-i18n="g8.b6"><strong>6. Noticeably higher temperature rise at the same conditions</strong> — Principle: Higher contact resistance → higher IR loss → more energy converted to heat. If it feels hotter than baseline to the touch, that's a clear signal.</p>
-<h4 data-i18n="g8.h4">Category C: External and mechanical signs (2 — no disassembly required)</h4>
+<h2 data-i18n="g8.h4">Category C: External and mechanical signs (2 — no disassembly required)</h2>
 <p data-i18n="g8.c7"><strong>7. Terminal-tab discoloration or burn marks</strong> — Exposed metal terminals showing yellowing, blackening, or blue burn marks = the motor has experienced a high-temperature event.</p>
 <p data-i18n="g8.c8"><strong>8. Higher manual-rotation resistance than a new unit</strong> — Test against a new motor of the same type. A new motor's shaft spins freely; a degraded one feels "sticky" or "draggy" (from magnet imbalance, brush stiction, or bearing friction).</p>
 <div class="guide-tip">
 <p data-i18n="g8.adv"><strong>Advanced note</strong>: Quantified observations (current CV — coefficient of variation — and FFT abnormal frequency bands) are more precise data-side signs. See <a href="../motor-analysis-methodology/">the three-pillar methodology</a> for the measurement approach.</p>
 </div>
-<h4 data-i18n="g8.h5">Decision matrix: Wash, retire, or keep using?</h4>
+<h2 data-i18n="g8.h5">Decision matrix: Wash, retire, or keep using?</h2>
 <table class="guide-table">
 <thead>
 <tr><th data-i18n="g8.t.state">State</th><th data-i18n="g8.t.rpm">RPM drop</th><th data-i18n="g8.t.other">Other signs</th><th data-i18n="g8.t.action">Action</th></tr>
@@ -1858,14 +1860,14 @@
 <tr><td data-i18n="g8.t.r4s">Confirmed EoL</td><td data-i18n="g8.t.r4r">&gt; 20% / startup failure / significant overheat</td><td data-i18n="g8.t.r4o">—</td><td data-i18n="g8.t.r4a">Retire</td></tr>
 </tbody>
 </table>
-<h4 data-i18n="g8.h6">3 Common ways to kill a motor faster</h4>
+<h2 data-i18n="g8.h6">3 Common ways to kill a motor faster</h2>
 <p data-i18n="g8.p3">These are well-known "motor-killer" scenarios from the Japanese Mini 4WD community:</p>
 <ol>
 <li data-i18n="g8.e1"><strong>Rough recovery after a course-out with locked wheels</strong> — Pulling a car whose wheels are jammed against the track reverses torque directly into the motor's internals.</li>
 <li data-i18n="g8.e2"><strong>Holding down a spinning wheel by hand</strong> — Even just to "stop and check," pressing on a rotating wheel = stall. Current spikes instantly, temperature soars.</li>
 <li data-i18n="g8.e3"><strong>Cold-start full throttle</strong> — Running 3V from the moment of power-on, before internal oil films distribute evenly, causes uneven brush wear.</li>
 </ol>
-<h4 data-i18n="g8.h7">What to do with a retired motor</h4>
+<h2 data-i18n="g8.h7">What to do with a retired motor</h2>
 <ul>
 <li data-i18n="g8.r1"><strong>Arcing damage and commutator grooves are irreversible</strong> — No amount of washing or reconditioning restores physical surface damage inside.</li>
 <li data-i18n="g8.r2"><strong>Good uses</strong>: Practice cars, dissection samples for learning (study brush wear patterns to calibrate your eye).</li>

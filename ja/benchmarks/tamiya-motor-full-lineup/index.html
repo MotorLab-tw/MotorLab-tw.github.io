@@ -789,7 +789,8 @@
     padding-bottom: 18px;
     border-bottom: 1px solid var(--border);
   }
-  .guide-article h4 {
+  .guide-article h4,
+  .guide-article h2 {
     color: var(--accent-cyan);
     font-size: 15.5px;
     margin: 24px 0 10px;
@@ -797,7 +798,8 @@
     align-items: baseline;
     gap: 10px;
   }
-  .guide-article h4::before {
+  .guide-article h4::before,
+  .guide-article h2::before {
     content: '';
     display: inline-block;
     width: 8px;
@@ -1815,9 +1817,9 @@
 <span class="guide-tag" data-i18n="g9.tag">REFERENCE · 全モーター速査</span>
 <h1 data-i18n="g9.title">タミヤ Mini 4WD® 全 15 種モーター規格対照表(PRO シリーズ含む)</h1><p class="guide-byline">編集者:MotorLab Team</p>
 <p class="guide-lead" data-i18n="g9.lead">タミヤ(TAMIYA, INC.)が現在展開している Mini 4WD® モーターは合計 15 種、<strong>Mini 4WD 標準シリーズ 9 種(片軸)</strong>と <strong>Mini 4WD PRO シリーズ 6 種(両軸)</strong>を網羅します。本対照表は公式公表の RPM、トルク(mN·m)、電流(A)スペックを整理し、競技ルールでの使用制限と対応する MotorLab 慣らし戦略を注記。シャーシタイプとコース特性に応じたモーター選びにご活用ください。</p>
-<h4 data-i18n="g9.h1">Mini 4WD シリーズ vs Mini 4WD PRO シリーズ</h4>
+<h2 data-i18n="g9.h1">Mini 4WD シリーズ vs Mini 4WD PRO シリーズ</h2>
 <p data-i18n="g9.p1"><strong>Mini 4WD PRO</strong> モーターは<strong>両軸(double-shaft)</strong>設計で、前後車軸を直接駆動します。Mini 4WD PRO シャーシ(MS / MA / VS / FM-A / MA-A 等)専用です。<strong>Mini 4WD 標準シリーズ</strong>は<strong>片軸(single-shaft)</strong>設計で、プロペラシャフト経由で 4 輪を駆動。標準シャーシ(Type 5、SX、TZ、AR 等)で使用します。両シリーズのモーターは物理的に互換性がありません。</p>
-<h4 data-i18n="g9.h2">Mini 4WD PRO シリーズ(両軸、6 種)</h4>
+<h2 data-i18n="g9.h2">Mini 4WD PRO シリーズ(両軸、6 種)</h2>
 <table class="guide-table">
 <thead>
 <tr>
@@ -1840,7 +1842,7 @@
 <tr><td>Mach-Dash PRO</td><td>★★★</td><td>★★</td><td>2.4–3.0V</td><td>20,000–24,500</td><td>1.3–1.8</td><td>2.6–3.5</td><td data-i18n="g9.pro6.note">高回転高性能(上級者向け、小径タイヤ推奨)</td></tr>
 </tbody>
 </table>
-<h4 data-i18n="g9.h3">Mini 4WD 標準シリーズ(片軸、9 種)</h4>
+<h2 data-i18n="g9.h3">Mini 4WD 標準シリーズ(片軸、9 種)</h2>
 <table class="guide-table">
 <thead>
 <tr>
@@ -1866,12 +1868,12 @@
 <tr><td>Plasma-Dash</td><td>★★★★</td><td>★★★</td><td>2.4–3.0V</td><td>25,000–28,000</td><td>1.4–1.9</td><td>4.1–5.2</td><td data-i18n="g9.std9.note">⚠ 最高回転 + 高トルク、ヒートシンク内蔵、日本公式競技では<strong>使用不可</strong></td></tr>
 </tbody>
 </table>
-<h4 data-i18n="g9.h4">公式競技ルールと使用範囲</h4>
+<h2 data-i18n="g9.h4">公式競技ルールと使用範囲</h2>
 <p data-i18n="g9.p4">タミヤ公式競技(ジャパンカップ等)のモーター使用には 2 層の制限があります:<strong>(1)シャーシ対応</strong> — PRO シャーシは PRO モーターのみ、標準シャーシは標準モーターのみ。<strong>(2)型式禁止</strong> — 一部の超高回転モーターは日本公式戦で使用不可(下記注意参照)。海外大会のルールは地域により異なるため、現地の主催者の発表をご確認ください。</p>
 <div class="guide-warning">
 <p data-i18n="g9.w1"><strong>日本公式競技で使用不可</strong>:Ultra-Dash と Plasma-Dash は電流と回転数がジャパンカップ規定上限を超えるため、タミヤにより「not for use in official Tamiya races in Japan」とされています。トップスピード計時等の非公式の場面では使用可能ですが、日本公式競技にはエントリーできません。台湾等の海外大会のルールは異なるため、現地主催者の発表をご確認ください。</p>
 </div>
-<h4 data-i18n="g9.h5">対応 MotorLab 慣らし戦略</h4>
+<h2 data-i18n="g9.h5">対応 MotorLab 慣らし戦略</h2>
 <p data-i18n="g9.p5">本表の 15 種モーターはすべて MotorLab M1/PRO の<strong>10 段階プログラム慣らし</strong>で処理可能ですが、電流帯に応じたパラメータ調整を推奨します:</p>
 <ul>
 <li data-i18n="g9.s1"><strong>低電流グループ(&lt; 2.5A)</strong> — Torque-Tuned 2 系、Atomic-Tuned 2 系、Light-Dash 系、Rev-Tuned 2 系:標準 10 段階、開始 1.0V、最高 2.4V。</li>

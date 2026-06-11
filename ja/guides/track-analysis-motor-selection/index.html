@@ -789,7 +789,8 @@
     padding-bottom: 18px;
     border-bottom: 1px solid var(--border);
   }
-  .guide-article h4 {
+  .guide-article h4,
+  .guide-article h2 {
     color: var(--accent-cyan);
     font-size: 15.5px;
     margin: 24px 0 10px;
@@ -797,7 +798,8 @@
     align-items: baseline;
     gap: 10px;
   }
-  .guide-article h4::before {
+  .guide-article h4::before,
+  .guide-article h2::before {
     content: '';
     display: inline-block;
     width: 8px;
@@ -1815,10 +1817,10 @@
 <span class="guide-tag" data-i18n="g10.tag">GUIDE · レース戦略</span>
 <h1 data-i18n="g10.title">Mini 4WD コース分析とモーター選び:区間比率で高速 / テクニカル / 立体を判定</h1><p class="guide-byline">編集者:MotorLab Team</p>
 <p class="guide-lead" data-i18n="g10.lead">同じモーターでもコースが違えば結果は段違い —— 高速コースの王者モーターを立体コースに持ち込むと完走すら難しいことも。本記事は定量化できる「コース区間比率法」を提案:あらゆる Mini 4WD<sup>®</sup> コースをストレート・カーブ・特殊の 3 区間に分解し、比率で高速・テクニカル・立体を判定して、最適なモーター・ギア比・タイヤ径を対応づけます。</p>
-<h4 data-i18n="g10.h1">なぜモーター選びは「コースを読む」ことから始まるのか</h4>
+<h2 data-i18n="g10.h1">なぜモーター選びは「コースを読む」ことから始まるのか</h2>
 <p data-i18n="g10.p1">モーター選びの最大の誤りは、<strong>モーターのスペックだけを見てコース特性を見ない</strong>ことです。27,000 RPM のスプリント系モーターは、急カーブとジャンプだらけの立体コースではコースアウトを繰り返すだけ。逆に高トルクモーターは長いストレートで高回転モーターに差をつけられます。</p>
 <p data-i18n="g10.p2">日本や欧米の上級コミュニティは「<strong>まずコースを読み、それからセッティングを決める</strong>」順序で考えます(タミヤ公式 Setup Guide も「Study the course」と明言)。しかし多くの攻略は<strong>定性的</strong>な記述(「ここが難所」)に留まり、定量化・再現可能な分類法がありません。本記事はその欠落を埋めます。</p>
-<h4 data-i18n="g10.h2">コースの 3 つの基本区間</h4>
+<h2 data-i18n="g10.h2">コースの 3 つの基本区間</h2>
 <p data-i18n="g10.p3">どんなに複雑な Mini 4WD<sup>®</sup> コースも、3 つの基本区間に分解できます:</p>
 <table class="guide-table">
 <thead>
@@ -1833,7 +1835,7 @@
 <div class="guide-tip">
 <p data-i18n="g10.tip1">区間を数える単位は「コース 1 枚」(タミヤ ジュニアサーキット 1 枚 = 1 ユニット)を推奨。同タイプの連続区間は 1 カウントにまとめます。</p>
 </div>
-<h4 data-i18n="g10.h3">比率で分類:高速・テクニカル・立体</h4>
+<h2 data-i18n="g10.h3">比率で分類:高速・テクニカル・立体</h2>
 <p data-i18n="g10.p4">3 つの区間それぞれの比率を数え、以下のしきい値で判定します(3 つの名称はいずれも日 / 英 / 台コミュニティ共通の用語):</p>
 <table class="guide-table">
 <thead>
@@ -1846,7 +1848,7 @@
 </tbody>
 </table>
 <p data-i18n="g10.p5">実際のコースの多くは混合型。<strong>比率が最も高い区間</strong>で主分類を決めます。2 つが近い場合は要求が厳しい方を採用(通常は立体 &gt; テクニカル &gt; 高速)。</p>
-<h4 data-i18n="g10.h4">3 タイプ別モーター選び対照</h4>
+<h2 data-i18n="g10.h4">3 タイプ別モーター選び対照</h2>
 <p data-i18n="g10.p6">モーターのスペックは <a href="/ja/benchmarks/tamiya-motor-full-lineup/">タミヤ全 15 種モーター規格対照表</a> を参照:</p>
 <table class="guide-table">
 <thead>
@@ -1862,7 +1864,7 @@
 <p data-i18n="g10.tip2"><strong>PRO シャーシ(両軸)</strong>の対応:高速 → マッハダッシュ PRO、テクニカル → ハイパーダッシュ PRO / アトミックチューン 2 PRO、立体 → トルクチューン 2 PRO。<strong>立体コースの逆説</strong>:ジャンプが密集すると「速すぎることが最大の敵」—— 速すぎると飛び過ぎて着地で制御を失います。やみくもに回転数を上げるより、トルク型 + 強力ブレーキを選ぶべき。</p>
 </div>
 <p data-i18n="g10.p7"><strong>核心原理</strong>:回転数とトルクは本質的に相反します(タミヤ 15 種で RPM 1.2 万〜2.8 万 はトルク 1.0〜2.0 mN·m と反比例)。選定とは「コースが必要とするのは最高速か加速か」のトレードオフです。</p>
-<h4 data-i18n="g10.h5">実例:2025 タミヤ ジャパンカップ「Wakening Venom Circuit 2025」</h4>
+<h2 data-i18n="g10.h5">実例:2025 タミヤ ジャパンカップ「Wakening Venom Circuit 2025」</h2>
 <p data-i18n="g10.p8">2025 年のタミヤ公式コースで比率法を実演します。本コース(巳年のヘビ型テーマ、全長約 212m)の主な区間:</p>
 <table class="guide-table">
 <thead>
@@ -1881,7 +1883,7 @@
 </table>
 <p data-i18n="g10.p9"><strong>比率計算</strong>:ストレート 1/8(12.5%)、カーブ 2/8(25%)、<strong>特殊 5/8(62.5%)</strong>。特殊区間 X が大きく主体 → <strong>立体コースと判定</strong>(ウェーブ/スロープ/ジャンプ密集)。</p>
 <p data-i18n="g10.p10"><strong>選定提案</strong>:上表の通り、立体コースは高トルク + 着地再加速を優先 —— 標準シリーズなら <strong>パワーダッシュ / ハイパーダッシュ 3</strong>、4.5:1 のトルク寄りギア比 + 小径タイヤ。ブレーキ系は連続ジャンプとウェーブ区間用に特に強化。後半はフラット高速に近づくため、ブレーキ制御が成熟していればバランス型アトミックチューン 2 で後半に速度を稼ぐ手も —— これこそ立体コースの「速度 vs 制御」の典型的トレードオフです。</p>
-<h4 data-i18n="g10.h6">3 ステップでコース分析</h4>
+<h2 data-i18n="g10.h6">3 ステップでコース分析</h2>
 <ul>
 <li data-i18n="g10.l1"><strong>区間を数える</strong> —— コース図または現地一周で、各枚を S / C / X とタグ付け、同タイプ連続はまとめる。</li>
 <li data-i18n="g10.l2"><strong>比率を計算</strong> —— S% / C% / X% を算出、上記しきい値で判定。</li>

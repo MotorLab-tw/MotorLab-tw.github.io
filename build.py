@@ -1413,6 +1413,13 @@ def build_guide_page(slug, lang, src_html, i18n, guide_cfg):
     if title_h3 is not None:
         title_h3.name = "h1"
 
+    # 3b-2. 章節小標 <h4> → <h2>(SEO:獨立頁標題層級應為 h1→h2,不可從 h1 直接跳到 h4)
+    #       母版文章內 <h4> 沿用首頁 card 視覺;抽成獨立頁後,各章節即 H1 之下的主段落 → 應為 H2。
+    #       文章內 h4 皆為同級章節(無巢狀,見 HANDOFF 結構),故一律升 h2。
+    #       CSS .guide-article h2 已對齊原 h4 樣式(index.src.html),視覺零變動。
+    for sec_h4 in target_article.find_all("h4"):
+        sec_h4.name = "h2"
+
     # 3c. 在 H1 後插入作者署名(MotorLab Team,三語對應 byline 文字)
     #     僅獨立頁顯示,首頁 card 不顯示(card 結構只保留 tag/h3/lead)
     if title_h3 is not None:

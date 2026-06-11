@@ -789,7 +789,8 @@
     padding-bottom: 18px;
     border-bottom: 1px solid var(--border);
   }
-  .guide-article h4 {
+  .guide-article h4,
+  .guide-article h2 {
     color: var(--accent-cyan);
     font-size: 15.5px;
     margin: 24px 0 10px;
@@ -797,7 +798,8 @@
     align-items: baseline;
     gap: 10px;
   }
-  .guide-article h4::before {
+  .guide-article h4::before,
+  .guide-article h2::before {
     content: '';
     display: inline-block;
     width: 8px;
@@ -1815,7 +1817,7 @@
 <span class="guide-tag" data-i18n="g3.tag">REFERENCE · 馬達速查</span>
 <h1 data-i18n="g3.title">田宮主流馬達特性與磨合策略對照表</h1><p class="guide-byline">編輯者:MotorLab Team</p>
 <p class="guide-lead" data-i18n="g3.lead">不同馬達的設計用途、轉速、扭力特性都不同,磨合方式自然也該有差。整理田宮 8 款主流馬達的官方規格與建議磨合策略。</p>
-<h4 data-i18n="g3.h1">入門級馬達(適合新手起手)</h4>
+<h2 data-i18n="g3.h1">入門級馬達(適合新手起手)</h2>
 <table class="guide-table">
 <thead>
 <tr><th data-i18n="g3.t.name">型號</th><th data-i18n="g3.t.spec">負載轉速 / 扭力</th><th data-i18n="g3.t.brush">電刷類型</th><th data-i18n="g3.t.policy">磨合策略</th></tr>
@@ -1827,7 +1829,7 @@
 <tr><td data-i18n="g3.m4.name">灰頭 Atomic Tuned</td><td>13,700 RPM / 10 g·cm</td><td data-i18n="g3.brush.copper">銅刷</td><td data-i18n="g3.t.p4">標準 10 階段</td></tr>
 </tbody>
 </table>
-<h4 data-i18n="g3.h2">進階級馬達(碳刷,可深度磨合)</h4>
+<h2 data-i18n="g3.h2">進階級馬達(碳刷,可深度磨合)</h2>
 <table class="guide-table">
 <thead>
 <tr><th data-i18n="g3.t.name2">型號</th><th data-i18n="g3.t.spec2">負載轉速 / 扭力</th><th data-i18n="g3.t.brush2">電刷類型</th><th data-i18n="g3.t.policy2">磨合策略</th></tr>
@@ -1839,7 +1841,7 @@
 <tr><td data-i18n="g3.m8.name">黑金剛 Plasma Dash</td><td>23,500 RPM / 13 g·cm</td><td data-i18n="g3.brush.carbon">碳刷</td><td data-i18n="g3.t.p8">慢工出細活,2 倍冷卻時間</td></tr>
 </tbody>
 </table>
-<h4 data-i18n="g3.h3">磨合策略差異說明</h4>
+<h2 data-i18n="g3.h3">磨合策略差異說明</h2>
 <p data-i18n="g3.p1"><strong>銅刷馬達</strong>(黃頭、紫頭、橘頭、灰頭):碳刷較薄、強度低,不適合高電壓磨合。建議起始電壓 0.8V,最高不超過 2.0V。</p>
 <p data-i18n="g3.p2"><strong>碳刷馬達</strong>(紅、綠、白、黑金剛):可承受較高磨合電壓,但黑金剛因轉速最高、發熱最快,冷卻時間應延長至一般馬達的兩倍。</p>
 <div class="guide-warning">

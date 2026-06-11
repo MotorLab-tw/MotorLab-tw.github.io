@@ -789,7 +789,8 @@
     padding-bottom: 18px;
     border-bottom: 1px solid var(--border);
   }
-  .guide-article h4 {
+  .guide-article h4,
+  .guide-article h2 {
     color: var(--accent-cyan);
     font-size: 15.5px;
     margin: 24px 0 10px;
@@ -797,7 +798,8 @@
     align-items: baseline;
     gap: 10px;
   }
-  .guide-article h4::before {
+  .guide-article h4::before,
+  .guide-article h2::before {
     content: '';
     display: inline-block;
     width: 8px;
@@ -1815,7 +1817,7 @@
 <span class="guide-tag" data-i18n="g2.tag">GUIDE · Avoid Mistakes</span>
 <h1 data-i18n="g2.title">Why Amateur Break-ins Fail: 5 Common Mistakes</h1><p class="guide-byline">Edited by MotorLab Team</p>
 <p class="guide-lead" data-i18n="g2.lead">Many returning hobbyists hear "break in your motor" and grab dry batteries — only to burn the motor or end up no faster. Here are the 5 most common mistakes and how to fix them.</p>
-<h4 data-i18n="g2.h1">Mistake 1: Voltage too high, time too long</h4>
+<h2 data-i18n="g2.h1">Mistake 1: Voltage too high, time too long</h2>
 <p data-i18n="g2.p1">The most common error: <strong>"Two AA batteries (3V) and let it run for half an hour"</strong>. Sounds reasonable. Actual consequences:</p>
 <ul>
 <li data-i18n="g2.l1">3V is near full-speed for Hyper Dash and Plasma Dash — you're basically skipping break-in</li>
@@ -1825,7 +1827,7 @@
 <div class="guide-warning">
 <p data-i18n="g2.w1">Correct approach: start at 1.0V, increase by 0.15V per stage, max 90s per stage, 15-30s cooling between stages.</p>
 </div>
-<h4 data-i18n="g2.h2">Mistake 2: Water break-in with too much water or no drying</h4>
+<h2 data-i18n="g2.h2">Mistake 2: Water break-in with too much water or no drying</h2>
 <p data-i18n="g2.p2">Water break-in uses water's high specific heat for cooling, plus mild damping. But amateur water break-ins suffer:</p>
 <ul>
 <li data-i18n="g2.l4"><strong>Water enters bearings</strong> — bearings rust, noise increases</li>
@@ -1835,14 +1837,14 @@
 <div class="guide-tip">
 <p data-i18n="g2.t2">The modern alternative is <strong>"precision-controlled dry break-in"</strong> — no liquids, just controlled voltage/current/cooling. Completely eliminates water damage risk.</p>
 </div>
-<h4 data-i18n="g2.h3">Mistake 3: One-direction only break-in</h4>
+<h2 data-i18n="g2.h3">Mistake 3: One-direction only break-in</h2>
 <p data-i18n="g2.p3">Many users only run the motor in one direction during break-in. Result: one side of each brush forms an arc; the other stays flat. Even though the car only runs one direction, <strong>asymmetric wear causes two problems</strong>:</p>
 <ul>
 <li data-i18n="g2.l7">Uneven current distribution — overloaded side burns out early</li>
 <li data-i18n="g2.l8">If you ever do reverse runs (e.g. launch practice), the un-broken side will spark</li>
 </ul>
 <p data-i18n="g2.p4"><strong>Correct approach</strong>: include ~30% reverse runs during break-in to wear both sides symmetrically.</p>
-<h4 data-i18n="g2.h4">Mistake 4: Skipping pre/post measurements</h4>
+<h2 data-i18n="g2.h4">Mistake 4: Skipping pre/post measurements</h2>
 <p data-i18n="g2.p5">You break in, install in the car, race — then realize "huh, no faster?" The reason: <strong>without baseline measurements, you have no idea if break-in worked</strong>.</p>
 <p data-i18n="g2.p6">Measure before and after under identical conditions (same voltage, same load):</p>
 <ul>
@@ -1851,7 +1853,7 @@
 <li data-i18n="g2.l11">Current Coefficient of Variation (CV) — stability indicator</li>
 </ul>
 <p data-i18n="g2.p7">All three should improve post break-in. If not, break-in was incomplete or wrong.</p>
-<h4 data-i18n="g2.h5">Mistake 5: No records, judging by feel</h4>
+<h2 data-i18n="g2.h5">Mistake 5: No records, judging by feel</h2>
 <p data-i18n="g2.p8">The deadliest mistake — <strong>breaking in every motor "roughly the same way" with no data</strong>. Result:</p>
 <ul>
 <li data-i18n="g2.l12">Can't tell if a motor is "broken-in well" vs "degraded"</li>

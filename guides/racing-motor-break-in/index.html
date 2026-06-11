@@ -789,7 +789,8 @@
     padding-bottom: 18px;
     border-bottom: 1px solid var(--border);
   }
-  .guide-article h4 {
+  .guide-article h4,
+  .guide-article h2 {
     color: var(--accent-cyan);
     font-size: 15.5px;
     margin: 24px 0 10px;
@@ -797,7 +798,8 @@
     align-items: baseline;
     gap: 10px;
   }
-  .guide-article h4::before {
+  .guide-article h4::before,
+  .guide-article h2::before {
     content: '';
     display: inline-block;
     width: 8px;
@@ -1815,7 +1817,7 @@
 <span class="guide-tag" data-i18n="g5.tag">GUIDE · 競賽脈絡</span>
 <h1 data-i18n="g5.title">為什麼磨馬達決定四驅車比賽勝負?競賽水準的磨合差距</h1><p class="guide-byline">編輯者:MotorLab Team</p>
 <p class="guide-lead" data-i18n="g5.lead">迷你四驅車比賽看似只是讓車跑完一圈,實際上 0.1 秒的差距就決定誰能上台。在這個微秒級的競爭裡,「馬達磨合」是大多數車手忽略、卻決定性影響成績的環節。本文從競賽角度切入,解釋為什麼業餘磨合方式在比賽中行不通、職業選手如何看待馬達準備。</p>
-<h4 data-i18n="g5.h1">為什麼業餘磨合在比賽中行不通</h4>
+<h2 data-i18n="g5.h1">為什麼業餘磨合在比賽中行不通</h2>
 <p data-i18n="g5.p1">「在水裡跑、用乾電池正反向、磨個 30 分鐘」是大多數車手的標準作法。這套方法在練習賽尚可接受,但搬到正式比賽就會出問題:</p>
 <ul>
 <li data-i18n="g5.l1"><strong>轉速波動大</strong>—同一顆紅二(Hyper Dash 2),手工水磨完可能跑出 17,000~19,300 RPM 不等的範圍,輸贏就差在那 2,000 轉</li>
@@ -1824,7 +1826,7 @@
 <li data-i18n="g5.l4"><strong>不知道是否磨完</strong>—多磨一輪不會比較好,反而可能磨穿;少磨一輪則達不到設計轉速</li>
 </ul>
 <p data-i18n="g5.p2">業餘做法的核心問題不是「方法錯」,而是「沒有可量化標準」。<strong>贏一場是運氣,贏一季是系統</strong>。</p>
-<h4 data-i18n="g5.h2">比賽中的決定性差距</h4>
+<h2 data-i18n="g5.h2">比賽中的決定性差距</h2>
 <p data-i18n="g5.p3">職業車手把馬達當「賽車引擎」對待,有 3 個量化指標決定能否上頒獎台:</p>
 <table class="guide-table">
 <thead>
@@ -1837,7 +1839,7 @@
 </tbody>
 </table>
 <p data-i18n="g5.p4">這些差距不是「好一點」,而是「不在同一檔次」。當對手的馬達可以連續跑出 18,800、18,750、18,820 RPM,你的車跑出 17,200、19,100、18,300,平均看起來差不多,但決賽那一圈拿到哪顆,純看運氣。</p>
-<h4 data-i18n="g5.h3">賽季中的實戰場景</h4>
+<h2 data-i18n="g5.h3">賽季中的實戰場景</h2>
 <p data-i18n="g5.p5">田宮的 <strong>Japan Cup Open(JCO)</strong> 是亞洲最大的迷你四驅車賽事,區域預選到全國決賽通常跨越 4–6 個月。在這個賽季長度下,馬達狀態變化是常態:</p>
 <ul>
 <li data-i18n="g5.l5"><strong>賽前 Staging 區</strong>—許多車手會在這裡做最後一次轉速測量,確認馬達沒有在運送過程中受損</li>
@@ -1846,10 +1848,10 @@
 <li data-i18n="g5.l8"><strong>跨賽季衰減</strong>—上一場決賽用過的「冠軍馬達」,下一場可能因為運送震動與溫差累積已降 3–5%,沒有比對資料就是賭運氣</li>
 </ul>
 <p data-i18n="g5.p6">頂尖車手不會在賽事當天才挑馬達—他們在賽季開始前就建好整批馬達的「健康履歷」。</p>
-<h4 data-i18n="g5.h4">競賽車手對馬達的真正需求</h4>
+<h2 data-i18n="g5.h4">競賽車手對馬達的真正需求</h2>
 <p data-i18n="g5.p7">頂尖車手會為每顆馬達建立<strong>健康指紋(Health Fingerprint)</strong>—在標準環境下記錄電流曲線、轉速、溫升、振動頻譜。後續任何時候都可以比對,精準判斷馬達狀態,而不是憑「跑起來覺得不對勁」。</p>
 <p data-i18n="g5.p8">更進階的玩法是<strong>成對配對(Pair Matching)</strong>:從多顆馬達中找出特性最接近的兩顆做為主備車,讓比賽中可以隨時換車而不影響戰術。這在 JCO 等大型賽事是普遍做法,但只有具備量測能力才可能達成。</p>
-<h4 data-i18n="g5.h5">從業餘到競賽:量化測試的價值</h4>
+<h2 data-i18n="g5.h5">從業餘到競賽:量化測試的價值</h2>
 <p data-i18n="g5.p9">升級的關鍵不是「換更貴的馬達」,而是「能驗證馬達狀態」。沒有量測,連自己的馬達是否磨好都不知道,遑論談戰術。</p>
 <p data-i18n="g5.p10">當前競技圈頂層車手的共通點是:把馬達準備從「手感」轉成「數據」。無論用哪一套工具,關鍵都是建立可重現的測量流程、保留每顆馬達的歷史紀錄、用客觀指標決策。</p>
 <div class="guide-tip">
