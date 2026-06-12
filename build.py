@@ -295,7 +295,7 @@ GUIDES = [
                 "h1_for_ld": "田宮主流馬達特性與磨合策略對照表",
             },
             "en": {
-                "title": "Tamiya Mini 4WD Motor Specs & Break-in Strategy Reference | MotorLab",
+                "title": "Tamiya Mini 4WD Motor Specs Chart & Break-in Guide | MotorLab",
                 "description": "Official specs and break-in strategy for 8 mainstream Tamiya Mini 4WD motors (Hyper Dash, Plasma Dash, Rev-Tuned and more), plus copper vs carbon brushes.",
                 "keywords": "Tamiya motor specs, Tamiya Mini 4WD motors, Hyper Dash 2, Plasma Dash, Rev-Tuned, Torque-Tuned, Atomic-Tuned, Power Dash, Sprint Dash, Light Dash, copper vs carbon brush, Tamiya motor break-in, Tamiya competition rules",
                 "breadcrumb": "Tamiya Motor Reference",
@@ -459,7 +459,7 @@ GUIDES = [
                 "h1_for_ld": "田宮 Mini 4WD® 全 15 款馬達規格對照表(含 PRO 系列)",
             },
             "en": {
-                "title": "Tamiya Mini 4WD® Motor Full Lineup: All 15 Models | MotorLab",
+                "title": "Tamiya Mini 4WD® Motors: Full Specs Chart (15 Models) | MotorLab",
                 "description": "Spec comparison for all 15 Tamiya Mini 4WD motors — 9 standard + 6 PRO: RPM, torque, current, Speed/Torque ratings, race compliance and break-in strategy.",
                 "keywords": "Tamiya Mini 4WD motors, Tamiya 15 motors, Mini 4WD PRO motors, double-shaft motor, single-shaft motor, Tamiya motor specifications, Hyper-Dash PRO, Mach-Dash PRO, Plasma-Dash, Ultra-Dash, Power-Dash, Sprint-Dash, Tamiya race compliance, Tamiya motor comparison table",
                 "breadcrumb": "Full Lineup (15 Motors)",
