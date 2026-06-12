@@ -288,11 +288,11 @@ GUIDES = [
         "key": "g3",
         "i18n": {
             "zh": {
-                "title": "田宮主流馬達特性與磨合策略對照表 | 紅二/黑金剛/紫頭速查 | MotorLab",
+                "title": "田宮主流馬達規格與磨合策略對照表 | 紅二/黑金剛/紫頭速查 | MotorLab",
                 "description": "田宮 8 款主流 Mini 4WD 馬達(紅二 Hyper Dash、黑金剛 Plasma Dash、紫頭 Rev Tuned、橘頭 Torque Tuned 等)的官方規格與建議磨合策略對照表。銅刷與碳刷馬達的磨合差異,以及田宮競賽合規規則。",
-                "keywords": "田宮馬達規格, 田宮馬達, 紅二 Hyper Dash, 黑金剛 Plasma Dash, 紫頭 Rev Tuned, 橘頭 Torque Tuned, 灰頭 Atomic Tuned, 綠頭 Power Dash, 白頭 Sprint Dash, 銅刷碳刷差別, 田宮馬達磨合, 田宮競賽規則",
+                "keywords": "田宮馬達規格, 四驅車馬達規格, 田宮馬達, 紅二 Hyper Dash, 黑金剛 Plasma Dash, 紫頭 Rev Tuned, 橘頭 Torque Tuned, 灰頭 Atomic Tuned, 綠頭 Power Dash, 白頭 Sprint Dash, 銅刷碳刷差別, 田宮馬達磨合, 田宮競賽規則",
                 "breadcrumb": "田宮馬達速查表",
-                "h1_for_ld": "田宮主流馬達特性與磨合策略對照表",
+                "h1_for_ld": "田宮主流馬達規格與磨合策略對照表",
             },
             "en": {
                 "title": "Tamiya Mini 4WD Motor Specs Chart & Break-in Guide | MotorLab",
