@@ -117,7 +117,7 @@
   "description": "Mini 4WD® 馬達磨合與精密測試系統。內建十階段可程式化磨合、AI 智慧馬達健康管理、軸承阻力測試、電刷接觸穩定診斷。",
   "image": "https://motorlab-tw.github.io/og-image.png",
   "url": "https://motorlab-tw.github.io/",
-  "softwareVersion": "v3.1.0",
+  "softwareVersion": "v3.2.1",
   "applicationCategory": "EngineeringApplication",
   "applicationSubCategory": "Motor Testing & Diagnostics",
   "operatingSystem": "Cross-platform (WiFi + Web Browser)",
@@ -1863,7 +1863,7 @@
 
     <div class="splash-log">
       <div class="log-line l1">[<span class="ok">OK</span>] Boot sequence started</div>
-      <div class="log-line l2">[<span class="ok">OK</span>] Loading firmware v3.1.0</div>
+      <div class="log-line l2">[<span class="ok">OK</span>] Loading firmware v3.2.1</div>
       <div class="log-line l3">[<span class="ok">OK</span>] Sensor calibration complete</div>
       <div class="log-line l4">[<span class="ok">OK</span>] WebSocket channel ready</div>
       <div class="log-line l5">[<span class="ok">OK</span>] System online — welcome</div>
@@ -1912,7 +1912,7 @@
     <div class="hero-grid">
       <div>
         <div class="hero-badge">
-          <span data-i18n="hero.badge">系統運作中 · v3.1.0</span>
+          <span data-i18n="hero.badge">系統運作中 · v3.2.1</span>
         </div>
         <h1 data-i18n="hero.title">
           為每一顆<br>
@@ -3179,10 +3179,43 @@
     </div>
 
     <div class="changelog">
+      <!-- v3.2.1 -->
+      <div class="changelog-item">
+        <div class="changelog-meta">
+          <span class="version-badge latest">v3.2.1</span>
+          <span class="changelog-date">2026-06-19</span>
+        </div>
+        <div class="changelog-content">
+          <h4 data-i18n="cl.v321.title">全球資料庫瀏覽體驗優化</h4>
+          <ul>
+            <li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v321.l1">每頁顯示筆數(10 / 50 / 100)與翻頁</span></li>
+            <li><span class="change-type change-improve" data-i18n="cl.IMPROVE">改進</span><span data-i18n="cl.v321.l2">全球資料庫清單新增排序(最高轉速 / 平均轉速 / 穩定電流)</span></li>
+            <li><span class="change-type change-improve" data-i18n="cl.IMPROVE">改進</span><span data-i18n="cl.v321.l3">清單改為表格呈現，欄位更清楚，手機可橫向捲動</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- v3.2.0 -->
+      <div class="changelog-item">
+        <div class="changelog-meta">
+          <span class="version-badge">v3.2.0</span>
+          <span class="changelog-date">2026-06-19</span>
+        </div>
+        <div class="changelog-content">
+          <h4 data-i18n="cl.v320.title">全球磨合資料庫 · 連線體驗升級</h4>
+          <ul>
+            <li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v320.l1">全球磨合資料庫:可直接從機器上傳 / 瀏覽 / 下載全球玩家分享的磨合紀錄</span></li>
+            <li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v320.l2">歷史紀錄詳情頁可一鍵「分享到全球資料庫」</span></li>
+            <li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v320.l3">連上機器熱點後自動彈出選單，按一下即進入操作介面</span></li>
+            <li><span class="change-type change-improve" data-i18n="cl.IMPROVE">改進</span><span data-i18n="cl.v320.l4">連線網址調整為 http://10.10.10.1/</span></li>
+          </ul>
+        </div>
+      </div>
+
       <!-- v3.1.0 -->
       <div class="changelog-item">
         <div class="changelog-meta">
-          <span class="version-badge latest">v3.1.0</span>
+          <span class="version-badge">v3.1.0</span>
           <span class="changelog-date">2026-05-30</span>
         </div>
         <div class="changelog-content">
@@ -3192,35 +3225,6 @@
             <li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v310.l2">紀錄擴充欄位:馬達型號、備註、使用者名稱、國家</span></li>
             <li><span class="change-type change-improve" data-i18n="cl.IMPROVE">改進</span><span data-i18n="cl.v310.l3">磨合頁「本次磨合名稱」改為馬達型號下拉 + 備註兩欄並排</span></li>
             <li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v310.l4">系統設定「使用者設定」區塊</span></li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- v3.0.8 -->
-      <div class="changelog-item">
-        <div class="changelog-meta">
-          <span class="version-badge">v3.0.8</span>
-          <span class="changelog-date">2026-05-18</span>
-        </div>
-        <div class="changelog-content">
-          <h4 data-i18n="cl.v308.title">介面文案精煉</h4>
-          <ul>
-            <li><span class="change-type change-improve" data-i18n="cl.IMPROVE">改進</span><span data-i18n="cl.v308.l1">Web UI 文字精簡、用詞中性化</span></li>
-            <li><span class="change-type change-improve" data-i18n="cl.IMPROVE">改進</span><span data-i18n="cl.v308.l2">移除介面 emoji，視覺更專業俐落</span></li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- v3.0.7 -->
-      <div class="changelog-item">
-        <div class="changelog-meta">
-          <span class="version-badge">v3.0.7</span>
-          <span class="changelog-date">2026-05-17</span>
-        </div>
-        <div class="changelog-content">
-          <h4 data-i18n="cl.v307.title">使用者體驗優化</h4>
-          <ul>
-            <li><span class="change-type change-improve" data-i18n="cl.IMPROVE">改進</span><span data-i18n="cl.v307.l1">技術用詞中性化，新手玩家也能輕鬆閱讀</span></li>
           </ul>
         </div>
       </div>
@@ -3257,7 +3261,7 @@
           <div class="stat-label" data-i18n="about.s1">開發里程碑</div>
         </div>
         <div>
-          <div class="stat-num">v3.1.0</div>
+          <div class="stat-num">v3.2.1</div>
           <div class="stat-label" data-i18n="about.s2">當前韌體版本</div>
         </div>
         <div>
@@ -3304,7 +3308,7 @@
         <strong>MotorLab.tw</strong> · <span data-i18n="footer.tagline">Mini 4WD Performance Lab</span>
       </div>
       <div class="mono">
-        © 2026 MotorLab · <span data-i18n="footer.firmware">韌體</span> v3.1.0
+        © 2026 MotorLab · <span data-i18n="footer.firmware">韌體</span> v3.2.1
       </div>
     </div>
   </div>
@@ -3356,7 +3360,7 @@
       'nav.changelog': '更新',
       'nav.about': '關於',
       'nav.contact': '聯絡',
-      'hero.badge': '系統運作中 · v3.1.0',
+      'hero.badge': '系統運作中 · v3.2.1',
       'hero.title': '為每一顆<br>Mini 4WD<sup>®</sup> 馬達<br>建立<span class="accent">健康指紋</span>',
       'hero.lead': 'MotorLab 是為 Mini 4WD<sup>®</sup> 玩家打造的精密馬達磨合與測試系統。從十階段可程式化磨合、軸承衰減量測、電刷接觸穩定診斷,到 AI 馬達健康管理 — 讓每一次調校都可量化、可重複、可比較。',
       'hero.cta1': '瀏覽功能',
@@ -4042,6 +4046,15 @@
       'cl.FIX': '修正',
       'cl.IMPROVE': '改進',
       'cl.SECURITY': '安全',
+      'cl.v321.title': '全球資料庫瀏覽體驗優化',
+      'cl.v321.l1': '每頁顯示筆數(10 / 50 / 100)與翻頁',
+      'cl.v321.l2': '全球資料庫清單新增排序(最高轉速 / 平均轉速 / 穩定電流)',
+      'cl.v321.l3': '清單改為表格呈現,欄位更清楚,手機可橫向捲動',
+      'cl.v320.title': '全球磨合資料庫 · 連線體驗升級',
+      'cl.v320.l1': '全球磨合資料庫:可直接從機器上傳 / 瀏覽 / 下載全球玩家分享的磨合紀錄',
+      'cl.v320.l2': '歷史紀錄詳情頁可一鍵「分享到全球資料庫」',
+      'cl.v320.l3': '連上機器熱點後自動彈出選單,按一下即進入操作介面',
+      'cl.v320.l4': '連線網址調整為 http://10.10.10.1/',
       'cl.v310.title': '歷史紀錄安全強化',
       'cl.v310.l1': '歷史紀錄匯出 / 匯入需通過簽章驗證',
       'cl.v310.l2': '紀錄擴充欄位:馬達型號、備註、使用者名稱、國家',
@@ -4094,7 +4107,7 @@
       'nav.changelog': 'Changelog',
       'nav.about': 'About',
       'nav.contact': 'Contact',
-      'hero.badge': 'System running · v3.1.0',
+      'hero.badge': 'System running · v3.2.1',
       'hero.title': 'Build a <span class="accent">health fingerprint</span><br>for every<br>Mini 4WD<sup>®</sup> motor',
       'hero.lead': 'MotorLab is a precision motor break-in and diagnostic system built for Mini 4WD<sup>®</sup> enthusiasts. From 10-stage programmable break-in to bearing decay analysis, brush contact diagnostics, and AI motor health management — make every tune measurable, repeatable, and comparable.',
       'hero.cta1': 'Browse Features',
@@ -4780,6 +4793,15 @@
       'cl.FIX': 'FIX',
       'cl.IMPROVE': 'IMPROVE',
       'cl.SECURITY': 'SECURITY',
+      'cl.v321.title': 'Global Database Browsing Polish',
+      'cl.v321.l1': 'Per-page count (10 / 50 / 100) with pagination',
+      'cl.v321.l2': 'Sort the global database list (max RPM / avg RPM / stable current)',
+      'cl.v321.l3': 'List redesigned as a table — clearer columns, horizontal scroll on mobile',
+      'cl.v320.title': 'Global Break-in Database · Connectivity Upgrade',
+      'cl.v320.l1': 'Global break-in database: upload / browse / download players’ records straight from the machine',
+      'cl.v320.l2': 'One-tap “Share to global database” from a record’s detail page',
+      'cl.v320.l3': 'Captive portal: connect to the AP and the menu pops up automatically',
+      'cl.v320.l4': 'Connection address changed to http://10.10.10.1/',
       'cl.v310.title': 'Hardened History Records',
       'cl.v310.l1': 'History export / import now requires signature verification',
       'cl.v310.l2': 'Extended record fields: motor model, notes, username, country',
@@ -4832,7 +4854,7 @@
       'nav.changelog': '更新履歴',
       'nav.about': '概要',
       'nav.contact': 'お問い合わせ',
-      'hero.badge': 'システム稼働中 · v3.1.0',
+      'hero.badge': 'システム稼働中 · v3.2.1',
       'hero.title': 'すべての<br>Mini 4WD<sup>®</sup> モーターに<br><span class="accent">健康指紋</span>を',
       'hero.lead': 'MotorLab は Mini 4WD<sup>®</sup> プレイヤーのために設計された精密モーター慣らし・測定システムです。10 段階プログラム慣らし、ベアリング減衰測定、ブラシ接触安定診断、AI モーター健康管理まで — すべての調整を定量化・再現・比較できます。',
       'hero.cta1': '機能を見る',
@@ -4979,6 +5001,15 @@
       'cl.FIX': '修正',
       'cl.IMPROVE': '改善',
       'cl.SECURITY': 'セキュリティ',
+      'cl.v321.title': 'グローバルデータ庫の閲覧体験を最適化',
+      'cl.v321.l1': '1 ページ表示件数(10 / 50 / 100)とページ送り',
+      'cl.v321.l2': 'グローバルデータ庫リストに並べ替え追加(最高回転数 / 平均回転数 / 安定電流)',
+      'cl.v321.l3': 'リストを表形式に変更、列が見やすく、スマホでは横スクロール対応',
+      'cl.v320.title': 'グローバル慣らしデータ庫 · 接続体験アップグレード',
+      'cl.v320.l1': 'グローバル慣らしデータ庫:マシンから直接、世界中のプレイヤーの記録をアップロード / 閲覧 / ダウンロード',
+      'cl.v320.l2': '履歴記録の詳細ページからワンタップで「グローバルデータ庫に共有」',
+      'cl.v320.l3': 'マシンのアクセスポイントに接続すると自動でメニューが表示、ワンタップで操作画面へ',
+      'cl.v320.l4': '接続アドレスを http://10.10.10.1/ に変更',
       'cl.v310.title': '履歴記録のセキュリティ強化',
       'cl.v310.l1': '履歴のエクスポート / インポートに署名検証を必須化',
       'cl.v310.l2': '記録の拡張フィールド:モーター型番、備考、ユーザー名、国',
