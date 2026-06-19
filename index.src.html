@@ -1791,20 +1791,15 @@
   .lab-h2 { font-size: clamp(24px, 4vw, 34px); font-weight: 700; line-height: 1.25; margin-bottom: 14px; }
   .lab-lead { color: var(--text-secondary); max-width: 720px; font-size: clamp(15px, 2vw, 17px); line-height: 1.7; margin-bottom: 24px; }
 
-  /* 上傳區 */
-  .lab-upload {
-    border: 2px dashed var(--accent-blue); border-radius: 16px;
-    padding: 40px 24px; text-align: center; background: rgba(46,52,64,0.30);
-    transition: border-color .15s, background .15s;
+  /* APP 導引區(上傳/下載皆在 APP 內進行,網頁僅瀏覽) */
+  .lab-appnote {
+    border: 1px solid var(--accent-blue); border-left: 4px solid var(--accent-cyan);
+    border-radius: 12px; padding: 24px 28px; background: rgba(46,52,64,0.30); max-width: 760px;
   }
-  .lab-upload.lab-drag { border-color: var(--accent-cyan); background: rgba(136,192,208,0.10); }
-  .lab-drop-hint { color: var(--text-muted); font-size: 14px; margin-top: 14px; }
-  .lab-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
-  .lab-status { margin-top: 18px; font-size: 15px; min-height: 22px; }
-  .lab-status.ok { color: var(--success); }
-  .lab-status.warn { color: var(--warning); }
-  .lab-status.err { color: var(--danger); }
-  .lab-tos { color: var(--text-muted); font-size: 13px; line-height: 1.6; margin-top: 24px; max-width: 720px; }
+  .lab-appnote-main {
+    color: var(--text-primary); font-size: clamp(15px, 2vw, 17px); line-height: 1.7; margin: 0;
+  }
+  .lab-tos { color: var(--text-muted); font-size: 13px; line-height: 1.6; margin: 16px 0 0; max-width: 720px; }
 
   /* 按鈕 */
   .lab-btn {

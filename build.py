@@ -882,12 +882,10 @@ LAB = {
             "eyebrow": "Data Lab · 全球馬達磨合資料庫",
             "hero_title": "上傳・下載<br><span class='lab-accent'>全球 Mini 4WD<span class='lab-reg'>®</span> 馬達磨合資料</span>",
             "hero_p": "把馬達磨合機產出的磨合配方紀錄分享給全世界或下載別人的配方,下載原檔可直接匯入你的馬達磨合機重現。",
-            "up_eyebrow": "Upload · 上傳",
-            "up_h2": "分享你的磨合紀錄",
-            "up_p": "選擇馬達磨合機匯出的 .json 檔。系統會在伺服器端驗證簽章、只有未經竄改的紀錄會被收錄。",
-            "up_btn": "選擇檔案上傳",
-            "up_hint": "或把 .json 檔拖曳到這裡",
-            "tos": "上傳即表示你同意公開分享此紀錄。紀錄中的署名/國家欄位在你的馬達磨合機系統設定中設置,系統預設為匿名。如需移除已上傳的紀錄,請來信 motorlab.tw@gmail.com。",
+            "up_eyebrow": "App · 上傳・下載",
+            "up_h2": "分享與套用磨合配方",
+            "app_cta": "請由 MotorLab APP 程式內進行上傳分享與下載套用。本頁僅供瀏覽全球玩家公開分享的磨合配方。",
+            "tos": "公開分享的紀錄中,署名/國家欄位在你的馬達磨合機系統設定中設置,系統預設為匿名。如需移除已上傳的紀錄,請來信 motorlab.tw@gmail.com。",
             "ls_eyebrow": "Browse · 瀏覽",
             "ls_h2": "全球玩家的磨合紀錄",
             "ls_note": "馬達磨合資料庫中所有的配方檔由全球 MotorLab 使用者提供,使用者自行評估下載使用。",
@@ -937,12 +935,10 @@ LAB = {
             "eyebrow": "Data Lab",
             "hero_title": "Upload &amp; download<br><span class='lab-accent'>Mini 4WD<span class='lab-reg'>®</span> break-in data, worldwide</span>",
             "hero_p": "Share the break-in profiles your motor break-in machine produces with the world, or download someone else's profile — the original file re-imports straight into your machine.",
-            "up_eyebrow": "Upload",
-            "up_h2": "Share your break-in record",
-            "up_p": "Pick the .json file your machine exported. Signatures are verified server-side — only untampered records are accepted.",
-            "up_btn": "Choose a file to upload",
-            "up_hint": "or drag a .json file here",
-            "tos": "Uploading means you agree to share this record publicly. The name/country fields are set in your motor break-in machine's system settings and default to anonymous. To remove an uploaded record, email motorlab.tw@gmail.com.",
+            "up_eyebrow": "App · Upload &amp; Download",
+            "up_h2": "Share &amp; apply break-in profiles",
+            "app_cta": "Upload, share, download and apply profiles from within the MotorLab app. This page is for browsing the break-in profiles players share worldwide.",
+            "tos": "For publicly shared records, the name/country fields are set in your motor break-in machine's system settings and default to anonymous. To remove an uploaded record, email motorlab.tw@gmail.com.",
             "ls_eyebrow": "Browse",
             "ls_h2": "Break-in records from racers worldwide",
             "ls_note": "All profiles in this library are submitted by MotorLab users worldwide. Download and use them at your own discretion.",
@@ -992,12 +988,10 @@ LAB = {
             "eyebrow": "Data Lab · データ庫",
             "hero_title": "アップロード・ダウンロード<br><span class='lab-accent'>世界の Mini 4WD<span class='lab-reg'>®</span> 慣らしデータ</span>",
             "hero_p": "モーター慣らし機が生成した慣らしレシピ記録を世界に共有、あるいは誰かのレシピをダウンロード —— 元ファイルはそのままモーター慣らし機に再インポートできます。",
-            "up_eyebrow": "Upload · アップロード",
-            "up_h2": "あなたの慣らし記録を共有",
-            "up_p": "マシンが書き出した .json ファイルを選択。署名はサーバー側で検証され、改ざんのない記録のみ収録されます。",
-            "up_btn": "ファイルを選択してアップロード",
-            "up_hint": "または .json ファイルをここにドラッグ",
-            "tos": "アップロードはこの記録の公開共有に同意したことを意味します。名前/国の欄はモーター慣らし機のシステム設定で設定され、初期値は匿名です。記録の削除は motorlab.tw@gmail.com までご連絡ください。",
+            "up_eyebrow": "App · アップロード・ダウンロード",
+            "up_h2": "慣らしレシピの共有と適用",
+            "app_cta": "アップロード・共有・ダウンロード・適用は MotorLab アプリ内で行ってください。本ページは世界中のプレイヤーが公開した慣らしレシピの閲覧専用です。",
+            "tos": "公開共有される記録の名前/国の欄はモーター慣らし機のシステム設定で設定され、初期値は匿名です。記録の削除は motorlab.tw@gmail.com までご連絡ください。",
             "ls_eyebrow": "Browse · 一覧",
             "ls_h2": "世界のレーサーの慣らし記録",
             "ls_note": "このデータ庫のすべてのレシピは世界中の MotorLab ユーザーから提供されています。ダウンロード・利用は各自の判断でお願いします。",
@@ -2009,12 +2003,6 @@ LAB_APP_JS = r"""
   function hasApi() { return API && API.indexOf("PUT_") !== 0; }
   function apiq(qs) { return API + (API.indexOf("?") < 0 ? "?" : "&") + qs; }
 
-  function setStatus(msg, kind) {
-    var el = $("lab-status");
-    if (!el) return;
-    el.textContent = msg || "";
-    el.className = "lab-status" + (kind ? " " + kind : "");
-  }
   function esc(s) {
     return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) {
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
@@ -2024,38 +2012,6 @@ LAB_APP_JS = r"""
     if (n === "" || n == null || isNaN(n)) return "—";
     return Number(n).toLocaleString();
   }
-  function abToB64(buf) {
-    var bytes = new Uint8Array(buf), bin = "", chunk = 0x8000;
-    for (var i = 0; i < bytes.length; i += chunk) {
-      bin += String.fromCharCode.apply(null, bytes.subarray(i, i + chunk));
-    }
-    return btoa(bin);
-  }
-  function b64ToBlob(b64) {
-    var bin = atob(b64), len = bin.length, bytes = new Uint8Array(len);
-    for (var i = 0; i < len; i++) bytes[i] = bin.charCodeAt(i);
-    return new Blob([bytes], { type: "application/json" });
-  }
-
-  function upload(file) {
-    if (!hasApi()) { setStatus(T.no_api, "err"); return; }
-    if (!file) return;
-    setStatus(T.uploading, "");
-    var fr = new FileReader();
-    fr.onload = function () {
-      var body = JSON.stringify({ file_b64: abToB64(fr.result), filename: file.name || "", hp: ($("lab-hp") || {}).value || "" });
-      fetch(API, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: body })
-        .then(function (r) { return r.json(); })
-        .then(function (d) {
-          if (d.ok && d.dup) setStatus(T.up_dup, "warn");
-          else if (d.ok) { setStatus(T.up_ok, "ok"); loadList(); }
-          else setStatus(T.up_err + (d.err ? ": " + d.err : ""), "err");
-        })
-        .catch(function () { setStatus(T.err_network, "err"); });
-    };
-    fr.readAsArrayBuffer(file);
-  }
-
   // 可排序欄位 → 取值函式(數值欄轉 Number,日期欄按字串)
   var SORT_GETTERS = {
     rpm_max_overall: function (it) { return Number(it.rpm_max_overall) || 0; },
@@ -2074,7 +2030,7 @@ LAB_APP_JS = r"""
     var h = '<table class="lab-table"><thead><tr>' +
       "<th>" + esc(T.c_motor) + "</th><th>" + esc(T.c_owner) + "</th><th>" + esc(T.c_country) +
       "</th><th>" + esc(T.c_rpm) + "</th><th>" + esc(T.c_rpm_avg) + "</th><th>" + esc(T.c_current) +
-      "</th><th>" + esc(T.c_date) + "</th><th></th></tr></thead><tbody>";
+      "</th><th>" + esc(T.c_date) + "</th></tr></thead><tbody>";
     items.forEach(function (it) {
       var owner = (it.owner_name && it.owner_name !== "--") ? it.owner_name : T.anon;
       var country = (it.owner_country && it.owner_country !== "--") ? it.owner_country : "—";
@@ -2087,10 +2043,7 @@ LAB_APP_JS = r"""
         '<td class="lab-mono">' + fmtNum(it.rpm_max_overall) + "</td>" +
         '<td class="lab-mono">' + fmtNum(it.rpm_avg_overall) + "</td>" +
         '<td class="lab-mono">' + fmtNum(it.stable_current_overall) + "</td>" +
-        '<td class="lab-mono">' + esc(date) + "</td>" +
-        '<td class="lab-row-actions">' +
-        '<button type="button" class="lab-btn lab-btn-sm" data-dl="' + esc(it.content_sha256) + '">' + esc(T.download) + "</button>" +
-        "</td></tr>";
+        '<td class="lab-mono">' + esc(date) + "</td></tr>";
     });
     box.innerHTML = h + "</tbody></table>";
   }
@@ -2175,42 +2128,10 @@ LAB_APP_JS = r"""
     }).catch(function () { box.innerHTML = '<p class="lab-muted">' + esc(T.err_network) + "</p>"; });
   }
 
-  function download(sha) {
-    if (!hasApi()) { setStatus(T.no_api, "err"); return; }
-    setStatus(T.preparing, "");
-    fetch(apiq("action=get&sha=" + encodeURIComponent(sha)))
-      .then(function (r) { return r.json(); })
-      .then(function (d) {
-        if (!d.ok) { setStatus(d.err || T.err_network, "err"); return; }
-        var url = URL.createObjectURL(b64ToBlob(d.file_b64));
-        var a = document.createElement("a");
-        a.href = url; a.download = d.filename || (sha + ".json");
-        document.body.appendChild(a); a.click(); document.body.removeChild(a);
-        URL.revokeObjectURL(url); setStatus("", "");
-      }).catch(function () { setStatus(T.err_network, "err"); });
-  }
-
   document.addEventListener("DOMContentLoaded", function () {
-    var btn = $("lab-upload-btn"), file = $("lab-file"), drop = $("lab-drop");
-    if (btn && file) btn.addEventListener("click", function () { file.click(); });
-    if (file) file.addEventListener("change", function () {
-      if (file.files && file.files[0]) { upload(file.files[0]); file.value = ""; }
-    });
-    if (drop) {
-      ["dragover", "dragenter"].forEach(function (ev) {
-        drop.addEventListener(ev, function (e) { e.preventDefault(); drop.classList.add("lab-drag"); });
-      });
-      ["dragleave", "drop"].forEach(function (ev) {
-        drop.addEventListener(ev, function (e) { e.preventDefault(); drop.classList.remove("lab-drag"); });
-      });
-      drop.addEventListener("drop", function (e) {
-        var f = e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0];
-        if (f) upload(f);
-      });
-    }
     var rf = $("lab-refresh");
     if (rf) rf.addEventListener("click", loadList);
-    // 即時篩選:輸入框打字即篩(從快取),不再每次打 GAS
+    // 即時篩選/排序/分頁:從快取運算,不再每次打 GAS(瀏覽專用,上傳/下載在 APP 內)
     var fm = $("lab-f-motor"), fc = $("lab-f-country"), fcp = $("lab-f-completed"),
         fps = $("lab-f-pagesize"), fsort = $("lab-f-sort");
     if (fm) fm.addEventListener("change", applyFilter);   // 下拉用 change
@@ -2218,11 +2139,6 @@ LAB_APP_JS = r"""
     if (fcp) fcp.addEventListener("change", applyFilter);
     if (fps) fps.addEventListener("change", applyFilter); // 顯示筆數
     if (fsort) fsort.addEventListener("change", applyFilter); // 排序下拉
-    var res = $("lab-results");
-    if (res) res.addEventListener("click", function (e) {
-      var dl = e.target.getAttribute("data-dl");
-      if (dl) download(dl);
-    });
     loadList();
   });
 })();
@@ -2344,20 +2260,15 @@ def build_lab_page(lab_cfg, lang, src_html, i18n):
     )
     main_el.append(BeautifulSoup(hero_html, "html.parser"))
 
-    # 7b. 上傳區(含 honeypot 隱藏欄位)
+    # 7b. APP 導引區(上傳/下載皆於 MotorLab APP 內進行,網頁僅瀏覽)
     up_html = (
         f'<section class="lab-section"><div class="container">'
         f'<div class="lab-eyebrow">{s["up_eyebrow"]}</div>'
         f'<h2 class="lab-h2">{s["up_h2"]}</h2>'
-        f'<p class="lab-lead">{s["up_p"]}</p>'
-        f'<div class="lab-upload" id="lab-drop">'
-        f'<input type="file" id="lab-file" accept=".json,application/json" hidden>'
-        f'<input type="text" id="lab-hp" class="lab-hp" tabindex="-1" autocomplete="off" aria-hidden="true">'
-        f'<button type="button" class="lab-btn lab-btn-primary" id="lab-upload-btn">{s["up_btn"]}</button>'
-        f'<p class="lab-drop-hint">{s["up_hint"]}</p>'
-        f'</div>'
-        f'<div class="lab-status" id="lab-status" role="status" aria-live="polite"></div>'
+        f'<div class="lab-appnote">'
+        f'<p class="lab-appnote-main">{s["app_cta"]}</p>'
         f'<p class="lab-tos">{s["tos"]}</p>'
+        f'</div>'
         f'</div></section>'
     )
     main_el.append(BeautifulSoup(up_html, "html.parser"))

@@ -1699,20 +1699,15 @@
   .lab-h2 { font-size: clamp(24px, 4vw, 34px); font-weight: 700; line-height: 1.25; margin-bottom: 14px; }
   .lab-lead { color: var(--text-secondary); max-width: 720px; font-size: clamp(15px, 2vw, 17px); line-height: 1.7; margin-bottom: 24px; }
 
-  /* 上傳區 */
-  .lab-upload {
-    border: 2px dashed var(--accent-blue); border-radius: 16px;
-    padding: 40px 24px; text-align: center; background: rgba(46,52,64,0.30);
-    transition: border-color .15s, background .15s;
+  /* APP 導引區(上傳/下載皆在 APP 內進行,網頁僅瀏覽) */
+  .lab-appnote {
+    border: 1px solid var(--accent-blue); border-left: 4px solid var(--accent-cyan);
+    border-radius: 12px; padding: 24px 28px; background: rgba(46,52,64,0.30); max-width: 760px;
   }
-  .lab-upload.lab-drag { border-color: var(--accent-cyan); background: rgba(136,192,208,0.10); }
-  .lab-drop-hint { color: var(--text-muted); font-size: 14px; margin-top: 14px; }
-  .lab-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
-  .lab-status { margin-top: 18px; font-size: 15px; min-height: 22px; }
-  .lab-status.ok { color: var(--success); }
-  .lab-status.warn { color: var(--warning); }
-  .lab-status.err { color: var(--danger); }
-  .lab-tos { color: var(--text-muted); font-size: 13px; line-height: 1.6; margin-top: 24px; max-width: 720px; }
+  .lab-appnote-main {
+    color: var(--text-primary); font-size: clamp(15px, 2vw, 17px); line-height: 1.7; margin: 0;
+  }
+  .lab-tos { color: var(--text-muted); font-size: 13px; line-height: 1.6; margin: 16px 0 0; max-width: 720px; }
 
   /* 按鈕 */
   .lab-btn {
@@ -1793,7 +1788,7 @@
     }
   ]
 }</script></head>
-<body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/ja/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/ja/">← ホームへ戻る</a></div></nav><main><section class="lab-hero"><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/ja/">ホーム</a><span class="sep">/</span><span class="current">データ庫</span></nav><div class="lab-eyebrow">Data Lab · データ庫</div><h1 class="lab-hero-title">アップロード・ダウンロード<br/><span class="lab-accent">世界の Mini 4WD<span class="lab-reg">®</span> 慣らしデータ</span></h1><p class="lab-hero-p">モーター慣らし機が生成した慣らしレシピ記録を世界に共有、あるいは誰かのレシピをダウンロード —— 元ファイルはそのままモーター慣らし機に再インポートできます。</p></div></section><section class="lab-section"><div class="container"><div class="lab-eyebrow">Upload · アップロード</div><h2 class="lab-h2">あなたの慣らし記録を共有</h2><p class="lab-lead">マシンが書き出した .json ファイルを選択。署名はサーバー側で検証され、改ざんのない記録のみ収録されます。</p><div class="lab-upload" id="lab-drop"><input accept=".json,application/json" hidden="" id="lab-file" type="file"/><input aria-hidden="true" autocomplete="off" class="lab-hp" id="lab-hp" tabindex="-1" type="text"/><button class="lab-btn lab-btn-primary" id="lab-upload-btn" type="button">ファイルを選択してアップロード</button><p class="lab-drop-hint">または .json ファイルをここにドラッグ</p></div><div aria-live="polite" class="lab-status" id="lab-status" role="status"></div><p class="lab-tos">アップロードはこの記録の公開共有に同意したことを意味します。名前/国の欄はモーター慣らし機のシステム設定で設定され、初期値は匿名です。記録の削除は motorlab.tw@gmail.com までご連絡ください。</p></div></section><section class="lab-section lab-band"><div class="container"><div class="lab-eyebrow">Browse · 一覧</div><h2 class="lab-h2">世界のレーサーの慣らし記録</h2><p class="lab-lead">このデータ庫のすべてのレシピは世界中の MotorLab ユーザーから提供されています。ダウンロード・利用は各自の判断でお願いします。</p><div class="lab-filters"><select class="lab-input" id="lab-f-motor"><option value="">モーターで絞り込み</option><option value="Torque-Tuned 2 PRO">Torque-Tuned 2 PRO</option><option value="Light-Dash PRO">Light-Dash PRO</option><option value="Atomic-Tuned 2 PRO">Atomic-Tuned 2 PRO</option><option value="Hyper-Dash PRO">Hyper-Dash PRO</option><option value="Rev-Tuned 2 PRO">Rev-Tuned 2 PRO</option><option value="Mach-Dash PRO">Mach-Dash PRO</option><option value="Torque-Tuned 2">Torque-Tuned 2</option><option value="Light-Dash">Light-Dash</option><option value="Sprint-Dash">Sprint-Dash</option><option value="Atomic-Tuned 2">Atomic-Tuned 2</option><option value="Hyper-Dash 3">Hyper-Dash 3</option><option value="Ultra-Dash">Ultra-Dash</option><option value="Rev-Tuned 2">Rev-Tuned 2</option><option value="Power-Dash">Power-Dash</option><option value="Plasma-Dash">Plasma-Dash</option><option value="Other">Other</option></select><input class="lab-input" id="lab-f-country" placeholder="国で絞り込み" type="text"/><select class="lab-input" id="lab-f-completed"><option value="">すべて</option><option value="true">完走のみ</option><option value="false">中断のみ</option></select><select aria-label="並べ替え" class="lab-input" id="lab-f-sort"><option value="">並べ替え</option><option value="rpm_max_overall|-1">最高回転数 R.P.M ▼</option><option value="rpm_max_overall|1">最高回転数 R.P.M ▲</option><option value="rpm_avg_overall|-1">平均回転数 R.P.M ▼</option><option value="rpm_avg_overall|1">平均回転数 R.P.M ▲</option><option value="stable_current_overall|-1">安定電流 mA ▼</option><option value="stable_current_overall|1">安定電流 mA ▲</option></select><select aria-label="表示" class="lab-input" id="lab-f-pagesize"><option value="10">表示 10</option><option value="50">表示 50</option><option value="100">表示 100</option></select><button class="lab-btn" id="lab-refresh" type="button">更新</button><div class="lab-count" id="lab-count"></div></div><div class="lab-results" id="lab-results"><p class="lab-muted">読み込み中…</p></div><div class="lab-pager" id="lab-pager"></div></div></section></main><footer>
+<body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/ja/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/ja/">← ホームへ戻る</a></div></nav><main><section class="lab-hero"><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/ja/">ホーム</a><span class="sep">/</span><span class="current">データ庫</span></nav><div class="lab-eyebrow">Data Lab · データ庫</div><h1 class="lab-hero-title">アップロード・ダウンロード<br/><span class="lab-accent">世界の Mini 4WD<span class="lab-reg">®</span> 慣らしデータ</span></h1><p class="lab-hero-p">モーター慣らし機が生成した慣らしレシピ記録を世界に共有、あるいは誰かのレシピをダウンロード —— 元ファイルはそのままモーター慣らし機に再インポートできます。</p></div></section><section class="lab-section"><div class="container"><div class="lab-eyebrow">App · アップロード・ダウンロード</div><h2 class="lab-h2">慣らしレシピの共有と適用</h2><div class="lab-appnote"><p class="lab-appnote-main">アップロード・共有・ダウンロード・適用は MotorLab アプリ内で行ってください。本ページは世界中のプレイヤーが公開した慣らしレシピの閲覧専用です。</p><p class="lab-tos">公開共有される記録の名前/国の欄はモーター慣らし機のシステム設定で設定され、初期値は匿名です。記録の削除は motorlab.tw@gmail.com までご連絡ください。</p></div></div></section><section class="lab-section lab-band"><div class="container"><div class="lab-eyebrow">Browse · 一覧</div><h2 class="lab-h2">世界のレーサーの慣らし記録</h2><p class="lab-lead">このデータ庫のすべてのレシピは世界中の MotorLab ユーザーから提供されています。ダウンロード・利用は各自の判断でお願いします。</p><div class="lab-filters"><select class="lab-input" id="lab-f-motor"><option value="">モーターで絞り込み</option><option value="Torque-Tuned 2 PRO">Torque-Tuned 2 PRO</option><option value="Light-Dash PRO">Light-Dash PRO</option><option value="Atomic-Tuned 2 PRO">Atomic-Tuned 2 PRO</option><option value="Hyper-Dash PRO">Hyper-Dash PRO</option><option value="Rev-Tuned 2 PRO">Rev-Tuned 2 PRO</option><option value="Mach-Dash PRO">Mach-Dash PRO</option><option value="Torque-Tuned 2">Torque-Tuned 2</option><option value="Light-Dash">Light-Dash</option><option value="Sprint-Dash">Sprint-Dash</option><option value="Atomic-Tuned 2">Atomic-Tuned 2</option><option value="Hyper-Dash 3">Hyper-Dash 3</option><option value="Ultra-Dash">Ultra-Dash</option><option value="Rev-Tuned 2">Rev-Tuned 2</option><option value="Power-Dash">Power-Dash</option><option value="Plasma-Dash">Plasma-Dash</option><option value="Other">Other</option></select><input class="lab-input" id="lab-f-country" placeholder="国で絞り込み" type="text"/><select class="lab-input" id="lab-f-completed"><option value="">すべて</option><option value="true">完走のみ</option><option value="false">中断のみ</option></select><select aria-label="並べ替え" class="lab-input" id="lab-f-sort"><option value="">並べ替え</option><option value="rpm_max_overall|-1">最高回転数 R.P.M ▼</option><option value="rpm_max_overall|1">最高回転数 R.P.M ▲</option><option value="rpm_avg_overall|-1">平均回転数 R.P.M ▼</option><option value="rpm_avg_overall|1">平均回転数 R.P.M ▲</option><option value="stable_current_overall|-1">安定電流 mA ▼</option><option value="stable_current_overall|1">安定電流 mA ▲</option></select><select aria-label="表示" class="lab-input" id="lab-f-pagesize"><option value="10">表示 10</option><option value="50">表示 50</option><option value="100">表示 100</option></select><button class="lab-btn" id="lab-refresh" type="button">更新</button><div class="lab-count" id="lab-count"></div></div><div class="lab-results" id="lab-results"><p class="lab-muted">読み込み中…</p></div><div class="lab-pager" id="lab-pager"></div></div></section></main><footer>
 <div class="container">
 <div class="footer-trademark" data-i18n="footer.trademark">
       "Mini 4WD"<sup>®</sup> 與 "ミニ四駆"<sup>®</sup> 為株式会社タミヤ（TAMIYA, INC.）的註冊商標（日本商標登錄號 第 2168392 號）。MotorLab 為獨立工作室，與株式会社タミヤ無任何關聯，亦未受其授權、贊助或背書。本網站提及之相關名稱僅用於指涉產品適用範圍，所有商標權益歸原權利人所有。
@@ -1815,12 +1810,6 @@
   function hasApi() { return API && API.indexOf("PUT_") !== 0; }
   function apiq(qs) { return API + (API.indexOf("?") < 0 ? "?" : "&") + qs; }
 
-  function setStatus(msg, kind) {
-    var el = $("lab-status");
-    if (!el) return;
-    el.textContent = msg || "";
-    el.className = "lab-status" + (kind ? " " + kind : "");
-  }
   function esc(s) {
     return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) {
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
@@ -1830,38 +1819,6 @@
     if (n === "" || n == null || isNaN(n)) return "—";
     return Number(n).toLocaleString();
   }
-  function abToB64(buf) {
-    var bytes = new Uint8Array(buf), bin = "", chunk = 0x8000;
-    for (var i = 0; i < bytes.length; i += chunk) {
-      bin += String.fromCharCode.apply(null, bytes.subarray(i, i + chunk));
-    }
-    return btoa(bin);
-  }
-  function b64ToBlob(b64) {
-    var bin = atob(b64), len = bin.length, bytes = new Uint8Array(len);
-    for (var i = 0; i < len; i++) bytes[i] = bin.charCodeAt(i);
-    return new Blob([bytes], { type: "application/json" });
-  }
-
-  function upload(file) {
-    if (!hasApi()) { setStatus(T.no_api, "err"); return; }
-    if (!file) return;
-    setStatus(T.uploading, "");
-    var fr = new FileReader();
-    fr.onload = function () {
-      var body = JSON.stringify({ file_b64: abToB64(fr.result), filename: file.name || "", hp: ($("lab-hp") || {}).value || "" });
-      fetch(API, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: body })
-        .then(function (r) { return r.json(); })
-        .then(function (d) {
-          if (d.ok && d.dup) setStatus(T.up_dup, "warn");
-          else if (d.ok) { setStatus(T.up_ok, "ok"); loadList(); }
-          else setStatus(T.up_err + (d.err ? ": " + d.err : ""), "err");
-        })
-        .catch(function () { setStatus(T.err_network, "err"); });
-    };
-    fr.readAsArrayBuffer(file);
-  }
-
   // 可排序欄位 → 取值函式(數值欄轉 Number,日期欄按字串)
   var SORT_GETTERS = {
     rpm_max_overall: function (it) { return Number(it.rpm_max_overall) || 0; },
@@ -1880,7 +1837,7 @@
     var h = '<table class="lab-table"><thead><tr>' +
       "<th>" + esc(T.c_motor) + "</th><th>" + esc(T.c_owner) + "</th><th>" + esc(T.c_country) +
       "</th><th>" + esc(T.c_rpm) + "</th><th>" + esc(T.c_rpm_avg) + "</th><th>" + esc(T.c_current) +
-      "</th><th>" + esc(T.c_date) + "</th><th></th></tr></thead><tbody>";
+      "</th><th>" + esc(T.c_date) + "</th></tr></thead><tbody>";
     items.forEach(function (it) {
       var owner = (it.owner_name && it.owner_name !== "--") ? it.owner_name : T.anon;
       var country = (it.owner_country && it.owner_country !== "--") ? it.owner_country : "—";
@@ -1893,10 +1850,7 @@
         '<td class="lab-mono">' + fmtNum(it.rpm_max_overall) + "</td>" +
         '<td class="lab-mono">' + fmtNum(it.rpm_avg_overall) + "</td>" +
         '<td class="lab-mono">' + fmtNum(it.stable_current_overall) + "</td>" +
-        '<td class="lab-mono">' + esc(date) + "</td>" +
-        '<td class="lab-row-actions">' +
-        '<button type="button" class="lab-btn lab-btn-sm" data-dl="' + esc(it.content_sha256) + '">' + esc(T.download) + "</button>" +
-        "</td></tr>";
+        '<td class="lab-mono">' + esc(date) + "</td></tr>";
     });
     box.innerHTML = h + "</tbody></table>";
   }
@@ -1981,42 +1935,10 @@
     }).catch(function () { box.innerHTML = '<p class="lab-muted">' + esc(T.err_network) + "</p>"; });
   }
 
-  function download(sha) {
-    if (!hasApi()) { setStatus(T.no_api, "err"); return; }
-    setStatus(T.preparing, "");
-    fetch(apiq("action=get&sha=" + encodeURIComponent(sha)))
-      .then(function (r) { return r.json(); })
-      .then(function (d) {
-        if (!d.ok) { setStatus(d.err || T.err_network, "err"); return; }
-        var url = URL.createObjectURL(b64ToBlob(d.file_b64));
-        var a = document.createElement("a");
-        a.href = url; a.download = d.filename || (sha + ".json");
-        document.body.appendChild(a); a.click(); document.body.removeChild(a);
-        URL.revokeObjectURL(url); setStatus("", "");
-      }).catch(function () { setStatus(T.err_network, "err"); });
-  }
-
   document.addEventListener("DOMContentLoaded", function () {
-    var btn = $("lab-upload-btn"), file = $("lab-file"), drop = $("lab-drop");
-    if (btn && file) btn.addEventListener("click", function () { file.click(); });
-    if (file) file.addEventListener("change", function () {
-      if (file.files && file.files[0]) { upload(file.files[0]); file.value = ""; }
-    });
-    if (drop) {
-      ["dragover", "dragenter"].forEach(function (ev) {
-        drop.addEventListener(ev, function (e) { e.preventDefault(); drop.classList.add("lab-drag"); });
-      });
-      ["dragleave", "drop"].forEach(function (ev) {
-        drop.addEventListener(ev, function (e) { e.preventDefault(); drop.classList.remove("lab-drag"); });
-      });
-      drop.addEventListener("drop", function (e) {
-        var f = e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0];
-        if (f) upload(f);
-      });
-    }
     var rf = $("lab-refresh");
     if (rf) rf.addEventListener("click", loadList);
-    // 即時篩選:輸入框打字即篩(從快取),不再每次打 GAS
+    // 即時篩選/排序/分頁:從快取運算,不再每次打 GAS(瀏覽專用,上傳/下載在 APP 內)
     var fm = $("lab-f-motor"), fc = $("lab-f-country"), fcp = $("lab-f-completed"),
         fps = $("lab-f-pagesize"), fsort = $("lab-f-sort");
     if (fm) fm.addEventListener("change", applyFilter);   // 下拉用 change
@@ -2024,11 +1946,6 @@
     if (fcp) fcp.addEventListener("change", applyFilter);
     if (fps) fps.addEventListener("change", applyFilter); // 顯示筆數
     if (fsort) fsort.addEventListener("change", applyFilter); // 排序下拉
-    var res = $("lab-results");
-    if (res) res.addEventListener("click", function (e) {
-      var dl = e.target.getAttribute("data-dl");
-      if (dl) download(dl);
-    });
     loadList();
   });
 })();
