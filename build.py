@@ -2399,9 +2399,9 @@ MANUAL = {
                 "</tbody></table>"
             )},
             {"id": "home", "t": "三、首頁", "html": (
-                "<p>頂端橫幅顯示即時 <b>電壓 / 電流 / 轉速 / 溫度</b>(所有頁面都看得到)。八個功能按鈕:</p>"
+                "<p>八個功能按鈕:</p>"
                 "<p class='manual-pills'>馬達磨合 · 馬達測試 · 歷史紀錄 · AI 智慧馬達健康管理(Pro)· 軸承阻力測試 · 電刷接觸穩定測試 · 全球磨合資料庫 · 系統設定</p>"
-                "<p>標題顯示 <code>MotorLab M1</code> 或 <code>MotorLab PRO</code>。M1 版健康管理按鈕灰色但仍可點開瀏覽。</p>"
+                "<p>標題顯示 <code>MotorLab M1</code> 或 <code>MotorLab PRO</code>。</p>"
             )},
             {"id": "breakin", "t": "四、馬達磨合", "html": (
                 "<p class='manual-intro'>低速長時間運轉,讓電刷與整流子貼合到最佳接觸。分 <b>10 階段(a~j)</b>,預設約 5 小時。</p>"
@@ -2546,9 +2546,9 @@ MANUAL = {
                 "</tbody></table>"
             )},
             {"id": "home", "t": "3. Home Screen", "html": (
-                "<p>A top banner shows live <b>voltage / current / RPM / temperature</b> (visible on every page). Eight function buttons:</p>"
+                "<p>Eight function buttons:</p>"
                 "<p class='manual-pills'>Motor Break-in · Motor Test · History Records · AI Motor Health (Pro) · Bearing Resistance Test · Brush Contact Stability Test · Global Database · System Settings</p>"
-                "<p>The title shows <code>MotorLab M1</code> or <code>MotorLab PRO</code>. On M1 the health-management button is greyed out but can still be opened to browse.</p>"
+                "<p>The title shows <code>MotorLab M1</code> or <code>MotorLab PRO</code>.</p>"
             )},
             {"id": "breakin", "t": "4. Motor Break-in", "html": (
                 "<p class='manual-intro'>Long, low-speed running that beds the brushes against the commutator for optimal contact. Split into <b>10 stages (a–j)</b>, about 5 hours by default.</p>"
@@ -2693,9 +2693,9 @@ MANUAL = {
                 "</tbody></table>"
             )},
             {"id": "home", "t": "3. ホーム画面", "html": (
-                "<p>上部バナーにリアルタイムの <b>電圧 / 電流 / 回転数 / 温度</b> を表示(全ページで確認可)。8 つの機能ボタン:</p>"
+                "<p>8 つの機能ボタン:</p>"
                 "<p class='manual-pills'>モーター慣らし · モーターテスト · 履歴記録 · AI モーター健康管理(Pro)· ベアリング抵抗測定 · ブラシ接触安定測定 · グローバルデータ庫 · システム設定</p>"
-                "<p>タイトルに <code>MotorLab M1</code> または <code>MotorLab PRO</code> を表示。M1 では健康管理ボタンはグレーですが開いて閲覧は可能です。</p>"
+                "<p>タイトルに <code>MotorLab M1</code> または <code>MotorLab PRO</code> を表示。</p>"
             )},
             {"id": "breakin", "t": "4. モーター慣らし", "html": (
                 "<p class='manual-intro'>低速で長時間運転し、ブラシと整流子を最適な接触に馴染ませます。<b>10 段階(a〜j)</b>、初期設定で約 5 時間。</p>"
