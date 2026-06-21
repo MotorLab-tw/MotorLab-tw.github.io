@@ -1198,6 +1198,13 @@ def build_lang(src_html, lang, i18n):
         a["href"] = lab_href
         del a["data-lablink"]
 
+    # --- 7e. 內部跨頁連結(nav 的 data-manuallink)改寫成對應語言的 URL ---
+    # /docs/user-manual/ 使用者手冊(D23 docs 分類);各語言加前綴
+    manual_href = f"{lab_prefix}/docs/{MANUAL['slug']}/"
+    for a in soup.select("a[data-manuallink]"):
+        a["href"] = manual_href
+        del a["data-manuallink"]
+
     # --- 8. 語言切換:button → a 連結 ---
     lang_switch = soup.find("div", class_="lang-switch")
     if lang_switch:
@@ -2328,6 +2335,632 @@ def build_lab_page(lab_cfg, lang, src_html, i18n):
 
 
 # ============================================================
+# MANUAL:使用者手冊(/docs/user-manual/,D23 docs 分類首篇)
+#   內容來自韌體 repo USER_MANUAL.md,守 D6(無硬體型號)。
+#   每語言 = meta(title/desc/...) + sections[{id,t,html}]。
+#   build_manual_page() 產生「左側目錄 + 右側章節」的長文件頁,沿用 .guide-page 殼。
+# ============================================================
+MANUAL = {
+    "slug": "user-manual",
+    "type": "docs",
+    "fw": "v3.2.19",
+    "i18n": {
+        "zh": {
+            "title": "MotorLab 使用者手冊:馬達磨合機操作說明 | MotorLab",
+            "description": "MotorLab Mini 4WD® 馬達磨合機完整使用手冊 — 連線、馬達磨合、馬達測試、歷史紀錄、全球磨合資料庫、AI 健康管理、軸承/電刷測試、系統設定、安全保護、工廠重設與常見問題。對應韌體 v3.2.19。",
+            "keywords": "MotorLab 使用手冊, 馬達磨合機操作, 馬達磨合機說明書, MotorLab 教學, 馬達磨合機設定",
+            "breadcrumb": "使用者手冊",
+            "eyebrow": "Docs · 使用者手冊",
+            "h1": "MotorLab 使用者手冊",
+            "lead": "Mini 4WD® 馬達磨合機完整操作說明。對應韌體 v3.2.19。功能隨版本更新,新版可能多出未列選項。",
+            "toc_label": "目錄",
+            "fw_note": "本手冊適用 MotorLab v3.2.19 韌體。",
+        },
+        "en": {
+            "title": "MotorLab User Manual: Motor Break-in Machine Guide | MotorLab",
+            "description": "Complete user manual for the MotorLab Mini 4WD® motor break-in machine — connection, break-in, testing, history records, global database, AI health management, bearing/brush tests, system settings, safety, factory reset and FAQ. For firmware v3.2.19.",
+            "keywords": "MotorLab user manual, motor break-in machine guide, MotorLab instructions, motor tester manual, Mini 4WD break-in machine",
+            "breadcrumb": "User Manual",
+            "eyebrow": "Docs · User Manual",
+            "h1": "MotorLab User Manual",
+            "lead": "Complete operating guide for the Mini 4WD® motor break-in machine. For firmware v3.2.19. Features evolve with each release; newer firmware may add options not listed here.",
+            "toc_label": "Contents",
+            "fw_note": "This manual applies to MotorLab firmware v3.2.19.",
+        },
+        "ja": {
+            "title": "MotorLab ユーザーマニュアル:モーター慣らし機操作ガイド | MotorLab",
+            "description": "MotorLab Mini 4WD® モーター慣らし機の完全ユーザーマニュアル — 接続、慣らし、テスト、履歴記録、グローバルデータ庫、AI 健康管理、ベアリング/ブラシ測定、システム設定、安全保護、工場出荷リセット、FAQ。ファームウェア v3.2.19 対応。",
+            "keywords": "MotorLab マニュアル, モーター慣らし機 操作, MotorLab 使い方, モーターテスター 説明書, ミニ四駆 慣らし機",
+            "breadcrumb": "ユーザーマニュアル",
+            "eyebrow": "Docs · ユーザーマニュアル",
+            "h1": "MotorLab ユーザーマニュアル",
+            "lead": "Mini 4WD® モーター慣らし機の完全操作ガイド。ファームウェア v3.2.19 対応。機能はバージョンごとに更新され、新版では未記載の項目が増える場合があります。",
+            "toc_label": "目次",
+            "fw_note": "本マニュアルは MotorLab ファームウェア v3.2.19 に対応します。",
+        },
+    },
+    "sections": {
+        "zh": [
+            {"id": "start", "t": "一、快速開始", "html": (
+                "<ol>"
+                "<li>接通電源 → 板載指示燈亮、聽到開機嗶聲。</li>"
+                "<li>手機 / 平板 / 電腦的 WiFi 連「<b>MotorTester</b>」(預設密碼 <code>12345678</code>)。</li>"
+                "<li>瀏覽器開 <code>http://10.10.10.1/</code>。</li>"
+                "<li><b>第一件事</b>:系統設定 → WiFi 設定,把密碼改強密碼(否則任何人都能操作機器)。</li>"
+                "</ol>"
+            )},
+            {"id": "connect", "t": "二、連線", "html": (
+                "<table class='manual-table'><tbody>"
+                "<tr><th>網址</th><td><code>http://10.10.10.1/</code>(<b>不是</b> https)</td></tr>"
+                "<tr><th>熱點</th><td><code>MotorTester</code> / <code>12345678</code>(可改名)</td></tr>"
+                "<tr><th>裝置</th><td>手機 / 平板 / 筆電皆可,建議大螢幕</td></tr>"
+                "<tr><th>連線數</th><td>最多 4 台,<b>實務只開一個頁面操作</b>避免命令衝突</td></tr>"
+                "<tr><th>注意</th><td>機器熱點<b>無對外網路</b>;iPhone 跳「無網際網路」選「保持」即可</td></tr>"
+                "</tbody></table>"
+            )},
+            {"id": "home", "t": "三、首頁", "html": (
+                "<p>頂端橫幅顯示即時 <b>電壓 / 電流 / 轉速 / 溫度</b>(所有頁面都看得到)。八個功能按鈕:</p>"
+                "<p class='manual-pills'>馬達磨合 · 馬達測試 · 歷史紀錄 · AI 智慧馬達健康管理(Pro)· 軸承阻力測試 · 電刷接觸穩定測試 · 全球磨合資料庫 · 系統設定</p>"
+                "<p>標題顯示 <code>MotorLab M1</code> 或 <code>MotorLab PRO</code>。M1 版健康管理按鈕灰色但仍可點開瀏覽。</p>"
+            )},
+            {"id": "breakin", "t": "四、馬達磨合", "html": (
+                "<p class='manual-intro'>低速長時間運轉,讓電刷與整流子貼合到最佳接觸。分 <b>10 階段(a~j)</b>,預設約 5 小時。</p>"
+                "<p><b>操作</b>:首頁 →「馬達磨合程式」→ 選<b>馬達型號</b>(16 款下拉)+ 填<b>備註</b>(選填,≤40 字)→ 確認 10 階段參數(直接點數字欄修改,改完自動套用)→「啟動」。</p>"
+                "<p>每階段流程:緩啟動 → 運轉中 → 緩停止 → 冷卻中 → 下一階段。全部完成 → 嗶 3 聲 → 自動存入歷史紀錄。</p>"
+                "<p><b>運轉中可按</b>:</p>"
+                "<table class='manual-table'><thead><tr><th>按鈕</th><th>行為</th></tr></thead><tbody>"
+                "<tr><td>停止</td><td>緩停後結束,紀錄標「使用者中止」</td></tr>"
+                "<tr><td>歸零</td><td>清最大轉速 / 穩定電流峰值,不中斷</td></tr>"
+                "<tr><td>回首頁</td><td>切回首頁,磨合<b>背景繼續跑</b></td></tr>"
+                "</tbody></table>"
+                "<div class='manual-note'><b>注意</b>:運轉中所有設定鎖定;勿中途斷電(資料遺失);高溫會自動停止並存檔;想快速驗機就把每階段時間改短。每階段可設電壓 / 方向 / 運轉時間 / 冷卻時間 / 穩定電流容差。</div>"
+            )},
+            {"id": "test", "t": "五、馬達測試", "html": (
+                "<p class='manual-intro'>單階段即時觀察,<b>不寫入紀錄</b>。</p>"
+                "<p>首頁 →「馬達測試程式」→ 設 <b>電壓(0~4.5V)/ 運轉時間 / 方向 / 穩定電流容差</b> →「啟動」→ 看即時數據與圖表,到時自動停。智慧模式下電流提前穩定會以「stable」結束。</p>"
+                "<div class='manual-note'><b>注意</b>:電壓上限 4.5V 保護馬達,勿繞過;反轉接正轉前先按一次「停止」。</div>"
+            )},
+            {"id": "records", "t": "六、歷史紀錄", "html": (
+                "<p class='manual-intro'>自動儲存每次磨合完整資料,最多 <b>50 筆</b>。</p>"
+                "<p>每筆顯示名稱 / 開始時間 / 時長 / 模式 / 結束原因 / 最大轉速 / 平均轉速 / 穩定電流。</p>"
+                "<table class='manual-table'><thead><tr><th>按鈕</th><th>用途</th></tr></thead><tbody>"
+                "<tr><td>檢視</td><td>看每一階段數據</td></tr>"
+                "<tr><td>套用</td><td>把 10 階段參數一鍵套回磨合頁</td></tr>"
+                "<tr><td>匯出</td><td>下載 JSON(可再匯入)或 CSV(Excel 開)</td></tr>"
+                "<tr><td>刪除</td><td>移除(不可復原)</td></tr>"
+                "</tbody></table>"
+                "<ul>"
+                "<li><b>容量滿(50 筆)</b>:管理中可選「自動覆寫」(啟動時刪最舊)或「不覆寫」(預設,啟動被擋需手動清)。</li>"
+                "<li><b>匯入</b>:選之前匯出的 JSON(id 重複會覆蓋)。只收 JSON。每個匯出檔帶<b>簽章驗證</b>:同台 / 同批機器可互通,竄改過或非本批機器的檔會被拒絕;改檔名不影響(驗的是內容)。</li>"
+                "<li><b>檔名</b>:<code>motorlab_&lt;日期&gt;_&lt;時間&gt;_&lt;型號&gt;[_&lt;備註&gt;]</code>,採磨合開始時間 → 同筆重複匯出檔名一致。</li>"
+                "<li>韌體更新 / 工廠重設<b>都不會清紀錄</b>。</li>"
+                "</ul>"
+            )},
+            {"id": "database", "t": "七、全球磨合資料庫", "html": (
+                "<p class='manual-intro'>與全球玩家分享磨合紀錄,機器<b>直接連網</b>完成,不必匯出再上網站。需連<b>有外網的 WiFi</b>(M1 / Pro 都能用)。</p>"
+                "<p><b>瀏覽 / 下載</b>:首頁 →「全球磨合資料庫」→ 連網後列出最新 100 筆 → 用 <b>馬達型號 / 國家 / 完成狀態</b> 即時篩選 → 每筆可「下載」(存進本機)或「下載並套用」(存入並把配方套到磨合頁)。</p>"
+                "<p><b>分享自己的</b>:歷史紀錄 → 點開某筆 → 詳情頁底部「分享到全球資料庫」→ 確認框<b>明列將公開的欄位</b>(型號 / 備註 / 分享者 / 國家 / 完整數據;填了名字會提醒顯示真名)→ 確認上傳。已上傳過會提示「這筆已在資料庫」(非錯誤)。</p>"
+                "<div class='manual-note'><b>注意</b>:下載的紀錄會經簽章驗證;上傳即同意公開,需移除請來信 <b>motorlab.tw@gmail.com</b>;連到無外網的 WiFi 會提示「無法連到伺服器」。</div>"
+            )},
+            {"id": "ai", "t": "八、AI 智慧馬達健康管理(Pro)", "html": (
+                "<p class='manual-intro'>為每顆馬達建立健康指紋,定期重測比對,給 0~100 分與建議。<b>跟自己比,不跟別顆比</b>。</p>"
+                "<ol>"
+                "<li>首頁 →「AI 智慧馬達健康管理」→「+ 新增馬達」。</li>"
+                "<li>填 <b>馬達型號</b>(下拉)+ <b>備註</b>(選填)+ <b>起始電壓</b> + <b>電壓間距</b>(自動取 5 點)。</li>"
+                "<li>確認 → 自動跑約 <b>2.5 分鐘</b> 建立基準。</li>"
+                "</ol>"
+                "<p>之後每張卡片可做 <b>完整檢測</b>(約 2.5 分,最準)或 <b>快速檢測</b>(約 1.5 分,±5%)。結果頁顯示分數、等級(Optimal / Acceptable / Warning / Critical)、趨勢圖、五項指標、文字建議。</p>"
+                "<div class='manual-note'><b>注意</b>:每顆最多 50 次歷史,整機最多 20 顆;檢測中勿斷電 / 勿按其他鈕;高溫會自動中止;M1 版按鈕灰色(點下提示升級)。</div>"
+            )},
+            {"id": "bearing", "t": "九、軸承阻力測試", "html": (
+                "<p class='manual-intro'>量軸承健康,約 10 秒,任何版本可用。<b>衰減越慢 → 軸承越健康</b>。</p>"
+                "<p>首頁 →「軸承阻力測試」→「開始測試」→ 機器加速 → 切斷 → 量衰減時間 → 顯示 <b>τ 衰減時間</b> 與評定(良好 / 注意 / 建議保養)。</p>"
+                "<div class='manual-note'><b>注意</b>:需轉速感應器正常(顯示「轉速為 0」表示感測未對準或反光標脫落);不需接負載;建議測 3 次取平均。</div>"
+            )},
+            {"id": "brush", "t": "十、電刷接觸穩定測試", "html": (
+                "<p class='manual-intro'>量電刷接觸是否均勻,約 15 秒,任何版本可用。<b>接觸不均 → 電流抖動 → CV 上升</b>。</p>"
+                "<p>首頁 →「電刷接觸穩定測試」→「開始測試」→ 提示「確認軸心已鎖死」(手動把軸轉到某角度鬆手、確認靜止)→ 機器跑 <b>3 個步驟</b>(每步換一個角度,會提示轉到下一角度)→ 顯示各步 <b>CV%</b> 與評定(良好 / 注意 / 建議清潔)。</p>"
+                "<div class='manual-note'><b>注意</b>:測試中馬達意外轉動(&gt;100 RPM)會立即中止顯示「軸心未鎖死」;三角度是為涵蓋不同接觸點。</div>"
+            )},
+            {"id": "settings", "t": "十一、系統設定", "html": (
+                "<p class='manual-intro'>系統運轉中此頁只留「回首頁」可按,其餘鎖定。</p>"
+                "<table class='manual-table'><tbody>"
+                "<tr><th>使用者設定</th><td>名稱 / 國家(≤32 字,預設 <code>--</code>),寫入每筆紀錄當出處。已產生的紀錄不回填。</td></tr>"
+                "<tr><th>WiFi 設定</th><td>改熱點名稱 / 密碼(8~63 字)→ 儲存後機器重啟,須重新連新熱點。忘密碼見第十三節。</td></tr>"
+                "<tr><th>語言</th><td>中文 / English / 日本語 切換,即時生效並記住偏好(預設中文)。</td></tr>"
+                "<tr><th>磨合模式</th><td>純運轉時間 / 智慧穩定電流判定(達時間<b>或</b>電流提前穩定即進下一階段)。</td></tr>"
+                "<tr><th>溫度校正</th><td>顯示與實際有偏差時加補償(±20°C)。</td></tr>"
+                "<tr><th>平均轉速設定</th><td>容差(相鄰兩秒轉速差,預設 50 RPM,可調 10~500)越小越嚴格。</td></tr>"
+                "<tr><th>緩啟動參數</th><td>kick PWM(預設 60%)/ kick 時長(300ms)/ 緩啟動時長(700ms)。啟動不了加大 kick;爆衝跳保護縮小 kick。</td></tr>"
+                "<tr><th>取得授權</th><td>M1 升 Pro,見下。</td></tr>"
+                "<tr><th>軟體更新</th><td>透過家裡 WiFi 自動取得最新韌體,見下。</td></tr>"
+                "<tr><th>RGB 狀態燈</th><td>雙燈(內建 / 面板)輸出位置 + 亮度(0~100%)+ 5 組狀態樣式,見下。</td></tr>"
+                "<tr><th>工程模式</th><td>密碼保護的進階校正與離線更新(一般使用者用不到)。</td></tr>"
+                "<tr><th>WiFi 列表</th><td>最多記憶 8 組外部 WiFi;「清空列表」用於轉手設備(不影響 Pro 授權)。</td></tr>"
+                "</tbody></table>"
+                "<p><b>取得授權(M1 → Pro)</b>:系統設定 →「取得授權」→ 選家裡 WiFi 連線 → 機器自動驗證購買 → 未購買則顯示 QR Code → <b>用另一台有外網的裝置掃碼結帳</b> → 機器每 10 秒自動查詢,付款成功即解鎖。全程約 1~3 分鐘、<b>不必手動輸入金鑰</b>、最久 10 分鐘逾時可重試。退費過會顯示「重新取得授權」。</p>"
+                "<p><b>軟體更新</b>:系統設定 →「檢查更新」→ 選 WiFi → 有新版自動下載寫入(進度到 100%)→ 自動重啟、頁面自動重載。<b>過程勿關電源 / 瀏覽器</b>(中途斷電有保護自動回舊版);下載約 1.6MB,家用 WiFi 約 5~10 秒。</p>"
+                "<p><b>RGB 狀態燈</b>:</p>"
+                "<ul>"
+                "<li><b>輸出位置</b>:面板 / 面板+內建(預設)/ 內建,點按即時切換。</li>"
+                "<li><b>亮度</b>:拖滑桿 → 按「預覽」(試 5 秒不儲存,可多試)→ 滿意按「套用」儲存。(分兩步是避免連續寫入造成連線卡頓。)</li>"
+                "<li><b>狀態樣式(5 組)</b>:由上而下掃描,狀態符合即顯示對應 狀態(無 / 高溫 / 冷卻 / 待機 / 運轉)× 色相 × 模式(常亮 / 閃爍 / 呼吸)× 間隔 / 週期;同樣「預覽 / 套用」兩步。</li>"
+                "</ul>"
+                "<p><b>工程模式</b>:需密碼(密碼錯 3 次鎖 60 秒,10 分鐘無操作自動登出)。</p>"
+            )},
+            {"id": "safety", "t": "十二、安全與保護", "html": (
+                "<table class='manual-table'><thead><tr><th>機制</th><th>觸發 / 行為</th></tr></thead><tbody>"
+                "<tr><td>高溫保護</td><td>溫度連續超標 0.5 秒 → 立即停馬達 + 嗶 5 聲 + 進冷卻、溫度旁出現「!」。處理:等降溫 → 按「歸零」清除鎖定才能再啟動。</td></tr>"
+                "<tr><td>緩啟動 / 緩停止</td><td>啟停為 3 秒線性爬升 / 下降,避免電流爆衝與機械衝擊。</td></tr>"
+                "<tr><td>電流上限</td><td>固定 4A 量測上限,超過讀值封頂(不停機,但長時間高電流可能觸發高溫)。</td></tr>"
+                "<tr><td>開機鎖定</td><td>開機 30 秒內連續 3 次崩潰 → 自動切回上一版韌體。</td></tr>"
+                "</tbody></table>"
+            )},
+            {"id": "reset", "t": "十三、工廠重設(救援)", "html": (
+                "<p><b>用途</b>:忘記 WiFi 名稱 / 密碼時,把熱點重設回 <code>MotorTester</code> / <code>12345678</code>。</p>"
+                "<p><b>做法</b>:把機器上的「工廠重設」接點短接 3.3V(或按對應按鈕)<b>持續 5 秒</b> → 嗶 10 聲 → 自動重啟。</p>"
+                "<div class='manual-note'><b>只重設 WiFi 熱點名稱與密碼</b>,以下全部保留:磨合參數 / 各項校正與設定 / Pro 授權 / 歷史紀錄 / 馬達指紋 / RGB 設定 / 已記憶外部 WiFi。</div>"
+            )},
+            {"id": "faq", "t": "十四、常見問題", "html": (
+                "<table class='manual-table'><thead><tr><th>問題</th><th>處理</th></tr></thead><tbody>"
+                "<tr><td>開機沒嗶聲</td><td>確認電源 5V、蜂鳴器接線</td></tr>"
+                "<tr><td>連得上但網頁打不開</td><td>確認是 <code>http://</code>(非 https)、關行動數據、強制重整(Ctrl+Shift+R)</td></tr>"
+                "<tr><td>一直顯示「套用中…」</td><td>通常 WiFi 不穩,重整網頁即可(內建 8 秒監視會轉紅字提示)</td></tr>"
+                "<tr><td>磨合中途換馬達</td><td>按「停止」→ 換馬達 → 重新「啟動」(新一次是全新紀錄)</td></tr>"
+                "<tr><td>取得授權卡在連線</td><td>家裡 WiFi 密碼錯 / 無外網 / 訊號弱 → 重輸入或換 WiFi</td></tr>"
+                "<tr><td>Pro 退費後</td><td>機器連網重驗時<b>自動退回 M1</b>;想再買按「重新取得授權」</td></tr>"
+                "<tr><td>紅色「AP 密碼仍為預設」橫幅</td><td>至 WiFi 設定改密碼</td></tr>"
+                "<tr><td>轉手給別人</td><td>工程模式重置校正 → 清空 WiFi 列表 →(選)清紀錄 / 刪馬達 → 工廠重設。Pro 授權綁機器無法轉移</td></tr>"
+                "<tr><td>更新失敗會變磚嗎</td><td>不會,有雙韌體區自動回退 + 簽章驗證 + USB 救援</td></tr>"
+                "<tr><td>待機可拔電源嗎</td><td>可,建議馬達完全停止、無「套用中」、無更新進行中</td></tr>"
+                "</tbody></table>"
+            )},
+            {"id": "led", "t": "十五、狀態燈號", "html": (
+                "<p>預設配置(可在「RGB 狀態燈」修改):</p>"
+                "<table class='manual-table'><thead><tr><th>系統狀態</th><th>預設</th><th>含義</th></tr></thead><tbody>"
+                "<tr><td>高溫鎖定</td><td>紅閃</td><td>觸發高溫保護,須降溫並按「歸零」</td></tr>"
+                "<tr><td>冷卻中</td><td>黃常亮</td><td>階段間冷卻,馬達靜止</td></tr>"
+                "<tr><td>待機</td><td>藍呼吸</td><td>等待指令</td></tr>"
+                "<tr><td>運轉中</td><td>綠呼吸</td><td>磨合 / 測試 / 檢測中</td></tr>"
+                "<tr><td>燈滅</td><td>—</td><td>無匹配或全關</td></tr>"
+                "</tbody></table>"
+                "<p class='manual-contact'><b>回報問題</b>請一併提供:韌體版本(系統設定 → 軟體更新)、版本變體(首頁 M1 / PRO)、問題畫面截圖、是否在運轉中、重現步驟。客服:<b>motorlab.tw@gmail.com</b></p>"
+            )},
+        ],
+        "en": [
+            {"id": "start", "t": "1. Quick Start", "html": (
+                "<ol>"
+                "<li>Power on → onboard indicator lights up, you hear a boot beep.</li>"
+                "<li>On your phone / tablet / PC, join the WiFi network “<b>MotorTester</b>” (default password <code>12345678</code>).</li>"
+                "<li>Open <code>http://10.10.10.1/</code> in a browser.</li>"
+                "<li><b>First thing to do</b>: System Settings → WiFi Settings, change the password to a strong one (otherwise anyone can operate the machine).</li>"
+                "</ol>"
+            )},
+            {"id": "connect", "t": "2. Connection", "html": (
+                "<table class='manual-table'><tbody>"
+                "<tr><th>Address</th><td><code>http://10.10.10.1/</code> (<b>not</b> https)</td></tr>"
+                "<tr><th>Hotspot</th><td><code>MotorTester</code> / <code>12345678</code> (renamable)</td></tr>"
+                "<tr><th>Device</th><td>Phone / tablet / laptop all work; a larger screen is recommended</td></tr>"
+                "<tr><th>Connections</th><td>Up to 4 devices, but <b>operate from one page only</b> to avoid command conflicts</td></tr>"
+                "<tr><th>Note</th><td>The hotspot has <b>no internet</b>; on iPhone, tap “Keep” when it warns “No Internet Connection”</td></tr>"
+                "</tbody></table>"
+            )},
+            {"id": "home", "t": "3. Home Screen", "html": (
+                "<p>A top banner shows live <b>voltage / current / RPM / temperature</b> (visible on every page). Eight function buttons:</p>"
+                "<p class='manual-pills'>Motor Break-in · Motor Test · History Records · AI Motor Health (Pro) · Bearing Resistance Test · Brush Contact Stability Test · Global Database · System Settings</p>"
+                "<p>The title shows <code>MotorLab M1</code> or <code>MotorLab PRO</code>. On M1 the health-management button is greyed out but can still be opened to browse.</p>"
+            )},
+            {"id": "breakin", "t": "4. Motor Break-in", "html": (
+                "<p class='manual-intro'>Long, low-speed running that beds the brushes against the commutator for optimal contact. Split into <b>10 stages (a–j)</b>, about 5 hours by default.</p>"
+                "<p><b>Steps</b>: Home →「Motor Break-in」→ pick the <b>motor model</b> (16-model dropdown) + enter a <b>note</b> (optional, ≤40 chars) → confirm the 10-stage parameters (tap a number field to edit; changes apply automatically) →「Start」.</p>"
+                "<p>Each stage: soft-start → running → soft-stop → cooling → next stage. When all finish → 3 beeps → automatically saved to History Records.</p>"
+                "<p><b>While running you can press</b>:</p>"
+                "<table class='manual-table'><thead><tr><th>Button</th><th>Behaviour</th></tr></thead><tbody>"
+                "<tr><td>Stop</td><td>Soft-stops then ends; record marked “user-stopped”</td></tr>"
+                "<tr><td>Reset</td><td>Clears max-RPM / stable-current peaks without interrupting</td></tr>"
+                "<tr><td>Home</td><td>Returns to home; break-in <b>keeps running in the background</b></td></tr>"
+                "</tbody></table>"
+                "<div class='manual-note'><b>Note</b>: all settings lock while running; don’t cut power mid-run (data loss); overheating auto-stops and saves; to bench-test quickly, shorten each stage’s time. Each stage sets voltage / direction / run time / cool time / stable-current tolerance.</div>"
+            )},
+            {"id": "test", "t": "5. Motor Test", "html": (
+                "<p class='manual-intro'>Single-stage live observation, <b>not written to records</b>.</p>"
+                "<p>Home →「Motor Test」→ set <b>voltage (0–4.5V) / run time / direction / stable-current tolerance</b> →「Start」→ watch live data and charts; stops automatically at time. In smart mode, if the current settles early it ends as “stable”.</p>"
+                "<div class='manual-note'><b>Note</b>: the 4.5V cap protects the motor — don’t bypass it; press “Stop” once before switching from reverse to forward.</div>"
+            )},
+            {"id": "records", "t": "6. History Records", "html": (
+                "<p class='manual-intro'>Every break-in is saved in full automatically, up to <b>50 records</b>.</p>"
+                "<p>Each shows name / start time / duration / mode / end reason / max RPM / avg RPM / stable current.</p>"
+                "<table class='manual-table'><thead><tr><th>Button</th><th>Use</th></tr></thead><tbody>"
+                "<tr><td>View</td><td>See per-stage data</td></tr>"
+                "<tr><td>Apply</td><td>One-tap the 10-stage parameters back to the break-in page</td></tr>"
+                "<tr><td>Export</td><td>Download JSON (re-importable) or CSV (opens in Excel)</td></tr>"
+                "<tr><td>Delete</td><td>Remove (irreversible)</td></tr>"
+                "</tbody></table>"
+                "<ul>"
+                "<li><b>When full (50)</b>: in Manage choose “auto-overwrite” (deletes oldest on start) or “no overwrite” (default; start is blocked, clear manually).</li>"
+                "<li><b>Import</b>: pick a previously exported JSON (duplicate id overwrites). JSON only. Each export carries a <b>signature</b>: same / same-batch machines interchange, but tampered or other-batch files are rejected; renaming doesn’t matter (the content is verified).</li>"
+                "<li><b>Filename</b>: <code>motorlab_&lt;date&gt;_&lt;time&gt;_&lt;model&gt;[_&lt;note&gt;]</code>, using the break-in start time → repeated exports of the same record share the filename.</li>"
+                "<li>Firmware updates / factory reset <b>never clear records</b>.</li>"
+                "</ul>"
+            )},
+            {"id": "database", "t": "7. Global Break-in Database", "html": (
+                "<p class='manual-intro'>Share break-in records with players worldwide — done <b>directly over the network from the machine</b>, no export-then-upload needed. Requires WiFi <b>with internet</b> (M1 / Pro both work).</p>"
+                "<p><b>Browse / download</b>: Home →「Global Database」→ after connecting, the latest 100 records are listed → filter live by <b>motor model / country / completion</b> → each can be “Download” (saves locally) or “Download &amp; Apply” (saves and applies the profile to the break-in page).</p>"
+                "<p><b>Share yours</b>: History Records → open a record → at the bottom of the detail page “Share to Global Database” → the confirm box <b>lists exactly what becomes public</b> (model / note / sharer / country / full data; if you entered a name it warns it shows your real name) → confirm upload. If already uploaded it notes “this record is already in the database” (not an error).</p>"
+                "<div class='manual-note'><b>Note</b>: downloaded records are signature-verified; uploading means agreeing to make it public — to remove, email <b>motorlab.tw@gmail.com</b>; connecting to WiFi without internet shows “cannot reach the server”.</div>"
+            )},
+            {"id": "ai", "t": "8. AI Motor Health Management (Pro)", "html": (
+                "<p class='manual-intro'>Builds a health fingerprint per motor, re-measures periodically and compares, giving a 0–100 score with advice. <b>Compared against itself, not against other motors</b>.</p>"
+                "<ol>"
+                "<li>Home →「AI Motor Health」→「+ Add Motor」.</li>"
+                "<li>Enter <b>motor model</b> (dropdown) + <b>note</b> (optional) + <b>start voltage</b> + <b>voltage step</b> (5 points auto-selected).</li>"
+                "<li>Confirm → runs about <b>2.5 minutes</b> to build the baseline.</li>"
+                "</ol>"
+                "<p>Afterwards each card can run a <b>Full check</b> (~2.5 min, most accurate) or <b>Quick check</b> (~1.5 min, ±5%). The result page shows the score, grade (Optimal / Acceptable / Warning / Critical), trend chart, five metrics and written advice.</p>"
+                "<div class='manual-note'><b>Note</b>: up to 50 history entries per motor, 20 motors per machine; don’t cut power or press other buttons during a check; overheating auto-aborts; on M1 the button is greyed (tapping prompts an upgrade).</div>"
+            )},
+            {"id": "bearing", "t": "9. Bearing Resistance Test", "html": (
+                "<p class='manual-intro'>Measures bearing health in about 10 seconds, available on any edition. <b>Slower decay → healthier bearing</b>.</p>"
+                "<p>Home →「Bearing Resistance Test」→「Start」→ the machine spins up → cuts power → measures the decay time → shows the <b>τ decay time</b> and a rating (Good / Caution / Service recommended).</p>"
+                "<div class='manual-note'><b>Note</b>: needs a working RPM sensor (“RPM is 0” means the sensor is misaligned or the reflective mark fell off); no load needed; measure 3 times and average.</div>"
+            )},
+            {"id": "brush", "t": "10. Brush Contact Stability Test", "html": (
+                "<p class='manual-intro'>Measures whether brush contact is even, about 15 seconds, any edition. <b>Uneven contact → current jitter → higher CV</b>.</p>"
+                "<p>Home →「Brush Contact Stability Test」→「Start」→ prompt “confirm the shaft is locked” (manually turn the shaft to an angle, release, confirm it stays still) → the machine runs <b>3 steps</b> (each at a different angle, prompting you to turn to the next) → shows each step’s <b>CV%</b> and a rating (Good / Caution / Cleaning recommended).</p>"
+                "<div class='manual-note'><b>Note</b>: if the motor moves unexpectedly during the test (&gt;100 RPM) it aborts immediately with “shaft not locked”; three angles cover different contact points.</div>"
+            )},
+            {"id": "settings", "t": "11. System Settings", "html": (
+                "<p class='manual-intro'>While the system is running, only “Home” is available here; everything else is locked.</p>"
+                "<table class='manual-table'><tbody>"
+                "<tr><th>User Settings</th><td>Name / country (≤32 chars, default <code>--</code>), written into each record as its origin. Existing records are not back-filled.</td></tr>"
+                "<tr><th>WiFi Settings</th><td>Change hotspot name / password (8–63 chars) → the machine restarts after saving; reconnect to the new hotspot. Forgot the password? See section 13.</td></tr>"
+                "<tr><th>Language</th><td>Switch 中文 / English / 日本語, applied instantly and remembered (default Chinese).</td></tr>"
+                "<tr><th>Break-in Mode</th><td>Pure run-time / smart stable-current (advances on time <b>or</b> when current settles early).</td></tr>"
+                "<tr><th>Temp Calibration</th><td>Add compensation when the display deviates from reality (±20°C).</td></tr>"
+                "<tr><th>Avg-RPM Setting</th><td>Tolerance (RPM difference between consecutive seconds, default 50, range 10–500); smaller is stricter.</td></tr>"
+                "<tr><th>Soft-start Params</th><td>kick PWM (default 60%) / kick duration (300ms) / soft-start duration (700ms). If it won’t start, raise kick; if it lurches into protection, lower kick.</td></tr>"
+                "<tr><th>Get License</th><td>Upgrade M1 to Pro, see below.</td></tr>"
+                "<tr><th>Software Update</th><td>Auto-fetch the latest firmware over home WiFi, see below.</td></tr>"
+                "<tr><th>RGB Status Light</th><td>Dual lights (built-in / panel) output location + brightness (0–100%) + 5 status styles, see below.</td></tr>"
+                "<tr><th>Engineering Mode</th><td>Password-protected advanced calibration and offline update (not needed by normal users).</td></tr>"
+                "<tr><th>WiFi List</th><td>Remembers up to 8 external WiFi networks; “Clear list” for handing the device on (does not affect Pro license).</td></tr>"
+                "</tbody></table>"
+                "<p><b>Get License (M1 → Pro)</b>: System Settings →「Get License」→ pick your home WiFi → the machine verifies the purchase automatically → if not purchased it shows a QR code → <b>scan and pay on another internet-connected device</b> → the machine polls every 10 s and unlocks on payment. About 1–3 minutes total, <b>no manual key entry</b>, retry if it times out after 10 minutes. After a refund it shows “Re-acquire license”.</p>"
+                "<p><b>Software Update</b>: System Settings →「Check for Updates」→ pick WiFi → if there’s a new version it downloads and writes automatically (progress to 100%) → auto-restarts and reloads the page. <b>Don’t cut power / close the browser</b> during this (power loss mid-update auto-reverts to the old version); ~1.6MB download, about 5–10 s on home WiFi.</p>"
+                "<p><b>RGB Status Light</b>:</p>"
+                "<ul>"
+                "<li><b>Output location</b>: panel / panel+built-in (default) / built-in, switches instantly on tap.</li>"
+                "<li><b>Brightness</b>: drag the slider →「Preview」(tries it for 5 s without saving, repeatable) → when happy press「Apply」to save. (Two steps avoid connection stutter from continuous writes.)</li>"
+                "<li><b>Status styles (5)</b>: scanned top-down; the first matching status shows its status (none / overheat / cooling / standby / running) × hue × mode (solid / blink / breathe) × interval / period; same Preview / Apply two-step.</li>"
+                "</ul>"
+                "<p><b>Engineering Mode</b>: requires a password (3 wrong attempts lock for 60 s; auto-logout after 10 minutes idle).</p>"
+            )},
+            {"id": "safety", "t": "12. Safety & Protection", "html": (
+                "<table class='manual-table'><thead><tr><th>Mechanism</th><th>Trigger / behaviour</th></tr></thead><tbody>"
+                "<tr><td>Overheat protection</td><td>Temperature over limit for 0.5 s straight → motor stops immediately + 5 beeps + cooling, a “!” appears by the temperature. To recover: let it cool → press “Reset” to clear the lock before restarting.</td></tr>"
+                "<tr><td>Soft-start / soft-stop</td><td>Start/stop is a 3-second linear ramp up/down, avoiding current surges and mechanical shock.</td></tr>"
+                "<tr><td>Current cap</td><td>Fixed 4A measurement ceiling; readings clamp above it (no shutdown, but sustained high current may trigger overheat).</td></tr>"
+                "<tr><td>Boot lock</td><td>3 crashes within 30 s of boot → automatically reverts to the previous firmware.</td></tr>"
+                "</tbody></table>"
+            )},
+            {"id": "reset", "t": "13. Factory Reset (Rescue)", "html": (
+                "<p><b>Purpose</b>: when you’ve forgotten the WiFi name / password, reset the hotspot back to <code>MotorTester</code> / <code>12345678</code>.</p>"
+                "<p><b>How</b>: short the machine’s “factory reset” contact to 3.3V (or press the corresponding button) <b>for 5 seconds</b> → 10 beeps → auto-restart.</p>"
+                "<div class='manual-note'><b>Only the WiFi hotspot name and password are reset</b>; all of the following are kept: break-in parameters / all calibrations and settings / Pro license / history records / motor fingerprints / RGB settings / remembered external WiFi.</div>"
+            )},
+            {"id": "faq", "t": "14. FAQ", "html": (
+                "<table class='manual-table'><thead><tr><th>Problem</th><th>Fix</th></tr></thead><tbody>"
+                "<tr><td>No beep on power-on</td><td>Check 5V power and buzzer wiring</td></tr>"
+                "<tr><td>Connects but page won’t open</td><td>Make sure it’s <code>http://</code> (not https), turn off mobile data, force-refresh (Ctrl+Shift+R)</td></tr>"
+                "<tr><td>Stuck on “Applying…”</td><td>Usually unstable WiFi; just refresh the page (a built-in 8-second watchdog turns the text red)</td></tr>"
+                "<tr><td>Swap motor mid-break-in</td><td>Press “Stop” → swap → “Start” again (a new run is a brand-new record)</td></tr>"
+                "<tr><td>License stuck on connecting</td><td>Wrong home WiFi password / no internet / weak signal → re-enter or change WiFi</td></tr>"
+                "<tr><td>After a Pro refund</td><td>On the next online re-check the machine <b>auto-reverts to M1</b>; to buy again press “Re-acquire license”</td></tr>"
+                "<tr><td>Red “AP password still default” banner</td><td>Change the password in WiFi Settings</td></tr>"
+                "<tr><td>Handing it to someone else</td><td>Reset calibration in engineering mode → clear WiFi list → (optional) clear records / delete motors → factory reset. The Pro license is bound to the machine and cannot be transferred</td></tr>"
+                "<tr><td>Can a failed update brick it?</td><td>No — dual firmware partitions with auto-rollback + signature verification + USB rescue</td></tr>"
+                "<tr><td>Can I unplug while idle?</td><td>Yes; best when the motor is fully stopped, no “Applying…”, no update in progress</td></tr>"
+                "</tbody></table>"
+            )},
+            {"id": "led", "t": "15. Status Lights", "html": (
+                "<p>Default configuration (editable in “RGB Status Light”):</p>"
+                "<table class='manual-table'><thead><tr><th>System state</th><th>Default</th><th>Meaning</th></tr></thead><tbody>"
+                "<tr><td>Overheat lock</td><td>Red blink</td><td>Overheat protection triggered; cool down and press “Reset”</td></tr>"
+                "<tr><td>Cooling</td><td>Yellow solid</td><td>Inter-stage cooling, motor still</td></tr>"
+                "<tr><td>Standby</td><td>Blue breathe</td><td>Awaiting commands</td></tr>"
+                "<tr><td>Running</td><td>Green breathe</td><td>Break-in / test / check in progress</td></tr>"
+                "<tr><td>Off</td><td>—</td><td>No match or all off</td></tr>"
+                "</tbody></table>"
+                "<p class='manual-contact'>When <b>reporting a problem</b>, please include: firmware version (System Settings → Software Update), edition (M1 / PRO on home), a screenshot, whether it was running, and steps to reproduce. Support: <b>motorlab.tw@gmail.com</b></p>"
+            )},
+        ],
+        "ja": [
+            {"id": "start", "t": "1. クイックスタート", "html": (
+                "<ol>"
+                "<li>電源を接続 → 基板のインジケーターが点灯し、起動音が鳴ります。</li>"
+                "<li>スマホ / タブレット / PC の WiFi で「<b>MotorTester</b>」に接続(初期パスワード <code>12345678</code>)。</li>"
+                "<li>ブラウザで <code>http://10.10.10.1/</code> を開きます。</li>"
+                "<li><b>最初にやること</b>:システム設定 → WiFi 設定で、パスワードを強固なものに変更(そうしないと誰でも機器を操作できます)。</li>"
+                "</ol>"
+            )},
+            {"id": "connect", "t": "2. 接続", "html": (
+                "<table class='manual-table'><tbody>"
+                "<tr><th>アドレス</th><td><code>http://10.10.10.1/</code>(<b>https ではありません</b>)</td></tr>"
+                "<tr><th>ホットスポット</th><td><code>MotorTester</code> / <code>12345678</code>(名称変更可)</td></tr>"
+                "<tr><th>デバイス</th><td>スマホ / タブレット / ノート PC いずれも可。大きな画面推奨</td></tr>"
+                "<tr><th>接続数</th><td>最大 4 台。ただしコマンド競合を避けるため<b>操作は 1 ページのみ</b>で</td></tr>"
+                "<tr><th>注意</th><td>機器のホットスポットは<b>インターネットなし</b>。iPhone で「インターネット未接続」が出たら「保持」を選択</td></tr>"
+                "</tbody></table>"
+            )},
+            {"id": "home", "t": "3. ホーム画面", "html": (
+                "<p>上部バナーにリアルタイムの <b>電圧 / 電流 / 回転数 / 温度</b> を表示(全ページで確認可)。8 つの機能ボタン:</p>"
+                "<p class='manual-pills'>モーター慣らし · モーターテスト · 履歴記録 · AI モーター健康管理(Pro)· ベアリング抵抗測定 · ブラシ接触安定測定 · グローバルデータ庫 · システム設定</p>"
+                "<p>タイトルに <code>MotorLab M1</code> または <code>MotorLab PRO</code> を表示。M1 では健康管理ボタンはグレーですが開いて閲覧は可能です。</p>"
+            )},
+            {"id": "breakin", "t": "4. モーター慣らし", "html": (
+                "<p class='manual-intro'>低速で長時間運転し、ブラシと整流子を最適な接触に馴染ませます。<b>10 段階(a〜j)</b>、初期設定で約 5 時間。</p>"
+                "<p><b>操作</b>:ホーム →「モーター慣らし」→ <b>モーター型番</b>(16 種プルダウン)を選択 + <b>備考</b>(任意、40 字以内)を入力 → 10 段階のパラメータを確認(数値欄をタップして編集、変更は自動適用)→「開始」。</p>"
+                "<p>各段階の流れ:ソフトスタート → 運転中 → ソフトストップ → 冷却中 → 次の段階。すべて完了 → ビープ 3 回 → 履歴記録に自動保存。</p>"
+                "<p><b>運転中に押せるボタン</b>:</p>"
+                "<table class='manual-table'><thead><tr><th>ボタン</th><th>動作</th></tr></thead><tbody>"
+                "<tr><td>停止</td><td>ソフトストップ後に終了。記録は「ユーザー中止」</td></tr>"
+                "<tr><td>リセット</td><td>最高回転数 / 安定電流のピークをクリア(中断しない)</td></tr>"
+                "<tr><td>ホーム</td><td>ホームに戻る。慣らしは<b>バックグラウンドで継続</b></td></tr>"
+                "</tbody></table>"
+                "<div class='manual-note'><b>注意</b>:運転中は全設定がロック。途中で電源を切らない(データ消失);高温時は自動停止して保存;素早く検証したい場合は各段階の時間を短く。各段階で 電圧 / 方向 / 運転時間 / 冷却時間 / 安定電流許容差 を設定可。</div>"
+            )},
+            {"id": "test", "t": "5. モーターテスト", "html": (
+                "<p class='manual-intro'>単段階のリアルタイム観察。<b>記録には保存されません</b>。</p>"
+                "<p>ホーム →「モーターテスト」→ <b>電圧(0〜4.5V)/ 運転時間 / 方向 / 安定電流許容差</b> を設定 →「開始」→ リアルタイムデータとグラフを確認、時間で自動停止。スマートモードでは電流が早く安定すると「stable」で終了。</p>"
+                "<div class='manual-note'><b>注意</b>:4.5V の上限はモーター保護のため、回避しない;逆転から正転に切り替える前に一度「停止」を押す。</div>"
+            )},
+            {"id": "records", "t": "6. 履歴記録", "html": (
+                "<p class='manual-intro'>慣らしごとの全データを自動保存、最大 <b>50 件</b>。</p>"
+                "<p>各件に 名称 / 開始時刻 / 所要時間 / モード / 終了理由 / 最高回転数 / 平均回転数 / 安定電流 を表示。</p>"
+                "<table class='manual-table'><thead><tr><th>ボタン</th><th>用途</th></tr></thead><tbody>"
+                "<tr><td>表示</td><td>各段階のデータを見る</td></tr>"
+                "<tr><td>適用</td><td>10 段階パラメータをワンタップで慣らしページへ</td></tr>"
+                "<tr><td>エクスポート</td><td>JSON(再インポート可)または CSV(Excel で開く)をダウンロード</td></tr>"
+                "<tr><td>削除</td><td>削除(復元不可)</td></tr>"
+                "</tbody></table>"
+                "<ul>"
+                "<li><b>満杯時(50 件)</b>:管理で「自動上書き」(開始時に最古を削除)または「上書きしない」(初期値。開始がブロックされ手動削除が必要)を選択。</li>"
+                "<li><b>インポート</b>:以前エクスポートした JSON を選択(id 重複は上書き)。JSON のみ。各エクスポートには<b>署名検証</b>付き:同一 / 同一ロットの機器は互換、改ざん済みや別ロットのファイルは拒否;ファイル名変更は無関係(内容を検証)。</li>"
+                "<li><b>ファイル名</b>:<code>motorlab_&lt;日付&gt;_&lt;時刻&gt;_&lt;型番&gt;[_&lt;備考&gt;]</code>、慣らし開始時刻を使用 → 同一件の再エクスポートはファイル名が一致。</li>"
+                "<li>ファームウェア更新 / 工場出荷リセットでも<b>記録は消えません</b>。</li>"
+                "</ul>"
+            )},
+            {"id": "database", "t": "7. グローバル慣らしデータ庫", "html": (
+                "<p class='manual-intro'>世界中のプレイヤーと慣らし記録を共有。機器が<b>直接ネット接続</b>して完了し、エクスポートしてサイトへ上げる必要はありません。<b>インターネットのある WiFi</b> が必要(M1 / Pro 両対応)。</p>"
+                "<p><b>閲覧 / ダウンロード</b>:ホーム →「グローバルデータ庫」→ 接続後、最新 100 件を表示 → <b>モーター型番 / 国 / 完走状態</b> でリアルタイム絞り込み → 各件を「ダウンロード」(本体に保存)または「ダウンロードして適用」(保存しレシピを慣らしページに適用)。</p>"
+                "<p><b>自分の記録を共有</b>:履歴記録 → 1 件を開く → 詳細ページ下部「グローバルデータ庫に共有」→ 確認ダイアログが<b>公開される項目を明示</b>(型番 / 備考 / 共有者 / 国 / 全データ;名前を入力していれば実名表示の警告)→ アップロード確定。アップロード済みなら「この記録は既にデータ庫にあります」と表示(エラーではありません)。</p>"
+                "<div class='manual-note'><b>注意</b>:ダウンロードした記録は署名検証されます;アップロードは公開への同意を意味します。削除は <b>motorlab.tw@gmail.com</b> へ;インターネットのない WiFi に接続すると「サーバーに接続できません」と表示。</div>"
+            )},
+            {"id": "ai", "t": "8. AI モーター健康管理(Pro)", "html": (
+                "<p class='manual-intro'>モーターごとに健康指紋を作成し、定期的に再測定・比較して 0〜100 点とアドバイスを提示。<b>他のモーターとではなく、自分自身と比較</b>します。</p>"
+                "<ol>"
+                "<li>ホーム →「AI モーター健康管理」→「+ モーター追加」。</li>"
+                "<li><b>モーター型番</b>(プルダウン)+ <b>備考</b>(任意)+ <b>開始電圧</b> + <b>電圧間隔</b>(5 点自動選択)を入力。</li>"
+                "<li>確認 → 約 <b>2.5 分</b> でベースラインを自動構築。</li>"
+                "</ol>"
+                "<p>以降、各カードで <b>フル検査</b>(約 2.5 分、最も正確)または <b>クイック検査</b>(約 1.5 分、±5%)を実行可。結果ページにスコア、等級(Optimal / Acceptable / Warning / Critical)、トレンドグラフ、5 項目の指標、テキストアドバイスを表示。</p>"
+                "<div class='manual-note'><b>注意</b>:1 モーターにつき履歴最大 50 回、1 台につき 20 モーターまで;検査中は電源を切らず他のボタンも押さない;高温時は自動中止;M1 ではボタンがグレー(タップでアップグレード案内)。</div>"
+            )},
+            {"id": "bearing", "t": "9. ベアリング抵抗測定", "html": (
+                "<p class='manual-intro'>ベアリングの健康度を約 10 秒で測定、全エディションで利用可。<b>減衰が遅いほどベアリングは健康</b>。</p>"
+                "<p>ホーム →「ベアリング抵抗測定」→「測定開始」→ 機器が加速 → 電源を切断 → 減衰時間を測定 → <b>τ 減衰時間</b> と評価(良好 / 注意 / メンテ推奨)を表示。</p>"
+                "<div class='manual-note'><b>注意</b>:回転センサーが正常である必要(「回転数 0」はセンサー未整列または反射マーク脱落);負荷接続は不要;3 回測定して平均推奨。</div>"
+            )},
+            {"id": "brush", "t": "10. ブラシ接触安定測定", "html": (
+                "<p class='manual-intro'>ブラシ接触が均一かを約 15 秒で測定、全エディション対応。<b>接触不均一 → 電流のばらつき → CV 上昇</b>。</p>"
+                "<p>ホーム →「ブラシ接触安定測定」→「測定開始」→「軸が固定されていることを確認」の案内(手で軸をある角度まで回して放し、静止を確認)→ 機器が <b>3 ステップ</b> 実行(各ステップで角度を変更、次の角度へ回すよう案内)→ 各ステップの <b>CV%</b> と評価(良好 / 注意 / 清掃推奨)を表示。</p>"
+                "<div class='manual-note'><b>注意</b>:測定中にモーターが予期せず回転(&gt;100 RPM)すると直ちに中止し「軸が固定されていません」と表示;3 角度は異なる接触点をカバーするため。</div>"
+            )},
+            {"id": "settings", "t": "11. システム設定", "html": (
+                "<p class='manual-intro'>システム運転中、このページは「ホーム」のみ操作可、他はロックされます。</p>"
+                "<table class='manual-table'><tbody>"
+                "<tr><th>ユーザー設定</th><td>名前 / 国(32 字以内、初期値 <code>--</code>)。各記録に出処として書き込まれます。既存の記録には反映されません。</td></tr>"
+                "<tr><th>WiFi 設定</th><td>ホットスポット名 / パスワード(8〜63 字)を変更 → 保存後に機器が再起動、新しいホットスポットへ再接続。パスワードを忘れた場合は第 13 節参照。</td></tr>"
+                "<tr><th>言語</th><td>中文 / English / 日本語 を切替、即時反映され設定を記憶(初期値は中国語)。</td></tr>"
+                "<tr><th>慣らしモード</th><td>運転時間のみ / スマート安定電流判定(時間到達<b>または</b>電流が早く安定したら次段階へ)。</td></tr>"
+                "<tr><th>温度校正</th><td>表示と実際にずれがある場合に補正を追加(±20°C)。</td></tr>"
+                "<tr><th>平均回転数設定</th><td>許容差(隣接 2 秒の回転数差、初期 50 RPM、10〜500 で調整)。小さいほど厳格。</td></tr>"
+                "<tr><th>ソフトスタート設定</th><td>kick PWM(初期 60%)/ kick 時間(300ms)/ ソフトスタート時間(700ms)。始動しない場合は kick を上げる;暴走して保護に入る場合は kick を下げる。</td></tr>"
+                "<tr><th>ライセンス取得</th><td>M1 を Pro に。下記参照。</td></tr>"
+                "<tr><th>ソフトウェア更新</th><td>自宅 WiFi 経由で最新ファームを自動取得。下記参照。</td></tr>"
+                "<tr><th>RGB ステータスライト</th><td>デュアルライト(内蔵 / パネル)の出力位置 + 明るさ(0〜100%)+ 5 つの状態スタイル。下記参照。</td></tr>"
+                "<tr><th>エンジニアリングモード</th><td>パスワード保護の高度な校正とオフライン更新(一般ユーザーには不要)。</td></tr>"
+                "<tr><th>WiFi リスト</th><td>外部 WiFi を最大 8 組記憶;「リストを消去」は機器の譲渡用(Pro ライセンスには影響しません)。</td></tr>"
+                "</tbody></table>"
+                "<p><b>ライセンス取得(M1 → Pro)</b>:システム設定 →「ライセンス取得」→ 自宅 WiFi を選んで接続 → 機器が購入を自動検証 → 未購入なら QR コードを表示 → <b>別のインターネット接続デバイスでスキャンして決済</b> → 機器が 10 秒ごとに自動照会、決済成功で解除。全体で約 1〜3 分、<b>キーの手動入力は不要</b>、10 分でタイムアウトしたら再試行可。返金後は「ライセンス再取得」と表示。</p>"
+                "<p><b>ソフトウェア更新</b>:システム設定 →「更新を確認」→ WiFi を選択 → 新版があれば自動ダウンロード・書き込み(進捗 100% まで)→ 自動再起動・ページ自動再読込。<b>途中で電源 / ブラウザを閉じない</b>(更新中の電源断は保護で旧版へ自動復帰);ダウンロード約 1.6MB、自宅 WiFi で約 5〜10 秒。</p>"
+                "<p><b>RGB ステータスライト</b>:</p>"
+                "<ul>"
+                "<li><b>出力位置</b>:パネル / パネル+内蔵(初期)/ 内蔵、タップで即時切替。</li>"
+                "<li><b>明るさ</b>:スライダーを動かす →「プレビュー」(保存せず 5 秒お試し、繰り返し可)→ 良ければ「適用」で保存。(2 段階なのは連続書き込みによる接続のもたつき防止のため。)</li>"
+                "<li><b>状態スタイル(5 組)</b>:上から下へ走査し、最初に一致した状態を表示。状態(なし / 高温 / 冷却 / 待機 / 運転)× 色相 × モード(常時点灯 / 点滅 / 呼吸)× 間隔 / 周期;同じく「プレビュー / 適用」の 2 段階。</li>"
+                "</ul>"
+                "<p><b>エンジニアリングモード</b>:パスワードが必要(3 回間違えると 60 秒ロック、10 分無操作で自動ログアウト)。</p>"
+            )},
+            {"id": "safety", "t": "12. 安全と保護", "html": (
+                "<table class='manual-table'><thead><tr><th>機構</th><th>トリガー / 動作</th></tr></thead><tbody>"
+                "<tr><td>高温保護</td><td>温度が 0.5 秒連続で超過 → 直ちにモーター停止 + ビープ 5 回 + 冷却へ、温度横に「!」表示。対処:冷えるのを待つ → 「リセット」でロック解除してから再始動。</td></tr>"
+                "<tr><td>ソフトスタート / ソフトストップ</td><td>始動 / 停止は 3 秒の直線的な立上げ / 立下げ。電流の急増と機械的衝撃を防止。</td></tr>"
+                "<tr><td>電流上限</td><td>測定上限は固定 4A。超過分は読値が頭打ち(停止はしないが、長時間の高電流は高温を誘発する場合あり)。</td></tr>"
+                "<tr><td>起動ロック</td><td>起動後 30 秒以内に 3 回連続クラッシュ → 自動的に前バージョンのファームへ復帰。</td></tr>"
+                "</tbody></table>"
+            )},
+            {"id": "reset", "t": "13. 工場出荷リセット(レスキュー)", "html": (
+                "<p><b>用途</b>:WiFi 名 / パスワードを忘れたとき、ホットスポットを <code>MotorTester</code> / <code>12345678</code> に戻します。</p>"
+                "<p><b>方法</b>:機器の「工場出荷リセット」接点を 3.3V に短絡(または対応ボタンを押す)<b>5 秒間保持</b> → ビープ 10 回 → 自動再起動。</p>"
+                "<div class='manual-note'><b>WiFi ホットスポット名とパスワードのみリセット</b>。以下はすべて保持:慣らしパラメータ / 各種校正と設定 / Pro ライセンス / 履歴記録 / モーター指紋 / RGB 設定 / 記憶済み外部 WiFi。</div>"
+            )},
+            {"id": "faq", "t": "14. よくある質問", "html": (
+                "<table class='manual-table'><thead><tr><th>問題</th><th>対処</th></tr></thead><tbody>"
+                "<tr><td>起動音が鳴らない</td><td>電源 5V とブザー配線を確認</td></tr>"
+                "<tr><td>接続できるがページが開かない</td><td><code>http://</code>(https ではない)を確認、モバイルデータをオフ、強制再読込(Ctrl+Shift+R)</td></tr>"
+                "<tr><td>「適用中…」のまま</td><td>多くは WiFi 不安定。ページを再読込すれば OK(内蔵 8 秒監視が赤字で通知)</td></tr>"
+                "<tr><td>慣らし途中でモーター交換</td><td>「停止」→ 交換 → 再度「開始」(新たな実行は新規記録)</td></tr>"
+                "<tr><td>ライセンス取得が接続で止まる</td><td>自宅 WiFi パスワード誤り / 外部ネットなし / 電波弱 → 再入力または WiFi 変更</td></tr>"
+                "<tr><td>Pro 返金後</td><td>次回オンライン再検証時に<b>自動的に M1 へ戻る</b>;再購入は「ライセンス再取得」</td></tr>"
+                "<tr><td>赤い「AP パスワードが初期値のまま」バナー</td><td>WiFi 設定でパスワードを変更</td></tr>"
+                "<tr><td>他人に譲る</td><td>エンジニアリングモードで校正リセット → WiFi リスト消去 →(任意)記録消去 / モーター削除 → 工場出荷リセット。Pro ライセンスは機器に紐づき譲渡不可</td></tr>"
+                "<tr><td>更新失敗で文鎮化する?</td><td>しません。デュアルファーム領域の自動復帰 + 署名検証 + USB レスキュー</td></tr>"
+                "<tr><td>待機中に電源を抜いてよい?</td><td>可。モーター完全停止、「適用中」なし、更新中でない状態が望ましい</td></tr>"
+                "</tbody></table>"
+            )},
+            {"id": "led", "t": "15. ステータスランプ", "html": (
+                "<p>初期設定(「RGB ステータスライト」で変更可):</p>"
+                "<table class='manual-table'><thead><tr><th>システム状態</th><th>初期</th><th>意味</th></tr></thead><tbody>"
+                "<tr><td>高温ロック</td><td>赤点滅</td><td>高温保護が作動。冷却して「リセット」を押す</td></tr>"
+                "<tr><td>冷却中</td><td>黄点灯</td><td>段階間の冷却、モーター静止</td></tr>"
+                "<tr><td>待機</td><td>青呼吸</td><td>コマンド待ち</td></tr>"
+                "<tr><td>運転中</td><td>緑呼吸</td><td>慣らし / テスト / 検査中</td></tr>"
+                "<tr><td>消灯</td><td>—</td><td>一致なしまたは全消灯</td></tr>"
+                "</tbody></table>"
+                "<p class='manual-contact'><b>問題報告</b>の際は次を併せてご提供ください:ファームウェアバージョン(システム設定 → ソフトウェア更新)、エディション(ホームの M1 / PRO)、画面のスクリーンショット、運転中かどうか、再現手順。サポート:<b>motorlab.tw@gmail.com</b></p>"
+            )},
+        ],
+    },
+}
+
+
+def build_manual_page(man_cfg, lang, src_html, i18n):
+    """產生 /docs/user-manual/ 使用者手冊頁(左目錄 + 右章節,沿用 .guide-page 殼)。"""
+    soup = BeautifulSoup(src_html, "lxml")
+    cfg = LANGS[lang]
+    ui = UI_STRINGS[lang]
+    s = man_cfg["i18n"][lang]
+    secs = man_cfg["sections"][lang]
+    lang_prefix = "" if lang == "zh" else f"/{lang}"
+    page_url = f"{SITE}{lang_prefix}/docs/{man_cfg['slug']}/"
+    home_url = f"{SITE}{lang_prefix}/"
+
+    soup.html["lang"] = cfg["html_lang"]
+
+    for sc in soup.find_all("script", {"type": "application/ld+json"}):
+        sc.decompose()
+    for tag in soup.find_all("link", {"rel": "alternate"}):
+        tag.decompose()
+
+    footer_el = soup.find("footer")
+    footer_extracted = footer_el.extract() if footer_el else None
+
+    if soup.title:
+        soup.title.string = s["title"]
+
+    def set_meta(attr, attr_val, content):
+        tag = soup.find("meta", {attr: attr_val})
+        if tag:
+            tag["content"] = content
+
+    set_meta("name", "description", s["description"])
+    kw = s["keywords"]
+    if lang != "en" and "en" in man_cfg["i18n"]:
+        kw = kw + ", " + man_cfg["i18n"]["en"]["keywords"]
+    set_meta("name", "keywords", kw)
+    set_meta("http-equiv", "Content-Language", cfg["html_lang"])
+    set_meta("property", "og:type", "article")
+    set_meta("property", "og:url", page_url)
+    set_meta("property", "og:title", s["title"])
+    set_meta("property", "og:description", s["description"])
+    set_meta("property", "og:locale", cfg["og_locale"])
+    set_meta("name", "twitter:title", s["title"])
+    set_meta("name", "twitter:description", s["description"])
+
+    canon = soup.find("link", {"rel": "canonical"})
+    if canon:
+        canon["href"] = page_url
+
+    head = soup.head
+    for hl_lang, hl_cfg in LANGS.items():
+        hl_prefix = "" if hl_lang == "zh" else f"/{hl_lang}"
+        head.append(soup.new_tag("link", attrs={
+            "rel": "alternate", "hreflang": hl_cfg["html_lang"],
+            "href": f"{SITE}{hl_prefix}/docs/{man_cfg['slug']}/"
+        }))
+    head.append(soup.new_tag("link", attrs={
+        "rel": "alternate", "hreflang": "x-default", "href": f"{SITE}/docs/{man_cfg['slug']}/"
+    }))
+
+    # JSON-LD: TechArticle + BreadcrumbList
+    article_ld = {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": s["h1"],
+        "description": s["description"],
+        "inLanguage": cfg["html_lang"],
+        "url": page_url,
+        "author": {"@type": "Organization", "name": "MotorLab Team"},
+        "publisher": {"@type": "Organization", "name": "MotorLab.tw", "url": SITE + "/"},
+        "isPartOf": {"@type": "WebSite", "name": "MotorLab.tw", "url": SITE + "/"},
+    }
+    breadcrumb_ld = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": ui["bc_home"], "item": home_url},
+            {"@type": "ListItem", "position": 2, "name": s["breadcrumb"], "item": page_url},
+        ],
+    }
+    for data in (article_ld, breadcrumb_ld):
+        sc = soup.new_tag("script", attrs={"type": "application/ld+json"})
+        sc.string = json.dumps(data, ensure_ascii=False, indent=2)
+        head.append(sc)
+
+    soup.body.clear()
+    soup.body["class"] = "guide-page"
+
+    nav_html = (
+        f'<nav class="guide-nav"><div class="container">'
+        f'<a class="brand" href="{home_url}"><span>MotorLab<span class="tag">.tw</span></span></a>'
+        f'<a class="back-link" href="{home_url}">{ui["back_home"]}</a>'
+        f'</div></nav>'
+    )
+    soup.body.append(BeautifulSoup(nav_html, "html.parser"))
+
+    main_el = soup.new_tag("main")
+
+    bc_html = (
+        f'<nav class="breadcrumb" aria-label="Breadcrumb">'
+        f'<a href="{home_url}">{ui["bc_home"]}</a><span class="sep">/</span>'
+        f'<span class="current">{s["breadcrumb"]}</span></nav>'
+    )
+    hero_html = (
+        f'<section class="lab-hero"><div class="container">{bc_html}'
+        f'<div class="lab-eyebrow">{s["eyebrow"]}</div>'
+        f'<h1 class="lab-hero-title">{s["h1"]}</h1>'
+        f'<p class="lab-hero-p">{s["lead"]}</p>'
+        f'</div></section>'
+    )
+    main_el.append(BeautifulSoup(hero_html, "html.parser"))
+
+    # 目錄 + 章節:兩欄(.manual-layout)
+    toc_items = "".join(f'<li><a href="#{x["id"]}">{x["t"]}</a></li>' for x in secs)
+    sections_html = "".join(
+        f'<section class="manual-section" id="{x["id"]}">'
+        f'<h2>{x["t"]}</h2>{x["html"]}</section>'
+        for x in secs
+    )
+    body_html = (
+        f'<section class="lab-section"><div class="container">'
+        f'<div class="manual-layout">'
+        f'<aside class="manual-toc"><div class="manual-toc-label">{s["toc_label"]}</div>'
+        f'<ul>{toc_items}</ul></aside>'
+        f'<div class="manual-body">{sections_html}'
+        f'<p class="manual-fwnote">{s["fw_note"]}</p>'
+        f'</div></div></div></section>'
+    )
+    main_el.append(BeautifulSoup(body_html, "html.parser"))
+
+    soup.body.append(main_el)
+    if footer_extracted is not None:
+        soup.body.append(footer_extracted)
+
+    return str(soup)
+
+
+# ============================================================
 # 主程式
 # ============================================================
 def main():
@@ -2427,7 +3060,23 @@ def main():
         print("  ⚠ LAB['api_url'] 尚未設定 — /lab/ 上線前要填入 GAS Web App URL")
 
     print()
-    print("完成!3 個語言版本 + 教學分頁 + 3 個 hub 索引頁 + 商品外觀頁 + /lab/ 已產生。")
+    print("=== 使用者手冊(/docs/user-manual/,D23 docs 分類)===")
+    man_type = MANUAL.get("type", "docs")
+    for lang in ("zh", "en", "ja"):
+        if lang not in MANUAL["i18n"]:
+            continue
+        lang_prefix = "" if lang == "zh" else f"{lang}/"
+        out_dir = f"{lang_prefix}{man_type}/{MANUAL['slug']}"
+        out_path = f"{out_dir}/index.html"
+        os.makedirs(out_dir, exist_ok=True)
+        html_out = build_manual_page(MANUAL, lang, src_html, i18n)
+        with open(out_path, "w", encoding="utf-8") as f:
+            f.write(html_out)
+        size = len(html_out.encode("utf-8"))
+        print(f"  ✅ {out_path:<45} {size:>9,} bytes  ({lang})")
+
+    print()
+    print("完成!3 個語言版本 + 教學分頁 + 3 個 hub 索引頁 + 商品外觀頁 + /lab/ + 使用者手冊已產生。")
     print("=" * 55)
 
 
