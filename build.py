@@ -2343,40 +2343,40 @@ def build_lab_page(lab_cfg, lang, src_html, i18n):
 MANUAL = {
     "slug": "user-manual",
     "type": "docs",
-    "fw": "v3.2.22",
+    "fw": "v3.2.23",
     "i18n": {
         "zh": {
             "title": "MotorLab 使用者手冊:馬達磨合機操作說明 | MotorLab",
-            "description": "MotorLab Mini 4WD® 馬達磨合機完整使用手冊 — 連線、馬達磨合、馬達測試、歷史紀錄、全球磨合資料庫、AI 健康管理、軸承/電刷測試、系統設定、安全保護、工廠重設與常見問題。對應韌體 v3.2.22。",
+            "description": "MotorLab Mini 4WD® 馬達磨合機完整使用手冊 — 連線、馬達磨合、馬達測試、歷史紀錄、全球磨合資料庫、AI 健康管理、軸承/電刷測試、系統設定、安全保護、工廠重設與常見問題。對應韌體 v3.2.23。",
             "keywords": "MotorLab 使用手冊, 馬達磨合機操作, 馬達磨合機說明書, MotorLab 教學, 馬達磨合機設定",
             "breadcrumb": "使用者手冊",
             "eyebrow": "Docs · 使用者手冊",
             "h1": "MotorLab 使用者手冊",
-            "lead": "Mini 4WD® 馬達磨合機完整操作說明。對應韌體 v3.2.22。功能隨版本更新,新版可能多出未列選項。",
+            "lead": "Mini 4WD® 馬達磨合機完整操作說明。對應韌體 v3.2.23。功能隨版本更新,新版可能多出未列選項。",
             "toc_label": "目錄",
-            "fw_note": "本手冊適用 MotorLab v3.2.22 韌體。",
+            "fw_note": "本手冊適用 MotorLab v3.2.23 韌體。",
         },
         "en": {
             "title": "MotorLab User Manual: Motor Break-in Machine Guide | MotorLab",
-            "description": "Complete user manual for the MotorLab Mini 4WD® motor break-in machine — connection, break-in, testing, history records, global database, AI health management, bearing/brush tests, system settings, safety, factory reset and FAQ. For firmware v3.2.22.",
+            "description": "Complete user manual for the MotorLab Mini 4WD® motor break-in machine — connection, break-in, testing, history records, global database, AI health management, bearing/brush tests, system settings, safety, factory reset and FAQ. For firmware v3.2.23.",
             "keywords": "MotorLab user manual, motor break-in machine guide, MotorLab instructions, motor tester manual, Mini 4WD break-in machine",
             "breadcrumb": "User Manual",
             "eyebrow": "Docs · User Manual",
             "h1": "MotorLab User Manual",
-            "lead": "Complete operating guide for the Mini 4WD® motor break-in machine. For firmware v3.2.22. Features evolve with each release; newer firmware may add options not listed here.",
+            "lead": "Complete operating guide for the Mini 4WD® motor break-in machine. For firmware v3.2.23. Features evolve with each release; newer firmware may add options not listed here.",
             "toc_label": "Contents",
-            "fw_note": "This manual applies to MotorLab firmware v3.2.22.",
+            "fw_note": "This manual applies to MotorLab firmware v3.2.23.",
         },
         "ja": {
             "title": "MotorLab ユーザーマニュアル:モーター慣らし機操作ガイド | MotorLab",
-            "description": "MotorLab Mini 4WD® モーター慣らし機の完全ユーザーマニュアル — 接続、慣らし、テスト、履歴記録、グローバルデータ庫、AI 健康管理、ベアリング/ブラシ測定、システム設定、安全保護、工場出荷リセット、FAQ。ファームウェア v3.2.22 対応。",
+            "description": "MotorLab Mini 4WD® モーター慣らし機の完全ユーザーマニュアル — 接続、慣らし、テスト、履歴記録、グローバルデータ庫、AI 健康管理、ベアリング/ブラシ測定、システム設定、安全保護、工場出荷リセット、FAQ。ファームウェア v3.2.23 対応。",
             "keywords": "MotorLab マニュアル, モーター慣らし機 操作, MotorLab 使い方, モーターテスター 説明書, ミニ四駆 慣らし機",
             "breadcrumb": "ユーザーマニュアル",
             "eyebrow": "Docs · ユーザーマニュアル",
             "h1": "MotorLab ユーザーマニュアル",
-            "lead": "Mini 4WD® モーター慣らし機の完全操作ガイド。ファームウェア v3.2.22 対応。機能はバージョンごとに更新され、新版では未記載の項目が増える場合があります。",
+            "lead": "Mini 4WD® モーター慣らし機の完全操作ガイド。ファームウェア v3.2.23 対応。機能はバージョンごとに更新され、新版では未記載の項目が増える場合があります。",
             "toc_label": "目次",
-            "fw_note": "本マニュアルは MotorLab ファームウェア v3.2.22 に対応します。",
+            "fw_note": "本マニュアルは MotorLab ファームウェア v3.2.23 に対応します。",
         },
     },
     "sections": {
@@ -2505,6 +2505,7 @@ MANUAL = {
             {"id": "faq", "t": "十四、常見問題", "html": (
                 "<table class='manual-table'><thead><tr><th>問題</th><th>處理</th></tr></thead><tbody>"
                 "<tr><td>開機沒嗶聲</td><td>確認電源 5V、蜂鳴器接線</td></tr>"
+                "<tr><td>Web UI 使用中無反應</td><td>檢查是否仍連接著機器 WiFi(MotorTester);裝置可能自動切回有網路的 WiFi → 重新連回機器熱點並重整網頁</td></tr>"
                 "<tr><td>連得上但網頁打不開</td><td>確認是 <code>http://</code>(非 https)、關行動數據、強制重整(Ctrl+Shift+R)</td></tr>"
                 "<tr><td>一直顯示「套用中…」</td><td>通常 WiFi 不穩,重整網頁即可(內建 8 秒監視會轉紅字提示)</td></tr>"
                 "<tr><td>磨合中途換馬達</td><td>按「停止」→ 換馬達 → 重新「啟動」(新一次是全新紀錄)</td></tr>"
@@ -2653,6 +2654,7 @@ MANUAL = {
             {"id": "faq", "t": "14. FAQ", "html": (
                 "<table class='manual-table'><thead><tr><th>Problem</th><th>Fix</th></tr></thead><tbody>"
                 "<tr><td>No beep on power-on</td><td>Check 5V power and buzzer wiring</td></tr>"
+                "<tr><td>Web UI unresponsive during use</td><td>Check you’re still connected to the machine’s WiFi (MotorTester); your device may have auto-switched to an internet WiFi → reconnect to the machine hotspot and refresh the page</td></tr>"
                 "<tr><td>Connects but page won’t open</td><td>Make sure it’s <code>http://</code> (not https), turn off mobile data, force-refresh (Ctrl+Shift+R)</td></tr>"
                 "<tr><td>Stuck on “Applying…”</td><td>Usually unstable WiFi; just refresh the page (a built-in 8-second watchdog turns the text red)</td></tr>"
                 "<tr><td>Swap motor mid-break-in</td><td>Press “Stop” → swap → “Start” again (a new run is a brand-new record)</td></tr>"
@@ -2801,6 +2803,7 @@ MANUAL = {
             {"id": "faq", "t": "14. よくある質問", "html": (
                 "<table class='manual-table'><thead><tr><th>問題</th><th>対処</th></tr></thead><tbody>"
                 "<tr><td>起動音が鳴らない</td><td>電源 5V とブザー配線を確認</td></tr>"
+                "<tr><td>Web UI が操作中に無反応</td><td>機器の WiFi(MotorTester)に接続されているか確認;端末がインターネット WiFi に自動切替している場合あり → 機器のホットスポットに再接続してページを再読込</td></tr>"
                 "<tr><td>接続できるがページが開かない</td><td><code>http://</code>(https ではない)を確認、モバイルデータをオフ、強制再読込(Ctrl+Shift+R)</td></tr>"
                 "<tr><td>「適用中…」のまま</td><td>多くは WiFi 不安定。ページを再読込すれば OK(内蔵 8 秒監視が赤字で通知)</td></tr>"
                 "<tr><td>慣らし途中でモーター交換</td><td>「停止」→ 交換 → 再度「開始」(新たな実行は新規記録)</td></tr>"
