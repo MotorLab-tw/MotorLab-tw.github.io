@@ -2343,40 +2343,40 @@ def build_lab_page(lab_cfg, lang, src_html, i18n):
 MANUAL = {
     "slug": "user-manual",
     "type": "docs",
-    "fw": "v3.2.23",
+    "fw": "v3.2.26",
     "i18n": {
         "zh": {
             "title": "MotorLab 使用者手冊:馬達磨合機操作說明 | MotorLab",
-            "description": "MotorLab Mini 4WD® 馬達磨合機完整使用手冊 — 連線、馬達磨合、馬達測試、歷史紀錄、全球磨合資料庫、AI 健康管理、軸承/電刷測試、系統設定、安全保護、工廠重設與常見問題。對應韌體 v3.2.23。",
+            "description": "MotorLab Mini 4WD® 馬達磨合機完整使用手冊 — 連線、馬達磨合、馬達測試、歷史紀錄、全球磨合資料庫、AI 健康管理、軸承/電刷測試、系統設定、安全保護、工廠重設與常見問題。對應韌體 v3.2.26。",
             "keywords": "MotorLab 使用手冊, 馬達磨合機操作, 馬達磨合機說明書, MotorLab 教學, 馬達磨合機設定",
             "breadcrumb": "使用者手冊",
             "eyebrow": "Docs · 使用者手冊",
             "h1": "MotorLab 使用者手冊",
-            "lead": "Mini 4WD® 馬達磨合機完整操作說明。對應韌體 v3.2.23。功能隨版本更新,新版可能多出未列選項。",
+            "lead": "Mini 4WD® 馬達磨合機完整操作說明。對應韌體 v3.2.26。功能隨版本更新,新版可能多出未列選項。",
             "toc_label": "目錄",
-            "fw_note": "本手冊適用 MotorLab v3.2.23 韌體。",
+            "fw_note": "本手冊適用 MotorLab v3.2.26 韌體。",
         },
         "en": {
             "title": "MotorLab User Manual: Motor Break-in Machine Guide | MotorLab",
-            "description": "Complete user manual for the MotorLab Mini 4WD® motor break-in machine — connection, break-in, testing, history records, global database, AI health management, bearing/brush tests, system settings, safety, factory reset and FAQ. For firmware v3.2.23.",
+            "description": "Complete user manual for the MotorLab Mini 4WD® motor break-in machine — connection, break-in, testing, history records, global database, AI health management, bearing/brush tests, system settings, safety, factory reset and FAQ. For firmware v3.2.26.",
             "keywords": "MotorLab user manual, motor break-in machine guide, MotorLab instructions, motor tester manual, Mini 4WD break-in machine",
             "breadcrumb": "User Manual",
             "eyebrow": "Docs · User Manual",
             "h1": "MotorLab User Manual",
-            "lead": "Complete operating guide for the Mini 4WD® motor break-in machine. For firmware v3.2.23. Features evolve with each release; newer firmware may add options not listed here.",
+            "lead": "Complete operating guide for the Mini 4WD® motor break-in machine. For firmware v3.2.26. Features evolve with each release; newer firmware may add options not listed here.",
             "toc_label": "Contents",
-            "fw_note": "This manual applies to MotorLab firmware v3.2.23.",
+            "fw_note": "This manual applies to MotorLab firmware v3.2.26.",
         },
         "ja": {
             "title": "MotorLab ユーザーマニュアル:モーター慣らし機操作ガイド | MotorLab",
-            "description": "MotorLab Mini 4WD® モーター慣らし機の完全ユーザーマニュアル — 接続、慣らし、テスト、履歴記録、グローバルデータ庫、AI 健康管理、ベアリング/ブラシ測定、システム設定、安全保護、工場出荷リセット、FAQ。ファームウェア v3.2.23 対応。",
+            "description": "MotorLab Mini 4WD® モーター慣らし機の完全ユーザーマニュアル — 接続、慣らし、テスト、履歴記録、グローバルデータ庫、AI 健康管理、ベアリング/ブラシ測定、システム設定、安全保護、工場出荷リセット、FAQ。ファームウェア v3.2.26 対応。",
             "keywords": "MotorLab マニュアル, モーター慣らし機 操作, MotorLab 使い方, モーターテスター 説明書, ミニ四駆 慣らし機",
             "breadcrumb": "ユーザーマニュアル",
             "eyebrow": "Docs · ユーザーマニュアル",
             "h1": "MotorLab ユーザーマニュアル",
-            "lead": "Mini 4WD® モーター慣らし機の完全操作ガイド。ファームウェア v3.2.23 対応。機能はバージョンごとに更新され、新版では未記載の項目が増える場合があります。",
+            "lead": "Mini 4WD® モーター慣らし機の完全操作ガイド。ファームウェア v3.2.26 対応。機能はバージョンごとに更新され、新版では未記載の項目が増える場合があります。",
             "toc_label": "目次",
-            "fw_note": "本マニュアルは MotorLab ファームウェア v3.2.23 に対応します。",
+            "fw_note": "本マニュアルは MotorLab ファームウェア v3.2.26 に対応します。",
         },
     },
     "sections": {
@@ -2394,9 +2394,16 @@ MANUAL = {
                 "<tr><th>網址</th><td><code>http://10.10.10.1/</code>(<b>不是</b> https)</td></tr>"
                 "<tr><th>熱點</th><td><code>MotorTester</code> / <code>12345678</code>(可改名)</td></tr>"
                 "<tr><th>裝置</th><td>手機 / 平板 / 筆電皆可,建議大螢幕</td></tr>"
-                "<tr><th>連線數</th><td>最多 4 台,<b>實務只開一個頁面操作</b>避免命令衝突</td></tr>"
+                "<tr><th>連線數</th><td><b>同時只有一台可操作</b>(單一連線,見下)</td></tr>"
                 "<tr><th>注意</th><td>機器熱點<b>無對外網路</b>;iPhone 跳「無網際網路」選「保持」即可</td></tr>"
                 "</tbody></table>"
+                "<p><b>單一連線(多台切換)</b>:操作介面同時只允許一台裝置控制,避免兩台同時下命令衝突。</p>"
+                "<ul>"
+                "<li><b>後連的裝置自動接管</b>:用新裝置開啟介面後,它即成為控制端。</li>"
+                "<li><b>舊裝置自動停用</b>:先前那台會顯示「已被其他裝置接管」並停止更新(數值與圖表凍結),不會再送出命令。</li>"
+                "<li><b>要換回舊裝置</b>:在該裝置上<b>重新整理頁面</b>即可重新接管(換成另一台被停用)。</li>"
+                "<li>中途換裝置不影響進行中的磨合 / 測試——程序在機器端持續執行,新裝置連上後會直接顯示目前進度。</li>"
+                "</ul>"
             )},
             {"id": "home", "t": "三、首頁", "html": (
                 "<p>八個功能按鈕:</p>"
@@ -2543,9 +2550,16 @@ MANUAL = {
                 "<tr><th>Address</th><td><code>http://10.10.10.1/</code> (<b>not</b> https)</td></tr>"
                 "<tr><th>Hotspot</th><td><code>MotorTester</code> / <code>12345678</code> (renamable)</td></tr>"
                 "<tr><th>Device</th><td>Phone / tablet / laptop all work; a larger screen is recommended</td></tr>"
-                "<tr><th>Connections</th><td>Up to 4 devices, but <b>operate from one page only</b> to avoid command conflicts</td></tr>"
+                "<tr><th>Connections</th><td><b>Only one device can operate at a time</b> (single-connection, see below)</td></tr>"
                 "<tr><th>Note</th><td>The hotspot has <b>no internet</b>; on iPhone, tap “Keep” when it warns “No Internet Connection”</td></tr>"
                 "</tbody></table>"
+                "<p><b>Single-connection (switching devices)</b>: only one device may control the interface at a time, preventing two devices from issuing conflicting commands.</p>"
+                "<ul>"
+                "<li><b>The newest device takes over</b>: open the interface on a new device and it becomes the controller.</li>"
+                "<li><b>The old device is disabled</b>: it shows “Taken over by another device” and stops updating (values and charts freeze); it no longer sends commands.</li>"
+                "<li><b>To switch back</b>: simply <b>refresh the page</b> on that device to take control again (the other one is then disabled).</li>"
+                "<li>Switching devices does not affect a running break-in / test — the procedure keeps running on the machine, and a newly connected device shows the current progress right away.</li>"
+                "</ul>"
             )},
             {"id": "home", "t": "3. Home Screen", "html": (
                 "<p>Eight function buttons:</p>"
@@ -2692,9 +2706,16 @@ MANUAL = {
                 "<tr><th>アドレス</th><td><code>http://10.10.10.1/</code>(<b>https ではありません</b>)</td></tr>"
                 "<tr><th>ホットスポット</th><td><code>MotorTester</code> / <code>12345678</code>(名称変更可)</td></tr>"
                 "<tr><th>デバイス</th><td>スマホ / タブレット / ノート PC いずれも可。大きな画面推奨</td></tr>"
-                "<tr><th>接続数</th><td>最大 4 台。ただしコマンド競合を避けるため<b>操作は 1 ページのみ</b>で</td></tr>"
+                "<tr><th>接続数</th><td><b>同時に操作できるのは 1 台のみ</b>(単一接続、下記参照)</td></tr>"
                 "<tr><th>注意</th><td>機器のホットスポットは<b>インターネットなし</b>。iPhone で「インターネット未接続」が出たら「保持」を選択</td></tr>"
                 "</tbody></table>"
+                "<p><b>単一接続(複数台の切替)</b>:操作画面を制御できるのは同時に 1 台のみ。2 台が同時にコマンドを送る競合を防ぎます。</p>"
+                "<ul>"
+                "<li><b>後から接続した端末が引き継ぐ</b>:新しい端末で画面を開くと、その端末が制御側になります。</li>"
+                "<li><b>前の端末は自動で無効化</b>:「他の端末に引き継がれました」と表示され更新を停止(数値とグラフが凍結)、コマンドも送らなくなります。</li>"
+                "<li><b>元の端末に戻すには</b>:その端末で<b>ページを再読込</b>すれば再び制御を引き継げます(もう一方が無効化)。</li>"
+                "<li>途中で端末を切り替えても進行中の慣らし / テストには影響しません——処理は機器側で継続し、新しく接続した端末には現在の進捗がそのまま表示されます。</li>"
+                "</ul>"
             )},
             {"id": "home", "t": "3. ホーム画面", "html": (
                 "<p>8 つの機能ボタン:</p>"

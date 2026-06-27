@@ -112,7 +112,7 @@
   "description": "Mini 4WD® 馬達磨合與精密測試系統。內建十階段可程式化磨合、AI 智慧馬達健康管理、軸承阻力測試、電刷接觸穩定診斷。",
   "image": "https://motorlab-tw.github.io/og-image.png",
   "url": "https://motorlab-tw.github.io/",
-  "softwareVersion": "v3.2.23",
+  "softwareVersion": "v3.2.26",
   "applicationCategory": "EngineeringApplication",
   "applicationSubCategory": "Motor Testing & Diagnostics",
   "operatingSystem": "Cross-platform (WiFi + Web Browser)",
@@ -2026,7 +2026,7 @@
 <div class="splash-sub">MINI 4WD® MOTOR LAB · INITIALIZING</div>
 <div class="splash-log">
 <div class="log-line l1">[<span class="ok">OK</span>] Boot sequence started</div>
-<div class="log-line l2">[<span class="ok">OK</span>] Loading firmware v3.2.23</div>
+<div class="log-line l2">[<span class="ok">OK</span>] Loading firmware v3.2.26</div>
 <div class="log-line l3">[<span class="ok">OK</span>] Sensor calibration complete</div>
 <div class="log-line l4">[<span class="ok">OK</span>] WebSocket channel ready</div>
 <div class="log-line l5">[<span class="ok">OK</span>] System online — welcome</div>
@@ -2069,7 +2069,7 @@
 <div class="hero-grid">
 <div>
 <div class="hero-badge">
-<span data-i18n="hero.badge">系統運作中 · v3.2.23</span>
+<span data-i18n="hero.badge">系統運作中 · v3.2.26</span>
 </div>
 <h1 data-i18n="hero.title">為每一顆<br/>Mini 4WD<sup>®</sup> 馬達<br/>建立<span class="accent">健康指紋</span></h1>
 <p class="lead" data-i18n="hero.lead">MotorLab 是為 Mini 4WD<sup>®</sup> 玩家打造的精密馬達磨合與測試系統。從十階段可程式化磨合、軸承衰減量測、電刷接觸穩定診斷,到 AI 馬達健康管理 — 讓每一次調校都可量化、可重複、可比較。</p>
@@ -2570,10 +2570,26 @@
 <p class="section-subtitle" data-i18n="cl.subtitle">所有版本透過線上更新自動推送至已啟用裝置。</p>
 </div>
 <div class="changelog">
+<!-- v3.2.26 -->
+<div class="changelog-item">
+<div class="changelog-meta">
+<span class="version-badge latest">v3.2.26</span>
+<span class="changelog-date">2026-06-28</span>
+</div>
+<div class="changelog-content">
+<h4 data-i18n="cl.v3226.title">多裝置單一連線 · 顯示與紀錄優化</h4>
+<ul>
+<li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v3226.l1">多裝置「單一連線」控制:後連的裝置自動接管,舊裝置顯示「已被接管」並凍結,防止兩台同時下命令衝突</span></li>
+<li><span class="change-type change-improve" data-i18n="cl.IMPROVE">改進</span><span data-i18n="cl.v3226.l2">切換控制裝置後,數值與圖表即時恢復更新</span></li>
+<li><span class="change-type change-improve" data-i18n="cl.IMPROVE">改進</span><span data-i18n="cl.v3226.l3">磨合 / 測試畫面改為固定節奏刷新,數值與圖表更平穩</span></li>
+<li><span class="change-type change-fix" data-i18n="cl.FIX">修正</span><span data-i18n="cl.v3226.l4">歷史紀錄偶發「一直載入中 / 顯示 0 筆」,並自動修復既有損壞索引</span></li>
+</ul>
+</div>
+</div>
 <!-- v3.2.22 -->
 <div class="changelog-item">
 <div class="changelog-meta">
-<span class="version-badge latest">v3.2.22</span>
+<span class="version-badge">v3.2.22</span>
 <span class="changelog-date">2026-06-27</span>
 </div>
 <div class="changelog-content">
@@ -2600,21 +2616,6 @@
 </ul>
 </div>
 </div>
-<!-- v3.2.1 -->
-<div class="changelog-item">
-<div class="changelog-meta">
-<span class="version-badge">v3.2.1</span>
-<span class="changelog-date">2026-06-19</span>
-</div>
-<div class="changelog-content">
-<h4 data-i18n="cl.v321.title">全球資料庫瀏覽體驗優化</h4>
-<ul>
-<li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v321.l1">每頁顯示筆數(10 / 50 / 100)與翻頁</span></li>
-<li><span class="change-type change-improve" data-i18n="cl.IMPROVE">改進</span><span data-i18n="cl.v321.l2">全球資料庫清單新增排序(最高轉速 / 平均轉速 / 穩定電流)</span></li>
-<li><span class="change-type change-improve" data-i18n="cl.IMPROVE">改進</span><span data-i18n="cl.v321.l3">清單改為表格呈現,欄位更清楚,手機可橫向捲動</span></li>
-</ul>
-</div>
-</div>
 </div>
 </div>
 </section>
@@ -2636,7 +2637,7 @@
 <div class="stat-label" data-i18n="about.s1">開發里程碑</div>
 </div>
 <div>
-<div class="stat-num">v3.2.23</div>
+<div class="stat-num">v3.2.26</div>
 <div class="stat-label" data-i18n="about.s2">當前韌體版本</div>
 </div>
 <div>
@@ -2679,7 +2680,7 @@
 <strong>MotorLab.tw</strong> · <span data-i18n="footer.tagline">Mini 4WD Performance Lab</span>
 </div>
 <div class="mono">
-        © 2026 MotorLab · <span data-i18n="footer.firmware">韌體</span> v3.2.23
+        © 2026 MotorLab · <span data-i18n="footer.firmware">韌體</span> v3.2.26
       </div>
 </div>
 </div>
@@ -2731,7 +2732,7 @@
       'nav.changelog': '更新',
       'nav.about': '關於',
       'nav.contact': '聯絡',
-      'hero.badge': '系統運作中 · v3.2.23',
+      'hero.badge': '系統運作中 · v3.2.26',
       'hero.title': '為每一顆<br>Mini 4WD<sup>®</sup> 馬達<br>建立<span class="accent">健康指紋</span>',
       'hero.lead': 'MotorLab 是為 Mini 4WD<sup>®</sup> 玩家打造的精密馬達磨合與測試系統。從十階段可程式化磨合、軸承衰減量測、電刷接觸穩定診斷,到 AI 馬達健康管理 — 讓每一次調校都可量化、可重複、可比較。',
       'hero.cta1': '瀏覽功能',
@@ -3427,6 +3428,11 @@
       'cl.FIX': '修正',
       'cl.IMPROVE': '改進',
       'cl.SECURITY': '安全',
+      'cl.v3226.title': '多裝置單一連線 · 顯示與紀錄優化',
+      'cl.v3226.l1': '多裝置「單一連線」控制:後連的裝置自動接管,舊裝置顯示「已被接管」並凍結,防止兩台同時下命令衝突',
+      'cl.v3226.l2': '切換控制裝置後,數值與圖表即時恢復更新',
+      'cl.v3226.l3': '磨合 / 測試畫面改為固定節奏刷新,數值與圖表更平穩',
+      'cl.v3226.l4': '歷史紀錄偶發「一直載入中 / 顯示 0 筆」,並自動修復既有損壞索引',
       'cl.v3222.title': '高溫保護強化 · 磨合與顯示優化',
       'cl.v3222.l1': '可自訂「高溫鎖定溫度」(預設 50°C,範圍 25~60°C)',
       'cl.v3222.l2': '磨合 / 測試畫面同時顯示「供電電壓」與「馬達電壓」',
@@ -3435,10 +3441,6 @@
       'cl.v3219.title': 'PRO 授權日期顯示修正',
       'cl.v3219.l1': 'PRO 授權日期會正確顯示為購買當日,不再延遲更新',
       'cl.v3219.l2': '授權驗證流程穩定性優化',
-      'cl.v321.title': '全球資料庫瀏覽體驗優化',
-      'cl.v321.l1': '每頁顯示筆數(10 / 50 / 100)與翻頁',
-      'cl.v321.l2': '全球資料庫清單新增排序(最高轉速 / 平均轉速 / 穩定電流)',
-      'cl.v321.l3': '清單改為表格呈現,欄位更清楚,手機可橫向捲動',
       'cl.v320.title': '全球磨合資料庫 · 連線體驗升級',
       'cl.v320.l1': '全球磨合資料庫:可直接從機器上傳 / 瀏覽 / 下載全球玩家分享的磨合紀錄',
       'cl.v320.l2': '歷史紀錄詳情頁可一鍵「分享到全球資料庫」',
@@ -3497,7 +3499,7 @@
       'nav.changelog': 'Changelog',
       'nav.about': 'About',
       'nav.contact': 'Contact',
-      'hero.badge': 'System running · v3.2.23',
+      'hero.badge': 'System running · v3.2.26',
       'hero.title': 'Build a <span class="accent">health fingerprint</span><br>for every<br>Mini 4WD<sup>®</sup> motor',
       'hero.lead': 'MotorLab is a precision motor break-in and diagnostic system built for Mini 4WD<sup>®</sup> enthusiasts. From 10-stage programmable break-in to bearing decay analysis, brush contact diagnostics, and AI motor health management — make every tune measurable, repeatable, and comparable.',
       'hero.cta1': 'Browse Features',
@@ -4193,6 +4195,11 @@
       'cl.FIX': 'FIX',
       'cl.IMPROVE': 'IMPROVE',
       'cl.SECURITY': 'SECURITY',
+      'cl.v3226.title': 'Single-Connection Control · Display &amp; Records Polish',
+      'cl.v3226.l1': 'Single-connection control for multiple devices: the newest device takes over, the old one shows “taken over” and freezes, preventing conflicting commands',
+      'cl.v3226.l2': 'Values and charts resume updating immediately after switching the controlling device',
+      'cl.v3226.l3': 'Break-in / test screen now refreshes at a fixed cadence for steadier values and charts',
+      'cl.v3226.l4': 'Fixed occasional “stuck loading / shows 0 records” in History, with auto-repair of damaged indexes',
       'cl.v3222.title': 'Stronger Overheat Protection · Break-in &amp; Display Polish',
       'cl.v3222.l1': 'Customisable overheat-lock temperature (default 50°C, range 25–60°C)',
       'cl.v3222.l2': 'Break-in / test screen now shows both supply voltage and motor voltage',
@@ -4201,10 +4208,6 @@
       'cl.v3219.title': 'PRO License Date Display Fix',
       'cl.v3219.l1': 'PRO license date now shows the actual purchase date without delayed updates',
       'cl.v3219.l2': 'License verification flow stability improvements',
-      'cl.v321.title': 'Global Database Browsing Polish',
-      'cl.v321.l1': 'Per-page count (10 / 50 / 100) with pagination',
-      'cl.v321.l2': 'Sort the global database list (max RPM / avg RPM / stable current)',
-      'cl.v321.l3': 'List redesigned as a table — clearer columns, horizontal scroll on mobile',
       'cl.v320.title': 'Global Break-in Database · Connectivity Upgrade',
       'cl.v320.l1': 'Global break-in database: upload / browse / download players’ records straight from the machine',
       'cl.v320.l2': 'One-tap “Share to global database” from a record’s detail page',
@@ -4263,7 +4266,7 @@
       'nav.changelog': '更新履歴',
       'nav.about': '概要',
       'nav.contact': 'お問い合わせ',
-      'hero.badge': 'システム稼働中 · v3.2.23',
+      'hero.badge': 'システム稼働中 · v3.2.26',
       'hero.title': 'すべての<br>Mini 4WD<sup>®</sup> モーターに<br><span class="accent">健康指紋</span>を',
       'hero.lead': 'MotorLab は Mini 4WD<sup>®</sup> プレイヤーのために設計された精密モーター慣らし・測定システムです。10 段階プログラム慣らし、ベアリング減衰測定、ブラシ接触安定診断、AI モーター健康管理まで — すべての調整を定量化・再現・比較できます。',
       'hero.cta1': '機能を見る',
@@ -4420,6 +4423,11 @@
       'cl.FIX': '修正',
       'cl.IMPROVE': '改善',
       'cl.SECURITY': 'セキュリティ',
+      'cl.v3226.title': '単一接続制御 · 表示と記録の最適化',
+      'cl.v3226.l1': '複数端末での「単一接続」制御:後から接続した端末が引き継ぎ、前の端末は「引き継がれました」と表示して凍結し、コマンド競合を防止',
+      'cl.v3226.l2': '制御端末を切り替えた後、数値とグラフがすぐに更新を再開',
+      'cl.v3226.l3': '慣らし / テスト画面を一定間隔で更新し、数値とグラフがより安定',
+      'cl.v3226.l4': '履歴の「読み込み中のまま / 0 件表示」の不具合を修正し、既存の壊れたインデックスを自動修復',
       'cl.v3222.title': '高温保護強化 · 慣らしと表示の最適化',
       'cl.v3222.l1': '「高温ロック温度」を設定可能(初期 50°C、範囲 25〜60°C)',
       'cl.v3222.l2': '慣らし / テスト画面に「供給電圧」と「モーター電圧」を同時表示',
@@ -4428,10 +4436,6 @@
       'cl.v3219.title': 'PRO ライセンス日付の表示修正',
       'cl.v3219.l1': 'PRO ライセンス日付が購入当日として正しく表示され、更新が遅れなくなりました',
       'cl.v3219.l2': 'ライセンス認証フローの安定性を改善',
-      'cl.v321.title': 'グローバルデータ庫の閲覧体験を最適化',
-      'cl.v321.l1': '1 ページ表示件数(10 / 50 / 100)とページ送り',
-      'cl.v321.l2': 'グローバルデータ庫リストに並べ替え追加(最高回転数 / 平均回転数 / 安定電流)',
-      'cl.v321.l3': 'リストを表形式に変更、列が見やすく、スマホでは横スクロール対応',
       'cl.v320.title': 'グローバル慣らしデータ庫 · 接続体験アップグレード',
       'cl.v320.l1': 'グローバル慣らしデータ庫:マシンから直接、世界中のプレイヤーの記録をアップロード / 閲覧 / ダウンロード',
       'cl.v320.l2': '履歴記録の詳細ページからワンタップで「グローバルデータ庫に共有」',
