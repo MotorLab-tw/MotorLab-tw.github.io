@@ -117,7 +117,7 @@
   "description": "Mini 4WD® 馬達磨合與精密測試系統。內建十階段可程式化磨合、AI 智慧馬達健康管理、軸承阻力測試、電刷接觸穩定診斷。",
   "image": "https://motorlab-tw.github.io/og-image.png",
   "url": "https://motorlab-tw.github.io/",
-  "softwareVersion": "v3.2.19",
+  "softwareVersion": "v3.2.22",
   "applicationCategory": "EngineeringApplication",
   "applicationSubCategory": "Motor Testing & Diagnostics",
   "operatingSystem": "Cross-platform (WiFi + Web Browser)",
@@ -141,7 +141,9 @@
     "歷史紀錄 50 筆 (JSON / CSV 匯入匯出)",
     "內建 Web 操作介面 (WebSocket 250ms 推送)",
     "OTA 線上韌體更新 (HMAC-SHA256 簽章)",
-    "三層安全保護機制 (抗 EMI、< 100 ms 過流急停、Watchdog 自動復原)"
+    "三層安全保護機制 (抗 EMI、< 100 ms 過流急停、Watchdog 自動復原)",
+    "雙區 RGB 狀態燈自訂顯示 (5 組狀態樣式)",
+    "高溫鎖定保護 (可設定門檻 25~60°C)"
   ],
   "inLanguage": ["zh-TW", "en"],
   "releaseNotes": "https://motorlab-tw.github.io/#changelog"
@@ -551,7 +553,7 @@
     font-size: 15px;
   }
 
-  /* ===== 十大功能 ===== */
+  /* ===== 十二大功能 ===== */
   .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
@@ -1922,7 +1924,7 @@
 
     <div class="splash-log">
       <div class="log-line l1">[<span class="ok">OK</span>] Boot sequence started</div>
-      <div class="log-line l2">[<span class="ok">OK</span>] Loading firmware v3.2.19</div>
+      <div class="log-line l2">[<span class="ok">OK</span>] Loading firmware v3.2.22</div>
       <div class="log-line l3">[<span class="ok">OK</span>] Sensor calibration complete</div>
       <div class="log-line l4">[<span class="ok">OK</span>] WebSocket channel ready</div>
       <div class="log-line l5">[<span class="ok">OK</span>] System online — welcome</div>
@@ -2021,12 +2023,12 @@
   </div>
 </section>
 
-<!-- 十大功能 -->
+<!-- 十二大功能 -->
 <section id="features">
   <div class="container">
     <div class="section-header">
       <div class="section-tag" data-i18n="features.tag">CORE FEATURES</div>
-      <h2 class="section-title" data-i18n="features.title">十大專業功能</h2>
+      <h2 class="section-title" data-i18n="features.title">十二大專業功能</h2>
       <p class="section-subtitle" data-i18n="features.subtitle">從磨合到診斷，涵蓋 Mini 4WD 馬達生命週期的每一個關鍵環節。</p>
     </div>
 
@@ -2167,6 +2169,34 @@
           <span class="feature-tag feature-go" data-i18n="f10.go">前往 →</span>
         </div>
       </a>
+
+      <!-- 狀態燈自訂顯示 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg>
+        </div>
+        <h3 data-i18n="f11.title">狀態燈自訂顯示</h3>
+        <p data-i18n="f11.desc">雙區 RGB 狀態燈(內建 + 面板),可自訂輸出位置、亮度與 5 組狀態樣式 — 待機、運轉、冷卻、高溫各自的色相與燈效一眼辨識機器狀態。</p>
+        <div class="feature-meta">
+          <span class="feature-tag" data-i18n="f11.tag1">雙區 RGB</span>
+          <span class="feature-tag" data-i18n="f11.tag2">5 組樣式</span>
+          <a href="/docs/user-manual/" data-manuallink="1" class="feature-tag feature-go" data-i18n="f11.more">詳情閱手冊 →</a>
+        </div>
+      </div>
+
+      <!-- 高溫鎖定保護 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M14 14.76V5a2 2 0 0 0-4 0v9.76a4 4 0 1 0 4 0z"/></svg>
+        </div>
+        <h3 data-i18n="f12.title">高溫鎖定保護</h3>
+        <p data-i18n="f12.desc">溫度超標即時停機並鎖定,可自訂高溫鎖定溫度(預設 50°C,範圍 25~60°C)。搭配急停與緩啟停,全程守護昂貴競賽馬達不被熱傷害。</p>
+        <div class="feature-meta">
+          <span class="feature-tag" data-i18n="f12.tag1">可設定門檻</span>
+          <span class="feature-tag">25~60°C</span>
+          <a href="/docs/user-manual/" data-manuallink="1" class="feature-tag feature-go" data-i18n="f12.more">詳情閱手冊 →</a>
+        </div>
+      </div>
 
     </div>
   </div>
@@ -3239,10 +3269,27 @@
     </div>
 
     <div class="changelog">
+      <!-- v3.2.22 -->
+      <div class="changelog-item">
+        <div class="changelog-meta">
+          <span class="version-badge latest">v3.2.22</span>
+          <span class="changelog-date">2026-06-27</span>
+        </div>
+        <div class="changelog-content">
+          <h4 data-i18n="cl.v3222.title">高溫保護強化 · 磨合與顯示優化</h4>
+          <ul>
+            <li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v3222.l1">可自訂「高溫鎖定溫度」(預設 50°C，範圍 25~60°C)</span></li>
+            <li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v3222.l2">磨合 / 測試畫面同時顯示「供電電壓」與「馬達電壓」</span></li>
+            <li><span class="change-type change-improve" data-i18n="cl.IMPROVE">改進</span><span data-i18n="cl.v3222.l3">緩啟動起步更平順、昇速 / 降速時間範圍放寬;預設磨合配方調整</span></li>
+            <li><span class="change-type change-fix" data-i18n="cl.FIX">修正</span><span data-i18n="cl.v3222.l4">高溫鎖定降溫後無法解除、方向設反轉後跳回正轉等問題</span></li>
+          </ul>
+        </div>
+      </div>
+
       <!-- v3.2.19 -->
       <div class="changelog-item">
         <div class="changelog-meta">
-          <span class="version-badge latest">v3.2.19</span>
+          <span class="version-badge">v3.2.19</span>
           <span class="changelog-date">2026-06-20</span>
         </div>
         <div class="changelog-content">
@@ -3270,22 +3317,6 @@
         </div>
       </div>
 
-      <!-- v3.2.0 -->
-      <div class="changelog-item">
-        <div class="changelog-meta">
-          <span class="version-badge">v3.2.0</span>
-          <span class="changelog-date">2026-06-19</span>
-        </div>
-        <div class="changelog-content">
-          <h4 data-i18n="cl.v320.title">全球磨合資料庫 · 連線體驗升級</h4>
-          <ul>
-            <li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v320.l1">全球磨合資料庫:可直接從機器上傳 / 瀏覽 / 下載全球玩家分享的磨合紀錄</span></li>
-            <li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v320.l2">歷史紀錄詳情頁可一鍵「分享到全球資料庫」</span></li>
-            <li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v320.l3">連上機器熱點後自動彈出選單，按一下即進入操作介面</span></li>
-            <li><span class="change-type change-improve" data-i18n="cl.IMPROVE">改進</span><span data-i18n="cl.v320.l4">連線網址調整為 http://10.10.10.1/</span></li>
-          </ul>
-        </div>
-      </div>
 
     </div>
   </div>
@@ -3319,7 +3350,7 @@
           <div class="stat-label" data-i18n="about.s1">開發里程碑</div>
         </div>
         <div>
-          <div class="stat-num">v3.2.19</div>
+          <div class="stat-num">v3.2.22</div>
           <div class="stat-label" data-i18n="about.s2">當前韌體版本</div>
         </div>
         <div>
@@ -3366,7 +3397,7 @@
         <strong>MotorLab.tw</strong> · <span data-i18n="footer.tagline">Mini 4WD Performance Lab</span>
       </div>
       <div class="mono">
-        © 2026 MotorLab · <span data-i18n="footer.firmware">韌體</span> v3.2.19
+        © 2026 MotorLab · <span data-i18n="footer.firmware">韌體</span> v3.2.22
       </div>
     </div>
   </div>
@@ -3419,7 +3450,7 @@
       'nav.changelog': '更新',
       'nav.about': '關於',
       'nav.contact': '聯絡',
-      'hero.badge': '系統運作中 · v3.2.19',
+      'hero.badge': '系統運作中 · v3.2.22',
       'hero.title': '為每一顆<br>Mini 4WD<sup>®</sup> 馬達<br>建立<span class="accent">健康指紋</span>',
       'hero.lead': 'MotorLab 是為 Mini 4WD<sup>®</sup> 玩家打造的精密馬達磨合與測試系統。從十階段可程式化磨合、軸承衰減量測、電刷接觸穩定診斷,到 AI 馬達健康管理 — 讓每一次調校都可量化、可重複、可比較。',
       'hero.cta1': '瀏覽功能',
@@ -3431,7 +3462,7 @@
       'mock.temp': '溫度',
       'mock.status': '● 磨合進行中 · 階段 6/10 · 已運行 02:48:33',
       'features.tag': 'CORE FEATURES',
-      'features.title': '十大專業功能',
+      'features.title': '十二大專業功能',
       'features.subtitle': '從磨合到診斷,涵蓋 Mini 4WD 馬達生命週期的每一個關鍵環節。',
       'f1.title': '馬達磨合程式',
       'f1.desc': '十階段可程式化磨合,每階段獨立設定電壓、運轉方向、運轉時間、冷卻時間與穩定電流容差。模擬實車條件下的低速長時間磨合,讓電刷與整流子達到最佳貼合。',
@@ -3472,6 +3503,15 @@
       'f10.tag1': '全球共享',
       'f10.tag2': '簽章驗證',
       'f10.go': '前往 →',
+      'f11.title': '狀態燈自訂顯示',
+      'f11.desc': '雙區 RGB 狀態燈(內建 + 面板),可自訂輸出位置、亮度與 5 組狀態樣式 — 待機、運轉、冷卻、高溫各自的色相與燈效一眼辨識機器狀態。',
+      'f11.tag1': '雙區 RGB',
+      'f11.tag2': '5 組樣式',
+      'f11.more': '詳情閱手冊 →',
+      'f12.title': '高溫鎖定保護',
+      'f12.desc': '溫度超標即時停機並鎖定,可自訂高溫鎖定溫度(預設 50°C,範圍 25~60°C)。搭配急停與緩啟停,全程守護昂貴競賽馬達不被熱傷害。',
+      'f12.tag1': '可設定門檻',
+      'f12.more': '詳情閱手冊 →',
       'dlcta.tag': 'DATA LAB',
       'dlcta.title': '全球馬達磨合資料庫',
       'dlcta.desc': '與全世界的 Mini 4WD® 玩家交換馬達磨合配方。每筆紀錄經磨合機簽章驗證,下載原檔可直接匯入你的馬達磨合機重現別人驗證過的設定。',
@@ -4106,6 +4146,11 @@
       'cl.FIX': '修正',
       'cl.IMPROVE': '改進',
       'cl.SECURITY': '安全',
+      'cl.v3222.title': '高溫保護強化 · 磨合與顯示優化',
+      'cl.v3222.l1': '可自訂「高溫鎖定溫度」(預設 50°C,範圍 25~60°C)',
+      'cl.v3222.l2': '磨合 / 測試畫面同時顯示「供電電壓」與「馬達電壓」',
+      'cl.v3222.l3': '緩啟動起步更平順、昇速 / 降速時間範圍放寬;預設磨合配方調整',
+      'cl.v3222.l4': '高溫鎖定降溫後無法解除、方向設反轉後跳回正轉等問題',
       'cl.v3219.title': 'PRO 授權日期顯示修正',
       'cl.v3219.l1': 'PRO 授權日期會正確顯示為購買當日,不再延遲更新',
       'cl.v3219.l2': '授權驗證流程穩定性優化',
@@ -4171,7 +4216,7 @@
       'nav.changelog': 'Changelog',
       'nav.about': 'About',
       'nav.contact': 'Contact',
-      'hero.badge': 'System running · v3.2.19',
+      'hero.badge': 'System running · v3.2.22',
       'hero.title': 'Build a <span class="accent">health fingerprint</span><br>for every<br>Mini 4WD<sup>®</sup> motor',
       'hero.lead': 'MotorLab is a precision motor break-in and diagnostic system built for Mini 4WD<sup>®</sup> enthusiasts. From 10-stage programmable break-in to bearing decay analysis, brush contact diagnostics, and AI motor health management — make every tune measurable, repeatable, and comparable.',
       'hero.cta1': 'Browse Features',
@@ -4183,7 +4228,7 @@
       'mock.temp': 'Temp',
       'mock.status': '● Break-in running · Stage 6/10 · 02:48:33 elapsed',
       'features.tag': 'CORE FEATURES',
-      'features.title': 'Ten Professional Tools',
+      'features.title': 'Twelve Professional Tools',
       'features.subtitle': 'From break-in to diagnostics, covering every critical phase of the Mini 4WD motor lifecycle.',
       'f1.title': 'Motor Break-in Program',
       'f1.desc': 'Ten-stage programmable break-in. Configure voltage, direction, runtime, cooldown, and current tolerance per stage. Simulates real-world low-speed extended operation to bring brushes and commutator into optimal contact.',
@@ -4224,6 +4269,15 @@
       'f10.tag1': 'Global',
       'f10.tag2': 'Signature-verified',
       'f10.go': 'Open →',
+      'f11.title': 'Custom Status Lighting',
+      'f11.desc': 'Dual-zone RGB status lights (built-in + panel) with customisable output location, brightness and 5 status styles — standby, running, cooling and overheat each get their own hue and effect for at-a-glance machine status.',
+      'f11.tag1': 'Dual-zone RGB',
+      'f11.tag2': '5 styles',
+      'f11.more': 'See the manual →',
+      'f12.title': 'Overheat Lock Protection',
+      'f12.desc': 'Instantly stops and locks when temperature exceeds the limit, with a customisable overheat-lock temperature (default 50°C, range 25–60°C). Together with emergency stop and soft start/stop, it guards expensive race motors from heat damage.',
+      'f12.tag1': 'Custom threshold',
+      'f12.more': 'See the manual →',
       'dlcta.tag': 'DATA LAB',
       'dlcta.title': 'Global Motor Break-in Data Library',
       'dlcta.desc': 'Exchange break-in profiles with Mini 4WD® racers worldwide. Every record is signature-verified by a break-in machine, and the original file re-imports straight into yours to reproduce verified settings from other players.',
@@ -4858,6 +4912,11 @@
       'cl.FIX': 'FIX',
       'cl.IMPROVE': 'IMPROVE',
       'cl.SECURITY': 'SECURITY',
+      'cl.v3222.title': 'Stronger Overheat Protection · Break-in &amp; Display Polish',
+      'cl.v3222.l1': 'Customisable overheat-lock temperature (default 50°C, range 25–60°C)',
+      'cl.v3222.l2': 'Break-in / test screen now shows both supply voltage and motor voltage',
+      'cl.v3222.l3': 'Smoother soft-start, wider ramp-up / ramp-down ranges; default break-in recipe tuned',
+      'cl.v3222.l4': 'Fixed: overheat lock not clearing after cooldown, direction reverting to forward',
       'cl.v3219.title': 'PRO License Date Display Fix',
       'cl.v3219.l1': 'PRO license date now shows the actual purchase date without delayed updates',
       'cl.v3219.l2': 'License verification flow stability improvements',
@@ -4923,7 +4982,7 @@
       'nav.changelog': '更新履歴',
       'nav.about': '概要',
       'nav.contact': 'お問い合わせ',
-      'hero.badge': 'システム稼働中 · v3.2.19',
+      'hero.badge': 'システム稼働中 · v3.2.22',
       'hero.title': 'すべての<br>Mini 4WD<sup>®</sup> モーターに<br><span class="accent">健康指紋</span>を',
       'hero.lead': 'MotorLab は Mini 4WD<sup>®</sup> プレイヤーのために設計された精密モーター慣らし・測定システムです。10 段階プログラム慣らし、ベアリング減衰測定、ブラシ接触安定診断、AI モーター健康管理まで — すべての調整を定量化・再現・比較できます。',
       'hero.cta1': '機能を見る',
@@ -4935,7 +4994,7 @@
       'mock.temp': '温度',
       'mock.status': '● 慣らし運転中 · ステージ 6/10 · 経過時間 02:48:33',
       'features.tag': 'CORE FEATURES',
-      'features.title': '10 のプロ機能',
+      'features.title': '12 のプロ機能',
       'features.subtitle': '慣らしから診断まで、Mini 4WD モーターのライフサイクルにおけるすべての重要工程を網羅。',
       'f1.title': 'モーター慣らしプログラム',
       'f1.desc': '10 段階プログラム慣らし。各ステージで電圧・回転方向・運転時間・冷却時間・安定電流許容差を個別設定。実走条件を模した低速長時間慣らしで、ブラシと整流子を最適にフィットさせます。',
@@ -4976,6 +5035,15 @@
       'f10.tag1': 'グローバル共有',
       'f10.tag2': '署名検証',
       'f10.go': '開く →',
+      'f11.title': 'ステータスライトのカスタム表示',
+      'f11.desc': 'デュアルゾーン RGB ステータスライト(内蔵 + パネル)。出力位置・明るさ・5 つの状態スタイルをカスタマイズ可能 — 待機・運転・冷却・高温それぞれの色相と効果で機器状態が一目で分かります。',
+      'f11.tag1': 'デュアルRGB',
+      'f11.tag2': '5 スタイル',
+      'f11.more': 'マニュアルへ →',
+      'f12.title': '高温ロック保護',
+      'f12.desc': '温度が上限を超えると即座に停止してロック。高温ロック温度をカスタマイズ可能(初期 50°C、範囲 25〜60°C)。緊急停止とソフトスタート / ストップと併せ、高価な競技用モーターを熱ダメージから守ります。',
+      'f12.tag1': '閾値設定可',
+      'f12.more': 'マニュアルへ →',
       'dlcta.tag': 'DATA LAB',
       'dlcta.title': 'グローバル モーター慣らしデータ庫',
       'dlcta.desc': '世界中の Mini 4WD® プレイヤーと慣らしレシピを交換。各記録は慣らし機で署名検証され、元ファイルをそのまま自分のモーター慣らし機に再インポートして、検証済みの設定を再現できます。',
@@ -5071,6 +5139,11 @@
       'cl.FIX': '修正',
       'cl.IMPROVE': '改善',
       'cl.SECURITY': 'セキュリティ',
+      'cl.v3222.title': '高温保護強化 · 慣らしと表示の最適化',
+      'cl.v3222.l1': '「高温ロック温度」を設定可能(初期 50°C、範囲 25〜60°C)',
+      'cl.v3222.l2': '慣らし / テスト画面に「供給電圧」と「モーター電圧」を同時表示',
+      'cl.v3222.l3': 'ソフトスタートがより滑らかに、昇速 / 降速時間の範囲を拡大;初期慣らしレシピを調整',
+      'cl.v3222.l4': '高温ロックが冷却後に解除できない、方向を逆転にすると正転に戻る等の問題を修正',
       'cl.v3219.title': 'PRO ライセンス日付の表示修正',
       'cl.v3219.l1': 'PRO ライセンス日付が購入当日として正しく表示され、更新が遅れなくなりました',
       'cl.v3219.l2': 'ライセンス認証フローの安定性を改善',

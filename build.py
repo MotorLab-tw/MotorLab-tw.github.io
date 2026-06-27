@@ -61,9 +61,9 @@ LANGS = {
 SEO = {
     "zh": {
         "title": "MotorLab — Mini 4WD® 馬達磨合測試系統 | 精密馬達診斷工作室",
-        "description": "MotorLab — 專為 Mini 4WD® 玩家打造的精密馬達磨合測試系統。十大專業功能:十階段可程式化磨合、AI 健康管理、FFT 頻譜、軸承 τ 衰減、CV 電刷穩定診斷、三層安全保護(抗 EMI、< 100 ms 急停、Watchdog 自動復原)、OTA 線上更新、全球馬達磨合資料庫。讓馬達調校可量化。",
+        "description": "MotorLab — 專為 Mini 4WD® 玩家打造的精密馬達磨合測試系統。十二大專業功能:十階段可程式化磨合、AI 健康管理、FFT 頻譜、軸承 τ 衰減、CV 電刷穩定診斷、三層安全保護、高溫鎖定、狀態燈自訂、OTA 線上更新、全球馬達磨合資料庫。讓馬達調校可量化。",
         "og_title": "MotorLab — Mini 4WD® 馬達磨合測試系統",
-        "og_desc": "為每一顆 Mini 4WD® 馬達建立可量化的健康指紋。十大專業功能:十階段磨合、AI 健康管理、軸承衰減分析、電刷穩定診斷、三層安全保護、全球馬達磨合資料庫。",
+        "og_desc": "為每一顆 Mini 4WD® 馬達建立可量化的健康指紋。十二大專業功能:十階段磨合、AI 健康管理、軸承衰減分析、電刷穩定診斷、三層安全保護、高溫鎖定、狀態燈自訂、全球馬達磨合資料庫。",
         "tw_title": "MotorLab — Mini 4WD® Motor Lab",
         "tw_desc": "為每一顆 Mini 4WD® 馬達建立可量化的健康指紋",
         "ld_org_desc": "為 Mini 4WD® 玩家打造的精密馬達磨合與測試系統研發工作室",
@@ -74,7 +74,7 @@ SEO = {
         "title": "MotorLab — Mini 4WD® Motor Break-in & Diagnostics System",
         "description": "MotorLab — precision motor break-in & diagnostics for Mini 4WD® racers. 10-stage programmable break-in, AI health management, FFT spectrum, bearing τ decay.",
         "og_title": "MotorLab — Mini 4WD® Motor Break-in & Test System",
-        "og_desc": "Build a measurable health fingerprint for every Mini 4WD® motor. Ten professional tools: 10-stage break-in, AI health management, bearing decay analysis, brush stability diagnostics, triple-layer safety protection and a global break-in data library.",
+        "og_desc": "Build a measurable health fingerprint for every Mini 4WD® motor. Twelve professional tools: 10-stage break-in, AI health management, bearing decay analysis, brush stability diagnostics, triple-layer safety protection, overheat lock, custom status lighting and a global break-in data library.",
         "tw_title": "MotorLab — Mini 4WD® Motor Lab",
         "tw_desc": "Build a measurable health fingerprint for every Mini 4WD® motor",
         "ld_org_desc": "An R&D studio building precision motor break-in and testing systems for Mini 4WD® racers.",
@@ -85,7 +85,7 @@ SEO = {
         "title": "MotorLab — Mini 4WD® モーター慣らし・テストシステム | 精密モーター診断スタジオ",
         "description": "MotorLab — Mini 4WD® プレイヤー向けの精密モーター慣らし・診断システム。10 段階プログラム慣らし、AI 健康管理、FFT スペクトル、ベアリング τ 減衰、CV ブラシ安定診断を搭載。",
         "og_title": "MotorLab — Mini 4WD® モーター慣らし・テストシステム",
-        "og_desc": "すべての Mini 4WD® モーターに定量化できる健康指紋を。10 のプロ機能:10 段階慣らし、AI 健康管理、ベアリング減衰解析、ブラシ安定診断、三層安全保護機構、グローバル慣らしデータ庫。",
+        "og_desc": "すべての Mini 4WD® モーターに定量化できる健康指紋を。12 のプロ機能:10 段階慣らし、AI 健康管理、ベアリング減衰解析、ブラシ安定診断、三層安全保護、高温ロック、ステータスライト カスタム、グローバル慣らしデータ庫。",
         "tw_title": "MotorLab — Mini 4WD® Motor Lab",
         "tw_desc": "すべての Mini 4WD® モーターに定量化できる健康指紋を",
         "ld_org_desc": "Mini 4WD® プレイヤーのための精密モーター慣らし・測定システムを開発するスタジオ。",
@@ -2343,40 +2343,40 @@ def build_lab_page(lab_cfg, lang, src_html, i18n):
 MANUAL = {
     "slug": "user-manual",
     "type": "docs",
-    "fw": "v3.2.19",
+    "fw": "v3.2.22",
     "i18n": {
         "zh": {
             "title": "MotorLab 使用者手冊:馬達磨合機操作說明 | MotorLab",
-            "description": "MotorLab Mini 4WD® 馬達磨合機完整使用手冊 — 連線、馬達磨合、馬達測試、歷史紀錄、全球磨合資料庫、AI 健康管理、軸承/電刷測試、系統設定、安全保護、工廠重設與常見問題。對應韌體 v3.2.19。",
+            "description": "MotorLab Mini 4WD® 馬達磨合機完整使用手冊 — 連線、馬達磨合、馬達測試、歷史紀錄、全球磨合資料庫、AI 健康管理、軸承/電刷測試、系統設定、安全保護、工廠重設與常見問題。對應韌體 v3.2.22。",
             "keywords": "MotorLab 使用手冊, 馬達磨合機操作, 馬達磨合機說明書, MotorLab 教學, 馬達磨合機設定",
             "breadcrumb": "使用者手冊",
             "eyebrow": "Docs · 使用者手冊",
             "h1": "MotorLab 使用者手冊",
-            "lead": "Mini 4WD® 馬達磨合機完整操作說明。對應韌體 v3.2.19。功能隨版本更新,新版可能多出未列選項。",
+            "lead": "Mini 4WD® 馬達磨合機完整操作說明。對應韌體 v3.2.22。功能隨版本更新,新版可能多出未列選項。",
             "toc_label": "目錄",
-            "fw_note": "本手冊適用 MotorLab v3.2.19 韌體。",
+            "fw_note": "本手冊適用 MotorLab v3.2.22 韌體。",
         },
         "en": {
             "title": "MotorLab User Manual: Motor Break-in Machine Guide | MotorLab",
-            "description": "Complete user manual for the MotorLab Mini 4WD® motor break-in machine — connection, break-in, testing, history records, global database, AI health management, bearing/brush tests, system settings, safety, factory reset and FAQ. For firmware v3.2.19.",
+            "description": "Complete user manual for the MotorLab Mini 4WD® motor break-in machine — connection, break-in, testing, history records, global database, AI health management, bearing/brush tests, system settings, safety, factory reset and FAQ. For firmware v3.2.22.",
             "keywords": "MotorLab user manual, motor break-in machine guide, MotorLab instructions, motor tester manual, Mini 4WD break-in machine",
             "breadcrumb": "User Manual",
             "eyebrow": "Docs · User Manual",
             "h1": "MotorLab User Manual",
-            "lead": "Complete operating guide for the Mini 4WD® motor break-in machine. For firmware v3.2.19. Features evolve with each release; newer firmware may add options not listed here.",
+            "lead": "Complete operating guide for the Mini 4WD® motor break-in machine. For firmware v3.2.22. Features evolve with each release; newer firmware may add options not listed here.",
             "toc_label": "Contents",
-            "fw_note": "This manual applies to MotorLab firmware v3.2.19.",
+            "fw_note": "This manual applies to MotorLab firmware v3.2.22.",
         },
         "ja": {
             "title": "MotorLab ユーザーマニュアル:モーター慣らし機操作ガイド | MotorLab",
-            "description": "MotorLab Mini 4WD® モーター慣らし機の完全ユーザーマニュアル — 接続、慣らし、テスト、履歴記録、グローバルデータ庫、AI 健康管理、ベアリング/ブラシ測定、システム設定、安全保護、工場出荷リセット、FAQ。ファームウェア v3.2.19 対応。",
+            "description": "MotorLab Mini 4WD® モーター慣らし機の完全ユーザーマニュアル — 接続、慣らし、テスト、履歴記録、グローバルデータ庫、AI 健康管理、ベアリング/ブラシ測定、システム設定、安全保護、工場出荷リセット、FAQ。ファームウェア v3.2.22 対応。",
             "keywords": "MotorLab マニュアル, モーター慣らし機 操作, MotorLab 使い方, モーターテスター 説明書, ミニ四駆 慣らし機",
             "breadcrumb": "ユーザーマニュアル",
             "eyebrow": "Docs · ユーザーマニュアル",
             "h1": "MotorLab ユーザーマニュアル",
-            "lead": "Mini 4WD® モーター慣らし機の完全操作ガイド。ファームウェア v3.2.19 対応。機能はバージョンごとに更新され、新版では未記載の項目が増える場合があります。",
+            "lead": "Mini 4WD® モーター慣らし機の完全操作ガイド。ファームウェア v3.2.22 対応。機能はバージョンごとに更新され、新版では未記載の項目が増える場合があります。",
             "toc_label": "目次",
-            "fw_note": "本マニュアルは MotorLab ファームウェア v3.2.19 に対応します。",
+            "fw_note": "本マニュアルは MotorLab ファームウェア v3.2.22 に対応します。",
         },
     },
     "sections": {
@@ -2470,8 +2470,9 @@ MANUAL = {
                 "<tr><th>語言</th><td>中文 / English / 日本語 切換,即時生效並記住偏好(預設中文)。</td></tr>"
                 "<tr><th>磨合模式</th><td>純運轉時間 / 智慧穩定電流判定(達時間<b>或</b>電流提前穩定即進下一階段)。</td></tr>"
                 "<tr><th>溫度校正</th><td>顯示與實際有偏差時加補償(±20°C)。</td></tr>"
+                "<tr><th>高溫鎖定</th><td>設定高溫鎖定溫度(預設 50°C,範圍 25~60°C)。當前溫度高於設定值 5°C 以上持續 10 秒即進入高溫鎖定(停機,須按歸零解除)。區塊內同時顯示當前溫度。</td></tr>"
                 "<tr><th>平均轉速設定</th><td>容差(相鄰兩秒轉速差,預設 50 RPM,可調 10~500)越小越嚴格。</td></tr>"
-                "<tr><th>緩啟動參數</th><td>kick PWM(預設 60%)/ kick 時長(300ms)/ 緩啟動時長(700ms)。啟動不了加大 kick;爆衝跳保護縮小 kick。</td></tr>"
+                "<tr><th>緩啟動參數</th><td>啟動扭矩(預設 70%,100% 對應約 4V)/ 昇速時間(預設 0.3 秒,0.05~2.0)/ 降速時間(預設 0.7 秒,0.05~3.0)。啟動不了加大扭矩;爆衝跳保護縮小扭矩。</td></tr>"
                 "<tr><th>取得授權</th><td>M1 升 Pro,見下。</td></tr>"
                 "<tr><th>軟體更新</th><td>透過家裡 WiFi 自動取得最新韌體,見下。</td></tr>"
                 "<tr><th>RGB 狀態燈</th><td>雙燈(內建 / 面板)輸出位置 + 亮度(0~100%)+ 5 組狀態樣式,見下。</td></tr>"
@@ -2490,7 +2491,7 @@ MANUAL = {
             )},
             {"id": "safety", "t": "十二、安全與保護", "html": (
                 "<table class='manual-table'><thead><tr><th>機制</th><th>觸發 / 行為</th></tr></thead><tbody>"
-                "<tr><td>高溫保護</td><td>溫度連續超標 0.5 秒 → 立即停馬達 + 嗶 5 聲 + 進冷卻、溫度旁出現「!」。處理:等降溫 → 按「歸零」清除鎖定才能再啟動。</td></tr>"
+                "<tr><td>高溫保護</td><td>兩種觸發:① 溫度感測器警報;② 當前溫度高於「高溫鎖定溫度」設定值 5°C 以上持續 10 秒(見系統設定)。任一觸發 → 立即停馬達 + 嗶 5 聲 + 鎖定。鎖定期間狀態列 / 旗標 / 狀態燈持續顯示高溫,首頁只剩「馬達磨合 / 馬達測試」可進、操作頁只剩「歸零 / 回首頁」可按。<b>即使溫度已降回也須按「歸零」才解除</b>(仍高溫時按歸零會再次鎖定,須先降溫)。</td></tr>"
                 "<tr><td>緩啟動 / 緩停止</td><td>啟停為 3 秒線性爬升 / 下降,避免電流爆衝與機械衝擊。</td></tr>"
                 "<tr><td>電流上限</td><td>固定 4A 量測上限,超過讀值封頂(不停機,但長時間高電流可能觸發高溫)。</td></tr>"
                 "<tr><td>開機鎖定</td><td>開機 30 秒內連續 3 次崩潰 → 自動切回上一版韌體。</td></tr>"
@@ -2617,8 +2618,9 @@ MANUAL = {
                 "<tr><th>Language</th><td>Switch 中文 / English / 日本語, applied instantly and remembered (default Chinese).</td></tr>"
                 "<tr><th>Break-in Mode</th><td>Pure run-time / smart stable-current (advances on time <b>or</b> when current settles early).</td></tr>"
                 "<tr><th>Temp Calibration</th><td>Add compensation when the display deviates from reality (±20°C).</td></tr>"
+                "<tr><th>Overheat Lock</th><td>Set the overheat-lock temperature (default 50°C, range 25–60°C). When the current temperature stays 5°C above the set value for 10 seconds, it enters overheat lock (stops, must press Reset to clear). The block also shows the current temperature.</td></tr>"
                 "<tr><th>Avg-RPM Setting</th><td>Tolerance (RPM difference between consecutive seconds, default 50, range 10–500); smaller is stricter.</td></tr>"
-                "<tr><th>Soft-start Params</th><td>kick PWM (default 60%) / kick duration (300ms) / soft-start duration (700ms). If it won’t start, raise kick; if it lurches into protection, lower kick.</td></tr>"
+                "<tr><th>Soft-start Params</th><td>Start torque (default 70%, 100% ≈ 4V) / ramp-up time (default 0.3s, 0.05–2.0) / ramp-down time (default 0.7s, 0.05–3.0). If it won’t start, raise the torque; if it lurches into protection, lower it.</td></tr>"
                 "<tr><th>Get License</th><td>Upgrade M1 to Pro, see below.</td></tr>"
                 "<tr><th>Software Update</th><td>Auto-fetch the latest firmware over home WiFi, see below.</td></tr>"
                 "<tr><th>RGB Status Light</th><td>Dual lights (built-in / panel) output location + brightness (0–100%) + 5 status styles, see below.</td></tr>"
@@ -2637,7 +2639,7 @@ MANUAL = {
             )},
             {"id": "safety", "t": "12. Safety & Protection", "html": (
                 "<table class='manual-table'><thead><tr><th>Mechanism</th><th>Trigger / behaviour</th></tr></thead><tbody>"
-                "<tr><td>Overheat protection</td><td>Temperature over limit for 0.5 s straight → motor stops immediately + 5 beeps + cooling, a “!” appears by the temperature. To recover: let it cool → press “Reset” to clear the lock before restarting.</td></tr>"
+                "<tr><td>Overheat protection</td><td>Two triggers: (1) temperature-sensor alarm; (2) current temperature 5°C above the “overheat-lock temperature” for 10 seconds (see System Settings). Either one → motor stops immediately + 5 beeps + lock. While locked, the status bar / flag / status light keep showing overheat; home leaves only “Break-in / Test” enterable and the operation page only “Reset / Home”. <b>Even after the temperature drops you must press “Reset” to clear</b> (pressing Reset while still hot re-locks; cool down first).</td></tr>"
                 "<tr><td>Soft-start / soft-stop</td><td>Start/stop is a 3-second linear ramp up/down, avoiding current surges and mechanical shock.</td></tr>"
                 "<tr><td>Current cap</td><td>Fixed 4A measurement ceiling; readings clamp above it (no shutdown, but sustained high current may trigger overheat).</td></tr>"
                 "<tr><td>Boot lock</td><td>3 crashes within 30 s of boot → automatically reverts to the previous firmware.</td></tr>"
@@ -2764,8 +2766,9 @@ MANUAL = {
                 "<tr><th>言語</th><td>中文 / English / 日本語 を切替、即時反映され設定を記憶(初期値は中国語)。</td></tr>"
                 "<tr><th>慣らしモード</th><td>運転時間のみ / スマート安定電流判定(時間到達<b>または</b>電流が早く安定したら次段階へ)。</td></tr>"
                 "<tr><th>温度校正</th><td>表示と実際にずれがある場合に補正を追加(±20°C)。</td></tr>"
+                "<tr><th>高温ロック</th><td>高温ロック温度を設定(初期 50°C、範囲 25〜60°C)。現在温度が設定値より 5°C 以上高い状態が 10 秒続くと高温ロックに入る(停止、リセットで解除)。ブロック内に現在温度も表示。</td></tr>"
                 "<tr><th>平均回転数設定</th><td>許容差(隣接 2 秒の回転数差、初期 50 RPM、10〜500 で調整)。小さいほど厳格。</td></tr>"
-                "<tr><th>ソフトスタート設定</th><td>kick PWM(初期 60%)/ kick 時間(300ms)/ ソフトスタート時間(700ms)。始動しない場合は kick を上げる;暴走して保護に入る場合は kick を下げる。</td></tr>"
+                "<tr><th>ソフトスタート設定</th><td>始動トルク(初期 70%、100% は約 4V)/ 昇速時間(初期 0.3 秒、0.05〜2.0)/ 降速時間(初期 0.7 秒、0.05〜3.0)。始動しない場合はトルクを上げる;暴走して保護に入る場合は下げる。</td></tr>"
                 "<tr><th>ライセンス取得</th><td>M1 を Pro に。下記参照。</td></tr>"
                 "<tr><th>ソフトウェア更新</th><td>自宅 WiFi 経由で最新ファームを自動取得。下記参照。</td></tr>"
                 "<tr><th>RGB ステータスライト</th><td>デュアルライト(内蔵 / パネル)の出力位置 + 明るさ(0〜100%)+ 5 つの状態スタイル。下記参照。</td></tr>"
@@ -2784,7 +2787,7 @@ MANUAL = {
             )},
             {"id": "safety", "t": "12. 安全と保護", "html": (
                 "<table class='manual-table'><thead><tr><th>機構</th><th>トリガー / 動作</th></tr></thead><tbody>"
-                "<tr><td>高温保護</td><td>温度が 0.5 秒連続で超過 → 直ちにモーター停止 + ビープ 5 回 + 冷却へ、温度横に「!」表示。対処:冷えるのを待つ → 「リセット」でロック解除してから再始動。</td></tr>"
+                "<tr><td>高温保護</td><td>2 つのトリガー:① 温度センサー警報;② 現在温度が「高温ロック温度」設定値より 5°C 以上高い状態が 10 秒継続(システム設定参照)。いずれかで → 直ちにモーター停止 + ビープ 5 回 + ロック。ロック中はステータスバー / フラグ / ステータスライトが高温を表示し続け、ホームは「慣らし / テスト」のみ、操作画面は「リセット / ホーム」のみ操作可。<b>温度が下がってもリセットを押すまで解除されません</b>(高温のままリセットすると再ロック、先に冷却を)。</td></tr>"
                 "<tr><td>ソフトスタート / ソフトストップ</td><td>始動 / 停止は 3 秒の直線的な立上げ / 立下げ。電流の急増と機械的衝撃を防止。</td></tr>"
                 "<tr><td>電流上限</td><td>測定上限は固定 4A。超過分は読値が頭打ち(停止はしないが、長時間の高電流は高温を誘発する場合あり)。</td></tr>"
                 "<tr><td>起動ロック</td><td>起動後 30 秒以内に 3 回連続クラッシュ → 自動的に前バージョンのファームへ復帰。</td></tr>"
