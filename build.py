@@ -453,21 +453,21 @@ GUIDES = [
         "i18n": {
             "zh": {
                 "title": "田宮 Mini 4WD® 全 15 款馬達規格對照表(含 PRO 系列)| MotorLab",
-                "description": "田宮(TAMIYA, INC.)Mini 4WD® 全 15 款馬達官方規格對照表 — 標準系列 9 款(單軸)+ PRO 系列 6 款(雙軸)。整理 RPM、扭力(mN·m)、電流(A)、Speed/Torque 等級、官方比賽合規限制與對應 MotorLab 磨合策略。",
+                "description": "田宮(TAMIYA, INC.)Mini 4WD® 全 15 款馬達官方規格對照表 — 標準系列 9 款(單軸)+ PRO 系列 6 款(雙軸)。整理 RPM、扭力(mN·m)、電流(A)、Speed/Torque 等級與官方比賽合規限制。",
                 "keywords": "田宮馬達, 田宮 15 款馬達, 田宮馬達規格, Mini 4WD PRO 馬達, 雙軸馬達, 單軸馬達, 田宮馬達對照表, Hyper-Dash PRO, Mach-Dash PRO, Plasma-Dash, Ultra-Dash, Power-Dash, Sprint-Dash, 田宮比賽合規, 紅二, 黑金剛",
                 "breadcrumb": "全 15 款馬達規格",
                 "h1_for_ld": "田宮 Mini 4WD® 全 15 款馬達規格對照表(含 PRO 系列)",
             },
             "en": {
                 "title": "Tamiya Mini 4WD® Motors: Full Specs Chart (15 Models) | MotorLab",
-                "description": "Spec comparison for all 15 Tamiya Mini 4WD motors — 9 standard + 6 PRO: RPM, torque, current, Speed/Torque ratings, race compliance and break-in strategy.",
+                "description": "Spec comparison for all 15 Tamiya Mini 4WD motors — 9 standard + 6 PRO: RPM, torque, current, Speed/Torque ratings and race compliance.",
                 "keywords": "Tamiya Mini 4WD motors, Tamiya 15 motors, Mini 4WD PRO motors, double-shaft motor, single-shaft motor, Tamiya motor specifications, Hyper-Dash PRO, Mach-Dash PRO, Plasma-Dash, Ultra-Dash, Power-Dash, Sprint-Dash, Tamiya race compliance, Tamiya motor comparison table",
                 "breadcrumb": "Full Lineup (15 Motors)",
                 "h1_for_ld": "Tamiya Mini 4WD® Motor Full Lineup: All 15 Models Spec Comparison",
             },
             "ja": {
                 "title": "タミヤ Mini 4WD® 全 15 種モーター規格対照表(PRO シリーズ含む)| MotorLab",
-                "description": "タミヤ(TAMIYA, INC.)Mini 4WD® 全 15 種モーターの公式スペック対照表 — 標準シリーズ 9 種(片軸)と Mini 4WD PRO シリーズ 6 種(両軸)。RPM、トルク(mN·m)、電流(A)、Speed/Torque 評価、公式競技ルール、対応する MotorLab 慣らし戦略を網羅。",
+                "description": "タミヤ(TAMIYA, INC.)Mini 4WD® 全 15 種モーターの公式スペック対照表 — 標準シリーズ 9 種(片軸)と Mini 4WD PRO シリーズ 6 種(両軸)。RPM、トルク(mN·m)、電流(A)、Speed/Torque 評価と公式競技ルールを網羅。",
                 "keywords": "タミヤ モーター, タミヤ 15 種 モーター, ミニ四駆 PRO モーター, 両軸モーター, 片軸モーター, タミヤ モーター 規格, ハイパーダッシュ PRO, マッハダッシュ PRO, プラズマダッシュ, ウルトラダッシュ, パワーダッシュ, スプリントダッシュ, タミヤ 公式競技ルール, ミニ四駆 モーター 対照表",
                 "breadcrumb": "全 15 種モーター規格",
                 "h1_for_ld": "タミヤ Mini 4WD® 全 15 種モーター規格対照表(PRO シリーズ含む)",
