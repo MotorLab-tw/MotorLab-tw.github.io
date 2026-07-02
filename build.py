@@ -242,7 +242,7 @@ GUIDES = [
             },
             "en": {
                 "title": "How to Break In a Mini 4WD Motor: Step-by-Step RPM Guide | MotorLab",
-                "description": "How to break in a Mini 4WD motor, step by step: the 10-stage procedure, 4 control variables, brush seating physics, and the RPM gain you can expect before vs after break-in.",
+                "description": "How to break in a Mini 4WD motor: the 10-stage procedure, 4 control variables, brush seating physics, and the RPM gain before vs after break-in.",
                 "keywords": "how to break in a Mini 4WD motor, Mini 4WD motor break in, motor break-in guide, Tamiya motor break-in, Hyper Dash break-in, motor running-in, motor bedding, 10-stage break-in, break-in RPM gain before after, carbon brush seating, MotorLab",
                 "breadcrumb": "Motor Break-in Guide",
                 "h1_for_ld": "Mini 4WD Motor Break-in Complete Guide: Principles & Practice",
@@ -296,7 +296,7 @@ GUIDES = [
             },
             "en": {
                 "title": "Tamiya Mini 4WD Motor RPM & Specs Chart (15 Models) | MotorLab",
-                "description": "Tamiya Mini 4WD motor RPM and specs chart — full list of 15 motors (Hyper Dash, Plasma Dash, Power Dash, Sprint Dash and more) with RPM, torque, current, speed/torque ratings and break-in strategy.",
+                "description": "Tamiya Mini 4WD motor RPM & specs chart — all 15 motors (Hyper Dash, Plasma Dash, Sprint Dash and more) with RPM, torque, current and break-in strategy.",
                 "keywords": "Tamiya motor RPM chart, Tamiya Mini 4WD motor chart, Tamiya motor specs, list of Tamiya motors with RPM, Mini 4WD motor RPM, Hyper Dash 2, Plasma Dash, Power Dash, Sprint Dash, Rev-Tuned, Torque-Tuned, Atomic-Tuned, Light Dash, which is faster sprint dash or power dash, copper vs carbon brush, Tamiya competition rules",
                 "breadcrumb": "Tamiya Motor Reference",
                 "h1_for_ld": "Tamiya Mini 4WD Motor Specs & Break-in Strategy Reference",
@@ -532,6 +532,35 @@ GUIDES = [
             },
         },
     },
+    # ---------- g12:先選別後磨合 —— 用電流讀出馬達體質(methodology hub)----------
+    {
+        "slug": "motor-selection-before-break-in",
+        "key": "g12",
+        "type": "guides",
+        "i18n": {
+            "zh": {
+                "title": "先選別,後磨合:用電流讀出馬達體質 | MotorLab",
+                "description": "同一批、同型號的馬達,體質天生不同。磨合只能改善電刷與整流子的接觸面,鐵芯、磁路、動平衡的先天差異磨不掉。本文教你先量測、後磨合:用無載電流當損耗轉矩指標,先挑出體質好的個體,再把時間與碳刷壽命投資在值得的馬達上。",
+                "keywords": "馬達選別, 選馬達, 磨馬達, 馬達磨合, 損耗轉矩, 無載電流, 馬達體質, 馬達挑選, Kt 轉矩常數, Km 馬達常數, Ke, MotorLab",
+                "breadcrumb": "馬達選別",
+                "h1_for_ld": "先選別,後磨合:用電流讀出馬達體質",
+            },
+            "en": {
+                "title": "Select Motors Before Break-in: Grade by Current | MotorLab",
+                "description": "Same batch, unequal motors. Measure before break-in: no-load current is a loss-torque index — grade motors first, invest break-in only in the good ones.",
+                "keywords": "motor selection, motor grading, Mini 4WD motor, no-load current, loss torque, torque constant Kt, motor constant Km, Ke, measure before break-in, MotorLab",
+                "breadcrumb": "Select Before Break-in",
+                "h1_for_ld": "Select Motors Before Break-in: Read a Motor's Constitution by Current",
+            },
+            "ja": {
+                "title": "選別してから慣らす:電流でモーターの素性を読む | MotorLab",
+                "description": "同じロット・同じ型番でもモーターの素性は違う。慣らしで直るのはブラシと整流子の接触面だけで、鉄芯・磁路・バランスの先天差は消えない。先に測って後で慣らす:無負荷電流を損失トルク指標に素性の良い個体を選び、時間とブラシ寿命を価値ある個体に投資する方法。",
+                "keywords": "モーター選別, モーター 選び方, モーター慣らし, 損失トルク, 無負荷電流, 素性, トルク定数 Kt, モーター定数 Km, Ke, MotorLab",
+                "breadcrumb": "モーター選別",
+                "h1_for_ld": "選別してから慣らす:電流でモーターの素性を読む",
+            },
+        },
+    },
 ]
 
 # UI 字串(教學頁面通用元件:nav / 麵包屑 / 分頁)
@@ -666,7 +695,7 @@ HUBS = [
     },
     {
         "slug": "methodology",
-        "include": ["g5", "g6", "g7", "g8", "g10", "g11"],
+        "include": ["g5", "g6", "g7", "g8", "g10", "g11", "g12"],
         "i18n": {
             "zh": {
                 "title": "方法論 — Mini 4WD® 馬達分析與比賽策略 | MotorLab",

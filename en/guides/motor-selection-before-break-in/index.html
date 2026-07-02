@@ -4,12 +4,12 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="en" http-equiv="Content-Language"/>
-<title>Mini 4WD® Motor Analysis Methodology | MotorLab</title>
-<meta content="Advanced Mini 4WD analysis methodology and race strategy: prep techniques, a three-pillar framework, degradation signs and crash prevention." name="description"/>
+<title>Select Motors Before Break-in: Grade by Current | MotorLab</title>
+<meta content="Same batch, unequal motors. Measure before break-in: no-load current is a loss-torque index — grade motors first, invest break-in only in the good ones." name="description"/>
 <meta content="MotorLab.tw" name="author"/>
-<meta content="Mini 4WD motor analysis methodology, motor tuning methodology, racing strategy, motor health fingerprint, RPM analysis" name="keywords"/>
+<meta content="motor selection, motor grading, Mini 4WD motor, no-load current, loss torque, torque constant Kt, motor constant Km, Ke, measure before break-in, MotorLab" name="keywords"/>
 <!-- 正規網址 (避免重複內容問題) -->
-<link href="https://motorlab-tw.github.io/en/methodology/" rel="canonical"/>
+<link href="https://motorlab-tw.github.io/en/guides/motor-selection-before-break-in/" rel="canonical"/>
 <!-- 搜尋引擎指示 -->
 <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
 <meta content="index, follow" name="googlebot"/>
@@ -30,10 +30,10 @@
 <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
 <meta content="MotorLab" name="apple-mobile-web-app-title"/>
 <!-- Open Graph (Facebook, LINE, Discord) -->
-<meta content="website" property="og:type"/>
-<meta content="https://motorlab-tw.github.io/en/methodology/" property="og:url"/>
-<meta content="Mini 4WD® Motor Analysis Methodology | MotorLab" property="og:title"/>
-<meta content="Advanced Mini 4WD analysis methodology and race strategy: prep techniques, a three-pillar framework, degradation signs and crash prevention." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://motorlab-tw.github.io/en/guides/motor-selection-before-break-in/" property="og:url"/>
+<meta content="Select Motors Before Break-in: Grade by Current | MotorLab" property="og:title"/>
+<meta content="Same batch, unequal motors. Measure before break-in: no-load current is a loss-torque index — grade motors first, invest break-in only in the good ones." property="og:description"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" property="og:image"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" property="og:image:secure_url"/>
 <meta content="image/png" property="og:image:type"/>
@@ -45,8 +45,8 @@
 <meta content="MotorLab.tw" property="og:site_name"/>
 <!-- Twitter Card -->
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Mini 4WD® Motor Analysis Methodology | MotorLab" name="twitter:title"/>
-<meta content="Advanced Mini 4WD analysis methodology and race strategy: prep techniques, a three-pillar framework, degradation signs and crash prevention." name="twitter:description"/>
+<meta content="Select Motors Before Break-in: Grade by Current | MotorLab" name="twitter:title"/>
+<meta content="Same batch, unequal motors. Measure before break-in: no-load current is a loss-torque index — grade motors first, invest break-in only in the good ones." name="twitter:description"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" name="twitter:image"/>
 <meta content="MotorLab 官方網站預覽圖" name="twitter:image:alt"/>
 <!-- 結構化資料 1: Organization (公司/工作室) -->
@@ -1815,66 +1815,34 @@
     .manual-table { display: block; overflow-x: auto; white-space: nowrap; }
   }
 </style>
-<link href="https://motorlab-tw.github.io/methodology/" hreflang="zh-TW" rel="alternate"/><link href="https://motorlab-tw.github.io/en/methodology/" hreflang="en" rel="alternate"/><link href="https://motorlab-tw.github.io/ja/methodology/" hreflang="ja" rel="alternate"/><link href="https://motorlab-tw.github.io/methodology/" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
+<link href="https://motorlab-tw.github.io/guides/motor-selection-before-break-in/" hreflang="zh-TW" rel="alternate"/><link href="https://motorlab-tw.github.io/en/guides/motor-selection-before-break-in/" hreflang="en" rel="alternate"/><link href="https://motorlab-tw.github.io/ja/guides/motor-selection-before-break-in/" hreflang="ja" rel="alternate"/><link href="https://motorlab-tw.github.io/guides/motor-selection-before-break-in/" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
   "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "Mini 4WD® Motor Analysis Methodology | MotorLab",
-  "description": "Advanced Mini 4WD analysis methodology and race strategy: prep techniques, a three-pillar framework, degradation signs and crash prevention.",
+  "@type": "Article",
+  "headline": "Select Motors Before Break-in: Read a Motor's Constitution by Current",
+  "description": "Same batch, unequal motors. Measure before break-in: no-load current is a loss-torque index — grade motors first, invest break-in only in the good ones.",
+  "keywords": "motor selection, motor grading, Mini 4WD motor, no-load current, loss torque, torque constant Kt, motor constant Km, Ke, measure before break-in, MotorLab",
   "inLanguage": "en",
-  "url": "https://motorlab-tw.github.io/en/methodology/",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "MotorLab.tw",
+  "url": "https://motorlab-tw.github.io/en/guides/motor-selection-before-break-in/",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://motorlab-tw.github.io/en/guides/motor-selection-before-break-in/"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "MotorLab Team",
     "url": "https://motorlab-tw.github.io/"
   },
-  "mainEntity": {
-    "@type": "ItemList",
-    "numberOfItems": 7,
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "url": "https://motorlab-tw.github.io/en/guides/racing-motor-break-in/",
-        "name": "Why Break-in Decides Mini 4WD Race Outcomes: The Competitive Edge Most Racers Miss"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "url": "https://motorlab-tw.github.io/en/guides/racing-prep-techniques/",
-        "name": "Advanced Mini 4WD Racing: 5 Prep Details Winners Quietly Do (But Don't Write About)"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "url": "https://motorlab-tw.github.io/en/guides/motor-analysis-methodology/",
-        "name": "From Feel to Data: A Three-Pillar Methodology for Motor Analysis"
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "url": "https://motorlab-tw.github.io/en/guides/motor-degradation-signs/",
-        "name": "8 Signs Your Mini 4WD Motor Is Dying — When to Wash vs Retire"
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "url": "https://motorlab-tw.github.io/en/guides/track-analysis-motor-selection/",
-        "name": "Mini 4WD Track Analysis & Motor Selection by Section Ratio"
-      },
-      {
-        "@type": "ListItem",
-        "position": 6,
-        "url": "https://motorlab-tw.github.io/en/guides/crash-risk-trigger-model/",
-        "name": "Why Mini 4WD Cars Crash: The Speed / Geometry / Stability Trigger Model"
-      },
-      {
-        "@type": "ListItem",
-        "position": 7,
-        "url": "https://motorlab-tw.github.io/en/guides/motor-selection-before-break-in/",
-        "name": "Select Motors Before Break-in: Read a Motor's Constitution by Current"
-      }
-    ]
-  }
+  "publisher": {
+    "@type": "Organization",
+    "name": "MotorLab.tw",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://motorlab-tw.github.io/favicon-192.png",
+      "width": 192,
+      "height": 192
+    }
+  },
+  "image": "https://motorlab-tw.github.io/og-image.png"
 }</script><script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -1888,28 +1856,70 @@
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Knowledge Base",
+      "name": "Guides",
       "item": "https://motorlab-tw.github.io/en/#guides"
     },
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Methodology",
-      "item": "https://motorlab-tw.github.io/en/methodology/"
+      "name": "Select Before Break-in",
+      "item": "https://motorlab-tw.github.io/en/guides/motor-selection-before-break-in/"
     }
   ]
 }</script></head>
-<body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/en/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/en/">← Back to home</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/en/">Home</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/en/#guides">Knowledge Base</a><span class="sep">/</span><span class="current">Methodology</span></nav><div class="hub-header"><h1>Methodology</h1><p class="hub-lead">Advanced analysis methodology and competitive strategy — moving motor tuning from feel-based to data-driven, from individual tips to systematic frameworks.</p></div><div class="guides-grid"><article class="guide-article"><span class="guide-tag" data-i18n="g5.tag">GUIDE · Race Context</span><h3 data-i18n="g5.title">Why Break-in Decides Mini 4WD Race Outcomes: The Competitive Edge Most Racers Miss</h3><p class="guide-lead" data-i18n="g5.lead">Mini 4WD races are won in fractions of a second. In that micro-margin world, motor break-in — a step most racers underestimate — is often the difference between a podium and an early exit. This article approaches break-in from a competitive racing angle: why amateur methods fail when the stakes are real, and how serious racers actually treat motor preparation.</p><a class="guide-card-link" href="/en/guides/racing-motor-break-in/">Read full article →</a></article><article class="guide-article"><span class="guide-tag" data-i18n="g6.tag">GUIDE · Advanced Prep</span><h3 data-i18n="g6.title">Advanced Mini 4WD Racing: 5 Prep Details Winners Quietly Do (But Don't Write About)</h3><p class="guide-lead" data-i18n="g6.lead">There are plenty of break-in guides and tuning articles online. But the people who consistently podium do things that rarely show up in those guides. This article covers 5 prep practices actually used by competitive Mini 4WD racers — observed at JCO and other major events. No theory, just verifiable race-day specifics.</p><a class="guide-card-link" href="/en/guides/racing-prep-techniques/">Read full article →</a></article><article class="guide-article"><span class="guide-tag" data-i18n="g7.tag">GUIDE · Methodology</span><h3 data-i18n="g7.title">From Feel to Data: A Three-Pillar Methodology for Motor Analysis</h3><p class="guide-lead" data-i18n="g7.lead">Most racers rely on experience — "feels good," "sounds right." The problem with experience is that it can't be transferred, reproduced, or verified. This article introduces a three-step methodology that turns motor analysis from "feel" into systems engineering: <strong>measurement, comparison, health assessment</strong>. It's the conceptual framework behind MotorLab's entire analysis system.</p><a class="guide-card-link" href="/en/guides/motor-analysis-methodology/">Read full article →</a></article><article class="guide-article"><span class="guide-tag" data-i18n="g8.tag">GUIDE · Diagnostics</span><h3 data-i18n="g8.title">8 Signs Your Mini 4WD Motor Is Dying — When to Wash vs Retire</h3><p class="guide-lead" data-i18n="g8.lead">A broken-in motor doesn't stay at peak forever. From around the 5th race onward, degradation begins — but most racers wait until the motor is obviously dead before noticing. This article covers 8 degradation signs plus retirement thresholds, so you can make the right call (wash, retire, or keep using) before a motor truly fails on race day.</p><a class="guide-card-link" href="/en/guides/motor-degradation-signs/">Read full article →</a></article><article class="guide-article"><span class="guide-tag" data-i18n="g10.tag">GUIDE · Race Strategy</span><h3 data-i18n="g10.title">Mini 4WD Track Analysis &amp; Motor Selection by Section Ratio</h3><p class="guide-lead" data-i18n="g10.lead">The same motor can perform wildly differently on different tracks — a high-speed-course winner may struggle to even finish on a 3D course. This article introduces a quantifiable "track section-ratio method": break any Mini 4WD<sup>®</sup> track into straight, curve and special sections, use the ratios to classify it as high-speed, technical or 3D, then match the right motor, gear ratio and wheel diameter.</p><a class="guide-card-link" href="/en/guides/track-analysis-motor-selection/">Read full article →</a></article><article class="guide-article"><span class="guide-tag" data-i18n="g11.tag">GUIDE · Race Strategy</span><h3 data-i18n="g11.title">Why Mini 4WD Cars Crash: The Speed / Geometry / Stability Trigger Model</h3><p class="guide-lead" data-i18n="g11.lead">Crashes (course-outs) in racing are often dismissed as "bad luck," but they are predictable — the result of speed, track geometry and vehicle stability triggers stacking past a critical threshold. This article breaks crashes into the Speed / Geometry / Stability triggers, gives an on-site method to quickly count risk, and maps setup fixes to each risk level.</p><a class="guide-card-link" href="/en/guides/crash-risk-trigger-model/">Read full article →</a></article><article class="guide-article"><span class="guide-tag" data-i18n="g12.tag">METHODOLOGY · Motor Selection</span><h3 data-i18n="g12.title">Select Before Break-in: Read a Motor's Constitution by Current</h3><p class="guide-lead" data-i18n="g12.lead">Same batch, same model — yet no two motors are equal. Break-in only improves one thing: the contact between brushes and commutator. Iron core, magnetic circuit, rotor balance — those are born, not made, and no amount of running-in fixes them. The right move is measure first, break in later: let data pick the specimens worth developing before you spend time and brush life on them.</p><a class="guide-card-link" href="/en/guides/motor-selection-before-break-in/">Read full article →</a></article></div></div></main><footer>
+<body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/en/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/en/">← Back to home</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/en/">Home</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/en/#guides">Guides</a><span class="sep">/</span><span class="current">Select Before Break-in</span></nav><article class="guide-article">
+<span class="guide-tag" data-i18n="g12.tag">METHODOLOGY · Motor Selection</span>
+<h1 data-i18n="g12.title">Select Before Break-in: Read a Motor's Constitution by Current</h1><p class="guide-byline">Edited by MotorLab Team</p>
+<p class="guide-lead" data-i18n="g12.lead">Same batch, same model — yet no two motors are equal. Break-in only improves one thing: the contact between brushes and commutator. Iron core, magnetic circuit, rotor balance — those are born, not made, and no amount of running-in fixes them. The right move is measure first, break in later: let data pick the specimens worth developing before you spend time and brush life on them.</p>
+<h2 data-i18n="g12.h1">Why select first</h2>
+<p data-i18n="g12.p1">Stamping stress on the lamination edges, stack tightness, magnet-to-can concentricity, rotor balance — every one of these manufacturing tolerances turns into loss torque: torque the motor burns just to spin itself, before it ever pushes the car.</p>
+<div class="guide-tip">
+<p data-i18n="g12.tip1">Break-in is an investment; time and brush life are the cost. Spend it on an inherently good specimen and it compounds. Grind away at a high-loss motor and all you get is a smoother mediocre motor.</p>
+</div>
+<h2 data-i18n="g12.h2">Current is the motor's constitution</h2>
+<p data-i18n="g12.p2">Physically, torque is proportional to current: <strong>T = Kt × I</strong>. So at the same operating point, <strong>the motor drawing less current has lower internal losses</strong> — more input power reaches the wheels. That no-load current reading isn't superstition; it's the motor's constitution (loss torque T_loss = Kt × I₀).</p>
+<div class="guide-tip">
+<p data-i18n="g12.ex">Example: locked to the same speed, motor A reads 250mA and motor B reads 320mA → A has lower losses and is worth breaking in; B is born limited and won't catch up no matter how long you run it.</p>
+</div>
+<h2 data-i18n="g12.h3">The key to measuring right: lock the speed, then compare</h2>
+<p data-i18n="g12.p3">Comparing current at a fixed voltage hides a trap: a good motor spins faster, and losses rise with speed (hysteresis ∝ speed, eddy + windage ∝ speed²), so the faster motor's losses inflate and the individual differences get compressed — they look closer than they really are. The right method is to lock every motor to the same speed (feedback control adjusts the voltage to hold your set speed).</p>
+<p data-i18n="g12.p3b">Locking the speed hands you two independent indicators at once: <strong>current</strong> → the <strong>loss torque</strong> at that speed (same baseline, apples to apples); <strong>voltage</strong> (the output needed to hold the speed) → a free read of <strong>Ke (magnetic strength)</strong>, Ke = (V − I·R) / speed. Now you can split two motors' difference into two independent components — magnetic difference and loss difference. You may find two motors with identical no-load current are actually one weak-magnet/low-loss and one strong-magnet/high-loss — completely different characters.</p>
+<h2 data-i18n="g12.h4">Which numbers can be used as direct guidance?</h2>
+<p data-i18n="g12.p4">Not every number is “lower is better.” Physically they fall into three classes; mixing them up kills good motors:</p>
+<p data-i18n="g12.s1"><strong>① One-directional — clear direction, rank directly</strong></p>
+<table class="guide-table">
+<thead><tr><th data-i18n="g12.t.ind">Indicator</th><th data-i18n="g12.t.dir">Direction</th><th data-i18n="g12.t.why">Physical reason</th></tr></thead>
+<tbody>
+<tr><td data-i18n="g12.d1.n">Loss torque T_loss (same speed)</td><td data-i18n="g12.d1.d">lower is better</td><td data-i18n="g12.d1.w">pure waste, never reaches the wheels</td></tr>
+<tr><td data-i18n="g12.d2.n">Winding resistance R</td><td data-i18n="g12.d2.d">lower is better</td><td data-i18n="g12.d2.w">copper loss I²R, no compensating upside</td></tr>
+<tr><td data-i18n="g12.d3.n">Mechanical friction</td><td data-i18n="g12.d3.d">lower is better</td><td data-i18n="g12.d3.w">deducts across the whole speed range</td></tr>
+<tr><td data-i18n="g12.d4.n">High-speed loss (eddy term)</td><td data-i18n="g12.d4.d">lower is better</td><td data-i18n="g12.d4.w">amplified by the square at high speed</td></tr>
+<tr><td data-i18n="g12.d5.n">Thermal drift (current rise over a long run)</td><td data-i18n="g12.d5.d">lower is better</td><td data-i18n="g12.d5.w">shows its face late in a race</td></tr>
+<tr><td data-i18n="g12.d6.n">Current ripple</td><td data-i18n="g12.d6.d">lower is better</td><td data-i18n="g12.d6.w">balance + commutation quality, also a wear omen</td></tr>
+<tr><td data-i18n="g12.d7.n">Motor constant Km = Kt/√R</td><td data-i18n="g12.d7.d">higher is better</td><td data-i18n="g12.d7.w">torque per watt of copper loss; a figure of merit independent of operating point</td></tr>
+</tbody>
+</table>
+<p data-i18n="g12.p4main">For the main indicators, watch <strong>T_loss (loss constitution)</strong> and <strong>Km (electromagnetic quality)</strong> — together they cover almost all of “is this motor well made.”</p>
+<p data-i18n="g12.trade"><strong>② Trade-off type — no good or bad, only fit</strong>: <strong>Ke (magnetic strength)</strong> high → lower top speed but less current; low → higher top speed but hungry for current and sensitive to battery internal resistance. It's an extension of gearing: decide a target Ke from the track and gear ratio first, then pick specimens near it. Two motors 5% apart in Ke aren't better/worse — they suit different track setups.</p>
+<p data-i18n="g12.consist"><strong>③ Consistency — it's about stability, not the value</strong>: re-measure the same motor after removing and refitting it; poor repeatability means the brush seat or axial clearance is uncertain — such a motor is unreliable however pretty its average looks, and it's a wildcard on race day.</p>
+<h2 data-i18n="g12.h5">A selection workflow and one common trap</h2>
+<p data-i18n="g12.flow">An executable selection logic: <strong>① first use consistency to screen out “unmeasurable” motors</strong> (poor repeatability is out) → <strong>② group by Ke</strong> (not rank) → <strong>③ rank within each group by one-directional indicators</strong> (T_loss primary, Km and ripple secondary).</p>
+<div class="guide-tip">
+<p data-i18n="g12.pit"><strong>⚠️ The I₀ trap</strong>: “lower no-load current is better” only holds <strong>within the same Ke group</strong>. Since I₀ = T_loss / Kt, a high-Ke motor can read lower I₀ even with larger losses. Comparing I₀ across the whole batch systematically favors high-Ke units — and high Ke is exactly a disadvantage where you need top speed. So always group first, then rank.</p>
+</div>
+<p data-i18n="g12.related">Further reading: the overall measure / compare / judge-health framework is in <a href="../motor-analysis-methodology/">the three-pillar methodology for motor analysis</a>; how to break in once you've picked a good motor is in <a href="../motor-break-in-guide/">the complete motor break-in guide</a>; deciding a target Ke by track is in <a href="../track-analysis-motor-selection/">track analysis &amp; motor selection</a>.</p>
+<div class="guide-warning">
+<p data-i18n="g12.w1">Relative comparison (ranking within one batch) is very robust; but the <strong>absolute</strong> torque converted from Kt depends on the accuracy of R, and brush contact resistance varies with current and speed — the largest source of systematic error. Everyday selection ranking is unaffected — only when matching against a datasheet or simulation do you need further calibration.</p>
+</div>
+</article><div class="guide-pagination"><div class="left"><a href="/en/guides/crash-risk-trigger-model/"><span class="label">← Previous</span><span>Crash Risk Trigger Model</span></a></div><div class="center"><a href="https://motorlab-tw.github.io/en/#guides"><span class="label">︿</span><span>Back to guides</span></a></div><div class="right"><span class="label">Next →</span><span class="disabled">—</span></div></div></div></main><footer>
 <div class="container">
-<div class="footer-trademark" data-i18n="footer.trademark">
-      "Mini 4WD"<sup>®</sup> 與 "ミニ四駆"<sup>®</sup> 為株式会社タミヤ（TAMIYA, INC.）的註冊商標（日本商標登錄號 第 2168392 號）。MotorLab 為獨立工作室，與株式会社タミヤ無任何關聯，亦未受其授權、贊助或背書。本網站提及之相關名稱僅用於指涉產品適用範圍，所有商標權益歸原權利人所有。
-    </div>
+<div class="footer-trademark" data-i18n="footer.trademark">"Mini 4WD"<sup>®</sup> and "ミニ四駆"<sup>®</sup> are registered trademarks of TAMIYA, INC. (Japan Trademark Registration No. 2168392). MotorLab is an independent studio and has no affiliation with, authorization from, sponsorship by, or endorsement from TAMIYA, INC. References to these names on this site are made solely to indicate product compatibility. All trademark rights belong to their respective owners.</div>
 <div class="footer-inner">
 <div>
 <strong>MotorLab.tw</strong> · <span data-i18n="footer.tagline">Mini 4WD Performance Lab</span>
 </div>
 <div class="mono">
-        © 2026 MotorLab · <span data-i18n="footer.firmware">韌體</span> v3.2.26
+        © 2026 MotorLab · <span data-i18n="footer.firmware">Firmware</span> v3.2.26
       </div>
 </div>
 </div>

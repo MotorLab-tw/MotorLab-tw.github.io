@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" translate="no">
+<html lang="zh-TW" translate="no">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="en" http-equiv="Content-Language"/>
-<title>Mini 4WD® Motor Analysis Methodology | MotorLab</title>
-<meta content="Advanced Mini 4WD analysis methodology and race strategy: prep techniques, a three-pillar framework, degradation signs and crash prevention." name="description"/>
+<meta content="zh-TW" http-equiv="Content-Language"/>
+<title>先選別,後磨合:用電流讀出馬達體質 | MotorLab</title>
+<meta content="同一批、同型號的馬達,體質天生不同。磨合只能改善電刷與整流子的接觸面,鐵芯、磁路、動平衡的先天差異磨不掉。本文教你先量測、後磨合:用無載電流當損耗轉矩指標,先挑出體質好的個體,再把時間與碳刷壽命投資在值得的馬達上。" name="description"/>
 <meta content="MotorLab.tw" name="author"/>
-<meta content="Mini 4WD motor analysis methodology, motor tuning methodology, racing strategy, motor health fingerprint, RPM analysis" name="keywords"/>
+<meta content="馬達選別, 選馬達, 磨馬達, 馬達磨合, 損耗轉矩, 無載電流, 馬達體質, 馬達挑選, Kt 轉矩常數, Km 馬達常數, Ke, MotorLab, motor selection, motor grading, Mini 4WD motor, no-load current, loss torque, torque constant Kt, motor constant Km, Ke, measure before break-in, MotorLab" name="keywords"/>
 <!-- 正規網址 (避免重複內容問題) -->
-<link href="https://motorlab-tw.github.io/en/methodology/" rel="canonical"/>
+<link href="https://motorlab-tw.github.io/guides/motor-selection-before-break-in/" rel="canonical"/>
 <!-- 搜尋引擎指示 -->
 <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
 <meta content="index, follow" name="googlebot"/>
@@ -30,23 +30,23 @@
 <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
 <meta content="MotorLab" name="apple-mobile-web-app-title"/>
 <!-- Open Graph (Facebook, LINE, Discord) -->
-<meta content="website" property="og:type"/>
-<meta content="https://motorlab-tw.github.io/en/methodology/" property="og:url"/>
-<meta content="Mini 4WD® Motor Analysis Methodology | MotorLab" property="og:title"/>
-<meta content="Advanced Mini 4WD analysis methodology and race strategy: prep techniques, a three-pillar framework, degradation signs and crash prevention." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://motorlab-tw.github.io/guides/motor-selection-before-break-in/" property="og:url"/>
+<meta content="先選別,後磨合:用電流讀出馬達體質 | MotorLab" property="og:title"/>
+<meta content="同一批、同型號的馬達,體質天生不同。磨合只能改善電刷與整流子的接觸面,鐵芯、磁路、動平衡的先天差異磨不掉。本文教你先量測、後磨合:用無載電流當損耗轉矩指標,先挑出體質好的個體,再把時間與碳刷壽命投資在值得的馬達上。" property="og:description"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" property="og:image"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" property="og:image:secure_url"/>
 <meta content="image/png" property="og:image:type"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
 <meta content="MotorLab — Mini 4WD® 馬達精密測試系統官方網站預覽圖" property="og:image:alt"/>
-<meta content="en_US" property="og:locale"/>
+<meta content="zh_TW" property="og:locale"/>
 <meta content="en_US" property="og:locale:alternate"/>
 <meta content="MotorLab.tw" property="og:site_name"/>
 <!-- Twitter Card -->
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Mini 4WD® Motor Analysis Methodology | MotorLab" name="twitter:title"/>
-<meta content="Advanced Mini 4WD analysis methodology and race strategy: prep techniques, a three-pillar framework, degradation signs and crash prevention." name="twitter:description"/>
+<meta content="先選別,後磨合:用電流讀出馬達體質 | MotorLab" name="twitter:title"/>
+<meta content="同一批、同型號的馬達,體質天生不同。磨合只能改善電刷與整流子的接觸面,鐵芯、磁路、動平衡的先天差異磨不掉。本文教你先量測、後磨合:用無載電流當損耗轉矩指標,先挑出體質好的個體,再把時間與碳刷壽命投資在值得的馬達上。" name="twitter:description"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" name="twitter:image"/>
 <meta content="MotorLab 官方網站預覽圖" name="twitter:image:alt"/>
 <!-- 結構化資料 1: Organization (公司/工作室) -->
@@ -1815,66 +1815,34 @@
     .manual-table { display: block; overflow-x: auto; white-space: nowrap; }
   }
 </style>
-<link href="https://motorlab-tw.github.io/methodology/" hreflang="zh-TW" rel="alternate"/><link href="https://motorlab-tw.github.io/en/methodology/" hreflang="en" rel="alternate"/><link href="https://motorlab-tw.github.io/ja/methodology/" hreflang="ja" rel="alternate"/><link href="https://motorlab-tw.github.io/methodology/" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
+<link href="https://motorlab-tw.github.io/guides/motor-selection-before-break-in/" hreflang="zh-TW" rel="alternate"/><link href="https://motorlab-tw.github.io/en/guides/motor-selection-before-break-in/" hreflang="en" rel="alternate"/><link href="https://motorlab-tw.github.io/ja/guides/motor-selection-before-break-in/" hreflang="ja" rel="alternate"/><link href="https://motorlab-tw.github.io/guides/motor-selection-before-break-in/" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
   "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "Mini 4WD® Motor Analysis Methodology | MotorLab",
-  "description": "Advanced Mini 4WD analysis methodology and race strategy: prep techniques, a three-pillar framework, degradation signs and crash prevention.",
-  "inLanguage": "en",
-  "url": "https://motorlab-tw.github.io/en/methodology/",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "MotorLab.tw",
+  "@type": "Article",
+  "headline": "先選別,後磨合:用電流讀出馬達體質",
+  "description": "同一批、同型號的馬達,體質天生不同。磨合只能改善電刷與整流子的接觸面,鐵芯、磁路、動平衡的先天差異磨不掉。本文教你先量測、後磨合:用無載電流當損耗轉矩指標,先挑出體質好的個體,再把時間與碳刷壽命投資在值得的馬達上。",
+  "keywords": "馬達選別, 選馬達, 磨馬達, 馬達磨合, 損耗轉矩, 無載電流, 馬達體質, 馬達挑選, Kt 轉矩常數, Km 馬達常數, Ke, MotorLab",
+  "inLanguage": "zh-TW",
+  "url": "https://motorlab-tw.github.io/guides/motor-selection-before-break-in/",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://motorlab-tw.github.io/guides/motor-selection-before-break-in/"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "MotorLab Team",
     "url": "https://motorlab-tw.github.io/"
   },
-  "mainEntity": {
-    "@type": "ItemList",
-    "numberOfItems": 7,
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "url": "https://motorlab-tw.github.io/en/guides/racing-motor-break-in/",
-        "name": "Why Break-in Decides Mini 4WD Race Outcomes: The Competitive Edge Most Racers Miss"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "url": "https://motorlab-tw.github.io/en/guides/racing-prep-techniques/",
-        "name": "Advanced Mini 4WD Racing: 5 Prep Details Winners Quietly Do (But Don't Write About)"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "url": "https://motorlab-tw.github.io/en/guides/motor-analysis-methodology/",
-        "name": "From Feel to Data: A Three-Pillar Methodology for Motor Analysis"
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "url": "https://motorlab-tw.github.io/en/guides/motor-degradation-signs/",
-        "name": "8 Signs Your Mini 4WD Motor Is Dying — When to Wash vs Retire"
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "url": "https://motorlab-tw.github.io/en/guides/track-analysis-motor-selection/",
-        "name": "Mini 4WD Track Analysis & Motor Selection by Section Ratio"
-      },
-      {
-        "@type": "ListItem",
-        "position": 6,
-        "url": "https://motorlab-tw.github.io/en/guides/crash-risk-trigger-model/",
-        "name": "Why Mini 4WD Cars Crash: The Speed / Geometry / Stability Trigger Model"
-      },
-      {
-        "@type": "ListItem",
-        "position": 7,
-        "url": "https://motorlab-tw.github.io/en/guides/motor-selection-before-break-in/",
-        "name": "Select Motors Before Break-in: Read a Motor's Constitution by Current"
-      }
-    ]
-  }
+  "publisher": {
+    "@type": "Organization",
+    "name": "MotorLab.tw",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://motorlab-tw.github.io/favicon-192.png",
+      "width": 192,
+      "height": 192
+    }
+  },
+  "image": "https://motorlab-tw.github.io/og-image.png"
 }</script><script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -1882,28 +1850,70 @@
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "Home",
-      "item": "https://motorlab-tw.github.io/en/"
+      "name": "首頁",
+      "item": "https://motorlab-tw.github.io/"
     },
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Knowledge Base",
-      "item": "https://motorlab-tw.github.io/en/#guides"
+      "name": "教學",
+      "item": "https://motorlab-tw.github.io/#guides"
     },
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Methodology",
-      "item": "https://motorlab-tw.github.io/en/methodology/"
+      "name": "馬達選別",
+      "item": "https://motorlab-tw.github.io/guides/motor-selection-before-break-in/"
     }
   ]
 }</script></head>
-<body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/en/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/en/">← Back to home</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/en/">Home</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/en/#guides">Knowledge Base</a><span class="sep">/</span><span class="current">Methodology</span></nav><div class="hub-header"><h1>Methodology</h1><p class="hub-lead">Advanced analysis methodology and competitive strategy — moving motor tuning from feel-based to data-driven, from individual tips to systematic frameworks.</p></div><div class="guides-grid"><article class="guide-article"><span class="guide-tag" data-i18n="g5.tag">GUIDE · Race Context</span><h3 data-i18n="g5.title">Why Break-in Decides Mini 4WD Race Outcomes: The Competitive Edge Most Racers Miss</h3><p class="guide-lead" data-i18n="g5.lead">Mini 4WD races are won in fractions of a second. In that micro-margin world, motor break-in — a step most racers underestimate — is often the difference between a podium and an early exit. This article approaches break-in from a competitive racing angle: why amateur methods fail when the stakes are real, and how serious racers actually treat motor preparation.</p><a class="guide-card-link" href="/en/guides/racing-motor-break-in/">Read full article →</a></article><article class="guide-article"><span class="guide-tag" data-i18n="g6.tag">GUIDE · Advanced Prep</span><h3 data-i18n="g6.title">Advanced Mini 4WD Racing: 5 Prep Details Winners Quietly Do (But Don't Write About)</h3><p class="guide-lead" data-i18n="g6.lead">There are plenty of break-in guides and tuning articles online. But the people who consistently podium do things that rarely show up in those guides. This article covers 5 prep practices actually used by competitive Mini 4WD racers — observed at JCO and other major events. No theory, just verifiable race-day specifics.</p><a class="guide-card-link" href="/en/guides/racing-prep-techniques/">Read full article →</a></article><article class="guide-article"><span class="guide-tag" data-i18n="g7.tag">GUIDE · Methodology</span><h3 data-i18n="g7.title">From Feel to Data: A Three-Pillar Methodology for Motor Analysis</h3><p class="guide-lead" data-i18n="g7.lead">Most racers rely on experience — "feels good," "sounds right." The problem with experience is that it can't be transferred, reproduced, or verified. This article introduces a three-step methodology that turns motor analysis from "feel" into systems engineering: <strong>measurement, comparison, health assessment</strong>. It's the conceptual framework behind MotorLab's entire analysis system.</p><a class="guide-card-link" href="/en/guides/motor-analysis-methodology/">Read full article →</a></article><article class="guide-article"><span class="guide-tag" data-i18n="g8.tag">GUIDE · Diagnostics</span><h3 data-i18n="g8.title">8 Signs Your Mini 4WD Motor Is Dying — When to Wash vs Retire</h3><p class="guide-lead" data-i18n="g8.lead">A broken-in motor doesn't stay at peak forever. From around the 5th race onward, degradation begins — but most racers wait until the motor is obviously dead before noticing. This article covers 8 degradation signs plus retirement thresholds, so you can make the right call (wash, retire, or keep using) before a motor truly fails on race day.</p><a class="guide-card-link" href="/en/guides/motor-degradation-signs/">Read full article →</a></article><article class="guide-article"><span class="guide-tag" data-i18n="g10.tag">GUIDE · Race Strategy</span><h3 data-i18n="g10.title">Mini 4WD Track Analysis &amp; Motor Selection by Section Ratio</h3><p class="guide-lead" data-i18n="g10.lead">The same motor can perform wildly differently on different tracks — a high-speed-course winner may struggle to even finish on a 3D course. This article introduces a quantifiable "track section-ratio method": break any Mini 4WD<sup>®</sup> track into straight, curve and special sections, use the ratios to classify it as high-speed, technical or 3D, then match the right motor, gear ratio and wheel diameter.</p><a class="guide-card-link" href="/en/guides/track-analysis-motor-selection/">Read full article →</a></article><article class="guide-article"><span class="guide-tag" data-i18n="g11.tag">GUIDE · Race Strategy</span><h3 data-i18n="g11.title">Why Mini 4WD Cars Crash: The Speed / Geometry / Stability Trigger Model</h3><p class="guide-lead" data-i18n="g11.lead">Crashes (course-outs) in racing are often dismissed as "bad luck," but they are predictable — the result of speed, track geometry and vehicle stability triggers stacking past a critical threshold. This article breaks crashes into the Speed / Geometry / Stability triggers, gives an on-site method to quickly count risk, and maps setup fixes to each risk level.</p><a class="guide-card-link" href="/en/guides/crash-risk-trigger-model/">Read full article →</a></article><article class="guide-article"><span class="guide-tag" data-i18n="g12.tag">METHODOLOGY · Motor Selection</span><h3 data-i18n="g12.title">Select Before Break-in: Read a Motor's Constitution by Current</h3><p class="guide-lead" data-i18n="g12.lead">Same batch, same model — yet no two motors are equal. Break-in only improves one thing: the contact between brushes and commutator. Iron core, magnetic circuit, rotor balance — those are born, not made, and no amount of running-in fixes them. The right move is measure first, break in later: let data pick the specimens worth developing before you spend time and brush life on them.</p><a class="guide-card-link" href="/en/guides/motor-selection-before-break-in/">Read full article →</a></article></div></div></main><footer>
+<body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/">← 回首頁</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/">首頁</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/#guides">教學</a><span class="sep">/</span><span class="current">馬達選別</span></nav><article class="guide-article">
+<span class="guide-tag" data-i18n="g12.tag">METHODOLOGY · 馬達選別</span>
+<h1 data-i18n="g12.title">先選別，後磨合：用電流讀出馬達體質</h1><p class="guide-byline">編輯者:MotorLab Team</p>
+<p class="guide-lead" data-i18n="g12.lead">同一批、同型號的馬達，體質天生不一樣。磨合能改善的只有電刷與整流子的接觸面 —— 鐵芯、磁路、動平衡這些先天差異，磨多久都不會變好。真正的做法是「先量測、後磨合」：讓數據先挑出值得培養的個體，再把時間與碳刷壽命投資下去。</p>
+<h2 data-i18n="g12.h1">為什麼要先選別</h2>
+<p data-i18n="g12.p1">矽鋼片沖壓的邊緣應力、疊片鬆緊、磁鐵與外殼同心度、轉子動平衡 —— 每一項製造公差，最後都變成「損耗轉矩」：馬達還沒推車，就先吃掉一部分自己的力量。</p>
+<div class="guide-tip">
+<p data-i18n="g12.tip1">磨合是投資，時間與碳刷壽命都是成本。投在體質本來就好的個體上才有複利；對著先天損耗大的馬達磨，只是把普通馬達磨成一顆「順的普通馬達」。</p>
+</div>
+<h2 data-i18n="g12.h2">電流，就是馬達的體質</h2>
+<p data-i18n="g12.p2">物理上轉矩與電流成正比：<strong>T = Kt × I</strong>。所以在相同工作點下，<strong>電流越低的馬達內部損耗越小</strong> —— 它把更多輸入功率留給輪子。無載電流讀到的不是玄學，而是這顆馬達的體質（損耗轉矩 T_loss = Kt × I₀）。</p>
+<div class="guide-tip">
+<p data-i18n="g12.ex">例：鎖在同一轉速下，馬達 A 讀 250mA、馬達 B 讀 320mA → A 損耗小、值得磨合；B 先天受限，磨再久也追不上。</p>
+</div>
+<h2 data-i18n="g12.h3">量得準的關鍵：鎖轉速再比</h2>
+<p data-i18n="g12.p3">直接用固定電壓比電流有個陷阱：體質好的馬達轉得快，而損耗又隨轉速上升（磁滯 ∝ 轉速、渦流與風阻 ∝ 轉速²），快轉的損耗被放大，反而把個體差異壓縮、看起來比實際接近。正確做法是把所有馬達鎖在同一轉速下比（用回授控制自動調整電壓維持設定轉速）。</p>
+<p data-i18n="g12.p3b">鎖轉速後一次拿到兩個獨立指標：<strong>電流</strong> → 對應該轉速的<strong>損耗轉矩</strong>（同基準、apples to apples）；<strong>電壓</strong>（維持轉速所需的輸出）→ 免費算出 <strong>Ke（磁路強度）</strong>，Ke ＝（V − I·R）／ 轉速。於是能把兩顆馬達的差異拆成「磁路差」與「損耗差」兩個獨立成分 —— 你可能發現兩顆無載電流一樣的馬達，其實一顆磁弱損耗小、一顆磁強損耗大，特性完全不同。</p>
+<h2 data-i18n="g12.h4">哪些數值可以直接參考？</h2>
+<p data-i18n="g12.p4">不是每個數值都「越低越好」。物理上分三類，搞錯會誤殺好馬達：</p>
+<p data-i18n="g12.s1"><strong>① 單向指標 —— 方向明確，可直接排名</strong></p>
+<table class="guide-table">
+<thead><tr><th data-i18n="g12.t.ind">指標</th><th data-i18n="g12.t.dir">方向</th><th data-i18n="g12.t.why">物理理由</th></tr></thead>
+<tbody>
+<tr><td data-i18n="g12.d1.n">損耗轉矩 T_loss（同轉速）</td><td data-i18n="g12.d1.d">越低越好</td><td data-i18n="g12.d1.w">純浪費，永遠到不了輪子</td></tr>
+<tr><td data-i18n="g12.d2.n">繞組電阻 R</td><td data-i18n="g12.d2.d">越低越好</td><td data-i18n="g12.d2.w">銅損 I²R，無任何補償好處</td></tr>
+<tr><td data-i18n="g12.d3.n">機械摩擦</td><td data-i18n="g12.d3.d">越低越好</td><td data-i18n="g12.d3.w">全轉速域都在扣分</td></tr>
+<tr><td data-i18n="g12.d4.n">高轉損耗（渦流項）</td><td data-i18n="g12.d4.d">越低越好</td><td data-i18n="g12.d4.w">高速時以平方放大</td></tr>
+<tr><td data-i18n="g12.d5.n">熱漂移（跑久電流上升幅度）</td><td data-i18n="g12.d5.d">越低越好</td><td data-i18n="g12.d5.w">比賽後段見真章</td></tr>
+<tr><td data-i18n="g12.d6.n">電流漣波</td><td data-i18n="g12.d6.d">越低越好</td><td data-i18n="g12.d6.w">動平衡與整流品質，也是磨損預兆</td></tr>
+<tr><td data-i18n="g12.d7.n">馬達常數 Km = Kt/√R</td><td data-i18n="g12.d7.d">越高越好</td><td data-i18n="g12.d7.w">每瓦銅損換得的轉矩，不依賴工作點的品質因數</td></tr>
+</tbody>
+</table>
+<p data-i18n="g12.p4main">主指標建議看 <strong>T_loss（損耗體質）</strong> 與 <strong>Km（電磁品質）</strong>，兩者合起來幾乎涵蓋「這顆馬達做得好不好」。</p>
+<p data-i18n="g12.trade"><strong>② 交換型 —— 沒有好壞，只有適不適合</strong>：<strong>Ke（磁路強度）</strong>高 → 極速低但省電流；低 → 極速高但吃電流、對電池內阻敏感。它是「齒比的延伸」，要依賽道與齒比先定目標 Ke，再挑落在附近的個體。兩顆 Ke 差 5% 不是一好一壞，而是適合不同賽道配置。</p>
+<p data-i18n="g12.consist"><strong>③ 一致性 —— 看穩不穩，不是看數值</strong>：同一顆馬達拆裝重測，若讀值重現性差，代表碳刷座或軸向間隙不確定 —— 這種馬達平均值再漂亮也不可靠，比賽時是變數。</p>
+<h2 data-i18n="g12.h5">選別流程與一個常見陷阱</h2>
+<p data-i18n="g12.flow">可執行的選別邏輯：<strong>① 先用一致性篩掉「量不準」的馬達</strong>（重現性差直接出局）→ <strong>② 按 Ke 分群</strong>（不是排名）→ <strong>③ 同群內用單向指標排名</strong>（T_loss 為主，Km 與漣波為輔）。</p>
+<div class="guide-tip">
+<p data-i18n="g12.pit"><strong>⚠️ I₀ 陷阱</strong>：「無載電流越低越好」只在<strong>同 Ke 群內</strong>成立。因為 I₀ = T_loss / Kt，一顆 Ke 高的馬達即使損耗較大，I₀ 也可能較低。直接拿整批比 I₀ 會系統性偏袒高 Ke 個體，而高 Ke 在需要極速時恰恰是劣勢。所以務必先分群、再排名。</p>
+</div>
+<p data-i18n="g12.related">延伸閱讀：量測、比較、健康判斷的整體框架見 <a href="../motor-analysis-methodology/">馬達分析的三支柱方法論</a>；選出好馬達後如何磨，見 <a href="../motor-break-in-guide/">馬達磨合完整指南</a>；依賽道決定目標 Ke，見 <a href="../track-analysis-motor-selection/">軌道分析與馬達選型</a>。</p>
+<div class="guide-warning">
+<p data-i18n="g12.w1">相對比較（同批排名）非常穩健；但由 Kt 換算的轉矩<strong>絕對值</strong>，精度取決於 R 的量測，而碳刷接觸電阻會隨電流與轉速變動，是最大的系統誤差來源。日常選別排名不受影響 —— 只有要對規格書或模擬比對時，才需要進一步校正。</p>
+</div>
+</article><div class="guide-pagination"><div class="left"><a href="/guides/crash-risk-trigger-model/"><span class="label">← 上一篇</span><span>飛車風險判定模型</span></a></div><div class="center"><a href="https://motorlab-tw.github.io/#guides"><span class="label">︿</span><span>回教學首頁</span></a></div><div class="right"><span class="label">下一篇 →</span><span class="disabled">—</span></div></div></div></main><footer>
 <div class="container">
-<div class="footer-trademark" data-i18n="footer.trademark">
-      "Mini 4WD"<sup>®</sup> 與 "ミニ四駆"<sup>®</sup> 為株式会社タミヤ（TAMIYA, INC.）的註冊商標（日本商標登錄號 第 2168392 號）。MotorLab 為獨立工作室，與株式会社タミヤ無任何關聯，亦未受其授權、贊助或背書。本網站提及之相關名稱僅用於指涉產品適用範圍，所有商標權益歸原權利人所有。
-    </div>
+<div class="footer-trademark" data-i18n="footer.trademark">"Mini 4WD"<sup>®</sup> 與 "ミニ四駆"<sup>®</sup> 為株式会社タミヤ(TAMIYA, INC.)的註冊商標(日本商標登錄號 第 2168392 號)。MotorLab 為獨立工作室,與株式会社タミヤ無任何關聯,亦未受其授權、贊助或背書。本網站提及之相關名稱僅用於指涉產品適用範圍,所有商標權益歸原權利人所有。</div>
 <div class="footer-inner">
 <div>
 <strong>MotorLab.tw</strong> · <span data-i18n="footer.tagline">Mini 4WD Performance Lab</span>
