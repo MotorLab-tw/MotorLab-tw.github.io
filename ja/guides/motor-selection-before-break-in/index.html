@@ -814,6 +814,17 @@
     line-height: 1.8;
     margin: 10px 0;
   }
+  .guide-article figure {
+    margin: 22px 0;
+    text-align: center;
+  }
+  .guide-article figure img {
+    max-width: 100%;
+    width: 460px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+  }
   .guide-article ul {
     margin: 10px 0 10px 4px;
     padding-left: 22px;
@@ -1871,6 +1882,7 @@
 <span class="guide-tag" data-i18n="g12.tag">METHODOLOGY · モーター選別</span>
 <h1 data-i18n="g12.title">選別してから慣らす：電流でモーターの素性を読む</h1><p class="guide-byline">編集者:MotorLab Team</p>
 <p class="guide-lead" data-i18n="g12.lead">同じロット、同じ型番でも、モーターの素性は生まれつき違う。慣らしで改善できるのはブラシと整流子の接触面だけ —— 鉄芯、磁路、ローターバランスなどの先天的な差は、どれだけ慣らしても良くならない。正しいやり方は「先に測る、後で慣らす」：データに育てる価値のある個体を先に選ばせ、時間とブラシ寿命をそこに投資する。</p>
+<figure data-i18n="g12.fig1"><img alt="先に測って後で慣らす：慣らしで直るのは接触面だけ、鉄芯と磁路は先天" height="1080" loading="lazy" src="/images/guides/ig_01_measure_first_ja.png" width="1080"/></figure>
 <h2 data-i18n="g12.h1">なぜ先に選別するのか</h2>
 <p data-i18n="g12.p1">電磁鋼板の打ち抜き縁の残留応力、積層の締まり具合、磁石とケースの同心度、ローターバランス —— これらの製造公差はすべて「損失トルク」になる：マシンが車を押す前に、自分の力を一部食ってしまう。</p>
 <div class="guide-tip">
@@ -1881,6 +1893,7 @@
 <div class="guide-tip">
 <p data-i18n="g12.ex">例：同じ回転数にロックした状態で、モーター A は 250mA、モーター B は 320mA → A は損失が小さく慣らす価値あり；B は先天的に限界があり、いくら慣らしても追いつけない。</p>
 </div>
+<figure data-i18n="g12.fig2"><img alt="同じ回転数で電流が少ないほど損失が小さい——電流こそモーターの素性" height="1080" loading="lazy" src="/images/guides/ig_02_current_comparison_ja.png" width="1080"/></figure>
 <h2 data-i18n="g12.h3">正確に測る鍵：回転数をロックしてから比べる</h2>
 <p data-i18n="g12.p3">固定電圧で電流を比べるには落とし穴がある：素性の良いモーターは速く回り、損失は回転数と共に増える（ヒステリシス ∝ 回転数、渦電流と風損 ∝ 回転数²）。速く回るモーターの損失が拡大され、個体差が圧縮されて実際より近く見える。正しいやり方はすべてのモーターを同じ回転数にロックして比べること（フィードバック制御で電圧を自動調整し設定回転数を維持）。</p>
 <p data-i18n="g12.p3b">回転数をロックすると一度に 2 つの独立指標が得られる：<strong>電流</strong> → その回転数の<strong>損失トルク</strong>（同基準、apples to apples）；<strong>電圧</strong>（回転数維持に必要な出力）→ 無料で <strong>Ke（磁路強度）</strong> を算出、Ke = (V − I·R) / 回転数。これで 2 つのモーターの差を「磁路差」と「損失差」の 2 つの独立成分に分解できる —— 無負荷電流が同じ 2 つのモーターが、実は一方は磁弱・低損失、他方は磁強・高損失で、特性が全く違うと分かる。</p>
