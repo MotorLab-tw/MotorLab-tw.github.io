@@ -447,7 +447,7 @@ GUIDES = [
     },
     # ---------- g9:田宮全 15 款馬達規格對照(/benchmarks/ 首篇,D23 分類)----------
     {
-        "slug": "tamiya-motor-full-lineup",
+        "slug": "tamiya-mini-4wd-motor-specs-list",
         "key": "g9",
         "type": "benchmarks",
         "i18n": {
