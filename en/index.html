@@ -2436,6 +2436,41 @@
 <p data-i18n="t6.desc">Captures the instrument noise baseline before measurement, then subtracts its variance from subsequent signals. Isolates true motor signal variations so even subtle anomalies cannot hide.</p>
 </div>
 <div class="tech-card">
+<div class="tech-name">SPEED_LOCK</div>
+<h4 data-i18n="t10.title">Adaptive Closed-Loop Speed Lock</h4>
+<p data-i18n="t10.desc">A closed loop pins the motor to a commanded RPM within ±0.5%, so every motor is measured at an identical operating point — removing the "different speed → incomparable data" confound. The control parameters self-tune and adapt across speeds.</p>
+</div>
+<div class="tech-card">
+<div class="tech-name">PARAM_EXTRACT</div>
+<h4 data-i18n="t11.title">Motor Constant Extraction (Ke / Km / R)</h4>
+<p data-i18n="t11.desc">Derives the motor's magnetic strength (Ke), motor constant (Km) and internal resistance from a multi-point constant-speed sweep — the kind of physical parameters a professional dynamometer reports, as objective reference data for grading motors (no scoring or ranking).</p>
+</div>
+<div class="tech-card">
+<div class="tech-name">RECIPROCAL_RPM</div>
+<h4 data-i18n="t12.title">High-Resolution Reciprocal Timing</h4>
+<p data-i18n="t12.desc">Reciprocal period timing replaces fixed-window counting, improving RPM resolution over 600× to a single-digit-RPM floor at any speed. The flickering last digits reflect the motor's real speed fluctuation, not measurement noise.</p>
+</div>
+<div class="tech-card">
+<div class="tech-name">RPM_CALIBRATION</div>
+<h4 data-i18n="t13.title">Swept-Frequency Tachometer Calibration</h4>
+<p data-i18n="t13.desc">Each unit's optical speed sensor is individually calibrated against an internal frequency reference across 20 points (100–50,000 RPM), with a linear fit of R²=0.9999 — so RPM readings are traceable and consistent unit to unit.</p>
+</div>
+<div class="tech-card">
+<div class="tech-name">DC_CURRENT_CAL</div>
+<h4 data-i18n="t14.title">DC Median Current Calibration</h4>
+<p data-i18n="t14.desc">Current sensing is calibrated per unit using clean DC (not PWM) against a precision resistor, taking the median of repeated measurements to reject turn-on transients — tightening the raw +3–10% sensor error to about 0.1% dispersion.</p>
+</div>
+<div class="tech-card">
+<div class="tech-name">EFF_VOLTAGE</div>
+<h4 data-i18n="t15.title">Load-Compensated Effective Voltage</h4>
+<p data-i18n="t15.desc">The hardware can only meter the supply, so the system compensates drive-stage drop and supply sag in real time to compute the voltage the motor terminals actually see — "set 3V" means the motor really gets 3V, with supply and motor voltage shown side by side.</p>
+</div>
+<div class="tech-card">
+<div class="tech-name">LOSS_DECOMP</div>
+<h4 data-i18n="t16.title">Loss-Torque Decomposition</h4>
+<p data-i18n="t16.desc">Instead of a single "friction" number, least-squares fitting separates loss torque into three physical components — Coulomb friction, hysteresis, and eddy + windage — and an R² threshold automatically rejects untrustworthy measurements.</p>
+</div>
+<div class="tech-card">
 <div class="tech-name">EMI_SHIELDING</div>
 <h4 data-i18n="t7.title">EMI Shielding Circuit Design</h4>
 <p data-i18n="t7.desc">Power and sensor signal lines use anti-EMI design to effectively suppress high-frequency noise from the motor, preventing contamination of sensor readings or MCU logic misfires.</p>
@@ -2870,6 +2905,20 @@
       't8.desc': '即時電流監測瞬間超過安全閾值時 < 100 ms 內立即斷電,保護系統及昂貴的競賽馬達。',
       't9.title': 'Watchdog 自動復原',
       't9.desc': '即使遇到極端 EMI 雜訊導致 MCU 異常,內建 Watchdog 會在數秒內重啟系統,重啟前所有電力輸出皆強制切斷。',
+      't10.title': '自適應閉環定速控制',
+      't10.desc': '以閉環控制將馬達精準鎖定在指定轉速(誤差 ±0.5%),讓每顆馬達都在完全相同的工作點被量測,排除「轉速不同 → 數據不可比」的干擾。控制參數自我學習,不同轉速自動調適。',
+      't11.title': '馬達常數萃取(Ke / Km / 內阻)',
+      't11.desc': '從定速多點掃描推導出馬達的磁路強度(Ke)、馬達常數(Km)與內部電阻 —— 專業測功機才提供的物理參數,作為選別馬達的客觀參考(不評分、不排名)。',
+      't12.title': '高解析度逐脈衝測速',
+      't12.desc': '以脈衝週期法取代固定視窗計數,轉速解析度提升逾 600 倍,任何轉速都能顯示到個位數 RPM。畫面末位跳動反映的是馬達真實轉速波動,而非量測雜訊。',
+      't13.title': '轉速感測掃頻校正',
+      't13.desc': '每台機器的光學轉速感測都以內建頻率基準掃過 20 個點(100–50,000 RPM)個別校正,線性擬合 R²=0.9999,轉速讀值可溯源、機台之間一致。',
+      't14.title': 'DC 中位數電流校正',
+      't14.desc': '以純直流(非 PWM)搭配精密電阻逐台校正電流感測,並取多次量測中位數濾除開機暫態,把原始 +3~10% 的感測誤差收斂到約 0.1% 離散。',
+      't15.title': '負載補償馬達實效電壓',
+      't15.desc': '硬體只能量到供電端,系統即時補償驅動級壓降與供電下垂,推算馬達端子實際吃到的電壓 ——「設定 3V」馬達就真的看到 3V,畫面並列顯示供電與馬達電壓。',
+      't16.title': '損耗轉矩分解',
+      't16.desc': '不只給一個「摩擦」數字,而是用最小平方把損耗分解成庫倫摩擦、磁滯、渦流 + 風阻三個物理成分,並以 R² 擬合門檻自動剔除不可信的量測。',
 
       // ===== Specifications 技術規格 =====
       'specs.tag': 'SPECIFICATIONS',
@@ -3691,6 +3740,20 @@
       't8.desc': 'Real-time current monitoring instantly cuts power within < 100 ms when current exceeds safety threshold, protecting both the system and your expensive race motor.',
       't9.title': 'Watchdog Auto-Recovery',
       't9.desc': 'Even if extreme EMI noise causes MCU anomalies, the built-in Watchdog reboots the system within seconds. All power outputs are forcibly cut before reboot.',
+      't10.title': 'Adaptive Closed-Loop Speed Lock',
+      't10.desc': 'A closed loop pins the motor to a commanded RPM within ±0.5%, so every motor is measured at an identical operating point — removing the "different speed → incomparable data" confound. The control parameters self-tune and adapt across speeds.',
+      't11.title': 'Motor Constant Extraction (Ke / Km / R)',
+      't11.desc': 'Derives the motor\'s magnetic strength (Ke), motor constant (Km) and internal resistance from a multi-point constant-speed sweep — the kind of physical parameters a professional dynamometer reports, as objective reference data for grading motors (no scoring or ranking).',
+      't12.title': 'High-Resolution Reciprocal Timing',
+      't12.desc': 'Reciprocal period timing replaces fixed-window counting, improving RPM resolution over 600× to a single-digit-RPM floor at any speed. The flickering last digits reflect the motor\'s real speed fluctuation, not measurement noise.',
+      't13.title': 'Swept-Frequency Tachometer Calibration',
+      't13.desc': 'Each unit\'s optical speed sensor is individually calibrated against an internal frequency reference across 20 points (100–50,000 RPM), with a linear fit of R²=0.9999 — so RPM readings are traceable and consistent unit to unit.',
+      't14.title': 'DC Median Current Calibration',
+      't14.desc': 'Current sensing is calibrated per unit using clean DC (not PWM) against a precision resistor, taking the median of repeated measurements to reject turn-on transients — tightening the raw +3–10% sensor error to about 0.1% dispersion.',
+      't15.title': 'Load-Compensated Effective Voltage',
+      't15.desc': 'The hardware can only meter the supply, so the system compensates drive-stage drop and supply sag in real time to compute the voltage the motor terminals actually see — "set 3V" means the motor really gets 3V, with supply and motor voltage shown side by side.',
+      't16.title': 'Loss-Torque Decomposition',
+      't16.desc': 'Instead of a single "friction" number, least-squares fitting separates loss torque into three physical components — Coulomb friction, hysteresis, and eddy + windage — and an R² threshold automatically rejects untrustworthy measurements.',
 
       // ===== Specifications =====
       'specs.tag': 'SPECIFICATIONS',
@@ -4512,6 +4575,20 @@
       't8.desc': 'リアルタイム電流監視で瞬間的に安全閾値を超えた際、< 100 ms 以内に即座に電源遮断。システムと高価な競技用モーターを保護します。',
       't9.title': 'Watchdog 自動復旧',
       't9.desc': '極端な EMI ノイズで MCU 異常が発生しても、内蔵 Watchdog が数秒以内にシステムを再起動。再起動前にすべての電力出力は強制遮断されます。',
+      't10.title': '適応クローズドループ定速制御',
+      't10.desc': 'クローズドループでモーターを指定回転数に精密ロック(誤差 ±0.5%)、すべてのモーターを同一の動作点で測定し「回転数が違う → 比較不能」の交絡を排除。制御パラメータは自己学習し、回転数ごとに自動調整します。',
+      't11.title': 'モーター定数の抽出(Ke / Km / 内部抵抗)',
+      't11.desc': '定速多点スイープからモーターの磁気強度(Ke)、モーター定数(Km)、内部抵抗を導出 —— プロのダイナモが示す物理パラメータを、選別の客観的な参考データとして提供(採点・ランキングなし)。',
+      't12.title': '高分解能の逐パルス測速',
+      't12.desc': 'パルス周期法で固定ウィンドウ計数を置き換え、回転数分解能を 600 倍以上向上、どの回転数でも 1 の位まで表示。末位のちらつきは測定ノイズではなくモーターの実際の回転変動です。',
+      't13.title': '掃引周波数によるタコメーター校正',
+      't13.desc': '各機の光学式回転センサーを内蔵の周波数基準で 20 点(100–50,000 RPM)個別校正、線形フィット R²=0.9999 —— 回転数の読みはトレーサブルで機体間で一致します。',
+      't14.title': 'DC 中央値による電流校正',
+      't14.desc': '純直流(PWM でなく)と精密抵抗で電流センサーを機体ごとに校正、複数測定の中央値で起動過渡を除去し、生の +3〜10% の誤差を約 0.1% のばらつきに収束させます。',
+      't15.title': '負荷補償の実効モーター電圧',
+      't15.desc': 'ハードは供給側しか測れないため、駆動段の電圧降下と供給の垂れをリアルタイム補償してモーター端子の実効電圧を算出 ——「3V 設定」でモーターが本当に 3V を受け、供給電圧とモーター電圧を並べて表示。',
+      't16.title': '損失トルクの分解',
+      't16.desc': '「摩擦」を 1 つの数値で済ませず、最小二乗で損失トルクをクーロン摩擦・ヒステリシス・渦電流+風損の 3 つの物理成分に分解し、R² のしきい値で信頼できない測定を自動的に除外します。',
       'specs.tag': 'SPECIFICATIONS',
       'specs.title': '技術仕様',
       'specs.subtitle': 'ハードウェアとソフトウェアの完全な仕様、および各機能の数値入力範囲。',
