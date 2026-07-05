@@ -2372,40 +2372,40 @@ def build_lab_page(lab_cfg, lang, src_html, i18n):
 MANUAL = {
     "slug": "user-manual",
     "type": "docs",
-    "fw": "v3.2.26",
+    "fw": "v3.2.29",
     "i18n": {
         "zh": {
             "title": "MotorLab 使用者手冊:馬達磨合機操作說明 | MotorLab",
-            "description": "MotorLab Mini 4WD® 馬達磨合機完整使用手冊 — 連線、馬達磨合、馬達測試、歷史紀錄、全球磨合資料庫、AI 健康管理、軸承/電刷測試、系統設定、安全保護、工廠重設與常見問題。對應韌體 v3.2.26。",
+            "description": "MotorLab Mini 4WD® 馬達磨合機完整使用手冊 — 連線、馬達特性量測、馬達磨合、馬達測試、歷史紀錄、全球磨合資料庫、AI 健康管理、軸承/電刷測試、系統設定、安全保護、工廠重設與常見問題。對應韌體 v3.2.29。",
             "keywords": "MotorLab 使用手冊, 馬達磨合機操作, 馬達磨合機說明書, MotorLab 教學, 馬達磨合機設定",
             "breadcrumb": "使用者手冊",
             "eyebrow": "Docs · 使用者手冊",
             "h1": "MotorLab 使用者手冊",
-            "lead": "Mini 4WD® 馬達磨合機完整操作說明。對應韌體 v3.2.26。功能隨版本更新,新版可能多出未列選項。",
+            "lead": "Mini 4WD® 馬達磨合機完整操作說明。對應韌體 v3.2.29。功能隨版本更新,新版可能多出未列選項。",
             "toc_label": "目錄",
-            "fw_note": "本手冊適用 MotorLab v3.2.26 韌體。",
+            "fw_note": "本手冊適用 MotorLab v3.2.29 韌體。",
         },
         "en": {
             "title": "MotorLab User Manual: Motor Break-in Machine Guide | MotorLab",
-            "description": "Complete user manual for the MotorLab Mini 4WD® motor break-in machine — connection, break-in, testing, history records, global database, AI health management, bearing/brush tests, system settings, safety, factory reset and FAQ. For firmware v3.2.26.",
+            "description": "Complete user manual for the MotorLab Mini 4WD® motor break-in machine — connection, motor characterization, break-in, testing, history records, global database, AI health management, bearing/brush tests, system settings, safety, factory reset and FAQ. For firmware v3.2.29.",
             "keywords": "MotorLab user manual, motor break-in machine guide, MotorLab instructions, motor tester manual, Mini 4WD break-in machine",
             "breadcrumb": "User Manual",
             "eyebrow": "Docs · User Manual",
             "h1": "MotorLab User Manual",
-            "lead": "Complete operating guide for the Mini 4WD® motor break-in machine. For firmware v3.2.26. Features evolve with each release; newer firmware may add options not listed here.",
+            "lead": "Complete operating guide for the Mini 4WD® motor break-in machine. For firmware v3.2.29. Features evolve with each release; newer firmware may add options not listed here.",
             "toc_label": "Contents",
-            "fw_note": "This manual applies to MotorLab firmware v3.2.26.",
+            "fw_note": "This manual applies to MotorLab firmware v3.2.29.",
         },
         "ja": {
             "title": "MotorLab ユーザーマニュアル:モーター慣らし機操作ガイド | MotorLab",
-            "description": "MotorLab Mini 4WD® モーター慣らし機の完全ユーザーマニュアル — 接続、慣らし、テスト、履歴記録、グローバルデータ庫、AI 健康管理、ベアリング/ブラシ測定、システム設定、安全保護、工場出荷リセット、FAQ。ファームウェア v3.2.26 対応。",
+            "description": "MotorLab Mini 4WD® モーター慣らし機の完全ユーザーマニュアル — 接続、モーター特性測定、慣らし、テスト、履歴記録、グローバルデータ庫、AI 健康管理、ベアリング/ブラシ測定、システム設定、安全保護、工場出荷リセット、FAQ。ファームウェア v3.2.29 対応。",
             "keywords": "MotorLab マニュアル, モーター慣らし機 操作, MotorLab 使い方, モーターテスター 説明書, ミニ四駆 慣らし機",
             "breadcrumb": "ユーザーマニュアル",
             "eyebrow": "Docs · ユーザーマニュアル",
             "h1": "MotorLab ユーザーマニュアル",
-            "lead": "Mini 4WD® モーター慣らし機の完全操作ガイド。ファームウェア v3.2.26 対応。機能はバージョンごとに更新され、新版では未記載の項目が増える場合があります。",
+            "lead": "Mini 4WD® モーター慣らし機の完全操作ガイド。ファームウェア v3.2.29 対応。機能はバージョンごとに更新され、新版では未記載の項目が増える場合があります。",
             "toc_label": "目次",
-            "fw_note": "本マニュアルは MotorLab ファームウェア v3.2.26 に対応します。",
+            "fw_note": "本マニュアルは MotorLab ファームウェア v3.2.29 に対応します。",
         },
     },
     "sections": {
@@ -2435,11 +2435,25 @@ MANUAL = {
                 "</ul>"
             )},
             {"id": "home", "t": "三、首頁", "html": (
-                "<p>八個功能按鈕:</p>"
-                "<p class='manual-pills'>馬達磨合 · 馬達測試 · 歷史紀錄 · AI 智慧馬達健康管理(Pro)· 軸承阻力測試 · 電刷接觸穩定測試 · 全球磨合資料庫 · 系統設定</p>"
+                "<p>九個功能按鈕:</p>"
+                "<p class='manual-pills'>馬達特性量測 · 馬達磨合 · 馬達測試 · 歷史紀錄 · AI 智慧馬達健康管理(Pro)· 軸承阻力測試 · 電刷接觸穩定測試 · 全球磨合資料庫 · 系統設定</p>"
                 "<p>標題顯示 <code>MotorLab M1</code> 或 <code>MotorLab PRO</code>。</p>"
             )},
-            {"id": "breakin", "t": "四、馬達磨合", "html": (
+            {"id": "charexp", "t": "四、馬達特性量測", "html": (
+                "<p class='manual-intro'>全自動量出馬達的特性參數與損耗,<b>給參考數據、不評分不排名</b> —— 同型號馬達互相比較、自己判斷。約 1~2 分鐘,過程溫和,適合全新未磨合馬達。</p>"
+                "<p><b>操作</b>:首頁 →「馬達特性量測」→ 選方向(預設正轉)→「開始量測」→ 全程自動,過程中請勿觸碰馬達 → 完成顯示數據表。</p>"
+                "<p><b>怎麼看數據(表內每項都標了方向)</b>:</p>"
+                "<ul>"
+                "<li><b>★ Km(品質因數)</b>:<b>越高越好</b> —— 選別馬達的首要指標。</li>"
+                "<li><b>★ T_loss(損耗轉矩)/ I0</b>:同轉速下<b>越低越好</b>。</li>"
+                "<li><b>Ke(磁路強度)</b>:無絕對好壞 —— 數值相近的馬達互相比較才準確(偏高=偏扭力、偏低=偏轉速)。</li>"
+                "<li><b>R(內部電阻)</b>:越低越好。</li>"
+                "<li><b>損耗擬合 R² / Ke 漂移</b>:資料品質指標(R² 越接近 1、漂移越低,這筆數據越可信)。</li>"
+                "</ul>"
+                "<p><b>建議用法</b>:同批新馬達逐顆量測 → 依 ★Km 與 ★T_loss 挑出體質好的再投入磨合(省磨合工時);磨合後<b>再測同一顆</b>對照 —— 損耗類應下降(磨合有效)、Ke / R 應幾乎不變。</p>"
+                "<div class='manual-note'><b>注意</b>:量測失敗(馬達未起轉 / 鎖定逾時 / 過流)會顯示原因,重試即可;建議測 2 次看重複性。</div>"
+            )},
+            {"id": "breakin", "t": "五、馬達磨合", "html": (
                 "<p class='manual-intro'>低速長時間運轉,讓電刷與整流子貼合到最佳接觸。分 <b>10 階段(a~j)</b>,預設約 5 小時。</p>"
                 "<p><b>操作</b>:首頁 →「馬達磨合程式」→ 選<b>馬達型號</b>(16 款下拉)+ 填<b>備註</b>(選填,≤40 字)→ 確認 10 階段參數(直接點數字欄修改,改完自動套用)→「啟動」。</p>"
                 "<p>每階段流程:緩啟動 → 運轉中 → 緩停止 → 冷卻中 → 下一階段。全部完成 → 嗶 3 聲 → 自動存入歷史紀錄。</p>"
@@ -2451,12 +2465,12 @@ MANUAL = {
                 "</tbody></table>"
                 "<div class='manual-note'><b>注意</b>:運轉中所有設定鎖定;勿中途斷電(資料遺失);高溫會自動停止並存檔;想快速驗機就把每階段時間改短。每階段可設電壓 / 方向 / 運轉時間 / 冷卻時間 / 穩定電流容差。</div>"
             )},
-            {"id": "test", "t": "五、馬達測試", "html": (
+            {"id": "test", "t": "六、馬達測試", "html": (
                 "<p class='manual-intro'>單階段即時觀察,<b>不寫入紀錄</b>。</p>"
-                "<p>首頁 →「馬達測試程式」→ 設 <b>電壓(0~4.5V)/ 運轉時間 / 方向 / 穩定電流容差</b> →「啟動」→ 看即時數據與圖表,到時自動停。智慧模式下電流提前穩定會以「stable」結束。</p>"
-                "<div class='manual-note'><b>注意</b>:電壓上限 4.5V 保護馬達,勿繞過;反轉接正轉前先按一次「停止」。</div>"
+                "<p>首頁 →「馬達測試程式」→ 設 <b>電壓(0.6~4.0V,預設 1V)/ 運轉時間 / 方向 / 穩定電流容差</b> →「啟動」→ 看即時數據與圖表,到時自動停。智慧模式下電流提前穩定會以「stable」結束。</p>"
+                "<div class='manual-note'><b>注意</b>:電壓上限 4.0V 保護馬達,勿繞過;反轉接正轉前先按一次「停止」。</div>"
             )},
-            {"id": "records", "t": "六、歷史紀錄", "html": (
+            {"id": "records", "t": "七、歷史紀錄", "html": (
                 "<p class='manual-intro'>自動儲存每次磨合完整資料,最多 <b>50 筆</b>。</p>"
                 "<p>每筆顯示名稱 / 開始時間 / 時長 / 模式 / 結束原因 / 最大轉速 / 平均轉速 / 穩定電流。</p>"
                 "<table class='manual-table'><thead><tr><th>按鈕</th><th>用途</th></tr></thead><tbody>"
@@ -2472,13 +2486,13 @@ MANUAL = {
                 "<li>韌體更新 / 工廠重設<b>都不會清紀錄</b>。</li>"
                 "</ul>"
             )},
-            {"id": "database", "t": "七、全球磨合資料庫", "html": (
+            {"id": "database", "t": "八、全球磨合資料庫", "html": (
                 "<p class='manual-intro'>與全球玩家分享磨合紀錄,機器<b>直接連網</b>完成,不必匯出再上網站。需連<b>有外網的 WiFi</b>(M1 / Pro 都能用)。</p>"
                 "<p><b>瀏覽 / 下載</b>:首頁 →「全球磨合資料庫」→ 連網後列出最新 100 筆 → 用 <b>馬達型號 / 國家 / 完成狀態</b> 即時篩選 → 每筆可「下載」(存進本機)或「下載並套用」(存入並把配方套到磨合頁)。</p>"
                 "<p><b>分享自己的</b>:歷史紀錄 → 點開某筆 → 詳情頁底部「分享到全球資料庫」→ 確認框<b>明列將公開的欄位</b>(型號 / 備註 / 分享者 / 國家 / 完整數據;填了名字會提醒顯示真名)→ 確認上傳。已上傳過會提示「這筆已在資料庫」(非錯誤)。</p>"
                 "<div class='manual-note'><b>注意</b>:下載的紀錄會經簽章驗證;上傳即同意公開,需移除請來信 <b>motorlab.tw@gmail.com</b>;連到無外網的 WiFi 會提示「無法連到伺服器」。</div>"
             )},
-            {"id": "ai", "t": "八、AI 智慧馬達健康管理(Pro)", "html": (
+            {"id": "ai", "t": "九、AI 智慧馬達健康管理(Pro)", "html": (
                 "<p class='manual-intro'>為每顆馬達建立健康指紋,定期重測比對,給 0~100 分與建議。<b>跟自己比,不跟別顆比</b>。</p>"
                 "<ol>"
                 "<li>首頁 →「AI 智慧馬達健康管理」→「+ 新增馬達」。</li>"
@@ -2488,27 +2502,33 @@ MANUAL = {
                 "<p>之後每張卡片可做 <b>完整檢測</b>(約 2.5 分,最準)或 <b>快速檢測</b>(約 1.5 分,±5%)。結果頁顯示分數、等級(Optimal / Acceptable / Warning / Critical)、趨勢圖、五項指標、文字建議。</p>"
                 "<div class='manual-note'><b>注意</b>:每顆最多 50 次歷史,整機最多 20 顆;檢測中勿斷電 / 勿按其他鈕;高溫會自動中止;M1 版按鈕灰色(點下提示升級)。</div>"
             )},
-            {"id": "bearing", "t": "九、軸承阻力測試", "html": (
-                "<p class='manual-intro'>量軸承健康,約 10 秒,任何版本可用。<b>衰減越慢 → 軸承越健康</b>。</p>"
-                "<p>首頁 →「軸承阻力測試」→「開始測試」→ 機器加速 → 切斷 → 量衰減時間 → 顯示 <b>τ 衰減時間</b> 與評定(良好 / 注意 / 建議保養)。</p>"
-                "<div class='manual-note'><b>注意</b>:需轉速感應器正常(顯示「轉速為 0」表示感測未對準或反光標脫落);不需接負載;建議測 3 次取平均。</div>"
+            {"id": "bearing", "t": "十、軸承阻力測試", "html": (
+                "<p class='manual-intro'>量軸承順暢度,任何版本可用。<b>完全靜止時間越久 → 軸承越順</b>。</p>"
+                "<p>首頁 →「軸承阻力測試」→ 選測試電壓(<b>2.4V 或 3V</b>)→「開始測試」→ 機器加速到該電壓 → 穩定轉速 5 秒 → <b>直接斷電(不剎車)</b> → 計時到完全靜止 → 顯示 <b>完全靜止時間</b>。</p>"
+                "<div class='manual-note'><b>注意</b>:馬達空載慣性小,本測試<b>只顯示時間、不做好壞評定</b>,請拿同一顆馬達不同時期、或不同馬達的時間互相比較;需轉速感應器正常;建議測 2~3 次看重複性。</div>"
             )},
-            {"id": "brush", "t": "十、電刷接觸穩定測試", "html": (
-                "<p class='manual-intro'>量電刷接觸是否均勻,約 15 秒,任何版本可用。<b>接觸不均 → 電流抖動 → CV 上升</b>。</p>"
-                "<p>首頁 →「電刷接觸穩定測試」→「開始測試」→ 提示「確認軸心已鎖死」(手動把軸轉到某角度鬆手、確認靜止)→ 機器跑 <b>3 個步驟</b>(每步換一個角度,會提示轉到下一角度)→ 顯示各步 <b>CV%</b> 與評定(良好 / 注意 / 建議清潔)。</p>"
-                "<div class='manual-note'><b>注意</b>:測試中馬達意外轉動(&gt;100 RPM)會立即中止顯示「軸心未鎖死」;三角度是為涵蓋不同接觸點。</div>"
+            {"id": "brush", "t": "十一、電刷接觸穩定測試", "html": (
+                "<p class='manual-intro'>量電刷接觸是否均勻,約 35 秒,任何版本可用。<b>接觸不均 → 電流抖動 → CV 上升</b>。</p>"
+                "<p>首頁 →「電刷接觸穩定測試」→「開始測試」即可(<b>不需手轉軸心</b>)。流程固定在 <b>1V</b>:電壓 10 秒內由 0 緩升到 1V → 1V 保持 5 秒 → 1V 採樣電流 20 秒 → 顯示 <b>電流變異係數 CV%</b>。</p>"
+                "<p><b>怎麼看 CV%</b>:CV 是固定電壓下電流的抖動程度,<b>是相對比較工具、沒有絕對好壞線</b>(不同型號馬達天生不同)。建議這樣用:</p>"
+                "<ul>"
+                "<li>同一顆馬達 <b>磨合前 vs 磨合後</b>:CV 下降 = 電刷磨開、接觸變好。</li>"
+                "<li>同一顆馬達 <b>長期追蹤</b>:CV 逐漸上升 = 電刷磨損 / 整流子變髒。</li>"
+                "<li><b>馬達 A vs B</b> 相對比較。</li>"
+                "</ul>"
+                "<div class='manual-note'><b>注意</b>:固定 1V、固定流程,才能跨次 / 跨馬達公平比較;建議測 2~3 次看重複性。</div>"
             )},
-            {"id": "settings", "t": "十一、系統設定", "html": (
+            {"id": "settings", "t": "十二、系統設定", "html": (
                 "<p class='manual-intro'>系統運轉中此頁只留「回首頁」可按,其餘鎖定。</p>"
                 "<table class='manual-table'><tbody>"
                 "<tr><th>使用者設定</th><td>名稱 / 國家(≤32 字,預設 <code>--</code>),寫入每筆紀錄當出處。已產生的紀錄不回填。</td></tr>"
-                "<tr><th>WiFi 設定</th><td>改熱點名稱 / 密碼(8~63 字)→ 儲存後機器重啟,須重新連新熱點。忘密碼見第十三節。</td></tr>"
-                "<tr><th>語言</th><td>中文 / English / 日本語 切換,即時生效並記住偏好(預設中文)。</td></tr>"
+                "<tr><th>WiFi 設定</th><td>改熱點名稱 / 密碼(8~63 字)→ 儲存後機器重啟,須重新連新熱點。忘密碼見第十四節。</td></tr>"
+                "<tr><th>語言</th><td>中文 / English / 日本語 切換(預設中文)。按「確定」後<b>系統重新啟動</b>乾淨載入(約 10 秒,頁面自動重新載入);運轉中切換則只重載頁面、不中斷程序。</td></tr>"
                 "<tr><th>磨合模式</th><td>純運轉時間 / 智慧穩定電流判定(達時間<b>或</b>電流提前穩定即進下一階段)。</td></tr>"
                 "<tr><th>溫度校正</th><td>顯示與實際有偏差時加補償(±20°C)。</td></tr>"
                 "<tr><th>高溫鎖定</th><td>設定高溫鎖定溫度(預設 50°C,範圍 25~60°C)。當前溫度高於設定值 5°C 以上持續 10 秒即進入高溫鎖定(停機,須按歸零解除)。區塊內同時顯示當前溫度。</td></tr>"
-                "<tr><th>平均轉速設定</th><td>容差(相鄰兩秒轉速差,預設 50 RPM,可調 10~500)越小越嚴格。</td></tr>"
-                "<tr><th>緩啟動參數</th><td>啟動扭矩(預設 70%,100% 對應約 4V)/ 昇速時間(預設 0.3 秒,0.05~2.0)/ 降速時間(預設 0.7 秒,0.05~3.0)。啟動不了加大扭矩;爆衝跳保護縮小扭矩。</td></tr>"
+                "<tr><th>平均轉速設定</th><td>容差(相鄰兩秒轉速差)下拉選單 120~600 RPM,<b>預設 240</b>。容差越大越容易判定穩定但反應較遲鈍;馬達較不穩可調高。</td></tr>"
+                "<tr><th>緩啟動</th><td>採線性升壓(電壓由 0 在 5 秒內平順線性升到目標電壓,與緩停止同風格),<b>無可調參數</b>。電壓輸出已校準,不需設定啟動扭矩。</td></tr>"
                 "<tr><th>取得授權</th><td>M1 升 Pro,見下。</td></tr>"
                 "<tr><th>軟體更新</th><td>透過家裡 WiFi 自動取得最新韌體,見下。</td></tr>"
                 "<tr><th>RGB 狀態燈</th><td>雙燈(內建 / 面板)輸出位置 + 亮度(0~100%)+ 5 組狀態樣式,見下。</td></tr>"
@@ -2525,20 +2545,20 @@ MANUAL = {
                 "</ul>"
                 "<p><b>工程模式</b>:需密碼(密碼錯 3 次鎖 60 秒,10 分鐘無操作自動登出)。</p>"
             )},
-            {"id": "safety", "t": "十二、安全與保護", "html": (
+            {"id": "safety", "t": "十三、安全與保護", "html": (
                 "<table class='manual-table'><thead><tr><th>機制</th><th>觸發 / 行為</th></tr></thead><tbody>"
                 "<tr><td>高溫保護</td><td>兩種觸發:① 溫度感測器警報;② 當前溫度高於「高溫鎖定溫度」設定值 5°C 以上持續 10 秒(見系統設定)。任一觸發 → 立即停馬達 + 嗶 5 聲 + 鎖定。鎖定期間狀態列 / 旗標 / 狀態燈持續顯示高溫,首頁只剩「馬達磨合 / 馬達測試」可進、操作頁只剩「歸零 / 回首頁」可按。<b>即使溫度已降回也須按「歸零」才解除</b>(仍高溫時按歸零會再次鎖定,須先降溫)。</td></tr>"
-                "<tr><td>緩啟動 / 緩停止</td><td>啟停為 3 秒線性爬升 / 下降,避免電流爆衝與機械衝擊。</td></tr>"
+                "<tr><td>緩啟動 / 緩停止</td><td>啟動為 5 秒線性升壓(0V→目標電壓),停止為 3 秒線性下降,避免電流爆衝與機械衝擊。</td></tr>"
                 "<tr><td>電流上限</td><td>固定 4A 量測上限,超過讀值封頂(不停機,但長時間高電流可能觸發高溫)。</td></tr>"
                 "<tr><td>開機鎖定</td><td>開機 30 秒內連續 3 次崩潰 → 自動切回上一版韌體。</td></tr>"
                 "</tbody></table>"
             )},
-            {"id": "reset", "t": "十三、工廠重設(救援)", "html": (
+            {"id": "reset", "t": "十四、工廠重設(救援)", "html": (
                 "<p><b>用途</b>:忘記 WiFi 名稱 / 密碼時,把熱點重設回 <code>MotorTester</code> / <code>12345678</code>。</p>"
                 "<p><b>做法</b>:把機器上的「工廠重設」接點短接 3.3V(或按對應按鈕)<b>持續 5 秒</b> → 嗶 10 聲 → 自動重啟。</p>"
                 "<div class='manual-note'><b>只重設 WiFi 熱點名稱與密碼</b>,以下全部保留:磨合參數 / 各項校正與設定 / Pro 授權 / 歷史紀錄 / 馬達指紋 / RGB 設定 / 已記憶外部 WiFi。</div>"
             )},
-            {"id": "faq", "t": "十四、常見問題", "html": (
+            {"id": "faq", "t": "十五、常見問題", "html": (
                 "<table class='manual-table'><thead><tr><th>問題</th><th>處理</th></tr></thead><tbody>"
                 "<tr><td>開機沒嗶聲</td><td>確認電源 5V、蜂鳴器接線</td></tr>"
                 "<tr><td>Web UI 使用中無反應</td><td>檢查是否仍連接著機器 WiFi(MotorTester);裝置可能自動切回有網路的 WiFi → 重新連回機器熱點並重整網頁</td></tr>"
@@ -2553,7 +2573,7 @@ MANUAL = {
                 "<tr><td>待機可拔電源嗎</td><td>可,建議馬達完全停止、無「套用中」、無更新進行中</td></tr>"
                 "</tbody></table>"
             )},
-            {"id": "led", "t": "十五、狀態燈號", "html": (
+            {"id": "led", "t": "十六、狀態燈號", "html": (
                 "<p>預設配置(可在「RGB 狀態燈」修改):</p>"
                 "<table class='manual-table'><thead><tr><th>系統狀態</th><th>預設</th><th>含義</th></tr></thead><tbody>"
                 "<tr><td>高溫鎖定</td><td>紅閃</td><td>觸發高溫保護,須降溫並按「歸零」</td></tr>"
@@ -2591,11 +2611,25 @@ MANUAL = {
                 "</ul>"
             )},
             {"id": "home", "t": "3. Home Screen", "html": (
-                "<p>Eight function buttons:</p>"
-                "<p class='manual-pills'>Motor Break-in · Motor Test · History Records · AI Motor Health (Pro) · Bearing Resistance Test · Brush Contact Stability Test · Global Database · System Settings</p>"
+                "<p>Nine function buttons:</p>"
+                "<p class='manual-pills'>Motor Characterization · Motor Break-in · Motor Test · History Records · AI Motor Health (Pro) · Bearing Resistance Test · Brush Contact Stability Test · Global Database · System Settings</p>"
                 "<p>The title shows <code>MotorLab M1</code> or <code>MotorLab PRO</code>.</p>"
             )},
-            {"id": "breakin", "t": "4. Motor Break-in", "html": (
+            {"id": "charexp", "t": "4. Motor Characterization", "html": (
+                "<p class='manual-intro'>Fully automatic measurement of a motor's characteristic parameters and losses — <b>reference data, no scoring or ranking</b>. Compare motors of the same model and judge for yourself. About 1–2 minutes, gentle enough for brand-new, un-broken-in motors.</p>"
+                "<p><b>Steps</b>: Home →「Motor Characterization」→ pick a direction (forward by default) →「Start」→ fully automatic; do not touch the motor during the run → a data table is shown when done.</p>"
+                "<p><b>Reading the data (each item is labelled with its direction)</b>:</p>"
+                "<ul>"
+                "<li><b>★ Km (quality factor)</b>: <b>higher is better</b> — the primary metric for grading motors.</li>"
+                "<li><b>★ T_loss (loss torque) / I0</b>: at the same RPM, <b>lower is better</b>.</li>"
+                "<li><b>Ke (magnetic strength)</b>: no absolute good/bad — only meaningful when comparing motors with similar values (higher = torque-leaning, lower = speed-leaning).</li>"
+                "<li><b>R (internal resistance)</b>: lower is better.</li>"
+                "<li><b>Loss-fit R² / Ke drift</b>: data-quality indicators (R² closer to 1 and lower drift means a more trustworthy reading).</li>"
+                "</ul>"
+                "<p><b>Suggested use</b>: measure each motor in a new batch → pick the strong ones by ★Km and ★T_loss before investing break-in time; after break-in, <b>re-measure the same motor</b> — the loss figures should drop (break-in worked) while Ke / R stay almost unchanged.</p>"
+                "<div class='manual-note'><b>Note</b>: a failed measurement (motor didn't spin up / lock-in timeout / over-current) shows the reason — just retry; measure twice to check repeatability.</div>"
+            )},
+            {"id": "breakin", "t": "5. Motor Break-in", "html": (
                 "<p class='manual-intro'>Long, low-speed running that beds the brushes against the commutator for optimal contact. Split into <b>10 stages (a–j)</b>, about 5 hours by default.</p>"
                 "<p><b>Steps</b>: Home →「Motor Break-in」→ pick the <b>motor model</b> (16-model dropdown) + enter a <b>note</b> (optional, ≤40 chars) → confirm the 10-stage parameters (tap a number field to edit; changes apply automatically) →「Start」.</p>"
                 "<p>Each stage: soft-start → running → soft-stop → cooling → next stage. When all finish → 3 beeps → automatically saved to History Records.</p>"
@@ -2607,12 +2641,12 @@ MANUAL = {
                 "</tbody></table>"
                 "<div class='manual-note'><b>Note</b>: all settings lock while running; don’t cut power mid-run (data loss); overheating auto-stops and saves; to bench-test quickly, shorten each stage’s time. Each stage sets voltage / direction / run time / cool time / stable-current tolerance.</div>"
             )},
-            {"id": "test", "t": "5. Motor Test", "html": (
+            {"id": "test", "t": "6. Motor Test", "html": (
                 "<p class='manual-intro'>Single-stage live observation, <b>not written to records</b>.</p>"
-                "<p>Home →「Motor Test」→ set <b>voltage (0–4.5V) / run time / direction / stable-current tolerance</b> →「Start」→ watch live data and charts; stops automatically at time. In smart mode, if the current settles early it ends as “stable”.</p>"
-                "<div class='manual-note'><b>Note</b>: the 4.5V cap protects the motor — don’t bypass it; press “Stop” once before switching from reverse to forward.</div>"
+                "<p>Home →「Motor Test」→ set <b>voltage (0.6–4.0V, default 1V) / run time / direction / stable-current tolerance</b> →「Start」→ watch live data and charts; stops automatically at time. In smart mode, if the current settles early it ends as “stable”.</p>"
+                "<div class='manual-note'><b>Note</b>: the 4.0V cap protects the motor — don’t bypass it; press “Stop” once before switching from reverse to forward.</div>"
             )},
-            {"id": "records", "t": "6. History Records", "html": (
+            {"id": "records", "t": "7. History Records", "html": (
                 "<p class='manual-intro'>Every break-in is saved in full automatically, up to <b>50 records</b>.</p>"
                 "<p>Each shows name / start time / duration / mode / end reason / max RPM / avg RPM / stable current.</p>"
                 "<table class='manual-table'><thead><tr><th>Button</th><th>Use</th></tr></thead><tbody>"
@@ -2628,13 +2662,13 @@ MANUAL = {
                 "<li>Firmware updates / factory reset <b>never clear records</b>.</li>"
                 "</ul>"
             )},
-            {"id": "database", "t": "7. Global Break-in Database", "html": (
+            {"id": "database", "t": "8. Global Break-in Database", "html": (
                 "<p class='manual-intro'>Share break-in records with players worldwide — done <b>directly over the network from the machine</b>, no export-then-upload needed. Requires WiFi <b>with internet</b> (M1 / Pro both work).</p>"
                 "<p><b>Browse / download</b>: Home →「Global Database」→ after connecting, the latest 100 records are listed → filter live by <b>motor model / country / completion</b> → each can be “Download” (saves locally) or “Download &amp; Apply” (saves and applies the profile to the break-in page).</p>"
                 "<p><b>Share yours</b>: History Records → open a record → at the bottom of the detail page “Share to Global Database” → the confirm box <b>lists exactly what becomes public</b> (model / note / sharer / country / full data; if you entered a name it warns it shows your real name) → confirm upload. If already uploaded it notes “this record is already in the database” (not an error).</p>"
                 "<div class='manual-note'><b>Note</b>: downloaded records are signature-verified; uploading means agreeing to make it public — to remove, email <b>motorlab.tw@gmail.com</b>; connecting to WiFi without internet shows “cannot reach the server”.</div>"
             )},
-            {"id": "ai", "t": "8. AI Motor Health Management (Pro)", "html": (
+            {"id": "ai", "t": "9. AI Motor Health Management (Pro)", "html": (
                 "<p class='manual-intro'>Builds a health fingerprint per motor, re-measures periodically and compares, giving a 0–100 score with advice. <b>Compared against itself, not against other motors</b>.</p>"
                 "<ol>"
                 "<li>Home →「AI Motor Health」→「+ Add Motor」.</li>"
@@ -2644,27 +2678,33 @@ MANUAL = {
                 "<p>Afterwards each card can run a <b>Full check</b> (~2.5 min, most accurate) or <b>Quick check</b> (~1.5 min, ±5%). The result page shows the score, grade (Optimal / Acceptable / Warning / Critical), trend chart, five metrics and written advice.</p>"
                 "<div class='manual-note'><b>Note</b>: up to 50 history entries per motor, 20 motors per machine; don’t cut power or press other buttons during a check; overheating auto-aborts; on M1 the button is greyed (tapping prompts an upgrade).</div>"
             )},
-            {"id": "bearing", "t": "9. Bearing Resistance Test", "html": (
-                "<p class='manual-intro'>Measures bearing health in about 10 seconds, available on any edition. <b>Slower decay → healthier bearing</b>.</p>"
-                "<p>Home →「Bearing Resistance Test」→「Start」→ the machine spins up → cuts power → measures the decay time → shows the <b>τ decay time</b> and a rating (Good / Caution / Service recommended).</p>"
-                "<div class='manual-note'><b>Note</b>: needs a working RPM sensor (“RPM is 0” means the sensor is misaligned or the reflective mark fell off); no load needed; measure 3 times and average.</div>"
+            {"id": "bearing", "t": "10. Bearing Resistance Test", "html": (
+                "<p class='manual-intro'>Measures bearing smoothness, available on any edition. <b>Longer time to a complete stop → smoother bearing</b>.</p>"
+                "<p>Home →「Bearing Resistance Test」→ pick a test voltage (<b>2.4V or 3V</b>) →「Start」→ the machine accelerates to that voltage → holds steady RPM for 5 s → <b>cuts power directly (no braking)</b> → times until a complete stop → shows the <b>time-to-complete-stop</b>.</p>"
+                "<div class='manual-note'><b>Note</b>: an unloaded motor has little inertia, so this test <b>only shows the time and gives no good/bad rating</b> — compare the same motor at different times, or different motors, against each other; needs a working RPM sensor; measure 2–3 times to check repeatability.</div>"
             )},
-            {"id": "brush", "t": "10. Brush Contact Stability Test", "html": (
-                "<p class='manual-intro'>Measures whether brush contact is even, about 15 seconds, any edition. <b>Uneven contact → current jitter → higher CV</b>.</p>"
-                "<p>Home →「Brush Contact Stability Test」→「Start」→ prompt “confirm the shaft is locked” (manually turn the shaft to an angle, release, confirm it stays still) → the machine runs <b>3 steps</b> (each at a different angle, prompting you to turn to the next) → shows each step’s <b>CV%</b> and a rating (Good / Caution / Cleaning recommended).</p>"
-                "<div class='manual-note'><b>Note</b>: if the motor moves unexpectedly during the test (&gt;100 RPM) it aborts immediately with “shaft not locked”; three angles cover different contact points.</div>"
+            {"id": "brush", "t": "11. Brush Contact Stability Test", "html": (
+                "<p class='manual-intro'>Measures whether brush contact is even, about 35 seconds, any edition. <b>Uneven contact → current jitter → higher CV</b>.</p>"
+                "<p>Home →「Brush Contact Stability Test」→ just press「Start」(<b>no manual shaft turning</b>). The routine is fixed at <b>1V</b>: voltage ramps from 0 to 1V within 10 s → holds 1V for 5 s → samples current at 1V for 20 s → shows the <b>current coefficient of variation, CV%</b>.</p>"
+                "<p><b>Reading CV%</b>: CV is how much the current jitters at a fixed voltage — <b>a relative comparison tool with no absolute good/bad line</b> (different motor models differ by nature). Use it like this:</p>"
+                "<ul>"
+                "<li>Same motor <b>before vs after break-in</b>: CV drops = brushes bedded in, contact improved.</li>"
+                "<li>Same motor <b>tracked over time</b>: CV creeping up = brush wear / dirty commutator.</li>"
+                "<li><b>Motor A vs B</b> relative comparison.</li>"
+                "</ul>"
+                "<div class='manual-note'><b>Note</b>: the fixed 1V and fixed routine are what make runs / motors fairly comparable; measure 2–3 times to check repeatability.</div>"
             )},
-            {"id": "settings", "t": "11. System Settings", "html": (
+            {"id": "settings", "t": "12. System Settings", "html": (
                 "<p class='manual-intro'>While the system is running, only “Home” is available here; everything else is locked.</p>"
                 "<table class='manual-table'><tbody>"
                 "<tr><th>User Settings</th><td>Name / country (≤32 chars, default <code>--</code>), written into each record as its origin. Existing records are not back-filled.</td></tr>"
-                "<tr><th>WiFi Settings</th><td>Change hotspot name / password (8–63 chars) → the machine restarts after saving; reconnect to the new hotspot. Forgot the password? See section 13.</td></tr>"
-                "<tr><th>Language</th><td>Switch 中文 / English / 日本語, applied instantly and remembered (default Chinese).</td></tr>"
+                "<tr><th>WiFi Settings</th><td>Change hotspot name / password (8–63 chars) → the machine restarts after saving; reconnect to the new hotspot. Forgot the password? See section 14.</td></tr>"
+                "<tr><th>Language</th><td>Switch 中文 / English / 日本語 (default Chinese). After pressing OK the <b>system restarts</b> for a clean load (~10 s, the page reloads automatically); switching mid-run only reloads the page without interrupting the procedure.</td></tr>"
                 "<tr><th>Break-in Mode</th><td>Pure run-time / smart stable-current (advances on time <b>or</b> when current settles early).</td></tr>"
                 "<tr><th>Temp Calibration</th><td>Add compensation when the display deviates from reality (±20°C).</td></tr>"
                 "<tr><th>Overheat Lock</th><td>Set the overheat-lock temperature (default 50°C, range 25–60°C). When the current temperature stays 5°C above the set value for 10 seconds, it enters overheat lock (stops, must press Reset to clear). The block also shows the current temperature.</td></tr>"
-                "<tr><th>Avg-RPM Setting</th><td>Tolerance (RPM difference between consecutive seconds, default 50, range 10–500); smaller is stricter.</td></tr>"
-                "<tr><th>Soft-start Params</th><td>Start torque (default 70%, 100% ≈ 4V) / ramp-up time (default 0.3s, 0.05–2.0) / ramp-down time (default 0.7s, 0.05–3.0). If it won’t start, raise the torque; if it lurches into protection, lower it.</td></tr>"
+                "<tr><th>Avg-RPM Setting</th><td>Tolerance (RPM difference between consecutive seconds), dropdown 120–600 RPM, <b>default 240</b>. A larger tolerance settles more easily but reacts slower; raise it for a less steady motor.</td></tr>"
+                "<tr><th>Soft-start</th><td>Linear voltage ramp (voltage rises smoothly from 0 to the target over 5 s, matching soft-stop), <b>no adjustable parameters</b>. Output voltage is calibrated, so no start-torque setting is needed.</td></tr>"
                 "<tr><th>Get License</th><td>Upgrade M1 to Pro, see below.</td></tr>"
                 "<tr><th>Software Update</th><td>Auto-fetch the latest firmware over home WiFi, see below.</td></tr>"
                 "<tr><th>RGB Status Light</th><td>Dual lights (built-in / panel) output location + brightness (0–100%) + 5 status styles, see below.</td></tr>"
@@ -2681,20 +2721,20 @@ MANUAL = {
                 "</ul>"
                 "<p><b>Engineering Mode</b>: requires a password (3 wrong attempts lock for 60 s; auto-logout after 10 minutes idle).</p>"
             )},
-            {"id": "safety", "t": "12. Safety & Protection", "html": (
+            {"id": "safety", "t": "13. Safety & Protection", "html": (
                 "<table class='manual-table'><thead><tr><th>Mechanism</th><th>Trigger / behaviour</th></tr></thead><tbody>"
                 "<tr><td>Overheat protection</td><td>Two triggers: (1) temperature-sensor alarm; (2) current temperature 5°C above the “overheat-lock temperature” for 10 seconds (see System Settings). Either one → motor stops immediately + 5 beeps + lock. While locked, the status bar / flag / status light keep showing overheat; home leaves only “Break-in / Test” enterable and the operation page only “Reset / Home”. <b>Even after the temperature drops you must press “Reset” to clear</b> (pressing Reset while still hot re-locks; cool down first).</td></tr>"
-                "<tr><td>Soft-start / soft-stop</td><td>Start/stop is a 3-second linear ramp up/down, avoiding current surges and mechanical shock.</td></tr>"
+                "<tr><td>Soft-start / soft-stop</td><td>Start is a 5-second linear voltage ramp (0V→target), stop is a 3-second linear ramp down, avoiding current surges and mechanical shock.</td></tr>"
                 "<tr><td>Current cap</td><td>Fixed 4A measurement ceiling; readings clamp above it (no shutdown, but sustained high current may trigger overheat).</td></tr>"
                 "<tr><td>Boot lock</td><td>3 crashes within 30 s of boot → automatically reverts to the previous firmware.</td></tr>"
                 "</tbody></table>"
             )},
-            {"id": "reset", "t": "13. Factory Reset (Rescue)", "html": (
+            {"id": "reset", "t": "14. Factory Reset (Rescue)", "html": (
                 "<p><b>Purpose</b>: when you’ve forgotten the WiFi name / password, reset the hotspot back to <code>MotorTester</code> / <code>12345678</code>.</p>"
                 "<p><b>How</b>: short the machine’s “factory reset” contact to 3.3V (or press the corresponding button) <b>for 5 seconds</b> → 10 beeps → auto-restart.</p>"
                 "<div class='manual-note'><b>Only the WiFi hotspot name and password are reset</b>; all of the following are kept: break-in parameters / all calibrations and settings / Pro license / history records / motor fingerprints / RGB settings / remembered external WiFi.</div>"
             )},
-            {"id": "faq", "t": "14. FAQ", "html": (
+            {"id": "faq", "t": "15. FAQ", "html": (
                 "<table class='manual-table'><thead><tr><th>Problem</th><th>Fix</th></tr></thead><tbody>"
                 "<tr><td>No beep on power-on</td><td>Check 5V power and buzzer wiring</td></tr>"
                 "<tr><td>Web UI unresponsive during use</td><td>Check you’re still connected to the machine’s WiFi (MotorTester); your device may have auto-switched to an internet WiFi → reconnect to the machine hotspot and refresh the page</td></tr>"
@@ -2709,7 +2749,7 @@ MANUAL = {
                 "<tr><td>Can I unplug while idle?</td><td>Yes; best when the motor is fully stopped, no “Applying…”, no update in progress</td></tr>"
                 "</tbody></table>"
             )},
-            {"id": "led", "t": "15. Status Lights", "html": (
+            {"id": "led", "t": "16. Status Lights", "html": (
                 "<p>Default configuration (editable in “RGB Status Light”):</p>"
                 "<table class='manual-table'><thead><tr><th>System state</th><th>Default</th><th>Meaning</th></tr></thead><tbody>"
                 "<tr><td>Overheat lock</td><td>Red blink</td><td>Overheat protection triggered; cool down and press “Reset”</td></tr>"
@@ -2747,11 +2787,25 @@ MANUAL = {
                 "</ul>"
             )},
             {"id": "home", "t": "3. ホーム画面", "html": (
-                "<p>8 つの機能ボタン:</p>"
-                "<p class='manual-pills'>モーター慣らし · モーターテスト · 履歴記録 · AI モーター健康管理(Pro)· ベアリング抵抗測定 · ブラシ接触安定測定 · グローバルデータ庫 · システム設定</p>"
+                "<p>9 つの機能ボタン:</p>"
+                "<p class='manual-pills'>モーター特性測定 · モーター慣らし · モーターテスト · 履歴記録 · AI モーター健康管理(Pro)· ベアリング抵抗測定 · ブラシ接触安定測定 · グローバルデータ庫 · システム設定</p>"
                 "<p>タイトルに <code>MotorLab M1</code> または <code>MotorLab PRO</code> を表示。</p>"
             )},
-            {"id": "breakin", "t": "4. モーター慣らし", "html": (
+            {"id": "charexp", "t": "4. モーター特性測定", "html": (
+                "<p class='manual-intro'>モーターの特性パラメータと損失を全自動で測定 —— <b>参考データのみ、採点・ランキングなし</b>。同型モーターを比較して自分で判断します。約 1〜2 分、動作は穏やかで、新品の未慣らしモーターにも安心。</p>"
+                "<p><b>操作</b>:ホーム →「モーター特性測定」→ 方向を選択(初期は正転)→「測定開始」→ 全自動、測定中はモーターに触れない → 完了するとデータ表を表示。</p>"
+                "<p><b>データの見方(表内の各項目に方向を明記)</b>:</p>"
+                "<ul>"
+                "<li><b>★ Km(品質係数)</b>:<b>高いほど良い</b> —— モーター選別の最重要指標。</li>"
+                "<li><b>★ T_loss(損失トルク)/ I0</b>:同回転数で<b>低いほど良い</b>。</li>"
+                "<li><b>Ke(磁気強度)</b>:絶対的な良し悪しはなし —— 数値が近いモーター同士の比較で意味を持つ(高め=トルク寄り、低め=回転寄り)。</li>"
+                "<li><b>R(内部抵抗)</b>:低いほど良い。</li>"
+                "<li><b>損失フィット R² / Ke ドリフト</b>:データ品質の指標(R² が 1 に近く、ドリフトが小さいほど信頼できる)。</li>"
+                "</ul>"
+                "<p><b>推奨の使い方</b>:新品ロットを 1 個ずつ測定 → ★Km と ★T_loss で体質の良い個体を選んでから慣らしに投入(慣らし工数を節約);慣らし後に<b>同じ個体を再測定</b>して対照 —— 損失系は低下(慣らし効果)、Ke / R はほぼ不変のはず。</p>"
+                "<div class='manual-note'><b>注意</b>:測定失敗(モーター未起動 / ロックインのタイムアウト / 過電流)は理由を表示、再試行すれば OK;再現性確認のため 2 回測定を推奨。</div>"
+            )},
+            {"id": "breakin", "t": "5. モーター慣らし", "html": (
                 "<p class='manual-intro'>低速で長時間運転し、ブラシと整流子を最適な接触に馴染ませます。<b>10 段階(a〜j)</b>、初期設定で約 5 時間。</p>"
                 "<p><b>操作</b>:ホーム →「モーター慣らし」→ <b>モーター型番</b>(16 種プルダウン)を選択 + <b>備考</b>(任意、40 字以内)を入力 → 10 段階のパラメータを確認(数値欄をタップして編集、変更は自動適用)→「開始」。</p>"
                 "<p>各段階の流れ:ソフトスタート → 運転中 → ソフトストップ → 冷却中 → 次の段階。すべて完了 → ビープ 3 回 → 履歴記録に自動保存。</p>"
@@ -2763,12 +2817,12 @@ MANUAL = {
                 "</tbody></table>"
                 "<div class='manual-note'><b>注意</b>:運転中は全設定がロック。途中で電源を切らない(データ消失);高温時は自動停止して保存;素早く検証したい場合は各段階の時間を短く。各段階で 電圧 / 方向 / 運転時間 / 冷却時間 / 安定電流許容差 を設定可。</div>"
             )},
-            {"id": "test", "t": "5. モーターテスト", "html": (
+            {"id": "test", "t": "6. モーターテスト", "html": (
                 "<p class='manual-intro'>単段階のリアルタイム観察。<b>記録には保存されません</b>。</p>"
-                "<p>ホーム →「モーターテスト」→ <b>電圧(0〜4.5V)/ 運転時間 / 方向 / 安定電流許容差</b> を設定 →「開始」→ リアルタイムデータとグラフを確認、時間で自動停止。スマートモードでは電流が早く安定すると「stable」で終了。</p>"
-                "<div class='manual-note'><b>注意</b>:4.5V の上限はモーター保護のため、回避しない;逆転から正転に切り替える前に一度「停止」を押す。</div>"
+                "<p>ホーム →「モーターテスト」→ <b>電圧(0.6〜4.0V、初期 1V)/ 運転時間 / 方向 / 安定電流許容差</b> を設定 →「開始」→ リアルタイムデータとグラフを確認、時間で自動停止。スマートモードでは電流が早く安定すると「stable」で終了。</p>"
+                "<div class='manual-note'><b>注意</b>:4.0V の上限はモーター保護のため、回避しない;逆転から正転に切り替える前に一度「停止」を押す。</div>"
             )},
-            {"id": "records", "t": "6. 履歴記録", "html": (
+            {"id": "records", "t": "7. 履歴記録", "html": (
                 "<p class='manual-intro'>慣らしごとの全データを自動保存、最大 <b>50 件</b>。</p>"
                 "<p>各件に 名称 / 開始時刻 / 所要時間 / モード / 終了理由 / 最高回転数 / 平均回転数 / 安定電流 を表示。</p>"
                 "<table class='manual-table'><thead><tr><th>ボタン</th><th>用途</th></tr></thead><tbody>"
@@ -2784,13 +2838,13 @@ MANUAL = {
                 "<li>ファームウェア更新 / 工場出荷リセットでも<b>記録は消えません</b>。</li>"
                 "</ul>"
             )},
-            {"id": "database", "t": "7. グローバル慣らしデータ庫", "html": (
+            {"id": "database", "t": "8. グローバル慣らしデータ庫", "html": (
                 "<p class='manual-intro'>世界中のプレイヤーと慣らし記録を共有。機器が<b>直接ネット接続</b>して完了し、エクスポートしてサイトへ上げる必要はありません。<b>インターネットのある WiFi</b> が必要(M1 / Pro 両対応)。</p>"
                 "<p><b>閲覧 / ダウンロード</b>:ホーム →「グローバルデータ庫」→ 接続後、最新 100 件を表示 → <b>モーター型番 / 国 / 完走状態</b> でリアルタイム絞り込み → 各件を「ダウンロード」(本体に保存)または「ダウンロードして適用」(保存しレシピを慣らしページに適用)。</p>"
                 "<p><b>自分の記録を共有</b>:履歴記録 → 1 件を開く → 詳細ページ下部「グローバルデータ庫に共有」→ 確認ダイアログが<b>公開される項目を明示</b>(型番 / 備考 / 共有者 / 国 / 全データ;名前を入力していれば実名表示の警告)→ アップロード確定。アップロード済みなら「この記録は既にデータ庫にあります」と表示(エラーではありません)。</p>"
                 "<div class='manual-note'><b>注意</b>:ダウンロードした記録は署名検証されます;アップロードは公開への同意を意味します。削除は <b>motorlab.tw@gmail.com</b> へ;インターネットのない WiFi に接続すると「サーバーに接続できません」と表示。</div>"
             )},
-            {"id": "ai", "t": "8. AI モーター健康管理(Pro)", "html": (
+            {"id": "ai", "t": "9. AI モーター健康管理(Pro)", "html": (
                 "<p class='manual-intro'>モーターごとに健康指紋を作成し、定期的に再測定・比較して 0〜100 点とアドバイスを提示。<b>他のモーターとではなく、自分自身と比較</b>します。</p>"
                 "<ol>"
                 "<li>ホーム →「AI モーター健康管理」→「+ モーター追加」。</li>"
@@ -2800,27 +2854,33 @@ MANUAL = {
                 "<p>以降、各カードで <b>フル検査</b>(約 2.5 分、最も正確)または <b>クイック検査</b>(約 1.5 分、±5%)を実行可。結果ページにスコア、等級(Optimal / Acceptable / Warning / Critical)、トレンドグラフ、5 項目の指標、テキストアドバイスを表示。</p>"
                 "<div class='manual-note'><b>注意</b>:1 モーターにつき履歴最大 50 回、1 台につき 20 モーターまで;検査中は電源を切らず他のボタンも押さない;高温時は自動中止;M1 ではボタンがグレー(タップでアップグレード案内)。</div>"
             )},
-            {"id": "bearing", "t": "9. ベアリング抵抗測定", "html": (
-                "<p class='manual-intro'>ベアリングの健康度を約 10 秒で測定、全エディションで利用可。<b>減衰が遅いほどベアリングは健康</b>。</p>"
-                "<p>ホーム →「ベアリング抵抗測定」→「測定開始」→ 機器が加速 → 電源を切断 → 減衰時間を測定 → <b>τ 減衰時間</b> と評価(良好 / 注意 / メンテ推奨)を表示。</p>"
-                "<div class='manual-note'><b>注意</b>:回転センサーが正常である必要(「回転数 0」はセンサー未整列または反射マーク脱落);負荷接続は不要;3 回測定して平均推奨。</div>"
+            {"id": "bearing", "t": "10. ベアリング抵抗測定", "html": (
+                "<p class='manual-intro'>ベアリングの滑らかさを測定、全エディションで利用可。<b>完全停止までの時間が長いほどベアリングは滑らか</b>。</p>"
+                "<p>ホーム →「ベアリング抵抗測定」→ テスト電圧(<b>2.4V または 3V</b>)を選択 →「測定開始」→ 機器がその電圧まで加速 → 安定回転数を 5 秒保持 → <b>そのまま電源を切断(ブレーキなし)</b> → 完全停止まで計測 → <b>完全停止時間</b> を表示。</p>"
+                "<div class='manual-note'><b>注意</b>:無負荷のモーターは慣性が小さいため、本測定は<b>時間のみ表示し良否評価は行いません</b>。同じモーターの異なる時期、または異なるモーターの時間を相互比較してください;回転センサーが正常である必要;再現性確認のため 2〜3 回測定を推奨。</div>"
             )},
-            {"id": "brush", "t": "10. ブラシ接触安定測定", "html": (
-                "<p class='manual-intro'>ブラシ接触が均一かを約 15 秒で測定、全エディション対応。<b>接触不均一 → 電流のばらつき → CV 上昇</b>。</p>"
-                "<p>ホーム →「ブラシ接触安定測定」→「測定開始」→「軸が固定されていることを確認」の案内(手で軸をある角度まで回して放し、静止を確認)→ 機器が <b>3 ステップ</b> 実行(各ステップで角度を変更、次の角度へ回すよう案内)→ 各ステップの <b>CV%</b> と評価(良好 / 注意 / 清掃推奨)を表示。</p>"
-                "<div class='manual-note'><b>注意</b>:測定中にモーターが予期せず回転(&gt;100 RPM)すると直ちに中止し「軸が固定されていません」と表示;3 角度は異なる接触点をカバーするため。</div>"
+            {"id": "brush", "t": "11. ブラシ接触安定測定", "html": (
+                "<p class='manual-intro'>ブラシ接触が均一かを約 35 秒で測定、全エディション対応。<b>接触不均一 → 電流のばらつき → CV 上昇</b>。</p>"
+                "<p>ホーム →「ブラシ接触安定測定」→「測定開始」を押すだけ(<b>軸の手動回転は不要</b>)。手順は <b>1V</b> 固定:電圧を 10 秒以内で 0 から 1V まで緩やかに昇圧 → 1V を 5 秒保持 → 1V で電流を 20 秒サンプリング → <b>電流変異係数 CV%</b> を表示。</p>"
+                "<p><b>CV% の見方</b>:CV は固定電圧下での電流のばらつき度で、<b>相対比較のツールであり絶対的な良否ラインはありません</b>(モーター型番ごとに元々異なる)。次のように使います:</p>"
+                "<ul>"
+                "<li>同じモーターの <b>慣らし前 vs 慣らし後</b>:CV 低下 = ブラシが馴染み接触改善。</li>"
+                "<li>同じモーターの <b>長期追跡</b>:CV が徐々に上昇 = ブラシ摩耗 / 整流子の汚れ。</li>"
+                "<li><b>モーター A vs B</b> の相対比較。</li>"
+                "</ul>"
+                "<div class='manual-note'><b>注意</b>:1V 固定・手順固定だからこそ、回・モーターをまたいで公平に比較できます;再現性確認のため 2〜3 回測定を推奨。</div>"
             )},
-            {"id": "settings", "t": "11. システム設定", "html": (
+            {"id": "settings", "t": "12. システム設定", "html": (
                 "<p class='manual-intro'>システム運転中、このページは「ホーム」のみ操作可、他はロックされます。</p>"
                 "<table class='manual-table'><tbody>"
                 "<tr><th>ユーザー設定</th><td>名前 / 国(32 字以内、初期値 <code>--</code>)。各記録に出処として書き込まれます。既存の記録には反映されません。</td></tr>"
-                "<tr><th>WiFi 設定</th><td>ホットスポット名 / パスワード(8〜63 字)を変更 → 保存後に機器が再起動、新しいホットスポットへ再接続。パスワードを忘れた場合は第 13 節参照。</td></tr>"
-                "<tr><th>言語</th><td>中文 / English / 日本語 を切替、即時反映され設定を記憶(初期値は中国語)。</td></tr>"
+                "<tr><th>WiFi 設定</th><td>ホットスポット名 / パスワード(8〜63 字)を変更 → 保存後に機器が再起動、新しいホットスポットへ再接続。パスワードを忘れた場合は第 14 節参照。</td></tr>"
+                "<tr><th>言語</th><td>中文 / English / 日本語 を切替(初期値は中国語)。「確定」を押すと<b>システムが再起動</b>してクリーンに読み込み(約 10 秒、ページは自動再読込);運転中の切替はページ再読込のみで処理は中断しません。</td></tr>"
                 "<tr><th>慣らしモード</th><td>運転時間のみ / スマート安定電流判定(時間到達<b>または</b>電流が早く安定したら次段階へ)。</td></tr>"
                 "<tr><th>温度校正</th><td>表示と実際にずれがある場合に補正を追加(±20°C)。</td></tr>"
                 "<tr><th>高温ロック</th><td>高温ロック温度を設定(初期 50°C、範囲 25〜60°C)。現在温度が設定値より 5°C 以上高い状態が 10 秒続くと高温ロックに入る(停止、リセットで解除)。ブロック内に現在温度も表示。</td></tr>"
-                "<tr><th>平均回転数設定</th><td>許容差(隣接 2 秒の回転数差、初期 50 RPM、10〜500 で調整)。小さいほど厳格。</td></tr>"
-                "<tr><th>ソフトスタート設定</th><td>始動トルク(初期 70%、100% は約 4V)/ 昇速時間(初期 0.3 秒、0.05〜2.0)/ 降速時間(初期 0.7 秒、0.05〜3.0)。始動しない場合はトルクを上げる;暴走して保護に入る場合は下げる。</td></tr>"
+                "<tr><th>平均回転数設定</th><td>許容差(隣接 2 秒の回転数差)、プルダウン 120〜600 RPM、<b>初期 240</b>。許容差が大きいほど安定と判定しやすいが反応は鈍め;モーターが不安定なら大きめに。</td></tr>"
+                "<tr><th>ソフトスタート</th><td>直線的な昇圧(電圧を 0 から 5 秒で目標電圧まで滑らかに、ソフトストップと同じ挙動)、<b>調整パラメータなし</b>。出力電圧は校正済みで、始動トルクの設定は不要。</td></tr>"
                 "<tr><th>ライセンス取得</th><td>M1 を Pro に。下記参照。</td></tr>"
                 "<tr><th>ソフトウェア更新</th><td>自宅 WiFi 経由で最新ファームを自動取得。下記参照。</td></tr>"
                 "<tr><th>RGB ステータスライト</th><td>デュアルライト(内蔵 / パネル)の出力位置 + 明るさ(0〜100%)+ 5 つの状態スタイル。下記参照。</td></tr>"
@@ -2837,20 +2897,20 @@ MANUAL = {
                 "</ul>"
                 "<p><b>エンジニアリングモード</b>:パスワードが必要(3 回間違えると 60 秒ロック、10 分無操作で自動ログアウト)。</p>"
             )},
-            {"id": "safety", "t": "12. 安全と保護", "html": (
+            {"id": "safety", "t": "13. 安全と保護", "html": (
                 "<table class='manual-table'><thead><tr><th>機構</th><th>トリガー / 動作</th></tr></thead><tbody>"
                 "<tr><td>高温保護</td><td>2 つのトリガー:① 温度センサー警報;② 現在温度が「高温ロック温度」設定値より 5°C 以上高い状態が 10 秒継続(システム設定参照)。いずれかで → 直ちにモーター停止 + ビープ 5 回 + ロック。ロック中はステータスバー / フラグ / ステータスライトが高温を表示し続け、ホームは「慣らし / テスト」のみ、操作画面は「リセット / ホーム」のみ操作可。<b>温度が下がってもリセットを押すまで解除されません</b>(高温のままリセットすると再ロック、先に冷却を)。</td></tr>"
-                "<tr><td>ソフトスタート / ソフトストップ</td><td>始動 / 停止は 3 秒の直線的な立上げ / 立下げ。電流の急増と機械的衝撃を防止。</td></tr>"
+                "<tr><td>ソフトスタート / ソフトストップ</td><td>始動は 5 秒の直線的な昇圧(0V→目標電圧)、停止は 3 秒の直線的な立下げ。電流の急増と機械的衝撃を防止。</td></tr>"
                 "<tr><td>電流上限</td><td>測定上限は固定 4A。超過分は読値が頭打ち(停止はしないが、長時間の高電流は高温を誘発する場合あり)。</td></tr>"
                 "<tr><td>起動ロック</td><td>起動後 30 秒以内に 3 回連続クラッシュ → 自動的に前バージョンのファームへ復帰。</td></tr>"
                 "</tbody></table>"
             )},
-            {"id": "reset", "t": "13. 工場出荷リセット(レスキュー)", "html": (
+            {"id": "reset", "t": "14. 工場出荷リセット(レスキュー)", "html": (
                 "<p><b>用途</b>:WiFi 名 / パスワードを忘れたとき、ホットスポットを <code>MotorTester</code> / <code>12345678</code> に戻します。</p>"
                 "<p><b>方法</b>:機器の「工場出荷リセット」接点を 3.3V に短絡(または対応ボタンを押す)<b>5 秒間保持</b> → ビープ 10 回 → 自動再起動。</p>"
                 "<div class='manual-note'><b>WiFi ホットスポット名とパスワードのみリセット</b>。以下はすべて保持:慣らしパラメータ / 各種校正と設定 / Pro ライセンス / 履歴記録 / モーター指紋 / RGB 設定 / 記憶済み外部 WiFi。</div>"
             )},
-            {"id": "faq", "t": "14. よくある質問", "html": (
+            {"id": "faq", "t": "15. よくある質問", "html": (
                 "<table class='manual-table'><thead><tr><th>問題</th><th>対処</th></tr></thead><tbody>"
                 "<tr><td>起動音が鳴らない</td><td>電源 5V とブザー配線を確認</td></tr>"
                 "<tr><td>Web UI が操作中に無反応</td><td>機器の WiFi(MotorTester)に接続されているか確認;端末がインターネット WiFi に自動切替している場合あり → 機器のホットスポットに再接続してページを再読込</td></tr>"
@@ -2865,7 +2925,7 @@ MANUAL = {
                 "<tr><td>待機中に電源を抜いてよい?</td><td>可。モーター完全停止、「適用中」なし、更新中でない状態が望ましい</td></tr>"
                 "</tbody></table>"
             )},
-            {"id": "led", "t": "15. ステータスランプ", "html": (
+            {"id": "led", "t": "16. ステータスランプ", "html": (
                 "<p>初期設定(「RGB ステータスライト」で変更可):</p>"
                 "<table class='manual-table'><thead><tr><th>システム状態</th><th>初期</th><th>意味</th></tr></thead><tbody>"
                 "<tr><td>高温ロック</td><td>赤点滅</td><td>高温保護が作動。冷却して「リセット」を押す</td></tr>"
