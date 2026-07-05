@@ -2457,8 +2457,8 @@
 </div>
 <div class="tech-card">
 <div class="tech-name">DC_CURRENT_CAL</div>
-<h4 data-i18n="t14.title">DC 中位數電流校正</h4>
-<p data-i18n="t14.desc">以純直流(非 PWM)搭配精密電阻逐台校正電流感測,並取多次量測中位數濾除開機暫態,把原始 +3~10% 的感測誤差收斂到約 0.1% 離散。</p>
+<h4 data-i18n="t14.title">DC 電流校正</h4>
+<p data-i18n="t14.desc">以純直流(非 PWM)逐台校正電流感測,把原始 +3~10% 的感測誤差收斂到約 0.1% 離散。</p>
 </div>
 <div class="tech-card">
 <div class="tech-name">EFF_VOLTAGE</div>
@@ -2913,8 +2913,8 @@
       't12.desc': '以脈衝週期法取代固定視窗計數,轉速解析度提升逾 600 倍,任何轉速都能顯示到個位數 RPM。畫面末位跳動反映的是馬達真實轉速波動,而非量測雜訊。',
       't13.title': '轉速感測掃頻校正',
       't13.desc': '每台機器的光學轉速感測都以內建頻率基準掃過 20 個點(100–50,000 RPM)個別校正,線性擬合 R²=0.9999,轉速讀值可溯源、機台之間一致。',
-      't14.title': 'DC 中位數電流校正',
-      't14.desc': '以純直流(非 PWM)搭配精密電阻逐台校正電流感測,並取多次量測中位數濾除開機暫態,把原始 +3~10% 的感測誤差收斂到約 0.1% 離散。',
+      't14.title': 'DC 電流校正',
+      't14.desc': '以純直流(非 PWM)逐台校正電流感測,把原始 +3~10% 的感測誤差收斂到約 0.1% 離散。',
       't15.title': '負載補償馬達實效電壓',
       't15.desc': '硬體只能量到供電端,系統即時補償驅動級壓降與供電下垂,推算馬達端子實際吃到的電壓 ——「設定 3V」馬達就真的看到 3V,畫面並列顯示供電與馬達電壓。',
       't16.title': '損耗轉矩分解',
@@ -3748,8 +3748,8 @@
       't12.desc': 'Reciprocal period timing replaces fixed-window counting, improving RPM resolution over 600× to a single-digit-RPM floor at any speed. The flickering last digits reflect the motor\'s real speed fluctuation, not measurement noise.',
       't13.title': 'Swept-Frequency Tachometer Calibration',
       't13.desc': 'Each unit\'s optical speed sensor is individually calibrated against an internal frequency reference across 20 points (100–50,000 RPM), with a linear fit of R²=0.9999 — so RPM readings are traceable and consistent unit to unit.',
-      't14.title': 'DC Median Current Calibration',
-      't14.desc': 'Current sensing is calibrated per unit using clean DC (not PWM) against a precision resistor, taking the median of repeated measurements to reject turn-on transients — tightening the raw +3–10% sensor error to about 0.1% dispersion.',
+      't14.title': 'DC Current Calibration',
+      't14.desc': 'Current sensing is calibrated per unit using clean DC (not PWM), tightening the raw +3–10% sensor error to about 0.1% dispersion.',
       't15.title': 'Load-Compensated Effective Voltage',
       't15.desc': 'The hardware can only meter the supply, so the system compensates drive-stage drop and supply sag in real time to compute the voltage the motor terminals actually see — "set 3V" means the motor really gets 3V, with supply and motor voltage shown side by side.',
       't16.title': 'Loss-Torque Decomposition',
@@ -4583,8 +4583,8 @@
       't12.desc': 'パルス周期法で固定ウィンドウ計数を置き換え、回転数分解能を 600 倍以上向上、どの回転数でも 1 の位まで表示。末位のちらつきは測定ノイズではなくモーターの実際の回転変動です。',
       't13.title': '掃引周波数によるタコメーター校正',
       't13.desc': '各機の光学式回転センサーを内蔵の周波数基準で 20 点(100–50,000 RPM)個別校正、線形フィット R²=0.9999 —— 回転数の読みはトレーサブルで機体間で一致します。',
-      't14.title': 'DC 中央値による電流校正',
-      't14.desc': '純直流(PWM でなく)と精密抵抗で電流センサーを機体ごとに校正、複数測定の中央値で起動過渡を除去し、生の +3〜10% の誤差を約 0.1% のばらつきに収束させます。',
+      't14.title': 'DC 電流校正',
+      't14.desc': '純直流(PWM でなく)で電流センサーを機体ごとに校正し、生の +3〜10% の誤差を約 0.1% のばらつきに収束させます。',
       't15.title': '負荷補償の実効モーター電圧',
       't15.desc': 'ハードは供給側しか測れないため、駆動段の電圧降下と供給の垂れをリアルタイム補償してモーター端子の実効電圧を算出 ——「3V 設定」でモーターが本当に 3V を受け、供給電圧とモーター電圧を並べて表示。',
       't16.title': '損失トルクの分解',
