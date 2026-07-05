@@ -2400,7 +2400,7 @@
       <div class="tech-card">
         <div class="tech-name">LOSS_DECOMP</div>
         <h4 data-i18n="t16.title">損耗轉矩分解</h4>
-        <p data-i18n="t16.desc">不只給一個「摩擦」數字,而是用最小平方把損耗分解成庫倫摩擦、磁滯、渦流 + 風阻三個物理成分,並以 R² 擬合門檻自動剔除不可信的量測。</p>
+        <p data-i18n="t16.desc">不只給一個「摩擦」數字,而是用最小平方把損耗分解成多個物理成分,並以 R² 擬合門檻自動剔除不可信的量測。</p>
       </div>
       <div class="tech-card">
         <div class="tech-name">EMI_SHIELDING</div>
@@ -3687,7 +3687,7 @@
       't15.title': '負載補償馬達實效電壓',
       't15.desc': '硬體只能量到供電端,系統即時補償驅動級壓降與供電下垂,推算馬達端子實際吃到的電壓 ——「設定 3V」馬達就真的看到 3V,畫面並列顯示供電與馬達電壓。',
       't16.title': '損耗轉矩分解',
-      't16.desc': '不只給一個「摩擦」數字,而是用最小平方把損耗分解成庫倫摩擦、磁滯、渦流 + 風阻三個物理成分,並以 R² 擬合門檻自動剔除不可信的量測。',
+      't16.desc': '不只給一個「摩擦」數字,而是用最小平方把損耗分解成多個物理成分,並以 R² 擬合門檻自動剔除不可信的量測。',
 
       // ===== Specifications 技術規格 =====
       'specs.tag': 'SPECIFICATIONS',
@@ -4522,7 +4522,7 @@
       't15.title': 'Load-Compensated Effective Voltage',
       't15.desc': 'The hardware can only meter the supply, so the system compensates drive-stage drop and supply sag in real time to compute the voltage the motor terminals actually see — "set 3V" means the motor really gets 3V, with supply and motor voltage shown side by side.',
       't16.title': 'Loss-Torque Decomposition',
-      't16.desc': 'Instead of a single "friction" number, least-squares fitting separates loss torque into three physical components — Coulomb friction, hysteresis, and eddy + windage — and an R² threshold automatically rejects untrustworthy measurements.',
+      't16.desc': 'Instead of a single "friction" number, least-squares fitting separates loss torque into multiple physical components, and an R² threshold automatically rejects untrustworthy measurements.',
 
       // ===== Specifications =====
       'specs.tag': 'SPECIFICATIONS',
@@ -5357,7 +5357,7 @@
       't15.title': '負荷補償の実効モーター電圧',
       't15.desc': 'ハードは供給側しか測れないため、駆動段の電圧降下と供給の垂れをリアルタイム補償してモーター端子の実効電圧を算出 ——「3V 設定」でモーターが本当に 3V を受け、供給電圧とモーター電圧を並べて表示。',
       't16.title': '損失トルクの分解',
-      't16.desc': '「摩擦」を 1 つの数値で済ませず、最小二乗で損失トルクをクーロン摩擦・ヒステリシス・渦電流+風損の 3 つの物理成分に分解し、R² のしきい値で信頼できない測定を自動的に除外します。',
+      't16.desc': '「摩擦」を 1 つの数値で済ませず、最小二乗で損失トルクを複数の物理成分に分解し、R² のしきい値で信頼できない測定を自動的に除外します。',
       'specs.tag': 'SPECIFICATIONS',
       'specs.title': '技術仕様',
       'specs.subtitle': 'ハードウェアとソフトウェアの完全な仕様、および各機能の数値入力範囲。',
