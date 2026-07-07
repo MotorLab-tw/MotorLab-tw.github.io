@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" translate="no">
+<html lang="ja" translate="no">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="en" http-equiv="Content-Language"/>
-<title>Motor Wash vs Break-in: What's the Difference? | MotorLab</title>
-<meta content="Motor wash vs motor break-in: two different procedures often confused. The timing, method and purpose of each, when to wash, and a Mini 4WD motor care cycle." name="description"/>
+<meta content="ja" http-equiv="Content-Language"/>
+<title>モーター慣らしはどれくらい?連続 560 回計測の慣らし曲線 | MotorLab</title>
+<meta content="モーター慣らしはどれくらい必要?同じ Mach-Dash PRO を連続 560 回計測し内部抵抗を 1 本の曲線に。最初の約 80 回の上昇は接触面形成、中盤の平坦は慣らし完了、後半のばらつき増大は劣化。曲線が平らになった点が慣らしをやめる目安。" name="description"/>
 <meta content="MotorLab.tw" name="author"/>
-<meta content="motor wash, motor wash vs break-in, Mini 4WD motor wash, motor maintenance cycle, motor lubrication, naphtha wash, WURTH motor lube, Hyper Dash maintenance, motor retirement criteria" name="keywords"/>
+<meta content="モーター慣らし 時間, モーター慣らし どれくらい, ミニ四駆 モーター慣らし, 慣らし曲線, モーター 寿命, ブラシ 接触抵抗, マッハダッシュ PRO, モーター 耐久テスト, MotorLab, motor break-in duration, how long to break in a motor, Mini 4WD motor break-in, break-in curve, motor life, brush contact resistance, Mach-Dash PRO, motor endurance test, MotorLab" name="keywords"/>
 <!-- 正規網址 (避免重複內容問題) -->
-<link href="https://motorlab-tw.github.io/en/guides/motor-wash-vs-break-in/" rel="canonical"/>
+<link href="https://motorlab-tw.github.io/ja/guides/motor-break-in-resistance-curve/" rel="canonical"/>
 <!-- 搜尋引擎指示 -->
 <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
 <meta content="index, follow" name="googlebot"/>
@@ -31,22 +31,22 @@
 <meta content="MotorLab" name="apple-mobile-web-app-title"/>
 <!-- Open Graph (Facebook, LINE, Discord) -->
 <meta content="article" property="og:type"/>
-<meta content="https://motorlab-tw.github.io/en/guides/motor-wash-vs-break-in/" property="og:url"/>
-<meta content="Motor Wash vs Break-in: What's the Difference? | MotorLab" property="og:title"/>
-<meta content="Motor wash vs motor break-in: two different procedures often confused. The timing, method and purpose of each, when to wash, and a Mini 4WD motor care cycle." property="og:description"/>
+<meta content="https://motorlab-tw.github.io/ja/guides/motor-break-in-resistance-curve/" property="og:url"/>
+<meta content="モーター慣らしはどれくらい?連続 560 回計測の慣らし曲線 | MotorLab" property="og:title"/>
+<meta content="モーター慣らしはどれくらい必要?同じ Mach-Dash PRO を連続 560 回計測し内部抵抗を 1 本の曲線に。最初の約 80 回の上昇は接触面形成、中盤の平坦は慣らし完了、後半のばらつき増大は劣化。曲線が平らになった点が慣らしをやめる目安。" property="og:description"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" property="og:image"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" property="og:image:secure_url"/>
 <meta content="image/png" property="og:image:type"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
 <meta content="MotorLab — Mini 4WD® 馬達精密測試系統官方網站預覽圖" property="og:image:alt"/>
-<meta content="en_US" property="og:locale"/>
+<meta content="ja_JP" property="og:locale"/>
 <meta content="en_US" property="og:locale:alternate"/>
 <meta content="MotorLab.tw" property="og:site_name"/>
 <!-- Twitter Card -->
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Motor Wash vs Break-in: What's the Difference? | MotorLab" name="twitter:title"/>
-<meta content="Motor wash vs motor break-in: two different procedures often confused. The timing, method and purpose of each, when to wash, and a Mini 4WD motor care cycle." name="twitter:description"/>
+<meta content="モーター慣らしはどれくらい?連続 560 回計測の慣らし曲線 | MotorLab" name="twitter:title"/>
+<meta content="モーター慣らしはどれくらい必要?同じ Mach-Dash PRO を連続 560 回計測し内部抵抗を 1 本の曲線に。最初の約 80 回の上昇は接触面形成、中盤の平坦は慣らし完了、後半のばらつき増大は劣化。曲線が平らになった点が慣らしをやめる目安。" name="twitter:description"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" name="twitter:image"/>
 <meta content="MotorLab 官方網站預覽圖" name="twitter:image:alt"/>
 <!-- 結構化資料 1: Organization (公司/工作室) -->
@@ -1829,17 +1829,17 @@
     .manual-table { display: block; overflow-x: auto; white-space: nowrap; }
   }
 </style>
-<link href="https://motorlab-tw.github.io/guides/motor-wash-vs-break-in/" hreflang="zh-TW" rel="alternate"/><link href="https://motorlab-tw.github.io/en/guides/motor-wash-vs-break-in/" hreflang="en" rel="alternate"/><link href="https://motorlab-tw.github.io/ja/guides/motor-wash-vs-break-in/" hreflang="ja" rel="alternate"/><link href="https://motorlab-tw.github.io/guides/motor-wash-vs-break-in/" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
+<link href="https://motorlab-tw.github.io/guides/motor-break-in-resistance-curve/" hreflang="zh-TW" rel="alternate"/><link href="https://motorlab-tw.github.io/en/guides/motor-break-in-resistance-curve/" hreflang="en" rel="alternate"/><link href="https://motorlab-tw.github.io/ja/guides/motor-break-in-resistance-curve/" hreflang="ja" rel="alternate"/><link href="https://motorlab-tw.github.io/guides/motor-break-in-resistance-curve/" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Motor Wash vs Motor Break-in: What's the Difference? When to Do Each",
-  "description": "Motor wash vs motor break-in: two different procedures often confused. The timing, method and purpose of each, when to wash, and a Mini 4WD motor care cycle.",
-  "keywords": "motor wash, motor wash vs break-in, Mini 4WD motor wash, motor maintenance cycle, motor lubrication, naphtha wash, WURTH motor lube, Hyper Dash maintenance, motor retirement criteria",
-  "inLanguage": "en",
-  "url": "https://motorlab-tw.github.io/en/guides/motor-wash-vs-break-in/",
+  "headline": "モーター慣らしはどれくらい必要?同じモーターを連続 560 回計測した答え",
+  "description": "モーター慣らしはどれくらい必要?同じ Mach-Dash PRO を連続 560 回計測し内部抵抗を 1 本の曲線に。最初の約 80 回の上昇は接触面形成、中盤の平坦は慣らし完了、後半のばらつき増大は劣化。曲線が平らになった点が慣らしをやめる目安。",
+  "keywords": "モーター慣らし 時間, モーター慣らし どれくらい, ミニ四駆 モーター慣らし, 慣らし曲線, モーター 寿命, ブラシ 接触抵抗, マッハダッシュ PRO, モーター 耐久テスト, MotorLab",
+  "inLanguage": "ja",
+  "url": "https://motorlab-tw.github.io/ja/guides/motor-break-in-resistance-curve/",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://motorlab-tw.github.io/en/guides/motor-wash-vs-break-in/"
+    "@id": "https://motorlab-tw.github.io/ja/guides/motor-break-in-resistance-curve/"
   },
   "author": {
     "@type": "Organization",
@@ -1864,80 +1864,54 @@
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "Home",
-      "item": "https://motorlab-tw.github.io/en/"
+      "name": "ホーム",
+      "item": "https://motorlab-tw.github.io/ja/"
     },
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Guides",
-      "item": "https://motorlab-tw.github.io/en/#guides"
+      "name": "ガイド",
+      "item": "https://motorlab-tw.github.io/ja/#guides"
     },
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Motor Wash vs Break-in",
-      "item": "https://motorlab-tw.github.io/en/guides/motor-wash-vs-break-in/"
+      "name": "慣らし曲線実測",
+      "item": "https://motorlab-tw.github.io/ja/guides/motor-break-in-resistance-curve/"
     }
   ]
 }</script></head>
-<body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/en/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/en/">← Back to home</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/en/">Home</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/en/#guides">Guides</a><span class="sep">/</span><span class="current">Motor Wash vs Break-in</span></nav><article class="guide-article">
-<span class="guide-tag" data-i18n="g4.tag">GUIDE · Clear Up Confusion</span>
-<h1 data-i18n="g4.title">Motor Wash vs Motor Break-in: What's the Difference?</h1><p class="guide-byline">Edited by MotorLab Team</p>
-<p class="guide-lead" data-i18n="g4.lead">"Motor wash" and "motor break-in" are entirely different procedures, often confused. This article clarifies when, how, and why for each.</p>
-<h2 data-i18n="g4.h1">The fundamental difference</h2>
-<table class="guide-table">
-<thead>
-<tr><th data-i18n="g4.t.dim">Aspect</th><th data-i18n="g4.t.runin">Break-in (Run-in)</th><th data-i18n="g4.t.wash">Wash</th></tr>
-</thead>
-<tbody>
-<tr><td data-i18n="g4.t.when">When</td><td data-i18n="g4.t.w1">Before first use of new motor</td><td data-i18n="g4.t.w2">After accumulated carbon residue</td></tr>
-<tr><td data-i18n="g4.t.goal">Purpose</td><td data-i18n="g4.t.g1">Optimize brush-commutator contact</td><td data-i18n="g4.t.g2">Clean internal carbon dust &amp; old lube</td></tr>
-<tr><td data-i18n="g4.t.tool">Tools</td><td data-i18n="g4.t.l1">Break-in station (controlled supply)</td><td data-i18n="g4.t.l2">Stoddard solvent / Zippo fluid</td></tr>
-<tr><td data-i18n="g4.t.time">Duration</td><td data-i18n="g4.t.x1">30-60 min</td><td data-i18n="g4.t.x2">10-15 min</td></tr>
-<tr><td data-i18n="g4.t.after">After</td><td data-i18n="g4.t.a1">Install in car directly</td><td data-i18n="g4.t.a2">Must re-lubricate (WURTH HP-2040 etc.)</td></tr>
-</tbody>
-</table>
-<h2 data-i18n="g4.h2">When to wash a motor?</h2>
-<ul>
-<li data-i18n="g4.l1">Motor feels "gritty" when running</li>
-<li data-i18n="g4.l2">Current noticeably increased at the same voltage (more internal friction)</li>
-<li data-i18n="g4.l3">RPM dropped &gt;5% compared to post-break-in baseline</li>
-<li data-i18n="g4.l4">Audible irregular noise or vibration</li>
-<li data-i18n="g4.l5">Factory <strong>anti-rust oil</strong> needs removal (also applies to brand new)</li>
-</ul>
-<h2 data-i18n="g4.h3">Standard wash procedure</h2>
-<ul>
-<li data-i18n="g4.l6">Prepare Stoddard solvent (green bottle, ~NT$45/0.5L) or Zippo fluid</li>
-<li data-i18n="g4.l7">Submerge motor in solvent, rotate shaft gently to let solvent penetrate</li>
-<li data-i18n="g4.l8">Run briefly at low voltage to flush out carbon dust</li>
-<li data-i18n="g4.l9">Remove and thoroughly air-dry (oil-free compressed air), ensure no residue</li>
-<li data-i18n="g4.l10"><strong>Re-apply lubricant</strong> (WURTH HP-2040 or equivalent), or the motor will feel even draggier</li>
-</ul>
-<div class="guide-warning">
-<p data-i18n="g4.w1">Important: Washing does NOT necessarily make the motor faster! If break-in was inadequate, washing only removes carbon — slow stays slow. <strong>Speed comes from break-in. Washing is maintenance.</strong></p>
-</div>
-<h2 data-i18n="g4.h4">Maintenance schedule recommendation</h2>
-<p data-i18n="g4.p1">Based on real-world experience, lifecycle of a Hyper Dash 2 motor:</p>
-<ul>
-<li data-i18n="g4.l11"><strong>New unit</strong> — complete 10-stage break-in (MotorLab M1/PRO automated)</li>
-<li data-i18n="g4.l12"><strong>After 5-10 races</strong> — first wash + re-lubricate</li>
-<li data-i18n="g4.l13"><strong>Every 5 races</strong> — quick re-lubricate</li>
-<li data-i18n="g4.l14"><strong>Every 15-20 races</strong> — full wash + health fingerprint re-test</li>
-<li data-i18n="g4.l15"><strong>When metrics drop &gt;10%</strong> — consider retirement</li>
-</ul>
+<body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/ja/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/ja/">← ホームへ戻る</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/ja/">ホーム</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/ja/#guides">ガイド</a><span class="sep">/</span><span class="current">慣らし曲線実測</span></nav><article class="guide-article">
+<span class="guide-tag" data-i18n="g13.tag">METHODOLOGY · 慣らし実測</span>
+<h1 data-i18n="g13.title">モーター慣らしはどれくらい必要?連続 560 回計測が答える</h1><p class="guide-byline">編集者:MotorLab Team</p>
+<p class="guide-lead" data-i18n="g13.lead">同じ Mach-Dash PRO を、回転数ロック・低電圧・無負荷の条件で連続 560 回計測し、内部抵抗(ブラシと整流子の接触状態を反映)の累積回数に対する変化を 1 本の曲線に描いた。この線はモーターの全行程 —— 新品から慣らし完了、そして劣化まで —— を記録する。読めば、手元のモーターが今どの段階か(まだ慣らしが必要・最良状態・ピーク過ぎ)を判断できる。</p>
+<p data-i18n="g13.lead2">ミニ四駆モーターの慣らしは多くが感覚と経験頼り;数百回連続・ライフサイクル全体にわたる計測データは、ホビー界でほぼ公開前例がない。以下は同じモーターを連続 560 回計測した実録である。</p>
+<figure data-i18n="g13.fig"><img alt="1 個の Mach-Dash PRO を連続 560 回計測した内部抵抗の周期補正曲線、慣らし 3 段階を示す" class="chart" loading="lazy" src="/images/r_test_j.jpg"/></figure>
+<h2 data-i18n="g13.h1">曲線の 3 つの段階</h2>
+<p data-i18n="g13.pnew"><strong>新生期(前半の上昇、最初の約 80 回)—— 接触面の形成</strong>:初期はブラシと整流子の接触面が馴染んでおらず、運転中に接触面へ安定した界面膜が形成され、接触抵抗が緩やかに上昇する。この上昇は慣らしが進行している正常な現れであり劣化ではない;傾きがここで最大で、接触状態の変化が最も激しい。</p>
+<p data-i18n="g13.pgold"><strong>黄金期(中盤の平坦、約 80〜400 回)—— 状態が定まる</strong>:接触面が馴染み、界面膜が安定し、抵抗が平坦化して以降の変化幅が大きく縮む。この帯は慣らし完了後の安定動作域で、再現性が最良、本番に最も適した状態ウィンドウ。</p>
+<p data-i18n="g13.pdec"><strong>劣化期(後半のばらつき増大、約 400 回以降)—— 接触安定性の低下</strong>:生の計測値(淡色線)が回ごとに大きく振れる;平均はほぼ横ばいだが単発のばらつきが増す。これはブラシ後期の接触安定性低下を反映し、ピークを過ぎた初期兆候であって即故障ではない。</p>
+<h2 data-i18n="g13.h2">慣らし実務への 3 つの読み方</h2>
+<p data-i18n="g13.j1"><strong>1. 曲線の「平坦化点」が慣らしの収束点。</strong>最初の約 80 回で主要な効果が得られ、それ以降は逓減 —— 運転を続けても接触抵抗の改善は限られ、ブラシ寿命を余計に消費するだけ。慣らしを続けるかは、曲線が平らになったかで最も直接的に読める。</p>
+<p data-i18n="g13.j2"><strong>2. 抵抗の上昇は慣らしの正常な形で、異常ではない。</strong>警戒すべきは逆の 2 ケース:曲線が<strong>まったく動かない</strong>(慣らしが接触面に作用していない可能性)、または<strong>全域で高くばらつく</strong>(接触不良、または治具・保持の緩み)。安定して上昇し収束して平坦になるのが、良好な慣らしの特徴。</p>
+<p data-i18n="g13.j3"><strong>3. 「収束までの回数」で個体の素性を比較できる。</strong>速く収束するモーターと長くかかるモーターは接触条件が異なる;この曲線は「慣らしの速さ」を比較可能な指標に変え、選別データとも交差判断できる。</p>
+<h2 data-i18n="g13.h3">テスト条件</h2>
 <div class="guide-tip">
-<p data-i18n="g4.t1">This schedule is precisely trackable via the AI Motor Health Manager in MotorLab, so you know exactly "how many races and how much degradation" for each motor — no more guess-based maintenance.</p>
+<p data-i18n="g13.cond">モーター:Mach-Dash PRO<br/>計測方法:PID 回転数ロック、無負荷、全工程 1.2V 以下の低電圧<br/>5 段階回転数:4,000 / 6,000 / 8,000 / 10,000 / 12,000 RPM<br/>1 回約 1.5 分、計 560 回連続計測</p>
 </div>
-</article><div class="guide-pagination"><div class="left"><a href="/en/guides/tamiya-motor-specs/"><span class="label">← Previous</span><span>Tamiya Motor Reference</span></a></div><div class="center"><a href="https://motorlab-tw.github.io/en/#guides"><span class="label">︿</span><span>Back to guides</span></a></div><div class="right"><a href="/en/guides/racing-motor-break-in/"><span class="label">Next →</span><span>Why Break-in Matters in Racing</span></a></div></div></div></main><footer>
+<p data-i18n="g13.related">関連:まず慣らす価値のある個体を選別 —— <a href="../motor-selection-before-break-in/">選別してから慣らす</a>;完全な原理と 10 段階フロー —— <a href="../motor-break-in-guide/">モーター慣らし完全ガイド</a>;測定・比較・健康判定の全体フレームワーク —— <a href="../motor-analysis-methodology/">三本柱方法論</a>。</p>
+<div class="guide-warning">
+<p data-i18n="g13.w1">この曲線は<strong>同一モーター・同一計測条件下の相対トレンド</strong>を反映するものであり、絶対抵抗値ではない;機台や条件をまたいだ絶対値の直接比較は不可。その価値は、単一モーターの慣らし進行と劣化を読み取れる時系列に変える点にある。</p>
+</div>
+</article><div class="guide-pagination"><div class="left"><a href="/ja/guides/motor-selection-before-break-in/"><span class="label">← 前の記事</span><span>モーター選別</span></a></div><div class="center"><a href="https://motorlab-tw.github.io/ja/#guides"><span class="label">︿</span><span>ガイド一覧へ</span></a></div><div class="right"><span class="label">次の記事 →</span><span class="disabled">—</span></div></div></div></main><footer>
 <div class="container">
-<div class="footer-trademark" data-i18n="footer.trademark">"Mini 4WD"<sup>®</sup> and "ミニ四駆"<sup>®</sup> are registered trademarks of TAMIYA, INC. (Japan Trademark Registration No. 2168392). MotorLab is an independent studio and has no affiliation with, authorization from, sponsorship by, or endorsement from TAMIYA, INC. References to these names on this site are made solely to indicate product compatibility. All trademark rights belong to their respective owners.</div>
+<div class="footer-trademark" data-i18n="footer.trademark">「Mini 4WD」<sup>®</sup> および「ミニ四駆」<sup>®</sup> は株式会社タミヤ（TAMIYA, INC.）の登録商標です（日本商標登録番号 第 2168392 号）。MotorLab は独立系スタジオであり、株式会社タミヤとは一切の関連がなく、その許諾・協賛・推奨も受けていません。本サイトでの当該名称への言及は、製品の適用範囲を示す目的のみで行われており、すべての商標権は各権利者に帰属します。</div>
 <div class="footer-inner">
 <div>
 <strong>MotorLab.tw</strong> · <span data-i18n="footer.tagline">Mini 4WD Performance Lab</span>
 </div>
 <div class="mono">
-        © 2026 MotorLab · <span data-i18n="footer.firmware">Firmware</span> v3.2.29
+        © 2026 MotorLab · <span data-i18n="footer.firmware">ファームウェア</span> v3.2.29
       </div>
 </div>
 </div>

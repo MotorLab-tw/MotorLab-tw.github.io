@@ -561,6 +561,35 @@ GUIDES = [
             },
         },
     },
+    # ---------- g13:磨馬達要磨多久 —— R 磨合曲線實測(methodology hub)----------
+    {
+        "slug": "motor-break-in-resistance-curve",
+        "key": "g13",
+        "type": "guides",
+        "i18n": {
+            "zh": {
+                "title": "磨馬達要磨多久?連續量測 560 次的磨合曲線 | MotorLab",
+                "description": "磨馬達到底要磨多久?我們對同一顆 Mach-Dash PRO 連續量測 560 次,把內部電阻畫成一條磨合曲線:前 80 次爬升是接觸面成形、中段平穩是磨合完成、後段離散上升是衰退。看曲線何時轉平,就知道該不該繼續磨。",
+                "keywords": "磨馬達, 磨馬達要磨多久, 馬達磨合, 磨合完成, 磨合曲線, 馬達壽命, 碳刷 接觸電阻, Mach-Dash PRO, 迷你四驅車 馬達實測, MotorLab",
+                "breadcrumb": "磨合曲線實測",
+                "h1_for_ld": "磨馬達到底要磨多久?一顆馬達連續量測 560 次給你答案",
+            },
+            "en": {
+                "title": "How Long to Break In a Motor? 560 Runs, One Curve | MotorLab",
+                "description": "How long to break in a motor? We ran one Mach-Dash PRO 560 times, plotting resistance: early rise, plateau, then rising scatter — read where it flattens.",
+                "keywords": "motor break-in duration, how long to break in a motor, Mini 4WD motor break-in, break-in curve, motor life, brush contact resistance, Mach-Dash PRO, motor endurance test, MotorLab",
+                "breadcrumb": "Break-in R Curve",
+                "h1_for_ld": "How Long to Break In a Motor? 560 Runs on One Mach-Dash PRO, One Resistance Curve",
+            },
+            "ja": {
+                "title": "モーター慣らしはどれくらい?連続 560 回計測の慣らし曲線 | MotorLab",
+                "description": "モーター慣らしはどれくらい必要?同じ Mach-Dash PRO を連続 560 回計測し内部抵抗を 1 本の曲線に。最初の約 80 回の上昇は接触面形成、中盤の平坦は慣らし完了、後半のばらつき増大は劣化。曲線が平らになった点が慣らしをやめる目安。",
+                "keywords": "モーター慣らし 時間, モーター慣らし どれくらい, ミニ四駆 モーター慣らし, 慣らし曲線, モーター 寿命, ブラシ 接触抵抗, マッハダッシュ PRO, モーター 耐久テスト, MotorLab",
+                "breadcrumb": "慣らし曲線実測",
+                "h1_for_ld": "モーター慣らしはどれくらい必要?同じモーターを連続 560 回計測した答え",
+            },
+        },
+    },
 ]
 
 # UI 字串(教學頁面通用元件:nav / 麵包屑 / 分頁)
@@ -695,7 +724,7 @@ HUBS = [
     },
     {
         "slug": "methodology",
-        "include": ["g5", "g6", "g7", "g8", "g10", "g11", "g12"],
+        "include": ["g5", "g6", "g7", "g8", "g10", "g11", "g12", "g13"],
         "i18n": {
             "zh": {
                 "title": "方法論 — Mini 4WD® 馬達分析與比賽策略 | MotorLab",

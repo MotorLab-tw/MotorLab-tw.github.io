@@ -1024,6 +1024,9 @@
     border-radius: 10px;
     border: 1px solid var(--border);
   }
+  .guide-article figure img.chart {
+    width: 100%;
+  }
   .guide-article ul {
     margin: 10px 0 10px 4px;
     padding-left: 22px;
@@ -2620,7 +2623,7 @@
 <h2 class="section-title" data-i18n="g.title">四驅車知識庫</h2>
 <p class="section-subtitle" data-i18n="g.subtitle">從原理到實作,整理迷你四驅車馬達磨合最常見的問題與解答。</p>
 </div>
-<div class="hub-cards"><a class="hub-card" href="/guides/"><span class="hub-card-tag">GUIDES</span><h3 class="hub-card-title">教學</h3><p class="hub-card-desc">從馬達磨合的科學原理、實作步驟、常見錯誤,到保養觀念。為新手與回鍋玩家準備的系統化教學系列。</p><div class="hub-card-meta">3 篇文章 →</div></a><a class="hub-card" href="/benchmarks/"><span class="hub-card-tag">BENCHMARKS</span><h3 class="hub-card-title">效能對比</h3><p class="hub-card-desc">Mini 4WD 各款馬達的官方規格速查與性能對照,協助你依車架類型與賽道特性挑選最佳搭配。</p><div class="hub-card-meta">2 篇文章 →</div></a><a class="hub-card" href="/methodology/"><span class="hub-card-tag">METHODOLOGY</span><h3 class="hub-card-title">方法論</h3><p class="hub-card-desc">進階分析方法與比賽策略系列 — 把馬達調校從「感覺」推進到「數據」,從個別技巧推進到系統化方法論。</p><div class="hub-card-meta">7 篇文章 →</div></a></div>
+<div class="hub-cards"><a class="hub-card" href="/guides/"><span class="hub-card-tag">GUIDES</span><h3 class="hub-card-title">教學</h3><p class="hub-card-desc">從馬達磨合的科學原理、實作步驟、常見錯誤,到保養觀念。為新手與回鍋玩家準備的系統化教學系列。</p><div class="hub-card-meta">3 篇文章 →</div></a><a class="hub-card" href="/benchmarks/"><span class="hub-card-tag">BENCHMARKS</span><h3 class="hub-card-title">效能對比</h3><p class="hub-card-desc">Mini 4WD 各款馬達的官方規格速查與性能對照,協助你依車架類型與賽道特性挑選最佳搭配。</p><div class="hub-card-meta">2 篇文章 →</div></a><a class="hub-card" href="/methodology/"><span class="hub-card-tag">METHODOLOGY</span><h3 class="hub-card-title">方法論</h3><p class="hub-card-desc">進階分析方法與比賽策略系列 — 把馬達調校從「感覺」推進到「數據」,從個別技巧推進到系統化方法論。</p><div class="hub-card-meta">8 篇文章 →</div></a></div>
 </div>
 </section>
 <!-- Changelog -->
@@ -3550,6 +3553,23 @@
       'g12.pit': '<strong>⚠️ I₀ 陷阱</strong>：「無載電流越低越好」只在<strong>同 Ke 群內</strong>成立。因為 I₀ = T_loss / Kt，一顆 Ke 高的馬達即使損耗較大，I₀ 也可能較低。直接拿整批比 I₀ 會系統性偏袒高 Ke 個體，而高 Ke 在需要極速時恰恰是劣勢。所以務必先分群、再排名。',
       'g12.related': '延伸閱讀：量測、比較、健康判斷的整體框架見 <a href="../motor-analysis-methodology/">馬達分析的三支柱方法論</a>；選出好馬達後如何磨，見 <a href="../motor-break-in-guide/">馬達磨合完整指南</a>；依賽道決定目標 Ke，見 <a href="../track-analysis-motor-selection/">軌道分析與馬達選型</a>。',
       'g12.w1': '相對比較（同批排名）非常穩健；但由 Kt 換算的轉矩<strong>絕對值</strong>，精度取決於 R 的量測，而碳刷接觸電阻會隨電流與轉速變動，是最大的系統誤差來源。日常選別排名不受影響 —— 只有要對規格書或模擬比對時，才需要進一步校正。',
+      'g13.tag': 'METHODOLOGY · 磨合實測',
+      'g13.title': '磨馬達到底要磨多久?一顆馬達連續量測 560 次給你答案',
+      'g13.lead': '同一顆 Mach-Dash PRO,在鎖定轉速、低電壓、空載條件下連續量測 560 次,將內部電阻(反映碳刷與整流子的接觸狀態)隨累積次數的變化繪成一條曲線。這條線完整記錄一顆馬達從全新、磨合完成到衰退的歷程 —— 讀懂它,就能判斷手上這顆正處於哪個階段:仍需磨合、正值最佳狀態,或已過巔峰。',
+      'g13.lead2': '迷你四驅車馬達的磨合,多半靠手感與經驗;連續數百次、橫跨整個生命週期的量測數據,在玩家圈幾乎沒有公開先例。以下是我們對同一顆馬達連續量測 560 次的實錄。',
+      'g13.fig': '<img class="chart" src="/images/r_test_c.jpg" alt="一顆 Mach-Dash PRO 連續量測 560 次的內部電阻循環校正曲線,呈現磨合三階段" loading="lazy">',
+      'g13.h1': '曲線的三個階段',
+      'g13.pnew': '<strong>新生期(前段爬升,約前 80 次)—— 接觸面成形</strong>:初期碳刷與整流子接觸面尚未貼合,運轉中於接觸面形成一層穩定的界面膜,使接觸電阻緩慢上升。此段電阻上升是磨合正在發生的正常表現,而非劣化;曲線斜率在此最大,代表接觸狀態變化最劇烈。',
+      'g13.pgold': '<strong>黃金期(中段平穩,約 80–400 次)—— 狀態定型</strong>:接觸面完成貼合、界面膜趨於穩定,電阻轉為平坦,後續變化幅度顯著縮小。此區間為磨合完成後的穩定工作區,重複性最佳,也是最適合上場的狀態窗口。',
+      'g13.pdec': '<strong>衰退期(後段離散度上升,約 400 次後)—— 接觸穩定度下降</strong>:原始量測值(淡色線)逐次跳動明顯放大,均值仍大致持平,但單次離散度上升。此反映碳刷後期接觸穩定性下降,是巔峰已過的早期指標,而非立即故障。',
+      'g13.h2': '對磨合實務的三項判讀',
+      'g13.j1': '<strong>一、曲線的「轉平點」即磨合的收斂點。</strong>約前 80 次已取得主要效果,其後為遞減報酬 —— 繼續運轉對接觸電阻改善有限,反而額外消耗碳刷壽命。判斷是否需繼續磨合,以曲線是否轉平最為直接。',
+      'g13.j2': '<strong>二、電阻上升是磨合的正常型態,不需視為異常。</strong>需警覺的是兩種相反情況:曲線<strong>全程無變化</strong>(磨合可能未實際作用於接觸面),或<strong>全程高度離散</strong>(接觸不良,或治具/夾持鬆動)。穩定爬升後收斂平坦,才是磨合品質良好的特徵。',
+      'g13.j3': '<strong>三、可用「收斂所需次數」比較個體體質。</strong>快速收斂與長時間才穩定的馬達,接觸條件不同;此曲線把「磨合快慢」量化為可比較的指標,也可與選別數據交叉判斷。',
+      'g13.h3': '測試條件',
+      'g13.cond': '馬達型號:Mach-Dash PRO<br>量測方式:PID 鎖定轉速、空載、全程 1.2V 以下低電壓<br>5 階段轉速:4,000 / 6,000 / 8,000 / 10,000 / 12,000 RPM<br>單次約 1.5 分鐘,總計 560 次連續量測',
+      'g13.related': '延伸閱讀:先篩選出值得投入磨合的個體,見 <a href="../motor-selection-before-break-in/">先選別,後磨合</a>;磨合的完整原理與 10 階段流程,見 <a href="../motor-break-in-guide/">馬達磨合完整指南</a>;量測、比較、健康判斷的整體框架,見 <a href="../motor-analysis-methodology/">三支柱方法論</a>。',
+      'g13.w1': '此曲線反映的是<strong>同一顆馬達、同一組量測條件下的相對趨勢</strong>,而非絕對電阻值;跨機台或跨條件的絕對值不宜直接比較。其價值在於將單顆馬達的磨合進程與衰退,轉為可判讀的時間序列。',
 
       'cl.tag': 'CHANGELOG',
       'cl.title': '韌體更新日誌',
@@ -4385,6 +4405,23 @@
       'g12.pit': '<strong>⚠️ The I₀ trap</strong>: “lower no-load current is better” only holds <strong>within the same Ke group</strong>. Since I₀ = T_loss / Kt, a high-Ke motor can read lower I₀ even with larger losses. Comparing I₀ across the whole batch systematically favors high-Ke units — and high Ke is exactly a disadvantage where you need top speed. So always group first, then rank.',
       'g12.related': 'Further reading: the overall measure / compare / judge-health framework is in <a href="../motor-analysis-methodology/">the three-pillar methodology for motor analysis</a>; how to break in once you\'ve picked a good motor is in <a href="../motor-break-in-guide/">the complete motor break-in guide</a>; deciding a target Ke by track is in <a href="../track-analysis-motor-selection/">track analysis &amp; motor selection</a>.',
       'g12.w1': 'Relative comparison (ranking within one batch) is very robust; but the <strong>absolute</strong> torque converted from Kt depends on the accuracy of R, and brush contact resistance varies with current and speed — the largest source of systematic error. Everyday selection ranking is unaffected — only when matching against a datasheet or simulation do you need further calibration.',
+      'g13.tag': 'METHODOLOGY · Break-in Data',
+      'g13.title': 'How Long to Break In a Motor? 560 Runs on One Motor, Answered',
+      'g13.lead': 'We ran one Mach-Dash PRO 560 times under locked speed, low voltage and no load, plotting its internal resistance (a proxy for the brush–commutator contact state) against the cumulative run count. The line captures a motor\'s whole arc — from new, through fully broken-in, to decline — so you can tell which stage the motor in your hand is at: still needs running-in, at its best, or past its peak.',
+      'g13.lead2': 'Mini 4WD motor break-in usually rides on feel and experience; hundreds of continuous measurements spanning a whole life cycle have almost no public precedent in the hobby. Below is our log of one motor measured 560 times in a row.',
+      'g13.fig': '<img class="chart" src="/images/r_test_e.jpg" alt="Internal-resistance cycle-aligned curve of one Mach-Dash PRO over 560 continuous runs, showing the three break-in stages" loading="lazy">',
+      'g13.h1': 'The curve\'s three stages',
+      'g13.pnew': '<strong>Newborn stage (early rise, first ~80 runs) — contact surface forming</strong>: at first the brush and commutator faces haven\'t seated; running builds a stable interface film on the contact surface, so contact resistance climbs slowly. This rise is break-in happening, not degradation; the slope is steepest here, where the contact state changes most.',
+      'g13.pgold': '<strong>Golden stage (mid plateau, ~80–400 runs) — settled</strong>: the faces have seated and the interface film has stabilized, so resistance flattens and further change shrinks markedly. This band is the stable working region after break-in — best repeatability, and the state window best suited for racing.',
+      'g13.pdec': '<strong>Decline stage (rising scatter, after ~400 runs) — contact stability dropping</strong>: the raw readings (faint line) swing more run-to-run; the mean still holds roughly flat, but single-shot scatter rises. This reflects the brush\'s late-stage contact stability falling — an early sign the peak is past, not an immediate failure.',
+      'g13.h2': 'Three practical readings for break-in',
+      'g13.j1': '<strong>1. The curve\'s flattening point is where break-in converges.</strong> The first ~80 runs capture most of the effect; beyond that is diminishing returns — more running barely improves contact resistance and just spends brush life. Whether to keep breaking in reads most directly off whether the curve has flattened.',
+      'g13.j2': '<strong>2. A rising resistance is the normal shape of break-in, not an anomaly.</strong> Watch for the two opposite cases: a curve that <strong>never moves</strong> (break-in may not be reaching the contact surface), or one that is <strong>scattered throughout</strong> (poor contact, or a loose jig/clamp). A steady rise that then converges flat is the signature of good break-in.',
+      'g13.j3': '<strong>3. Use “runs to converge” to compare a motor\'s constitution.</strong> Motors that settle fast versus those that take long have different contact conditions; the curve turns “break-in speed” into a comparable metric, and cross-reads well with selection data.',
+      'g13.h3': 'Test conditions',
+      'g13.cond': 'Motor: Mach-Dash PRO<br>Method: PID speed-lock, no load, low voltage throughout (below 1.2V)<br>5 speed steps: 4,000 / 6,000 / 8,000 / 10,000 / 12,000 RPM<br>~1.5 min per run, 560 continuous runs total',
+      'g13.related': 'Further reading: screen for motors worth breaking in first — <a href="../motor-selection-before-break-in/">select before break-in</a>; the full physics and 10-stage procedure — <a href="../motor-break-in-guide/">the complete break-in guide</a>; the measure / compare / judge-health framework — <a href="../motor-analysis-methodology/">the three-pillar methodology</a>.',
+      'g13.w1': 'This curve reflects a <strong>relative trend for one motor under one set of measurement conditions</strong>, not an absolute resistance value; absolute values across machines or conditions should not be compared directly. Its worth is turning a single motor\'s break-in progress and decline into a readable time series.',
 
       'cl.tag': 'CHANGELOG',
       'cl.title': 'Firmware Release Notes',
@@ -5304,6 +5341,23 @@
       'g12.pit': '<strong>⚠️ I₀ の落とし穴</strong>：「無負荷電流は低いほど良い」は<strong>同じ Ke グループ内</strong>でのみ成立する。I₀ = T_loss / Kt なので、Ke の高いモーターは損失が大きくても I₀ が低く出ることがある。バッチ全体で I₀ を比べると高 Ke 個体を体系的に優遇し、高 Ke は最高速が必要な場面ではまさに不利。だから必ず先にグループ分けしてからランキング。',
       'g12.related': '関連：測定・比較・健康判定の全体フレームワークは <a href="../motor-analysis-methodology/">モーター分析の三本柱方法論</a>；選んだ後の慣らし方は <a href="../motor-break-in-guide/">モーター慣らし完全ガイド</a>；コースから目標 Ke を決めるのは <a href="../track-analysis-motor-selection/">コース分析とモーター選び</a>。',
       'g12.w1': '相対比較（同バッチ内のランキング）は非常に堅牢；だが Kt から換算したトルクの<strong>絶対値</strong>は R の測定精度に依存し、ブラシ接触抵抗は電流と回転数で変化するため、最大の系統誤差源。日常の選別ランキングには影響しない —— データシートやシミュレーションと照合するときのみ追加校正が必要。',
+      'g13.tag': 'METHODOLOGY · 慣らし実測',
+      'g13.title': 'モーター慣らしはどれくらい必要?連続 560 回計測が答える',
+      'g13.lead': '同じ Mach-Dash PRO を、回転数ロック・低電圧・無負荷の条件で連続 560 回計測し、内部抵抗(ブラシと整流子の接触状態を反映)の累積回数に対する変化を 1 本の曲線に描いた。この線はモーターの全行程 —— 新品から慣らし完了、そして劣化まで —— を記録する。読めば、手元のモーターが今どの段階か(まだ慣らしが必要・最良状態・ピーク過ぎ)を判断できる。',
+      'g13.lead2': 'ミニ四駆モーターの慣らしは多くが感覚と経験頼り;数百回連続・ライフサイクル全体にわたる計測データは、ホビー界でほぼ公開前例がない。以下は同じモーターを連続 560 回計測した実録である。',
+      'g13.fig': '<img class="chart" src="/images/r_test_j.jpg" alt="1 個の Mach-Dash PRO を連続 560 回計測した内部抵抗の周期補正曲線、慣らし 3 段階を示す" loading="lazy">',
+      'g13.h1': '曲線の 3 つの段階',
+      'g13.pnew': '<strong>新生期(前半の上昇、最初の約 80 回)—— 接触面の形成</strong>:初期はブラシと整流子の接触面が馴染んでおらず、運転中に接触面へ安定した界面膜が形成され、接触抵抗が緩やかに上昇する。この上昇は慣らしが進行している正常な現れであり劣化ではない;傾きがここで最大で、接触状態の変化が最も激しい。',
+      'g13.pgold': '<strong>黄金期(中盤の平坦、約 80〜400 回)—— 状態が定まる</strong>:接触面が馴染み、界面膜が安定し、抵抗が平坦化して以降の変化幅が大きく縮む。この帯は慣らし完了後の安定動作域で、再現性が最良、本番に最も適した状態ウィンドウ。',
+      'g13.pdec': '<strong>劣化期(後半のばらつき増大、約 400 回以降)—— 接触安定性の低下</strong>:生の計測値(淡色線)が回ごとに大きく振れる;平均はほぼ横ばいだが単発のばらつきが増す。これはブラシ後期の接触安定性低下を反映し、ピークを過ぎた初期兆候であって即故障ではない。',
+      'g13.h2': '慣らし実務への 3 つの読み方',
+      'g13.j1': '<strong>1. 曲線の「平坦化点」が慣らしの収束点。</strong>最初の約 80 回で主要な効果が得られ、それ以降は逓減 —— 運転を続けても接触抵抗の改善は限られ、ブラシ寿命を余計に消費するだけ。慣らしを続けるかは、曲線が平らになったかで最も直接的に読める。',
+      'g13.j2': '<strong>2. 抵抗の上昇は慣らしの正常な形で、異常ではない。</strong>警戒すべきは逆の 2 ケース:曲線が<strong>まったく動かない</strong>(慣らしが接触面に作用していない可能性)、または<strong>全域で高くばらつく</strong>(接触不良、または治具・保持の緩み)。安定して上昇し収束して平坦になるのが、良好な慣らしの特徴。',
+      'g13.j3': '<strong>3. 「収束までの回数」で個体の素性を比較できる。</strong>速く収束するモーターと長くかかるモーターは接触条件が異なる;この曲線は「慣らしの速さ」を比較可能な指標に変え、選別データとも交差判断できる。',
+      'g13.h3': 'テスト条件',
+      'g13.cond': 'モーター:Mach-Dash PRO<br>計測方法:PID 回転数ロック、無負荷、全工程 1.2V 以下の低電圧<br>5 段階回転数:4,000 / 6,000 / 8,000 / 10,000 / 12,000 RPM<br>1 回約 1.5 分、計 560 回連続計測',
+      'g13.related': '関連:まず慣らす価値のある個体を選別 —— <a href="../motor-selection-before-break-in/">選別してから慣らす</a>;完全な原理と 10 段階フロー —— <a href="../motor-break-in-guide/">モーター慣らし完全ガイド</a>;測定・比較・健康判定の全体フレームワーク —— <a href="../motor-analysis-methodology/">三本柱方法論</a>。',
+      'g13.w1': 'この曲線は<strong>同一モーター・同一計測条件下の相対トレンド</strong>を反映するものであり、絶対抵抗値ではない;機台や条件をまたいだ絶対値の直接比較は不可。その価値は、単一モーターの慣らし進行と劣化を読み取れる時系列に変える点にある。',
     }
   };
 
