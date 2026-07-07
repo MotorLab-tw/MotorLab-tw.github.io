@@ -135,7 +135,7 @@
     "軸承阻力測試(斷電滑行靜止時間量測)",
     "電刷接觸穩定度 CV 分析",
     "歷史紀錄 50 筆 (JSON / CSV 匯入匯出)",
-    "內建 Web 操作介面 (WebSocket 250ms 推送)",
+    "內建 Web 操作介面 (WebSocket 即時推送)",
     "OTA 線上韌體更新 (HMAC-SHA256 簽章)",
     "三層安全保護機制 (抗 EMI、< 100 ms 過流急停、Watchdog 自動復原)",
     "雙區 RGB 狀態燈自訂顯示 (5 組狀態樣式)",
@@ -2229,7 +2229,7 @@
 <svg viewbox="0 0 24 24"><rect height="14" rx="2" width="20" x="2" y="3"></rect><path d="M8 21h8M12 17v4"></path></svg>
 </div>
 <h3 data-i18n="f7.title">内蔵 Web 操作インターフェース</h3>
-<p data-i18n="f7.desc">端末は WiFi ホットスポットと Web 操作インターフェースを内蔵。スマホ・タブレット・ノート PC で利用でき、アプリのインストール不要。WebSocket によるリアルタイムデータ配信、250ms 更新間隔。インターフェースは繁体中国語・English・日本語の 3 言語をワンタップ切替で内蔵し、世界中のプレイヤーが母国語で使えます。</p>
+<p data-i18n="f7.desc">端末は WiFi ホットスポットと Web 操作インターフェースを内蔵。スマホ・タブレット・ノート PC で利用でき、アプリのインストール不要。WebSocket によるリアルタイムデータ配信。インターフェースは繁体中国語・English・日本語の 3 言語をワンタップ切替で内蔵し、世界中のプレイヤーが母国語で使えます。</p>
 <div class="feature-meta">
 <span class="feature-tag" data-i18n="f7.tag1">インストール不要</span>
 <span class="feature-tag" data-i18n="f7.tag2">クロスプラットフォーム</span>
@@ -2697,11 +2697,11 @@
 <div class="about-box">
 <p class="lead" data-i18n="about.p1">MotorLab は Mini 4WD<sup>®</sup> モーターの精密測定に特化した独立系スタジオです。</p>
 <p data-i18n="about.p2">サーキット上のコンマ数秒の差は、機材・調整・測定方法の長期的な積み重ねから生まれると私たちは考えています。プレイヤーにとって「速くなった感覚」は、経験則ではなく機器データで検証できる事実であるべきです。</p>
-<p data-i18n="about.p3">初代プロトタイプから第 3 世代 v3 システムまで、MotorLab は 15 のマイルストーンを経て、累計 19,000 行を超えるファームウェアコードを積み重ねてきました。すべての機能は実機モーターでの検証を経てからユーザーへ届けられます。実機インターフェースは繁体中国語・English・日本語の 3 言語を内蔵し、世界中のプレイヤーが母国語で操作できます。</p>
+<p data-i18n="about.p3">初代プロトタイプから第 3 世代 v3 システムまで、MotorLab は 18 のマイルストーンを経て、累計 20,000 行を超えるファームウェアコードを積み重ねてきました。すべての機能は実機モーターでの検証を経てからユーザーへ届けられます。実機インターフェースは繁体中国語・English・日本語の 3 言語を内蔵し、世界中のプレイヤーが母国語で操作できます。</p>
 <p class="about-disclaimer" data-i18n="about.p4">MotorLab は独立系スタジオであり、株式会社タミヤ（TAMIYA, INC.）の関連企業ではなく、その許諾や協賛も受けていません。本製品は互換性テスト機器です。</p>
 <div class="about-stats">
 <div>
-<div class="stat-num">15</div>
+<div class="stat-num">18</div>
 <div class="stat-label" data-i18n="about.s1">開発マイルストーン</div>
 </div>
 <div>
@@ -2837,7 +2837,7 @@
       'f6.desc': '自動儲存最多 50 筆完整磨合紀錄,包含每階段詳細數據。支援 JSON / CSV 匯出、檔案匯入、一鍵套用回磨合頁。所有資料離線儲存於裝置,無雲端依賴。',
       'f6.tag2': '離線儲存',
       'f7.title': '內建 Web 操作介面',
-      'f7.desc': '裝置自帶 WiFi 熱點與網頁操作介面,手機、平板、筆電皆可使用,無需安裝任何 App。WebSocket 即時數據推送,250ms 更新頻率。介面內建繁體中文、English、日本語三語,一鍵切換,全球玩家無語言隔閡。',
+      'f7.desc': '裝置自帶 WiFi 熱點與網頁操作介面,手機、平板、筆電皆可使用,無需安裝任何 App。WebSocket 即時數據推送。介面內建繁體中文、English、日本語三語,一鍵切換,全球玩家無語言隔閡。',
       'f7.tag1': '免安裝',
       'f7.tag2': '跨平台',
       'f7.tag3': '繁中・EN・日本語',
@@ -3630,7 +3630,7 @@
       'about.title': '關於 MotorLab',
       'about.p1': 'MotorLab 是一個專注於 Mini 4WD<sup>®</sup> 馬達精密測試的獨立工作室。',
       'about.p2': '我們相信,賽道上的每一個百分秒差距,都來自設備、調校與量測方法的長期積累。對玩家而言,「感覺變快」應該是可以被儀器數據驗證的事實,而不是憑經驗的玄學。',
-      'about.p3': '從首版原型到第三代 v3 系統,MotorLab 已歷經 15 個里程碑、累計超過 19,000 行韌體程式。每一項功能都經過真實馬達實機驗證,才會發布到使用者手上。實機介面更內建繁體中文、English、日本語三語,讓世界各地的玩家都能以母語操作。',
+      'about.p3': '從首版原型到第三代 v3 系統,MotorLab 已歷經 18 個里程碑、累計超過 20,000 行韌體程式。每一項功能都經過真實馬達實機驗證,才會發布到使用者手上。實機介面更內建繁體中文、English、日本語三語,讓世界各地的玩家都能以母語操作。',
       'about.p4': 'MotorLab 是獨立工作室,非田宮模型(株式会社タミヤ／TAMIYA, INC.)關聯企業,亦未受其授權或贊助。本產品為相容性測試設備。',
       'about.s1': '開發里程碑',
       'about.s2': '當前韌體版本',
@@ -3690,7 +3690,7 @@
       'f6.desc': 'Auto-stores up to 50 complete break-in records with per-stage detail. JSON / CSV export, file import, one-click re-apply. All data stored locally on the device — no cloud dependency.',
       'f6.tag2': 'Offline storage',
       'f7.title': 'Built-in Web Interface',
-      'f7.desc': 'Device hosts its own WiFi hotspot and web UI — phone, tablet, laptop all work without installing any app. WebSocket live data push at 250ms refresh rate. The interface ships in Traditional Chinese, English and Japanese with one-tap switching, so racers worldwide use it in their own language.',
+      'f7.desc': 'Device hosts its own WiFi hotspot and web UI — phone, tablet, laptop all work without installing any app. WebSocket live data push. The interface ships in Traditional Chinese, English and Japanese with one-tap switching, so racers worldwide use it in their own language.',
       'f7.tag1': 'No install',
       'f7.tag2': 'Cross-platform',
       'f7.tag3': '繁中・EN・日本語',
@@ -4483,7 +4483,7 @@
       'about.title': 'About MotorLab',
       'about.p1': 'MotorLab is an independent studio dedicated to precision Mini 4WD<sup>®</sup> motor diagnostics.',
       'about.p2': 'We believe every hundredth-of-a-second gap on the track comes from long-term accumulation in equipment, tuning, and measurement methodology. For racers, "feels faster" should be a fact verifiable by instrument data — not folklore.',
-      'about.p3': 'From early prototype to the third-generation v3 system, MotorLab has gone through 15 milestones and over 19,000 lines of firmware. Every feature is verified on real motors before reaching users. The on-device interface is built in Traditional Chinese, English and Japanese, so racers around the world can operate it in their own language.',
+      'about.p3': 'From early prototype to the third-generation v3 system, MotorLab has gone through 18 milestones and over 20,000 lines of firmware. Every feature is verified on real motors before reaching users. The on-device interface is built in Traditional Chinese, English and Japanese, so racers around the world can operate it in their own language.',
       'about.p4': 'MotorLab is an independent studio. We are not affiliated with, authorized by, or sponsored by TAMIYA, INC. This product is a compatible third-party testing device.',
       'about.s1': 'Milestones',
       'about.s2': 'Current Firmware',
@@ -4543,7 +4543,7 @@
       'f6.desc': '最大 50 件の完全な慣らし記録を自動保存、各ステージの詳細データを含みます。JSON / CSV エクスポート、ファイルインポート、ワンタップで慣らしページへ再適用に対応。すべてのデータは端末にオフライン保存され、クラウド依存はありません。',
       'f6.tag2': 'オフライン保存',
       'f7.title': '内蔵 Web 操作インターフェース',
-      'f7.desc': '端末は WiFi ホットスポットと Web 操作インターフェースを内蔵。スマホ・タブレット・ノート PC で利用でき、アプリのインストール不要。WebSocket によるリアルタイムデータ配信、250ms 更新間隔。インターフェースは繁体中国語・English・日本語の 3 言語をワンタップ切替で内蔵し、世界中のプレイヤーが母国語で使えます。',
+      'f7.desc': '端末は WiFi ホットスポットと Web 操作インターフェースを内蔵。スマホ・タブレット・ノート PC で利用でき、アプリのインストール不要。WebSocket によるリアルタイムデータ配信。インターフェースは繁体中国語・English・日本語の 3 言語をワンタップ切替で内蔵し、世界中のプレイヤーが母国語で使えます。',
       'f7.tag1': 'インストール不要',
       'f7.tag2': 'クロスプラットフォーム',
       'f7.tag3': '繁中・EN・日本語',
@@ -4735,7 +4735,7 @@
       'about.title': 'MotorLab について',
       'about.p1': 'MotorLab は Mini 4WD<sup>®</sup> モーターの精密測定に特化した独立系スタジオです。',
       'about.p2': 'サーキット上のコンマ数秒の差は、機材・調整・測定方法の長期的な積み重ねから生まれると私たちは考えています。プレイヤーにとって「速くなった感覚」は、経験則ではなく機器データで検証できる事実であるべきです。',
-      'about.p3': '初代プロトタイプから第 3 世代 v3 システムまで、MotorLab は 15 のマイルストーンを経て、累計 19,000 行を超えるファームウェアコードを積み重ねてきました。すべての機能は実機モーターでの検証を経てからユーザーへ届けられます。実機インターフェースは繁体中国語・English・日本語の 3 言語を内蔵し、世界中のプレイヤーが母国語で操作できます。',
+      'about.p3': '初代プロトタイプから第 3 世代 v3 システムまで、MotorLab は 18 のマイルストーンを経て、累計 20,000 行を超えるファームウェアコードを積み重ねてきました。すべての機能は実機モーターでの検証を経てからユーザーへ届けられます。実機インターフェースは繁体中国語・English・日本語の 3 言語を内蔵し、世界中のプレイヤーが母国語で操作できます。',
       'about.p4': 'MotorLab は独立系スタジオであり、株式会社タミヤ（TAMIYA, INC.）の関連企業ではなく、その許諾や協賛も受けていません。本製品は互換性テスト機器です。',
       'about.s1': '開発マイルストーン',
       'about.s2': '現行ファームウェアバージョン',
