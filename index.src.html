@@ -117,7 +117,7 @@
   "description": "Mini 4WD® 馬達磨合與精密測試系統。內建十階段可程式化磨合、AI 智慧馬達健康管理、軸承阻力測試、電刷接觸穩定診斷。",
   "image": "https://motorlab-tw.github.io/og-image.png",
   "url": "https://motorlab-tw.github.io/",
-  "softwareVersion": "v3.2.29",
+  "softwareVersion": "v3.4.0",
   "applicationCategory": "EngineeringApplication",
   "applicationSubCategory": "Motor Testing & Diagnostics",
   "operatingSystem": "Cross-platform (WiFi + Web Browser)",
@@ -132,8 +132,9 @@
   },
   "featureList": [
     "全球馬達磨合資料庫(簽章驗證上傳/下載磨合配方)",
-    "馬達特性量測(全自動量測馬達特性參數與損耗)",
-    "十階段可程式化馬達磨合",
+    "馬達特性量測(全自動量測馬達特性參數與損耗,三趟平均)",
+    "馬達特性量測歷史紀錄庫(50 筆)",
+    "1~6 趟可程式化馬達磨合(每趟 10 階段,最多 60 組參數)",
     "單階段精密馬達測試",
     "AI 智慧馬達健康管理",
     "FFT 振動頻譜分析",
@@ -1939,7 +1940,7 @@
 
     <div class="splash-log">
       <div class="log-line l1">[<span class="ok">OK</span>] Boot sequence started</div>
-      <div class="log-line l2">[<span class="ok">OK</span>] Loading firmware v3.2.29</div>
+      <div class="log-line l2">[<span class="ok">OK</span>] Loading firmware v3.4.0</div>
       <div class="log-line l3">[<span class="ok">OK</span>] Sensor calibration complete</div>
       <div class="log-line l4">[<span class="ok">OK</span>] WebSocket channel ready</div>
       <div class="log-line l5">[<span class="ok">OK</span>] System online — welcome</div>
@@ -2054,10 +2055,10 @@
           <svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 1 18 0"/><path d="M12 12l4-3"/><circle cx="12" cy="12" r="1.6"/></svg>
         </div>
         <h3 data-i18n="f13.title">馬達特性量測</h3>
-        <p data-i18n="f13.desc">全自動量出馬達的特性參數與損耗 — 品質因數、磁路強度、內部電阻、損耗轉矩等,提供參考數據(不評分、不排名)。同型號馬達互相比較、磨合前後對照,一鍵開始約 1~2 分鐘,過程溫和適合全新未磨合馬達,可選正/反轉。</p>
+        <p data-i18n="f13.desc">全自動量出馬達的特性參數與損耗 — 品質因數、磁路強度、內部電阻、損耗轉矩、KV 等,提供參考數據(不評分、不排名)。自動跑三趟取平均並附「3 趟一致性」,結果自動存入量測歷史庫供回顧比較;適合同型號互比與磨合前後對照,可選正 / 反轉。</p>
         <div class="feature-meta">
           <span class="feature-tag" data-i18n="f13.tag1">全自動</span>
-          <span class="feature-tag" data-i18n="f13.tag2">約 1~2 分鐘</span>
+          <span class="feature-tag" data-i18n="f13.tag2">三趟平均</span>
           <span class="feature-tag" data-i18n="f13.tag3">參考數據</span>
         </div>
       </div>
@@ -2068,9 +2069,9 @@
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>
         </div>
         <h3 data-i18n="f1.title">馬達磨合程式</h3>
-        <p data-i18n="f1.desc">十階段可程式化磨合，每階段獨立設定電壓、運轉方向、運轉時間、冷卻時間與穩定電流容差。模擬實車條件下的低速長時間磨合，讓電刷與整流子達到最佳貼合。</p>
+        <p data-i18n="f1.desc">可 1~6 趟、每趟獨立 10 階段(最多 60 組參數)的可程式化磨合，每階段自訂電壓、運轉方向、運轉時間、冷卻時間與穩定電流容差。低速長時間運轉讓電刷與整流子達到最佳貼合；運轉中即時顯示轉速、KV 值與趟數進度。</p>
         <div class="feature-meta">
-          <span class="feature-tag">10 階段</span>
+          <span class="feature-tag">1~6 趟</span>
           <span class="feature-tag" data-i18n="f1.tag2">智慧穩流判定</span>
           <span class="feature-tag">~5 hr</span>
         </div>
@@ -2378,7 +2379,7 @@
       <div class="tech-card">
         <div class="tech-name">PARAM_EXTRACT</div>
         <h4 data-i18n="t11.title">馬達常數萃取(Ke / Km / 內阻)</h4>
-        <p data-i18n="t11.desc">從定速多點掃描推導出馬達的磁路強度(Ke)、馬達常數(Km)與內部電阻 —— 專業測功機才提供的物理參數,作為選別馬達的客觀參考(不評分、不排名)。</p>
+        <p data-i18n="t11.desc">以自適應鎖轉速做多點掃描,推導出馬達的磁路強度(Ke)、馬達常數(Km)與內部電阻等物理參數(專業測功機才提供)。自動三趟取平均、搭配標準化堵轉協定,內部電阻跨次一致性達 ±0.3%;作為選別馬達的客觀參考(不評分、不排名)。</p>
       </div>
       <div class="tech-card">
         <div class="tech-name">RECIPROCAL_RPM</div>
@@ -2470,7 +2471,8 @@
           </thead>
           <tbody>
             <tr><td data-i18n="specs.sw.r7">馬達特性量測</td><td class="spec-val" data-i18n="specs.sw.v7">單一程序(全自動)</td></tr>
-            <tr><td data-i18n="specs.sw.r1">馬達磨合程式</td><td class="spec-val" data-i18n="specs.sw.v1">10 階段</td></tr>
+            <tr><td data-i18n="specs.sw.r8">特性量測歷史</td><td class="spec-val" data-i18n="specs.sw.v8">最多 50 筆</td></tr>
+            <tr><td data-i18n="specs.sw.r1">馬達磨合程式</td><td class="spec-val" data-i18n="specs.sw.v1">1~6 趟 × 10 階段</td></tr>
             <tr><td data-i18n="specs.sw.r2">馬達測試程式</td><td class="spec-val" data-i18n="specs.sw.v2">單一階段</td></tr>
             <tr><td data-i18n="specs.sw.r3">歷史紀錄</td><td class="spec-val" data-i18n="specs.sw.v3">最多 50 筆</td></tr>
             <tr><td data-i18n="specs.sw.r4">AI 智慧馬達健康管理 (PRO)</td><td class="spec-val" data-i18n="specs.sw.v4">最多 20 顆馬達</td></tr>
@@ -2486,7 +2488,7 @@
       <div class="spec-block-title" data-i18n="specs.range.title">各功能數值輸入範圍</div>
 
       <!-- 3.1 馬達磨合程式 -->
-      <div class="spec-subgroup" data-i18n="specs.range.g1">馬達磨合程式（10 階段,每階段獨立設定）</div>
+      <div class="spec-subgroup" data-i18n="specs.range.g1">馬達磨合程式（1~6 趟 × 10 階段,每階段獨立設定）</div>
       <div class="spec-table-wrap">
         <table class="spec-table">
           <thead>
@@ -2500,8 +2502,8 @@
           <tbody>
             <tr><td data-i18n="specs.p.volt">電壓</td><td class="spec-val">0.6 ~ 4.0 (step 0.1)</td><td class="spec-val">V</td><td data-i18n="specs.d.bystage">依階段</td></tr>
             <tr><td data-i18n="specs.p.dir">運轉方向</td><td data-i18n="specs.v.dir">正轉 / 反轉</td><td>—</td><td data-i18n="specs.d.fwd">正轉</td></tr>
-            <tr><td data-i18n="specs.p.runtime">運轉時間</td><td class="spec-val">0 ~ 1800</td><td data-i18n="specs.u.sec">秒</td><td data-i18n="specs.d.bystage">依階段</td></tr>
-            <tr><td data-i18n="specs.p.cooltime">冷卻時間</td><td class="spec-val">0 ~ 600</td><td data-i18n="specs.u.sec">秒</td><td data-i18n="specs.d.bystage">依階段</td></tr>
+            <tr><td data-i18n="specs.p.runtime">運轉時間</td><td class="spec-val">10 ~ 600</td><td data-i18n="specs.u.sec">秒</td><td data-i18n="specs.d.bystage">依階段</td></tr>
+            <tr><td data-i18n="specs.p.cooltime">冷卻時間</td><td class="spec-val">10 ~ 600</td><td data-i18n="specs.u.sec">秒</td><td data-i18n="specs.d.bystage">依階段</td></tr>
             <tr><td data-i18n="specs.p.tol">穩定電流容差</td><td class="spec-val">2 ~ 50</td><td class="spec-val">±mA</td><td class="spec-val">5</td></tr>
           </tbody>
         </table>
@@ -2523,7 +2525,7 @@
           <tbody>
             <tr><td data-i18n="specs.p.volt">電壓</td><td class="spec-val">0.6 ~ 4.0 (step 0.1)</td><td class="spec-val">V</td><td class="spec-val">1.0</td></tr>
             <tr><td data-i18n="specs.p.dir">運轉方向</td><td data-i18n="specs.v.dir">正轉 / 反轉</td><td>—</td><td data-i18n="specs.d.fwd">正轉</td></tr>
-            <tr><td data-i18n="specs.p.runtime">運轉時間</td><td class="spec-val">0 ~ 1800</td><td data-i18n="specs.u.sec">秒</td><td class="spec-val">60</td></tr>
+            <tr><td data-i18n="specs.p.runtime">運轉時間</td><td class="spec-val">10 ~ 600</td><td data-i18n="specs.u.sec">秒</td><td class="spec-val">60</td></tr>
             <tr><td data-i18n="specs.p.tol">穩定電流容差</td><td class="spec-val">2 ~ 50</td><td class="spec-val">±mA</td><td class="spec-val">5</td></tr>
           </tbody>
         </table>
@@ -3415,10 +3417,43 @@
     </div>
 
     <div class="changelog">
+      <!-- v3.4.0 -->
+      <div class="changelog-item">
+        <div class="changelog-meta">
+          <span class="version-badge latest">v3.4.0</span>
+          <span class="changelog-date">2026-07-07</span>
+        </div>
+        <div class="changelog-content">
+          <h4 data-i18n="cl.v340.title">磨合多趟化 · KV 值顯示</h4>
+          <ul>
+            <li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v340.l1">磨合支援 1~6 趟,每趟獨立 10 階段(最多 60 組參數):可設趟數、分頁編輯、「本趟複製到之後所有趟」、預估總時長,運轉中顯示「第 x/y 趟」;舊有 10 階段設定自動沿用</span></li>
+            <li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v340.l2">KV 值顯示:馬達特性量測結果顯示 KV;磨合 / 測試畫面即時 KV(轉速 ÷ 馬達電壓)</span></li>
+            <li><span class="change-type change-improve" data-i18n="cl.IMPROVE">改進</span><span data-i18n="cl.v340.l3">輸入超出範圍自動修正為上 / 下限並閃光提示,清空欄位自動還原目前設定值</span></li>
+            <li><span class="change-type change-improve" data-i18n="cl.IMPROVE">改進</span><span data-i18n="cl.v340.l4">磨合 / 冷卻 / 測試時間範圍統一為 10~600 秒(預設 60 秒)</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- v3.3.0 -->
+      <div class="changelog-item">
+        <div class="changelog-meta">
+          <span class="version-badge">v3.3.0</span>
+          <span class="changelog-date">2026-07-06</span>
+        </div>
+        <div class="changelog-content">
+          <h4 data-i18n="cl.v330.title">特性量測三趟平均 · 量測歷史紀錄庫</h4>
+          <ul>
+            <li><span class="change-type change-new" data-i18n="cl.NEW">新增</span><span data-i18n="cl.v330.l1">馬達特性量測歷史紀錄庫:量測結果自動存檔(最多 50 筆,滿自動刪最舊),可檢視與刪除;啟動時可填馬達型號與備註</span></li>
+            <li><span class="change-type change-improve" data-i18n="cl.IMPROVE">改進</span><span data-i18n="cl.v330.l2">馬達特性量測自動跑三趟取平均,並顯示「3 趟一致性」——差異過大會提醒架設鬆動或馬達不穩</span></li>
+            <li><span class="change-type change-improve" data-i18n="cl.IMPROVE">改進</span><span data-i18n="cl.v330.l3">量測精度提升(標準化堵轉協定,內阻量測跨次一致性 ±0.3%);結果新增起轉電壓參考,並以 I0 為主要選別指標</span></li>
+          </ul>
+        </div>
+      </div>
+
       <!-- v3.2.29 -->
       <div class="changelog-item">
         <div class="changelog-meta">
-          <span class="version-badge latest">v3.2.29</span>
+          <span class="version-badge">v3.2.29</span>
           <span class="changelog-date">2026-07-05</span>
         </div>
         <div class="changelog-content">
@@ -3433,39 +3468,6 @@
         </div>
       </div>
 
-      <!-- v3.2.28 -->
-      <div class="changelog-item">
-        <div class="changelog-meta">
-          <span class="version-badge">v3.2.28</span>
-          <span class="changelog-date">2026-06-30</span>
-        </div>
-        <div class="changelog-content">
-          <h4 data-i18n="cl.v3228.title">緩啟動更平順 · 重要錯誤修正</h4>
-          <ul>
-            <li><span class="change-type change-improve" data-i18n="cl.IMPROVE">改進</span><span data-i18n="cl.v3228.l1">緩啟動改為 5 秒線性平順升壓,啟動更綿密</span></li>
-            <li><span class="change-type change-fix" data-i18n="cl.FIX">修正</span><span data-i18n="cl.v3228.l2">軸承阻力測試切換電壓後再次啟動時瞬間全速暴衝的問題</span></li>
-            <li><span class="change-type change-fix" data-i18n="cl.FIX">修正</span><span data-i18n="cl.v3228.l3">AI 智慧馬達健康管理建立的指紋 / 檢測紀錄日期不正確的問題</span></li>
-            <li><span class="change-type change-improve" data-i18n="cl.IMPROVE">改進</span><span data-i18n="cl.v3228.l4">轉速-時間圖表上限提高到 50000 RPM</span></li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- v3.2.27 -->
-      <div class="changelog-item">
-        <div class="changelog-meta">
-          <span class="version-badge">v3.2.27</span>
-          <span class="changelog-date">2026-06-29</span>
-        </div>
-        <div class="changelog-content">
-          <h4 data-i18n="cl.v3227.title">電壓輸出校準 · 軸承 / 電刷測試重新設計</h4>
-          <ul>
-            <li><span class="change-type change-improve" data-i18n="cl.IMPROVE">改進</span><span data-i18n="cl.v3227.l1">馬達輸出電壓校準:設定多少電壓,馬達實際就吃到多少(先前在較高電壓會偏低、轉速跑不滿)</span></li>
-            <li><span class="change-type change-improve" data-i18n="cl.IMPROVE">改進</span><span data-i18n="cl.v3227.l2">軸承阻力測試重新設計:加速到所選電壓 → 穩定後斷電滑行 → 顯示完全靜止時間</span></li>
-            <li><span class="change-type change-improve" data-i18n="cl.IMPROVE">改進</span><span data-i18n="cl.v3227.l3">電刷接觸穩定測試重新設計:固定 1V 全自動採樣電流,計算 CV%,不需手轉軸心</span></li>
-            <li><span class="change-type change-fix" data-i18n="cl.FIX">修正</span><span data-i18n="cl.v3227.l4">按「停止」後馬達偶爾仍未完全停止的問題</span></li>
-          </ul>
-        </div>
-      </div>
 
 
     </div>
@@ -3500,7 +3502,7 @@
           <div class="stat-label" data-i18n="about.s1">開發里程碑</div>
         </div>
         <div>
-          <div class="stat-num">v3.2.29</div>
+          <div class="stat-num">v3.4.0</div>
           <div class="stat-label" data-i18n="about.s2">當前韌體版本</div>
         </div>
         <div>
@@ -3547,7 +3549,7 @@
         <strong>MotorLab.tw</strong> · <span data-i18n="footer.tagline">Mini 4WD Performance Lab</span>
       </div>
       <div class="mono">
-        © 2026 MotorLab · <span data-i18n="footer.firmware">韌體</span> v3.2.29
+        © 2026 MotorLab · <span data-i18n="footer.firmware">韌體</span> v3.4.0
       </div>
     </div>
   </div>
@@ -3600,7 +3602,7 @@
       'nav.changelog': '更新',
       'nav.about': '關於',
       'nav.contact': '聯絡',
-      'hero.badge': '系統運作中 · v3.2.29',
+      'hero.badge': '系統運作中 · v3.4.0',
       'hero.title': '為每一顆<br>Mini 4WD<sup>®</sup> 馬達<br>建立<span class="accent">健康指紋</span>',
       'hero.lead': 'MotorLab 是為 Mini 4WD<sup>®</sup> 玩家打造的精密馬達磨合與測試系統。從十階段可程式化磨合、軸承衰減量測、電刷接觸穩定診斷,到 AI 馬達健康管理 — 讓每一次調校都可量化、可重複、可比較。',
       'hero.cta1': '瀏覽功能',
@@ -3615,7 +3617,7 @@
       'features.title': '十三大專業功能',
       'features.subtitle': '從磨合到診斷,涵蓋 Mini 4WD 馬達生命週期的每一個關鍵環節。',
       'f1.title': '馬達磨合程式',
-      'f1.desc': '十階段可程式化磨合,每階段獨立設定電壓、運轉方向、運轉時間、冷卻時間與穩定電流容差。模擬實車條件下的低速長時間磨合,讓電刷與整流子達到最佳貼合。',
+      'f1.desc': '可 1~6 趟、每趟獨立 10 階段(最多 60 組參數)的可程式化磨合,每階段自訂電壓、運轉方向、運轉時間、冷卻時間與穩定電流容差。低速長時間運轉讓電刷與整流子達到最佳貼合;運轉中即時顯示轉速、KV 值與趟數進度。',
       'f1.tag2': '智慧穩流判定',
       'f2.title': '馬達測試程式',
       'f2.desc': '單階段精密量測。給定電壓、方向、時間,即時觀察電流、轉速、溫度變化,並支援智慧穩流模式 — 電流達穩定即自動結束,效率與精度兼具。',
@@ -3663,9 +3665,9 @@
       'f12.tag1': '可設定門檻',
       'f12.more': '詳情閱手冊 →',
       'f13.title': '馬達特性量測',
-      'f13.desc': '全自動量出馬達的特性參數與損耗 — 品質因數、磁路強度、內部電阻、損耗轉矩等,提供參考數據(不評分、不排名)。同型號馬達互相比較、磨合前後對照,一鍵開始約 1~2 分鐘,過程溫和適合全新未磨合馬達,可選正/反轉。',
+      'f13.desc': '全自動量出馬達的特性參數與損耗 — 品質因數、磁路強度、內部電阻、損耗轉矩、KV 等,提供參考數據(不評分、不排名)。自動跑三趟取平均並附「3 趟一致性」,結果自動存入量測歷史庫供回顧比較;適合同型號互比與磨合前後對照,可選正 / 反轉。',
       'f13.tag1': '全自動',
-      'f13.tag2': '約 1~2 分鐘',
+      'f13.tag2': '三趟平均',
       'f13.tag3': '參考數據',
       'dlcta.tag': 'DATA LAB',
       'dlcta.title': '全球馬達磨合資料庫',
@@ -3711,7 +3713,7 @@
       't10.title': '自適應閉環定速控制',
       't10.desc': '以閉環控制將馬達精準鎖定在指定轉速(誤差 ±0.5%),讓每顆馬達都在完全相同的工作點被量測,排除「轉速不同 → 數據不可比」的干擾。控制參數自我學習,不同轉速自動調適。',
       't11.title': '馬達常數萃取(Ke / Km / 內阻)',
-      't11.desc': '從定速多點掃描推導出馬達的磁路強度(Ke)、馬達常數(Km)與內部電阻 —— 專業測功機才提供的物理參數,作為選別馬達的客觀參考(不評分、不排名)。',
+      't11.desc': '以自適應鎖轉速做多點掃描,推導出馬達的磁路強度(Ke)、馬達常數(Km)與內部電阻等物理參數(專業測功機才提供)。自動三趟取平均、搭配標準化堵轉協定,內部電阻跨次一致性達 ±0.3%;作為選別馬達的客觀參考(不評分、不排名)。',
       't12.title': '高解析度逐脈衝測速',
       't12.desc': '以脈衝週期法取代固定視窗計數,轉速解析度提升逾 600 倍,任何轉速都能顯示到個位數 RPM。畫面末位跳動反映的是馬達真實轉速波動,而非量測雜訊。',
       't13.title': '轉速感測掃頻校正',
@@ -3745,14 +3747,15 @@
       'specs.hw.r5': '轉速偵測', 'specs.hw.v5': '0 ~ 50,000 RPM',
       'specs.hw.r6': '溫度偵測', 'specs.hw.v6': '-50°C ~ +125°C',
       'specs.hw.r7': '散熱風扇', 'specs.hw.v7': 'DC 5V × 2',
-      'specs.sw.r1': '馬達磨合程式', 'specs.sw.v1': '10 階段',
+      'specs.sw.r1': '馬達磨合程式', 'specs.sw.v1': '1~6 趟 × 10 階段',
+      'specs.sw.r8': '特性量測歷史', 'specs.sw.v8': '最多 50 筆',
       'specs.sw.r2': '馬達測試程式', 'specs.sw.v2': '單一階段',
       'specs.sw.r3': '歷史紀錄', 'specs.sw.v3': '最多 50 筆',
       'specs.sw.r4': 'AI 智慧馬達健康管理 (PRO)', 'specs.sw.v4': '最多 20 顆馬達',
       'specs.sw.r5': '軸承阻力測試', 'specs.sw.v5': '單一階段',
       'specs.sw.r6': '電刷接觸穩定測試', 'specs.sw.v6': '單一階段',
       'specs.sw.r7': '馬達特性量測', 'specs.sw.v7': '單一程序(全自動)',
-      'specs.range.g1': '馬達磨合程式（10 階段,每階段獨立設定）',
+      'specs.range.g1': '馬達磨合程式（1~6 趟 × 10 階段,每階段獨立設定）',
       'specs.range.g2': '馬達測試程式（單一階段）',
       'specs.range.g3': 'AI 智慧馬達健康管理（PRO）',
       'specs.range.g1note': '電壓輸入 0 = 跳過該階段。',
@@ -4379,22 +4382,21 @@
       'cl.FIX': '修正',
       'cl.IMPROVE': '改進',
       'cl.SECURITY': '安全',
+      'cl.v340.title': '磨合多趟化 · KV 值顯示',
+      'cl.v340.l1': '磨合支援 1~6 趟,每趟獨立 10 階段(最多 60 組參數):可設趟數、分頁編輯、「本趟複製到之後所有趟」、預估總時長,運轉中顯示「第 x/y 趟」;舊有 10 階段設定自動沿用',
+      'cl.v340.l2': 'KV 值顯示:馬達特性量測結果顯示 KV;磨合 / 測試畫面即時 KV(轉速 ÷ 馬達電壓)',
+      'cl.v340.l3': '輸入超出範圍自動修正為上 / 下限並閃光提示,清空欄位自動還原目前設定值',
+      'cl.v340.l4': '磨合 / 冷卻 / 測試時間範圍統一為 10~600 秒(預設 60 秒)',
+      'cl.v330.title': '特性量測三趟平均 · 量測歷史紀錄庫',
+      'cl.v330.l1': '馬達特性量測歷史紀錄庫:量測結果自動存檔(最多 50 筆,滿自動刪最舊),可檢視與刪除;啟動時可填馬達型號與備註',
+      'cl.v330.l2': '馬達特性量測自動跑三趟取平均,並顯示「3 趟一致性」——差異過大會提醒架設鬆動或馬達不穩',
+      'cl.v330.l3': '量測精度提升(標準化堵轉協定,內阻量測跨次一致性 ±0.3%);結果新增起轉電壓參考,並以 I0 為主要選別指標',
       'cl.v3229.title': '新功能「馬達特性量測」· 轉速解析度大幅提升',
       'cl.v3229.l1': '馬達特性量測(首頁最上方):全自動量出馬達特性參數與損耗,提供參考數據(不評分、不排名),適合同型號比較與磨合前後對照;可選正 / 反轉',
       'cl.v3229.l2': '轉速量測解析度大幅提升(可顯示至個位數 RPM),停止偵測同步強化',
       'cl.v3229.l3': '切換語言後自動以全新狀態重載(運轉中切換則不中斷程序)',
       'cl.v3229.l4': '電壓輸入範圍調整為 0.6~4.0V,馬達測試預設 1V;電流 / 功率顯示更平穩',
       'cl.v3229.l5': '工程模式電流校正多項問題並新增電壓校正',
-      'cl.v3228.title': '緩啟動更平順 · 重要錯誤修正',
-      'cl.v3228.l1': '緩啟動改為 5 秒線性平順升壓,啟動更綿密',
-      'cl.v3228.l2': '軸承阻力測試切換電壓後再次啟動時瞬間全速暴衝的問題',
-      'cl.v3228.l3': 'AI 智慧馬達健康管理建立的指紋 / 檢測紀錄日期不正確的問題',
-      'cl.v3228.l4': '轉速-時間圖表上限提高到 50000 RPM',
-      'cl.v3227.title': '電壓輸出校準 · 軸承 / 電刷測試重新設計',
-      'cl.v3227.l1': '馬達輸出電壓校準:設定多少電壓,馬達實際就吃到多少(先前在較高電壓會偏低、轉速跑不滿)',
-      'cl.v3227.l2': '軸承阻力測試重新設計:加速到所選電壓 → 穩定後斷電滑行 → 顯示完全靜止時間',
-      'cl.v3227.l3': '電刷接觸穩定測試重新設計:固定 1V 全自動採樣電流,計算 CV%,不需手轉軸心',
-      'cl.v3227.l4': '按「停止」後馬達偶爾仍未完全停止的問題',
       'cl.v320.title': '全球磨合資料庫 · 連線體驗升級',
       'cl.v320.l1': '全球磨合資料庫:可直接從機器上傳 / 瀏覽 / 下載全球玩家分享的磨合紀錄',
       'cl.v320.l2': '歷史紀錄詳情頁可一鍵「分享到全球資料庫」',
@@ -4453,7 +4455,7 @@
       'nav.changelog': 'Changelog',
       'nav.about': 'About',
       'nav.contact': 'Contact',
-      'hero.badge': 'System running · v3.2.29',
+      'hero.badge': 'System running · v3.4.0',
       'hero.title': 'Build a <span class="accent">health fingerprint</span><br>for every<br>Mini 4WD<sup>®</sup> motor',
       'hero.lead': 'MotorLab is a precision motor break-in and diagnostic system built for Mini 4WD<sup>®</sup> enthusiasts. From 10-stage programmable break-in to bearing decay analysis, brush contact diagnostics, and AI motor health management — make every tune measurable, repeatable, and comparable.',
       'hero.cta1': 'Browse Features',
@@ -4468,7 +4470,7 @@
       'features.title': 'Thirteen Professional Tools',
       'features.subtitle': 'From break-in to diagnostics, covering every critical phase of the Mini 4WD motor lifecycle.',
       'f1.title': 'Motor Break-in Program',
-      'f1.desc': 'Ten-stage programmable break-in. Configure voltage, direction, runtime, cooldown, and current tolerance per stage. Simulates real-world low-speed extended operation to bring brushes and commutator into optimal contact.',
+      'f1.desc': 'Programmable break-in of 1–6 passes, each with its own 10 stages (up to 60 parameter sets); every stage sets voltage, direction, runtime, cooldown and current tolerance. Long, low-speed operation beds brushes and commutator into optimal contact; RPM, KV and pass progress are shown live while running.',
       'f1.tag2': 'Smart stability detection',
       'f2.title': 'Motor Test Program',
       'f2.desc': 'Single-stage precision measurement. Set voltage, direction, and duration, then observe real-time current, RPM, and temperature curves. Smart mode auto-ends when current stabilizes — fast and accurate.',
@@ -4516,9 +4518,9 @@
       'f12.tag1': 'Custom threshold',
       'f12.more': 'See the manual →',
       'f13.title': 'Motor Characterization',
-      'f13.desc': 'Fully automatic measurement of motor constants and losses — quality factor, magnetic strength, internal resistance, loss torque and more. Reference data only (no scoring or ranking). Compare motors of the same model, or before vs. after break-in. One tap, ~1–2 min, gentle enough for brand-new motors; forward or reverse.',
+      'f13.desc': 'Fully automatic measurement of motor constants and losses — quality factor, magnetic strength, internal resistance, loss torque, KV and more — as reference data (no scoring or ranking). It runs three passes and averages them with a 3-pass consistency figure, and each result is saved to a measurement-history library for later comparison; great for same-model comparison and before/after break-in, forward or reverse.',
       'f13.tag1': 'Fully automatic',
-      'f13.tag2': '~1–2 min',
+      'f13.tag2': '3-pass average',
       'f13.tag3': 'Reference data',
       'dlcta.tag': 'DATA LAB',
       'dlcta.title': 'Global Motor Break-in Data Library',
@@ -4564,7 +4566,7 @@
       't10.title': 'Adaptive Closed-Loop Speed Lock',
       't10.desc': 'A closed loop pins the motor to a commanded RPM within ±0.5%, so every motor is measured at an identical operating point — removing the "different speed → incomparable data" confound. The control parameters self-tune and adapt across speeds.',
       't11.title': 'Motor Constant Extraction (Ke / Km / R)',
-      't11.desc': 'Derives the motor\'s magnetic strength (Ke), motor constant (Km) and internal resistance from a multi-point constant-speed sweep — the kind of physical parameters a professional dynamometer reports, as objective reference data for grading motors (no scoring or ranking).',
+      't11.desc': 'A multi-point sweep under adaptive speed lock derives the motor magnetic strength (Ke), motor constant (Km) and internal resistance — physical parameters a professional dynamometer reports. It auto-averages three passes with a standardized stall protocol for ±0.3% run-to-run resistance consistency, as objective reference data for grading motors (no scoring or ranking).',
       't12.title': 'High-Resolution Reciprocal Timing',
       't12.desc': 'Reciprocal period timing replaces fixed-window counting, improving RPM resolution over 600× to a single-digit-RPM floor at any speed. The flickering last digits reflect the motor\'s real speed fluctuation, not measurement noise.',
       't13.title': 'Swept-Frequency Tachometer Calibration',
@@ -4598,14 +4600,15 @@
       'specs.hw.r5': 'RPM Sensing', 'specs.hw.v5': '0 ~ 50,000 RPM',
       'specs.hw.r6': 'Temperature Sensing', 'specs.hw.v6': '-50°C ~ +125°C',
       'specs.hw.r7': 'Cooling Fans', 'specs.hw.v7': 'DC 5V × 2',
-      'specs.sw.r1': 'Motor Break-in Program', 'specs.sw.v1': '10 stages',
+      'specs.sw.r1': 'Motor Break-in Program', 'specs.sw.v1': '1–6 passes × 10 stages',
+      'specs.sw.r8': 'Characterization History', 'specs.sw.v8': 'Up to 50 records',
       'specs.sw.r2': 'Motor Test Program', 'specs.sw.v2': 'Single stage',
       'specs.sw.r3': 'History Records', 'specs.sw.v3': 'Up to 50 entries',
       'specs.sw.r4': 'AI Motor Health Manager (PRO)', 'specs.sw.v4': 'Up to 20 motors',
       'specs.sw.r5': 'Bearing Resistance Test', 'specs.sw.v5': 'Single stage',
       'specs.sw.r6': 'Brush Contact Stability Test', 'specs.sw.v6': 'Single stage',
       'specs.sw.r7': 'Motor Characterization', 'specs.sw.v7': 'Single procedure (automatic)',
-      'specs.range.g1': 'Motor Break-in Program (10 stages, each configured independently)',
+      'specs.range.g1': 'Motor Break-in Program (1–6 passes × 10 stages, each configured independently)',
       'specs.range.g2': 'Motor Test Program (single stage)',
       'specs.range.g3': 'AI Motor Health Manager (PRO)',
       'specs.range.g1note': 'Voltage input of 0 = skip that stage.',
@@ -5232,22 +5235,21 @@
       'cl.FIX': 'FIX',
       'cl.IMPROVE': 'IMPROVE',
       'cl.SECURITY': 'SECURITY',
+      'cl.v340.title': 'Multi-Pass Break-in · KV Display',
+      'cl.v340.l1': 'Break-in now supports 1–6 passes, each with its own 10 stages (up to 60 parameter sets): set the pass count, edit per-pass tabs, "copy this pass to all following", see the estimated total time, and a "pass x/y" readout while running; existing 10-stage setups carry over automatically',
+      'cl.v340.l2': 'KV display: shown in the Motor Characterization results; live KV on the break-in / test screens (RPM ÷ motor voltage)',
+      'cl.v340.l3': 'Out-of-range input is auto-corrected to the min / max with a flash cue; clearing a field restores the current stored value',
+      'cl.v340.l4': 'Break-in / cooling / test time ranges unified to 10–600 s (default 60 s)',
+      'cl.v330.title': 'Characterization 3-Pass Average · Measurement History',
+      'cl.v330.l1': 'Motor Characterization history library: results are saved automatically (up to 50, oldest auto-deleted when full), viewable and deletable; you can enter a motor model and note at start',
+      'cl.v330.l2': 'Motor Characterization now runs three passes and averages them, showing a "3-pass consistency" figure — a large spread warns of a loose setup or an unsteady motor',
+      'cl.v330.l3': 'Better measurement precision (standardized stall protocol, ±0.3% run-to-run resistance consistency); results add a breakaway-voltage reference and use I0 as the primary grading metric',
       'cl.v3229.title': 'New: Motor Characterization · Major RPM-Resolution Boost',
       'cl.v3229.l1': 'Motor Characterization (top of the home screen): fully automatic measurement of motor constants and losses, reference data only (no scoring or ranking), great for same-model comparison and before/after break-in; forward or reverse',
       'cl.v3229.l2': 'RPM measurement resolution greatly improved (now down to single-digit RPM), with stronger stop detection',
       'cl.v3229.l3': 'Switching language now reloads in a fresh state (switching mid-run does not interrupt the procedure)',
       'cl.v3229.l4': 'Voltage input range adjusted to 0.6–4.0V, motor test defaults to 1V; steadier current / power display',
       'cl.v3229.l5': 'Fixed several engineering-mode current-calibration issues and added voltage calibration',
-      'cl.v3228.title': 'Smoother Soft-Start · Important Fixes',
-      'cl.v3228.l1': 'Soft-start is now a smooth 5-second linear voltage ramp for a gentler launch',
-      'cl.v3228.l2': 'Fixed a full-speed surge when restarting the bearing test after changing voltage',
-      'cl.v3228.l3': 'Fixed incorrect dates on fingerprints / check records in AI Motor Health',
-      'cl.v3228.l4': 'RPM-vs-time chart ceiling raised to 50000 RPM',
-      'cl.v3227.title': 'Output-Voltage Calibration · Bearing / Brush Tests Redesigned',
-      'cl.v3227.l1': 'Motor output-voltage calibration: the motor now actually receives the voltage you set (previously it ran low at higher voltages)',
-      'cl.v3227.l2': 'Bearing resistance test redesigned: spin up to the chosen voltage → cut power and coast → show time to a complete stop',
-      'cl.v3227.l3': 'Brush contact stability test redesigned: fixed 1V automatic current sampling, computes CV%, no manual shaft turning',
-      'cl.v3227.l4': 'Fixed the motor occasionally not fully stopping after pressing Stop',
       'cl.v320.title': 'Global Break-in Database · Connectivity Upgrade',
       'cl.v320.l1': 'Global break-in database: upload / browse / download players’ records straight from the machine',
       'cl.v320.l2': 'One-tap “Share to global database” from a record’s detail page',
@@ -5306,7 +5308,7 @@
       'nav.changelog': '更新履歴',
       'nav.about': '概要',
       'nav.contact': 'お問い合わせ',
-      'hero.badge': 'システム稼働中 · v3.2.29',
+      'hero.badge': 'システム稼働中 · v3.4.0',
       'hero.title': 'すべての<br>Mini 4WD<sup>®</sup> モーターに<br><span class="accent">健康指紋</span>を',
       'hero.lead': 'MotorLab は Mini 4WD<sup>®</sup> プレイヤーのために設計された精密モーター慣らし・測定システムです。10 段階プログラム慣らし、ベアリング減衰測定、ブラシ接触安定診断、AI モーター健康管理まで — すべての調整を定量化・再現・比較できます。',
       'hero.cta1': '機能を見る',
@@ -5321,7 +5323,7 @@
       'features.title': '13 のプロ機能',
       'features.subtitle': '慣らしから診断まで、Mini 4WD モーターのライフサイクルにおけるすべての重要工程を網羅。',
       'f1.title': 'モーター慣らしプログラム',
-      'f1.desc': '10 段階プログラム慣らし。各ステージで電圧・回転方向・運転時間・冷却時間・安定電流許容差を個別設定。実走条件を模した低速長時間慣らしで、ブラシと整流子を最適にフィットさせます。',
+      'f1.desc': '1〜6 パス、各パス独立の 10 段階(最大 60 組)のプログラム慣らし。各段階で電圧・回転方向・運転時間・冷却時間・安定電流許容差を設定。低速長時間運転でブラシと整流子を最適な接触に馴染ませ、運転中は回転数・KV 値・パス進捗をリアルタイム表示。',
       'f1.tag2': 'スマート定電流判定',
       'f2.title': 'モーターテストプログラム',
       'f2.desc': '単一ステージの精密測定。電圧・方向・時間を指定し、電流・回転数・温度の変化をリアルタイム観察。スマート定電流モードに対応 — 電流が安定すると自動終了し、効率と精度を両立。',
@@ -5369,9 +5371,9 @@
       'f12.tag1': '閾値設定可',
       'f12.more': 'マニュアルへ →',
       'f13.title': 'モーター特性測定',
-      'f13.desc': 'モーターの特性パラメータと損失(品質係数、磁気強度、内部抵抗、損失トルクなど)を全自動で測定し、参考データを提供(採点・ランキングなし)。同型モーターの比較や慣らし前後の対照に。ワンタップで約 1〜2 分、動作は穏やかで新品モーターにも安心。正転/逆転を選択可。',
+      'f13.desc': 'モーターの特性パラメータと損失(品質係数・磁気強度・内部抵抗・損失トルク・KV など)を全自動で測定し、参考データを提供(採点・ランキングなし)。自動で 3 パス実行して平均し「3 パス一致性」を表示、結果は測定履歴ライブラリに自動保存して後で比較可能。同型比較や慣らし前後の対照に最適、正転/逆転を選択可。',
       'f13.tag1': '全自動',
-      'f13.tag2': '約 1〜2 分',
+      'f13.tag2': '3 パス平均',
       'f13.tag3': '参考データ',
       'dlcta.tag': 'DATA LAB',
       'dlcta.title': 'グローバル モーター慣らしデータ庫',
@@ -5417,7 +5419,7 @@
       't10.title': '適応クローズドループ定速制御',
       't10.desc': 'クローズドループでモーターを指定回転数に精密ロック(誤差 ±0.5%)、すべてのモーターを同一の動作点で測定し「回転数が違う → 比較不能」の交絡を排除。制御パラメータは自己学習し、回転数ごとに自動調整します。',
       't11.title': 'モーター定数の抽出(Ke / Km / 内部抵抗)',
-      't11.desc': '定速多点スイープからモーターの磁気強度(Ke)、モーター定数(Km)、内部抵抗を導出 —— プロのダイナモが示す物理パラメータを、選別の客観的な参考データとして提供(採点・ランキングなし)。',
+      't11.desc': '適応ロック定速の多点スイープで、モーターの磁気強度(Ke)、モーター定数(Km)、内部抵抗などの物理パラメータ(プロのダイナモ相当)を導出。自動 3 パス平均と標準化ストール手順により内部抵抗の測定間一致性 ±0.3%;選別の客観的な参考データ(採点・ランキングなし)。',
       't12.title': '高分解能の逐パルス測速',
       't12.desc': 'パルス周期法で固定ウィンドウ計数を置き換え、回転数分解能を 600 倍以上向上、どの回転数でも 1 の位まで表示。末位のちらつきは測定ノイズではなくモーターの実際の回転変動です。',
       't13.title': '掃引周波数によるタコメーター校正',
@@ -5449,14 +5451,15 @@
       'specs.hw.r5': '回転数検出', 'specs.hw.v5': '0 ~ 50,000 RPM',
       'specs.hw.r6': '温度検出', 'specs.hw.v6': '-50°C ~ +125°C',
       'specs.hw.r7': '冷却ファン', 'specs.hw.v7': 'DC 5V × 2',
-      'specs.sw.r1': 'モーター慣らしプログラム', 'specs.sw.v1': '10 ステージ',
+      'specs.sw.r1': 'モーター慣らしプログラム', 'specs.sw.v1': '1〜6 パス × 10 ステージ',
+      'specs.sw.r8': '特性測定履歴', 'specs.sw.v8': '最大 50 件',
       'specs.sw.r2': 'モーターテストプログラム', 'specs.sw.v2': '単一ステージ',
       'specs.sw.r3': '履歴記録', 'specs.sw.v3': '最大 50 件',
       'specs.sw.r4': 'AI スマートモーター健康管理 (PRO)', 'specs.sw.v4': '最大 20 個',
       'specs.sw.r5': 'ベアリング抵抗テスト', 'specs.sw.v5': '単一ステージ',
       'specs.sw.r6': 'ブラシ接触安定テスト', 'specs.sw.v6': '単一ステージ',
       'specs.sw.r7': 'モーター特性測定', 'specs.sw.v7': '単一プログラム(全自動)',
-      'specs.range.g1': 'モーター慣らしプログラム（10 ステージ、各ステージ個別設定）',
+      'specs.range.g1': 'モーター慣らしプログラム（1〜6 パス × 10 ステージ、各ステージ個別設定）',
       'specs.range.g2': 'モーターテストプログラム（単一ステージ）',
       'specs.range.g3': 'AI スマートモーター健康管理（PRO）',
       'specs.range.g1note': '電圧入力 0 = そのステージをスキップ。',
@@ -5484,22 +5487,21 @@
       'cl.FIX': '修正',
       'cl.IMPROVE': '改善',
       'cl.SECURITY': 'セキュリティ',
+      'cl.v340.title': '慣らしマルチパス · KV 値表示',
+      'cl.v340.l1': '慣らしが 1〜6 パスに対応、各パス独立の 10 段階(最大 60 組):パス数の設定、パスごとのタブ編集、「このパスを以降すべてにコピー」、総所要時間の目安、運転中は「x/y パス」表示;既存の 10 段階設定は自動で引き継ぎ',
+      'cl.v340.l2': 'KV 値表示:モーター特性測定の結果に KV を表示;慣らし / テスト画面でリアルタイム KV(回転数 ÷ モーター電圧)',
+      'cl.v340.l3': '範囲外の入力は上限 / 下限に自動補正しフラッシュで通知、空欄は現在の保存値に自動復元',
+      'cl.v340.l4': '慣らし / 冷却 / テスト時間の範囲を 10〜600 秒に統一(初期値 60 秒)',
+      'cl.v330.title': '特性測定の 3 パス平均 · 測定履歴ライブラリ',
+      'cl.v330.l1': 'モーター特性測定の履歴ライブラリ:結果を自動保存(最大 50 件、満杯で最古を自動削除)、閲覧と削除が可能;開始時にモーター型番と備考を入力可',
+      'cl.v330.l2': 'モーター特性測定は自動で 3 パス実行して平均し、「3 パス一致性」を表示 —— ばらつきが大きい場合は取付けの緩みやモーターの不安定を警告',
+      'cl.v330.l3': '測定精度が向上(標準化ストール手順、内部抵抗の測定間一致性 ±0.3%);結果に起動電圧の参考値を追加し、I0 を主要な選別指標に',
       'cl.v3229.title': '新機能「モーター特性測定」· 回転数分解能を大幅向上',
       'cl.v3229.l1': 'モーター特性測定(ホーム画面の最上部):モーターの特性パラメータと損失を全自動で測定、参考データのみ(採点・ランキングなし)、同型モーターの比較や慣らし前後の対照に最適;正転/逆転を選択可',
       'cl.v3229.l2': '回転数測定の分解能を大幅向上(1 の位まで表示可能)、停止検出も強化',
       'cl.v3229.l3': '言語切替後は新しい状態で再読込(運転中に切り替えても処理は中断しません)',
       'cl.v3229.l4': '電圧入力範囲を 0.6〜4.0V に調整、モーターテストの初期値は 1V;電流 / 電力表示がより安定',
       'cl.v3229.l5': 'エンジニアモードの電流校正の複数の問題を修正し、電圧校正を追加',
-      'cl.v3228.title': 'ソフトスタートがより滑らかに · 重要な修正',
-      'cl.v3228.l1': 'ソフトスタートを 5 秒の直線的で滑らかな昇圧に変更、起動がより緻密に',
-      'cl.v3228.l2': 'ベアリング抵抗テストで電圧変更後に再始動すると瞬間的に全速になる問題を修正',
-      'cl.v3228.l3': 'AI モーター健康管理で作成した指紋 / 検査記録の日付が正しくない問題を修正',
-      'cl.v3228.l4': '回転数-時間グラフの上限を 50000 RPM に引き上げ',
-      'cl.v3227.title': '出力電圧の校正 · ベアリング / ブラシテストを再設計',
-      'cl.v3227.l1': 'モーター出力電圧の校正:設定した電圧がそのままモーターに掛かるように(以前は高電圧で低めになり回転が伸びませんでした)',
-      'cl.v3227.l2': 'ベアリング抵抗テストを再設計:選択電圧まで加速 → 安定後に電源を切って惰性走行 → 完全停止までの時間を表示',
-      'cl.v3227.l3': 'ブラシ接触安定テストを再設計:固定 1V で電流を全自動サンプリング、CV% を計算、シャフトの手動操作は不要',
-      'cl.v3227.l4': '「停止」後にモーターがまれに完全停止しない問題を修正',
       'cl.v320.title': 'グローバル慣らしデータ庫 · 接続体験アップグレード',
       'cl.v320.l1': 'グローバル慣らしデータ庫:マシンから直接、世界中のプレイヤーの記録をアップロード / 閲覧 / ダウンロード',
       'cl.v320.l2': '履歴記録の詳細ページからワンタップで「グローバルデータ庫に共有」',
