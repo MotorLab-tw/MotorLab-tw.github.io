@@ -193,6 +193,16 @@
     background: var(--bg-tertiary);
     color: var(--accent-cyan);
   }
+  /* 正版查驗:主選單醒目連結(外框強調,不佔額外高度) */
+  .nav-links a.nav-verify {
+    color: var(--accent-cyan);
+    box-shadow: inset 0 0 0 1px var(--accent-cyan);
+  }
+  .nav-links a.nav-verify:hover {
+    background: var(--accent-cyan);
+    color: var(--bg-primary);
+    box-shadow: none;
+  }
   /* 手機漢堡按鈕(桌機隱藏,<880px 顯示) */
   .nav-toggle {
     display: none;
