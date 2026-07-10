@@ -2422,8 +2422,9 @@ def build_lab_page(lab_cfg, lang, src_html, i18n):
 #   之後改「方案 B」獨立唯讀 GAS 只需換 VERIFY["api_url"] 一行。
 # ============================================================
 VERIFY = {
-    # 方案 A(spec §1):現成白名單 GAS 的 verify_public。之後換方案 B 只改這行。
-    "api_url": "https://script.google.com/macros/s/AKfycbyxiyNljKJKtNaSfqGrdzr-YRkuAx1z_1weqxjL-Na-RVpgggrK6nvVe7qC-IORykTQtQ/exec",
+    # 方案 B(spec §5):獨立唯讀 GAS(gas/verify_public_standalone.gs),內建 JSONP,
+    # 只讀白名單、不曝光更新/白名單那支。已實測 JSONP 正常(2026-07-10)。
+    "api_url": "https://script.google.com/macros/s/AKfycbyyxHYnwbg3r3KINjsTjllB1CCoKF6cc_F7uX34QVdfbB1Vw9JXtHD-bckOfjv7QspbSg/exec",
     "i18n": {
         "zh": {
             "title": "正版查驗 | MotorLab",
