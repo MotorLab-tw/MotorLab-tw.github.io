@@ -2117,19 +2117,19 @@
 <div class="data-grid">
 <div class="data-cell">
 <div class="label" data-i18n="mock.voltage">電圧</div>
-<div class="value">2.50<span class="unit">V</span></div>
+<div class="value">2.40<span class="unit">V</span></div>
 </div>
 <div class="data-cell">
 <div class="label" data-i18n="mock.current">電流</div>
-<div class="value" id="mock-current">1.82<span class="unit">A</span></div>
+<div class="value" id="mock-current">0.64<span class="unit">A</span></div>
 </div>
 <div class="data-cell">
 <div class="label" data-i18n="mock.rpm">回転数</div>
-<div class="value" id="mock-rpm">12,840<span class="unit">RPM</span></div>
+<div class="value" id="mock-rpm">25,920<span class="unit">RPM</span></div>
 </div>
 <div class="data-cell">
 <div class="label" data-i18n="mock.temp">温度</div>
-<div class="value">36.2<span class="unit">°C</span></div>
+<div class="value">35.4<span class="unit">°C</span></div>
 </div>
 </div>
 <div class="status-box" data-i18n="mock.status">● 慣らし運転中 · ステージ 6/10 · 経過時間 02:48:33</div>
@@ -5445,11 +5445,11 @@
     const currentEl = document.getElementById('mock-current');
     const rpmEl = document.getElementById('mock-rpm');
     if (currentEl) {
-      const v = (1.75 + Math.random() * 0.15).toFixed(2);
+      const v = (0.60 + Math.random() * 0.09).toFixed(2);
       currentEl.innerHTML = v + '<span class="unit">A</span>';
     }
     if (rpmEl) {
-      const r = Math.floor(12700 + Math.random() * 250);
+      const r = Math.floor(25800 + Math.random() * 300);
       rpmEl.innerHTML = r.toLocaleString() + '<span class="unit">RPM</span>';
     }
   }
