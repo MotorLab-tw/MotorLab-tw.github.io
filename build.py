@@ -1263,6 +1263,12 @@ def build_lang(src_html, lang, i18n):
         a["href"] = manual_href
         del a["data-manuallink"]
 
+    # --- 7f. 內部跨頁連結(footer 的 data-verifylink)改寫成對應語言的 /verify/ ---
+    verify_href = f"{lab_prefix}/verify/"
+    for a in soup.select("a[data-verifylink]"):
+        a["href"] = verify_href
+        del a["data-verifylink"]
+
     # --- 8. 語言切換:button → a 連結 ---
     lang_switch = soup.find("div", class_="lang-switch")
     if lang_switch:
@@ -1426,6 +1432,18 @@ def _transform_guides_to_cards(soup, lang):
 
 
 # ============================================================
+def _fix_footer_verify(footer_el, lang):
+    """獨立頁沿用母版 footer(原樣搬入,不經 build_lang)。這裡把 footer 內
+    的 data-verifylink 連結改寫成對應語言的 /verify/,並清掉屬性,避免屬性外洩
+    與 en/ja 頁連到中文 /verify/。footer 其餘文字沿用母版既有行為(不動)。"""
+    if footer_el is None:
+        return
+    prefix = "" if lang == "zh" else f"/{lang}"
+    for a in footer_el.select("a[data-verifylink]"):
+        a["href"] = f"{prefix}/verify/"
+        del a["data-verifylink"]
+
+
 # 獨立教學分頁產生器:/guides/<slug>/index.html
 # 完全沿用首頁的 <head> + <style>(視覺一致),body 換成 guide layout
 # ============================================================
@@ -1489,6 +1507,7 @@ def build_guide_page(slug, lang, src_html, i18n, guide_cfg):
     # 4. 保留 footer
     footer_el = soup.find("footer")
     footer_extracted = footer_el.extract() if footer_el else None
+    _fix_footer_verify(footer_extracted, lang)
 
     # 5. 砍掉現有 JSON-LD 與 hreflang(加 guide 專用的)
     for s in soup.find_all("script", {"type": "application/ld+json"}):
@@ -1714,6 +1733,7 @@ def build_hub_page(hub_cfg, lang, src_html, i18n):
     # 3. 留 footer,清掉 body 其他
     footer_el = soup.find("footer")
     footer_extracted = footer_el.extract() if footer_el else None
+    _fix_footer_verify(footer_extracted, lang)
 
     # 4. <title> / meta / canonical
     if soup.title:
@@ -1884,6 +1904,7 @@ def build_system_page(sys_cfg, lang, src_html, i18n):
     # 3. 留 footer(含 D10 商標聲明),清掉 body 其他
     footer_el = soup.find("footer")
     footer_extracted = footer_el.extract() if footer_el else None
+    _fix_footer_verify(footer_extracted, lang)
 
     # 4. <title> / meta / canonical
     if soup.title:
@@ -2232,6 +2253,7 @@ def build_lab_page(lab_cfg, lang, src_html, i18n):
     # 3. 留 footer(含 D10 商標聲明)
     footer_el = soup.find("footer")
     footer_extracted = footer_el.extract() if footer_el else None
+    _fix_footer_verify(footer_extracted, lang)
 
     # 4. <title> / meta / canonical
     if soup.title:
@@ -2384,6 +2406,286 @@ def build_lab_page(lab_cfg, lang, src_html, i18n):
 
     # 8. 內嵌 app script(注入 API URL 與該語言的 JS 字串)
     app_js = LAB_APP_JS.replace("__API_URL__", lab_cfg["api_url"])
+    app_js = app_js.replace("__I18N_JSON__", json.dumps(s["js"], ensure_ascii=False))
+    script_tag = soup.new_tag("script")
+    script_tag.string = app_js
+    soup.body.append(script_tag)
+
+    return str(soup)
+
+
+# ============================================================
+# VERIFY:正版查驗頁(/verify/)
+#   使用者在機器「系統設定 → 正版查驗」看到設備 ID(12 hex),來此輸入查驗。
+#   靜態站無後端 → 用 JSONP 打 GAS verify_public,回兩態 {ok:true/false}(防探測)。
+#   來源交接:firmware docs/website_verify_page_spec.md。目前用「方案 A」現成 URL,
+#   之後改「方案 B」獨立唯讀 GAS 只需換 VERIFY["api_url"] 一行。
+# ============================================================
+VERIFY = {
+    # 方案 A(spec §1):現成白名單 GAS 的 verify_public。之後換方案 B 只改這行。
+    "api_url": "https://script.google.com/macros/s/AKfycbyxiyNljKJKtNaSfqGrdzr-YRkuAx1z_1weqxjL-Na-RVpgggrK6nvVe7qC-IORykTQtQ/exec",
+    "i18n": {
+        "zh": {
+            "title": "正版查驗 | MotorLab",
+            "description": "輸入 MotorLab 馬達磨合機上的設備 ID,即時查驗是否為正版註冊機。",
+            "keywords": "MotorLab 正版查驗, 設備 ID 查驗, 正版認證, 馬達磨合機正版",
+            "breadcrumb": "正版查驗",
+            "h1_for_ld": "MotorLab 正版查驗",
+            "eyebrow": "Verify · 正版查驗",
+            "hero_title": "正版查驗",
+            "hero_p": "輸入機器「系統設定 → 正版查驗」顯示的設備 ID,即時查驗是否為正版註冊機。",
+            "form_label": "設備 ID",
+            "input_ph": "輸入設備 ID(12 碼)",
+            "btn": "查驗",
+            "note": "請確認你正在<b>官方網站</b>(網址與包裝／說明書一致)進行查驗。設備 ID 可在機器「系統設定 → 正版查驗」中查看。查驗結果僅代表該設備 ID 是否在正版名單,不涉及個人資料。",
+            "js": {
+                "checking": "查驗中…",
+                "timeout": "✗ 連線逾時,請稍後再試",
+                "netfail": "✗ 連線失敗,請稍後再試",
+                "badfmt": "⚠ 設備 ID 需為 12 位十六進位(0-9, A-F)",
+                "genuine": "✅ <b>正版認證</b>",
+                "notfound": "❌ <b>查無此機</b>　此設備 ID 未在正版名單,請聯繫原購買通路。",
+                "busy": "⏳ 查驗繁忙,請稍後再試"
+            }
+        },
+        "en": {
+            "title": "Genuine Product Verification | MotorLab",
+            "description": "Enter the Device ID from your MotorLab motor break-in machine to instantly verify it is a genuine, registered unit.",
+            "keywords": "MotorLab genuine verification, device ID check, product authenticity, genuine motor break-in machine",
+            "breadcrumb": "Verify",
+            "h1_for_ld": "MotorLab Genuine Product Verification",
+            "eyebrow": "Verify",
+            "hero_title": "Genuine Product Verification",
+            "hero_p": "Enter the Device ID shown in your machine's System Settings → Genuine Verification to instantly check whether it is a genuine, registered unit.",
+            "form_label": "Device ID",
+            "input_ph": "Enter Device ID (12 chars)",
+            "btn": "Verify",
+            "note": "Please confirm you are on the <b>official website</b> (matching the URL on your packaging / manual). Find your Device ID in the machine's System Settings → Genuine Verification. The result only indicates whether the Device ID is on the genuine list; no personal data is involved.",
+            "js": {
+                "checking": "Verifying…",
+                "timeout": "✗ Connection timed out, please try again later",
+                "netfail": "✗ Connection failed, please try again later",
+                "badfmt": "⚠ Device ID must be 12 hex characters (0-9, A-F)",
+                "genuine": "✅ <b>Genuine product verified</b>",
+                "notfound": "❌ <b>Not found.</b>　This Device ID is not on the genuine list; please contact your place of purchase.",
+                "busy": "⏳ Busy, please try again later"
+            }
+        },
+        "ja": {
+            "title": "正規品認証 | MotorLab",
+            "description": "MotorLab モーター慣らし機の「デバイス ID」を入力し、正規登録機かどうかをその場で確認できます。",
+            "keywords": "MotorLab 正規品認証, デバイス ID 確認, 正規品チェック, モーター慣らし機 正規品",
+            "breadcrumb": "正規品認証",
+            "h1_for_ld": "MotorLab 正規品認証",
+            "eyebrow": "Verify · 正規品認証",
+            "hero_title": "正規品認証",
+            "hero_p": "機器の「システム設定 → 正規品認証」に表示されるデバイス ID を入力すると、正規登録機かどうかをその場で確認できます。",
+            "form_label": "デバイス ID",
+            "input_ph": "デバイス ID を入力(12 桁)",
+            "btn": "確認",
+            "note": "パッケージ／説明書に記載の URL と一致する<b>公式サイト</b>で確認していることをご確認ください。デバイス ID は機器の「システム設定 → 正規品認証」で確認できます。結果はデバイス ID が正規リストにあるかどうかのみを示し、個人情報は関与しません。",
+            "js": {
+                "checking": "確認中…",
+                "timeout": "✗ 接続タイムアウト、後でもう一度お試しください",
+                "netfail": "✗ 接続に失敗しました、後でもう一度お試しください",
+                "badfmt": "⚠ デバイス ID は 12 桁の十六進数(0-9, A-F)です",
+                "genuine": "✅ <b>正規品として認証されました</b>",
+                "notfound": "❌ <b>見つかりません。</b>　このデバイス ID は正規リストにありません。ご購入元にお問い合わせください。",
+                "busy": "⏳ 混雑しています、後でもう一度お試しください"
+            }
+        }
+    }
+}
+
+# /verify/ JSONP 查驗邏輯(__API_URL__ / __I18N_JSON__ 由 build_verify_page 取代)
+VERIFY_APP_JS = r"""
+(function(){
+  var VERIFY_URL = "__API_URL__";
+  var I18N = __I18N_JSON__;
+  var input = document.getElementById('vf-id');
+  var btn = document.getElementById('vf-btn');
+  var out = document.getElementById('vf-result');
+  function normMac(s){ return (s||'').toUpperCase().replace(/[^0-9A-F]/g,''); }
+  function setResult(html, cls){ out.className = 'vf-result vf-show' + (cls ? (' ' + cls) : ''); out.innerHTML = html; }
+  function verify(){
+    var mac = normMac(input.value);
+    if(!/^[0-9A-F]{12}$/.test(mac)){ setResult(I18N.badfmt, 'warn'); return; }
+    setResult(I18N.checking, 'muted');
+    btn.disabled = true;
+    var cb = 'v_' + Date.now();
+    var s = document.createElement('script');
+    var timer = setTimeout(function(){ cleanup(); setResult(I18N.timeout, 'bad'); }, 12000);
+    function cleanup(){ clearTimeout(timer); try{ delete window[cb]; }catch(e){ window[cb] = undefined; } if(s.parentNode) s.parentNode.removeChild(s); btn.disabled = false; }
+    window[cb] = function(res){ cleanup(); render(res); };
+    s.onerror = function(){ cleanup(); setResult(I18N.netfail, 'bad'); };
+    s.src = VERIFY_URL + '?action=verify_public&mac=' + encodeURIComponent(mac) + '&callback=' + cb + '&t=' + Date.now();
+    document.body.appendChild(s);
+  }
+  function render(res){
+    if(res && res.reason === 'rate_limited'){ setResult(I18N.busy, 'warn'); return; }
+    if(res && res.ok === true) setResult(I18N.genuine, 'ok');
+    else setResult(I18N.notfound, 'bad');
+  }
+  if(btn) btn.addEventListener('click', verify);
+  if(input){
+    input.addEventListener('keydown', function(e){ if(e.key === 'Enter'){ e.preventDefault(); verify(); } });
+    input.addEventListener('input', function(){ var p = input.selectionStart; input.value = normMac(input.value); try{ input.setSelectionRange(p, p); }catch(e){} });
+  }
+})();
+"""
+
+# 查驗頁專屬 CSS(注入 head;版面沿用 .lab-* 系統,只補表單與結果狀態)
+VERIFY_CSS = """
+.vf-box{max-width:520px;margin:0 auto;text-align:center}
+.vf-label{display:block;font-size:13px;color:var(--text-muted);margin-bottom:8px;letter-spacing:.04em;text-transform:uppercase}
+.vf-row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.vf-row .lab-input{flex:1;min-width:200px;font-family:monospace;font-size:18px;letter-spacing:.12em;text-align:center;text-transform:uppercase}
+.vf-row .lab-btn{white-space:nowrap}
+.vf-result{margin-top:22px;min-height:1.6em;font-size:17px;line-height:1.6;opacity:0;transition:opacity .18s}
+.vf-result.vf-show{opacity:1}
+.vf-result.ok{color:#34d399}
+.vf-result.bad{color:var(--text-secondary)}
+.vf-result.warn{color:#fbbf24}
+.vf-result.muted{color:var(--text-muted)}
+.vf-note{max-width:560px;margin:28px auto 0;font-size:13px;line-height:1.8;color:var(--text-muted)}
+"""
+
+
+def build_verify_page(verify_cfg, lang, src_html, i18n):
+    """產生 /verify/ 正版查驗頁(靜態殼 + JSONP 查驗,沿用 .guide-page / .lab-* 殼)。"""
+    soup = BeautifulSoup(src_html, "lxml")
+    cfg = LANGS[lang]
+    ui = UI_STRINGS[lang]
+    s = verify_cfg["i18n"][lang]
+    lang_prefix = "" if lang == "zh" else f"/{lang}"
+    page_url = f"{SITE}{lang_prefix}/verify/"
+    home_url = f"{SITE}{lang_prefix}/"
+
+    soup.html["lang"] = cfg["html_lang"]
+
+    for sc in soup.find_all("script", {"type": "application/ld+json"}):
+        sc.decompose()
+    for tag in soup.find_all("link", {"rel": "alternate"}):
+        tag.decompose()
+
+    footer_el = soup.find("footer")
+    footer_extracted = footer_el.extract() if footer_el else None
+    _fix_footer_verify(footer_extracted, lang)
+
+    if soup.title:
+        soup.title.string = s["title"]
+
+    def set_meta(attr, attr_val, content):
+        tag = soup.find("meta", {attr: attr_val})
+        if tag:
+            tag["content"] = content
+
+    set_meta("name", "description", s["description"])
+    kw = s["keywords"]
+    if lang != "en" and "en" in verify_cfg["i18n"]:
+        kw = kw + ", " + verify_cfg["i18n"]["en"]["keywords"]
+    set_meta("name", "keywords", kw)
+    set_meta("http-equiv", "Content-Language", cfg["html_lang"])
+    set_meta("property", "og:type", "website")
+    set_meta("property", "og:url", page_url)
+    set_meta("property", "og:title", s["title"])
+    set_meta("property", "og:description", s["description"])
+    set_meta("property", "og:locale", cfg["og_locale"])
+    set_meta("name", "twitter:title", s["title"])
+    set_meta("name", "twitter:description", s["description"])
+
+    canon = soup.find("link", {"rel": "canonical"})
+    if canon:
+        canon["href"] = page_url
+
+    head = soup.head
+    for hl_lang, hl_cfg in LANGS.items():
+        hl_prefix = "" if hl_lang == "zh" else f"/{hl_lang}"
+        head.append(soup.new_tag("link", attrs={
+            "rel": "alternate", "hreflang": hl_cfg["html_lang"], "href": f"{SITE}{hl_prefix}/verify/"
+        }))
+    head.append(soup.new_tag("link", attrs={
+        "rel": "alternate", "hreflang": "x-default", "href": f"{SITE}/verify/"
+    }))
+
+    # 查驗頁專屬 CSS
+    style_tag = soup.new_tag("style")
+    style_tag.string = VERIFY_CSS
+    head.append(style_tag)
+
+    webapp_ld = {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": s["h1_for_ld"],
+        "description": s["description"],
+        "inLanguage": cfg["html_lang"],
+        "url": page_url,
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Web",
+        "isPartOf": {"@type": "WebSite", "name": "MotorLab.tw", "url": SITE + "/"},
+    }
+    breadcrumb_ld = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": ui["bc_home"], "item": home_url},
+            {"@type": "ListItem", "position": 2, "name": s["breadcrumb"], "item": page_url},
+        ],
+    }
+    for data in (webapp_ld, breadcrumb_ld):
+        sc = soup.new_tag("script", attrs={"type": "application/ld+json"})
+        sc.string = json.dumps(data, ensure_ascii=False, indent=2)
+        head.append(sc)
+
+    soup.body.clear()
+    soup.body["class"] = "guide-page"
+
+    nav_html = (
+        f'<nav class="guide-nav"><div class="container">'
+        f'<a class="brand" href="{home_url}"><span>MotorLab<span class="tag">.tw</span></span></a>'
+        f'<a class="back-link" href="{home_url}">{ui["back_home"]}</a>'
+        f'</div></nav>'
+    )
+    soup.body.append(BeautifulSoup(nav_html, "html.parser"))
+
+    main_el = soup.new_tag("main")
+
+    bc_html = (
+        f'<nav class="breadcrumb" aria-label="Breadcrumb">'
+        f'<a href="{home_url}">{ui["bc_home"]}</a><span class="sep">/</span>'
+        f'<span class="current">{s["breadcrumb"]}</span></nav>'
+    )
+    hero_html = (
+        f'<section class="lab-hero"><div class="container">{bc_html}'
+        f'<div class="lab-eyebrow">{s["eyebrow"]}</div>'
+        f'<h1 class="lab-hero-title">{s["hero_title"]}</h1>'
+        f'<p class="lab-hero-p">{s["hero_p"]}</p>'
+        f'</div></section>'
+    )
+    main_el.append(BeautifulSoup(hero_html, "html.parser"))
+
+    form_html = (
+        f'<section class="lab-section"><div class="container">'
+        f'<div class="vf-box">'
+        f'<label class="vf-label" for="vf-id">{s["form_label"]}</label>'
+        f'<div class="vf-row">'
+        f'<input type="text" id="vf-id" class="lab-input" maxlength="12" '
+        f'autocapitalize="characters" autocomplete="off" spellcheck="false" '
+        f'inputmode="latin" placeholder="{s["input_ph"]}">'
+        f'<button type="button" class="lab-btn" id="vf-btn">{s["btn"]}</button>'
+        f'</div>'
+        f'<div class="vf-result" id="vf-result" aria-live="polite"></div>'
+        f'<p class="vf-note">{s["note"]}</p>'
+        f'</div>'
+        f'</div></section>'
+    )
+    main_el.append(BeautifulSoup(form_html, "html.parser"))
+
+    soup.body.append(main_el)
+    if footer_extracted is not None:
+        soup.body.append(footer_extracted)
+
+    app_js = VERIFY_APP_JS.replace("__API_URL__", verify_cfg["api_url"])
     app_js = app_js.replace("__I18N_JSON__", json.dumps(s["js"], ensure_ascii=False))
     script_tag = soup.new_tag("script")
     script_tag.string = app_js
@@ -2990,6 +3292,7 @@ def build_manual_page(man_cfg, lang, src_html, i18n):
 
     footer_el = soup.find("footer")
     footer_extracted = footer_el.extract() if footer_el else None
+    _fix_footer_verify(footer_extracted, lang)
 
     if soup.title:
         soup.title.string = s["title"]
@@ -3205,6 +3508,21 @@ def main():
         print("  ⚠ LAB['api_url'] 尚未設定 — /lab/ 上線前要填入 GAS Web App URL")
 
     print()
+    print("=== 正版查驗(/verify/,GAS verify_public / JSONP)===")
+    for lang in ("zh", "en", "ja"):
+        if lang not in VERIFY["i18n"]:
+            continue
+        lang_prefix = "" if lang == "zh" else f"{lang}/"
+        out_dir = f"{lang_prefix}verify"
+        out_path = f"{out_dir}/index.html"
+        os.makedirs(out_dir, exist_ok=True)
+        html_out = build_verify_page(VERIFY, lang, src_html, i18n)
+        with open(out_path, "w", encoding="utf-8") as f:
+            f.write(html_out)
+        size = len(html_out.encode("utf-8"))
+        print(f"  ✅ {out_path:<45} {size:>9,} bytes  ({lang})")
+
+    print()
     print("=== 使用者手冊(/docs/user-manual/,D23 docs 分類)===")
     man_type = MANUAL.get("type", "docs")
     for lang in ("zh", "en", "ja"):
@@ -3221,7 +3539,7 @@ def main():
         print(f"  ✅ {out_path:<45} {size:>9,} bytes  ({lang})")
 
     print()
-    print("完成!3 個語言版本 + 教學分頁 + 3 個 hub 索引頁 + 商品外觀頁 + /lab/ + 使用者手冊已產生。")
+    print("完成!3 個語言版本 + 教學分頁 + 3 個 hub 索引頁 + 商品外觀頁 + /lab/ + /verify/ + 使用者手冊已產生。")
     print("=" * 55)
 
 
