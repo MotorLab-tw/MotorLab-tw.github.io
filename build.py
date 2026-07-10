@@ -2438,7 +2438,7 @@ VERIFY = {
             "form_label": "設備 ID",
             "input_ph": "輸入設備 ID(12 碼)",
             "btn": "查驗",
-            "note": "請確認你正在<b>官方網站</b>(網址與包裝／說明書一致)進行查驗。設備 ID 可在機器「系統設定 → 正版查驗」中查看。查驗結果僅代表該設備 ID 是否在正版名單,不涉及個人資料。",
+            "note": "請確認你正在<b>官方網站</b>(https://motorlab-tw.github.io/)進行查驗。設備 ID 可在機器「系統設定 → 正版查驗」中查看。查驗結果僅代表該設備 ID 是否在正版名單,不涉及個人資料。",
             "js": {
                 "checking": "查驗中…",
                 "timeout": "✗ 連線逾時,請稍後再試",
@@ -2461,7 +2461,7 @@ VERIFY = {
             "form_label": "Device ID",
             "input_ph": "Enter Device ID (12 chars)",
             "btn": "Verify",
-            "note": "Please confirm you are on the <b>official website</b> (matching the URL on your packaging / manual). Find your Device ID in the machine's System Settings → Genuine Verification. The result only indicates whether the Device ID is on the genuine list; no personal data is involved.",
+            "note": "Please confirm you are on the <b>official website</b> (https://motorlab-tw.github.io/). Find your Device ID in the machine's System Settings → Genuine Verification. The result only indicates whether the Device ID is on the genuine list; no personal data is involved.",
             "js": {
                 "checking": "Verifying…",
                 "timeout": "✗ Connection timed out, please try again later",
@@ -2484,7 +2484,7 @@ VERIFY = {
             "form_label": "デバイス ID",
             "input_ph": "デバイス ID を入力(12 桁)",
             "btn": "確認",
-            "note": "パッケージ／説明書に記載の URL と一致する<b>公式サイト</b>で確認していることをご確認ください。デバイス ID は機器の「システム設定 → 正規品認証」で確認できます。結果はデバイス ID が正規リストにあるかどうかのみを示し、個人情報は関与しません。",
+            "note": "<b>公式サイト</b>(https://motorlab-tw.github.io/)で確認していることをご確認ください。デバイス ID は機器の「システム設定 → 正規品認証」で確認できます。結果はデバイス ID が正規リストにあるかどうかのみを示し、個人情報は関与しません。",
             "js": {
                 "checking": "確認中…",
                 "timeout": "✗ 接続タイムアウト、後でもう一度お試しください",
