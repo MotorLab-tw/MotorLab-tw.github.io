@@ -2458,7 +2458,7 @@
 <div class="tech-card">
 <div class="tech-name">PARAM_EXTRACT</div>
 <h4 data-i18n="t11.title">Motor Constant Extraction (Ke / Km / R)</h4>
-<p data-i18n="t11.desc">A multi-point sweep under adaptive speed lock derives the motor magnetic strength (Ke), motor constant (Km) and internal resistance — physical parameters a professional dynamometer reports. It auto-averages three passes with a standardized stall protocol for ±0.3% run-to-run resistance consistency, as objective reference data for grading motors (no scoring or ranking).</p>
+<p data-i18n="t11.desc">A multi-point sweep under adaptive speed lock derives the motor magnetic strength (Ke), motor constant (Km) and internal resistance — physical parameters a professional dynamometer reports. It auto-averages three passes for ±0.3% resistance-measurement repeatability, as objective reference data for grading motors (no scoring or ranking).</p>
 </div>
 <div class="tech-card">
 <div class="tech-name">RECIPROCAL_RPM</div>
@@ -2674,7 +2674,7 @@
 <ul>
 <li><span class="change-type change-new" data-i18n="cl.NEW">NEW</span><span data-i18n="cl.v330.l1">Motor Characterization history library: results are saved automatically (up to 50, oldest auto-deleted when full), viewable and deletable; you can enter a motor model and note at start</span></li>
 <li><span class="change-type change-improve" data-i18n="cl.IMPROVE">IMPROVE</span><span data-i18n="cl.v330.l2">Motor Characterization now runs three passes and averages them, showing a "3-pass consistency" figure — a large spread warns of a loose setup or an unsteady motor</span></li>
-<li><span class="change-type change-improve" data-i18n="cl.IMPROVE">IMPROVE</span><span data-i18n="cl.v330.l3">Better measurement precision (standardized stall protocol, ±0.3% run-to-run resistance consistency); results add a breakaway-voltage reference and use I0 as the primary grading metric</span></li>
+<li><span class="change-type change-improve" data-i18n="cl.IMPROVE">IMPROVE</span><span data-i18n="cl.v330.l3">Better measurement precision and repeatability; results now add a breakaway-voltage reference</span></li>
 </ul>
 </div>
 </div>
@@ -2924,7 +2924,7 @@
       't10.title': '自適應閉環定速控制',
       't10.desc': '以閉環控制將馬達精準鎖定在指定轉速(誤差 ±0.5%),讓每顆馬達都在完全相同的工作點被量測,排除「轉速不同 → 數據不可比」的干擾。控制參數自我學習,不同轉速自動調適。',
       't11.title': '馬達常數萃取(Ke / Km / 內阻)',
-      't11.desc': '以自適應鎖轉速做多點掃描,推導出馬達的磁路強度(Ke)、馬達常數(Km)與內部電阻等物理參數(專業測功機才提供)。自動三趟取平均、搭配標準化堵轉協定,內部電阻跨次一致性達 ±0.3%;作為選別馬達的客觀參考(不評分、不排名)。',
+      't11.desc': '以自適應鎖轉速做多點掃描,推導出馬達的磁路強度(Ke)、馬達常數(Km)與內部電阻等物理參數(專業測功機才提供)。自動三趟取平均,內部電阻量測重複性達 ±0.3%;作為選別馬達的客觀參考(不評分、不排名)。',
       't12.title': '高解析度逐脈衝測速',
       't12.desc': '以脈衝週期法取代固定視窗計數,轉速解析度提升逾 600 倍,任何轉速都能顯示到個位數 RPM。畫面末位跳動反映的是馬達真實轉速波動,而非量測雜訊。',
       't13.title': '轉速感測掃頻校正',
@@ -3600,7 +3600,7 @@
       'cl.v330.title': '特性量測三趟平均 · 量測歷史紀錄庫',
       'cl.v330.l1': '馬達特性量測歷史紀錄庫:量測結果自動存檔(最多 50 筆,滿自動刪最舊),可檢視與刪除;啟動時可填馬達型號與備註',
       'cl.v330.l2': '馬達特性量測自動跑三趟取平均,並顯示「3 趟一致性」——差異過大會提醒架設鬆動或馬達不穩',
-      'cl.v330.l3': '量測精度提升(標準化堵轉協定,內阻量測跨次一致性 ±0.3%);結果新增起轉電壓參考,並以 I0 為主要選別指標',
+      'cl.v330.l3': '馬達特性量測的精度與重複性再提升,結果新增起轉電壓參考',
       'cl.v3229.title': '新功能「馬達特性量測」· 轉速解析度大幅提升',
       'cl.v3229.l1': '馬達特性量測(首頁最上方):全自動量出馬達特性參數與損耗,提供參考數據(不評分、不排名),適合同型號比較與磨合前後對照;可選正 / 反轉',
       'cl.v3229.l2': '轉速量測解析度大幅提升(可顯示至個位數 RPM),停止偵測同步強化',
@@ -3778,7 +3778,7 @@
       't10.title': 'Adaptive Closed-Loop Speed Lock',
       't10.desc': 'A closed loop pins the motor to a commanded RPM within ±0.5%, so every motor is measured at an identical operating point — removing the "different speed → incomparable data" confound. The control parameters self-tune and adapt across speeds.',
       't11.title': 'Motor Constant Extraction (Ke / Km / R)',
-      't11.desc': 'A multi-point sweep under adaptive speed lock derives the motor magnetic strength (Ke), motor constant (Km) and internal resistance — physical parameters a professional dynamometer reports. It auto-averages three passes with a standardized stall protocol for ±0.3% run-to-run resistance consistency, as objective reference data for grading motors (no scoring or ranking).',
+      't11.desc': 'A multi-point sweep under adaptive speed lock derives the motor magnetic strength (Ke), motor constant (Km) and internal resistance — physical parameters a professional dynamometer reports. It auto-averages three passes for ±0.3% resistance-measurement repeatability, as objective reference data for grading motors (no scoring or ranking).',
       't12.title': 'High-Resolution Reciprocal Timing',
       't12.desc': 'Reciprocal period timing replaces fixed-window counting, improving RPM resolution over 600× to a single-digit-RPM floor at any speed. The flickering last digits reflect the motor\'s real speed fluctuation, not measurement noise.',
       't13.title': 'Swept-Frequency Tachometer Calibration',
@@ -4454,7 +4454,7 @@
       'cl.v330.title': 'Characterization 3-Pass Average · Measurement History',
       'cl.v330.l1': 'Motor Characterization history library: results are saved automatically (up to 50, oldest auto-deleted when full), viewable and deletable; you can enter a motor model and note at start',
       'cl.v330.l2': 'Motor Characterization now runs three passes and averages them, showing a "3-pass consistency" figure — a large spread warns of a loose setup or an unsteady motor',
-      'cl.v330.l3': 'Better measurement precision (standardized stall protocol, ±0.3% run-to-run resistance consistency); results add a breakaway-voltage reference and use I0 as the primary grading metric',
+      'cl.v330.l3': 'Better measurement precision and repeatability; results now add a breakaway-voltage reference',
       'cl.v3229.title': 'New: Motor Characterization · Major RPM-Resolution Boost',
       'cl.v3229.l1': 'Motor Characterization (top of the home screen): fully automatic measurement of motor constants and losses, reference data only (no scoring or ranking), great for same-model comparison and before/after break-in; forward or reverse',
       'cl.v3229.l2': 'RPM measurement resolution greatly improved (now down to single-digit RPM), with stronger stop detection',
@@ -4632,7 +4632,7 @@
       't10.title': '適応クローズドループ定速制御',
       't10.desc': 'クローズドループでモーターを指定回転数に精密ロック(誤差 ±0.5%)、すべてのモーターを同一の動作点で測定し「回転数が違う → 比較不能」の交絡を排除。制御パラメータは自己学習し、回転数ごとに自動調整します。',
       't11.title': 'モーター定数の抽出(Ke / Km / 内部抵抗)',
-      't11.desc': '適応ロック定速の多点スイープで、モーターの磁気強度(Ke)、モーター定数(Km)、内部抵抗などの物理パラメータ(プロのダイナモ相当)を導出。自動 3 パス平均と標準化ストール手順により内部抵抗の測定間一致性 ±0.3%;選別の客観的な参考データ(採点・ランキングなし)。',
+      't11.desc': '適応ロック定速の多点スイープで、モーターの磁気強度(Ke)、モーター定数(Km)、内部抵抗などの物理パラメータ(プロのダイナモ相当)を導出。自動 3 パス平均で内部抵抗の測定再現性 ±0.3%;選別の客観的な参考データ(採点・ランキングなし)。',
       't12.title': '高分解能の逐パルス測速',
       't12.desc': 'パルス周期法で固定ウィンドウ計数を置き換え、回転数分解能を 600 倍以上向上、どの回転数でも 1 の位まで表示。末位のちらつきは測定ノイズではなくモーターの実際の回転変動です。',
       't13.title': '掃引周波数によるタコメーター校正',
@@ -4707,7 +4707,7 @@
       'cl.v330.title': '特性測定の 3 パス平均 · 測定履歴ライブラリ',
       'cl.v330.l1': 'モーター特性測定の履歴ライブラリ:結果を自動保存(最大 50 件、満杯で最古を自動削除)、閲覧と削除が可能;開始時にモーター型番と備考を入力可',
       'cl.v330.l2': 'モーター特性測定は自動で 3 パス実行して平均し、「3 パス一致性」を表示 —— ばらつきが大きい場合は取付けの緩みやモーターの不安定を警告',
-      'cl.v330.l3': '測定精度が向上(標準化ストール手順、内部抵抗の測定間一致性 ±0.3%);結果に起動電圧の参考値を追加し、I0 を主要な選別指標に',
+      'cl.v330.l3': '測定精度と再現性がさらに向上;結果に起動電圧の参考値を追加',
       'cl.v3229.title': '新機能「モーター特性測定」· 回転数分解能を大幅向上',
       'cl.v3229.l1': 'モーター特性測定(ホーム画面の最上部):モーターの特性パラメータと損失を全自動で測定、参考データのみ(採点・ランキングなし)、同型モーターの比較や慣らし前後の対照に最適;正転/逆転を選択可',
       'cl.v3229.l2': '回転数測定の分解能を大幅向上(1 の位まで表示可能)、停止検出も強化',
