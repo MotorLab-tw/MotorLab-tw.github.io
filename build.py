@@ -320,7 +320,7 @@ GUIDES = [
         "slug": "motor-wash-vs-break-in",
         "key": "g4",
         "published": "2026-05-22",
-        "updated": "2026-05-22",
+        "updated": "2026-07-14",
         "i18n": {
             "zh": {
                 "title": "洗馬達 vs 磨合馬達:差別在哪?什麼時候做? | MotorLab",
@@ -349,7 +349,7 @@ GUIDES = [
         "slug": "racing-motor-break-in",
         "key": "g5",
         "published": "2026-05-22",
-        "updated": "2026-05-22",
+        "updated": "2026-07-14",
         "i18n": {
             "zh": {
                 "title": "為什麼磨馬達決定四驅車比賽勝負?競賽水準的磨合差距 | MotorLab",
@@ -497,7 +497,7 @@ GUIDES = [
         "slug": "track-analysis-motor-selection",
         "key": "g10",
         "published": "2026-06-04",
-        "updated": "2026-06-04",
+        "updated": "2026-07-14",
         "type": "guides",
         "i18n": {
             "zh": {
