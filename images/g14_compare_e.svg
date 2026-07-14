@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080" font-family="'Noto Sans TC','Noto Sans JP','Microsoft JhengHei','Yu Gothic','Meiryo','Segoe UI',sans-serif">
+<rect width="1080" height="1080" fill="#1a1d23"/>
+<text x="540.0" y="96" fill="#88c0d0" font-size="26" letter-spacing="6" text-anchor="middle" font-weight="600">MINI 4WD MOTOR LAB</text>
+<text x="540.0" y="176" fill="#eceff4" font-size="58" text-anchor="middle" font-weight="800">Fixed Voltage vs Fixed Speed</text>
+<text x="540.0" y="228" fill="#8fbcbb" font-size="27" text-anchor="middle">the break-in physics, side by side</text>
+<text x="90" y="337.0" fill="#8fbcbb" font-size="24" font-weight="600">Dimension</text>
+<rect x="376" y="290" width="308" height="76" rx="12" fill="#d08770"/>
+<text x="530.0" y="338.0" fill="#3b2417" font-size="30" font-weight="800" text-anchor="middle">Fixed Voltage</text>
+<rect x="696" y="290" width="308" height="76" rx="12" fill="#88c0d0"/>
+<text x="850.0" y="338.0" fill="#1a1d23" font-size="30" font-weight="800" text-anchor="middle">Fixed Speed</text>
+<rect x="376" y="386" width="308" height="70" rx="10" fill="#d08770" opacity="0.14"/>
+<rect x="696" y="386" width="308" height="70" rx="10" fill="#88c0d0" opacity="0.14"/>
+<text x="90" y="429.0" fill="#d8dee9" font-size="25" font-weight="600">What you control</text>
+<text x="530.0" y="429.0" fill="#eceff4" font-size="23" text-anchor="middle">Voltage (proxy)</text>
+<text x="850.0" y="429.0" fill="#eceff4" font-size="23" text-anchor="middle" font-weight="600">RPM = sliding speed</text>
+<rect x="376" y="468" width="308" height="70" rx="10" fill="#d08770" opacity="0.14"/>
+<rect x="696" y="468" width="308" height="70" rx="10" fill="#88c0d0" opacity="0.14"/>
+<text x="90" y="511.0" fill="#d8dee9" font-size="25" font-weight="600">Within a run</text>
+<text x="530.0" y="511.0" fill="#eceff4" font-size="23" text-anchor="middle">Drifts (R, temp)</text>
+<text x="850.0" y="511.0" fill="#eceff4" font-size="23" text-anchor="middle" font-weight="600">Locked</text>
+<rect x="376" y="550" width="308" height="70" rx="10" fill="#d08770" opacity="0.14"/>
+<rect x="696" y="550" width="308" height="70" rx="10" fill="#88c0d0" opacity="0.14"/>
+<text x="90" y="593.0" fill="#d8dee9" font-size="25" font-weight="600">Across motors</text>
+<text x="530.0" y="593.0" fill="#eceff4" font-size="23" text-anchor="middle">Each differs</text>
+<text x="850.0" y="593.0" fill="#eceff4" font-size="23" text-anchor="middle" font-weight="600">Same RPM, comparable</text>
+<rect x="376" y="632" width="308" height="70" rx="10" fill="#d08770" opacity="0.14"/>
+<rect x="696" y="632" width="308" height="70" rx="10" fill="#88c0d0" opacity="0.14"/>
+<text x="90" y="675.0" fill="#d8dee9" font-size="25" font-weight="600">Commutation</text>
+<text x="530.0" y="675.0" fill="#eceff4" font-size="23" text-anchor="middle">Drifts</text>
+<text x="850.0" y="675.0" fill="#eceff4" font-size="23" text-anchor="middle" font-weight="600">Fixed</text>
+<rect x="376" y="714" width="308" height="70" rx="10" fill="#d08770" opacity="0.14"/>
+<rect x="696" y="714" width="308" height="70" rx="10" fill="#88c0d0" opacity="0.14"/>
+<text x="90" y="757.0" fill="#d8dee9" font-size="25" font-weight="600">Low-speed bedding</text>
+<text x="530.0" y="757.0" fill="#eceff4" font-size="23" text-anchor="middle">Unpredictable</text>
+<text x="850.0" y="757.0" fill="#eceff4" font-size="23" text-anchor="middle" font-weight="600">Can lock a low RPM</text>
+<rect x="376" y="796" width="308" height="70" rx="10" fill="#d08770" opacity="0.14"/>
+<rect x="696" y="796" width="308" height="70" rx="10" fill="#88c0d0" opacity="0.14"/>
+<text x="90" y="839.0" fill="#d8dee9" font-size="25" font-weight="600">Setup</text>
+<text x="530.0" y="839.0" fill="#eceff4" font-size="23" text-anchor="middle">Simple, cheap</text>
+<text x="850.0" y="839.0" fill="#eceff4" font-size="23" text-anchor="middle" font-weight="600">Needs feedback</text>
+<rect x="70" y="912" width="940" height="70" rx="14" fill="#2e3440" stroke="#4c566a"/>
+<text x="540.0" y="957" fill="#88c0d0" font-size="30" text-anchor="middle" font-weight="700">Lock the RPM — not the voltage.</text>
+<text x="540.0" y="1032" fill="#4c566a" font-size="22" text-anchor="middle" letter-spacing="1">motorlab-tw.github.io</text>
+</svg>
