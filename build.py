@@ -241,7 +241,7 @@ GUIDES = [
                 "h1_for_ld": "四驅車馬達磨合完全指南:從原理到實作",
             },
             "en": {
-                "title": "How to Break In a Tamiya Mini 4WD Motor — Step-by-Step Stock Steps (10 Stages) | MotorLab",
+                "title": "How to Break In a Tamiya Mini 4WD Motor (10 Stages) | MotorLab",
                 "description": "How to break in a Tamiya Mini 4WD motor: the 10-stage stock steps, 4 control variables, brush seating physics, and the RPM gain before vs after break-in.",
                 "keywords": "how to break in a Mini 4WD motor, Mini 4WD motor break in, motor break-in guide, Tamiya motor break-in, Hyper Dash break-in, motor running-in, motor bedding, 10-stage break-in, break-in RPM gain before after, carbon brush seating, MotorLab",
                 "breadcrumb": "Motor Break-in Guide",
@@ -295,8 +295,8 @@ GUIDES = [
                 "h1_for_ld": "田宮主流馬達規格與磨合策略對照表",
             },
             "en": {
-                "title": "Which Tamiya Mini 4WD Motor to Use? Speed vs Torque & Break-In Strategy | MotorLab",
-                "description": "How to choose a Tamiya Mini 4WD motor: the 8 mainstream motors compared by speed vs torque, which one to use per course type, plus break-in strategy and copper vs carbon brush.",
+                "title": "Which Tamiya Mini 4WD Motor to Use? Speed vs Torque | MotorLab",
+                "description": "How to choose a Tamiya Mini 4WD motor: 8 mainstream motors compared by speed vs torque, which to use per course, plus break-in strategy.",
                 "keywords": "which Tamiya motor to use, best Tamiya Mini 4WD motor, speed vs torque motor, Tamiya motor for technical course, Hyper Dash 2, Plasma Dash, Power Dash, Sprint Dash, Rev-Tuned, Torque-Tuned, Atomic-Tuned, Light Dash, which is faster sprint dash or power dash, copper vs carbon brush, Tamiya break-in strategy",
                 "breadcrumb": "Which Motor to Use",
                 "h1_for_ld": "Which Tamiya Mini 4WD Motor to Use? Speed vs Torque & Break-In Strategy",
@@ -459,8 +459,8 @@ GUIDES = [
                 "h1_for_ld": "田宮 Mini 4WD® 全 15 款馬達規格對照表(含 PRO 系列)",
             },
             "en": {
-                "title": "Tamiya Mini 4WD Motor Chart & Specs Table — All 15 Motors (RPM/Torque/Current) | MotorLab",
-                "description": "Complete Tamiya Mini 4WD motor chart and specs table — all 15 motors (9 standard + 6 PRO) with RPM, torque, current and race-legality. Compare and find the fastest.",
+                "title": "Tamiya Mini 4WD Motor Chart: All 15 Motors (RPM, Torque) | MotorLab",
+                "description": "Complete Tamiya Mini 4WD motor chart — all 15 motors (9 standard + 6 PRO) with RPM, torque, current and race-legality. Compare and find the fastest.",
                 "keywords": "Tamiya Mini 4WD motor chart, Tamiya motor specs table, Tamiya motor specifications, list of Tamiya motors, Tamiya 15 motors, Mini 4WD PRO motors, double-shaft motor, single-shaft motor, Hyper-Dash PRO, Mach-Dash PRO, Plasma-Dash, Ultra-Dash, Power-Dash, Sprint-Dash, fastest Tamiya motor, Tamiya race compliance",
                 "breadcrumb": "Full Lineup (15 Motors)",
                 "h1_for_ld": "Tamiya Mini 4WD Motor Chart — All 15 Motors",
