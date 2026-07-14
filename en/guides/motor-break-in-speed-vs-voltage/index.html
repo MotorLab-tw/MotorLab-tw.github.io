@@ -1114,9 +1114,17 @@
     font-size: 12.5px;
     font-family: monospace;
     letter-spacing: 0.05em;
-    margin: -10px 0 22px;
+    margin: -10px 0 4px;
+  }
+  .guide-dates {
+    color: var(--text-muted);
+    font-size: 12px;
+    font-family: monospace;
+    letter-spacing: 0.05em;
+    margin: 0 0 22px;
     padding-bottom: 18px;
     border-bottom: 1px solid var(--border);
+    opacity: 0.85;
   }
   /* 上一篇 / 回首頁 / 下一篇 */
   .guide-pagination {
@@ -1851,6 +1859,8 @@
     "@type": "WebPage",
     "@id": "https://motorlab-tw.github.io/en/guides/motor-break-in-speed-vs-voltage/"
   },
+  "datePublished": "2026-07-14",
+  "dateModified": "2026-07-14",
   "author": {
     "@type": "Organization",
     "name": "MotorLab Team",
@@ -1893,7 +1903,7 @@
 }</script></head>
 <body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/en/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/en/">← Back to home</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/en/">Home</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/en/#guides">Guides</a><span class="sep">/</span><span class="current">Speed vs Voltage</span></nav><article class="guide-article">
 <span class="guide-tag" data-i18n="g14.tag">METHODOLOGY · Break-in Control</span>
-<h1 data-i18n="g14.title">Why Break In a Motor at Fixed Speed, Not Fixed Voltage</h1><p class="guide-byline">Edited by MotorLab Team</p>
+<h1 data-i18n="g14.title">Why Break In a Motor at Fixed Speed, Not Fixed Voltage</h1><p class="guide-byline">Edited by MotorLab Team</p><p class="guide-dates">Published 2026-07-14</p>
 <p class="guide-lead" data-i18n="g14.lead">Almost every break-in method sets a voltage and lets the motor run — fixed-voltage break-in. RPM? At most it gets measured, not controlled. But physically, break-in quality is set by <strong>RPM</strong> (the sliding speed at the contact face), not voltage. Here is fixed-voltage vs fixed-speed, and where they differ.</p>
 <h2 data-i18n="g14.h1">What break-in is actually grinding</h2>
 <p data-i18n="g14.p1">A new motor's brush is flat and touches the round commutator on just a line; break-in grinds the brush into an arc that matches the commutator, taking the two from a single-line contact to a stable, seated one. That grinding happens at the <strong>sliding contact face</strong> between brush and commutator. Physically it is governed by <strong>sliding speed</strong> (commutator surface speed ∝ RPM), contact pressure, current density and temperature — and the key variable you can control in real time is RPM.</p>

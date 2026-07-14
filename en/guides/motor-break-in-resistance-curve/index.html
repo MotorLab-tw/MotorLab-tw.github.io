@@ -1114,9 +1114,17 @@
     font-size: 12.5px;
     font-family: monospace;
     letter-spacing: 0.05em;
-    margin: -10px 0 22px;
+    margin: -10px 0 4px;
+  }
+  .guide-dates {
+    color: var(--text-muted);
+    font-size: 12px;
+    font-family: monospace;
+    letter-spacing: 0.05em;
+    margin: 0 0 22px;
     padding-bottom: 18px;
     border-bottom: 1px solid var(--border);
+    opacity: 0.85;
   }
   /* 上一篇 / 回首頁 / 下一篇 */
   .guide-pagination {
@@ -1851,6 +1859,8 @@
     "@type": "WebPage",
     "@id": "https://motorlab-tw.github.io/en/guides/motor-break-in-resistance-curve/"
   },
+  "datePublished": "2026-07-07",
+  "dateModified": "2026-07-07",
   "author": {
     "@type": "Organization",
     "name": "MotorLab Team",
@@ -1893,7 +1903,7 @@
 }</script></head>
 <body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/en/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/en/">← Back to home</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/en/">Home</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/en/#guides">Guides</a><span class="sep">/</span><span class="current">Break-in R Curve</span></nav><article class="guide-article">
 <span class="guide-tag" data-i18n="g13.tag">METHODOLOGY · Break-in Data</span>
-<h1 data-i18n="g13.title">How Long to Break In a Motor? 560 Runs on One Motor, Answered</h1><p class="guide-byline">Edited by MotorLab Team</p>
+<h1 data-i18n="g13.title">How Long to Break In a Motor? 560 Runs on One Motor, Answered</h1><p class="guide-byline">Edited by MotorLab Team</p><p class="guide-dates">Published 2026-07-07</p>
 <p class="guide-lead" data-i18n="g13.lead">We ran one Mach-Dash PRO 560 times under locked speed, low voltage and no load, plotting its internal resistance (a proxy for the brush–commutator contact state) against the cumulative run count. The line captures a motor's whole arc — from new, through fully broken-in, to decline — so you can tell which stage the motor in your hand is at: still needs running-in, at its best, or past its peak.</p>
 <p data-i18n="g13.lead2">Mini 4WD motor break-in usually rides on feel and experience; hundreds of continuous measurements spanning a whole life cycle have almost no public precedent in the hobby. Below is our log of one motor measured 560 times in a row.</p>
 <p data-i18n="g13.hook">“Break-in widens the contact, so current flows easier and the motor runs faster” — that’s the common intuition in the hobby. So this log may make you pause: the R line <strong>rises</strong> as break-in proceeds. Does break-in make the motor better or worse? The key: this R measures the brush–commutator <strong>contact state</strong>, not the motor’s speed; its rise isn’t bad news — it’s the direct trace of the contact settling in. The chart below breaks that down.</p>

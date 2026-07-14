@@ -232,6 +232,8 @@ GUIDES = [
     {
         "slug": "motor-break-in-guide",
         "key": "g1",
+        "published": "2026-05-22",
+        "updated": "2026-06-12",
         "i18n": {
             "zh": {
                 "title": "四驅車馬達磨合完全指南:從原理到實作 | MotorLab",
@@ -259,6 +261,8 @@ GUIDES = [
     {
         "slug": "motor-break-in-mistakes",
         "key": "g2",
+        "published": "2026-05-22",
+        "updated": "2026-05-22",
         "i18n": {
             "zh": {
                 "title": "業餘車手磨合馬達總是失敗?5 個常見錯誤與正確做法 | MotorLab",
@@ -286,6 +290,8 @@ GUIDES = [
     {
         "slug": "tamiya-motor-specs",
         "key": "g3",
+        "published": "2026-05-22",
+        "updated": "2026-06-12",
         "i18n": {
             "zh": {
                 "title": "田宮主流馬達規格與磨合策略對照表 | 紅二/黑金剛/紫頭速查 | MotorLab",
@@ -313,6 +319,8 @@ GUIDES = [
     {
         "slug": "motor-wash-vs-break-in",
         "key": "g4",
+        "published": "2026-05-22",
+        "updated": "2026-05-22",
         "i18n": {
             "zh": {
                 "title": "洗馬達 vs 磨合馬達:差別在哪?什麼時候做? | MotorLab",
@@ -340,6 +348,8 @@ GUIDES = [
     {
         "slug": "racing-motor-break-in",
         "key": "g5",
+        "published": "2026-05-22",
+        "updated": "2026-05-22",
         "i18n": {
             "zh": {
                 "title": "為什麼磨馬達決定四驅車比賽勝負?競賽水準的磨合差距 | MotorLab",
@@ -367,6 +377,8 @@ GUIDES = [
     {
         "slug": "racing-prep-techniques",
         "key": "g6",
+        "published": "2026-05-23",
+        "updated": "2026-05-23",
         "i18n": {
             "zh": {
                 "title": "四驅車競技進階技巧:常勝玩家不寫在書上的 5 個準備細節 | MotorLab",
@@ -394,6 +406,8 @@ GUIDES = [
     {
         "slug": "motor-analysis-methodology",
         "key": "g7",
+        "published": "2026-05-23",
+        "updated": "2026-05-23",
         "i18n": {
             "zh": {
                 "title": "從手感到數據:馬達分析的三支柱方法論 | MotorLab",
@@ -421,6 +435,8 @@ GUIDES = [
     {
         "slug": "motor-degradation-signs",
         "key": "g8",
+        "published": "2026-05-24",
+        "updated": "2026-06-12",
         "i18n": {
             "zh": {
                 "title": "四驅車馬達衰退的 8 個徵兆與退役判定門檻 | MotorLab",
@@ -449,6 +465,8 @@ GUIDES = [
     {
         "slug": "tamiya-mini-4wd-motor-specs-list",
         "key": "g9",
+        "published": "2026-05-25",
+        "updated": "2026-05-25",
         "type": "benchmarks",
         "i18n": {
             "zh": {
@@ -478,6 +496,8 @@ GUIDES = [
     {
         "slug": "track-analysis-motor-selection",
         "key": "g10",
+        "published": "2026-06-04",
+        "updated": "2026-06-04",
         "type": "guides",
         "i18n": {
             "zh": {
@@ -507,6 +527,8 @@ GUIDES = [
     {
         "slug": "crash-risk-trigger-model",
         "key": "g11",
+        "published": "2026-06-04",
+        "updated": "2026-06-04",
         "type": "guides",
         "i18n": {
             "zh": {
@@ -536,6 +558,8 @@ GUIDES = [
     {
         "slug": "motor-selection-before-break-in",
         "key": "g12",
+        "published": "2026-07-02",
+        "updated": "2026-07-02",
         "type": "guides",
         "i18n": {
             "zh": {
@@ -565,6 +589,8 @@ GUIDES = [
     {
         "slug": "motor-break-in-resistance-curve",
         "key": "g13",
+        "published": "2026-07-07",
+        "updated": "2026-07-07",
         "type": "guides",
         "i18n": {
             "zh": {
@@ -594,6 +620,8 @@ GUIDES = [
     {
         "slug": "motor-break-in-speed-vs-voltage",
         "key": "g14",
+        "published": "2026-07-14",
+        "updated": "2026-07-14",
         "type": "guides",
         "i18n": {
             "zh": {
@@ -633,6 +661,8 @@ UI_STRINGS = {
         "home_label": "回教學首頁",
         "read_more": "閱讀完整文章 →",
         "byline": "編輯者:MotorLab Team",
+        "date_pub": "發表",
+        "date_upd": "更新",
         "hub_count": "{n} 篇文章 →",
         "bc_section": {
             "guides": "教學",
@@ -652,6 +682,8 @@ UI_STRINGS = {
         "home_label": "Back to guides",
         "read_more": "Read full article →",
         "byline": "Edited by MotorLab Team",
+        "date_pub": "Published",
+        "date_upd": "Updated",
         "hub_count": "{n} articles →",
         "bc_section": {
             "guides": "Guides",
@@ -671,6 +703,8 @@ UI_STRINGS = {
         "home_label": "ガイド一覧へ",
         "read_more": "全文を読む →",
         "byline": "編集者:MotorLab Team",
+        "date_pub": "公開",
+        "date_upd": "更新",
         "hub_count": "{n} 件の記事 →",
         "bc_section": {
             "guides": "ガイド",
@@ -1532,6 +1566,16 @@ def build_guide_page(slug, lang, src_html, i18n, guide_cfg):
         byline = soup.new_tag("p", attrs={"class": "guide-byline"})
         byline.string = ui["byline"]
         title_h3.insert_after(byline)
+        # 發表 / 最後更新 日期(更新僅在有異動使用者可見內容時顯示,≠ 發表日才呈現)
+        pub = guide_cfg.get("published")
+        upd = guide_cfg.get("updated")
+        if pub:
+            date_p = soup.new_tag("p", attrs={"class": "guide-dates"})
+            date_txt = f'{ui["date_pub"]} {pub}'
+            if upd and upd != pub:
+                date_txt += f'　·　{ui["date_upd"]} {upd}'
+            date_p.string = date_txt
+            byline.insert_after(date_p)
 
     # 4. 保留 footer
     footer_el = soup.find("footer")
@@ -1597,6 +1641,8 @@ def build_guide_page(slug, lang, src_html, i18n, guide_cfg):
         "inLanguage": cfg["html_lang"],
         "url": page_url,
         "mainEntityOfPage": {"@type": "WebPage", "@id": page_url},
+        "datePublished": guide_cfg.get("published"),
+        "dateModified": guide_cfg.get("updated") or guide_cfg.get("published"),
         "author": {"@type": "Organization", "name": "MotorLab Team", "url": SITE + "/"},
         "publisher": {
             "@type": "Organization",

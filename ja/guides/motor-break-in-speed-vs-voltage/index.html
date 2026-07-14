@@ -1114,9 +1114,17 @@
     font-size: 12.5px;
     font-family: monospace;
     letter-spacing: 0.05em;
-    margin: -10px 0 22px;
+    margin: -10px 0 4px;
+  }
+  .guide-dates {
+    color: var(--text-muted);
+    font-size: 12px;
+    font-family: monospace;
+    letter-spacing: 0.05em;
+    margin: 0 0 22px;
     padding-bottom: 18px;
     border-bottom: 1px solid var(--border);
+    opacity: 0.85;
   }
   /* 上一篇 / 回首頁 / 下一篇 */
   .guide-pagination {
@@ -1851,6 +1859,8 @@
     "@type": "WebPage",
     "@id": "https://motorlab-tw.github.io/ja/guides/motor-break-in-speed-vs-voltage/"
   },
+  "datePublished": "2026-07-14",
+  "dateModified": "2026-07-14",
   "author": {
     "@type": "Organization",
     "name": "MotorLab Team",
@@ -1893,7 +1903,7 @@
 }</script></head>
 <body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/ja/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/ja/">← ホームへ戻る</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/ja/">ホーム</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/ja/#guides">ガイド</a><span class="sep">/</span><span class="current">定電圧 vs 定回転数</span></nav><article class="guide-article">
 <span class="guide-tag" data-i18n="g14.tag">METHODOLOGY · 慣らし制御</span>
-<h1 data-i18n="g14.title">なぜモーター慣らしは電圧ではなく回転数を固定するのか?</h1><p class="guide-byline">編集者:MotorLab Team</p>
+<h1 data-i18n="g14.title">なぜモーター慣らしは電圧ではなく回転数を固定するのか?</h1><p class="guide-byline">編集者:MotorLab Team</p><p class="guide-dates">公開 2026-07-14</p>
 <p class="guide-lead" data-i18n="g14.lead">ほぼすべての慣らし方法は「電圧を設定して回す」—— 定電圧慣らしだ。回転数は?せいぜい「測る」だけで「制御」はしない。だが物理的には、慣らしの品質を決めるのは<strong>回転数</strong>(接触面の摺動速度)であって、電圧ではない。本記事は定電圧 vs 定回転数、その違いを分解する。</p>
 <h2 data-i18n="g14.h1">慣らしは結局なにを削っているのか</h2>
 <p data-i18n="g14.p1">新品モーターのブラシは平らで、丸い整流子とは線でしか接触していない;慣らしとはブラシを整流子に合う円弧に削り、「線」の接触から安定して馴染んだ接触へ変えること。この「削り」はブラシと整流子の<strong>摺動接触面</strong>で起きる。物理的にそれを支配するのは<strong>摺動速度</strong>(整流子表面の周速 ∝ 回転数)、接触圧、電流密度、温度 —— そのうちリアルタイムで制御できる鍵が回転数だ。</p>
