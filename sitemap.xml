@@ -677,4 +677,36 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-break-in-resistance-curve/"/>
   </url>
 
+  <!-- g14:磨馬達控速 vs 控壓(methodology 收錄,實體住 /guides/) -->
+  <url>
+    <loc>https://motorlab-tw.github.io/guides/motor-break-in-speed-vs-voltage/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-break-in-speed-vs-voltage/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-break-in-speed-vs-voltage/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-break-in-speed-vs-voltage/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-break-in-speed-vs-voltage/"/>
+  </url>
+  <url>
+    <loc>https://motorlab-tw.github.io/en/guides/motor-break-in-speed-vs-voltage/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-break-in-speed-vs-voltage/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-break-in-speed-vs-voltage/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-break-in-speed-vs-voltage/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-break-in-speed-vs-voltage/"/>
+  </url>
+  <url>
+    <loc>https://motorlab-tw.github.io/ja/guides/motor-break-in-speed-vs-voltage/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-break-in-speed-vs-voltage/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-break-in-speed-vs-voltage/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-break-in-speed-vs-voltage/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-break-in-speed-vs-voltage/"/>
+  </url>
+
 </urlset>

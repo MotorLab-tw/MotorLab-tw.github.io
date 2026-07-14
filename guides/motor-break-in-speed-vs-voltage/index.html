@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" translate="no">
+<html lang="zh-TW" translate="no">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="en" http-equiv="Content-Language"/>
-<title>Mini 4WD® Motor Analysis Methodology | MotorLab</title>
-<meta content="Advanced Mini 4WD analysis methodology and race strategy: prep techniques, a three-pillar framework, degradation signs and crash prevention." name="description"/>
+<meta content="zh-TW" http-equiv="Content-Language"/>
+<title>為什麼磨馬達要鎖轉速不鎖電壓?控速 vs 控壓 | MotorLab</title>
+<meta content="幾乎所有人磨馬達都用「定電壓」,轉速只拿來量。但從物理看,決定磨合品質的是接觸面滑動速度(=轉速),不是電壓。本文從物理比較控電壓 vs 控轉速:為什麼定電壓下轉速會漂、跨馬達不一致,而閉環控速能鎖住條件、可重現。" name="description"/>
 <meta content="MotorLab.tw" name="author"/>
-<meta content="Mini 4WD motor analysis methodology, motor tuning methodology, racing strategy, motor health fingerprint, RPM analysis" name="keywords"/>
+<meta content="磨馬達, 控速 控壓, 定電壓 磨合, 鎖轉速 磨合, 馬達磨合 電壓, 閉環控速, 磨合控制, 迷你四驅車 磨馬達, MotorLab, motor break-in control, fixed voltage vs fixed speed, closed-loop break-in, Mini 4WD motor break-in, break-in RPM, constant voltage break-in, brush seating, MotorLab" name="keywords"/>
 <!-- 正規網址 (避免重複內容問題) -->
-<link href="https://motorlab-tw.github.io/en/methodology/" rel="canonical"/>
+<link href="https://motorlab-tw.github.io/guides/motor-break-in-speed-vs-voltage/" rel="canonical"/>
 <!-- 搜尋引擎指示 -->
 <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
 <meta content="index, follow" name="googlebot"/>
@@ -30,23 +30,23 @@
 <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
 <meta content="MotorLab" name="apple-mobile-web-app-title"/>
 <!-- Open Graph (Facebook, LINE, Discord) -->
-<meta content="website" property="og:type"/>
-<meta content="https://motorlab-tw.github.io/en/methodology/" property="og:url"/>
-<meta content="Mini 4WD® Motor Analysis Methodology | MotorLab" property="og:title"/>
-<meta content="Advanced Mini 4WD analysis methodology and race strategy: prep techniques, a three-pillar framework, degradation signs and crash prevention." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://motorlab-tw.github.io/guides/motor-break-in-speed-vs-voltage/" property="og:url"/>
+<meta content="為什麼磨馬達要鎖轉速不鎖電壓?控速 vs 控壓 | MotorLab" property="og:title"/>
+<meta content="幾乎所有人磨馬達都用「定電壓」,轉速只拿來量。但從物理看,決定磨合品質的是接觸面滑動速度(=轉速),不是電壓。本文從物理比較控電壓 vs 控轉速:為什麼定電壓下轉速會漂、跨馬達不一致,而閉環控速能鎖住條件、可重現。" property="og:description"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" property="og:image"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" property="og:image:secure_url"/>
 <meta content="image/png" property="og:image:type"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
 <meta content="MotorLab — Mini 4WD® 馬達精密測試系統官方網站預覽圖" property="og:image:alt"/>
-<meta content="en_US" property="og:locale"/>
+<meta content="zh_TW" property="og:locale"/>
 <meta content="en_US" property="og:locale:alternate"/>
 <meta content="MotorLab.tw" property="og:site_name"/>
 <!-- Twitter Card -->
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Mini 4WD® Motor Analysis Methodology | MotorLab" name="twitter:title"/>
-<meta content="Advanced Mini 4WD analysis methodology and race strategy: prep techniques, a three-pillar framework, degradation signs and crash prevention." name="twitter:description"/>
+<meta content="為什麼磨馬達要鎖轉速不鎖電壓?控速 vs 控壓 | MotorLab" name="twitter:title"/>
+<meta content="幾乎所有人磨馬達都用「定電壓」,轉速只拿來量。但從物理看,決定磨合品質的是接觸面滑動速度(=轉速),不是電壓。本文從物理比較控電壓 vs 控轉速:為什麼定電壓下轉速會漂、跨馬達不一致,而閉環控速能鎖住條件、可重現。" name="twitter:description"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" name="twitter:image"/>
 <meta content="MotorLab 官方網站預覽圖" name="twitter:image:alt"/>
 <!-- 結構化資料 1: Organization (公司/工作室) -->
@@ -1839,78 +1839,34 @@
     .manual-table { display: block; overflow-x: auto; white-space: nowrap; }
   }
 </style>
-<link href="https://motorlab-tw.github.io/methodology/" hreflang="zh-TW" rel="alternate"/><link href="https://motorlab-tw.github.io/en/methodology/" hreflang="en" rel="alternate"/><link href="https://motorlab-tw.github.io/ja/methodology/" hreflang="ja" rel="alternate"/><link href="https://motorlab-tw.github.io/methodology/" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
+<link href="https://motorlab-tw.github.io/guides/motor-break-in-speed-vs-voltage/" hreflang="zh-TW" rel="alternate"/><link href="https://motorlab-tw.github.io/en/guides/motor-break-in-speed-vs-voltage/" hreflang="en" rel="alternate"/><link href="https://motorlab-tw.github.io/ja/guides/motor-break-in-speed-vs-voltage/" hreflang="ja" rel="alternate"/><link href="https://motorlab-tw.github.io/guides/motor-break-in-speed-vs-voltage/" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
   "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "Mini 4WD® Motor Analysis Methodology | MotorLab",
-  "description": "Advanced Mini 4WD analysis methodology and race strategy: prep techniques, a three-pillar framework, degradation signs and crash prevention.",
-  "inLanguage": "en",
-  "url": "https://motorlab-tw.github.io/en/methodology/",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "MotorLab.tw",
+  "@type": "Article",
+  "headline": "為什麼磨馬達要鎖轉速,不鎖電壓?",
+  "description": "幾乎所有人磨馬達都用「定電壓」,轉速只拿來量。但從物理看,決定磨合品質的是接觸面滑動速度(=轉速),不是電壓。本文從物理比較控電壓 vs 控轉速:為什麼定電壓下轉速會漂、跨馬達不一致,而閉環控速能鎖住條件、可重現。",
+  "keywords": "磨馬達, 控速 控壓, 定電壓 磨合, 鎖轉速 磨合, 馬達磨合 電壓, 閉環控速, 磨合控制, 迷你四驅車 磨馬達, MotorLab",
+  "inLanguage": "zh-TW",
+  "url": "https://motorlab-tw.github.io/guides/motor-break-in-speed-vs-voltage/",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://motorlab-tw.github.io/guides/motor-break-in-speed-vs-voltage/"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "MotorLab Team",
     "url": "https://motorlab-tw.github.io/"
   },
-  "mainEntity": {
-    "@type": "ItemList",
-    "numberOfItems": 9,
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "url": "https://motorlab-tw.github.io/en/guides/racing-motor-break-in/",
-        "name": "Why Break-in Decides Mini 4WD Race Outcomes: The Competitive Edge Most Racers Miss"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "url": "https://motorlab-tw.github.io/en/guides/racing-prep-techniques/",
-        "name": "Advanced Mini 4WD Racing: 5 Prep Details Winners Quietly Do (But Don't Write About)"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "url": "https://motorlab-tw.github.io/en/guides/motor-analysis-methodology/",
-        "name": "From Feel to Data: A Three-Pillar Methodology for Motor Analysis"
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "url": "https://motorlab-tw.github.io/en/guides/motor-degradation-signs/",
-        "name": "8 Signs Your Mini 4WD Motor Is Dying — When to Wash vs Retire"
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "url": "https://motorlab-tw.github.io/en/guides/track-analysis-motor-selection/",
-        "name": "Mini 4WD Track Analysis & Motor Selection by Section Ratio"
-      },
-      {
-        "@type": "ListItem",
-        "position": 6,
-        "url": "https://motorlab-tw.github.io/en/guides/crash-risk-trigger-model/",
-        "name": "Why Mini 4WD Cars Crash: The Speed / Geometry / Stability Trigger Model"
-      },
-      {
-        "@type": "ListItem",
-        "position": 7,
-        "url": "https://motorlab-tw.github.io/en/guides/motor-selection-before-break-in/",
-        "name": "Select Motors Before Break-in: Read a Motor's Constitution by Current"
-      },
-      {
-        "@type": "ListItem",
-        "position": 8,
-        "url": "https://motorlab-tw.github.io/en/guides/motor-break-in-resistance-curve/",
-        "name": "How Long to Break In a Motor? 560 Runs on One Mach-Dash PRO, One Resistance Curve"
-      },
-      {
-        "@type": "ListItem",
-        "position": 9,
-        "url": "https://motorlab-tw.github.io/en/guides/motor-break-in-speed-vs-voltage/",
-        "name": "Why Break In a Motor at Fixed Speed, Not Fixed Voltage"
-      }
-    ]
-  }
+  "publisher": {
+    "@type": "Organization",
+    "name": "MotorLab.tw",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://motorlab-tw.github.io/favicon-192.png",
+      "width": 192,
+      "height": 192
+    }
+  },
+  "image": "https://motorlab-tw.github.io/og-image.png"
 }</script><script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -1918,32 +1874,60 @@
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "Home",
-      "item": "https://motorlab-tw.github.io/en/"
+      "name": "首頁",
+      "item": "https://motorlab-tw.github.io/"
     },
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Knowledge Base",
-      "item": "https://motorlab-tw.github.io/en/#guides"
+      "name": "教學",
+      "item": "https://motorlab-tw.github.io/#guides"
     },
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Methodology",
-      "item": "https://motorlab-tw.github.io/en/methodology/"
+      "name": "控速 vs 控壓",
+      "item": "https://motorlab-tw.github.io/guides/motor-break-in-speed-vs-voltage/"
     }
   ]
 }</script></head>
-<body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/en/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/en/">← Back to home</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/en/">Home</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/en/#guides">Knowledge Base</a><span class="sep">/</span><span class="current">Methodology</span></nav><div class="hub-header"><h1>Methodology</h1><p class="hub-lead">Advanced analysis methodology and competitive strategy — moving motor tuning from feel-based to data-driven, from individual tips to systematic frameworks.</p></div><div class="guides-grid"><article class="guide-article"><span class="guide-tag" data-i18n="g5.tag">GUIDE · Race Context</span><h3 data-i18n="g5.title">Why Break-in Decides Mini 4WD Race Outcomes: The Competitive Edge Most Racers Miss</h3><p class="guide-lead" data-i18n="g5.lead">Mini 4WD races are won in fractions of a second. In that micro-margin world, motor break-in — a step most racers underestimate — is often the difference between a podium and an early exit. This article approaches break-in from a competitive racing angle: why amateur methods fail when the stakes are real, and how serious racers actually treat motor preparation.</p><a class="guide-card-link" href="/en/guides/racing-motor-break-in/">Read full article →</a></article><article class="guide-article"><span class="guide-tag" data-i18n="g6.tag">GUIDE · Advanced Prep</span><h3 data-i18n="g6.title">Advanced Mini 4WD Racing: 5 Prep Details Winners Quietly Do (But Don't Write About)</h3><p class="guide-lead" data-i18n="g6.lead">There are plenty of break-in guides and tuning articles online. But the people who consistently podium do things that rarely show up in those guides. This article covers 5 prep practices actually used by competitive Mini 4WD racers — observed at JCO and other major events. No theory, just verifiable race-day specifics.</p><a class="guide-card-link" href="/en/guides/racing-prep-techniques/">Read full article →</a></article><article class="guide-article"><span class="guide-tag" data-i18n="g7.tag">GUIDE · Methodology</span><h3 data-i18n="g7.title">From Feel to Data: A Three-Pillar Methodology for Motor Analysis</h3><p class="guide-lead" data-i18n="g7.lead">Most racers rely on experience — "feels good," "sounds right." The problem with experience is that it can't be transferred, reproduced, or verified. This article introduces a three-step methodology that turns motor analysis from "feel" into systems engineering: <strong>measurement, comparison, health assessment</strong>. It's the conceptual framework behind MotorLab's entire analysis system.</p><a class="guide-card-link" href="/en/guides/motor-analysis-methodology/">Read full article →</a></article><article class="guide-article"><span class="guide-tag" data-i18n="g8.tag">GUIDE · Diagnostics</span><h3 data-i18n="g8.title">8 Signs Your Mini 4WD Motor Is Dying — When to Wash vs Retire</h3><p class="guide-lead" data-i18n="g8.lead">A broken-in motor doesn't stay at peak forever. From around the 5th race onward, degradation begins — but most racers wait until the motor is obviously dead before noticing. This article covers 8 degradation signs plus retirement thresholds, so you can make the right call (wash, retire, or keep using) before a motor truly fails on race day.</p><a class="guide-card-link" href="/en/guides/motor-degradation-signs/">Read full article →</a></article><article class="guide-article"><span class="guide-tag" data-i18n="g10.tag">GUIDE · Race Strategy</span><h3 data-i18n="g10.title">Mini 4WD Track Analysis &amp; Motor Selection by Section Ratio</h3><p class="guide-lead" data-i18n="g10.lead">The same motor can perform wildly differently on different tracks — a high-speed-course winner may struggle to even finish on a 3D course. This article introduces a quantifiable "track section-ratio method": break any Mini 4WD<sup>®</sup> track into straight, curve and special sections, use the ratios to classify it as high-speed, technical or 3D, then match the right motor, gear ratio and wheel diameter.</p><a class="guide-card-link" href="/en/guides/track-analysis-motor-selection/">Read full article →</a></article><article class="guide-article"><span class="guide-tag" data-i18n="g11.tag">GUIDE · Race Strategy</span><h3 data-i18n="g11.title">Why Mini 4WD Cars Crash: The Speed / Geometry / Stability Trigger Model</h3><p class="guide-lead" data-i18n="g11.lead">Crashes (course-outs) in racing are often dismissed as "bad luck," but they are predictable — the result of speed, track geometry and vehicle stability triggers stacking past a critical threshold. This article breaks crashes into the Speed / Geometry / Stability triggers, gives an on-site method to quickly count risk, and maps setup fixes to each risk level.</p><a class="guide-card-link" href="/en/guides/crash-risk-trigger-model/">Read full article →</a></article><article class="guide-article"><span class="guide-tag" data-i18n="g12.tag">METHODOLOGY · Motor Selection</span><h3 data-i18n="g12.title">Select Before Break-in: Read a Motor's Constitution by Current</h3><p class="guide-lead" data-i18n="g12.lead">Same batch, same model — yet no two motors are equal. Break-in only improves one thing: the contact between brushes and commutator. Iron core, magnetic circuit, rotor balance — those are born, not made, and no amount of running-in fixes them. The right move is measure first, break in later: let data pick the specimens worth developing before you spend time and brush life on them.</p><a class="guide-card-link" href="/en/guides/motor-selection-before-break-in/">Read full article →</a></article><article class="guide-article"><span class="guide-tag" data-i18n="g13.tag">METHODOLOGY · Break-in Data</span><h3 data-i18n="g13.title">How Long to Break In a Motor? 560 Runs on One Motor, Answered</h3><p class="guide-lead" data-i18n="g13.lead">We ran one Mach-Dash PRO 560 times under locked speed, low voltage and no load, plotting its internal resistance (a proxy for the brush–commutator contact state) against the cumulative run count. The line captures a motor's whole arc — from new, through fully broken-in, to decline — so you can tell which stage the motor in your hand is at: still needs running-in, at its best, or past its peak.</p><a class="guide-card-link" href="/en/guides/motor-break-in-resistance-curve/">Read full article →</a></article><article class="guide-article"><span class="guide-tag" data-i18n="g14.tag">METHODOLOGY · Break-in Control</span><h3 data-i18n="g14.title">Why Break In a Motor at Fixed Speed, Not Fixed Voltage</h3><p class="guide-lead" data-i18n="g14.lead">Almost every break-in method sets a voltage and lets the motor run — fixed-voltage break-in. RPM? At most it gets measured, not controlled. But physically, break-in quality is set by <strong>RPM</strong> (the sliding speed at the contact face), not voltage. Here is fixed-voltage vs fixed-speed, and where they differ.</p><a class="guide-card-link" href="/en/guides/motor-break-in-speed-vs-voltage/">Read full article →</a></article></div></div></main><footer>
+<body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/">← 回首頁</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/">首頁</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/#guides">教學</a><span class="sep">/</span><span class="current">控速 vs 控壓</span></nav><article class="guide-article">
+<span class="guide-tag" data-i18n="g14.tag">METHODOLOGY · 磨合控制</span>
+<h1 data-i18n="g14.title">為什麼磨馬達要鎖轉速,不鎖電壓?</h1><p class="guide-byline">編輯者:MotorLab Team</p>
+<p class="guide-lead" data-i18n="g14.lead">幾乎所有磨馬達的做法,都是「設一個電壓」讓它跑 —— 定電壓磨合。轉速?頂多拿來「量」,不拿來「控」。但從物理看,真正決定磨合品質的是<strong>轉速</strong>(接觸面的滑動速度),不是電壓。這篇拆解:磨馬達控電壓 vs 控轉速,差在哪。</p>
+<h2 data-i18n="g14.h1">磨合到底在磨什麼</h2>
+<p data-i18n="g14.p1">新馬達的碳刷是平的,和圓弧的整流子只有一條線接觸;磨合就是把碳刷磨出貼合整流子的弧面,讓兩者從「一條線」變成穩定貼合的接觸。這個「磨」發生在碳刷與整流子的<strong>滑動接觸面</strong>上。物理上主宰它的是<strong>滑動速度</strong>(整流子表面線速度 ∝ 轉速)、接觸壓力、電流密度與溫度 —— 其中你能即時控制的關鍵變數,是轉速。</p>
+<h2 data-i18n="g14.h2">控電壓(定電壓)的物理問題</h2>
+<p data-i18n="g14.p2">定電壓磨合 = 固定電壓 V,轉速由馬達當下狀態決定(V ≈ Ke·ω + I·R)。問題有三:<br/><strong>① 同次磨合中,轉速會漂</strong> —— 磨合過程接觸電阻 R 在變、溫度讓 Ke 微移,固定電壓下轉速一路飄;「接觸面的滑動速度」變成移動目標,磨合條件邊磨邊變。<br/><strong>② 不同馬達,轉速不一樣</strong> —— 同樣 3V,體質不同的馬達轉速不同,各自在不同滑動速度下磨合,<strong>不可重現、不能比較</strong>。<br/><strong>③ 換向條件跟著漂</strong> —— 轉速漂則換向頻率漂,火花與發熱條件也漂。你控的是電壓,真正磨到接觸面的是轉速 —— 電壓只是隔了一層、還會隨馬達改變的代理變數。</p>
+<h2 data-i18n="g14.h3">控轉速(閉環)在物理上做對了什麼</h2>
+<p data-i18n="g14.p3">閉環控速 = 固定轉速,由回授自動調整電壓來維持它;電壓變成補償用的自由變數。這帶來四個物理上的好處:<br/><strong>鎖住滑動速度</strong> —— 碳刷在固定的表面速度下被磨,貼合更均勻。<br/><strong>跨馬達同基準</strong> —— 所有馬達都在同一轉速下磨合,不管體質差異,可重現、可比較(這也是量測要鎖轉速的原因,見文末〈R 磨合曲線〉)。<br/><strong>換向頻率固定</strong> —— 火花與發熱條件穩定。<br/><strong>可直接鎖低轉速</strong> —— 低轉速 = 低換向能量 = 溫和對研;而定電壓在低壓下,體質差異會讓轉速不可預測(慢的馬達可能根本轉不動)。</p>
+<h2 data-i18n="g14.h4">控壓 vs 控速:物理對照</h2>
+<table class="guide-table">
+<thead><tr><th data-i18n="g14.t.dim">面向</th><th data-i18n="g14.t.cv">控電壓(定電壓)</th><th data-i18n="g14.t.cs">控轉速(閉環)</th></tr></thead>
+<tbody>
+<tr><td data-i18n="g14.r1.d">直接控制的物理量</td><td data-i18n="g14.r1.cv">電壓(代理)</td><td data-i18n="g14.r1.cs">轉速 = 滑動速度(關鍵)</td></tr>
+<tr><td data-i18n="g14.r2.d">同次磨合條件</td><td data-i18n="g14.r2.cv">隨 R / 溫度漂移</td><td data-i18n="g14.r2.cs">鎖定</td></tr>
+<tr><td data-i18n="g14.r3.d">跨馬達一致性</td><td data-i18n="g14.r3.cv">各自不同轉速</td><td data-i18n="g14.r3.cs">同轉速,可比</td></tr>
+<tr><td data-i18n="g14.r4.d">換向頻率</td><td data-i18n="g14.r4.cv">漂移</td><td data-i18n="g14.r4.cs">固定</td></tr>
+<tr><td data-i18n="g14.r5.d">實作</td><td data-i18n="g14.r5.cv">簡單、便宜(開環)</td><td data-i18n="g14.r5.cs">需回授控制</td></tr>
+</tbody>
+</table>
+<h2 data-i18n="g14.h5">誠實的取捨</h2>
+<p data-i18n="g14.p4">控速不是沒有代價:它需要<strong>即時量測轉速並回授調壓</strong>(閉環),比「設一個電壓就好」複雜;而且在<strong>起步瞬間</strong>要先突破靜摩擦,不能只靠低壓硬推。定電壓的優點就是簡單、便宜。另外釐清:本文談的是<strong>控制方式</strong>(控壓 vs 控速),不是<strong>目標值</strong> —— 你該用 2.4V(鎳氫)還是 3.0V(鹼性)、或該鎖幾轉,是另一個「依比賽電池選設定」的題目。</p>
+<div class="guide-tip">
+<p data-i18n="g14.key">一句話:磨合品質由接觸面的<strong>滑動速度</strong>決定,而滑動速度就是轉速。控電壓 = 控一個會漂的代理;控轉速 = 直接控住真正在磨接觸面的物理量。要磨得<strong>準、可重現、跨馬達可比</strong>,物理上該鎖的是轉速。</p>
+</div>
+<p data-i18n="g14.related">延伸閱讀:磨合進度怎麼從數據看,見 <a href="../motor-break-in-resistance-curve/">R 磨合曲線</a>;先挑出值得磨的馬達,見 <a href="../motor-selection-before-break-in/">先選別,後磨合</a>;磨合的完整原理與流程,見 <a href="../motor-break-in-guide/">馬達磨合完整指南</a>。</p>
+<div class="guide-warning">
+<p data-i18n="g14.w1">物理框架為概念說明,實際磨合仍牽涉電刷類型、時間、溫度、冷卻等變數。控速的效益在於「把磨合條件從會漂的代理,換成直接可控的物理量」,而非保證單一數值最佳。</p>
+</div>
+</article><div class="guide-pagination"><div class="left"><a href="/guides/motor-break-in-resistance-curve/"><span class="label">← 上一篇</span><span>磨合曲線實測</span></a></div><div class="center"><a href="https://motorlab-tw.github.io/#guides"><span class="label">︿</span><span>回教學首頁</span></a></div><div class="right"><span class="label">下一篇 →</span><span class="disabled">—</span></div></div></div></main><footer>
 <div class="container">
-<div class="footer-trademark" data-i18n="footer.trademark">
-      "Mini 4WD"<sup>®</sup> 與 "ミニ四駆"<sup>®</sup> 為株式会社タミヤ（TAMIYA, INC.）的註冊商標（日本商標登錄號 第 2168392 號）。MotorLab 為獨立工作室，與株式会社タミヤ無任何關聯，亦未受其授權、贊助或背書。本網站提及之相關名稱僅用於指涉產品適用範圍，所有商標權益歸原權利人所有。
-    </div>
+<div class="footer-trademark" data-i18n="footer.trademark">"Mini 4WD"<sup>®</sup> 與 "ミニ四駆"<sup>®</sup> 為株式会社タミヤ(TAMIYA, INC.)的註冊商標(日本商標登錄號 第 2168392 號)。MotorLab 為獨立工作室,與株式会社タミヤ無任何關聯,亦未受其授權、贊助或背書。本網站提及之相關名稱僅用於指涉產品適用範圍,所有商標權益歸原權利人所有。</div>
 <div class="footer-inner">
 <div>
 <strong>MotorLab.tw</strong> · <span data-i18n="footer.tagline">Mini 4WD Performance Lab</span>
-        · <a data-i18n="footer.verify" href="/en/verify/">正版查驗</a>
+        · <a data-i18n="footer.verify" href="/verify/">正版查驗</a>
 </div>
 <div class="mono">
         © 2026 MotorLab · <span data-i18n="footer.firmware">韌體</span> v3.4.0

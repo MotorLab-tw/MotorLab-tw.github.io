@@ -590,6 +590,35 @@ GUIDES = [
             },
         },
     },
+    # ---------- g14:磨馬達控速 vs 控壓(methodology hub)----------
+    {
+        "slug": "motor-break-in-speed-vs-voltage",
+        "key": "g14",
+        "type": "guides",
+        "i18n": {
+            "zh": {
+                "title": "為什麼磨馬達要鎖轉速不鎖電壓?控速 vs 控壓 | MotorLab",
+                "description": "幾乎所有人磨馬達都用「定電壓」,轉速只拿來量。但從物理看,決定磨合品質的是接觸面滑動速度(=轉速),不是電壓。本文從物理比較控電壓 vs 控轉速:為什麼定電壓下轉速會漂、跨馬達不一致,而閉環控速能鎖住條件、可重現。",
+                "keywords": "磨馬達, 控速 控壓, 定電壓 磨合, 鎖轉速 磨合, 馬達磨合 電壓, 閉環控速, 磨合控制, 迷你四驅車 磨馬達, MotorLab",
+                "breadcrumb": "控速 vs 控壓",
+                "h1_for_ld": "為什麼磨馬達要鎖轉速,不鎖電壓?",
+            },
+            "en": {
+                "title": "Why Break In a Motor at Fixed Speed, Not Fixed Voltage? | MotorLab",
+                "description": "Everyone breaks in at fixed voltage — but break-in quality is set by RPM (the contact sliding speed), not voltage. Fixed-voltage vs fixed-speed, explained.",
+                "keywords": "motor break-in control, fixed voltage vs fixed speed, closed-loop break-in, Mini 4WD motor break-in, break-in RPM, constant voltage break-in, brush seating, MotorLab",
+                "breadcrumb": "Speed vs Voltage",
+                "h1_for_ld": "Why Break In a Motor at Fixed Speed, Not Fixed Voltage",
+            },
+            "ja": {
+                "title": "なぜモーター慣らしは電圧より回転数を固定すべき? | MotorLab",
+                "description": "ほぼ全員が「定電圧」でモーター慣らしをし、回転数は測るだけ。だが物理的に慣らしの品質を決めるのは接触面の摺動速度(=回転数)で、電圧ではない。定電圧 vs 定回転数を物理から比較:なぜ定電圧では回転数がずれ再現できないのか。",
+                "keywords": "モーター慣らし 制御, 定電圧 定回転数, 閉ループ 慣らし, ミニ四駆 モーター慣らし, 慣らし 回転数, 定電圧 慣らし, MotorLab",
+                "breadcrumb": "定電圧 vs 定回転数",
+                "h1_for_ld": "なぜモーター慣らしは電圧ではなく回転数を固定するのか?",
+            },
+        },
+    },
 ]
 
 # UI 字串(教學頁面通用元件:nav / 麵包屑 / 分頁)
@@ -724,7 +753,7 @@ HUBS = [
     },
     {
         "slug": "methodology",
-        "include": ["g5", "g6", "g7", "g8", "g10", "g11", "g12", "g13"],
+        "include": ["g5", "g6", "g7", "g8", "g10", "g11", "g12", "g13", "g14"],
         "i18n": {
             "zh": {
                 "title": "方法論 — Mini 4WD® 馬達分析與比賽策略 | MotorLab",
