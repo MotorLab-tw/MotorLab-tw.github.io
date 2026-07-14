@@ -3,36 +3,43 @@
 <text x="540.0" y="96" fill="#88c0d0" font-size="26" letter-spacing="6" text-anchor="middle" font-weight="600">MINI 4WD MOTOR LAB</text>
 <text x="540.0" y="176" fill="#eceff4" font-size="58" text-anchor="middle" font-weight="800">定電圧 vs 定回転数</text>
 <text x="540.0" y="228" fill="#8fbcbb" font-size="27" text-anchor="middle">慣らしの物理対照</text>
-<text x="90" y="337.0" fill="#8fbcbb" font-size="24" font-weight="600">観点</text>
+<rect x="76" y="290" width="288" height="76" rx="12" fill="#2e3440"/>
+<text x="92" y="337.0" fill="#8fbcbb" font-size="24" font-weight="600">観点</text>
 <rect x="376" y="290" width="308" height="76" rx="12" fill="#d08770"/>
 <text x="530.0" y="338.0" fill="#3b2417" font-size="30" font-weight="800" text-anchor="middle">定電圧</text>
 <rect x="696" y="290" width="308" height="76" rx="12" fill="#88c0d0"/>
 <text x="850.0" y="338.0" fill="#1a1d23" font-size="30" font-weight="800" text-anchor="middle">定回転数</text>
+<rect x="76" y="386" width="288" height="70" rx="10" fill="#2e3440"/>
 <rect x="376" y="386" width="308" height="70" rx="10" fill="#d08770" opacity="0.14"/>
 <rect x="696" y="386" width="308" height="70" rx="10" fill="#88c0d0" opacity="0.14"/>
 <text x="90" y="429.0" fill="#d8dee9" font-size="25" font-weight="600">直接制御する量</text>
 <text x="530.0" y="429.0" fill="#eceff4" font-size="23" text-anchor="middle">電圧(代理)</text>
 <text x="850.0" y="429.0" fill="#eceff4" font-size="23" text-anchor="middle" font-weight="600">回転数 = 摺動速度</text>
+<rect x="76" y="468" width="288" height="70" rx="10" fill="#2e3440"/>
 <rect x="376" y="468" width="308" height="70" rx="10" fill="#d08770" opacity="0.14"/>
 <rect x="696" y="468" width="308" height="70" rx="10" fill="#88c0d0" opacity="0.14"/>
 <text x="90" y="511.0" fill="#d8dee9" font-size="25" font-weight="600">同一慣らし中</text>
 <text x="530.0" y="511.0" fill="#eceff4" font-size="23" text-anchor="middle">R・温度で流れる</text>
 <text x="850.0" y="511.0" fill="#eceff4" font-size="23" text-anchor="middle" font-weight="600">固定</text>
+<rect x="76" y="550" width="288" height="70" rx="10" fill="#2e3440"/>
 <rect x="376" y="550" width="308" height="70" rx="10" fill="#d08770" opacity="0.14"/>
 <rect x="696" y="550" width="308" height="70" rx="10" fill="#88c0d0" opacity="0.14"/>
 <text x="90" y="593.0" fill="#d8dee9" font-size="25" font-weight="600">モーター間</text>
 <text x="530.0" y="593.0" fill="#eceff4" font-size="23" text-anchor="middle">各々異なる</text>
 <text x="850.0" y="593.0" fill="#eceff4" font-size="23" text-anchor="middle" font-weight="600">同回転数で比較可</text>
+<rect x="76" y="632" width="288" height="70" rx="10" fill="#2e3440"/>
 <rect x="376" y="632" width="308" height="70" rx="10" fill="#d08770" opacity="0.14"/>
 <rect x="696" y="632" width="308" height="70" rx="10" fill="#88c0d0" opacity="0.14"/>
 <text x="90" y="675.0" fill="#d8dee9" font-size="25" font-weight="600">整流周波数</text>
 <text x="530.0" y="675.0" fill="#eceff4" font-size="23" text-anchor="middle">流れる</text>
 <text x="850.0" y="675.0" fill="#eceff4" font-size="23" text-anchor="middle" font-weight="600">一定</text>
+<rect x="76" y="714" width="288" height="70" rx="10" fill="#2e3440"/>
 <rect x="376" y="714" width="308" height="70" rx="10" fill="#d08770" opacity="0.14"/>
 <rect x="696" y="714" width="308" height="70" rx="10" fill="#88c0d0" opacity="0.14"/>
 <text x="90" y="757.0" fill="#d8dee9" font-size="25" font-weight="600">低速摺り合わせ</text>
 <text x="530.0" y="757.0" fill="#eceff4" font-size="23" text-anchor="middle">予測不能</text>
 <text x="850.0" y="757.0" fill="#eceff4" font-size="23" text-anchor="middle" font-weight="600">低回転数を固定可</text>
+<rect x="76" y="796" width="288" height="70" rx="10" fill="#2e3440"/>
 <rect x="376" y="796" width="308" height="70" rx="10" fill="#d08770" opacity="0.14"/>
 <rect x="696" y="796" width="308" height="70" rx="10" fill="#88c0d0" opacity="0.14"/>
 <text x="90" y="839.0" fill="#d8dee9" font-size="25" font-weight="600">実装</text>
