@@ -112,7 +112,7 @@
   "description": "Mini 4WD® motor break-in and precision testing system. Includes 10-stage programmable break-in, AI motor health management, bearing resistance analysis and brush contact stability diagnostics.",
   "image": "https://motorlab-tw.github.io/og-image.png",
   "url": "https://motorlab-tw.github.io/en/",
-  "softwareVersion": "v3.4.0",
+  "softwareVersion": "v3.5.0",
   "applicationCategory": "EngineeringApplication",
   "applicationSubCategory": "Motor Testing & Diagnostics",
   "operatingSystem": "Cross-platform (WiFi + Web Browser)",
@@ -2060,7 +2060,7 @@
 <div class="splash-sub">MINI 4WD® MOTOR LAB · INITIALIZING</div>
 <div class="splash-log">
 <div class="log-line l1">[<span class="ok">OK</span>] Boot sequence started</div>
-<div class="log-line l2">[<span class="ok">OK</span>] Loading firmware v3.4.0</div>
+<div class="log-line l2">[<span class="ok">OK</span>] Loading firmware v3.5.0</div>
 <div class="log-line l3">[<span class="ok">OK</span>] Sensor calibration complete</div>
 <div class="log-line l4">[<span class="ok">OK</span>] WebSocket channel ready</div>
 <div class="log-line l5">[<span class="ok">OK</span>] System online — welcome</div>
@@ -2104,7 +2104,7 @@
 <div class="hero-grid">
 <div>
 <div class="hero-badge">
-<span data-i18n="hero.badge">System running · v3.4.0</span>
+<span data-i18n="hero.badge">System running · v3.5.0</span>
 </div>
 <h1 data-i18n="hero.title">Build a <span class="accent">health fingerprint</span><br/>for every<br/>Mini 4WD<sup>®</sup> motor</h1>
 <p class="lead" data-i18n="hero.lead">MotorLab is a precision motor break-in and diagnostic system built for Mini 4WD<sup>®</sup> enthusiasts. From 10-stage programmable break-in to bearing decay analysis, brush contact diagnostics, and AI motor health management — make every tune measurable, repeatable, and comparable.</p>
@@ -2655,10 +2655,42 @@
 <p class="section-subtitle" data-i18n="cl.subtitle">All versions push automatically to activated devices via OTA update.</p>
 </div>
 <div class="changelog">
+<!-- v3.5.0 -->
+<div class="changelog-item">
+<div class="changelog-meta">
+<span class="version-badge latest">v3.5.0</span>
+<span class="changelog-date">2026-07-15</span>
+</div>
+<div class="changelog-content">
+<h4 data-i18n="cl.v350.title">Three Break-in Modes · Auto Break-in</h4>
+<ul>
+<li><span class="change-type change-new" data-i18n="cl.NEW">NEW</span><span data-i18n="cl.v350.l1">Three break-in modes: Voltage mode (as before), Speed mode Beta (set a target RPM for automatic speed control, auto-advancing when voltage stabilises), and Smart mode Beta (one-tap auto break-in that keeps measuring, auto-stops on detecting steady state, with a break-in metric curve)</span></li>
+<li><span class="change-type change-new" data-i18n="cl.NEW">NEW</span><span data-i18n="cl.v350.l2">New on-device "Tamiya motor specs" page (official load data for all 15 motors)</span></li>
+<li><span class="change-type change-improve" data-i18n="cl.IMPROVE">IMPROVE</span><span data-i18n="cl.v350.l3">Stronger motor protection: faster short-circuit cutoff, new "motor not mounted / sensor abnormal" detection, and multiple protection fixes</span></li>
+<li><span class="change-type change-improve" data-i18n="cl.IMPROVE">IMPROVE</span><span data-i18n="cl.v350.l4">Stability-stop (stable-current) settings are now independent for the break-in and test pages</span></li>
+<li><span class="change-type change-fix" data-i18n="cl.FIX">FIX</span><span data-i18n="cl.v350.l5">Record timestamps now use your phone / tablet / computer time (no more 1970 dates); power-display fix</span></li>
+</ul>
+</div>
+</div>
+<!-- v3.4.6 -->
+<div class="changelog-item">
+<div class="changelog-meta">
+<span class="version-badge">v3.4.6</span>
+<span class="changelog-date">2026-07-10</span>
+</div>
+<div class="changelog-content">
+<h4 data-i18n="cl.v346.title">Genuine-Product Verification · Update Experience</h4>
+<ul>
+<li><span class="change-type change-new" data-i18n="cl.NEW">NEW</span><span data-i18n="cl.v346.l1">Genuine verification: System Settings shows your device ID so you can check authenticity on the official site (non-genuine units are prompted to contact their place of purchase on update)</span></li>
+<li><span class="change-type change-improve" data-i18n="cl.IMPROVE">IMPROVE</span><span data-i18n="cl.v346.l2">Software update uses a more secure fetch, a cleaner flow, auto-retry on connection failure, and a fix for occasional false "timeout"</span></li>
+<li><span class="change-type change-improve" data-i18n="cl.IMPROVE">IMPROVE</span><span data-i18n="cl.v346.l3">Stronger motor safety protection, per-unit calibration, and a low-power-supply warning</span></li>
+</ul>
+</div>
+</div>
 <!-- v3.4.0 -->
 <div class="changelog-item">
 <div class="changelog-meta">
-<span class="version-badge latest">v3.4.0</span>
+<span class="version-badge">v3.4.0</span>
 <span class="changelog-date">2026-07-07</span>
 </div>
 <div class="changelog-content">
@@ -2668,38 +2700,6 @@
 <li><span class="change-type change-new" data-i18n="cl.NEW">NEW</span><span data-i18n="cl.v340.l2">KV display: shown in the Motor Characterization results; live KV on the break-in / test screens (RPM ÷ motor voltage)</span></li>
 <li><span class="change-type change-improve" data-i18n="cl.IMPROVE">IMPROVE</span><span data-i18n="cl.v340.l3">Out-of-range input is auto-corrected to the min / max with a flash cue; clearing a field restores the current stored value</span></li>
 <li><span class="change-type change-improve" data-i18n="cl.IMPROVE">IMPROVE</span><span data-i18n="cl.v340.l4">Break-in / cooling / test time ranges unified to 10–600 s (default 60 s)</span></li>
-</ul>
-</div>
-</div>
-<!-- v3.3.0 -->
-<div class="changelog-item">
-<div class="changelog-meta">
-<span class="version-badge">v3.3.0</span>
-<span class="changelog-date">2026-07-06</span>
-</div>
-<div class="changelog-content">
-<h4 data-i18n="cl.v330.title">Characterization 3-Pass Average · Measurement History</h4>
-<ul>
-<li><span class="change-type change-new" data-i18n="cl.NEW">NEW</span><span data-i18n="cl.v330.l1">Motor Characterization history library: results are saved automatically (up to 50, oldest auto-deleted when full), viewable and deletable; you can enter a motor model and note at start</span></li>
-<li><span class="change-type change-improve" data-i18n="cl.IMPROVE">IMPROVE</span><span data-i18n="cl.v330.l2">Motor Characterization now runs three passes and averages them, showing a "3-pass consistency" figure — a large spread warns of a loose setup or an unsteady motor</span></li>
-<li><span class="change-type change-improve" data-i18n="cl.IMPROVE">IMPROVE</span><span data-i18n="cl.v330.l3">Better measurement precision and repeatability; results now add a breakaway-voltage reference</span></li>
-</ul>
-</div>
-</div>
-<!-- v3.2.29 -->
-<div class="changelog-item">
-<div class="changelog-meta">
-<span class="version-badge">v3.2.29</span>
-<span class="changelog-date">2026-07-05</span>
-</div>
-<div class="changelog-content">
-<h4 data-i18n="cl.v3229.title">New: Motor Characterization · Major RPM-Resolution Boost</h4>
-<ul>
-<li><span class="change-type change-new" data-i18n="cl.NEW">NEW</span><span data-i18n="cl.v3229.l1">Motor Characterization (top of the home screen): fully automatic measurement of motor constants and losses, reference data only (no scoring or ranking), great for same-model comparison and before/after break-in; forward or reverse</span></li>
-<li><span class="change-type change-improve" data-i18n="cl.IMPROVE">IMPROVE</span><span data-i18n="cl.v3229.l2">RPM measurement resolution greatly improved (now down to single-digit RPM), with stronger stop detection</span></li>
-<li><span class="change-type change-improve" data-i18n="cl.IMPROVE">IMPROVE</span><span data-i18n="cl.v3229.l3">Switching language now reloads in a fresh state (switching mid-run does not interrupt the procedure)</span></li>
-<li><span class="change-type change-improve" data-i18n="cl.IMPROVE">IMPROVE</span><span data-i18n="cl.v3229.l4">Voltage input range adjusted to 0.6–4.0V, motor test defaults to 1V; steadier current / power display</span></li>
-<li><span class="change-type change-fix" data-i18n="cl.FIX">FIX</span><span data-i18n="cl.v3229.l5">Fixed several engineering-mode current-calibration issues and added voltage calibration</span></li>
 </ul>
 </div>
 </div>
@@ -2724,7 +2724,7 @@
 <div class="stat-label" data-i18n="about.s1">Milestones</div>
 </div>
 <div>
-<div class="stat-num">v3.4.0</div>
+<div class="stat-num">v3.5.0</div>
 <div class="stat-label" data-i18n="about.s2">Current Firmware</div>
 </div>
 <div>
@@ -2768,7 +2768,7 @@
         · <a data-i18n="footer.verify" href="/en/verify/">Verify genuine product</a>
 </div>
 <div class="mono">
-        © 2026 MotorLab · <span data-i18n="footer.firmware">Firmware</span> v3.4.0
+        © 2026 MotorLab · <span data-i18n="footer.firmware">Firmware</span> v3.5.0
       </div>
 </div>
 </div>
@@ -2821,7 +2821,7 @@
       'nav.about': '關於',
       'nav.contact': '聯絡',
       'nav.verify': '正版查驗',
-      'hero.badge': '系統運作中 · v3.4.0',
+      'hero.badge': '系統運作中 · v3.5.0',
       'hero.title': '為每一顆<br>Mini 4WD<sup>®</sup> 馬達<br>建立<span class="accent">健康指紋</span>',
       'hero.lead': 'MotorLab 是為 Mini 4WD<sup>®</sup> 玩家打造的精密馬達磨合與測試系統。從十階段可程式化磨合、軸承衰減量測、電刷接觸穩定診斷,到 AI 馬達健康管理 — 讓每一次調校都可量化、可重複、可比較。',
       'hero.cta1': '瀏覽功能',
@@ -3644,21 +3644,21 @@
       'cl.FIX': '修正',
       'cl.IMPROVE': '改進',
       'cl.SECURITY': '安全',
+      'cl.v350.title': '磨合三模式 · 自動磨合上線',
+      'cl.v350.l1': '磨合三種模式:電壓模式(原有)、轉速模式 Beta(設定目標轉速自動控速、電壓穩定自動換階)、智慧模式 Beta(一鍵自動磨合,持續量測、偵測穩態自動停止,附磨合指標曲線圖)',
+      'cl.v350.l2': '機上「田宮馬達規格」頁(15 款官方負載數據)',
+      'cl.v350.l3': '馬達防護強化:短路攔截更快、新增「馬達未上治具 / 感測異常」偵測、多項保護修補',
+      'cl.v350.l4': '穩定判定(判停)設定改為磨合頁 / 測試頁各自獨立',
+      'cl.v350.l5': '紀錄時間改以手機 / 平板 / 電腦時間為準(不再出現 1970 日期);功率顯示修正',
+      'cl.v346.title': '正版查驗上線 · 軟體更新優化',
+      'cl.v346.l1': '正版查驗:設定頁可查看本機 ID,自行到官網查驗真偽(非正版更新時提示洽詢原購買處)',
+      'cl.v346.l2': '軟體更新改用更安全的取得方式、流程更簡潔、連線失敗自動重試,並修正偶爾誤跳「逾時」',
+      'cl.v346.l3': '馬達安全防護、逐機校準、供電不足提醒',
       'cl.v340.title': '磨合多趟化 · KV 值顯示',
       'cl.v340.l1': '磨合支援 1~6 趟,每趟獨立 10 階段(最多 60 組參數):可設趟數、分頁編輯、「本趟複製到之後所有趟」、預估總時長,運轉中顯示「第 x/y 趟」;舊有 10 階段設定自動沿用',
       'cl.v340.l2': 'KV 值顯示:馬達特性量測結果顯示 KV;磨合 / 測試畫面即時 KV(轉速 ÷ 馬達電壓)',
       'cl.v340.l3': '輸入超出範圍自動修正為上 / 下限並閃光提示,清空欄位自動還原目前設定值',
       'cl.v340.l4': '磨合 / 冷卻 / 測試時間範圍統一為 10~600 秒(預設 60 秒)',
-      'cl.v330.title': '特性量測三趟平均 · 量測歷史紀錄庫',
-      'cl.v330.l1': '馬達特性量測歷史紀錄庫:量測結果自動存檔(最多 50 筆,滿自動刪最舊),可檢視與刪除;啟動時可填馬達型號與備註',
-      'cl.v330.l2': '馬達特性量測自動跑三趟取平均,並顯示「3 趟一致性」——差異過大會提醒架設鬆動或馬達不穩',
-      'cl.v330.l3': '馬達特性量測的精度與重複性再提升,結果新增起轉電壓參考',
-      'cl.v3229.title': '新功能「馬達特性量測」· 轉速解析度大幅提升',
-      'cl.v3229.l1': '馬達特性量測(首頁最上方):全自動量出馬達特性參數與損耗,提供參考數據(不評分、不排名),適合同型號比較與磨合前後對照;可選正 / 反轉',
-      'cl.v3229.l2': '轉速量測解析度大幅提升(可顯示至個位數 RPM),停止偵測同步強化',
-      'cl.v3229.l3': '切換語言後自動以全新狀態重載(運轉中切換則不中斷程序)',
-      'cl.v3229.l4': '電壓輸入範圍調整為 0.6~4.0V,馬達測試預設 1V;電流 / 功率顯示更平穩',
-      'cl.v3229.l5': '工程模式電流校正多項問題並新增電壓校正',
       'cl.v320.title': '全球磨合資料庫 · 連線體驗升級',
       'cl.v320.l1': '全球磨合資料庫:可直接從機器上傳 / 瀏覽 / 下載全球玩家分享的磨合紀錄',
       'cl.v320.l2': '歷史紀錄詳情頁可一鍵「分享到全球資料庫」',
@@ -3719,7 +3719,7 @@
       'nav.about': 'About',
       'nav.contact': 'Contact',
       'nav.verify': 'Verify',
-      'hero.badge': 'System running · v3.4.0',
+      'hero.badge': 'System running · v3.5.0',
       'hero.title': 'Build a <span class="accent">health fingerprint</span><br>for every<br>Mini 4WD<sup>®</sup> motor',
       'hero.lead': 'MotorLab is a precision motor break-in and diagnostic system built for Mini 4WD<sup>®</sup> enthusiasts. From 10-stage programmable break-in to bearing decay analysis, brush contact diagnostics, and AI motor health management — make every tune measurable, repeatable, and comparable.',
       'hero.cta1': 'Browse Features',
@@ -4542,21 +4542,21 @@
       'cl.FIX': 'FIX',
       'cl.IMPROVE': 'IMPROVE',
       'cl.SECURITY': 'SECURITY',
+      'cl.v350.title': 'Three Break-in Modes · Auto Break-in',
+      'cl.v350.l1': 'Three break-in modes: Voltage mode (as before), Speed mode Beta (set a target RPM for automatic speed control, auto-advancing when voltage stabilises), and Smart mode Beta (one-tap auto break-in that keeps measuring, auto-stops on detecting steady state, with a break-in metric curve)',
+      'cl.v350.l2': 'New on-device "Tamiya motor specs" page (official load data for all 15 motors)',
+      'cl.v350.l3': 'Stronger motor protection: faster short-circuit cutoff, new "motor not mounted / sensor abnormal" detection, and multiple protection fixes',
+      'cl.v350.l4': 'Stability-stop (stable-current) settings are now independent for the break-in and test pages',
+      'cl.v350.l5': 'Record timestamps now use your phone / tablet / computer time (no more 1970 dates); power-display fix',
+      'cl.v346.title': 'Genuine-Product Verification · Update Experience',
+      'cl.v346.l1': 'Genuine verification: System Settings shows your device ID so you can check authenticity on the official site (non-genuine units are prompted to contact their place of purchase on update)',
+      'cl.v346.l2': 'Software update uses a more secure fetch, a cleaner flow, auto-retry on connection failure, and a fix for occasional false "timeout"',
+      'cl.v346.l3': 'Stronger motor safety protection, per-unit calibration, and a low-power-supply warning',
       'cl.v340.title': 'Multi-Pass Break-in · KV Display',
       'cl.v340.l1': 'Break-in now supports 1–6 passes, each with its own 10 stages (up to 60 parameter sets): set the pass count, edit per-pass tabs, "copy this pass to all following", see the estimated total time, and a "pass x/y" readout while running; existing 10-stage setups carry over automatically',
       'cl.v340.l2': 'KV display: shown in the Motor Characterization results; live KV on the break-in / test screens (RPM ÷ motor voltage)',
       'cl.v340.l3': 'Out-of-range input is auto-corrected to the min / max with a flash cue; clearing a field restores the current stored value',
       'cl.v340.l4': 'Break-in / cooling / test time ranges unified to 10–600 s (default 60 s)',
-      'cl.v330.title': 'Characterization 3-Pass Average · Measurement History',
-      'cl.v330.l1': 'Motor Characterization history library: results are saved automatically (up to 50, oldest auto-deleted when full), viewable and deletable; you can enter a motor model and note at start',
-      'cl.v330.l2': 'Motor Characterization now runs three passes and averages them, showing a "3-pass consistency" figure — a large spread warns of a loose setup or an unsteady motor',
-      'cl.v330.l3': 'Better measurement precision and repeatability; results now add a breakaway-voltage reference',
-      'cl.v3229.title': 'New: Motor Characterization · Major RPM-Resolution Boost',
-      'cl.v3229.l1': 'Motor Characterization (top of the home screen): fully automatic measurement of motor constants and losses, reference data only (no scoring or ranking), great for same-model comparison and before/after break-in; forward or reverse',
-      'cl.v3229.l2': 'RPM measurement resolution greatly improved (now down to single-digit RPM), with stronger stop detection',
-      'cl.v3229.l3': 'Switching language now reloads in a fresh state (switching mid-run does not interrupt the procedure)',
-      'cl.v3229.l4': 'Voltage input range adjusted to 0.6–4.0V, motor test defaults to 1V; steadier current / power display',
-      'cl.v3229.l5': 'Fixed several engineering-mode current-calibration issues and added voltage calibration',
       'cl.v320.title': 'Global Break-in Database · Connectivity Upgrade',
       'cl.v320.l1': 'Global break-in database: upload / browse / download players’ records straight from the machine',
       'cl.v320.l2': 'One-tap “Share to global database” from a record’s detail page',
@@ -4617,7 +4617,7 @@
       'nav.about': '概要',
       'nav.contact': 'お問い合わせ',
       'nav.verify': '正規品認証',
-      'hero.badge': 'システム稼働中 · v3.4.0',
+      'hero.badge': 'システム稼働中 · v3.5.0',
       'hero.title': 'すべての<br>Mini 4WD<sup>®</sup> モーターに<br><span class="accent">健康指紋</span>を',
       'hero.lead': 'MotorLab は Mini 4WD<sup>®</sup> プレイヤーのために設計された精密モーター慣らし・測定システムです。10 段階プログラム慣らし、ベアリング減衰測定、ブラシ接触安定診断、AI モーター健康管理まで — すべての調整を定量化・再現・比較できます。',
       'hero.cta1': '機能を見る',
@@ -4795,21 +4795,21 @@
       'cl.FIX': '修正',
       'cl.IMPROVE': '改善',
       'cl.SECURITY': 'セキュリティ',
+      'cl.v350.title': '慣らし 3 モード · 自動慣らし搭載',
+      'cl.v350.l1': '慣らしに 3 つのモード:電圧モード(従来)、回転数モード Beta(目標回転数を設定して自動速度制御、電圧が安定すると自動で次段階へ)、スマートモード Beta(ワンタップ自動慣らし。継続測定して定常状態を検出すると自動停止、慣らし指標のカーブ付き)',
+      'cl.v350.l2': '機器内に「タミヤ モーター規格」ページを新設(全 15 種の公式負荷データ)',
+      'cl.v350.l3': 'モーター保護を強化:短絡遮断がより高速に、「モーター未装着 / センサー異常」検出を新設、複数の保護修正',
+      'cl.v350.l4': '安定判定(判停)設定を慣らしページ / テストページで各自独立に',
+      'cl.v350.l5': '記録の時刻をスマホ / タブレット / PC の時刻基準に(1970 年の日付が出なくなりました);電力表示の修正',
+      'cl.v346.title': '正規品認証 · アップデート体験の最適化',
+      'cl.v346.l1': '正規品認証:設定ページで本機 ID を確認でき、公式サイトで真偽を自分で照会可能(非正規機はアップデート時に購入元への問い合わせを案内)',
+      'cl.v346.l2': 'ソフトウェア更新をより安全な取得方式に、手順を簡潔化、接続失敗時に自動再試行、まれな誤「タイムアウト」を修正',
+      'cl.v346.l3': 'モーター安全保護の強化、機体ごとの校正、電源不足の通知',
       'cl.v340.title': '慣らしマルチパス · KV 値表示',
       'cl.v340.l1': '慣らしが 1〜6 パスに対応、各パス独立の 10 段階(最大 60 組):パス数の設定、パスごとのタブ編集、「このパスを以降すべてにコピー」、総所要時間の目安、運転中は「x/y パス」表示;既存の 10 段階設定は自動で引き継ぎ',
       'cl.v340.l2': 'KV 値表示:モーター特性測定の結果に KV を表示;慣らし / テスト画面でリアルタイム KV(回転数 ÷ モーター電圧)',
       'cl.v340.l3': '範囲外の入力は上限 / 下限に自動補正しフラッシュで通知、空欄は現在の保存値に自動復元',
       'cl.v340.l4': '慣らし / 冷却 / テスト時間の範囲を 10〜600 秒に統一(初期値 60 秒)',
-      'cl.v330.title': '特性測定の 3 パス平均 · 測定履歴ライブラリ',
-      'cl.v330.l1': 'モーター特性測定の履歴ライブラリ:結果を自動保存(最大 50 件、満杯で最古を自動削除)、閲覧と削除が可能;開始時にモーター型番と備考を入力可',
-      'cl.v330.l2': 'モーター特性測定は自動で 3 パス実行して平均し、「3 パス一致性」を表示 —— ばらつきが大きい場合は取付けの緩みやモーターの不安定を警告',
-      'cl.v330.l3': '測定精度と再現性がさらに向上;結果に起動電圧の参考値を追加',
-      'cl.v3229.title': '新機能「モーター特性測定」· 回転数分解能を大幅向上',
-      'cl.v3229.l1': 'モーター特性測定(ホーム画面の最上部):モーターの特性パラメータと損失を全自動で測定、参考データのみ(採点・ランキングなし)、同型モーターの比較や慣らし前後の対照に最適;正転/逆転を選択可',
-      'cl.v3229.l2': '回転数測定の分解能を大幅向上(1 の位まで表示可能)、停止検出も強化',
-      'cl.v3229.l3': '言語切替後は新しい状態で再読込(運転中に切り替えても処理は中断しません)',
-      'cl.v3229.l4': '電圧入力範囲を 0.6〜4.0V に調整、モーターテストの初期値は 1V;電流 / 電力表示がより安定',
-      'cl.v3229.l5': 'エンジニアモードの電流校正の複数の問題を修正し、電圧校正を追加',
       'cl.v320.title': 'グローバル慣らしデータ庫 · 接続体験アップグレード',
       'cl.v320.l1': 'グローバル慣らしデータ庫:マシンから直接、世界中のプレイヤーの記録をアップロード / 閲覧 / ダウンロード',
       'cl.v320.l2': '履歴記録の詳細ページからワンタップで「グローバルデータ庫に共有」',
