@@ -61,9 +61,9 @@ LANGS = {
 SEO = {
     "zh": {
         "title": "MotorLab — Mini 4WD® 馬達磨合測試系統 | 精密馬達診斷工作室",
-        "description": "MotorLab — 專為 Mini 4WD® 玩家打造的精密馬達磨合測試系統。十三大專業功能:馬達特性量測、十階段可程式化磨合、AI 健康管理、軸承阻力、CV 電刷穩定診斷、三層安全保護、高溫鎖定、狀態燈自訂、OTA 線上更新、全球馬達磨合資料庫。讓馬達調校可量化。",
+        "description": "MotorLab — 專為 Mini 4WD® 玩家打造的精密馬達磨合測試系統。十四大專業功能:磨合三模式、馬達特性量測、AI 健康管理、軸承阻力、CV 電刷穩定診斷、三層安全保護、高溫鎖定、狀態燈自訂、線上更新、田宮馬達規格速查。讓馬達調校可量化。",
         "og_title": "MotorLab — Mini 4WD® 馬達磨合測試系統",
-        "og_desc": "為每一顆 Mini 4WD® 馬達建立可量化的健康指紋。十三大專業功能:馬達特性量測、十階段磨合、AI 健康管理、軸承阻力分析、電刷穩定診斷、三層安全保護、高溫鎖定、狀態燈自訂、全球馬達磨合資料庫。",
+        "og_desc": "為每一顆 Mini 4WD® 馬達建立可量化的健康指紋。十四大專業功能:磨合三模式、馬達特性量測、AI 健康管理、軸承阻力分析、電刷穩定診斷、三層安全保護、高溫鎖定、狀態燈自訂、田宮馬達規格速查。",
         "tw_title": "MotorLab — Mini 4WD® Motor Lab",
         "tw_desc": "為每一顆 Mini 4WD® 馬達建立可量化的健康指紋",
         "ld_org_desc": "為 Mini 4WD® 玩家打造的精密馬達磨合與測試系統研發工作室",
@@ -72,9 +72,9 @@ SEO = {
     },
     "en": {
         "title": "MotorLab — Mini 4WD® Motor Break-in & Diagnostics System",
-        "description": "MotorLab — precision Mini 4WD® motor break-in & diagnostics. Motor characterization, 10-stage break-in, AI health management, bearing resistance.",
+        "description": "MotorLab — precision Mini 4WD® motor break-in & diagnostics. Motor characterization, three-mode break-in, AI health management, bearing resistance.",
         "og_title": "MotorLab — Mini 4WD® Motor Break-in & Test System",
-        "og_desc": "Build a measurable health fingerprint for every Mini 4WD® motor. Thirteen professional tools: motor characterization, 10-stage break-in, AI health management, bearing resistance analysis, brush stability diagnostics, triple-layer safety protection, overheat lock, custom status lighting and a global break-in data library.",
+        "og_desc": "Build a measurable health fingerprint for every Mini 4WD® motor. Fourteen professional tools: motor characterization, three-mode break-in, AI health management, bearing resistance analysis, brush stability diagnostics, triple-layer safety protection, overheat lock, custom status lighting and a global break-in data library.",
         "tw_title": "MotorLab — Mini 4WD® Motor Lab",
         "tw_desc": "Build a measurable health fingerprint for every Mini 4WD® motor",
         "ld_org_desc": "An R&D studio building precision motor break-in and testing systems for Mini 4WD® racers.",
@@ -83,14 +83,14 @@ SEO = {
     },
     "ja": {
         "title": "MotorLab — Mini 4WD® モーター慣らし・テストシステム | 精密モーター診断スタジオ",
-        "description": "MotorLab — Mini 4WD® プレイヤー向けの精密モーター慣らし・診断システム。モーター特性測定、10 段階プログラム慣らし、AI 健康管理、ベアリング抵抗、CV ブラシ安定診断、高温保護を搭載。",
+        "description": "MotorLab — Mini 4WD® プレイヤー向けの精密モーター慣らし・診断システム。モーター特性測定、慣らし 3 モード、AI 健康管理、ベアリング抵抗、CV ブラシ安定診断、高温保護を搭載。",
         "og_title": "MotorLab — Mini 4WD® モーター慣らし・テストシステム",
         "og_desc": "すべての Mini 4WD® モーターに定量化できる健康指紋を。13 のプロ機能:モーター特性測定、10 段階慣らし、AI 健康管理、ベアリング抵抗解析、ブラシ安定診断、三層安全保護、高温ロック、ステータスライト カスタム、グローバル慣らしデータ庫。",
         "tw_title": "MotorLab — Mini 4WD® Motor Lab",
         "tw_desc": "すべての Mini 4WD® モーターに定量化できる健康指紋を",
         "ld_org_desc": "Mini 4WD® プレイヤーのための精密モーター慣らし・測定システムを開発するスタジオ。",
         "ld_site_desc": "MotorLab — Mini 4WD® モーター慣らし・精密測定システムの公式サイト。",
-        "ld_app_desc": "Mini 4WD® モーター慣らし・精密測定システム。10 段階プログラム慣らし、AI モーター健康管理、ベアリング抵抗解析、ブラシ接触安定診断を内蔵。",
+        "ld_app_desc": "Mini 4WD® モーター慣らし・精密測定システム。慣らし 3 モード、AI モーター健康管理、ベアリング抵抗解析、ブラシ接触安定診断を内蔵。",
     },
 }
 
@@ -1166,15 +1166,15 @@ LAB = {
 _KW_ZH_NATIVE = (
     "馬達磨合, 馬達磨合機, 四驅車馬達磨合, 迷你四驅車馬達磨合, 馬達磨合教學, "
     "田宮迷你四驅車, 迷你四驅車, 四驅車, 馬達測試, 馬達調校, "
-    "馬達健康診斷, 洗馬達, 紅二馬達, 黑金剛, 馬達保護, 抗 EMI, "
-    "過流保護, 電流急停, Watchdog 自動復原, 安全保護機制, "
+    "馬達健康診斷, 洗馬達, 紅二馬達, 黑金剛, 馬達保護, "
+    "過流保護, 電流急停, 安全保護機制, "
     "電磁干擾防護, 馬達燒毀防護, "
     "四驅車 馬達磨合, 田宮 馬達磨合, 四驅車 磨合方法"
 )
 _KW_EN = (
     "MotorLab, Mini 4WD, Hyper Dash, Plasma Dash, "
     "motor break-in, motor test, Tamiya Mini 4WD, "
-    "EMI shielding, overcurrent protection, watchdog recovery, motor safety, "
+    "overcurrent protection, motor safety, "
     "How to Break in Mini4WD Motors, DIY Mini4WD Motor Analyzer, "
     "Mini4WD RPM Benchmark and Analysis, Motor Health Monitoring Using RPM Telemetry"
 )

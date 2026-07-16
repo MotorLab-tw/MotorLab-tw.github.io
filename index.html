@@ -5,9 +5,9 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="zh-TW" http-equiv="Content-Language"/>
 <title>MotorLab — Mini 4WD® 馬達磨合測試系統 | 精密馬達診斷工作室</title>
-<meta content="MotorLab — 專為 Mini 4WD® 玩家打造的精密馬達磨合測試系統。十三大專業功能:馬達特性量測、十階段可程式化磨合、AI 健康管理、軸承阻力、CV 電刷穩定診斷、三層安全保護、高溫鎖定、狀態燈自訂、OTA 線上更新、全球馬達磨合資料庫。讓馬達調校可量化。" name="description"/>
+<meta content="MotorLab — 專為 Mini 4WD® 玩家打造的精密馬達磨合測試系統。十四大專業功能:磨合三模式、馬達特性量測、AI 健康管理、軸承阻力、CV 電刷穩定診斷、三層安全保護、高溫鎖定、狀態燈自訂、線上更新、田宮馬達規格速查。讓馬達調校可量化。" name="description"/>
 <meta content="MotorLab.tw" name="author"/>
-<meta content="馬達磨合, 馬達磨合機, 四驅車馬達磨合, 迷你四驅車馬達磨合, 馬達磨合教學, 田宮迷你四驅車, 迷你四驅車, 四驅車, 馬達測試, 馬達調校, 馬達健康診斷, 洗馬達, 紅二馬達, 黑金剛, 馬達保護, 抗 EMI, 過流保護, 電流急停, Watchdog 自動復原, 安全保護機制, 電磁干擾防護, 馬達燒毀防護, 四驅車 馬達磨合, 田宮 馬達磨合, 四驅車 磨合方法, MotorLab, Mini 4WD, Hyper Dash, Plasma Dash, motor break-in, motor test, Tamiya Mini 4WD, EMI shielding, overcurrent protection, watchdog recovery, motor safety, How to Break in Mini4WD Motors, DIY Mini4WD Motor Analyzer, Mini4WD RPM Benchmark and Analysis, Motor Health Monitoring Using RPM Telemetry" name="keywords"/>
+<meta content="馬達磨合, 馬達磨合機, 四驅車馬達磨合, 迷你四驅車馬達磨合, 馬達磨合教學, 田宮迷你四驅車, 迷你四驅車, 四驅車, 馬達測試, 馬達調校, 馬達健康診斷, 洗馬達, 紅二馬達, 黑金剛, 馬達保護, 過流保護, 電流急停, 安全保護機制, 電磁干擾防護, 馬達燒毀防護, 四驅車 馬達磨合, 田宮 馬達磨合, 四驅車 磨合方法, MotorLab, Mini 4WD, Hyper Dash, Plasma Dash, motor break-in, motor test, Tamiya Mini 4WD, overcurrent protection, motor safety, How to Break in Mini4WD Motors, DIY Mini4WD Motor Analyzer, Mini4WD RPM Benchmark and Analysis, Motor Health Monitoring Using RPM Telemetry" name="keywords"/>
 <!-- 正規網址 (避免重複內容問題) -->
 <link href="https://motorlab-tw.github.io/" rel="canonical"/>
 <!-- 搜尋引擎指示 -->
@@ -33,7 +33,7 @@
 <meta content="website" property="og:type"/>
 <meta content="https://motorlab-tw.github.io/" property="og:url"/>
 <meta content="MotorLab — Mini 4WD® 馬達磨合測試系統" property="og:title"/>
-<meta content="為每一顆 Mini 4WD® 馬達建立可量化的健康指紋。十三大專業功能:馬達特性量測、十階段磨合、AI 健康管理、軸承阻力分析、電刷穩定診斷、三層安全保護、高溫鎖定、狀態燈自訂、全球馬達磨合資料庫。" property="og:description"/>
+<meta content="為每一顆 Mini 4WD® 馬達建立可量化的健康指紋。十四大專業功能:磨合三模式、馬達特性量測、AI 健康管理、軸承阻力分析、電刷穩定診斷、三層安全保護、高溫鎖定、狀態燈自訂、田宮馬達規格速查。" property="og:description"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" property="og:image"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" property="og:image:secure_url"/>
 <meta content="image/png" property="og:image:type"/>
@@ -137,8 +137,8 @@
     "電刷接觸穩定度 CV 分析",
     "歷史紀錄 50 筆 (JSON / CSV 匯入匯出)",
     "內建 Web 操作介面 (WebSocket 即時推送)",
-    "OTA 線上韌體更新 (HMAC-SHA256 簽章)",
-    "三層安全保護機制 (抗 EMI、< 100 ms 過流急停、Watchdog 自動復原)",
+    "線上韌體更新 (數位簽章驗證)",
+    "三層安全保護機制 (電磁干擾抑制、< 100 ms 過流急停、系統異常自動恢復)",
     "雙區 RGB 狀態燈自訂顯示 (5 組狀態樣式)",
     "高溫鎖定保護 (可設定門檻 25~60°C)"
   ],
@@ -2263,10 +2263,10 @@
 <svg viewbox="0 0 24 24"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c2-2 3-5 3-9s-1-7-3-9m0 18c-2-2-3-5-3-9s1-7 3-9"></path></svg>
 </div>
 <h3 data-i18n="f8.title">線上更新與防偽機制</h3>
-<p data-i18n="f8.desc">透過家用 WiFi 自動取得最新韌體,內建 HMAC-SHA256 簽章驗證與雙韌體區自動回退機制,更新失敗自動切回前一版,杜絕磚機風險。</p>
+<p data-i18n="f8.desc">透過家用 WiFi 自動取得最新韌體,每份韌體皆經數位簽章驗證;更新失敗自動回復前一版本,杜絕磚機風險。</p>
 <div class="feature-meta">
-<span class="feature-tag">HMAC-SHA256</span>
-<span class="feature-tag" data-i18n="f8.tag2">自動回退</span>
+<span class="feature-tag" data-i18n="f8.tag1">數位簽章</span>
+<span class="feature-tag" data-i18n="f8.tag2">自動回復前版</span>
 </div>
 </div>
 <!-- 三層安全保護機制 -->
@@ -2275,11 +2275,11 @@
 <svg viewbox="0 0 24 24"><path d="M12 2L4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4z"></path><path d="M9 12l2 2 4-4"></path></svg>
 </div>
 <h3 data-i18n="f9.title">三層安全保護機制</h3>
-<p data-i18n="f9.desc">馬達磨合過程中,馬達產生的強烈電磁干擾(EMI)、水磨合或堵轉時的瞬間電流飆升,都是傷害昂貴競賽馬達的潛在風險。MotorLab 內建三層硬體與韌體聯防機制 — 抗 EMI 電路設計持續被動防護、電流異常 &lt; 100 ms 急停切斷電力、極端干擾導致 MCU 異常時 Watchdog 於數秒內自動重啟。</p>
+<p data-i18n="f9.desc">馬達磨合過程中,馬達產生的強烈電磁干擾、水磨合或堵轉時的瞬間電流飆升,都是傷害昂貴競賽馬達的潛在風險。MotorLab 內建三層硬體與韌體聯防 — 電磁干擾抑制設計持續被動防護、電流異常 &lt; 100 ms 急停切斷電力、系統異常時數秒內自動恢復。</p>
 <div class="feature-meta">
-<span class="feature-tag">EMI_SHIELDING</span>
+<span class="feature-tag" data-i18n="f9.tag1">電磁干擾抑制</span>
 <span class="feature-tag" data-i18n="f9.tag2">&lt; 100 ms 急停</span>
-<span class="feature-tag" data-i18n="f9.tag3">Watchdog 4s</span>
+<span class="feature-tag" data-i18n="f9.tag3">自動恢復</span>
 </div>
 </div>
 <!-- 全球馬達磨合資料庫(網站服務,可點連 /lab/) -->
@@ -2480,12 +2480,12 @@
 <div class="tech-card">
 <div class="tech-name">STABILITY_LATCH</div>
 <h4 data-i18n="t5.title">穩定電流鎖定演算法</h4>
-<p data-i18n="t5.desc">滑動窗口偵測連續 N 秒內電流最大最小差值,達穩定後鎖定數值,避免暫時擾動造成誤判,提升量測重現性。</p>
+<p data-i18n="t5.desc">偵測電流在一段時間內趨於平穩後鎖定讀值,避免暫時擾動造成誤判,提升量測重現性。</p>
 </div>
 <div class="tech-card">
 <div class="tech-name">NOISE_FLOOR_SUBTRACT</div>
 <h4 data-i18n="t6.title">雜訊底線扣除</h4>
-<p data-i18n="t6.desc">量測前先採集儀器本身雜訊基準,後續訊號扣除其平方差,分離出馬達真實訊號變化,讓微小異常也無所遁形。</p>
+<p data-i18n="t6.desc">量測前先取得儀器本身的雜訊基準,再從結果中扣除,分離出馬達的真實訊號變化,讓微小異常也無所遁形。</p>
 </div>
 <div class="tech-card">
 <div class="tech-name">SPEED_LOCK</div>
@@ -2495,22 +2495,22 @@
 <div class="tech-card">
 <div class="tech-name">PARAM_EXTRACT</div>
 <h4 data-i18n="t11.title">馬達常數萃取(Ke / Km / 內阻)</h4>
-<p data-i18n="t11.desc">以自適應鎖轉速做多點掃描,推導出馬達的磁路強度(Ke)、馬達常數(Km)與內部電阻等物理參數(專業測功機才提供)。自動三趟取平均,內部電阻量測重複性達 ±0.3%;作為選別馬達的客觀參考(不評分、不排名)。</p>
+<p data-i18n="t11.desc">以自適應鎖定轉速量測,推導出馬達的磁路強度(Ke)、馬達常數(Km)與內部電阻等物理參數(專業測功機才提供)。自動三趟取平均,內部電阻量測重複性達 ±0.3%;作為選別馬達的客觀參考(不評分、不排名)。</p>
 </div>
 <div class="tech-card">
-<div class="tech-name">RECIPROCAL_RPM</div>
-<h4 data-i18n="t12.title">高解析度逐脈衝測速</h4>
-<p data-i18n="t12.desc">以脈衝週期法取代固定視窗計數,轉速解析度達 1 RPM(較固定窗口計數法提升約 120 倍),任何轉速都能顯示到個位數。畫面末位跳動反映的是馬達真實轉速波動,而非量測雜訊。</p>
+<div class="tech-name">HIRES_RPM</div>
+<h4 data-i18n="t12.title">高解析度轉速量測</h4>
+<p data-i18n="t12.desc">轉速解析度達 1 RPM,較傳統方式提升約 120 倍,任何轉速都能顯示到個位數。畫面末位跳動反映的是馬達真實轉速波動,而非量測雜訊。</p>
 </div>
 <div class="tech-card">
 <div class="tech-name">RPM_CALIBRATION</div>
-<h4 data-i18n="t13.title">轉速感測掃頻校正</h4>
-<p data-i18n="t13.desc">每台機器的光學轉速感測都以內建頻率基準掃過 20 個點(100–50,000 RPM)個別校正,線性擬合 R²=0.9999,轉速讀值可溯源、機台之間一致。</p>
+<h4 data-i18n="t13.title">轉速讀值出廠校正</h4>
+<p data-i18n="t13.desc">每台機器的轉速感測皆於出廠時以內建頻率基準個別校正,校正後 R²=0.9999,轉速讀值可溯源、機台之間一致。</p>
 </div>
 <div class="tech-card">
-<div class="tech-name">DC_CURRENT_CAL</div>
-<h4 data-i18n="t14.title">DC 電流校正</h4>
-<p data-i18n="t14.desc">以純直流(非 PWM)逐台校正電流感測,把原始 +3~10% 的感測誤差收斂到約 0.1% 離散。</p>
+<div class="tech-name">CURRENT_CAL</div>
+<h4 data-i18n="t14.title">電流感測校正</h4>
+<p data-i18n="t14.desc">逐台校正電流感測,把原始 +3~10% 的感測誤差收斂到約 0.1% 離散,電流讀值精準一致。</p>
 </div>
 <div class="tech-card">
 <div class="tech-name">EFF_VOLTAGE</div>
@@ -2523,9 +2523,9 @@
 <p data-i18n="t16.desc">不只給一個「摩擦」數字,而是用最小平方把損耗分解成多個物理成分,並以 R² 擬合門檻自動剔除不可信的量測。</p>
 </div>
 <div class="tech-card">
-<div class="tech-name">EMI_SHIELDING</div>
-<h4 data-i18n="t7.title">抗 EMI 電路設計</h4>
-<p data-i18n="t7.desc">電源與感測訊號採用抗 EMI 設計,有效抑制馬達高頻雜訊回灌,避免感測讀值汙染及 MCU 邏輯被誤觸發。</p>
+<div class="tech-name">EMI_SUPPRESSION</div>
+<h4 data-i18n="t7.title">電磁干擾抑制設計</h4>
+<p data-i18n="t7.desc">電源與感測訊號採用電磁干擾抑制設計,有效抑制馬達高頻雜訊回灌,避免感測讀值受汙染或邏輯被誤觸發。</p>
 </div>
 <div class="tech-card">
 <div class="tech-name">OVERCURRENT_CUTOFF</div>
@@ -2533,9 +2533,9 @@
 <p data-i18n="t8.desc">即時電流監測瞬間超過安全閾值時 &lt; 100 ms 內立即斷電,保護系統及昂貴的競賽馬達。</p>
 </div>
 <div class="tech-card">
-<div class="tech-name">WATCHDOG_RECOVERY</div>
-<h4 data-i18n="t9.title">Watchdog 自動復原</h4>
-<p data-i18n="t9.desc">即使遇到極端 EMI 雜訊導致 MCU 異常,內建 Watchdog 會在數秒內重啟系統,重啟前所有電力輸出皆強制切斷。</p>
+<div class="tech-name">AUTO_RECOVERY</div>
+<h4 data-i18n="t9.title">系統異常自動恢復</h4>
+<p data-i18n="t9.desc">即使遇到極端電磁干擾導致系統異常,也會在數秒內自動重啟恢復,重啟前所有電力輸出皆強制切斷。</p>
 </div>
 </div>
 </div>
@@ -2919,12 +2919,14 @@
       'f7.tag2': '跨平台',
       'f7.tag3': '繁中・EN・日本語',
       'f8.title': '線上更新與防偽機制',
-      'f8.desc': '透過家用 WiFi 自動取得最新韌體,內建 HMAC-SHA256 簽章驗證與雙韌體區自動回退機制,更新失敗自動切回前一版,杜絕磚機風險。',
-      'f8.tag2': '自動回退',
+      'f8.desc': '透過家用 WiFi 自動取得最新韌體,每份韌體皆經數位簽章驗證;更新失敗自動回復前一版本,杜絕磚機風險。',
+      'f8.tag1': '數位簽章',
+      'f8.tag2': '自動回復前版',
       'f9.title': '三層安全保護機制',
-      'f9.desc': '馬達磨合過程中,馬達產生的強烈電磁干擾(EMI)、水磨合或堵轉時的瞬間電流飆升,都是傷害昂貴競賽馬達的潛在風險。MotorLab 內建三層硬體與韌體聯防機制 — 抗 EMI 電路設計持續被動防護、電流異常 < 100 ms 急停切斷電力、極端干擾導致 MCU 異常時 Watchdog 於數秒內自動重啟。',
+      'f9.desc': '馬達磨合過程中,馬達產生的強烈電磁干擾、水磨合或堵轉時的瞬間電流飆升,都是傷害昂貴競賽馬達的潛在風險。MotorLab 內建三層硬體與韌體聯防 — 電磁干擾抑制設計持續被動防護、電流異常 < 100 ms 急停切斷電力、系統異常時數秒內自動恢復。',
+      'f9.tag1': '電磁干擾抑制',
       'f9.tag2': '< 100 ms 急停',
-      'f9.tag3': 'Watchdog 4s',
+      'f9.tag3': '自動恢復',
       'f10.title': '全球馬達磨合資料庫',
       'f10.desc': '把馬達磨合機產出的磨合配方紀錄分享給全世界或下載別人的配方,下載原檔可直接匯入你的馬達磨合機重現。',
       'f10.tag1': '全球共享',
@@ -2984,25 +2986,25 @@
       't4.title': '基準指紋比對',
       't4.desc': '為每顆馬達建立首次量測基準,後續比對皆採同器同馬達原則,排除馬達本身個體差異,純粹反映健康狀態變化。',
       't5.title': '穩定電流鎖定演算法',
-      't5.desc': '滑動窗口偵測連續 N 秒內電流最大最小差值,達穩定後鎖定數值,避免暫時擾動造成誤判,提升量測重現性。',
+      't5.desc': '偵測電流在一段時間內趨於平穩後鎖定讀值,避免暫時擾動造成誤判,提升量測重現性。',
       't6.title': '雜訊底線扣除',
-      't6.desc': '量測前先採集儀器本身雜訊基準,後續訊號扣除其平方差,分離出馬達真實訊號變化,讓微小異常也無所遁形。',
-      't7.title': '抗 EMI 電路設計',
-      't7.desc': '電源與感測訊號採用抗 EMI 設計,有效抑制馬達高頻雜訊回灌,避免感測讀值汙染及 MCU 邏輯被誤觸發。',
+      't6.desc': '量測前先取得儀器本身的雜訊基準,再從結果中扣除,分離出馬達的真實訊號變化,讓微小異常也無所遁形。',
+      't7.title': '電磁干擾抑制設計',
+      't7.desc': '電源與感測訊號採用電磁干擾抑制設計,有效抑制馬達高頻雜訊回灌,避免感測讀值受汙染或邏輯被誤觸發。',
       't8.title': '硬體過流保護 (< 100 ms)',
       't8.desc': '即時電流監測瞬間超過安全閾值時 < 100 ms 內立即斷電,保護系統及昂貴的競賽馬達。',
-      't9.title': 'Watchdog 自動復原',
-      't9.desc': '即使遇到極端 EMI 雜訊導致 MCU 異常,內建 Watchdog 會在數秒內重啟系統,重啟前所有電力輸出皆強制切斷。',
+      't9.title': '系統異常自動恢復',
+      't9.desc': '即使遇到極端電磁干擾導致系統異常,也會在數秒內自動重啟恢復,重啟前所有電力輸出皆強制切斷。',
       't10.title': '自適應閉環定速控制',
       't10.desc': '自動學習每顆馬達的特性,以閉環控制將轉速鎖定於目標值,穩態誤差 ±2% 以內,讓每顆馬達都在相同工作點被量測,排除「轉速不同 → 數據不可比」的干擾。',
       't11.title': '馬達常數萃取(Ke / Km / 內阻)',
-      't11.desc': '以自適應鎖轉速做多點掃描,推導出馬達的磁路強度(Ke)、馬達常數(Km)與內部電阻等物理參數(專業測功機才提供)。自動三趟取平均,內部電阻量測重複性達 ±0.3%;作為選別馬達的客觀參考(不評分、不排名)。',
-      't12.title': '高解析度逐脈衝測速',
-      't12.desc': '以脈衝週期法取代固定視窗計數,轉速解析度達 1 RPM(較固定窗口計數法提升約 120 倍),任何轉速都能顯示到個位數。畫面末位跳動反映的是馬達真實轉速波動,而非量測雜訊。',
-      't13.title': '轉速感測掃頻校正',
-      't13.desc': '每台機器的光學轉速感測都以內建頻率基準掃過 20 個點(100–50,000 RPM)個別校正,線性擬合 R²=0.9999,轉速讀值可溯源、機台之間一致。',
-      't14.title': 'DC 電流校正',
-      't14.desc': '以純直流(非 PWM)逐台校正電流感測,把原始 +3~10% 的感測誤差收斂到約 0.1% 離散。',
+      't11.desc': '以自適應鎖定轉速量測,推導出馬達的磁路強度(Ke)、馬達常數(Km)與內部電阻等物理參數(專業測功機才提供)。自動三趟取平均,內部電阻量測重複性達 ±0.3%;作為選別馬達的客觀參考(不評分、不排名)。',
+      't12.title': '高解析度轉速量測',
+      't12.desc': '轉速解析度達 1 RPM,較傳統方式提升約 120 倍,任何轉速都能顯示到個位數。畫面末位跳動反映的是馬達真實轉速波動,而非量測雜訊。',
+      't13.title': '轉速讀值出廠校正',
+      't13.desc': '每台機器的轉速感測皆於出廠時以內建頻率基準個別校正,校正後 R²=0.9999,轉速讀值可溯源、機台之間一致。',
+      't14.title': '電流感測校正',
+      't14.desc': '逐台校正電流感測,把原始 +3~10% 的感測誤差收斂到約 0.1% 離散,電流讀值精準一致。',
       't15.title': '負載補償馬達實效電壓',
       't15.desc': '硬體只能量到供電端,系統即時補償驅動級壓降與供電下垂,推算馬達端子實際吃到的電壓 ——「設定 3V」馬達就真的看到 3V,畫面並列顯示供電與馬達電壓。',
       't16.title': '損耗轉矩分解',
@@ -3833,12 +3835,14 @@
       'f7.tag2': 'Cross-platform',
       'f7.tag3': '繁中・EN・日本語',
       'f8.title': 'OTA Update & Tamper Protection',
-      'f8.desc': 'Auto-fetches latest firmware via home WiFi. Built-in HMAC-SHA256 signature verification and dual-partition rollback ensure update failures automatically revert to the previous version — no brick risk.',
+      'f8.desc': 'Auto-fetches the latest firmware via home WiFi. Every firmware image is verified by digital signature; if an update fails, it automatically reverts to the previous version — no brick risk.',
+      'f8.tag1': 'Digital signature',
       'f9.title': 'Triple-Layer Safety Protection',
-      'f9.desc': 'During motor break-in, intense electromagnetic interference (EMI) from the motor, plus current surges from water break-in or rotor lockup, are all real threats to your expensive race motors. MotorLab integrates three layers of hardware + firmware defense: passive EMI shielding circuitry, < 100 ms emergency current cutoff, and Watchdog auto-recovery within seconds even if extreme noise causes MCU anomalies.',
+      'f9.desc': 'During motor break-in, strong electromagnetic interference from the motor and current surges from water break-in or rotor lockup are all real threats to expensive race motors. MotorLab integrates three layers of hardware + firmware defense: continuous passive EMI suppression, emergency current cutoff within < 100 ms, and automatic recovery within seconds if the system faults.',
+      'f9.tag1': 'EMI suppression',
       'f9.tag2': '< 100 ms cutoff',
-      'f9.tag3': 'Watchdog 4s',
-      'f8.tag2': 'Auto rollback',
+      'f9.tag3': 'Auto recovery',
+      'f8.tag2': 'Auto revert',
       'f10.title': 'Global Break-in Data Library',
       'f10.desc': 'Share the break-in profiles your machine produces with the world, or download profiles from others — the original file re-imports straight into your machine.',
       'f10.tag1': 'Global',
@@ -3898,25 +3902,25 @@
       't4.title': 'Baseline Fingerprint Comparison',
       't4.desc': 'Each motor establishes its own first-measurement baseline. All subsequent comparisons follow same-device-same-motor principle, eliminating individual motor variance to expose pure health changes.',
       't5.title': 'Stable Current Latch Algorithm',
-      't5.desc': 'Sliding window detects max-min current spread over N consecutive seconds. Once stable, the value latches to prevent transient perturbations from causing misjudgment — boosting repeatability.',
+      't5.desc': 'Once the current settles over a period, the reading latches — preventing transient perturbations from causing misjudgment and boosting repeatability.',
       't6.title': 'Noise Floor Subtraction',
-      't6.desc': 'Captures the instrument noise baseline before measurement, then subtracts its variance from subsequent signals. Isolates true motor signal variations so even subtle anomalies cannot hide.',
-      't7.title': 'EMI Shielding Circuit Design',
-      't7.desc': 'Power and sensor signal lines use anti-EMI design to effectively suppress high-frequency noise from the motor, preventing contamination of sensor readings or MCU logic misfires.',
+      't6.desc': 'The instrument\'s own noise baseline is captured before measurement and subtracted from the result, isolating the motor\'s true signal changes so even subtle anomalies cannot hide.',
+      't7.title': 'EMI Suppression Circuit Design',
+      't7.desc': 'Power and sensor lines use EMI-suppression design to effectively curb high-frequency noise fed back from the motor, preventing contamination of sensor readings or logic misfires.',
       't8.title': 'Hardware Overcurrent Cutoff (< 100 ms)',
       't8.desc': 'Real-time current monitoring instantly cuts power within < 100 ms when current exceeds safety threshold, protecting both the system and your expensive race motor.',
-      't9.title': 'Watchdog Auto-Recovery',
-      't9.desc': 'Even if extreme EMI noise causes MCU anomalies, the built-in Watchdog reboots the system within seconds. All power outputs are forcibly cut before reboot.',
+      't9.title': 'System Fault Auto-Recovery',
+      't9.desc': 'Even if extreme electromagnetic interference causes a system fault, it automatically restarts and recovers within seconds — with all power outputs forcibly cut before restart.',
       't10.title': 'Adaptive Closed-Loop Speed Lock',
       't10.desc': 'The system learns each motor\'s characteristics and uses a closed loop to pin its speed to the target, with steady-state error within ±2%, so every motor is measured at the same operating point — removing the "different speed → incomparable data" confound.',
       't11.title': 'Motor Constant Extraction (Ke / Km / R)',
-      't11.desc': 'A multi-point sweep under adaptive speed lock derives the motor magnetic strength (Ke), motor constant (Km) and internal resistance — physical parameters a professional dynamometer reports. It auto-averages three passes for ±0.3% resistance-measurement repeatability, as objective reference data for grading motors (no scoring or ranking).',
-      't12.title': 'High-Resolution Reciprocal Timing',
-      't12.desc': 'Reciprocal period timing replaces fixed-window counting, giving 1 RPM resolution — about 120× finer than fixed-window counting — so any speed reads down to single-digit RPM. The flickering last digits reflect the motor\'s real speed fluctuation, not measurement noise.',
-      't13.title': 'Swept-Frequency Tachometer Calibration',
-      't13.desc': 'Each unit\'s optical speed sensor is individually calibrated against an internal frequency reference across 20 points (100–50,000 RPM), with a linear fit of R²=0.9999 — so RPM readings are traceable and consistent unit to unit.',
-      't14.title': 'DC Current Calibration',
-      't14.desc': 'Current sensing is calibrated per unit using clean DC (not PWM), tightening the raw +3–10% sensor error to about 0.1% dispersion.',
+      't11.desc': 'Under adaptive speed lock it derives the motor\'s magnetic strength (Ke), motor constant (Km) and internal resistance — physical parameters a professional dynamometer reports. Auto-averaging three passes gives ±0.3% resistance-measurement repeatability, as objective reference data for grading motors (no scoring or ranking).',
+      't12.title': 'High-Resolution RPM Measurement',
+      't12.desc': 'RPM resolution reaches 1 RPM — about 120× finer than conventional methods — so any speed reads down to single-digit RPM. The flickering last digits reflect the motor\'s real speed fluctuation, not measurement noise.',
+      't13.title': 'Factory RPM Calibration',
+      't13.desc': 'Each unit\'s speed sensor is individually calibrated at the factory against an internal frequency reference, reaching R²=0.9999 — so RPM readings are traceable and consistent from unit to unit.',
+      't14.title': 'Current-Sensing Calibration',
+      't14.desc': 'Current sensing is calibrated per unit, tightening the raw +3–10% sensor error to about 0.1% dispersion for precise, consistent current readings.',
       't15.title': 'Load-Compensated Effective Voltage',
       't15.desc': 'The hardware can only meter the supply, so the system compensates drive-stage drop and supply sag in real time to compute the voltage the motor terminals actually see — "set 3V" means the motor really gets 3V, with supply and motor voltage shown side by side.',
       't16.title': 'Loss-Torque Decomposition',
@@ -4747,12 +4751,14 @@
       'f7.tag2': 'クロスプラットフォーム',
       'f7.tag3': '繁中・EN・日本語',
       'f8.title': 'オンライン更新と偽造防止機構',
-      'f8.desc': '家庭用 WiFi 経由で最新ファームウェアを自動取得。HMAC-SHA256 署名検証と二重ファームウェア領域による自動ロールバック機構を内蔵し、更新失敗時は自動で前バージョンへ復帰、文鎮化リスクを排除します。',
-      'f8.tag2': '自動ロールバック',
+      'f8.desc': '家庭用 WiFi 経由で最新ファームウェアを自動取得。すべてのファームウェアはデジタル署名で検証され、更新に失敗しても自動で前バージョンへ復帰、文鎮化リスクを排除します。',
+      'f8.tag1': 'デジタル署名',
+      'f8.tag2': '自動復帰',
       'f9.title': '三層安全保護機構',
-      'f9.desc': 'モーター慣らし中、モーターが発生する強力な電磁干渉（EMI）、水慣らしやロック時の瞬間的な電流急上昇は、高価な競技用モーターを傷つける潜在的リスクです。MotorLab は三層のハードウェア・ファームウェア連携防御機構を内蔵 — 耐 EMI 回路設計による継続的なパッシブ保護、電流異常時 < 100 ms での緊急電源遮断、極端な干渉で MCU 異常が発生した際は Watchdog が数秒以内に自動再起動します。',
+      'f9.desc': 'モーター慣らし中、モーターが発生する強力な電磁干渉、水慣らしやロック時の瞬間的な電流急上昇は、高価な競技用モーターを傷つける潜在的リスクです。MotorLab は三層のハードウェア・ファームウェア連携防御を内蔵 — 電磁干渉抑制設計による継続的なパッシブ保護、電流異常時 < 100 ms での緊急電源遮断、システム異常時は数秒以内に自動復旧します。',
+      'f9.tag1': '電磁干渉抑制',
       'f9.tag2': '< 100 ms 緊急停止',
-      'f9.tag3': 'Watchdog 4s',
+      'f9.tag3': '自動復旧',
       'f10.title': 'グローバル モーター慣らしデータ庫',
       'f10.desc': 'モーター慣らし機が生成した慣らしレシピ記録を世界に共有、あるいは他のプレイヤーのレシピをダウンロード。元ファイルはそのままモーター慣らし機に再インポートできます。',
       'f10.tag1': 'グローバル共有',
@@ -4812,25 +4818,25 @@
       't4.title': '基準指紋比較',
       't4.desc': 'モーターごとに初回測定基準を作成。以降の比較は同一機器・同一モーターの原則で行い、モーター個体差を排除して健康状態の変化のみを純粋に反映します。',
       't5.title': '安定電流ロックアルゴリズム',
-      't5.desc': 'スライディングウィンドウで連続 N 秒間の電流最大・最小差を検出し、安定後に数値をロック。一時的な擾乱による誤判定を防ぎ、測定再現性を向上させます。',
+      't5.desc': '電流が一定時間で安定した後に読値をロックし、一時的な擾乱による誤判定を防ぎ、測定再現性を向上させます。',
       't6.title': 'ノイズフロア減算',
-      't6.desc': '測定前に機器自体のノイズ基準を取得し、以降の信号からその二乗差を減算。モーターの真の信号変化を分離し、微小な異常も見逃しません。',
-      't7.title': '耐 EMI 回路設計',
-      't7.desc': '電源とセンサー信号に耐 EMI 設計を採用し、モーターの高周波ノイズの回り込みを効果的に抑制。センサー読値の汚染と MCU ロジックの誤作動を防ぎます。',
+      't6.desc': '測定前に機器自体のノイズ基準を取得し、結果から差し引くことでモーターの真の信号変化を分離し、微小な異常も見逃しません。',
+      't7.title': '電磁干渉抑制回路設計',
+      't7.desc': '電源とセンサー信号に電磁干渉抑制設計を採用し、モーターの高周波ノイズの回り込みを効果的に抑制。センサー読値の汚染やロジックの誤作動を防ぎます。',
       't8.title': 'ハードウェア過電流保護（< 100 ms）',
       't8.desc': 'リアルタイム電流監視で瞬間的に安全閾値を超えた際、< 100 ms 以内に即座に電源遮断。システムと高価な競技用モーターを保護します。',
-      't9.title': 'Watchdog 自動復旧',
-      't9.desc': '極端な EMI ノイズで MCU 異常が発生しても、内蔵 Watchdog が数秒以内にシステムを再起動。再起動前にすべての電力出力は強制遮断されます。',
+      't9.title': 'システム異常自動復旧',
+      't9.desc': '極端な電磁干渉でシステム異常が発生しても、数秒以内に自動的に再起動して復旧します。再起動前にすべての電力出力は強制遮断されます。',
       't10.title': '適応クローズドループ定速制御',
       't10.desc': 'モーターごとの特性を自動学習し、クローズドループで回転数を目標値にロック。定常誤差 ±2% 以内で、すべてのモーターを同一の動作点で測定し「回転数が違う → 比較不能」の交絡を排除します。',
       't11.title': 'モーター定数の抽出(Ke / Km / 内部抵抗)',
-      't11.desc': '適応ロック定速の多点スイープで、モーターの磁気強度(Ke)、モーター定数(Km)、内部抵抗などの物理パラメータ(プロのダイナモ相当)を導出。自動 3 パス平均で内部抵抗の測定再現性 ±0.3%;選別の客観的な参考データ(採点・ランキングなし)。',
-      't12.title': '高分解能の逐パルス測速',
-      't12.desc': 'パルス周期法で固定ウィンドウ計数を置き換え、回転数分解能は 1 RPM(固定ウィンドウ計数法比 約 120 倍)、どの回転数でも 1 の位まで表示。末位のちらつきは測定ノイズではなくモーターの実際の回転変動です。',
-      't13.title': '掃引周波数によるタコメーター校正',
-      't13.desc': '各機の光学式回転センサーを内蔵の周波数基準で 20 点(100–50,000 RPM)個別校正、線形フィット R²=0.9999 —— 回転数の読みはトレーサブルで機体間で一致します。',
-      't14.title': 'DC 電流校正',
-      't14.desc': '純直流(PWM でなく)で電流センサーを機体ごとに校正し、生の +3〜10% の誤差を約 0.1% のばらつきに収束させます。',
+      't11.desc': '適応ロック定速で測定し、モーターの磁気強度(Ke)、モーター定数(Km)、内部抵抗などの物理パラメータ(プロのダイナモ相当)を導出。自動 3 パス平均で内部抵抗の測定再現性 ±0.3%;選別の客観的な参考データ(採点・ランキングなし)。',
+      't12.title': '高分解能の回転数測定',
+      't12.desc': '回転数分解能は 1 RPM、従来方式の約 120 倍で、どの回転数でも 1 の位まで表示。末位のちらつきは測定ノイズではなくモーターの実際の回転変動です。',
+      't13.title': '回転数読値の出荷校正',
+      't13.desc': '各機の回転センサーは出荷時に内蔵の周波数基準で個別校正され、R²=0.9999 に到達 —— 回転数の読みはトレーサブルで機体間で一致します。',
+      't14.title': '電流センサー校正',
+      't14.desc': '電流センサーを機体ごとに校正し、生の +3〜10% の誤差を約 0.1% のばらつきに収束、電流読値を精確かつ一致させます。',
       't15.title': '負荷補償の実効モーター電圧',
       't15.desc': 'ハードは供給側しか測れないため、駆動段の電圧降下と供給の垂れをリアルタイム補償してモーター端子の実効電圧を算出 ——「3V 設定」でモーターが本当に 3V を受け、供給電圧とモーター電圧を並べて表示。',
       't16.title': '損失トルクの分解',
