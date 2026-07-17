@@ -621,7 +621,7 @@ GUIDES = [
         "slug": "motor-break-in-speed-vs-voltage",
         "key": "g14",
         "published": "2026-07-14",
-        "updated": "2026-07-14",
+        "updated": "2026-07-17",
         "type": "guides",
         "i18n": {
             "zh": {

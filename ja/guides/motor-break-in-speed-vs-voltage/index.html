@@ -1896,7 +1896,7 @@
     "@id": "https://motorlab-tw.github.io/ja/guides/motor-break-in-speed-vs-voltage/"
   },
   "datePublished": "2026-07-14",
-  "dateModified": "2026-07-14",
+  "dateModified": "2026-07-17",
   "author": {
     "@type": "Organization",
     "name": "MotorLab Team",
@@ -1939,7 +1939,7 @@
 }</script></head>
 <body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/ja/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/ja/">← ホームへ戻る</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/ja/">ホーム</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/ja/#guides">ガイド</a><span class="sep">/</span><span class="current">定電圧 vs 定回転数</span></nav><article class="guide-article">
 <span class="guide-tag" data-i18n="g14.tag">METHODOLOGY · 慣らし制御</span>
-<h1 data-i18n="g14.title">なぜモーター慣らしは電圧ではなく回転数を固定するのか?</h1><p class="guide-byline">編集者:MotorLab Team</p><p class="guide-dates">公開 2026-07-14</p>
+<h1 data-i18n="g14.title">なぜモーター慣らしは電圧ではなく回転数を固定するのか?</h1><p class="guide-byline">編集者:MotorLab Team</p><p class="guide-dates">公開 2026-07-14　·　更新 2026-07-17</p>
 <p class="guide-lead" data-i18n="g14.lead">ほぼすべての慣らし方法は「電圧を設定して回す」—— 定電圧慣らしだ。回転数は?せいぜい「測る」だけで「制御」はしない。だが物理的には、慣らしの品質を決めるのは<strong>回転数</strong>(接触面の摺動速度)であって、電圧ではない。本記事は定電圧 vs 定回転数、その違いを分解する。</p>
 <figure data-i18n="g14.figsum"><img alt="なぜ慣らしは電圧でなく回転数を固定するのか:電圧は代理、定電圧は流れる、定回転数で条件固定の3点" class="chart" loading="lazy" src="/images/g14_summary_j.png"/></figure>
 <h2 data-i18n="g14.h1">慣らしは結局なにを削っているのか</h2>
@@ -1947,7 +1947,7 @@
 <h2 data-i18n="g14.h2">定電圧(電圧制御)の物理的な問題</h2>
 <p data-i18n="g14.p2">定電圧慣らし = 電圧 V を固定し、回転数はモーターのその時の状態で決まる(V ≈ Ke·ω + I·R)。問題は 3 つ:<br/><strong>① 同じ慣らし中に回転数がずれる</strong> —— 慣らしが進むと接触抵抗 R が変化し温度で Ke も微動、定電圧では回転数が流れ続ける;摺動速度が動く標的になり、条件が削りながら変わる。<br/><strong>② モーターごとに回転数が違う</strong> —— 同じ 3V でも素性の違うモーターは回転数が異なり、それぞれ違う摺動速度で慣らされる —— <strong>再現不可・比較不可</strong>。<br/><strong>③ 整流条件も一緒にずれる</strong> —— 回転数がずれれば整流周波数もずれ、スパークと発熱もずれる。制御しているのは電圧だが、実際に接触面を削るのは回転数 —— 電圧は一段離れた、しかもモーターとともに変化する代理変数にすぎない。</p>
 <h2 data-i18n="g14.h3">定回転数(閉ループ)が物理的に正しくやっていること</h2>
-<p data-i18n="g14.p3">閉ループ速度制御 = 回転数を固定し、フィードバックが電圧を自動調整して維持する;電圧は補償用の自由変数になる。物理的な利点は 4 つ:<br/><strong>摺動速度を固定</strong> —— ブラシが一定の表面速度で削られ、より均一に馴染む。<br/><strong>モーター間で同一基準</strong> —— 素性に関係なく全モーターが同じ回転数で慣らされ、再現・比較が可能(測定で回転数を固定する理由でもある。末尾の R カーブ記事参照)。<br/><strong>整流周波数が一定</strong> —— スパークと発熱の条件が安定。<br/><strong>低回転数を直接狙える</strong> —— 低回転数 = 低整流エネルギー = 穏やかな摺り合わせ;一方、定電圧の低電圧では個体差で回転数が予測不能(遅いモーターはほぼ回らないことも)。</p>
+<p data-i18n="g14.p3">閉ループ速度制御 = 回転数を固定し、フィードバックが電圧を自動調整して維持する;電圧は補償用の自由変数になる。物理的な利点は 5 つ:<br/><strong>摺動速度を固定</strong> —— ブラシが一定の表面速度で成形される;同じ摺動速度で削るので、接触面はより均一に馴染むと合理的に推測できる(これは検証可能な仮説で、両モードで慣らした個体特性の分布差こそ次の実験テーマ)。<br/><strong>モーター間で同一基準</strong> —— 素性に関係なく全モーターが同じ回転数で慣らされ、再現・比較が可能。実測では、速度固定下の回転数再現性のばらつきは<strong>サブパーセント</strong>級に収まり、定電圧下の個体間ドリフトよりはるかに小さい(測定で回転数を固定する理由でもある。末尾の R カーブ記事参照)。<br/><strong>整流周波数が一定</strong> —— スパークと発熱の条件が安定。<br/><strong>低回転数を直接狙える</strong> —— 低回転数 = 低整流エネルギー = 穏やかな摺り合わせ;一方、定電圧の低電圧では個体差で回転数が予測不能(遅いモーターはほぼ回らないことも)。<br/><strong>電圧そのものが進捗信号になる</strong> —— 回転数を固定すると、「その回転数を維持するのに要る電圧」が接触面の成形につれて変化する;制御量(回転数)と進捗量(電圧)が一つのループで役割分担し、慣らしの「実行」と「いつ止めるか」を同じ線で読める(読み方は末尾の R カーブ記事参照)。</p>
 <h2 data-i18n="g14.h4">定電圧 vs 定回転数:物理の対照</h2>
 <figure data-i18n="g14.fig"><img alt="定電圧 vs 定回転数の慣らし物理対照:制御する量・慣らし条件・モーター間一貫性・整流周波数・低速摺り合わせ・実装の 6 項目比較" class="chart" loading="lazy" src="/images/g14_compare_j.svg"/></figure>
 <table class="guide-table">
@@ -1958,12 +1958,12 @@
 <tr><td data-i18n="g14.r3.d">モーター間の一貫性</td><td data-i18n="g14.r3.cv">各々異なる回転数</td><td data-i18n="g14.r3.cs">同回転数で比較可</td></tr>
 <tr><td data-i18n="g14.r4.d">整流周波数</td><td data-i18n="g14.r4.cv">流れる</td><td data-i18n="g14.r4.cs">一定</td></tr>
 <tr><td data-i18n="g14.r6.d">低速摺り合わせ</td><td data-i18n="g14.r6.cv">低電圧では予測不能</td><td data-i18n="g14.r6.cs">低回転数を固定可能</td></tr>
-<tr><td data-i18n="g14.r7.d">磨合進度可讀性</td><td data-i18n="g14.r7.cv">轉速在漂,無乾淨訊號</td><td data-i18n="g14.r7.cs">電壓即進度訊號</td></tr>
+<tr><td data-i18n="g14.r7.d">慣らし進捗の読み取り</td><td data-i18n="g14.r7.cv">回転数が流れ、綺麗な信号なし</td><td data-i18n="g14.r7.cs">電圧が進捗信号</td></tr>
 <tr><td data-i18n="g14.r5.d">実装</td><td data-i18n="g14.r5.cv">単純・安価(開ループ)</td><td data-i18n="g14.r5.cs">フィードバック制御が必要</td></tr>
 </tbody>
 </table>
 <h2 data-i18n="g14.h5">正直なトレードオフ</h2>
-<p data-i18n="g14.p4">定回転数はタダではない:<strong>リアルタイムの回転数測定とフィードバックによる電圧調整</strong>(閉ループ)が必要で、「電圧を設定するだけ」より複雑;さらに<strong>始動の瞬間</strong>は静摩擦を先に破る必要があり、低電圧で押すだけでは足りない。定電圧は単純で安いのが利点。念のため:本記事は<strong>制御方式</strong>(電圧 vs 回転数)の話であって<strong>目標値</strong>の話ではない —— 2.4V(ニッケル水素)か 3.0V(アルカリ)か、何回転で固定するかは別の「レース電池で設定を選ぶ」テーマだ。</p>
+<p data-i18n="g14.p4">定回転数はタダではない:<strong>リアルタイムの回転数測定とフィードバックによる電圧調整</strong>(閉ループ)が必要で、「電圧を設定するだけ」より複雑;さらに<strong>始動の瞬間</strong>は静摩擦を先に破る必要があり、低電圧で押すだけでは足りない。定電圧は単純で安いのが利点。<br/>よくある反論:「実戦では電池がほぼ定電圧源だから、定電圧慣らしの方が実使用に近い。」だがこれは成り立たない —— 実戦の動作点は<strong>負荷あり</strong>(低回転・高電流)で、無負荷の定電圧慣らしも同様にコース条件を再現しない;逆に速度制御なら回転数を<strong>実戦に近い ω</strong> に直接固定でき、定電圧より狙った動作点に合わせやすい。<br/>念のため:本記事は<strong>制御方式</strong>(電圧 vs 回転数)の話であって<strong>目標値</strong>の話ではない —— 2.4V(ニッケル水素)か 3.0V(アルカリ)か、何回転で固定するかは別の「レース電池で設定を選ぶ」テーマだ。</p>
 <div class="guide-tip">
 <p data-i18n="g14.key">一言で:慣らしの品質は接触面の<strong>摺動速度</strong>で決まり、その摺動速度こそ回転数だ。定電圧は流れる代理を制御する;定回転数は実際に接触面を削る物理量を直接制御する。<strong>正確に・再現性よく・モーター間で比較可能に</strong>慣らすなら、物理的に固定すべきは回転数だ。</p>
 </div>

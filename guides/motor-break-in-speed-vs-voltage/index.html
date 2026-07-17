@@ -1896,7 +1896,7 @@
     "@id": "https://motorlab-tw.github.io/guides/motor-break-in-speed-vs-voltage/"
   },
   "datePublished": "2026-07-14",
-  "dateModified": "2026-07-14",
+  "dateModified": "2026-07-17",
   "author": {
     "@type": "Organization",
     "name": "MotorLab Team",
@@ -1939,7 +1939,7 @@
 }</script></head>
 <body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/">← 回首頁</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/">首頁</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/#guides">教學</a><span class="sep">/</span><span class="current">控速 vs 控壓</span></nav><article class="guide-article">
 <span class="guide-tag" data-i18n="g14.tag">METHODOLOGY · 磨合控制</span>
-<h1 data-i18n="g14.title">為什麼磨馬達要鎖轉速,不鎖電壓?</h1><p class="guide-byline">編輯者:MotorLab Team</p><p class="guide-dates">發表 2026-07-14</p>
+<h1 data-i18n="g14.title">為什麼磨馬達要鎖轉速,不鎖電壓?</h1><p class="guide-byline">編輯者:MotorLab Team</p><p class="guide-dates">發表 2026-07-14　·　更新 2026-07-17</p>
 <p class="guide-lead" data-i18n="g14.lead">幾乎所有磨馬達的做法,都是「設一個電壓」讓它跑 —— 定電壓磨合。轉速?頂多拿來「量」,不拿來「控」。但從物理看,真正決定磨合品質的是<strong>轉速</strong>(接觸面的滑動速度),不是電壓。這篇拆解:磨馬達控電壓 vs 控轉速,差在哪。</p>
 <figure data-i18n="g14.figsum"><img alt="為什麼磨馬達要鎖轉速不鎖電壓:電壓只是代理、鎖電壓會漂、鎖轉速才鎖住磨合條件三重點" class="chart" loading="lazy" src="/images/g14_summary_c.png"/></figure>
 <h2 data-i18n="g14.h1">磨合到底在磨什麼</h2>
@@ -1947,7 +1947,7 @@
 <h2 data-i18n="g14.h2">控電壓(定電壓)的物理問題</h2>
 <p data-i18n="g14.p2">定電壓磨合 = 固定電壓 V,轉速由馬達當下狀態決定(V ≈ Ke·ω + I·R)。問題有三:<br/><strong>① 同次磨合中,轉速會漂</strong> —— 磨合過程接觸電阻 R 在變、溫度讓 Ke 微移,固定電壓下轉速一路飄;「接觸面的滑動速度」變成移動目標,磨合條件邊磨邊變。<br/><strong>② 不同馬達,轉速不一樣</strong> —— 同樣 3V,體質不同的馬達轉速不同,各自在不同滑動速度下磨合,<strong>不可重現、不能比較</strong>。<br/><strong>③ 換向條件跟著漂</strong> —— 轉速漂則換向頻率漂,火花與發熱條件也漂。你控的是電壓,真正磨到接觸面的是轉速 —— 電壓只是隔了一層、還會隨馬達改變的代理變數。</p>
 <h2 data-i18n="g14.h3">控轉速(閉環)在物理上做對了什麼</h2>
-<p data-i18n="g14.p3">閉環控速 = 固定轉速,由回授自動調整電壓來維持它;電壓變成補償用的自由變數。這帶來四個物理上的好處:<br/><strong>鎖住滑動速度</strong> —— 碳刷在固定的表面速度下被磨,貼合更均勻。<br/><strong>跨馬達同基準</strong> —— 所有馬達都在同一轉速下磨合,不管體質差異,可重現、可比較(這也是量測要鎖轉速的原因,見文末〈R 磨合曲線〉)。<br/><strong>換向頻率固定</strong> —— 火花與發熱條件穩定。<br/><strong>可直接鎖低轉速</strong> —— 低轉速 = 低換向能量 = 溫和對研;而定電壓在低壓下,體質差異會讓轉速不可預測(慢的馬達可能根本轉不動)。</p>
+<p data-i18n="g14.p3">閉環控速 = 固定轉速,由回授自動調整電壓來維持它;電壓變成補償用的自由變數。這帶來五個物理上的好處:<br/><strong>鎖住滑動速度</strong> —— 碳刷在固定的表面速度下成形;在同一滑動速度下磨,合理推論接觸面會磨得更均勻(這是可驗證的假說,兩種模式磨出的個體特性分布差異,正是後續實驗題目)。<br/><strong>跨馬達同基準</strong> —— 所有馬達都在同一轉速下磨合,不管體質差異,可重現、可比較。實測上,鎖速後的轉速重現性離散度可壓到<strong>亞百分點</strong>等級,遠低於定電壓下的個體間漂移(這也是量測要鎖轉速的原因,見文末〈R 磨合曲線〉)。<br/><strong>換向頻率固定</strong> —— 火花與發熱條件穩定。<br/><strong>可直接鎖低轉速</strong> —— 低轉速 = 低換向能量 = 溫和對研;而定電壓在低壓下,體質差異會讓轉速不可預測(慢的馬達可能根本轉不動)。<br/><strong>電壓本身變成進度訊號</strong> —— 轉速被鎖住後,「維持這個轉速所需的電壓」會隨接觸面成形而變化;於是控制量(轉速)與進度量(電壓)在同一個迴路裡分工,磨合的「做」與「何時停」讀的是同一條線(進度怎麼判讀,見文末〈R 磨合曲線〉)。</p>
 <h2 data-i18n="g14.h4">控壓 vs 控速:物理對照</h2>
 <figure data-i18n="g14.fig"><img alt="控壓 vs 控速磨合的物理對照:直接控制的量、磨合條件、跨馬達一致性、換向頻率、低速對研、實作六項比較" class="chart" loading="lazy" src="/images/g14_compare_c.svg"/></figure>
 <table class="guide-table">
@@ -1963,7 +1963,7 @@
 </tbody>
 </table>
 <h2 data-i18n="g14.h5">誠實的取捨</h2>
-<p data-i18n="g14.p4">控速不是沒有代價:它需要<strong>即時量測轉速並回授調壓</strong>(閉環),比「設一個電壓就好」複雜;而且在<strong>起步瞬間</strong>要先突破靜摩擦,不能只靠低壓硬推。定電壓的優點就是簡單、便宜。另外釐清:本文談的是<strong>控制方式</strong>(控壓 vs 控速),不是<strong>目標值</strong> —— 你該用 2.4V(鎳氫)還是 3.0V(鹼性)、或該鎖幾轉,是另一個「依比賽電池選設定」的題目。</p>
+<p data-i18n="g14.p4">控速不是沒有代價:它需要<strong>即時量測轉速並回授調壓</strong>(閉環),比「設一個電壓就好」複雜;而且在<strong>起步瞬間</strong>要先突破靜摩擦,不能只靠低壓硬推。定電壓的優點就是簡單、便宜。<br/>一個常見的反論是:「實戰時電池近似定壓源,所以定電壓磨合才貼近使用工況。」但這站不住腳 —— 實戰的工作點是<strong>帶負載</strong>的(低轉速、高電流),而無負載的定電壓磨合同樣不重現賽道工況;反過來,控速架構下你可以直接把轉速鎖在<strong>貼近實戰的 ω</strong>,比定電壓更能對準你要的工作點。<br/>另外釐清:本文談的是<strong>控制方式</strong>(控壓 vs 控速),不是<strong>目標值</strong> —— 你該用 2.4V(鎳氫)還是 3.0V(鹼性)、或該鎖幾轉,是另一個「依比賽電池選設定」的題目。</p>
 <div class="guide-tip">
 <p data-i18n="g14.key">一句話:磨合品質由接觸面的<strong>滑動速度</strong>決定,而滑動速度就是轉速。控電壓 = 控一個會漂的代理;控轉速 = 直接控住真正在磨接觸面的物理量。要磨得<strong>準、可重現、跨馬達可比</strong>,物理上該鎖的是轉速。</p>
 </div>
