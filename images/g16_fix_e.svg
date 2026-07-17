@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans CJK TC','Noto Sans JP',sans-serif">
+<rect x="1" y="1" width="798" height="518" rx="16" fill="#16191f" stroke="#2b313c" stroke-width="1.5"/>
+<text x="32" y="46" fill="#35d0df" font-size="22" font-weight="700">Slow motor: 5 causes → fixes</text>
+<text x="30" y="88" fill="#98a2b3" font-size="13" font-weight="600" letter-spacing="1">Cause</text>
+<text x="400" y="88" fill="#98a2b3" font-size="13" font-weight="600" letter-spacing="1" text-anchor="middle">Verdict</text>
+<text x="478" y="88" fill="#98a2b3" font-size="13" font-weight="600" letter-spacing="1">Fix</text>
+<line x1="28" y1="100" x2="772" y2="100" stroke="#2b313c" stroke-width="1"/>
+<rect x="24" y="124" width="4" height="44" rx="2" fill="#3ddc97"/>
+<text x="40" y="150" fill="#e8ebf0" font-size="15" font-weight="600" dominant-baseline="middle">1. Battery / supply weak</text>
+<rect x="341" y="137" width="118" height="26" rx="13" fill="#13312655" stroke="#3ddc97" stroke-width="1.2"/>
+<text x="400" y="150" fill="#6ee7b7" font-size="12.5" font-weight="700" text-anchor="middle" dominant-baseline="middle">Reversible</text>
+<text x="478" y="150" fill="#cfd6e0" font-size="13.5" dominant-baseline="middle">Retest with a full, healthy battery</text>
+<rect x="16" y="180" width="768" height="68" rx="8" fill="#1b1f27"/>
+<rect x="24" y="192" width="4" height="44" rx="2" fill="#3ddc97"/>
+<text x="40" y="218" fill="#e8ebf0" font-size="15" font-weight="600" dominant-baseline="middle">2. Dirt / carbon buildup</text>
+<rect x="341" y="205" width="118" height="26" rx="13" fill="#13312655" stroke="#3ddc97" stroke-width="1.2"/>
+<text x="400" y="218" fill="#6ee7b7" font-size="12.5" font-weight="700" text-anchor="middle" dominant-baseline="middle">Reversible</text>
+<text x="478" y="218" fill="#cfd6e0" font-size="13.5" dominant-baseline="middle">External flush-clean (no disassembly)</text>
+<rect x="24" y="260" width="4" height="44" rx="2" fill="#3ddc97"/>
+<text x="40" y="286" fill="#e8ebf0" font-size="15" font-weight="600" dominant-baseline="middle">3. Bearing / lube</text>
+<rect x="341" y="273" width="118" height="26" rx="13" fill="#13312655" stroke="#3ddc97" stroke-width="1.2"/>
+<text x="400" y="286" fill="#6ee7b7" font-size="12.5" font-weight="700" text-anchor="middle" dominant-baseline="middle">Reversible</text>
+<text x="478" y="286" fill="#cfd6e0" font-size="13.5" dominant-baseline="middle">Oil the bearings, clean</text>
+<rect x="16" y="316" width="768" height="68" rx="8" fill="#1b1f27"/>
+<rect x="24" y="328" width="4" height="44" rx="2" fill="#ff6b6b"/>
+<text x="40" y="354" fill="#e8ebf0" font-size="15" font-weight="600" dominant-baseline="middle">4. Heat demagnetization</text>
+<rect x="341" y="341" width="118" height="26" rx="13" fill="#33191955" stroke="#ff6b6b" stroke-width="1.2"/>
+<text x="400" y="354" fill="#ffb3b3" font-size="12.5" font-weight="700" text-anchor="middle" dominant-baseline="middle">Irreversible</text>
+<text x="478" y="354" fill="#ffc9c9" font-size="13.5" dominant-baseline="middle">Retire</text>
+<rect x="24" y="396" width="4" height="44" rx="2" fill="#ff6b6b"/>
+<text x="40" y="422" fill="#e8ebf0" font-size="15" font-weight="600" dominant-baseline="middle">5. Brush / commutator wear</text>
+<rect x="341" y="409" width="118" height="26" rx="13" fill="#33191955" stroke="#ff6b6b" stroke-width="1.2"/>
+<text x="400" y="422" fill="#ffb3b3" font-size="12.5" font-weight="700" text-anchor="middle" dominant-baseline="middle">Irreversible</text>
+<text x="478" y="422" fill="#ffc9c9" font-size="13.5" dominant-baseline="middle">Retire</text>
+<rect x="24" y="464" width="752" height="46" rx="8" fill="#12242a" stroke="#22323a" stroke-width="1"/>
+<rect x="24" y="464" width="4" height="46" rx="2" fill="#35d0df"/>
+<text x="40" y="492" fill="#a9d7de" font-size="13.5" font-weight="600">Clear 1-3 (reversible) first; still slow → true degradation, retire by data</text>
+</svg>
