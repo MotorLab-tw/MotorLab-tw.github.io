@@ -1858,15 +1858,28 @@
 </style>
 <!-- GoatCounter 訪問統計(隱私友善、無 cookie;按 URL path 自動分別統計每頁/每語言版本) -->
 <script>
-  /* 略過本機:在自己瀏覽器開一次 網址#skip-counter → 永久不計數(取消:#count-me) */
+  /* 略過本機:在自己瀏覽器開一次 網址#skip-counter → 永久不計數(取消:#count-me)
+     注意:此處「不可」用 alert() —— 它會同步阻塞主執行緒,卡住開機動畫。改為靜默設定 + 事後 toast。 */
   (function () {
+    var msg = '';
     try {
       var h = location.hash;
-      if (h === '#skip-counter') { localStorage.setItem('skipgc', 't'); alert('此瀏覽器已設定為不列入 GoatCounter 統計。'); }
-      else if (h === '#count-me') { localStorage.removeItem('skipgc'); alert('已恢復計數。'); }
+      if (h === '#skip-counter') { localStorage.setItem('skipgc', 't'); msg = '此瀏覽器已設定為不列入統計'; }
+      else if (h === '#count-me') { localStorage.removeItem('skipgc'); msg = '已恢復計數'; }
     } catch (e) {}
     window.goatcounter = window.goatcounter || {};
     try { if (localStorage.getItem('skipgc') === 't') window.goatcounter.no_onload = true; } catch (e) {}
+    // 事後(不阻塞)顯示一個 3 秒自動消失的小提示,不擋畫面
+    if (msg) {
+      window.addEventListener('DOMContentLoaded', function () {
+        var t = document.createElement('div');
+        t.textContent = msg;
+        t.style.cssText = 'position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:99999;background:#2e3440;color:#eceff4;border:1px solid #4c566a;border-radius:8px;padding:10px 16px;font:13px/1.4 system-ui,sans-serif;box-shadow:0 4px 16px rgba(0,0,0,.4);opacity:0;transition:opacity .3s;';
+        document.body.appendChild(t);
+        requestAnimationFrame(function () { t.style.opacity = '1'; });
+        setTimeout(function () { t.style.opacity = '0'; setTimeout(function () { t.remove(); }, 300); }, 3000);
+      });
+    }
   })();
 </script>
 <script async="" data-goatcounter="https://motorlab-tw.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
@@ -1945,6 +1958,7 @@
 <tr><td data-i18n="g14.r3.d">跨馬達一致性</td><td data-i18n="g14.r3.cv">各自不同轉速</td><td data-i18n="g14.r3.cs">同轉速,可比</td></tr>
 <tr><td data-i18n="g14.r4.d">換向頻率</td><td data-i18n="g14.r4.cv">漂移</td><td data-i18n="g14.r4.cs">固定</td></tr>
 <tr><td data-i18n="g14.r6.d">低速對研</td><td data-i18n="g14.r6.cv">低壓下不可測</td><td data-i18n="g14.r6.cs">可鎖低轉速</td></tr>
+<tr><td data-i18n="g14.r7.d">磨合進度可讀性</td><td data-i18n="g14.r7.cv">轉速在漂,無乾淨訊號</td><td data-i18n="g14.r7.cs">電壓即進度訊號</td></tr>
 <tr><td data-i18n="g14.r5.d">實作</td><td data-i18n="g14.r5.cv">簡單、便宜(開環)</td><td data-i18n="g14.r5.cs">需回授控制</td></tr>
 </tbody>
 </table>
