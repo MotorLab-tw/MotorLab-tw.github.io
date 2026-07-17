@@ -708,5 +708,36 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-break-in-speed-vs-voltage/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-break-in-speed-vs-voltage/"/>
   </url>
+  <!-- g15:導電油磨馬達(methodology 收錄,實體住 /guides/) -->
+  <url>
+    <loc>https://motorlab-tw.github.io/guides/conductive-oil-motor-break-in/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/conductive-oil-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/conductive-oil-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/conductive-oil-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/conductive-oil-motor-break-in/"/>
+  </url>
+  <url>
+    <loc>https://motorlab-tw.github.io/en/guides/conductive-oil-motor-break-in/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/conductive-oil-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/conductive-oil-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/conductive-oil-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/conductive-oil-motor-break-in/"/>
+  </url>
+  <url>
+    <loc>https://motorlab-tw.github.io/ja/guides/conductive-oil-motor-break-in/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/conductive-oil-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/conductive-oil-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/conductive-oil-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/conductive-oil-motor-break-in/"/>
+  </url>
 
 </urlset>

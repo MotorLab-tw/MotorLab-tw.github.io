@@ -647,6 +647,37 @@ GUIDES = [
             },
         },
     },
+    # ---------- g15:導電油磨馬達(methodology hub)----------
+    {
+        "slug": "conductive-oil-motor-break-in",
+        "key": "g15",
+        "published": "2026-07-17",
+        "updated": "2026-07-17",
+        "type": "guides",
+        "i18n": {
+            "zh": {
+                "title": "導電油磨馬達真的有效嗎?轉速升高的真相 | MotorLab",
+                "description": "導電油(導電性磨合油)磨馬達,加了轉速立刻上升、聲音變順,真的把馬達磨好了嗎?本文從物理拆解:轉速升高有一部分是碳粉暫時導電的假象,不等於接觸面磨好。持平分析導電油的優缺點、短期與長期差異,以及怎麼判斷馬達真實的磨合狀態。",
+                "keywords": "導電油, 導電油 磨馬達, 導電性磨合油, 磨馬達 油, 馬達磨合油, 磨馬達, 馬達磨合, 迷你四驅車 馬達, 導電油 有效嗎, MotorLab",
+                "breadcrumb": "導電油磨馬達",
+                "h1_for_ld": "導電油磨馬達真的有效嗎?轉速升高背後的物理真相",
+            },
+            "en": {
+                "title": "Does Conductive Oil Really Help Motor Break-In? | MotorLab",
+                "description": "Conductive oil spikes RPM instantly \u2014 but part of that jump is carbon bridging contacts, not a better contact face. What's real and what's illusion, fairly.",
+                "keywords": "conductive oil, conductive break-in oil, motor break-in oil, Mini 4WD motor oil, does conductive oil work, motor break-in, brush commutator, MotorLab",
+                "breadcrumb": "Conductive Oil",
+                "h1_for_ld": "Does Conductive Oil Really Break In a Motor? The Physics Behind the RPM Jump",
+            },
+            "ja": {
+                "title": "導電オイルは慣らしに効く?回転数上昇の正体 | MotorLab",
+                "description": "導電オイル(導電性慣らしオイル)でモーター慣らしをすると回転数が一気に上がり音も滑らかに。でも本当に慣らせている?物理で分解すると、その回転数上昇の一部はカーボン粉が接点を一時的に導通させる見かけで、接触面が良くなったわけではない。導電オイルの利点と欠点、短期と長期、そして本当の慣らし状態の見方を公平に解説。",
+                "keywords": "導電オイル, モーター慣らしオイル, 慣らしオイル, ミニ四駆 モーター慣らし, 導電オイル 効果, モーター オイル, ブラシ コミュテーター, MotorLab",
+                "breadcrumb": "導電オイル",
+                "h1_for_ld": "導電オイルは本当にモーターを慣らせる?回転数上昇の物理的な正体",
+            },
+        },
+    },
 ]
 
 # UI 字串(教學頁面通用元件:nav / 麵包屑 / 分頁)
@@ -787,7 +818,7 @@ HUBS = [
     },
     {
         "slug": "methodology",
-        "include": ["g5", "g6", "g7", "g8", "g10", "g11", "g12", "g13", "g14"],
+        "include": ["g5", "g6", "g7", "g8", "g10", "g11", "g12", "g13", "g14", "g15"],
         "i18n": {
             "zh": {
                 "title": "方法論 — Mini 4WD® 馬達分析與比賽策略 | MotorLab",

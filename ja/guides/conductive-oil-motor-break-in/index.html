@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" translate="no">
+<html lang="ja" translate="no">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="en" http-equiv="Content-Language"/>
-<title>Why Break In a Motor at Fixed Speed, Not Fixed Voltage? | MotorLab</title>
-<meta content="Everyone breaks in at fixed voltage — but break-in quality is set by RPM (the contact sliding speed), not voltage. Fixed-voltage vs fixed-speed, explained." name="description"/>
+<meta content="ja" http-equiv="Content-Language"/>
+<title>導電オイルは慣らしに効く?回転数上昇の正体 | MotorLab</title>
+<meta content="導電オイル(導電性慣らしオイル)でモーター慣らしをすると回転数が一気に上がり音も滑らかに。でも本当に慣らせている?物理で分解すると、その回転数上昇の一部はカーボン粉が接点を一時的に導通させる見かけで、接触面が良くなったわけではない。導電オイルの利点と欠点、短期と長期、そして本当の慣らし状態の見方を公平に解説。" name="description"/>
 <meta content="MotorLab.tw" name="author"/>
-<meta content="motor break-in control, fixed voltage vs fixed speed, closed-loop break-in, Mini 4WD motor break-in, break-in RPM, constant voltage break-in, brush seating, MotorLab" name="keywords"/>
+<meta content="導電オイル, モーター慣らしオイル, 慣らしオイル, ミニ四駆 モーター慣らし, 導電オイル 効果, モーター オイル, ブラシ コミュテーター, MotorLab, conductive oil, conductive break-in oil, motor break-in oil, Mini 4WD motor oil, does conductive oil work, motor break-in, brush commutator, MotorLab" name="keywords"/>
 <!-- 正規網址 (避免重複內容問題) -->
-<link href="https://motorlab-tw.github.io/en/guides/motor-break-in-speed-vs-voltage/" rel="canonical"/>
+<link href="https://motorlab-tw.github.io/ja/guides/conductive-oil-motor-break-in/" rel="canonical"/>
 <!-- 搜尋引擎指示 -->
 <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
 <meta content="index, follow" name="googlebot"/>
@@ -31,22 +31,22 @@
 <meta content="MotorLab" name="apple-mobile-web-app-title"/>
 <!-- Open Graph (Facebook, LINE, Discord) -->
 <meta content="article" property="og:type"/>
-<meta content="https://motorlab-tw.github.io/en/guides/motor-break-in-speed-vs-voltage/" property="og:url"/>
-<meta content="Why Break In a Motor at Fixed Speed, Not Fixed Voltage? | MotorLab" property="og:title"/>
-<meta content="Everyone breaks in at fixed voltage — but break-in quality is set by RPM (the contact sliding speed), not voltage. Fixed-voltage vs fixed-speed, explained." property="og:description"/>
+<meta content="https://motorlab-tw.github.io/ja/guides/conductive-oil-motor-break-in/" property="og:url"/>
+<meta content="導電オイルは慣らしに効く?回転数上昇の正体 | MotorLab" property="og:title"/>
+<meta content="導電オイル(導電性慣らしオイル)でモーター慣らしをすると回転数が一気に上がり音も滑らかに。でも本当に慣らせている?物理で分解すると、その回転数上昇の一部はカーボン粉が接点を一時的に導通させる見かけで、接触面が良くなったわけではない。導電オイルの利点と欠点、短期と長期、そして本当の慣らし状態の見方を公平に解説。" property="og:description"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" property="og:image"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" property="og:image:secure_url"/>
 <meta content="image/png" property="og:image:type"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
 <meta content="MotorLab — Mini 4WD® 馬達精密測試系統官方網站預覽圖" property="og:image:alt"/>
-<meta content="en_US" property="og:locale"/>
+<meta content="ja_JP" property="og:locale"/>
 <meta content="en_US" property="og:locale:alternate"/>
 <meta content="MotorLab.tw" property="og:site_name"/>
 <!-- Twitter Card -->
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Why Break In a Motor at Fixed Speed, Not Fixed Voltage? | MotorLab" name="twitter:title"/>
-<meta content="Everyone breaks in at fixed voltage — but break-in quality is set by RPM (the contact sliding speed), not voltage. Fixed-voltage vs fixed-speed, explained." name="twitter:description"/>
+<meta content="導電オイルは慣らしに効く?回転数上昇の正体 | MotorLab" name="twitter:title"/>
+<meta content="導電オイル(導電性慣らしオイル)でモーター慣らしをすると回転数が一気に上がり音も滑らかに。でも本当に慣らせている?物理で分解すると、その回転数上昇の一部はカーボン粉が接点を一時的に導通させる見かけで、接触面が良くなったわけではない。導電オイルの利点と欠点、短期と長期、そして本当の慣らし状態の見方を公平に解説。" name="twitter:description"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" name="twitter:image"/>
 <meta content="MotorLab 官方網站預覽圖" name="twitter:image:alt"/>
 <!-- 結構化資料 1: Organization (公司/工作室) -->
@@ -1870,20 +1870,20 @@
   })();
 </script>
 <script async="" data-goatcounter="https://motorlab-tw.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
-<link href="https://motorlab-tw.github.io/guides/motor-break-in-speed-vs-voltage/" hreflang="zh-TW" rel="alternate"/><link href="https://motorlab-tw.github.io/en/guides/motor-break-in-speed-vs-voltage/" hreflang="en" rel="alternate"/><link href="https://motorlab-tw.github.io/ja/guides/motor-break-in-speed-vs-voltage/" hreflang="ja" rel="alternate"/><link href="https://motorlab-tw.github.io/guides/motor-break-in-speed-vs-voltage/" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
+<link href="https://motorlab-tw.github.io/guides/conductive-oil-motor-break-in/" hreflang="zh-TW" rel="alternate"/><link href="https://motorlab-tw.github.io/en/guides/conductive-oil-motor-break-in/" hreflang="en" rel="alternate"/><link href="https://motorlab-tw.github.io/ja/guides/conductive-oil-motor-break-in/" hreflang="ja" rel="alternate"/><link href="https://motorlab-tw.github.io/guides/conductive-oil-motor-break-in/" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Why Break In a Motor at Fixed Speed, Not Fixed Voltage",
-  "description": "Everyone breaks in at fixed voltage — but break-in quality is set by RPM (the contact sliding speed), not voltage. Fixed-voltage vs fixed-speed, explained.",
-  "keywords": "motor break-in control, fixed voltage vs fixed speed, closed-loop break-in, Mini 4WD motor break-in, break-in RPM, constant voltage break-in, brush seating, MotorLab",
-  "inLanguage": "en",
-  "url": "https://motorlab-tw.github.io/en/guides/motor-break-in-speed-vs-voltage/",
+  "headline": "導電オイルは本当にモーターを慣らせる?回転数上昇の物理的な正体",
+  "description": "導電オイル(導電性慣らしオイル)でモーター慣らしをすると回転数が一気に上がり音も滑らかに。でも本当に慣らせている?物理で分解すると、その回転数上昇の一部はカーボン粉が接点を一時的に導通させる見かけで、接触面が良くなったわけではない。導電オイルの利点と欠点、短期と長期、そして本当の慣らし状態の見方を公平に解説。",
+  "keywords": "導電オイル, モーター慣らしオイル, 慣らしオイル, ミニ四駆 モーター慣らし, 導電オイル 効果, モーター オイル, ブラシ コミュテーター, MotorLab",
+  "inLanguage": "ja",
+  "url": "https://motorlab-tw.github.io/ja/guides/conductive-oil-motor-break-in/",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://motorlab-tw.github.io/en/guides/motor-break-in-speed-vs-voltage/"
+    "@id": "https://motorlab-tw.github.io/ja/guides/conductive-oil-motor-break-in/"
   },
-  "datePublished": "2026-07-14",
-  "dateModified": "2026-07-14",
+  "datePublished": "2026-07-17",
+  "dateModified": "2026-07-17",
   "author": {
     "@type": "Organization",
     "name": "MotorLab Team",
@@ -1907,66 +1907,82 @@
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "Home",
-      "item": "https://motorlab-tw.github.io/en/"
+      "name": "ホーム",
+      "item": "https://motorlab-tw.github.io/ja/"
     },
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Guides",
-      "item": "https://motorlab-tw.github.io/en/#guides"
+      "name": "ガイド",
+      "item": "https://motorlab-tw.github.io/ja/#guides"
     },
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Speed vs Voltage",
-      "item": "https://motorlab-tw.github.io/en/guides/motor-break-in-speed-vs-voltage/"
+      "name": "導電オイル",
+      "item": "https://motorlab-tw.github.io/ja/guides/conductive-oil-motor-break-in/"
     }
   ]
 }</script></head>
-<body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/en/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/en/">← Back to home</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/en/">Home</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/en/#guides">Guides</a><span class="sep">/</span><span class="current">Speed vs Voltage</span></nav><article class="guide-article">
-<span class="guide-tag" data-i18n="g14.tag">METHODOLOGY · Break-in Control</span>
-<h1 data-i18n="g14.title">Why Break In a Motor at Fixed Speed, Not Fixed Voltage</h1><p class="guide-byline">Edited by MotorLab Team</p><p class="guide-dates">Published 2026-07-14</p>
-<p class="guide-lead" data-i18n="g14.lead">Almost every break-in method sets a voltage and lets the motor run — fixed-voltage break-in. RPM? At most it gets measured, not controlled. But physically, break-in quality is set by <strong>RPM</strong> (the sliding speed at the contact face), not voltage. Here is fixed-voltage vs fixed-speed, and where they differ.</p>
-<figure data-i18n="g14.figsum"><img alt="Why lock RPM not voltage when breaking in a motor: voltage is a proxy, fixed voltage drifts, fixed RPM pins the condition down" class="chart" loading="lazy" src="/images/g14_summary_e.png"/></figure>
-<h2 data-i18n="g14.h1">What break-in is actually grinding</h2>
-<p data-i18n="g14.p1">A new motor's brush is flat and touches the round commutator on just a line; break-in grinds the brush into an arc that matches the commutator, taking the two from a single-line contact to a stable, seated one. That grinding happens at the <strong>sliding contact face</strong> between brush and commutator. Physically it is governed by <strong>sliding speed</strong> (commutator surface speed ∝ RPM), contact pressure, current density and temperature — and the key variable you can control in real time is RPM.</p>
-<h2 data-i18n="g14.h2">The physics problem with fixed voltage</h2>
-<p data-i18n="g14.p2">Fixed-voltage break-in = you fix V, and RPM is set by the motor's current state (V ≈ Ke·ω + I·R). Three problems:<br/><strong>1. RPM drifts within a run</strong> — as break-in proceeds, contact resistance R shifts and temperature nudges Ke, so at fixed voltage the RPM keeps drifting; the sliding speed becomes a moving target and the break-in condition changes as it goes.<br/><strong>2. Different motors spin at different RPM</strong> — at the same 3V, motors of different constitution turn at different speeds, breaking in at different sliding speeds — <strong>not reproducible, not comparable</strong>.<br/><strong>3. Commutation conditions drift too</strong> — RPM drift means commutation-frequency drift, so spark and heat drift as well. You control voltage, but what actually grinds the contact face is RPM — voltage is a proxy one step removed that also shifts as the motor changes.</p>
-<h2 data-i18n="g14.h3">What fixed-speed (closed-loop) gets right, physically</h2>
-<p data-i18n="g14.p3">Closed-loop speed control = you fix RPM, and feedback adjusts voltage to hold it; voltage becomes the compensating free variable. Four physical wins:<br/><strong>Locks the sliding speed</strong> — the brush is ground at a constant surface speed, seating more uniformly.<br/><strong>Same baseline across motors</strong> — every motor breaks in at the same RPM regardless of constitution — reproducible and comparable (this is also why measurement locks the speed; see the R-curve article below).<br/><strong>Fixed commutation frequency</strong> — spark and heat conditions stay stable.<br/><strong>You can target a low RPM directly</strong> — low RPM = low commutation energy = gentle bedding; whereas at low voltage, individual differences make RPM unpredictable (a slow motor may barely turn).</p>
-<h2 data-i18n="g14.h4">Fixed-voltage vs fixed-speed: the physics side by side</h2>
-<figure data-i18n="g14.fig"><img alt="Fixed-voltage vs fixed-speed break-in compared: what you control, in-run condition, cross-motor consistency, commutation, low-speed bedding and setup" class="chart" loading="lazy" src="/images/g14_compare_e.svg"/></figure>
+<body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/ja/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/ja/">← ホームへ戻る</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/ja/">ホーム</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/ja/#guides">ガイド</a><span class="sep">/</span><span class="current">導電オイル</span></nav><article class="guide-article">
+<span class="guide-tag" data-i18n="g15.tag">METHODOLOGY · 慣らしの誤解</span>
+<h1 data-i18n="g15.title">導電オイルは慣らしに効く?回転数上昇の正体</h1><p class="guide-byline">編集者:MotorLab Team</p><p class="guide-dates">公開 2026-07-17</p>
+<p class="guide-lead" data-i18n="g15.lead">導電オイル(導電性慣らしオイル)はここ数年よく話題になる慣らしオイル — 挿すと回転数が一気に上がり、音も滑らかになり、慣らしが一気に進んだように見える。でも「回転数が上がる」は本当に「慣らせた」なのか?本記事はこのオイルを物理で分解する:実の部分はどこで、見かけの部分はどこか、そしてなぜオイルが入った状態で測った回転数を、モーターの本当の素性と見なせないのか。</p>
+<h2 data-i18n="g15.h1">慣らしが削っているもの</h2>
+<p data-i18n="g15.p1">慣らしが削るのは磁石でも巻線でもなく、<strong>ブラシと整流子の接触面</strong>だ。新品のブラシは平らで、丸い整流子には小さな一点でしか触れていない;慣らしはそのブラシを整流子に沿う弧に削り、接触面積を広げ、接触抵抗を下げ、モーターが設計上の回転数に届くようにする。日本の実測例:Power-Dash が約 29,000 回転から 33,200 回転(+4,000)へ — この上昇は<strong>本当の慣らし</strong>によるもので、接触が良くなり損失が減った結果だ。これは特別なオイルがなくても起きる。</p>
+<h2 data-i18n="g15.h2">なぜオイルで「すぐ速くなる」のか</h2>
+<p data-i18n="g15.p2">導電性慣らしオイルは通常二つのことをする:一つは<strong>潤滑</strong>で、ブラシが早く削れるのを助ける(これは実);もう一つはオイル中の<strong>極細の導電成分</strong>が、ブラシと整流子の接触の隙間に一時的に導電の橋を架けることだ。後者は接触抵抗を「瞬間的に」下げるので、回転数が跳ね上がる。問題は、この低下が主に<strong>油膜/カーボンの導通</strong>によるもので、接触面そのものが良くなったわけではない点だ。日本のコミュニティには言い得て妙な言葉がある —「皮膜切れ」:オイルが作る導電皮膜で最初は綺麗な回転数が出るが、高速回転下でこの皮膜はいずれ壊れ、綺麗な数字も戻ってしまう。</p>
+<figure data-i18n="g15.figA"><img alt="導電オイルの短期 vs 長期:短期は導電の橋で抵抗が下がり回転上昇、長期は残留の酸化で逆に抵抗増" class="chart" loading="lazy" src="/images/g15a_shortlong_j.png"/></figure>
+<h2 data-i18n="g15.h3">短期の見栄え vs 長期の懸念</h2>
 <table class="guide-table">
-<thead><tr><th data-i18n="g14.t.dim">Dimension</th><th data-i18n="g14.t.cv">Fixed voltage</th><th data-i18n="g14.t.cs">Fixed speed (closed-loop)</th></tr></thead>
+<thead><tr><th data-i18n="g15.t.dim">観点</th><th data-i18n="g15.t.short">短期(オイル注入中)</th><th data-i18n="g15.t.long">長期(残留後)</th></tr></thead>
 <tbody>
-<tr><td data-i18n="g14.r1.d">What you directly control</td><td data-i18n="g14.r1.cv">Voltage (a proxy)</td><td data-i18n="g14.r1.cs">RPM = sliding speed (the key one)</td></tr>
-<tr><td data-i18n="g14.r2.d">Condition within a run</td><td data-i18n="g14.r2.cv">Drifts with R / temperature</td><td data-i18n="g14.r2.cs">Locked</td></tr>
-<tr><td data-i18n="g14.r3.d">Consistency across motors</td><td data-i18n="g14.r3.cv">Each at a different RPM</td><td data-i18n="g14.r3.cs">Same RPM, comparable</td></tr>
-<tr><td data-i18n="g14.r4.d">Commutation frequency</td><td data-i18n="g14.r4.cv">Drifts</td><td data-i18n="g14.r4.cs">Fixed</td></tr>
-<tr><td data-i18n="g14.r6.d">Low-speed bedding</td><td data-i18n="g14.r6.cv">Unpredictable at low V</td><td data-i18n="g14.r6.cs">Can lock a low RPM</td></tr>
-<tr><td data-i18n="g14.r5.d">Implementation</td><td data-i18n="g14.r5.cv">Simple, cheap (open loop)</td><td data-i18n="g14.r5.cs">Needs feedback control</td></tr>
+<tr><td data-i18n="g15.a1.d">導電成分の居場所</td><td data-i18n="g15.a1.s">接触の隙間に入り橋を架ける</td><td data-i18n="g15.a1.l">整流子表面に付着・酸化しうる</td></tr>
+<tr><td data-i18n="g15.a2.d">抵抗への影響</td><td data-i18n="g15.a2.s">一時的に低下(回転上昇)</td><td data-i18n="g15.a2.l">酸化残留なら逆に増加</td></tr>
+<tr><td data-i18n="g15.a3.d">測った回転数</td><td data-i18n="g15.a3.s">高めに出る(見栄えが良い)</td><td data-i18n="g15.a3.l">皮膜切れ後に戻る</td></tr>
+<tr><td data-i18n="g15.a4.d">よくあるやり方</td><td data-i18n="g15.a4.s">オイルで慣らし、回転を見る</td><td data-i18n="g15.a4.l">レース前に必ず洗浄</td></tr>
 </tbody>
 </table>
-<h2 data-i18n="g14.h5">The honest trade-off</h2>
-<p data-i18n="g14.p4">Fixed-speed isn't free: it needs <strong>real-time RPM measurement and feedback voltage adjustment</strong> (closed-loop), which is more complex than just setting a voltage; and at the <strong>very start</strong> it must break static friction first, not just push with low voltage. Fixed voltage wins on being simple and cheap. One clarification: this article is about the <strong>control method</strong> (voltage vs speed), not the <strong>target value</strong> — whether you use 2.4V (NiMH) or 3.0V (alkaline), or which RPM to lock, is a separate "pick the setting by your race battery" question.</p>
+<p data-i18n="g15.p3">二種類の「カーボン」を区別しよう:ブラシの正常な摩耗で生じる<strong>黒鉛潤滑皮膜</strong>は良いもので、抵抗率が低く耐熱性もあり、慣らしが成熟した正常な産物だ;一方、オイルが持ち込み洗い落とさなかった<strong>カーボン残留</strong>が付着・酸化すれば、それが抵抗増の懸念になる。だからこの種のオイルはほぼ必ず「慣らし後に洗浄」を求める — 製品自身が、注油中の綺麗な数字は一時的だと認めているわけだ。日本のレーサーも警告する:慣らしオイルを洗い落とさないと浸透し続け、モーターの<strong>ピークが早く来る</strong>、つまり早く劣化に入る。</p>
+<h2 data-i18n="g15.h4">導電オイルの利点と欠点(公平に)</h2>
+<table class="guide-table">
+<thead><tr><th data-i18n="g15.t2.pro">利点(実)</th><th data-i18n="g15.t2.con">リスク(注意)</th></tr></thead>
+<tbody>
+<tr><td data-i18n="g15.b1.p">潤滑でブラシが確かに早く削れる</td><td data-i18n="g15.b1.c">回転上昇の一部は一時的な導通 — 洗うと戻る</td></tr>
+<tr><td data-i18n="g15.b2.p">火花を抑え、短期の回りが滑らか</td><td data-i18n="g15.b2.c">酸化残留は長期に抵抗を上げうる</td></tr>
+<tr><td data-i18n="g15.b3.p">レース前の一押し、見栄えの回転数</td><td data-i18n="g15.b3.c">注油中は測定が狂い、選別が誤導されやすい</td></tr>
+</tbody>
+</table>
+<p data-i18n="g15.p4">だから導電オイルは「使えない」のではない。レース前に見栄えの回転数を一発出して、走り終えたら洗い落とすのはレーサーの自由で、多くの上級者もそうしている。本当の問いは「導電オイルは効くか」ではなく — <strong>手元のこのモーターが、実際どこまで慣らせたかをどう知るか</strong>だ。オイルを挿しながら回転数で良否を判断している限り、答えは決して綺麗にならない。オイル自体が読みを汚しているからだ。</p>
+<figure data-i18n="g15.figB"><img alt="導電オイル論争の二派:見栄え派はレース前の回転、素性派は綺麗なデータ — 目的が違うので唯一の答えはない" class="chart" loading="lazy" src="/images/g15b_camps_j.png"/></figure>
+<h2 data-i18n="g15.h5">論争の核心:見栄えの数字か、本当の素性か</h2>
+<table class="guide-table">
+<thead><tr><th data-i18n="g15.t3.dim">観点</th><th data-i18n="g15.t3.paper">見栄え派</th><th data-i18n="g15.t3.body">素性派</th></tr></thead>
+<tbody>
+<tr><td data-i18n="g15.c1.d">欲しいのは</td><td data-i18n="g15.c1.p">いま・レース前の見栄えの回転</td><td data-i18n="g15.c1.b">モーターの本当の・長期の素性</td></tr>
+<tr><td data-i18n="g15.c2.d">彼らにとって導電オイルは</td><td data-i18n="g15.c2.p">効く(数千回転、走ったら洗う)</td><td data-i18n="g15.c2.b">参考程度(カーボンは要洗浄、綺麗なデータを見る)</td></tr>
+<tr><td data-i18n="g15.c3.d">判断の根拠</td><td data-i18n="g15.c3.p">注油中の一点の回転数</td><td data-i18n="g15.c3.b">綺麗な状態での測定トレンド</td></tr>
+</tbody>
+</table>
 <div class="guide-tip">
-<p data-i18n="g14.key">In one line: break-in quality is set by the <strong>sliding speed</strong> at the contact face, and that sliding speed is RPM. Fixed voltage controls a proxy that drifts; fixed speed controls the physical variable that actually grinds the contact face. To break in <strong>precisely, reproducibly, and comparably across motors</strong>, the thing to lock — physically — is RPM.</p>
+<p data-i18n="g15.tip1">この論争に唯一の答えはない — 二派の目的が違うからだ。「導電オイルは効くか」より、問うべきは「オイルに汚されない方法で、このモーターの本当の慣らし状態を見られるか」だ。</p>
 </div>
-<p data-i18n="g14.related">Further reading: how to read break-in progress from data — <a href="../motor-break-in-resistance-curve/">the R break-in curve</a>; picking motors worth breaking in first — <a href="../motor-selection-before-break-in/">select before break-in</a>; the full physics and procedure — <a href="../motor-break-in-guide/">the complete break-in guide</a>.</p>
+<h2 data-i18n="g15.h6">「本当の」慣らし状態を見るには</h2>
+<p data-i18n="g15.p5">導電オイルの行き詰まりは、それが<strong>加工と測定を兼ねている</strong>点にある:それで慣らし、慣らし中に見える回転数で良否を判断する — 自分で動く物差しで長さを測るようなものだ。本当の状態を見る唯一の道は<strong>測定と加工を分ける</strong>こと:油膜の干渉がない綺麗な状態で、偽造できない物理量で慣らしを判断する。慣らしの進行は本質的にブラシが整流子を通過した累積回数で決まる(整流周波数 ∝ 回転数)ので、<strong>回転数を固定</strong>してモーターの傾向を見るほうが、注油中の一点の回転数よりずっと信頼できる。詳しくは〈<a href="../motor-break-in-speed-vs-voltage/">なぜ電圧でなく回転数を固定するのか</a>〉と〈<a href="../motor-break-in-resistance-curve/">慣らしはどれくらい:560 回の曲線</a>〉。</p>
+<p data-i18n="g15.p6">視点を上げよう:良い慣らしの目的は、一個のモーターから最高の見栄え回転を絞り出すことではなく、<strong>「良いモーターが出る確率」を上げ</strong>、各個体の状態を再現可能・比較可能にすることだ。導電オイルは綺麗な一瞬をくれるが、同型の中で最良の素性を選び、走って戻ってくる工程が欲しいなら、必要なのは綺麗な状態での本当の測定であって、答えを書き換えるオイルではない。選別の観点は〈<a href="../motor-selection-before-break-in/">選別してから慣らす</a>〉へ。</p>
 <div class="guide-warning">
-<p data-i18n="g14.w1">This physical framing is conceptual; real break-in still involves brush type, time, temperature and cooling. The benefit of fixed-speed is turning the break-in condition from a drifting proxy into a directly controllable physical variable — not a guarantee that any single value is optimal.</p>
+<p data-i18n="g15.w1">本記事は慣らしの物理とレーサーの実務を公平に述べたもので、導電オイルを否定するものではない — 潤滑と短期の滑らかさは実だ。要点は「注油中の見栄えの数字」と「綺麗な状態でのモーターの本当の素性」を分けること:用途が違うので、前者を後者と取り違えないこと。</p>
 </div>
-</article><div class="guide-pagination"><div class="left"><a href="/en/guides/motor-break-in-resistance-curve/"><span class="label">← Previous</span><span>Break-in R Curve</span></a></div><div class="center"><a href="https://motorlab-tw.github.io/en/#guides"><span class="label">︿</span><span>Back to guides</span></a></div><div class="right"><a href="/en/guides/conductive-oil-motor-break-in/"><span class="label">Next →</span><span>Conductive Oil</span></a></div></div></div></main><footer>
+</article><div class="guide-pagination"><div class="left"><a href="/ja/guides/motor-break-in-speed-vs-voltage/"><span class="label">← 前の記事</span><span>定電圧 vs 定回転数</span></a></div><div class="center"><a href="https://motorlab-tw.github.io/ja/#guides"><span class="label">︿</span><span>ガイド一覧へ</span></a></div><div class="right"><span class="label">次の記事 →</span><span class="disabled">—</span></div></div></div></main><footer>
 <div class="container">
-<div class="footer-trademark" data-i18n="footer.trademark">"Mini 4WD"<sup>®</sup> and "ミニ四駆"<sup>®</sup> are registered trademarks of TAMIYA, INC. (Japan Trademark Registration No. 2168392). MotorLab is an independent studio and has no affiliation with, authorization from, sponsorship by, or endorsement from TAMIYA, INC. References to these names on this site are made solely to indicate product compatibility. All trademark rights belong to their respective owners.</div>
+<div class="footer-trademark" data-i18n="footer.trademark">「Mini 4WD」<sup>®</sup> および「ミニ四駆」<sup>®</sup> は株式会社タミヤ（TAMIYA, INC.）の登録商標です（日本商標登録番号 第 2168392 号）。MotorLab は独立系スタジオであり、株式会社タミヤとは一切の関連がなく、その許諾・協賛・推奨も受けていません。本サイトでの当該名称への言及は、製品の適用範囲を示す目的のみで行われており、すべての商標権は各権利者に帰属します。</div>
 <div class="footer-inner">
 <div>
 <strong>MotorLab.tw</strong> · <span data-i18n="footer.tagline">Mini 4WD Performance Lab</span>
-        · <a data-i18n="footer.verify" href="/en/verify/">Verify genuine product</a>
+        · <a data-i18n="footer.verify" href="/ja/verify/">正規品認証</a>
 </div>
 <div class="mono">
-        © 2026 MotorLab · <span data-i18n="footer.firmware">Firmware</span> v3.5.0
+        © 2026 MotorLab · <span data-i18n="footer.firmware">ファームウェア</span> v3.5.0
       </div>
 </div>
 <div class="footer-visits mono" hidden="" id="visit-count"></div>
