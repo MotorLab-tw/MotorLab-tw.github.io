@@ -1857,6 +1857,18 @@
   }
 </style>
 <!-- GoatCounter 訪問統計(隱私友善、無 cookie;按 URL path 自動分別統計每頁/每語言版本) -->
+<script>
+  /* 略過本機:在自己瀏覽器開一次 網址#skip-counter → 永久不計數(取消:#count-me) */
+  (function () {
+    try {
+      var h = location.hash;
+      if (h === '#skip-counter') { localStorage.setItem('skipgc', 't'); alert('此瀏覽器已設定為不列入 GoatCounter 統計。'); }
+      else if (h === '#count-me') { localStorage.removeItem('skipgc'); alert('已恢復計數。'); }
+    } catch (e) {}
+    window.goatcounter = window.goatcounter || {};
+    try { if (localStorage.getItem('skipgc') === 't') window.goatcounter.no_onload = true; } catch (e) {}
+  })();
+</script>
 <script async="" data-goatcounter="https://motorlab-tw.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
 <link href="https://motorlab-tw.github.io/guides/track-analysis-motor-selection/" hreflang="zh-TW" rel="alternate"/><link href="https://motorlab-tw.github.io/en/guides/track-analysis-motor-selection/" hreflang="en" rel="alternate"/><link href="https://motorlab-tw.github.io/ja/guides/track-analysis-motor-selection/" hreflang="ja" rel="alternate"/><link href="https://motorlab-tw.github.io/guides/track-analysis-motor-selection/" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
   "@context": "https://schema.org",
