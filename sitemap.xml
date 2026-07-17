@@ -740,4 +740,34 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/conductive-oil-motor-break-in/"/>
   </url>
 
+  <url>
+    <loc>https://motorlab-tw.github.io/guides/motor-slow-causes-fixes/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-slow-causes-fixes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-slow-causes-fixes/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-slow-causes-fixes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-slow-causes-fixes/"/>
+  </url>
+  <url>
+    <loc>https://motorlab-tw.github.io/en/guides/motor-slow-causes-fixes/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-slow-causes-fixes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-slow-causes-fixes/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-slow-causes-fixes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-slow-causes-fixes/"/>
+  </url>
+  <url>
+    <loc>https://motorlab-tw.github.io/ja/guides/motor-slow-causes-fixes/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-slow-causes-fixes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-slow-causes-fixes/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-slow-causes-fixes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-slow-causes-fixes/"/>
+  </url>
 </urlset>

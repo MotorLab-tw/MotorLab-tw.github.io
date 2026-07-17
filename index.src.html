@@ -3644,6 +3644,36 @@
         </div>
       </article>
 
+      <!-- Guide 16: 馬達變慢原因與對策 -->
+      <article class="guide-article">
+        <span class="guide-tag" data-i18n="g16.tag">GUIDE · 故障排除</span>
+        <h3 data-i18n="g16.title">馬達變慢、沒力了?先分清「暫時」還是「衰退」</h3>
+        <p class="guide-lead" data-i18n="g16.lead">馬達突然變慢、加速變鈍、聲音變了 —— 不一定是壽命到了。「馬達變慢」的原因分兩類:<strong>可逆的</strong>(清一清、換顆電池就回來)和<strong>不可逆的</strong>(接觸面或磁性損傷,回不去)。先別急著花錢換新,照這篇 5 個原因逐一排除。</p>
+        <h4 data-i18n="g16.h1">為什麼會變慢:先分兩類</h4>
+        <p data-i18n="g16.p1">馬達變慢的體感都差不多(轉速掉、推力弱、加速鈍),但底層原因天差地遠。<strong>可逆</strong>:電池、髒污、潤滑 —— 排除後轉速會回來。<strong>不可逆</strong>:高溫退磁、電刷 / 整流子磨損 —— 物理損傷,只能退役。判斷順序永遠是<strong>先排可逆、再認不可逆</strong>,才不會把還能救的馬達丟掉、或把該退的硬撐上場。</p>
+        <h4 data-i18n="g16.h2">5 個常見原因(從最好修到最難)</h4>
+        <ul>
+          <li data-i18n="g16.c1"><strong>① 電池 / 供電不足(最常被誤判)</strong> —— 電池沒電或內阻變高,同一顆馬達轉速就掉。<em>可逆</em>。對策:換一顆<strong>滿電、健康的電池</strong>再測 —— 很多「馬達變慢」其實是電池老了。</li>
+          <li data-i18n="g16.c2"><strong>② 髒污 / 積碳 / 油乾</strong> —— 整流子累積碳粉、潤滑乾涸,接觸電阻升高、轉速下降、聲音變粗。<em>可逆</em>。對策:清潔整流子與電刷、重新上油(該洗還是該磨,見下方延伸)。</li>
+          <li data-i18n="g16.c3"><strong>③ 軸承 / 潤滑劣化</strong> —— 軸承進塵、油劣化 → 機械阻力變大,滑行變短、轉速上不去。<em>多半可逆</em>。對策:清潔上油;想量化順不順,可用<strong>軸承阻力測試</strong>(斷電滑行時間)前後對照。</li>
+          <li data-i18n="g16.c4"><strong>④ 過熱退磁</strong> —— 馬達曾經長時間高溫運轉,磁鐵永久退磁,轉速<strong>回不來</strong>。<em>不可逆</em>。對策:退役。預防重於治療 —— 磨合 / 運轉時控溫、別讓馬達燙手。</li>
+          <li data-i18n="g16.c5"><strong>⑤ 電刷 / 整流子磨損(壽命到)</strong> —— 電刷磨短、整流子出現刻痕與 arcing 痕,接觸不良、火花變多。<em>不可逆</em>。對策:退役,別硬撐(見〈衰退 8 徵兆與退役判定〉)。</li>
+        </ul>
+        <h4 data-i18n="g16.h3">怎麼快速定位:三步排除法</h4>
+        <ol>
+          <li data-i18n="g16.f1"><strong>換滿電電池</strong> → 轉速回來了?→ 是「電池問題」,馬達沒事。</li>
+          <li data-i18n="g16.f2"><strong>清潔 + 重新上油</strong> → 轉速回來了?→ 是「髒污 / 潤滑」,養好即可。</li>
+          <li data-i18n="g16.f3"><strong>還是慢</strong> → 量特性(I0 / R / Ke)與軸承:若損耗類升高但 Ke 正常 → 可能還有救;若轉速就是回不來、或有過熱史 → <strong>退磁 / 磨損</strong>,進入退役判定。</li>
+        </ol>
+        <div class="guide-tip">
+        <p data-i18n="g16.key">一句話:馬達變慢,<strong>先排電池、髒污、潤滑</strong>三個可逆因素 —— 大多數「變慢」到這裡就解決了;三個都排除還是慢,才是真衰退,用數據判退役,別憑感覺提早換馬達、也別讓退磁的馬達拖累成績。</p>
+        </div>
+        <p class="guide-related" data-i18n="g16.related">延伸閱讀:該清潔上油還是該退役,見 <a href="../motor-wash-vs-break-in/">洗馬達 vs 磨合</a>;確認是不是真衰退,見 <a href="../motor-degradation-signs/">馬達衰退的 8 個徵兆與退役判定</a>;用數據量化衰退,見 <a href="../motor-break-in-resistance-curve/">R 磨合曲線</a>。</p>
+        <div class="guide-warning">
+        <p data-i18n="g16.w1">本文為一般故障排除說明。實際變慢原因可能多重疊加(例如電池老 + 輕微積碳),建議逐項排除、每次只改一個變數,並在相同電池與溫度條件下對照,判斷才準。</p>
+        </div>
+      </article>
+
 
 
 
@@ -5662,6 +5692,24 @@
       'g15.p5': 'The deadlock with conductive oil is that it is <strong>both the process and the measurement</strong>: you break in with it, and judge by the RPM you see while breaking in — like measuring length with a ruler that moves on its own. To see the true state, the only path is to <strong>separate measurement from process</strong>: in a clean state, free of oil-film interference, judge break-in by a physical quantity that can’t be faked. Break-in progress is fundamentally set by the accumulated count of the brush passing the commutator (commutation frequency ∝ RPM), so watching the motor’s trend at <strong>fixed RPM</strong> is far more reliable than a single RPM point taken while oiled. See <a href="../motor-break-in-speed-vs-voltage/">why break in at fixed speed, not fixed voltage</a> and <a href="../motor-break-in-resistance-curve/">how long to break in: the 560-run curve</a>.',
       'g15.p6': 'Zoom out: a good break-in process isn’t about squeezing the highest paper RPM out of one motor — it’s about <strong>raising the odds that a good motor shows up</strong>, and making each one’s state repeatable and comparable. Conductive oil can hand you a pretty instant, but to pick the best-constitution motor within a model, and to have a process that comes back the same, what you need is real measurement in a clean state — not a bottle that rewrites the answer for you. For the selection angle, see <a href="../motor-selection-before-break-in/">select first, break in later</a>.',
       'g15.w1': 'This is a fair account of break-in physics and racer practice; it does not dismiss conductive oil — its lubrication and short-term smoothness are real. The point is to separate “the paper number while oiled” from “the motor’s true constitution in a clean state”: different uses, don’t mistake the former for the latter.',
+      'g16.tag': 'GUIDE · Troubleshooting',
+      'g16.title': 'Motor Got Slow? First Tell Temporary from Worn Out',
+      'g16.lead': 'A motor that suddenly got slow — duller acceleration, a changed sound — is not always worn out. Causes split into two kinds: <strong>reversible</strong> (a clean or a fresh battery brings it back) and <strong>irreversible</strong> (contact-face or magnetic damage that cannot be undone). Before you spend on a new one, rule out these 5 causes in order.',
+      'g16.h1': 'Why it slows down: two kinds first',
+      'g16.p1': 'A slow motor feels the same (lower RPM, weak push, dull acceleration), but the root cause differs completely. <strong>Reversible</strong>: battery, dirt, lube — RPM returns once fixed. <strong>Irreversible</strong>: heat demagnetization, brush / commutator wear — physical damage, retire only. Always <strong>rule out the reversible first, then accept the irreversible</strong>, so you neither toss a savable motor nor race a dying one.',
+      'g16.h2': '5 common causes (easiest to hardest to fix)',
+      'g16.c1': '<strong>1. Battery / supply too weak (most misdiagnosed)</strong> — a flat or high-resistance battery lowers the RPM of the very same motor. <em>Reversible</em>. Fix: retest with a <strong>fully charged, healthy battery</strong> — many a slow-feeling motor is simply an aging battery.',
+      'g16.c2': '<strong>2. Dirt / carbon buildup / dried lube</strong> — carbon on the commutator and dried lubricant raise contact resistance, dropping RPM and coarsening the sound. <em>Reversible</em>. Fix: clean the commutator and brushes, re-oil (clean vs re-run: see related below).',
+      'g16.c3': '<strong>3. Bearing / lube degradation</strong> — dust or degraded oil in the bearings raises mechanical drag, shortening coast-down and capping RPM. <em>Usually reversible</em>. Fix: clean and re-oil; to quantify smoothness, compare the <strong>bearing resistance test</strong> (coast-down time) before and after.',
+      'g16.c4': '<strong>4. Heat demagnetization</strong> — after long, hot running the magnets lose strength permanently and the RPM <strong>never comes back</strong>. <em>Irreversible</em>. Fix: retire. Prevention beats cure — keep temperature in check during break-in and running.',
+      'g16.c5': '<strong>5. Brush / commutator wear (end of life)</strong> — worn-short brushes and grooved, arced commutators mean poor contact and more sparking. <em>Irreversible</em>. Fix: retire, do not push it (see the 8 signs and retirement thresholds).',
+      'g16.h3': 'How to pinpoint it fast: a 3-step rule-out',
+      'g16.f1': '<strong>Swap in a full battery</strong> → RPM back? → it was the battery; the motor is fine.',
+      'g16.f2': '<strong>Clean and re-oil</strong> → RPM back? → it was dirt / lube; just maintain it.',
+      'g16.f3': '<strong>Still slow</strong> → measure characteristics (I0 / R / Ke) and the bearing: if loss metrics rose but Ke is normal, there may still be hope; if RPM simply will not return, or there is a heat history → <strong>demagnetization / wear</strong>, move to the retirement check.',
+      'g16.key': 'In one line: when a motor slows, <strong>rule out battery, dirt and lube first</strong> — most cases end here. Only if all three are cleared and it is still slow is it true degradation; judge retirement by data, so you neither replace a motor too early on a hunch nor let a demagnetized one drag your results.',
+      'g16.related': 'Further reading: clean-and-oil or retire? See <a href="../motor-wash-vs-break-in/">motor wash vs break-in</a>; confirm real degradation with <a href="../motor-degradation-signs/">8 signs your motor is dying and when to retire</a>; quantify it with <a href="../motor-break-in-resistance-curve/">the R break-in curve</a>.',
+      'g16.w1': 'This is general troubleshooting. Real slowdowns are often several causes stacked (e.g. an aging battery plus light carbon buildup); rule them out one at a time, change only one variable per test, and compare under the same battery and temperature for a reliable read.',
       'g15.figsum': '<img class="chart" src="/images/g15_summary_e.png" alt="Does conductive oil really break in a motor: higher RPM isn\'t done, film break falls back, the oil taints the read" loading="lazy">',
 
       'cl.tag': 'CHANGELOG',
@@ -6663,6 +6711,24 @@
       'g15.p5': '導電オイルの行き詰まりは、それが<strong>加工と測定を兼ねている</strong>点にある:それで慣らし、慣らし中に見える回転数で良否を判断する — 自分で動く物差しで長さを測るようなものだ。本当の状態を見る唯一の道は<strong>測定と加工を分ける</strong>こと:油膜の干渉がない綺麗な状態で、偽造できない物理量で慣らしを判断する。慣らしの進行は本質的にブラシが整流子を通過した累積回数で決まる(整流周波数 ∝ 回転数)ので、<strong>回転数を固定</strong>してモーターの傾向を見るほうが、注油中の一点の回転数よりずっと信頼できる。詳しくは〈<a href="../motor-break-in-speed-vs-voltage/">なぜ電圧でなく回転数を固定するのか</a>〉と〈<a href="../motor-break-in-resistance-curve/">慣らしはどれくらい:560 回の曲線</a>〉。',
       'g15.p6': '視点を上げよう:良い慣らしの目的は、一個のモーターから最高の見栄え回転を絞り出すことではなく、<strong>「良いモーターが出る確率」を上げ</strong>、各個体の状態を再現可能・比較可能にすることだ。導電オイルは綺麗な一瞬をくれるが、同型の中で最良の素性を選び、走って戻ってくる工程が欲しいなら、必要なのは綺麗な状態での本当の測定であって、答えを書き換えるオイルではない。選別の観点は〈<a href="../motor-selection-before-break-in/">選別してから慣らす</a>〉へ。',
       'g15.w1': '本記事は慣らしの物理とレーサーの実務を公平に述べたもので、導電オイルを否定するものではない — 潤滑と短期の滑らかさは実だ。要点は「注油中の見栄えの数字」と「綺麗な状態でのモーターの本当の素性」を分けること:用途が違うので、前者を後者と取り違えないこと。',
+      'g16.tag': 'GUIDE · トラブル対処',
+      'g16.title': 'モーターが遅い?まず「一時的」か「劣化」かを見分ける',
+      'g16.lead': 'モーターが急に遅く・加速が鈍く・音が変わった —— それは必ずしも寿命ではありません。「遅くなった」原因は 2 種類:<strong>可逆</strong>(清掃や電池交換で戻る)と<strong>不可逆</strong>(接触面や磁力の損傷で戻らない)。買い替える前に、この 5 つの原因を順に切り分けましょう。',
+      'g16.h1': 'なぜ遅くなる:まず 2 種類に分ける',
+      'g16.p1': '遅いモーターの体感は似ています(回転低下・押しが弱い・加速が鈍い)が、根本原因は全く違います。<strong>可逆</strong>:電池・汚れ・潤滑 —— 直せば回転は戻る。<strong>不可逆</strong>:熱による減磁、ブラシ / 整流子の摩耗 —— 物理損傷で引退のみ。順序は必ず<strong>まず可逆を排除、次に不可逆を認める</strong>。救えるモーターを捨てず、死にかけを本番に出さないために。',
+      'g16.h2': '5 つのよくある原因(直しやすい順)',
+      'g16.c1': '<strong>① 電池 / 電源不足(最も誤診されやすい)</strong> —— 電池切れや内部抵抗の増加で、同じモーターでも回転が落ちる。<em>可逆</em>。対処:<strong>満充電で健康な電池</strong>で測り直す。「遅くなった」の多くは電池の劣化。',
+      'g16.c2': '<strong>② 汚れ / カーボン堆積 / 潤滑切れ</strong> —— 整流子のカーボンや油切れで接触抵抗が上がり、回転低下・音が粗くなる。<em>可逆</em>。対処:整流子とブラシを清掃し再注油(洗うか慣らすかは下記の関連へ)。',
+      'g16.c3': '<strong>③ ベアリング / 潤滑の劣化</strong> —— ベアリングへの粉塵や油の劣化で機械抵抗が増え、惰性回転が短く・回転が伸びない。<em>多くは可逆</em>。対処:清掃・注油。滑らかさは<strong>ベアリング抵抗テスト</strong>(惰性停止時間)の前後比較で数値化。',
+      'g16.c4': '<strong>④ 熱による減磁</strong> —— 長時間の高温運転で磁石が永久に弱まり、回転は<strong>戻らない</strong>。<em>不可逆</em>。対処:引退。予防が第一 —— 慣らし / 運転中は温度管理を。',
+      'g16.c5': '<strong>⑤ ブラシ / 整流子の摩耗(寿命)</strong> —— ブラシが短く、整流子に溝やアーク痕 → 接触不良・火花増加。<em>不可逆</em>。対処:引退、無理をしない(〈8 サインと引退判定〉参照)。',
+      'g16.h3': '素早く特定する:3 ステップ切り分け',
+      'g16.f1': '<strong>満充電の電池に交換</strong> → 回転が戻った?→ 電池が原因、モーターは正常。',
+      'g16.f2': '<strong>清掃して再注油</strong> → 回転が戻った?→ 汚れ / 潤滑が原因、整備でOK。',
+      'g16.f3': '<strong>まだ遅い</strong> → 特性(I0 / R / Ke)とベアリングを測定:損失系が上昇でも Ke が正常なら救える可能性;回転がどうしても戻らない、または高温履歴あり → <strong>減磁 / 摩耗</strong>、引退判定へ。',
+      'g16.key': '一言:モーターが遅くなったら、<strong>まず電池・汚れ・潤滑</strong>の 3 つを排除 —— 多くはここで解決。3 つとも排除しても遅いなら本当の劣化。データで引退を判断し、勘で早く替えず、減磁したモーターで成績を落とさない。',
+      'g16.related': '関連:清掃・注油か引退か —— <a href="../motor-wash-vs-break-in/">モーター洗浄 vs 慣らし</a>;本当に劣化かを確認 —— <a href="../motor-degradation-signs/">劣化の 8 サインと引退判定</a>;数値化するなら —— <a href="../motor-break-in-resistance-curve/">R 慣らしカーブ</a>。',
+      'g16.w1': '本記事は一般的なトラブル対処です。実際の低下は複数要因が重なることも多い(例:電池劣化 + 軽い堆積)。1 つずつ切り分け、1 回に 1 変数だけ変え、同じ電池・温度で比較すると判断が正確です。',
       'g15.figsum': '<img class="chart" src="/images/g15_summary_j.png" alt="導電オイルは本当に効くか:回転上昇は完了でない、皮膜切れで戻る、オイルが読みを汚すの3点" loading="lazy">',
     }
   };

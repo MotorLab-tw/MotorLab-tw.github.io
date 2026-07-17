@@ -678,6 +678,36 @@ GUIDES = [
             },
         },
     },
+    {
+        "slug": "motor-slow-causes-fixes",
+        "key": "g16",
+        "published": "2026-07-17",
+        "updated": "2026-07-17",
+        "type": "guides",
+        "i18n": {
+            "zh": {
+            "title": "馬達變慢、沒力了?5 個原因與對策(先別急著換) | MotorLab",
+            "description": "馬達突然變慢、沒力,不一定是壽命到了。本文把「馬達變慢」拆成 5 個常見原因 —— 電池、髒污、潤滑、退磁、電刷磨損,分清可逆與不可逆,教你用一套快速流程判斷該清、該養、還是該退役,別急著花錢換新。",
+            "keywords": "馬達變慢, 馬達沒力, 馬達 轉速下降, 馬達 變慢 原因, 迷你四驅車 馬達 變慢, 馬達 退磁, 四驅車 馬達, MotorLab",
+            "breadcrumb": "馬達變慢原因",
+            "h1_for_ld": "馬達變慢、沒力了?5 個原因與對策",
+            },
+            "en": {
+            "title": "Mini 4WD Motor Got Slow? 5 Causes and Fixes | MotorLab",
+            "description": "A Mini 4WD motor that suddenly got slow is not always worn out. This breaks slow motor into 5 common causes — battery, dirt, lube, demagnetization, brush wear — reversible vs not, with a quick flow to decide: clean, maintain, or retire.",
+            "keywords": "Mini 4WD motor slow, motor lost power, motor RPM drop, why motor got slow, motor demagnetization, Mini 4WD motor, MotorLab",
+            "breadcrumb": "Motor Got Slow",
+            "h1_for_ld": "Mini 4WD Motor Got Slow? 5 Causes and Fixes",
+            },
+            "ja": {
+            "title": "ミニ四駆モーターが遅くなった?5 つの原因と対処 | MotorLab",
+            "description": "モーターが急に遅く・パワーダウンしたのは寿命とは限りません。「遅くなった」を 5 つの原因 —— 電池・汚れ・潤滑・減磁・ブラシ摩耗 —— に分解し、可逆か不可逆かを見分けて、洗う・整備する・引退のどれかを素早く判断する流れを解説。すぐ買い替える前に。",
+            "keywords": "ミニ四駆 モーター 遅い, モーター パワーダウン, モーター 回転数 低下, モーター 遅くなった 原因, モーター 減磁, ミニ四駆 モーター, MotorLab",
+            "breadcrumb": "モーターが遅い",
+            "h1_for_ld": "ミニ四駆モーターが遅くなった?5 つの原因と対処",
+            },
+        },
+    },
 ]
 
 # UI 字串(教學頁面通用元件:nav / 麵包屑 / 分頁)
@@ -764,7 +794,7 @@ TYPE_BY_GKEY = {g["key"]: g.get("type", "guides") for g in GUIDES}
 HUBS = [
     {
         "slug": "guides",
-        "include": ["g1", "g2", "g4"],
+        "include": ["g1", "g2", "g4", "g16"],
         "i18n": {
             "zh": {
                 "title": "教學 — Mini 4WD® 馬達磨合與調校教學系列 | MotorLab",
