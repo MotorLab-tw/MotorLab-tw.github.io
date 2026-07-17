@@ -1377,6 +1377,13 @@
   .footer-inner .mono {
     font-family: monospace;
   }
+  .footer-visits {
+    margin-top: 10px;
+    font-size: 11.5px;
+    color: var(--text-muted);
+    opacity: 0.75;
+    letter-spacing: 0.02em;
+  }
 
   /* About 區塊獨立工作室聲明 */
   .about-disclaimer {
@@ -1849,6 +1856,8 @@
     .manual-table { display: block; overflow-x: auto; white-space: nowrap; }
   }
 </style>
+<!-- GoatCounter 訪問統計(隱私友善、無 cookie;按 URL path 自動分別統計每頁/每語言版本) -->
+<script async="" data-goatcounter="https://motorlab-tw.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
 <link href="https://motorlab-tw.github.io/guides/crash-risk-trigger-model/" hreflang="zh-TW" rel="alternate"/><link href="https://motorlab-tw.github.io/en/guides/crash-risk-trigger-model/" hreflang="en" rel="alternate"/><link href="https://motorlab-tw.github.io/ja/guides/crash-risk-trigger-model/" hreflang="ja" rel="alternate"/><link href="https://motorlab-tw.github.io/guides/crash-risk-trigger-model/" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Article",
@@ -2000,6 +2009,37 @@
         © 2026 MotorLab · <span data-i18n="footer.firmware">ファームウェア</span> v3.5.0
       </div>
 </div>
+<div class="footer-visits mono" hidden="" id="visit-count"></div>
 </div>
+<script>
+  /* GoatCounter 數字顯示:本頁 + 全站(讀 count API,失敗則整行隱藏不留破圖) */
+  (function () {
+    var el = document.getElementById('visit-count');
+    if (!el) return;
+    var GC = 'https://motorlab-tw.goatcounter.com';
+    var lang = (document.documentElement.lang || 'zh').slice(0, 2);
+    var L = {
+      zh: { page: '本頁', site: '全站', unit: '次' },
+      en: { page: 'This page', site: 'Site', unit: 'views' },
+      ja: { page: '本頁', site: '全体', unit: '回' }
+    }[lang] || { page: '本頁', site: '全站', unit: '次' };
+    function fmt(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+    function num(v) { return v == null ? null : parseInt(String(v).replace(/[^0-9]/g, ''), 10); }
+    var path = location.pathname || '/';
+    Promise.all([
+      fetch(GC + '/counter/' + encodeURIComponent(path) + '.json').then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }),
+      fetch(GC + '/counter/TOTAL.json').then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; })
+    ]).then(function (res) {
+      var p = res[0] && num(res[0].count);
+      var t = res[1] && num(res[1].count);
+      var parts = [];
+      if (p != null) parts.push(L.page + ' ' + fmt(p));
+      if (t != null) parts.push(L.site + ' ' + fmt(t));
+      if (!parts.length) return;                 // 兩者都失敗 → 維持隱藏
+      el.textContent = parts.join(' · ') + ' ' + L.unit;
+      el.hidden = false;
+    });
+  })();
+  </script>
 </footer></body>
 </html>
