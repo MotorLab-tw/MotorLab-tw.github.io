@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans CJK TC','Noto Sans JP',sans-serif">
+<rect x="1" y="1" width="878" height="498" rx="16" fill="#16191f" stroke="#2b313c" stroke-width="1.5"/>
+<text x="32" y="44" fill="#35d0df" font-size="21" font-weight="700">飛車風險計數模型</text>
+<rect x="43" y="68" width="250" height="40" rx="10" fill="#f2994a" fill-opacity="0.12" stroke="#f2994a" stroke-width="1.3"/>
+<text x="168" y="93" fill="#e8ebf0" font-size="14.5" font-weight="700" text-anchor="middle">動力 Speed</text>
+<rect x="315" y="68" width="250" height="40" rx="10" fill="#a78bfa" fill-opacity="0.12" stroke="#a78bfa" stroke-width="1.3"/>
+<text x="440" y="93" fill="#e8ebf0" font-size="14.5" font-weight="700" text-anchor="middle">幾何 Geometry</text>
+<rect x="587" y="68" width="250" height="40" rx="10" fill="#35d0df" fill-opacity="0.12" stroke="#35d0df" stroke-width="1.3"/>
+<text x="712" y="93" fill="#e8ebf0" font-size="14.5" font-weight="700" text-anchor="middle">穩定 Stability</text>
+<text x="440" y="138" fill="#98a2b3" font-size="13.5" text-anchor="middle">對每個彎 / 坡 / 跳台,數同時命中幾個 ↓</text>
+<text x="40" y="168" fill="#98a2b3" font-size="12.5" font-weight="600" letter-spacing="0.5">觸發數</text>
+<text x="210" y="168" fill="#98a2b3" font-size="12.5" font-weight="600" letter-spacing="0.5">狀態</text>
+<text x="400" y="168" fill="#98a2b3" font-size="12.5" font-weight="600" letter-spacing="0.5">結果</text>
+<text x="600" y="168" fill="#98a2b3" font-size="12.5" font-weight="600" letter-spacing="0.5">策略</text>
+<line x1="28" y1="178" x2="852" y2="178" stroke="#2b313c" stroke-width="1"/>
+<rect x="16" y="190" width="848" height="50" rx="9" fill="#3ddc97" fill-opacity="0.08"/>
+<rect x="20" y="196" width="5" height="40" rx="2.5" fill="#3ddc97"/>
+<text x="40" y="218" fill="#8ff0c4" font-size="17" font-weight="800" dominant-baseline="middle">0–1</text>
+<text x="210" y="218" fill="#e8ebf0" font-size="13.5" font-weight="700" dominant-baseline="middle">安全區</text>
+<text x="400" y="218" fill="#cfd6e0" font-size="13" dominant-baseline="middle">穩定通過</text>
+<text x="600" y="218" fill="#8ff0c4" font-size="13" font-weight="600" dominant-baseline="middle">可偏進攻設定</text>
+<rect x="16" y="250" width="848" height="50" rx="9" fill="#f2994a" fill-opacity="0.08"/>
+<rect x="20" y="256" width="5" height="40" rx="2.5" fill="#f2994a"/>
+<text x="40" y="278" fill="#f7b579" font-size="17" font-weight="800" dominant-baseline="middle">2</text>
+<text x="210" y="278" fill="#e8ebf0" font-size="13.5" font-weight="700" dominant-baseline="middle">風險區</text>
+<text x="400" y="278" fill="#cfd6e0" font-size="13" dominant-baseline="middle">不穩定</text>
+<text x="600" y="278" fill="#f7b579" font-size="13" font-weight="600" dominant-baseline="middle">需調整設定</text>
+<rect x="16" y="310" width="848" height="50" rx="9" fill="#ff6b6b" fill-opacity="0.08"/>
+<rect x="20" y="316" width="5" height="40" rx="2.5" fill="#ff6b6b"/>
+<text x="40" y="338" fill="#ffb3b3" font-size="17" font-weight="800" dominant-baseline="middle">3</text>
+<text x="210" y="338" fill="#e8ebf0" font-size="13.5" font-weight="700" dominant-baseline="middle">危險區</text>
+<text x="400" y="338" fill="#cfd6e0" font-size="13" dominant-baseline="middle">高機率飛車</text>
+<text x="600" y="338" fill="#ffb3b3" font-size="13" font-weight="600" dominant-baseline="middle">必須保守設定</text>
+<rect x="20" y="378" width="840" height="44" rx="8" fill="#2a1518" stroke="#3a2226" stroke-width="1"/>
+<rect x="20" y="378" width="4" height="44" rx="2" fill="#ff6b6b"/>
+<text x="36" y="405" fill="#ffbdbd" font-size="13" font-weight="600">單一觸發穩穩過,三個同時幾乎必飛 —— 治的是「疊加」,不是換馬達</text>
+</svg>

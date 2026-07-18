@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans CJK TC','Noto Sans JP',sans-serif">
+<rect x="1" y="1" width="898" height="398" rx="16" fill="#16191f" stroke="#2b313c" stroke-width="1.5"/>
+<text x="32" y="46" fill="#35d0df" font-size="20" font-weight="700">モーター分析の三本柱方法論</text>
+<rect x="33" y="92" width="262" height="196" rx="12" fill="#35d0df" fill-opacity="0.07" stroke="#35d0df" stroke-width="1.2"/>
+<circle cx="164" cy="134" r="20" fill="#35d0df" fill-opacity="0.18" stroke="#35d0df" stroke-width="1.5"/>
+<text x="164" y="134" fill="#35d0df" font-size="18" font-weight="800" text-anchor="middle" dominant-baseline="middle">1</text>
+<text x="164" y="184" fill="#e8ebf0" font-size="17" font-weight="700" text-anchor="middle">測定</text>
+<text x="164" y="204" fill="#7f8794" font-size="11.5" text-anchor="middle" letter-spacing="1">Measurement</text>
+<text x="164" y="242" fill="#cfd6e0" font-size="12.5" text-anchor="middle">計器で客観データを読む</text>
+<text x="307" y="190" fill="#5b6472" font-size="22" text-anchor="middle" dominant-baseline="middle">&#8594;</text>
+<rect x="319" y="92" width="262" height="196" rx="12" fill="#a78bfa" fill-opacity="0.07" stroke="#a78bfa" stroke-width="1.2"/>
+<circle cx="450" cy="134" r="20" fill="#a78bfa" fill-opacity="0.18" stroke="#a78bfa" stroke-width="1.5"/>
+<text x="450" y="134" fill="#a78bfa" font-size="18" font-weight="800" text-anchor="middle" dominant-baseline="middle">2</text>
+<text x="450" y="184" fill="#e8ebf0" font-size="17" font-weight="700" text-anchor="middle">比較</text>
+<text x="450" y="204" fill="#7f8794" font-size="11.5" text-anchor="middle" letter-spacing="1">Comparison</text>
+<text x="450" y="242" fill="#cfd6e0" font-size="12.5" text-anchor="middle">同一機・同一モーターで経時比較</text>
+<text x="593" y="190" fill="#5b6472" font-size="22" text-anchor="middle" dominant-baseline="middle">&#8594;</text>
+<rect x="605" y="92" width="262" height="196" rx="12" fill="#3ddc97" fill-opacity="0.07" stroke="#3ddc97" stroke-width="1.2"/>
+<circle cx="736" cy="134" r="20" fill="#3ddc97" fill-opacity="0.18" stroke="#3ddc97" stroke-width="1.5"/>
+<text x="736" y="134" fill="#3ddc97" font-size="18" font-weight="800" text-anchor="middle" dominant-baseline="middle">3</text>
+<text x="736" y="184" fill="#e8ebf0" font-size="17" font-weight="700" text-anchor="middle">健康判定</text>
+<text x="736" y="204" fill="#7f8794" font-size="11.5" text-anchor="middle" letter-spacing="1">Health</text>
+<text x="736" y="242" fill="#cfd6e0" font-size="12.5" text-anchor="middle">トレンドで整備か引退かを判断</text>
+<rect x="24" y="306" width="852" height="44" rx="8" fill="#12242a" stroke="#22323a" stroke-width="1"/>
+<rect x="24" y="306" width="4" height="44" rx="2" fill="#35d0df"/>
+<text x="40" y="333" fill="#a9d7de" font-size="13.5" font-weight="600">感覚からデータへ:定量化・再現・比較</text>
+</svg>
