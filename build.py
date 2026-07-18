@@ -3188,6 +3188,18 @@ def main():
     with open(SRC, "r", encoding="utf-8") as f:
         src_html = f.read()
 
+    # 防呆:i18n 值內未跳脫的撇號會讓內嵌 <script> 語法錯誤 → 全站卡開機動畫。
+    # 每個 i18n 行的未跳脫單引號應為偶數(key+value 成對);奇數 = 有裸撇號。
+    _q_bad = []
+    for _i, _ln in enumerate(src_html.split("\n"), 1):
+        if re.match(r"^\s*'[\w.]+':", _ln) and len(re.findall(r"(?<!\\)'", _ln)) % 2:
+            _q_bad.append((_i, _ln.strip()[:110]))
+    if _q_bad:
+        print("❌ 建置中止:i18n 引號不平衡(未跳脫撇號 → 會卡開機動畫,請改成 \\'):")
+        for _i, _l in _q_bad:
+            print(f"   L{_i}: {_l}")
+        sys.exit(1)
+
     print("=" * 55)
     print("MotorLab.tw 多語言頁面產生器")
     print("=" * 55)
