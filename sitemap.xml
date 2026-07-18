@@ -145,33 +145,45 @@
   <!-- /guides/ articles -->
   <url>
     <loc>https://motorlab-tw.github.io/guides/motor-break-in-guide/</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-break-in-guide/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-break-in-guide/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-break-in-guide/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-break-in-guide/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/break-in-4-key-variables_c.png</image:loc>
+      <image:title>專業馬達磨合的 4 個關鍵變數:電壓、時間、方向、冷卻,以及各自控制不當的後果</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/en/guides/motor-break-in-guide/</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-break-in-guide/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-break-in-guide/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-break-in-guide/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-break-in-guide/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/break-in-4-key-variables_e.png</image:loc>
+      <image:title>The 4 key motor break-in variables: voltage, time, direction, cooling — and what goes wrong if each is off</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/ja/guides/motor-break-in-guide/</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-break-in-guide/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-break-in-guide/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-break-in-guide/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-break-in-guide/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/break-in-4-key-variables_j.png</image:loc>
+      <image:title>モーター慣らしの 4 つの重要変数:電圧・時間・方向・冷却と、それぞれ誤ったときの結果</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/guides/motor-break-in-mistakes/</loc>
@@ -555,33 +567,45 @@
   <!-- /benchmarks/ articles -->
   <url>
     <loc>https://motorlab-tw.github.io/benchmarks/tamiya-mini-4wd-motor-specs-list/</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/benchmarks/tamiya-mini-4wd-motor-specs-list/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/benchmarks/tamiya-mini-4wd-motor-specs-list/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/benchmarks/tamiya-mini-4wd-motor-specs-list/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/benchmarks/tamiya-mini-4wd-motor-specs-list/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/tamiya-15-motor-spec-chart_c.png</image:loc>
+      <image:title>田宮 Mini 4WD 全 15 款馬達規格速查表:PRO 雙軸 6 款＋標準單軸 9 款,含負載 RPM、扭力(mN·m)、電流(A)與極速/扭力星等</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/en/benchmarks/tamiya-mini-4wd-motor-specs-list/</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/benchmarks/tamiya-mini-4wd-motor-specs-list/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/benchmarks/tamiya-mini-4wd-motor-specs-list/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/benchmarks/tamiya-mini-4wd-motor-specs-list/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/benchmarks/tamiya-mini-4wd-motor-specs-list/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/tamiya-15-motor-spec-chart_e.png</image:loc>
+      <image:title>Tamiya Mini 4WD all 15 motors spec chart: 6 PRO dual-shaft + 9 standard single-shaft, with load RPM, torque (mN·m), current (A) and speed/torque ratings</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/ja/benchmarks/tamiya-mini-4wd-motor-specs-list/</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/benchmarks/tamiya-mini-4wd-motor-specs-list/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/benchmarks/tamiya-mini-4wd-motor-specs-list/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/benchmarks/tamiya-mini-4wd-motor-specs-list/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/benchmarks/tamiya-mini-4wd-motor-specs-list/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/tamiya-15-motor-spec-chart_j.png</image:loc>
+      <image:title>タミヤ Mini 4WD 全 15 機種 規格早見表:PRO 両軸 6＋標準片軸 9、負荷 RPM・トルク(mN·m)・電流(A)・速度/トルク評価</image:title>
+    </image:image>
   </url>
 
   <!-- /system/ pages (D23 system: 商品外觀/設計) -->
