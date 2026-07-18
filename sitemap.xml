@@ -302,6 +302,10 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/racing-prep-techniques/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/racing-prep-techniques/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/racing-prep-techniques/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/track-type-motor-match_c.png</image:loc>
+      <image:title>跑道屬性對應適合的馬達特性</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/en/guides/racing-prep-techniques/</loc>
@@ -312,6 +316,10 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/racing-prep-techniques/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/racing-prep-techniques/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/racing-prep-techniques/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/track-type-motor-match_e.png</image:loc>
+      <image:title>Mini 4WD track type to motor characteristic</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/ja/guides/racing-prep-techniques/</loc>
@@ -322,6 +330,10 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/racing-prep-techniques/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/racing-prep-techniques/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/racing-prep-techniques/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/track-type-motor-match_j.png</image:loc>
+      <image:title>コース特性と適したモーター特性</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/guides/motor-analysis-methodology/</loc>
@@ -332,6 +344,10 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-analysis-methodology/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-analysis-methodology/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-analysis-methodology/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motor-analysis-3-pillars_c.png</image:loc>
+      <image:title>馬達分析的三支柱方法論</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/en/guides/motor-analysis-methodology/</loc>
@@ -342,6 +358,10 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-analysis-methodology/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-analysis-methodology/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-analysis-methodology/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motor-analysis-3-pillars_e.png</image:loc>
+      <image:title>Three-pillar methodology for motor analysis</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/ja/guides/motor-analysis-methodology/</loc>
@@ -352,6 +372,10 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-analysis-methodology/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-analysis-methodology/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-analysis-methodology/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motor-analysis-3-pillars_j.png</image:loc>
+      <image:title>モーター分析の三本柱方法論</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/guides/motor-degradation-signs/</loc>
@@ -362,6 +386,10 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-degradation-signs/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-degradation-signs/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-degradation-signs/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motor-retire-decision_c.png</image:loc>
+      <image:title>馬達衰退退役判定(依 RPM 下降幅度)</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/en/guides/motor-degradation-signs/</loc>
@@ -372,6 +400,10 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-degradation-signs/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-degradation-signs/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-degradation-signs/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motor-retire-decision_e.png</image:loc>
+      <image:title>Mini 4WD motor degradation &amp; retirement decision by RPM drop</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/ja/guides/motor-degradation-signs/</loc>
@@ -382,6 +414,10 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-degradation-signs/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-degradation-signs/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-degradation-signs/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motor-retire-decision_j.png</image:loc>
+      <image:title>モーター劣化・引退判断(RPM 低下幅による)</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/guides/track-analysis-motor-selection/</loc>
@@ -422,6 +458,10 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/crash-risk-trigger-model/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/crash-risk-trigger-model/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/crash-risk-trigger-model/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/crash-risk-trigger-count_c.png</image:loc>
+      <image:title>四驅車飛車風險計數模型(三觸發)</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/en/guides/crash-risk-trigger-model/</loc>
@@ -432,6 +472,10 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/crash-risk-trigger-model/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/crash-risk-trigger-model/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/crash-risk-trigger-model/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/crash-risk-trigger-count_e.png</image:loc>
+      <image:title>Mini 4WD crash risk-count model (three triggers)</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/ja/guides/crash-risk-trigger-model/</loc>
@@ -442,6 +486,10 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/crash-risk-trigger-model/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/crash-risk-trigger-model/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/crash-risk-trigger-model/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/crash-risk-trigger-count_j.png</image:loc>
+      <image:title>ミニ四駆 コースアウト リスク計数モデル</image:title>
+    </image:image>
   </url>
 
   <!-- /benchmarks/ articles -->
@@ -742,32 +790,44 @@
 
   <url>
     <loc>https://motorlab-tw.github.io/guides/motor-slow-causes-fixes/</loc>
-    <lastmod>2026-07-17</lastmod>
+    <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-slow-causes-fixes/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-slow-causes-fixes/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-slow-causes-fixes/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-slow-causes-fixes/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motor-slow-causes-fix_c.png</image:loc>
+      <image:title>馬達變慢的 5 個原因與對策(可逆 vs 不可逆)</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/en/guides/motor-slow-causes-fixes/</loc>
-    <lastmod>2026-07-17</lastmod>
+    <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-slow-causes-fixes/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-slow-causes-fixes/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-slow-causes-fixes/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-slow-causes-fixes/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motor-slow-causes-fix_e.png</image:loc>
+      <image:title>Mini 4WD motor got slow: 5 causes and fixes</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/ja/guides/motor-slow-causes-fixes/</loc>
-    <lastmod>2026-07-17</lastmod>
+    <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-slow-causes-fixes/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-slow-causes-fixes/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-slow-causes-fixes/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-slow-causes-fixes/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motor-slow-causes-fix_j.png</image:loc>
+      <image:title>遅いモーターの 5 つの原因と対処</image:title>
+    </image:image>
   </url>
 </urlset>
