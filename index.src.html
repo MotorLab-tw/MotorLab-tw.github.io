@@ -3547,7 +3547,7 @@
         <h3 data-i18n="g14.title">為什麼磨馬達要鎖轉速,不鎖電壓?</h3>
         <p class="guide-lead" data-i18n="g14.lead">幾乎所有磨馬達的做法,都是「設一個電壓」讓它跑 —— 定電壓磨合。轉速?頂多拿來「量」,不拿來「控」。但從物理看,真正決定磨合品質的是<strong>轉速</strong>(接觸面的滑動速度),不是電壓。這篇拆解:磨馬達控電壓 vs 控轉速,差在哪。</p>
 
-        <figure data-i18n="g14.figsum"><img class="chart" src="/images/g14_summary_c.png" alt="為什麼磨馬達要鎖轉速不鎖電壓:電壓只是代理、鎖電壓會漂、鎖轉速才鎖住磨合條件三重點" loading="lazy"></figure>
+        <figure data-i18n="g14.figsum"><img class="chart" src="/images/fixed-speed-break-in-key-points_c.png" alt="為什麼磨馬達要鎖轉速不鎖電壓:電壓只是代理、鎖電壓會漂、鎖轉速才鎖住磨合條件三重點" loading="lazy"></figure>
 
         <h4 data-i18n="g14.h1">磨合到底在磨什麼</h4>
         <p data-i18n="g14.p1">新馬達的碳刷是平的,和圓弧的整流子只有一條線接觸;磨合就是把碳刷磨出貼合整流子的弧面,讓兩者從「一條線」變成穩定貼合的接觸。這個「磨」發生在碳刷與整流子的<strong>滑動接觸面</strong>上。物理上主宰它的是<strong>滑動速度</strong>(整流子表面線速度 ∝ 轉速)、接觸壓力、電流密度與溫度 —— 其中你能即時控制的關鍵變數,是轉速。</p>
@@ -3591,7 +3591,7 @@
         <h3 data-i18n="g15.title">導電油磨馬達真的有效嗎?轉速升高的真相</h3>
         <p class="guide-lead" data-i18n="g15.lead">導電油(導電性磨合油)是這幾年很紅的磨馬達油 —— 加了之後轉速立刻往上跳、聲音變順,看起來像磨合突飛猛進。但「轉速升高」真的等於「馬達磨好了」嗎?本文用物理拆解這瓶油:它實的地方在哪、虛的地方在哪,以及為什麼加油當下量到的轉速,不能當成馬達真實的體質。</p>
 
-        <figure data-i18n="g15.figsum"><img class="chart" src="/images/g15_summary_c.png" alt="導電油磨馬達真的有效嗎:轉速升不等於磨好、皮膜切れ會回落、油污染讀數三重點" loading="lazy"></figure>
+        <figure data-i18n="g15.figsum"><img class="chart" src="/images/conductive-oil-verdict_c.png" alt="導電油磨馬達真的有效嗎:轉速升不等於磨好、皮膜切れ會回落、油污染讀數三重點" loading="lazy"></figure>
 
         <h4 data-i18n="g15.h1">磨合到底在磨什麼</h4>
         <p data-i18n="g15.p1">磨合磨的不是磁鐵、不是繞組,而是<strong>碳刷與整流子的接觸面</strong>。全新馬達的碳刷是平的,壓在圓弧的整流子上只有一小塊接觸;磨合就是把碳刷磨出貼合整流子的弧面,接觸面積變大、接觸電阻下降,馬達才能跑到它設計的轉速。日文玩家實測:Power-Dash 從約 29,000 轉磨到 33,200 轉(+4,000),這個提升是<strong>真實磨合</strong>帶來的 —— 接觸變好、損耗變小。這件事本身不需要任何特殊的油也會發生。</p>
@@ -3599,7 +3599,7 @@
         <h4 data-i18n="g15.h2">導電油為什麼「加了就變快」</h4>
         <p data-i18n="g15.p2">導電性磨合油通常做兩件事:一是<strong>潤滑</strong>,幫碳刷更快磨開(這是實的);二是油裡帶<strong>極細導電成分</strong>,在碳刷與整流子的接觸縫隙間臨時搭起導電橋。第二件事會讓接觸電阻「瞬間」下降,於是轉速立刻往上跳。問題在於:這個下降主要來自<strong>油膜/碳粉的導電</strong>,不是接觸面本身變好了。日文社群有個很傳神的說法 ——「皮膜切れ」:油形成的導電皮膜讓轉速一開始很漂亮,但馬達高速運轉下,這層皮膜遲早會被破壞,漂亮的數字跟著回落。</p>
 
-        <figure data-i18n="g15.figA"><img class="chart" src="/images/g15a_shortlong_c.png" alt="導電油短期 vs 長期:短期導電橋讓電阻暫降、轉速升;長期殘留氧化反而增阻" loading="lazy"></figure>
+        <figure data-i18n="g15.figA"><img class="chart" src="/images/conductive-oil-short-vs-long_c.png" alt="導電油短期 vs 長期:短期導電橋讓電阻暫降、轉速升;長期殘留氧化反而增阻" loading="lazy"></figure>
 
         <h4 data-i18n="g15.h3">短期好看 vs 長期隱憂</h4>
         <table class="guide-table">
@@ -3624,7 +3624,7 @@
         </table>
         <p data-i18n="g15.p4">所以導電油不是「不能用」。要賽前衝一發帳面轉速、跑完再洗掉,是玩家的自由,很多高手也這樣用。真正的問題不是「導電油有沒有效」,而是 —— <strong>你怎麼知道手上這顆馬達,真實磨到哪了?</strong>只要你是「一邊加油、一邊看轉速判斷好壞」,答案就永遠不乾淨,因為油本身污染了讀數。</p>
 
-        <figure data-i18n="g15.figB"><img class="chart" src="/images/g15b_camps_c.png" alt="導電油爭議兩派:重帳面派要賽前轉速、重體質派要乾淨數據,目標不同故無標準答案" loading="lazy"></figure>
+        <figure data-i18n="g15.figB"><img class="chart" src="/images/conductive-oil-two-camps_c.png" alt="導電油爭議兩派:重帳面派要賽前轉速、重體質派要乾淨數據,目標不同故無標準答案" loading="lazy"></figure>
 
         <h4 data-i18n="g15.h5">爭議的核心:你要帳面數字,還是真實體質</h4>
         <table class="guide-table">
@@ -4707,7 +4707,7 @@
       'g10.figA': '<img class="chart" src="/images/track-segment-types_c.png" alt="軌道三種基本區段:直線 S、彎道 C、特殊 X 對馬達的需求" loading="lazy">',
       'g10.figB': '<img class="chart" src="/images/track-type-classification_c.png" alt="三類軌道:高速軌、技術軌、立體軌的判斷條件與特徵" loading="lazy">',
       'g10.figC': '<img class="chart" src="/images/track-motor-selection_c.png" alt="三類軌道的馬達選型:馬達特性、推薦馬達、齒比、輪徑對照" loading="lazy">',
-      'g14.figsum': '<img class="chart" src="/images/g14_summary_c.png" alt="為什麼磨馬達要鎖轉速不鎖電壓:電壓只是代理、鎖電壓會漂、鎖轉速才鎖住磨合條件三重點" loading="lazy">',
+      'g14.figsum': '<img class="chart" src="/images/fixed-speed-break-in-key-points_c.png" alt="為什麼磨馬達要鎖轉速不鎖電壓:電壓只是代理、鎖電壓會漂、鎖轉速才鎖住磨合條件三重點" loading="lazy">',
       'g14.fig': '<img class="chart" src="/images/speed-vs-voltage-control_c.png" alt="控壓 vs 控速磨合的物理對照:直接控制的量、磨合條件、跨馬達一致性、換向頻率、低速對研、實作六項比較" loading="lazy">',
       'g14.h1': '磨合到底在磨什麼',
       'g14.p1': '新馬達的碳刷是平的,和圓弧的整流子只有一條線接觸;磨合就是把碳刷磨出貼合整流子的弧面,讓兩者從「一條線」變成穩定貼合的接觸。這個「磨」發生在碳刷與整流子的<strong>滑動接觸面</strong>上。物理上主宰它的是<strong>滑動速度</strong>(整流子表面線速度 ∝ 轉速)、接觸壓力、電流密度與溫度 —— 其中你能即時控制的關鍵變數,是轉速。',
@@ -5609,7 +5609,7 @@
       'g10.figA': '<img class="chart" src="/images/track-segment-types_e.png" alt="Three track section types — straight, curve, special — and their motor demands" loading="lazy">',
       'g10.figB': '<img class="chart" src="/images/track-type-classification_e.png" alt="Three track types — high-speed, technical, 3D — conditions and traits" loading="lazy">',
       'g10.figC': '<img class="chart" src="/images/track-motor-selection_e.png" alt="Motor selection by track type: trait, recommended motor, gear ratio and wheel size" loading="lazy">',
-      'g14.figsum': '<img class="chart" src="/images/g14_summary_e.png" alt="Why lock RPM not voltage when breaking in a motor: voltage is a proxy, fixed voltage drifts, fixed RPM pins the condition down" loading="lazy">',
+      'g14.figsum': '<img class="chart" src="/images/fixed-speed-break-in-key-points_e.png" alt="Why lock RPM not voltage when breaking in a motor: voltage is a proxy, fixed voltage drifts, fixed RPM pins the condition down" loading="lazy">',
       'g14.fig': '<img class="chart" src="/images/speed-vs-voltage-control_e.png" alt="Fixed-voltage vs fixed-speed break-in compared: what you control, in-run condition, cross-motor consistency, commutation, low-speed bedding and setup" loading="lazy">',
       'g14.h1': 'What break-in is actually grinding',
       'g14.p1': 'A new motor\'s brush is flat and touches the round commutator on just a line; break-in grinds the brush into an arc that matches the commutator, taking the two from a single-line contact to a stable, seated one. That grinding happens at the <strong>sliding contact face</strong> between brush and commutator. Physically it is governed by <strong>sliding speed</strong> (commutator surface speed ∝ RPM), contact pressure, current density and temperature — and the key variable you can control in real time is RPM.',
@@ -5654,7 +5654,7 @@
       'g15.p1': 'Break-in doesn’t touch the magnets or the windings — it shapes the <strong>contact face between brush and commutator</strong>. A new motor’s brush is flat, touching the round commutator on just a small patch; break-in wears that brush into an arc that beds against the commutator, growing the contact area, lowering contact resistance, and letting the motor reach its designed RPM. A real-world Japanese log: a Power-Dash went from ~29,000 to 33,200 RPM (+4,000) — that gain is <strong>real break-in</strong>, better contact and lower loss. It happens without any special oil at all.',
       'g15.h2': 'Why the oil makes it “faster” instantly',
       'g15.p2': 'Conductive break-in oil usually does two things: it <strong>lubricates</strong>, helping the brush wear open faster (real); and it carries <strong>ultra-fine conductive particles</strong> that temporarily bridge the gaps in the brush-commutator contact. That second part drops contact resistance <em>instantly</em>, so the RPM spikes. The catch: that drop comes mostly from the <strong>oil film / carbon conducting</strong>, not from the contact face actually getting better. The Japanese community has a vivid term — “hikimaku-gire” (film break): the conductive film gives lovely RPM at first, but at high speed that film eventually breaks down, and the pretty numbers fall back.',
-      'g15.figA': '<img class="chart" src="/images/g15a_shortlong_e.png" alt="Conductive oil short vs long term: short-term bridge drops resistance and lifts RPM; long-term oxidized residue raises it again" loading="lazy">',
+      'g15.figA': '<img class="chart" src="/images/conductive-oil-short-vs-long_e.png" alt="Conductive oil short vs long term: short-term bridge drops resistance and lifts RPM; long-term oxidized residue raises it again" loading="lazy">',
       'g15.h3': 'Nice short-term vs the long-term catch',
       'g15.t.dim': 'Aspect',
       'g15.t.short': 'Short term (oil in)',
@@ -5682,7 +5682,7 @@
       'g15.b3.p': 'A pre-race boost, great paper RPM',
       'g15.b3.c': 'Measurement is off while oiled — selection misled',
       'g15.p4': 'So conductive oil isn’t “unusable.” Splashing on a pre-race RPM boost and washing it off after is a racer’s free choice — plenty of top players do exactly that. The real question isn’t “does conductive oil work,” it’s — <strong>how do you know how far this motor is actually broken in?</strong> As long as you’re oiling and reading RPM to judge, the answer is never clean, because the oil itself contaminates the reading.',
-      'g15.figB': '<img class="chart" src="/images/g15b_camps_e.png" alt="Two camps on conductive oil: paper-number camp wants pre-race RPM, constitution camp wants clean data — different goals, no single answer" loading="lazy">',
+      'g15.figB': '<img class="chart" src="/images/conductive-oil-two-camps_e.png" alt="Two camps on conductive oil: paper-number camp wants pre-race RPM, constitution camp wants clean data — different goals, no single answer" loading="lazy">',
       'g15.h5': 'The core of the debate: paper number, or true constitution',
       'g15.t3.dim': 'Aspect',
       'g15.t3.paper': 'Paper-number camp',
@@ -5720,7 +5720,7 @@
       'g16.key': 'In one line: when a motor slows, <strong>rule out battery, dirt and lube first</strong> — most cases end here. Only if all three are cleared and it is still slow is it true degradation; judge retirement by data, so you neither replace a motor too early on a hunch nor let a demagnetized one drag your results.',
       'g16.related': 'Further reading: clean-and-oil or retire? See <a href="../motor-wash-vs-break-in/">motor wash vs break-in</a>; confirm real degradation with <a href="../motor-degradation-signs/">8 signs your motor is dying and when to retire</a>; quantify it with <a href="../motor-break-in-resistance-curve/">the R break-in curve</a>.',
       'g16.w1': 'This is general troubleshooting. Real slowdowns are often several causes stacked (e.g. an aging battery plus light carbon buildup); rule them out one at a time, change only one variable per test, and compare under the same battery and temperature for a reliable read.',
-      'g15.figsum': '<img class="chart" src="/images/g15_summary_e.png" alt="Does conductive oil really break in a motor: higher RPM isn\'t done, film break falls back, the oil taints the read" loading="lazy">',
+      'g15.figsum': '<img class="chart" src="/images/conductive-oil-verdict_e.png" alt="Does conductive oil really break in a motor: higher RPM isn\'t done, film break falls back, the oil taints the read" loading="lazy">',
 
       'cl.tag': 'CHANGELOG',
       'cl.title': 'Firmware Release Notes',
@@ -6633,7 +6633,7 @@
       'g10.figA': '<img class="chart" src="/images/track-segment-types_j.png" alt="コースの3区間:ストレート S・カーブ C・特殊 X のモーター要求" loading="lazy">',
       'g10.figB': '<img class="chart" src="/images/track-type-classification_j.png" alt="3種類のコース:高速・テクニカル・立体の判定条件と特徴" loading="lazy">',
       'g10.figC': '<img class="chart" src="/images/track-motor-selection_j.png" alt="コース別モーター選定:特性・推奨モーター・ギア比・タイヤ径の対照" loading="lazy">',
-      'g14.figsum': '<img class="chart" src="/images/g14_summary_j.png" alt="なぜ慣らしは電圧でなく回転数を固定するのか:電圧は代理、定電圧は流れる、定回転数で条件固定の3点" loading="lazy">',
+      'g14.figsum': '<img class="chart" src="/images/fixed-speed-break-in-key-points_j.png" alt="なぜ慣らしは電圧でなく回転数を固定するのか:電圧は代理、定電圧は流れる、定回転数で条件固定の3点" loading="lazy">',
       'g14.fig': '<img class="chart" src="/images/speed-vs-voltage-control_j.png" alt="定電圧 vs 定回転数の慣らし物理対照:制御する量・慣らし条件・モーター間一貫性・整流周波数・低速摺り合わせ・実装の 6 項目比較" loading="lazy">',
       'g14.h1': '慣らしは結局なにを削っているのか',
       'g14.p1': '新品モーターのブラシは平らで、丸い整流子とは線でしか接触していない;慣らしとはブラシを整流子に合う円弧に削り、「線」の接触から安定して馴染んだ接触へ変えること。この「削り」はブラシと整流子の<strong>摺動接触面</strong>で起きる。物理的にそれを支配するのは<strong>摺動速度</strong>(整流子表面の周速 ∝ 回転数)、接触圧、電流密度、温度 —— そのうちリアルタイムで制御できる鍵が回転数だ。',
@@ -6678,7 +6678,7 @@
       'g15.p1': '慣らしが削るのは磁石でも巻線でもなく、<strong>ブラシと整流子の接触面</strong>だ。新品のブラシは平らで、丸い整流子には小さな一点でしか触れていない;慣らしはそのブラシを整流子に沿う弧に削り、接触面積を広げ、接触抵抗を下げ、モーターが設計上の回転数に届くようにする。日本の実測例:Power-Dash が約 29,000 回転から 33,200 回転(+4,000)へ — この上昇は<strong>本当の慣らし</strong>によるもので、接触が良くなり損失が減った結果だ。これは特別なオイルがなくても起きる。',
       'g15.h2': 'なぜオイルで「すぐ速くなる」のか',
       'g15.p2': '導電性慣らしオイルは通常二つのことをする:一つは<strong>潤滑</strong>で、ブラシが早く削れるのを助ける(これは実);もう一つはオイル中の<strong>極細の導電成分</strong>が、ブラシと整流子の接触の隙間に一時的に導電の橋を架けることだ。後者は接触抵抗を「瞬間的に」下げるので、回転数が跳ね上がる。問題は、この低下が主に<strong>油膜/カーボンの導通</strong>によるもので、接触面そのものが良くなったわけではない点だ。日本のコミュニティには言い得て妙な言葉がある —「皮膜切れ」:オイルが作る導電皮膜で最初は綺麗な回転数が出るが、高速回転下でこの皮膜はいずれ壊れ、綺麗な数字も戻ってしまう。',
-      'g15.figA': '<img class="chart" src="/images/g15a_shortlong_j.png" alt="導電オイルの短期 vs 長期:短期は導電の橋で抵抗が下がり回転上昇、長期は残留の酸化で逆に抵抗増" loading="lazy">',
+      'g15.figA': '<img class="chart" src="/images/conductive-oil-short-vs-long_j.png" alt="導電オイルの短期 vs 長期:短期は導電の橋で抵抗が下がり回転上昇、長期は残留の酸化で逆に抵抗増" loading="lazy">',
       'g15.h3': '短期の見栄え vs 長期の懸念',
       'g15.t.dim': '観点',
       'g15.t.short': '短期(オイル注入中)',
@@ -6706,7 +6706,7 @@
       'g15.b3.p': 'レース前の一押し、見栄えの回転数',
       'g15.b3.c': '注油中は測定が狂い、選別が誤導されやすい',
       'g15.p4': 'だから導電オイルは「使えない」のではない。レース前に見栄えの回転数を一発出して、走り終えたら洗い落とすのはレーサーの自由で、多くの上級者もそうしている。本当の問いは「導電オイルは効くか」ではなく — <strong>手元のこのモーターが、実際どこまで慣らせたかをどう知るか</strong>だ。オイルを挿しながら回転数で良否を判断している限り、答えは決して綺麗にならない。オイル自体が読みを汚しているからだ。',
-      'g15.figB': '<img class="chart" src="/images/g15b_camps_j.png" alt="導電オイル論争の二派:見栄え派はレース前の回転、素性派は綺麗なデータ — 目的が違うので唯一の答えはない" loading="lazy">',
+      'g15.figB': '<img class="chart" src="/images/conductive-oil-two-camps_j.png" alt="導電オイル論争の二派:見栄え派はレース前の回転、素性派は綺麗なデータ — 目的が違うので唯一の答えはない" loading="lazy">',
       'g15.h5': '論争の核心:見栄えの数字か、本当の素性か',
       'g15.t3.dim': '観点',
       'g15.t3.paper': '見栄え派',
@@ -6744,7 +6744,7 @@
       'g16.key': '一言:モーターが遅くなったら、<strong>まず電池・汚れ・潤滑</strong>の 3 つを排除 —— 多くはここで解決。3 つとも排除しても遅いなら本当の劣化。データで引退を判断し、勘で早く替えず、減磁したモーターで成績を落とさない。',
       'g16.related': '関連:清掃・注油か引退か —— <a href="../motor-wash-vs-break-in/">モーター洗浄 vs 慣らし</a>;本当に劣化かを確認 —— <a href="../motor-degradation-signs/">劣化の 8 サインと引退判定</a>;数値化するなら —— <a href="../motor-break-in-resistance-curve/">R 慣らしカーブ</a>。',
       'g16.w1': '本記事は一般的なトラブル対処です。実際の低下は複数要因が重なることも多い(例:電池劣化 + 軽い堆積)。1 つずつ切り分け、1 回に 1 変数だけ変え、同じ電池・温度で比較すると判断が正確です。',
-      'g15.figsum': '<img class="chart" src="/images/g15_summary_j.png" alt="導電オイルは本当に効くか:回転上昇は完了でない、皮膜切れで戻る、オイルが読みを汚すの3点" loading="lazy">',
+      'g15.figsum': '<img class="chart" src="/images/conductive-oil-verdict_j.png" alt="導電オイルは本当に効くか:回転上昇は完了でない、皮膜切れで戻る、オイルが読みを汚すの3点" loading="lazy">',
     }
   };
 

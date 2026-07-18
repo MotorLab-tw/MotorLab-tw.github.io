@@ -832,7 +832,7 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-break-in-speed-vs-voltage/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-break-in-speed-vs-voltage/"/>
     <image:image>
-      <image:loc>https://motorlab-tw.github.io/images/g14_summary_c.png</image:loc>
+      <image:loc>https://motorlab-tw.github.io/images/fixed-speed-break-in-key-points_c.png</image:loc>
       <image:title>為什麼磨馬達要鎖轉速不鎖電壓:電壓只是代理、鎖電壓會漂、鎖轉速才鎖住磨合條件三重點</image:title>
     </image:image>
     <image:image>
@@ -850,7 +850,7 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-break-in-speed-vs-voltage/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-break-in-speed-vs-voltage/"/>
     <image:image>
-      <image:loc>https://motorlab-tw.github.io/images/g14_summary_e.png</image:loc>
+      <image:loc>https://motorlab-tw.github.io/images/fixed-speed-break-in-key-points_e.png</image:loc>
       <image:title>Why lock RPM not voltage when breaking in a motor: voltage is a proxy, fixed voltage drifts, fixed RPM pins the condition down</image:title>
     </image:image>
     <image:image>
@@ -868,7 +868,7 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-break-in-speed-vs-voltage/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-break-in-speed-vs-voltage/"/>
     <image:image>
-      <image:loc>https://motorlab-tw.github.io/images/g14_summary_j.png</image:loc>
+      <image:loc>https://motorlab-tw.github.io/images/fixed-speed-break-in-key-points_j.png</image:loc>
       <image:title>なぜ慣らしは電圧でなく回転数を固定するのか:電圧は代理、定電圧は流れる、定回転数で条件固定の3点</image:title>
     </image:image>
     <image:image>
@@ -887,15 +887,15 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/conductive-oil-motor-break-in/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/conductive-oil-motor-break-in/"/>
     <image:image>
-      <image:loc>https://motorlab-tw.github.io/images/g15_summary_c.png</image:loc>
+      <image:loc>https://motorlab-tw.github.io/images/conductive-oil-verdict_c.png</image:loc>
       <image:title>導電油磨馬達真的有效嗎:轉速升不等於磨好、皮膜切れ會回落、油污染讀數三重點</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://motorlab-tw.github.io/images/g15a_shortlong_c.png</image:loc>
+      <image:loc>https://motorlab-tw.github.io/images/conductive-oil-short-vs-long_c.png</image:loc>
       <image:title>導電油短期 vs 長期:短期導電橋讓電阻暫降、轉速升;長期殘留氧化反而增阻</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://motorlab-tw.github.io/images/g15b_camps_c.png</image:loc>
+      <image:loc>https://motorlab-tw.github.io/images/conductive-oil-two-camps_c.png</image:loc>
       <image:title>導電油爭議兩派:重帳面派要賽前轉速、重體質派要乾淨數據,目標不同故無標準答案</image:title>
     </image:image>
   </url>
@@ -909,15 +909,15 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/conductive-oil-motor-break-in/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/conductive-oil-motor-break-in/"/>
     <image:image>
-      <image:loc>https://motorlab-tw.github.io/images/g15_summary_e.png</image:loc>
+      <image:loc>https://motorlab-tw.github.io/images/conductive-oil-verdict_e.png</image:loc>
       <image:title>Does conductive oil really break in a motor: higher RPM isn't done, film break falls back, the oil taints the read</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://motorlab-tw.github.io/images/g15a_shortlong_e.png</image:loc>
+      <image:loc>https://motorlab-tw.github.io/images/conductive-oil-short-vs-long_e.png</image:loc>
       <image:title>Conductive oil short vs long term: short-term bridge drops resistance and lifts RPM; long-term oxidized residue raises it again</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://motorlab-tw.github.io/images/g15b_camps_e.png</image:loc>
+      <image:loc>https://motorlab-tw.github.io/images/conductive-oil-two-camps_e.png</image:loc>
       <image:title>Two camps on conductive oil: paper-number camp wants pre-race RPM, constitution camp wants clean data — different goals, no single answer</image:title>
     </image:image>
   </url>
@@ -931,15 +931,15 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/conductive-oil-motor-break-in/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/conductive-oil-motor-break-in/"/>
     <image:image>
-      <image:loc>https://motorlab-tw.github.io/images/g15_summary_j.png</image:loc>
+      <image:loc>https://motorlab-tw.github.io/images/conductive-oil-verdict_j.png</image:loc>
       <image:title>導電オイルは本当に効くか:回転上昇は完了でない、皮膜切れで戻る、オイルが読みを汚すの3点</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://motorlab-tw.github.io/images/g15a_shortlong_j.png</image:loc>
+      <image:loc>https://motorlab-tw.github.io/images/conductive-oil-short-vs-long_j.png</image:loc>
       <image:title>導電オイルの短期 vs 長期:短期は導電の橋で抵抗が下がり回転上昇、長期は残留の酸化で逆に抵抗増</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://motorlab-tw.github.io/images/g15b_camps_j.png</image:loc>
+      <image:loc>https://motorlab-tw.github.io/images/conductive-oil-two-camps_j.png</image:loc>
       <image:title>導電オイル論争の二派:見栄え派はレース前の回転、素性派は綺麗なデータ — 目的が違うので唯一の答えはない</image:title>
     </image:image>
   </url>
