@@ -772,7 +772,7 @@
   <!-- g12:先選別後磨合(methodology 收錄,實體住 /guides/) -->
   <url>
     <loc>https://motorlab-tw.github.io/guides/motor-selection-before-break-in/</loc>
-    <lastmod>2026-07-17</lastmod>
+    <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-selection-before-break-in/"/>
@@ -780,17 +780,17 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-selection-before-break-in/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-selection-before-break-in/"/>
     <image:image>
-      <image:loc>https://motorlab-tw.github.io/images/guides/ig_01_measure_first_zh.png</image:loc>
+      <image:loc>https://motorlab-tw.github.io/images/measure-before-break-in_c.png</image:loc>
       <image:title>先量測，後磨合：磨合只改善接觸面，鐵芯與磁路是先天</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://motorlab-tw.github.io/images/guides/ig_02_current_comparison_zh.png</image:loc>
+      <image:loc>https://motorlab-tw.github.io/images/current-is-motor-constitution_c.png</image:loc>
       <image:title>相同轉速下電流越低損耗越小——電流就是馬達的體質</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/en/guides/motor-selection-before-break-in/</loc>
-    <lastmod>2026-07-17</lastmod>
+    <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-selection-before-break-in/"/>
@@ -798,17 +798,17 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-selection-before-break-in/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-selection-before-break-in/"/>
     <image:image>
-      <image:loc>https://motorlab-tw.github.io/images/guides/ig_01_measure_first_en.png</image:loc>
+      <image:loc>https://motorlab-tw.github.io/images/measure-before-break-in_e.png</image:loc>
       <image:title>Measure first, break in later — break-in only fixes the brush contact surface</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://motorlab-tw.github.io/images/guides/ig_02_current_comparison_en.png</image:loc>
+      <image:loc>https://motorlab-tw.github.io/images/current-is-motor-constitution_e.png</image:loc>
       <image:title>Same speed, lower current means lower loss — current is the motor constitution</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/ja/guides/motor-selection-before-break-in/</loc>
-    <lastmod>2026-07-17</lastmod>
+    <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-selection-before-break-in/"/>
@@ -816,11 +816,11 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-selection-before-break-in/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-selection-before-break-in/"/>
     <image:image>
-      <image:loc>https://motorlab-tw.github.io/images/guides/ig_01_measure_first_ja.png</image:loc>
+      <image:loc>https://motorlab-tw.github.io/images/measure-before-break-in_j.png</image:loc>
       <image:title>先に測って後で慣らす：慣らしで直るのは接触面だけ、鉄芯と磁路は先天</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://motorlab-tw.github.io/images/guides/ig_02_current_comparison_ja.png</image:loc>
+      <image:loc>https://motorlab-tw.github.io/images/current-is-motor-constitution_j.png</image:loc>
       <image:title>同じ回転数で電流が少ないほど損失が小さい——電流こそモーターの素性</image:title>
     </image:image>
   </url>

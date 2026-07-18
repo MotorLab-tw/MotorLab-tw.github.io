@@ -1941,7 +1941,7 @@
 <span class="guide-tag" data-i18n="g12.tag">METHODOLOGY · Motor Selection</span>
 <h1 data-i18n="g12.title">Select Before Break-in: Read a Motor's Constitution by Current</h1><p class="guide-byline">Edited by MotorLab Team</p><p class="guide-dates">Published 2026-07-02</p>
 <p class="guide-lead" data-i18n="g12.lead">Same batch, same model — yet no two motors are equal. Break-in only improves one thing: the contact between brushes and commutator. Iron core, magnetic circuit, rotor balance — those are born, not made, and no amount of running-in fixes them. The right move is measure first, break in later: let data pick the specimens worth developing before you spend time and brush life on them.</p>
-<figure data-i18n="g12.fig1"><img alt="Measure first, break in later — break-in only fixes the brush contact surface" height="1080" loading="lazy" src="/images/guides/ig_01_measure_first_en.png" width="1080"/></figure>
+<figure data-i18n="g12.fig1"><img alt="Measure before break-in: break-in only fixes brush-commutator contact; core, magnetics and balance are born-in losses — invest in good motors" class="chart" loading="lazy" src="/images/measure-before-break-in_e.png"/></figure>
 <h2 data-i18n="g12.h1">Why select first</h2>
 <p data-i18n="g12.p1">Stamping stress on the lamination edges, stack tightness, magnet-to-can concentricity, rotor balance — every one of these manufacturing tolerances turns into loss torque: torque the motor burns just to spin itself, before it ever pushes the car.</p>
 <div class="guide-tip">
@@ -1952,7 +1952,7 @@
 <div class="guide-tip">
 <p data-i18n="g12.ex">Example: locked to the same speed, motor A reads 250mA and motor B reads 320mA → A has lower losses and is worth breaking in; B is born limited and won't catch up no matter how long you run it.</p>
 </div>
-<figure data-i18n="g12.fig2"><img alt="Same speed, lower current means lower loss — current is the motor constitution" height="1080" loading="lazy" src="/images/guides/ig_02_current_comparison_en.png" width="1080"/></figure>
+<figure data-i18n="g12.fig2">&lt;img class="chart" src="/images/current-is-motor-constitution_e.png" alt="Current is the motor</figure>
 <h2 data-i18n="g12.h3">The key to measuring right: lock the speed, then compare</h2>
 <p data-i18n="g12.p3">Comparing current at a fixed voltage hides a trap: a good motor spins faster, and losses rise with speed (hysteresis ∝ speed, eddy + windage ∝ speed²), so the faster motor's losses inflate and the individual differences get compressed — they look closer than they really are. The right method is to lock every motor to the same speed (feedback control adjusts the voltage to hold your set speed).</p>
 <p data-i18n="g12.p3b">Locking the speed hands you two independent indicators at once: <strong>current</strong> → the <strong>loss torque</strong> at that speed (same baseline, apples to apples); <strong>voltage</strong> (the output needed to hold the speed) → a free read of <strong>Ke (magnetic strength)</strong>, Ke = (V − I·R) / speed. Now you can split two motors' difference into two independent components — magnetic difference and loss difference. You may find two motors with identical no-load current are actually one weak-magnet/low-loss and one strong-magnet/high-loss — completely different characters.</p>

@@ -1941,7 +1941,7 @@
 <span class="guide-tag" data-i18n="g12.tag">METHODOLOGY · 馬達選別</span>
 <h1 data-i18n="g12.title">先選別，後磨合：用電流讀出馬達體質</h1><p class="guide-byline">編輯者:MotorLab Team</p><p class="guide-dates">發表 2026-07-02</p>
 <p class="guide-lead" data-i18n="g12.lead">同一批、同型號的馬達，體質天生不一樣。磨合能改善的只有電刷與整流子的接觸面 —— 鐵芯、磁路、動平衡這些先天差異，磨多久都不會變好。真正的做法是「先量測、後磨合」：讓數據先挑出值得培養的個體，再把時間與碳刷壽命投資下去。</p>
-<figure data-i18n="g12.fig1"><img alt="先量測，後磨合：磨合只改善接觸面，鐵芯與磁路是先天" height="1080" loading="lazy" src="/images/guides/ig_01_measure_first_zh.png" width="1080"/></figure>
+<figure data-i18n="g12.fig1"><img alt="先量測後磨合:磨合只能改善碳刷與整流子接觸面,鐵芯/磁路/動平衡是天生損耗——時間投資在體質好的馬達" class="chart" loading="lazy" src="/images/measure-before-break-in_c.png"/></figure>
 <h2 data-i18n="g12.h1">為什麼要先選別</h2>
 <p data-i18n="g12.p1">矽鋼片沖壓的邊緣應力、疊片鬆緊、磁鐵與外殼同心度、轉子動平衡 —— 每一項製造公差，最後都變成「損耗轉矩」：馬達還沒推車，就先吃掉一部分自己的力量。</p>
 <div class="guide-tip">
@@ -1952,7 +1952,7 @@
 <div class="guide-tip">
 <p data-i18n="g12.ex">例：鎖在同一轉速下，馬達 A 讀 250mA、馬達 B 讀 320mA → A 損耗小、值得磨合；B 先天受限，磨再久也追不上。</p>
 </div>
-<figure data-i18n="g12.fig2"><img alt="相同轉速下電流越低損耗越小——電流就是馬達的體質" height="1080" loading="lazy" src="/images/guides/ig_02_current_comparison_zh.png" width="1080"/></figure>
+<figure data-i18n="g12.fig2"><img alt="電流就是馬達的體質:相同電壓與轉速下,I0 較低(250mA)損耗小值得磨合,I0 較高(320mA)先天受限" class="chart" loading="lazy" src="/images/current-is-motor-constitution_c.png"/></figure>
 <h2 data-i18n="g12.h3">量得準的關鍵：鎖轉速再比</h2>
 <p data-i18n="g12.p3">直接用固定電壓比電流有個陷阱：體質好的馬達轉得快，而損耗又隨轉速上升（磁滯 ∝ 轉速、渦流與風阻 ∝ 轉速²），快轉的損耗被放大，反而把個體差異壓縮、看起來比實際接近。正確做法是把所有馬達鎖在同一轉速下比（用回授控制自動調整電壓維持設定轉速）。</p>
 <p data-i18n="g12.p3b">鎖轉速後一次拿到兩個獨立指標：<strong>電流</strong> → 對應該轉速的<strong>損耗轉矩</strong>（同基準、apples to apples）；<strong>電壓</strong>（維持轉速所需的輸出）→ 免費算出 <strong>Ke（磁路強度）</strong>，Ke ＝（V − I·R）／ 轉速。於是能把兩顆馬達的差異拆成「磁路差」與「損耗差」兩個獨立成分 —— 你可能發現兩顆無載電流一樣的馬達，其實一顆磁弱損耗小、一顆磁強損耗大，特性完全不同。</p>
