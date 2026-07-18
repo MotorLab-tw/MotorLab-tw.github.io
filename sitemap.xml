@@ -242,6 +242,10 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-wash-vs-break-in/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-wash-vs-break-in/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-wash-vs-break-in/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/g4_compare_c.png</image:loc>
+      <image:title>洗馬達 vs 磨馬達:時機、目的、工具、耗時、後續五項對照</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/en/guides/motor-wash-vs-break-in/</loc>
@@ -252,6 +256,10 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-wash-vs-break-in/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-wash-vs-break-in/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-wash-vs-break-in/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/g4_compare_e.png</image:loc>
+      <image:title>Wash vs break-in compared: when, purpose, tools, duration and aftercare</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/ja/guides/motor-wash-vs-break-in/</loc>
@@ -262,6 +270,10 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-wash-vs-break-in/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-wash-vs-break-in/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-wash-vs-break-in/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/g4_compare_j.png</image:loc>
+      <image:title>洗浄 vs 慣らし:タイミング・目的・工具・所要時間・後処理の対照</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/guides/racing-motor-break-in/</loc>
@@ -272,6 +284,10 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/racing-motor-break-in/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/racing-motor-break-in/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/racing-motor-break-in/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/g5_compare_c.png</image:loc>
+      <image:title>業餘 vs 競賽水準:RPM 波動、同型差異、重現度三項對照</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/en/guides/racing-motor-break-in/</loc>
@@ -282,6 +298,10 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/racing-motor-break-in/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/racing-motor-break-in/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/racing-motor-break-in/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/g5_compare_e.png</image:loc>
+      <image:title>Amateur vs competition level: RPM variance, motor spread and repeatability</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/ja/guides/racing-motor-break-in/</loc>
@@ -292,6 +312,10 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/racing-motor-break-in/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/racing-motor-break-in/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/racing-motor-break-in/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/g5_compare_j.png</image:loc>
+      <image:title>アマチュア vs 競技水準:RPM 変動・ばらつき・再現性の対照</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/guides/racing-prep-techniques/</loc>
@@ -428,6 +452,18 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/track-analysis-motor-selection/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/track-analysis-motor-selection/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/track-analysis-motor-selection/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/g10a_sections_c.png</image:loc>
+      <image:title>軌道三種基本區段:直線 S、彎道 C、特殊 X 對馬達的需求</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/g10b_tracktypes_c.png</image:loc>
+      <image:title>三類軌道:高速軌、技術軌、立體軌的判斷條件與特徵</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/g10c_selection_c.png</image:loc>
+      <image:title>三類軌道的馬達選型:馬達特性、推薦馬達、齒比、輪徑對照</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/en/guides/track-analysis-motor-selection/</loc>
@@ -438,6 +474,18 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/track-analysis-motor-selection/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/track-analysis-motor-selection/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/track-analysis-motor-selection/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/g10a_sections_e.png</image:loc>
+      <image:title>Three track section types — straight, curve, special — and their motor demands</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/g10b_tracktypes_e.png</image:loc>
+      <image:title>Three track types — high-speed, technical, 3D — conditions and traits</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/g10c_selection_e.png</image:loc>
+      <image:title>Motor selection by track type: trait, recommended motor, gear ratio and wheel size</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/ja/guides/track-analysis-motor-selection/</loc>
@@ -448,6 +496,18 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/track-analysis-motor-selection/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/track-analysis-motor-selection/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/track-analysis-motor-selection/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/g10a_sections_j.png</image:loc>
+      <image:title>コースの3区間:ストレート S・カーブ C・特殊 X のモーター要求</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/g10b_tracktypes_j.png</image:loc>
+      <image:title>3種類のコース:高速・テクニカル・立体の判定条件と特徴</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/g10c_selection_j.png</image:loc>
+      <image:title>コース別モーター選定:特性・推奨モーター・ギア比・タイヤ径の対照</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/guides/crash-risk-trigger-model/</loc>
@@ -671,6 +731,14 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-selection-before-break-in/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-selection-before-break-in/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-selection-before-break-in/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/guides/ig_01_measure_first_zh.png</image:loc>
+      <image:title>先量測，後磨合：磨合只改善接觸面，鐵芯與磁路是先天</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/guides/ig_02_current_comparison_zh.png</image:loc>
+      <image:title>相同轉速下電流越低損耗越小——電流就是馬達的體質</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/en/guides/motor-selection-before-break-in/</loc>
@@ -681,6 +749,14 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-selection-before-break-in/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-selection-before-break-in/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-selection-before-break-in/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/guides/ig_01_measure_first_en.png</image:loc>
+      <image:title>Measure first, break in later — break-in only fixes the brush contact surface</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/guides/ig_02_current_comparison_en.png</image:loc>
+      <image:title>Same speed, lower current means lower loss — current is the motor constitution</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/ja/guides/motor-selection-before-break-in/</loc>
@@ -691,6 +767,14 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-selection-before-break-in/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-selection-before-break-in/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-selection-before-break-in/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/guides/ig_01_measure_first_ja.png</image:loc>
+      <image:title>先に測って後で慣らす：慣らしで直るのは接触面だけ、鉄芯と磁路は先天</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/guides/ig_02_current_comparison_ja.png</image:loc>
+      <image:title>同じ回転数で電流が少ないほど損失が小さい——電流こそモーターの素性</image:title>
+    </image:image>
   </url>
 
   <!-- g13:磨馬達要磨多久 R 磨合曲線(methodology 收錄,實體住 /guides/) -->
@@ -703,6 +787,10 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-break-in-resistance-curve/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-break-in-resistance-curve/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-break-in-resistance-curve/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/r_test_c.jpg</image:loc>
+      <image:title>一顆 Mach-Dash PRO 連續量測 560 次的內部電阻循環校正曲線,呈現磨合三階段</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/en/guides/motor-break-in-resistance-curve/</loc>
@@ -713,6 +801,10 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-break-in-resistance-curve/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-break-in-resistance-curve/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-break-in-resistance-curve/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/r_test_e.jpg</image:loc>
+      <image:title>Internal-resistance cycle-aligned curve of one Mach-Dash PRO over 560 continuous runs, showing the three break-in stages</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/ja/guides/motor-break-in-resistance-curve/</loc>
@@ -723,6 +815,10 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-break-in-resistance-curve/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-break-in-resistance-curve/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-break-in-resistance-curve/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/r_test_j.jpg</image:loc>
+      <image:title>1 個の Mach-Dash PRO を連続 560 回計測した内部抵抗の周期補正曲線、慣らし 3 段階を示す</image:title>
+    </image:image>
   </url>
 
   <!-- g14:磨馬達控速 vs 控壓(methodology 收錄,實體住 /guides/) -->
@@ -735,6 +831,14 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-break-in-speed-vs-voltage/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-break-in-speed-vs-voltage/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-break-in-speed-vs-voltage/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/g14_summary_c.png</image:loc>
+      <image:title>為什麼磨馬達要鎖轉速不鎖電壓:電壓只是代理、鎖電壓會漂、鎖轉速才鎖住磨合條件三重點</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/speed-vs-voltage-control_c.png</image:loc>
+      <image:title>控壓 vs 控速磨合的物理對照:直接控制的量、磨合條件、跨馬達一致性、換向頻率、低速對研、實作六項比較</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/en/guides/motor-break-in-speed-vs-voltage/</loc>
@@ -745,6 +849,14 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-break-in-speed-vs-voltage/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-break-in-speed-vs-voltage/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-break-in-speed-vs-voltage/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/g14_summary_e.png</image:loc>
+      <image:title>Why lock RPM not voltage when breaking in a motor: voltage is a proxy, fixed voltage drifts, fixed RPM pins the condition down</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/speed-vs-voltage-control_e.png</image:loc>
+      <image:title>Fixed-voltage vs fixed-speed break-in compared: what you control, in-run condition, cross-motor consistency, commutation, low-speed bedding and setup</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/ja/guides/motor-break-in-speed-vs-voltage/</loc>
@@ -755,6 +867,14 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-break-in-speed-vs-voltage/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-break-in-speed-vs-voltage/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-break-in-speed-vs-voltage/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/g14_summary_j.png</image:loc>
+      <image:title>なぜ慣らしは電圧でなく回転数を固定するのか:電圧は代理、定電圧は流れる、定回転数で条件固定の3点</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/speed-vs-voltage-control_j.png</image:loc>
+      <image:title>定電圧 vs 定回転数の慣らし物理対照:制御する量・慣らし条件・モーター間一貫性・整流周波数・低速摺り合わせ・実装の 6 項目比較</image:title>
+    </image:image>
   </url>
   <!-- g15:導電油磨馬達(methodology 收錄,實體住 /guides/) -->
   <url>
@@ -766,6 +886,18 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/conductive-oil-motor-break-in/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/conductive-oil-motor-break-in/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/conductive-oil-motor-break-in/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/g15_summary_c.png</image:loc>
+      <image:title>導電油磨馬達真的有效嗎:轉速升不等於磨好、皮膜切れ會回落、油污染讀數三重點</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/g15a_shortlong_c.png</image:loc>
+      <image:title>導電油短期 vs 長期:短期導電橋讓電阻暫降、轉速升;長期殘留氧化反而增阻</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/g15b_camps_c.png</image:loc>
+      <image:title>導電油爭議兩派:重帳面派要賽前轉速、重體質派要乾淨數據,目標不同故無標準答案</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/en/guides/conductive-oil-motor-break-in/</loc>
@@ -776,6 +908,18 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/conductive-oil-motor-break-in/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/conductive-oil-motor-break-in/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/conductive-oil-motor-break-in/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/g15_summary_e.png</image:loc>
+      <image:title>Does conductive oil really break in a motor: higher RPM isn't done, film break falls back, the oil taints the read</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/g15a_shortlong_e.png</image:loc>
+      <image:title>Conductive oil short vs long term: short-term bridge drops resistance and lifts RPM; long-term oxidized residue raises it again</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/g15b_camps_e.png</image:loc>
+      <image:title>Two camps on conductive oil: paper-number camp wants pre-race RPM, constitution camp wants clean data — different goals, no single answer</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/ja/guides/conductive-oil-motor-break-in/</loc>
@@ -786,6 +930,18 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/conductive-oil-motor-break-in/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/conductive-oil-motor-break-in/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/conductive-oil-motor-break-in/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/g15_summary_j.png</image:loc>
+      <image:title>導電オイルは本当に効くか:回転上昇は完了でない、皮膜切れで戻る、オイルが読みを汚すの3点</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/g15a_shortlong_j.png</image:loc>
+      <image:title>導電オイルの短期 vs 長期:短期は導電の橋で抵抗が下がり回転上昇、長期は残留の酸化で逆に抵抗増</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/g15b_camps_j.png</image:loc>
+      <image:title>導電オイル論争の二派:見栄え派はレース前の回転、素性派は綺麗なデータ — 目的が違うので唯一の答えはない</image:title>
+    </image:image>
   </url>
 
   <url>
