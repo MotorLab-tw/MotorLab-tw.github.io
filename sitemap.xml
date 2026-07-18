@@ -453,15 +453,15 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/track-analysis-motor-selection/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/track-analysis-motor-selection/"/>
     <image:image>
-      <image:loc>https://motorlab-tw.github.io/images/g10a_sections_c.png</image:loc>
+      <image:loc>https://motorlab-tw.github.io/images/track-segment-types_c.png</image:loc>
       <image:title>軌道三種基本區段:直線 S、彎道 C、特殊 X 對馬達的需求</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://motorlab-tw.github.io/images/g10b_tracktypes_c.png</image:loc>
+      <image:loc>https://motorlab-tw.github.io/images/track-type-classification_c.png</image:loc>
       <image:title>三類軌道:高速軌、技術軌、立體軌的判斷條件與特徵</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://motorlab-tw.github.io/images/g10c_selection_c.png</image:loc>
+      <image:loc>https://motorlab-tw.github.io/images/track-motor-selection_c.png</image:loc>
       <image:title>三類軌道的馬達選型:馬達特性、推薦馬達、齒比、輪徑對照</image:title>
     </image:image>
   </url>
@@ -475,15 +475,15 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/track-analysis-motor-selection/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/track-analysis-motor-selection/"/>
     <image:image>
-      <image:loc>https://motorlab-tw.github.io/images/g10a_sections_e.png</image:loc>
+      <image:loc>https://motorlab-tw.github.io/images/track-segment-types_e.png</image:loc>
       <image:title>Three track section types — straight, curve, special — and their motor demands</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://motorlab-tw.github.io/images/g10b_tracktypes_e.png</image:loc>
+      <image:loc>https://motorlab-tw.github.io/images/track-type-classification_e.png</image:loc>
       <image:title>Three track types — high-speed, technical, 3D — conditions and traits</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://motorlab-tw.github.io/images/g10c_selection_e.png</image:loc>
+      <image:loc>https://motorlab-tw.github.io/images/track-motor-selection_e.png</image:loc>
       <image:title>Motor selection by track type: trait, recommended motor, gear ratio and wheel size</image:title>
     </image:image>
   </url>
@@ -497,15 +497,15 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/track-analysis-motor-selection/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/track-analysis-motor-selection/"/>
     <image:image>
-      <image:loc>https://motorlab-tw.github.io/images/g10a_sections_j.png</image:loc>
+      <image:loc>https://motorlab-tw.github.io/images/track-segment-types_j.png</image:loc>
       <image:title>コースの3区間:ストレート S・カーブ C・特殊 X のモーター要求</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://motorlab-tw.github.io/images/g10b_tracktypes_j.png</image:loc>
+      <image:loc>https://motorlab-tw.github.io/images/track-type-classification_j.png</image:loc>
       <image:title>3種類のコース:高速・テクニカル・立体の判定条件と特徴</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://motorlab-tw.github.io/images/g10c_selection_j.png</image:loc>
+      <image:loc>https://motorlab-tw.github.io/images/track-motor-selection_j.png</image:loc>
       <image:title>コース別モーター選定:特性・推奨モーター・ギア比・タイヤ径の対照</image:title>
     </image:image>
   </url>
