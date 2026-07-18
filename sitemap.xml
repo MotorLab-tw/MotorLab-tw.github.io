@@ -217,33 +217,45 @@
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/guides/tamiya-motor-specs/</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/tamiya-motor-specs/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/tamiya-motor-specs/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/tamiya-motor-specs/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/tamiya-motor-specs/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/tamiya-motor-break-in-strategy_c.png</image:loc>
+      <image:title>田宮主流 8 款馬達磨合策略對照:銅刷入門款 vs 碳刷進階款,各自的負載轉速、扭力與建議磨合方式</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/en/guides/tamiya-motor-specs/</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/tamiya-motor-specs/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/tamiya-motor-specs/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/tamiya-motor-specs/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/tamiya-motor-specs/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/tamiya-motor-break-in-strategy_e.png</image:loc>
+      <image:title>Break-in strategy for 8 mainstream Tamiya motors: copper-brush entry vs carbon-brush advanced, with load RPM, torque and recommended break-in</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/ja/guides/tamiya-motor-specs/</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/tamiya-motor-specs/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/tamiya-motor-specs/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/tamiya-motor-specs/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/tamiya-motor-specs/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/tamiya-motor-break-in-strategy_j.png</image:loc>
+      <image:title>タミヤ主流 8 機種の慣らし戦略対照:銅ブラシ入門 vs カーボンブラシ上級、負荷回転数・トルクと推奨慣らし方法</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/guides/motor-wash-vs-break-in/</loc>
