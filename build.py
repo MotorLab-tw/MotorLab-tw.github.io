@@ -234,7 +234,7 @@ GUIDES = [
         "slug": "motor-break-in-guide",
         "key": "g1",
         "published": "2026-05-22",
-        "updated": "2026-06-12",
+        "updated": "2026-07-19",
         "i18n": {
             "zh": {
                 "title": "四驅車馬達磨合完全指南:從原理到實作 | MotorLab",
@@ -467,7 +467,7 @@ GUIDES = [
         "slug": "tamiya-mini-4wd-motor-specs-list",
         "key": "g9",
         "published": "2026-05-25",
-        "updated": "2026-05-25",
+        "updated": "2026-07-19",
         "type": "benchmarks",
         "i18n": {
             "zh": {
