@@ -2857,9 +2857,8 @@ PRESALE = {
             "h1_for_ld": "MotorLab 搶先登記・限量首批",
             "eyebrow": "Pre-launch · 搶先登記",
             "hero_title": "搶先登記・限量首批",
-            "badge": "限量首批・意願調查 · 2026 年底",
-            "hero_p": "MotorLab 精密馬達磨合/檢測機預計 <b>2026 年底</b>限量首批發售。留個資料、告訴我你的購買意向 —— 開賣第一時間通知你,也讓我把首批備得剛剛好。",
-            "lottery": "如登記人數超過工作室產能,將以抽籤方式決定名額,力求公平。",
+            "badge": "2026 年底限量首批・意願調查",
+            "hero_p": "MotorLab 精密馬達磨合/檢測機預計 <b>2026 年底</b>限量首批發售。留個資料、告訴我你的購買意向。",
             "email_label": "Email(必填)",
             "email_ph": "you@example.com",
             "intent_label": "購買意願",
@@ -2890,9 +2889,8 @@ PRESALE = {
             "h1_for_ld": "MotorLab Pre-register · Limited First Batch",
             "eyebrow": "Pre-launch",
             "hero_title": "Pre-register · Limited First Batch",
-            "badge": "Limited first batch · Interest survey · Late 2026",
-            "hero_p": "MotorLab's precision motor break-in / test machine ships in a limited first batch in <b>late 2026</b>. Leave your details and tell us your buying intent — we will notify you the moment it launches, and size the first batch right.",
-            "lottery": "If sign-ups exceed our studio's capacity, places will be allocated by a fair lottery.",
+            "badge": "Late 2026 · Limited first batch · Interest survey",
+            "hero_p": "MotorLab's precision motor break-in / test machine ships in a limited first batch in <b>late 2026</b>. Leave your details and tell us your buying intent.",
             "email_label": "Email (required)",
             "email_ph": "you@example.com",
             "intent_label": "Buying intent",
@@ -2923,9 +2921,8 @@ PRESALE = {
             "h1_for_ld": "MotorLab 先行登録・限定初回ロット",
             "eyebrow": "Pre-launch · 先行登録",
             "hero_title": "先行登録・限定初回ロット",
-            "badge": "限定初回ロット・意向調査 · 2026 年末",
-            "hero_p": "MotorLab 精密モーター慣らし/検査機は <b>2026 年末</b>に限定初回ロットで発売予定です。ご連絡先と購入意向をお知らせください —— 発売時に一番にご案内し、初回ロットの数量も最適化します。",
-            "lottery": "登録者数が工房の生産能力を超えた場合は、公平を期して抽選で枠を決定します。",
+            "badge": "2026 年末限定初回ロット・意向調査",
+            "hero_p": "MotorLab 精密モーター慣らし/検査機は <b>2026 年末</b>に限定初回ロットで発売予定です。ご連絡先と購入意向をお知らせください。",
             "email_label": "メール(必須)",
             "email_ph": "you@example.com",
             "intent_label": "購入意向",
@@ -3021,7 +3018,6 @@ PRESALE_CSS = """
 .ps-msg.muted{color:var(--text-muted)}
 .ps-note{font-size:12.5px;line-height:1.7;color:var(--text-muted);text-align:center;margin:0}
 .ps-badge{display:inline-block;margin:4px 0 2px;padding:7px 14px;border-radius:999px;background:rgba(53,208,223,.10);border:1px solid rgba(53,208,223,.35);color:#8fe3ee;font-size:13.5px;font-weight:600;letter-spacing:.02em}
-.ps-lottery{font-size:13px;line-height:1.7;color:#f7b579;text-align:center;margin:2px 0 0;padding:10px 14px;background:rgba(247,181,121,.08);border:1px solid rgba(247,181,121,.28);border-radius:10px}
 @media(max-width:520px){.ps-grid{grid-template-columns:1fr}}
 """
 
@@ -3163,7 +3159,6 @@ def build_presale_page(presale_cfg, lang, src_html, i18n):
         f'</div>'
         f'<button type="submit" class="lab-btn ps-btn" id="ps-btn">{s["btn"]}</button>'
         f'<div class="ps-msg" id="ps-msg" aria-live="polite"></div>'
-        f'<p class="ps-lottery">{s["lottery"]}</p>'
         f'<p class="ps-note">{s["note"]}</p>'
         f'</form>'
         f'</div></div></section>'
