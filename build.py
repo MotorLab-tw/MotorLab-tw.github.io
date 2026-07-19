@@ -18,6 +18,7 @@ import re
 import json
 import os
 import sys
+import html
 
 try:
     from bs4 import BeautifulSoup
@@ -1392,6 +1393,12 @@ def build_lang(src_html, lang, i18n):
     for a in soup.select("a[data-verifylink]"):
         a["href"] = verify_href
         del a["data-verifylink"]
+
+    # --- 7g. 內部跨頁連結(hero 的 data-presalelink)改寫成對應語言的 /presale/ ---
+    presale_href = f"{lab_prefix}/presale/"
+    for a in soup.select("a[data-presalelink]"):
+        a["href"] = presale_href
+        del a["data-presalelink"]
 
     # --- 8. 語言切換:button → a 連結 ---
     lang_switch = soup.find("div", class_="lang-switch")
@@ -2832,6 +2839,353 @@ def build_verify_page(verify_cfg, lang, src_html, i18n):
 
 
 # ============================================================
+# PRESALE:搶先登記・意向調查頁(/presale/)
+#   即將開賣(限量首批・預計 2026 年底)。首頁 hero 只放吸引連結 → 本頁填意向 →
+#   送出後回首頁。靜態站無後端 → JSONP 打 GAS(gas/waitlist_standalone.gs)。
+#   欄位:email(必填)+ 購買意願 + 版本 + 期望價格(自由填含幣別)+ 所在國家
+#   (時區/語系離線偵測、Intl.DisplayNames 在地化、可改)。
+# ============================================================
+PRESALE = {
+    # 部署 gas/waitlist_standalone.gs 後,把 /exec 網址填到這行:
+    "api_url": "PUT_PRESALE_GAS_EXEC_URL",
+    "i18n": {
+        "zh": {
+            "title": "搶先登記・限量首批 | MotorLab 馬達磨合機",
+            "description": "MotorLab 精密馬達磨合/檢測機預計 2026 年底限量首批發售。留下 email 與購買意向,開賣第一時間通知你,也協助我們把首批數量備得剛剛好。",
+            "keywords": "MotorLab 預購, 馬達磨合機 預購, 限量首批, 搶先登記, 意向調查, mini 四驅車 馬達磨合機",
+            "breadcrumb": "搶先登記",
+            "h1_for_ld": "MotorLab 搶先登記・限量首批",
+            "eyebrow": "Pre-launch · 搶先登記",
+            "hero_title": "搶先登記・限量首批",
+            "badge": "限量首批・意願調查 · 2026 年底",
+            "hero_p": "MotorLab 精密馬達磨合/檢測機預計 <b>2026 年底</b>限量首批發售。留個資料、告訴我你的購買意向 —— 開賣第一時間通知你,也讓我把首批備得剛剛好。",
+            "lottery": "如登記人數超過工作室產能,將以抽籤方式決定名額,力求公平。",
+            "email_label": "Email(必填)",
+            "email_ph": "you@example.com",
+            "intent_label": "購買意願",
+            "intent_opts": ["開賣就想買", "看價格再決定", "先了解、觀望"],
+            "edition_label": "想要的版本",
+            "edition_opts": ["PRO(完整・含 AI 健康管理)", "M1(入門)", "還沒決定"],
+            "price_label": "期望價格(選填)",
+            "price_ph": "例:NT$3500 / ¥15000 / US$120",
+            "country_label": "所在國家/地區",
+            "country_ph": "你的國家/地區",
+            "select_ph": "請選擇",
+            "btn": "送出意向",
+            "note": "這些資料僅用於開賣通知與首批數量規劃,不濫發信、不轉給第三方。",
+            "js": {
+                "lang": "zh",
+                "bademail": "⚠ 請輸入正確的 email",
+                "sending": "送出中…",
+                "ok": "✓ 感謝!已收到你的意向,開賣第一時間通知你。正在返回首頁…",
+                "err": "✗ 送出失敗,請稍後再試,或私訊 IG @motorlab.tw。",
+                "soon": "登記管道即將開放 —— 先追蹤 IG @motorlab.tw"
+            }
+        },
+        "en": {
+            "title": "Pre-register · Limited First Batch | MotorLab",
+            "description": "MotorLab's precision motor break-in / test machine ships in a limited first batch in late 2026. Leave your email and buying intent and we will notify you the moment it launches.",
+            "keywords": "MotorLab pre-order, motor break-in machine pre-order, limited first batch, pre-register, intent survey, mini 4wd motor break-in machine",
+            "breadcrumb": "Pre-register",
+            "h1_for_ld": "MotorLab Pre-register · Limited First Batch",
+            "eyebrow": "Pre-launch",
+            "hero_title": "Pre-register · Limited First Batch",
+            "badge": "Limited first batch · Interest survey · Late 2026",
+            "hero_p": "MotorLab's precision motor break-in / test machine ships in a limited first batch in <b>late 2026</b>. Leave your details and tell us your buying intent — we will notify you the moment it launches, and size the first batch right.",
+            "lottery": "If sign-ups exceed our studio's capacity, places will be allocated by a fair lottery.",
+            "email_label": "Email (required)",
+            "email_ph": "you@example.com",
+            "intent_label": "Buying intent",
+            "intent_opts": ["Ready to buy at launch", "Depends on the price", "Just exploring for now"],
+            "edition_label": "Which edition",
+            "edition_opts": ["PRO (full · with AI health management)", "M1 (entry)", "Not sure yet"],
+            "price_label": "Target price (optional)",
+            "price_ph": "e.g. US$120 / NT$3500 / ¥15000",
+            "country_label": "Country / region",
+            "country_ph": "Your country / region",
+            "select_ph": "Select…",
+            "btn": "Submit intent",
+            "note": "Used only to notify you at launch and plan the first batch. No spam, never shared with third parties.",
+            "js": {
+                "lang": "en",
+                "bademail": "⚠ Please enter a valid email",
+                "sending": "Sending…",
+                "ok": "✓ Thank you! Your intent is in — we’ll notify you at launch. Returning to home…",
+                "err": "✗ Submission failed, please try again later, or DM IG @motorlab.tw.",
+                "soon": "Sign-ups opening soon — follow IG @motorlab.tw"
+            }
+        },
+        "ja": {
+            "title": "先行登録・限定初回ロット | MotorLab",
+            "description": "MotorLab 精密モーター慣らし/検査機は 2026 年末に限定初回ロットで発売予定。メールと購入意向をご登録いただくと、発売時に一番にお知らせします。",
+            "keywords": "MotorLab 予約, モーター慣らし機 予約, 限定初回ロット, 先行登録, 意向調査, ミニ四駆 モーター慣らし機",
+            "breadcrumb": "先行登録",
+            "h1_for_ld": "MotorLab 先行登録・限定初回ロット",
+            "eyebrow": "Pre-launch · 先行登録",
+            "hero_title": "先行登録・限定初回ロット",
+            "badge": "限定初回ロット・意向調査 · 2026 年末",
+            "hero_p": "MotorLab 精密モーター慣らし/検査機は <b>2026 年末</b>に限定初回ロットで発売予定です。ご連絡先と購入意向をお知らせください —— 発売時に一番にご案内し、初回ロットの数量も最適化します。",
+            "lottery": "登録者数が工房の生産能力を超えた場合は、公平を期して抽選で枠を決定します。",
+            "email_label": "メール(必須)",
+            "email_ph": "you@example.com",
+            "intent_label": "購入意向",
+            "intent_opts": ["発売したら買いたい", "価格次第", "まずは検討中"],
+            "edition_label": "希望バージョン",
+            "edition_opts": ["PRO(フル・AI ヘルス管理付き)", "M1(エントリー)", "まだ未定"],
+            "price_label": "希望価格(任意)",
+            "price_ph": "例:¥15000 / US$120 / NT$3500",
+            "country_label": "国 / 地域",
+            "country_ph": "あなたの国 / 地域",
+            "select_ph": "選択してください",
+            "btn": "意向を送信",
+            "note": "発売のお知らせと初回ロットの数量計画にのみ使用します。スパムや第三者提供はありません。",
+            "js": {
+                "lang": "ja",
+                "bademail": "⚠ 正しいメールアドレスを入力してください",
+                "sending": "送信中…",
+                "ok": "✓ ありがとうございます!意向を受け付けました。発売時にお知らせします。ホームへ戻ります…",
+                "err": "✗ 送信に失敗しました。後でもう一度、または IG @motorlab.tw へ。",
+                "soon": "登録は近日開始 — IG @motorlab.tw をフォロー"
+            }
+        }
+    }
+}
+
+# /presale/ JSONP 送出邏輯(__API_URL__ / __HOME_URL__ / __LOCALE__ / __I18N_JSON__ 由 build_presale_page 取代)
+PRESALE_APP_JS = r"""
+(function () {
+  var API = "__API_URL__";
+  var HOME = "__HOME_URL__";
+  var LOCALE = "__LOCALE__";
+  var I18N = __I18N_JSON__;
+  function byId(id) { return document.getElementById(id); }
+  var form = byId('ps-form'), email = byId('ps-email'), intent = byId('ps-intent'),
+      edition = byId('ps-edition'), price = byId('ps-price'), country = byId('ps-country'),
+      btn = byId('ps-btn'), msg = byId('ps-msg');
+  // 所在國家:時區→ISO 區碼(退回語系副標籤),用 Intl.DisplayNames 在地化成國名並預填(可改)
+  var TZ = { 'Asia/Taipei':'TW','Asia/Tokyo':'JP','Asia/Kuala_Lumpur':'MY','Asia/Kuching':'MY','Asia/Hong_Kong':'HK','Asia/Singapore':'SG','Asia/Shanghai':'CN','Asia/Chongqing':'CN','Asia/Urumqi':'CN','Asia/Macau':'MO','Asia/Seoul':'KR','Asia/Bangkok':'TH','Asia/Jakarta':'ID','Asia/Manila':'PH','Asia/Ho_Chi_Minh':'VN','Asia/Kolkata':'IN','Asia/Dubai':'AE','Australia/Sydney':'AU','Australia/Melbourne':'AU','Australia/Perth':'AU','Pacific/Auckland':'NZ','Europe/London':'GB','Europe/Paris':'FR','Europe/Berlin':'DE','Europe/Madrid':'ES','Europe/Rome':'IT','Europe/Amsterdam':'NL','Europe/Warsaw':'PL','America/New_York':'US','America/Chicago':'US','America/Denver':'US','America/Los_Angeles':'US','America/Toronto':'CA','America/Vancouver':'CA','America/Sao_Paulo':'BR','America/Mexico_City':'MX' };
+  var det = { region: '', tz: '', locale: '' };
+  try { det.tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) {}
+  det.locale = navigator.language || navigator.userLanguage || '';
+  det.region = TZ[det.tz] || '';
+  if (!det.region) { var m = det.locale.match(/[-_]([A-Za-z]{2})\b/); if (m) det.region = m[1].toUpperCase(); }
+  function regionName(cc) { try { if (cc && typeof Intl !== 'undefined' && Intl.DisplayNames) { return (new Intl.DisplayNames([LOCALE], { type: 'region' })).of(cc) || ''; } } catch (e) {} return ''; }
+  if (country && !country.value) { country.value = regionName(det.region); }
+  function setMsg(t, cls) { msg.textContent = t; msg.className = 'ps-msg ps-show' + (cls ? (' ' + cls) : ''); }
+  function submit(e) {
+    if (e && e.preventDefault) e.preventDefault();
+    var em = (email.value || '').trim();
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)) { setMsg(I18N.bademail, 'warn'); if (email.focus) email.focus(); return false; }
+    if (API.indexOf('script.google') < 0) { setMsg(I18N.soon, 'muted'); return false; }
+    btn.disabled = true; setMsg(I18N.sending, 'muted');
+    var cb = 'ps_' + Date.now(); var s = document.createElement('script');
+    var timer = setTimeout(function () { cleanup(); btn.disabled = false; setMsg(I18N.err, 'bad'); }, 12000);
+    function cleanup() { clearTimeout(timer); try { delete window[cb]; } catch (x) { window[cb] = undefined; } if (s.parentNode) s.parentNode.removeChild(s); }
+    window[cb] = function (r) {
+      cleanup();
+      if (r && r.ok) { setMsg(I18N.ok, 'ok'); if (form) form.style.display = 'none'; setTimeout(function () { location.href = HOME; }, 1600); }
+      else { btn.disabled = false; setMsg(I18N.err, 'bad'); }
+    };
+    s.onerror = function () { cleanup(); btn.disabled = false; setMsg(I18N.err, 'bad'); };
+    var q = '?action=presale&email=' + encodeURIComponent(em)
+      + '&intent=' + encodeURIComponent(intent ? intent.value : '')
+      + '&edition=' + encodeURIComponent(edition ? edition.value : '')
+      + '&price=' + encodeURIComponent(price ? price.value.trim() : '')
+      + '&country=' + encodeURIComponent(country ? country.value.trim() : '')
+      + '&region=' + encodeURIComponent(det.region)
+      + '&tz=' + encodeURIComponent(det.tz)
+      + '&locale=' + encodeURIComponent(det.locale)
+      + '&lang=' + encodeURIComponent(I18N.lang || '')
+      + '&callback=' + cb + '&t=' + Date.now();
+    s.src = API + q; document.body.appendChild(s); return false;
+  }
+  if (form) form.addEventListener('submit', submit);
+})();
+"""
+
+# 搶先登記頁專屬 CSS(注入 head;沿用 .guide-page / .lab-* 殼,補表單樣式)
+PRESALE_CSS = """
+.ps-box{max-width:560px;margin:0 auto}
+.ps-form{display:flex;flex-direction:column;gap:16px}
+.ps-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ps-field{display:flex;flex-direction:column;gap:6px;text-align:left}
+.ps-lab{font-size:13px;color:var(--text-muted);letter-spacing:.03em}
+.ps-input{width:100%;box-sizing:border-box;padding:12px 14px;background:var(--bg-primary,#0f1216);border:1px solid var(--border,#2b313c);border-radius:10px;color:var(--text-primary,#e8ebf0);font-size:15px;font-family:inherit}
+.ps-input:focus{outline:none;border-color:#35d0df}
+.ps-btn{width:100%;margin-top:2px}
+.ps-msg{min-height:1.4em;font-size:15px;line-height:1.6;opacity:0;transition:opacity .18s;text-align:center}
+.ps-msg.ps-show{opacity:1}
+.ps-msg.ok{color:#34d399}
+.ps-msg.bad{color:#f87171}
+.ps-msg.warn{color:#fbbf24}
+.ps-msg.muted{color:var(--text-muted)}
+.ps-note{font-size:12.5px;line-height:1.7;color:var(--text-muted);text-align:center;margin:0}
+.ps-badge{display:inline-block;margin:4px 0 2px;padding:7px 14px;border-radius:999px;background:rgba(53,208,223,.10);border:1px solid rgba(53,208,223,.35);color:#8fe3ee;font-size:13.5px;font-weight:600;letter-spacing:.02em}
+.ps-lottery{font-size:13px;line-height:1.7;color:#f7b579;text-align:center;margin:2px 0 0;padding:10px 14px;background:rgba(247,181,121,.08);border:1px solid rgba(247,181,121,.28);border-radius:10px}
+@media(max-width:520px){.ps-grid{grid-template-columns:1fr}}
+"""
+
+
+def build_presale_page(presale_cfg, lang, src_html, i18n):
+    """產生 /presale/ 搶先登記・意向調查頁(靜態殼 + JSONP 送出 → 成功後回首頁)。"""
+    soup = BeautifulSoup(src_html, "lxml")
+    cfg = LANGS[lang]
+    ui = UI_STRINGS[lang]
+    s = presale_cfg["i18n"][lang]
+    lang_prefix = "" if lang == "zh" else f"/{lang}"
+    page_url = f"{SITE}{lang_prefix}/presale/"
+    home_url = f"{SITE}{lang_prefix}/"
+
+    soup.html["lang"] = cfg["html_lang"]
+
+    for sc in soup.find_all("script", {"type": "application/ld+json"}):
+        sc.decompose()
+    for tag in soup.find_all("link", {"rel": "alternate"}):
+        tag.decompose()
+
+    footer_el = soup.find("footer")
+    footer_extracted = footer_el.extract() if footer_el else None
+    _fix_footer_verify(footer_extracted, lang)
+
+    if soup.title:
+        soup.title.string = s["title"]
+
+    def set_meta(attr, attr_val, content):
+        tag = soup.find("meta", {attr: attr_val})
+        if tag:
+            tag["content"] = content
+
+    set_meta("name", "description", s["description"])
+    kw = s["keywords"]
+    if lang != "en" and "en" in presale_cfg["i18n"]:
+        kw = kw + ", " + presale_cfg["i18n"]["en"]["keywords"]
+    set_meta("name", "keywords", kw)
+    set_meta("http-equiv", "Content-Language", cfg["html_lang"])
+    set_meta("property", "og:type", "website")
+    set_meta("property", "og:url", page_url)
+    set_meta("property", "og:title", s["title"])
+    set_meta("property", "og:description", s["description"])
+    set_meta("property", "og:locale", cfg["og_locale"])
+    set_meta("name", "twitter:title", s["title"])
+    set_meta("name", "twitter:description", s["description"])
+
+    canon = soup.find("link", {"rel": "canonical"})
+    if canon:
+        canon["href"] = page_url
+
+    head = soup.head
+    for hl_lang, hl_cfg in LANGS.items():
+        hl_prefix = "" if hl_lang == "zh" else f"/{hl_lang}"
+        head.append(soup.new_tag("link", attrs={
+            "rel": "alternate", "hreflang": hl_cfg["html_lang"], "href": f"{SITE}{hl_prefix}/presale/"
+        }))
+    head.append(soup.new_tag("link", attrs={
+        "rel": "alternate", "hreflang": "x-default", "href": f"{SITE}/presale/"
+    }))
+
+    style_tag = soup.new_tag("style")
+    style_tag.string = PRESALE_CSS
+    head.append(style_tag)
+
+    webpage_ld = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": s["h1_for_ld"],
+        "description": s["description"],
+        "inLanguage": cfg["html_lang"],
+        "url": page_url,
+        "isPartOf": {"@type": "WebSite", "name": "MotorLab.tw", "url": SITE + "/"},
+    }
+    breadcrumb_ld = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": ui["bc_home"], "item": home_url},
+            {"@type": "ListItem", "position": 2, "name": s["breadcrumb"], "item": page_url},
+        ],
+    }
+    for data in (webpage_ld, breadcrumb_ld):
+        sc = soup.new_tag("script", attrs={"type": "application/ld+json"})
+        sc.string = json.dumps(data, ensure_ascii=False, indent=2)
+        head.append(sc)
+
+    soup.body.clear()
+    soup.body["class"] = "guide-page"
+
+    nav_html = (
+        f'<nav class="guide-nav"><div class="container">'
+        f'<a class="brand" href="{home_url}"><span>MotorLab<span class="tag">.tw</span></span></a>'
+        f'<a class="back-link" href="{home_url}">{ui["back_home"]}</a>'
+        f'</div></nav>'
+    )
+    soup.body.append(BeautifulSoup(nav_html, "html.parser"))
+
+    main_el = soup.new_tag("main")
+
+    bc_html = (
+        f'<nav class="breadcrumb" aria-label="Breadcrumb">'
+        f'<a href="{home_url}">{ui["bc_home"]}</a><span class="sep">/</span>'
+        f'<span class="current">{s["breadcrumb"]}</span></nav>'
+    )
+    hero_html = (
+        f'<section class="lab-hero"><div class="container">{bc_html}'
+        f'<div class="lab-eyebrow">{s["eyebrow"]}</div>'
+        f'<h1 class="lab-hero-title">{s["hero_title"]}</h1>'
+        f'<div class="ps-badge">{s["badge"]}</div>'
+        f'<p class="lab-hero-p">{s["hero_p"]}</p>'
+        f'</div></section>'
+    )
+    main_el.append(BeautifulSoup(hero_html, "html.parser"))
+
+    def opts(items):
+        o = f'<option value="" selected>{html.escape(s["select_ph"])}</option>'
+        for it in items:
+            o += f'<option value="{html.escape(it)}">{html.escape(it)}</option>'
+        return o
+
+    form_html = (
+        f'<section class="lab-section"><div class="container"><div class="ps-box">'
+        f'<form id="ps-form" class="ps-form">'
+        f'<label class="ps-field"><span class="ps-lab">{s["email_label"]}</span>'
+        f'<input type="email" id="ps-email" class="ps-input" required autocomplete="email" '
+        f'placeholder="{s["email_ph"]}"></label>'
+        f'<div class="ps-grid">'
+        f'<label class="ps-field"><span class="ps-lab">{s["intent_label"]}</span>'
+        f'<select id="ps-intent" class="ps-input">{opts(s["intent_opts"])}</select></label>'
+        f'<label class="ps-field"><span class="ps-lab">{s["edition_label"]}</span>'
+        f'<select id="ps-edition" class="ps-input">{opts(s["edition_opts"])}</select></label>'
+        f'<label class="ps-field"><span class="ps-lab">{s["price_label"]}</span>'
+        f'<input type="text" id="ps-price" class="ps-input" maxlength="40" '
+        f'placeholder="{s["price_ph"]}"></label>'
+        f'<label class="ps-field"><span class="ps-lab">{s["country_label"]}</span>'
+        f'<input type="text" id="ps-country" class="ps-input" maxlength="60" '
+        f'autocomplete="country-name" placeholder="{s["country_ph"]}"></label>'
+        f'</div>'
+        f'<button type="submit" class="lab-btn ps-btn" id="ps-btn">{s["btn"]}</button>'
+        f'<div class="ps-msg" id="ps-msg" aria-live="polite"></div>'
+        f'<p class="ps-lottery">{s["lottery"]}</p>'
+        f'<p class="ps-note">{s["note"]}</p>'
+        f'</form>'
+        f'</div></div></section>'
+    )
+    main_el.append(BeautifulSoup(form_html, "html.parser"))
+
+    soup.body.append(main_el)
+    if footer_extracted is not None:
+        soup.body.append(footer_extracted)
+
+    app_js = PRESALE_APP_JS.replace("__API_URL__", presale_cfg["api_url"])
+    app_js = app_js.replace("__HOME_URL__", home_url)
+    app_js = app_js.replace("__LOCALE__", cfg["html_lang"])
+    app_js = app_js.replace("__I18N_JSON__", json.dumps(s["js"], ensure_ascii=False))
+    script_tag = soup.new_tag("script")
+    script_tag.string = app_js
+    soup.body.append(script_tag)
+
+    return str(soup)
+
+
+# ============================================================
 # MANUAL:使用者手冊(/docs/user-manual/,D23 docs 分類首篇)
 #   內容來自韌體 repo USER_MANUAL.md,守 D6(無硬體型號)。
 #   每語言 = meta(title/desc/...) + sections[{id,t,html}]。
@@ -3301,6 +3655,23 @@ def main():
             f.write(html_out)
         size = len(html_out.encode("utf-8"))
         print(f"  ✅ {out_path:<45} {size:>9,} bytes  ({lang})")
+
+    print()
+    print("=== 搶先登記・意向調查(/presale/,GAS presale / JSONP)===")
+    for lang in ("zh", "en", "ja"):
+        if lang not in PRESALE["i18n"]:
+            continue
+        lang_prefix = "" if lang == "zh" else f"{lang}/"
+        out_dir = f"{lang_prefix}presale"
+        out_path = f"{out_dir}/index.html"
+        os.makedirs(out_dir, exist_ok=True)
+        html_out = build_presale_page(PRESALE, lang, src_html, i18n)
+        with open(out_path, "w", encoding="utf-8") as f:
+            f.write(html_out)
+        size = len(html_out.encode("utf-8"))
+        print(f"  ✅ {out_path:<45} {size:>9,} bytes  ({lang})")
+    if PRESALE["api_url"].startswith("PUT_"):
+        print("  ⚠ PRESALE['api_url'] 尚未設定 — 表單先以「即將開放」訊息優雅降級,上線前填 GAS /exec URL")
 
     print()
     print("=== 使用者手冊(/docs/user-manual/,D23 docs 分類)===")

@@ -356,7 +356,7 @@
     border-color: var(--success);
     font-weight: bold;
   }
-  /* 即將開賣 · 搶先通知(hero 內) */
+  /* 即將開賣 · 意願調查(hero 內,連到 /presale/)*/
   .hero-presale {
     margin-top: 24px;
     max-width: 460px;
@@ -366,28 +366,15 @@
     border-radius: 10px;
   }
   .hp-badge {
-    display: inline-block;
+    display: block;
     font-size: 12px;
     letter-spacing: 1px;
     color: var(--accent-cyan);
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
-  .hp-form { display: flex; gap: 8px; }
-  .hp-input {
-    flex: 1;
-    min-width: 0;
-    padding: 10px 12px;
-    font-size: 14px;
-    color: var(--text-primary);
-    background: var(--bg-primary);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-  }
-  .hp-input:focus { outline: none; border-color: var(--accent-cyan); }
-  .hp-btn { white-space: nowrap; padding: 10px 16px; }
-  .hp-note { font-size: 12px; color: var(--text-muted); margin: 10px 0 0; min-height: 1em; }
-  @media (max-width: 560px) { .hp-form { flex-direction: column; } }
+  .hp-cta { display: inline-block; }
+  .hp-note { font-size: 12px; color: var(--text-muted); margin: 12px 0 0; }
 
   /* ===== 實機 UI 模擬視窗（Hero 右側） ===== */
   .device-mockup {

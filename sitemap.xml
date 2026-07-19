@@ -739,6 +739,36 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/verify/"/>
   </url>
   <url>
+    <loc>https://motorlab-tw.github.io/presale/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/presale/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/presale/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/presale/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/presale/"/>
+  </url>
+  <url>
+    <loc>https://motorlab-tw.github.io/en/presale/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/presale/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/presale/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/presale/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/presale/"/>
+  </url>
+  <url>
+    <loc>https://motorlab-tw.github.io/ja/presale/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/presale/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/presale/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/presale/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/presale/"/>
+  </url>
+  <url>
     <loc>https://motorlab-tw.github.io/docs/user-manual/</loc>
     <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>

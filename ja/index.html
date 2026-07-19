@@ -556,7 +556,7 @@
     border-color: var(--success);
     font-weight: bold;
   }
-  /* 即將開賣 · 搶先通知(hero 內) */
+  /* 即將開賣 · 意願調查(hero 內,連到 /presale/)*/
   .hero-presale {
     margin-top: 24px;
     max-width: 460px;
@@ -566,28 +566,15 @@
     border-radius: 10px;
   }
   .hp-badge {
-    display: inline-block;
+    display: block;
     font-size: 12px;
     letter-spacing: 1px;
     color: var(--accent-cyan);
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
-  .hp-form { display: flex; gap: 8px; }
-  .hp-input {
-    flex: 1;
-    min-width: 0;
-    padding: 10px 12px;
-    font-size: 14px;
-    color: var(--text-primary);
-    background: var(--bg-primary);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-  }
-  .hp-input:focus { outline: none; border-color: var(--accent-cyan); }
-  .hp-btn { white-space: nowrap; padding: 10px 16px; }
-  .hp-note { font-size: 12px; color: var(--text-muted); margin: 10px 0 0; min-height: 1em; }
-  @media (max-width: 560px) { .hp-form { flex-direction: column; } }
+  .hp-cta { display: inline-block; }
+  .hp-note { font-size: 12px; color: var(--text-muted); margin: 12px 0 0; }
 
   /* ===== 實機 UI 模擬視窗（Hero 右側） ===== */
   .device-mockup {
@@ -2182,14 +2169,11 @@
 <!-- Gumroad 購買連結 — 產品上線後將顯示 -->
 <a class="btn btn-purchase" data-i18n="hero.cta3" href="#" id="purchase-btn">今すぐ購入</a>
 </div>
-<!-- 即將開賣 · 搶先通知(限量首批,預計 2026 年底)-->
+<!-- 即將開賣 · 意願調查(限量首批,預計 2026 年底)→ 連到 /presale/ -->
 <div class="hero-presale">
-<span class="hp-badge" data-i18n="ps.badge">🔒 限定初回ロット・2026 年末予定</span>
-<form class="hp-form" id="presale-form" onsubmit="return submitWaitlist(event)">
-<input aria-label="email" class="hp-input" id="ps-email" placeholder="you@example.com" required="" type="email"/>
-<button class="btn btn-primary hp-btn" data-i18n="ps.btn" id="ps-btn" type="submit">先行通知</button>
-</form>
-<p class="hp-note" data-i18n="ps.note" id="ps-msg">発売時に一度だけお知らせ。スパムなし。</p>
+<span class="hp-badge" data-i18n="ps.badge">限定初回ロット・意向調査 · 2026 年末</span>
+<a class="btn btn-primary hp-cta" data-i18n="ps.cta" href="/ja/presale/">購入意向を登録 →</a>
+<p class="hp-note" data-i18n="ps.note">登録が工房の生産能力を超えた場合は、抽選で枠を決定します。</p>
 </div>
 </div>
 <!-- 實機 UI 模擬視窗 — 完全複刻 web_pages.h 風格 -->
@@ -2967,34 +2951,7 @@
     window.addEventListener('touchstart', dismissSplash, { once: true, passive: true });
   }
 
-  // ===== 搶先通知(waitlist) — 靜態站用 JSONP 打 GAS =====
-  // 部署 GAS Web App 後,把 /exec 網址填進 WAITLIST_URL 這一行,再跑 build.py。
-  var WAITLIST_URL = 'PUT_WAITLIST_GAS_EXEC_URL';
-  function submitWaitlist(e) {
-    e.preventDefault();
-    var email = (document.getElementById('ps-email').value || '').trim();
-    var btn = document.getElementById('ps-btn');
-    var msg = document.getElementById('ps-msg');
-    var T = (typeof i18n !== 'undefined' && i18n[currentLang]) ? i18n[currentLang] : {};
-    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { return false; }
-    if (WAITLIST_URL.indexOf('script.google') < 0) { msg.textContent = T['ps.soon'] || ''; return false; }
-    btn.disabled = true;
-    var cb = 'wl_' + Date.now();
-    var s = null;
-    window[cb] = function (r) {
-      btn.disabled = false;
-      document.getElementById('presale-form').reset();
-      msg.textContent = (r && r.ok) ? (T['ps.ok'] || 'OK') : (T['ps.err'] || 'Error');
-      try { delete window[cb]; } catch (x) { window[cb] = undefined; }
-      if (s && s.parentNode) s.parentNode.removeChild(s);
-    };
-    s = document.createElement('script');
-    s.src = WAITLIST_URL + '?action=waitlist&email=' + encodeURIComponent(email) +
-            '&lang=' + currentLang + '&callback=' + cb + '&t=' + Date.now();
-    s.onerror = function () { btn.disabled = false; msg.textContent = T['ps.err'] || 'Error'; };
-    document.body.appendChild(s);
-    return false;
-  }
+  // ===== 意願調查:hero 只放連結 → 導向 /presale/ 獨立表單頁(見 build.py PRESALE)=====
 
   // ===== 雙語切換 =====
   const i18n = {
@@ -3017,12 +2974,9 @@
       'hero.cta1': '瀏覽功能',
       'hero.cta2': 'M1 vs PRO',
       'hero.cta3': '立即購買',
-      'ps.badge': '🔒 限量首批・預計 2026 年底',
-      'ps.btn': '搶先通知',
-      'ps.note': '開賣時通知你一次,不濫發信。',
-      'ps.ok': '✓ 已登記!開賣第一時間通知你。',
-      'ps.err': '登記失敗,請稍後再試,或私訊 IG @motorlab.tw。',
-      'ps.soon': '登記管道即將開放 —— 先追蹤 IG @motorlab.tw',
+      'ps.badge': '限量首批・意願調查 · 2026 年底',
+      'ps.cta': '登記購買意願 →',
+      'ps.note': '如登記超過工作室產能,將以抽籤決定名額。',
       'mock.voltage': '電壓',
       'mock.current': '電流',
       'mock.rpm': '轉速',
@@ -3921,12 +3875,9 @@
       'hero.cta1': 'Browse Features',
       'hero.cta2': 'M1 vs PRO',
       'hero.cta3': 'Buy Now',
-      'ps.badge': '🔒 Limited first batch · Late 2026',
-      'ps.btn': 'Notify me',
-      'ps.note': 'One heads-up when we launch. No spam.',
-      'ps.ok': '✓ You\'re on the list! We\'ll email you at launch.',
-      'ps.err': 'Something went wrong — try again, or DM IG @motorlab.tw.',
-      'ps.soon': 'Sign-ups opening soon —— follow IG @motorlab.tw',
+      'ps.badge': 'Limited first batch · Interest survey · Late 2026',
+      'ps.cta': 'Register your interest →',
+      'ps.note': 'If sign-ups exceed our studio capacity, places are drawn by lottery.',
       'mock.voltage': 'Voltage',
       'mock.current': 'Current',
       'mock.rpm': 'RPM',
@@ -4907,12 +4858,9 @@
       'hero.cta1': '機能を見る',
       'hero.cta2': 'M1 vs PRO',
       'hero.cta3': '今すぐ購入',
-      'ps.badge': '🔒 限定初回ロット・2026 年末予定',
-      'ps.btn': '先行通知',
-      'ps.note': '発売時に一度だけお知らせ。スパムなし。',
-      'ps.ok': '✓ 登録完了!発売時にメールします。',
-      'ps.err': '登録に失敗しました。後でもう一度、または IG @motorlab.tw へ。',
-      'ps.soon': '登録は近日開始 —— IG @motorlab.tw をフォロー',
+      'ps.badge': '限定初回ロット・意向調査 · 2026 年末',
+      'ps.cta': '購入意向を登録 →',
+      'ps.note': '登録が工房の生産能力を超えた場合は、抽選で枠を決定します。',
       'mock.voltage': '電圧',
       'mock.current': '電流',
       'mock.rpm': '回転数',
