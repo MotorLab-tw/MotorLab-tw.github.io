@@ -2847,7 +2847,7 @@ def build_verify_page(verify_cfg, lang, src_html, i18n):
 # ============================================================
 PRESALE = {
     # 部署 gas/waitlist_standalone.gs 後,把 /exec 網址填到這行:
-    "api_url": "PUT_PRESALE_GAS_EXEC_URL",
+    "api_url": "https://script.google.com/macros/s/AKfycbxnF-wU3tgnxN4TBrlpgzuuaiL87GuhEwwbiqXtrMjwIhmzoHy9Ddv15_j_vuELck07/exec",
     "i18n": {
         "zh": {
             "title": "意向調查・限量首批 | MotorLab 馬達磨合機",
