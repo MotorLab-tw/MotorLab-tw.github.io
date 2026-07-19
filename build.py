@@ -1077,11 +1077,14 @@ LAB = {
             "f_comp_all": "全部",
             "f_comp_yes": "僅完整磨合",
             "f_comp_no": "僅中斷紀錄",
+            "f_mode_all": "全部模式",
+            "f_mode_v": "電壓模式",
+            "f_mode_s": "轉速模式",
             "f_sort": "排序",
             "f_show": "顯示",
             "c_rpm": "最高轉速 R.P.M",
             "c_rpm_avg": "平均轉速 R.P.M",
-            "c_current": "穩定電流 mA",
+            "c_current": "穩定值",
             "f_refresh": "重新整理",
             "ls_loading": "載入中…",
             "js": {
@@ -1099,7 +1102,7 @@ LAB = {
                 "c_country": "國家",
                 "c_rpm": "最高轉速 R.P.M",
                 "c_rpm_avg": "平均轉速 R.P.M",
-                "c_current": "穩定電流 mA",
+                "c_current": "穩定值",
                 "c_date": "磨合日期",
                 "anon": "匿名",
                 "incomplete": "中斷",
@@ -1130,11 +1133,14 @@ LAB = {
             "f_comp_all": "All",
             "f_comp_yes": "Completed only",
             "f_comp_no": "Interrupted only",
+            "f_mode_all": "All modes",
+            "f_mode_v": "Voltage",
+            "f_mode_s": "Speed",
             "f_sort": "Sort",
             "f_show": "Show",
             "c_rpm": "Max R.P.M",
             "c_rpm_avg": "Avg R.P.M",
-            "c_current": "Stable mA",
+            "c_current": "Stable value",
             "f_refresh": "Refresh",
             "ls_loading": "Loading…",
             "js": {
@@ -1152,7 +1158,7 @@ LAB = {
                 "c_country": "Country",
                 "c_rpm": "Max R.P.M",
                 "c_rpm_avg": "Avg R.P.M",
-                "c_current": "Stable mA",
+                "c_current": "Stable value",
                 "c_date": "Break-in date",
                 "anon": "Anonymous",
                 "incomplete": "Interrupted",
@@ -1183,11 +1189,14 @@ LAB = {
             "f_comp_all": "すべて",
             "f_comp_yes": "完走のみ",
             "f_comp_no": "中断のみ",
+            "f_mode_all": "全モード",
+            "f_mode_v": "電圧",
+            "f_mode_s": "回転数",
             "f_sort": "並べ替え",
             "f_show": "表示",
             "c_rpm": "最高回転数 R.P.M",
             "c_rpm_avg": "平均回転数 R.P.M",
-            "c_current": "安定電流 mA",
+            "c_current": "安定値",
             "f_refresh": "更新",
             "ls_loading": "読み込み中…",
             "js": {
@@ -1205,7 +1214,7 @@ LAB = {
                 "c_country": "国",
                 "c_rpm": "最高回転数 R.P.M",
                 "c_rpm_avg": "平均回転数 R.P.M",
-                "c_current": "安定電流 mA",
+                "c_current": "安定値",
                 "c_date": "慣らし日",
                 "anon": "匿名",
                 "incomplete": "中断",
@@ -2241,6 +2250,14 @@ LAB_APP_JS = r"""
     if (n === "" || n == null || isNaN(n)) return "—";
     return Number(n).toLocaleString();
   }
+  // 穩定值:轉速模式(drive_mode=1)的穩定值是 mV → 顯示成 V;電壓模式是 mA。
+  function fmtStable(it) {
+    var v = it.stable_current_overall;
+    if (v === "" || v == null || isNaN(v)) return "—";
+    v = Number(v);
+    if (String(it.drive_mode) === "1") return (v / 1000).toFixed(2) + " V";  // mV → V
+    return fmtNum(v) + " mA";
+  }
   // 可排序欄位 → 取值函式(數值欄轉 Number,日期欄按字串)
   var SORT_GETTERS = {
     rpm_max_overall: function (it) { return Number(it.rpm_max_overall) || 0; },
@@ -2271,7 +2288,7 @@ LAB_APP_JS = r"""
         "<td>" + esc(owner) + "</td><td>" + esc(country) + "</td>" +
         '<td class="lab-mono">' + fmtNum(it.rpm_max_overall) + "</td>" +
         '<td class="lab-mono">' + fmtNum(it.rpm_avg_overall) + "</td>" +
-        '<td class="lab-mono">' + fmtNum(it.stable_current_overall) + "</td>" +
+        '<td class="lab-mono">' + fmtStable(it) + "</td>" +
         '<td class="lab-mono">' + esc(date) + "</td></tr>";
     });
     box.innerHTML = h + "</tbody></table>";
@@ -2284,6 +2301,7 @@ LAB_APP_JS = r"""
     var m = (($("lab-f-motor") || {}).value || "").trim().toLowerCase();
     var c = (($("lab-f-country") || {}).value || "").trim().toLowerCase();
     var cp = ($("lab-f-completed") || {}).value || "";
+    var md = ($("lab-f-mode") || {}).value || "";   // 模式:voltage / speed / 空=全部
     // 排序下拉:值格式 "key|dir"(dir = 1 升 / -1 降);空 = 不排序
     var sv = ($("lab-f-sort") || {}).value || "";
     if (sv) { var parts = sv.split("|"); sortKey = parts[0]; sortDir = (parts[1] === "1") ? 1 : -1; }
@@ -2295,6 +2313,11 @@ LAB_APP_JS = r"""
         var done = (it.completed === true || it.completed === "true");
         if (cp === "true" && !done) return false;
         if (cp === "false" && done) return false;
+      }
+      if (md) {
+        var isSpeed = (String(it.drive_mode) === "1");  // 轉速模式
+        if (md === "speed" && !isSpeed) return false;
+        if (md === "voltage" && isSpeed) return false;
       }
       return true;
     });
@@ -2362,10 +2385,11 @@ LAB_APP_JS = r"""
     if (rf) rf.addEventListener("click", loadList);
     // 即時篩選/排序/分頁:從快取運算,不再每次打 GAS(瀏覽專用,上傳/下載在 APP 內)
     var fm = $("lab-f-motor"), fc = $("lab-f-country"), fcp = $("lab-f-completed"),
-        fps = $("lab-f-pagesize"), fsort = $("lab-f-sort");
+        fmd = $("lab-f-mode"), fps = $("lab-f-pagesize"), fsort = $("lab-f-sort");
     if (fm) fm.addEventListener("change", applyFilter);   // 下拉用 change
     if (fc) fc.addEventListener("input", applyFilter);    // 文字框用 input
     if (fcp) fcp.addEventListener("change", applyFilter);
+    if (fmd) fmd.addEventListener("change", applyFilter); // 模式篩選
     if (fps) fps.addEventListener("change", applyFilter); // 顯示筆數
     if (fsort) fsort.addEventListener("change", applyFilter); // 排序下拉
     loadList();
@@ -2519,6 +2543,11 @@ def build_lab_page(lab_cfg, lang, src_html, i18n):
         f'<option value="">{s["f_comp_all"]}</option>'
         f'<option value="true">{s["f_comp_yes"]}</option>'
         f'<option value="false">{s["f_comp_no"]}</option>'
+        f'</select>'
+        f'<select id="lab-f-mode" class="lab-input">'
+        f'<option value="">{s["f_mode_all"]}</option>'
+        f'<option value="voltage">{s["f_mode_v"]}</option>'
+        f'<option value="speed">{s["f_mode_s"]}</option>'
         f'</select>'
         f'<select id="lab-f-sort" class="lab-input" aria-label="{s["f_sort"]}">'
         f'<option value="">{s["f_sort"]}</option>'
