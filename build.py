@@ -2874,6 +2874,8 @@ PRESALE = {
             "select_ph": "請選擇",
             "btn": "送出意向",
             "note": "這些資料僅用於開賣通知與首批數量規劃,不濫發信、不轉給第三方。",
+            "done_title": "感謝您的填寫",
+            "done_sub": "已收到你的購買意向,正在返回首頁…",
             "js": {
                 "lang": "zh",
                 "bademail": "⚠ 請輸入正確的 email",
@@ -2908,6 +2910,8 @@ PRESALE = {
             "select_ph": "Select…",
             "btn": "Submit intent",
             "note": "Used only to notify you at launch and plan the first batch. No spam, never shared with third parties.",
+            "done_title": "Thank you!",
+            "done_sub": "Your buying intent is recorded. Returning to home…",
             "js": {
                 "lang": "en",
                 "bademail": "⚠ Please enter a valid email",
@@ -2942,6 +2946,8 @@ PRESALE = {
             "select_ph": "選択してください",
             "btn": "意向を送信",
             "note": "発売のお知らせと初回ロットの数量計画にのみ使用します。スパムや第三者提供はありません。",
+            "done_title": "ご記入ありがとうございます",
+            "done_sub": "購入意向を受け付けました。ホームへ戻ります…",
             "js": {
                 "lang": "ja",
                 "bademail": "⚠ 正しいメールアドレスを入力してください",
@@ -2986,8 +2992,11 @@ PRESALE_APP_JS = r"""
     function cleanup() { clearTimeout(timer); try { delete window[cb]; } catch (x) { window[cb] = undefined; } if (s.parentNode) s.parentNode.removeChild(s); }
     window[cb] = function (r) {
       cleanup();
-      if (r && r.ok) { setMsg(I18N.ok, 'ok'); if (form) form.style.display = 'none'; setTimeout(function () { location.href = HOME; }, 1600); }
-      else { btn.disabled = false; setMsg(I18N.err, 'bad'); }
+      if (r && r.ok) {
+        if (form) form.style.display = 'none';
+        var done = byId('ps-done'); if (done) done.style.display = 'block';
+        setTimeout(function () { location.href = HOME; }, 2600);
+      } else { btn.disabled = false; setMsg(I18N.err, 'bad'); }
     };
     s.onerror = function () { cleanup(); btn.disabled = false; setMsg(I18N.err, 'bad'); };
     var q = '?action=presale&email=' + encodeURIComponent(em)
@@ -3025,6 +3034,9 @@ PRESALE_CSS = """
 .ps-msg.muted{color:var(--text-muted)}
 .ps-note{font-size:12.5px;line-height:1.7;color:var(--text-muted);text-align:center;margin:0}
 .ps-badge{display:inline-block;margin:4px 0 2px;padding:7px 14px;border-radius:999px;background:rgba(53,208,223,.10);border:1px solid rgba(53,208,223,.35);color:#8fe3ee;font-size:13.5px;font-weight:600;letter-spacing:.02em}
+.ps-done{text-align:center;padding:48px 12px}
+.ps-done-t{font-size:clamp(26px,5vw,40px);font-weight:700;color:var(--text-primary,#e8ebf0);line-height:1.35;margin-bottom:14px}
+.ps-done-s{font-size:16px;line-height:1.7;color:var(--text-muted)}
 @media(max-width:520px){.ps-grid{grid-template-columns:1fr}}
 """
 
@@ -3171,6 +3183,10 @@ def build_presale_page(presale_cfg, lang, src_html, i18n):
         f'<div class="ps-msg" id="ps-msg" aria-live="polite"></div>'
         f'<p class="ps-note">{s["note"]}</p>'
         f'</form>'
+        f'<div id="ps-done" class="ps-done" style="display:none" aria-live="polite">'
+        f'<div class="ps-done-t">{s["done_title"]}</div>'
+        f'<div class="ps-done-s">{s["done_sub"]}</div>'
+        f'</div>'
         f'</div></div></section>'
     )
     main_el.append(BeautifulSoup(form_html, "html.parser"))
