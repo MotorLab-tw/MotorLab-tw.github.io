@@ -2850,14 +2850,14 @@ PRESALE = {
     "api_url": "PUT_PRESALE_GAS_EXEC_URL",
     "i18n": {
         "zh": {
-            "title": "搶先登記・限量首批 | MotorLab 馬達磨合機",
+            "title": "意向調查・限量首批 | MotorLab 馬達磨合機",
             "description": "MotorLab 精密馬達磨合/檢測機預計 2026 年底限量首批發售。留下 email 與購買意向,開賣第一時間通知你,也協助我們把首批數量備得剛剛好。",
-            "keywords": "MotorLab 預購, 馬達磨合機 預購, 限量首批, 搶先登記, 意向調查, mini 四驅車 馬達磨合機",
-            "breadcrumb": "搶先登記",
-            "h1_for_ld": "MotorLab 搶先登記・限量首批",
-            "eyebrow": "Pre-launch · 搶先登記",
-            "hero_title": "搶先登記・限量首批",
-            "badge": "2026 年底限量首批・意願調查",
+            "keywords": "MotorLab 預購, 馬達磨合機 預購, 限量首批, 意向調查, mini 四驅車 馬達磨合機",
+            "breadcrumb": "意向調查",
+            "h1_for_ld": "MotorLab 意向調查・限量首批",
+            "eyebrow": "Pre-launch · 意向調查",
+            "hero_title": "意向調查・限量首批",
+            "badge": "2026 年底限量首批・意向調查",
             "hero_p": "MotorLab 精密馬達磨合/檢測機預計 <b>2026 年底</b>限量首批發售。留個資料、告訴我你的購買意向。",
             "email_label": "Email(必填)",
             "email_ph": "you@example.com",
@@ -2865,6 +2865,8 @@ PRESALE = {
             "intent_opts": ["開賣就想買", "看價格再決定", "先了解、觀望"],
             "edition_label": "想要的版本",
             "edition_opts": ["PRO(完整・含 AI 健康管理)", "M1(入門)", "還沒決定"],
+            "qty_label": "購買數量",
+            "qty_ph": "例:1 台 / 2–3 台",
             "price_label": "期望價格(選填)",
             "price_ph": "例:NT$3500 / ¥15000 / US$120",
             "country_label": "所在國家/地區",
@@ -2882,13 +2884,13 @@ PRESALE = {
             }
         },
         "en": {
-            "title": "Pre-register · Limited First Batch | MotorLab",
+            "title": "Interest Survey · Limited First Batch | MotorLab",
             "description": "MotorLab's precision motor break-in / test machine ships in a limited first batch in late 2026. Leave your email and buying intent and we will notify you the moment it launches.",
-            "keywords": "MotorLab pre-order, motor break-in machine pre-order, limited first batch, pre-register, intent survey, mini 4wd motor break-in machine",
-            "breadcrumb": "Pre-register",
-            "h1_for_ld": "MotorLab Pre-register · Limited First Batch",
-            "eyebrow": "Pre-launch",
-            "hero_title": "Pre-register · Limited First Batch",
+            "keywords": "MotorLab pre-order, motor break-in machine pre-order, limited first batch, intent survey, mini 4wd motor break-in machine",
+            "breadcrumb": "Interest Survey",
+            "h1_for_ld": "MotorLab Interest Survey · Limited First Batch",
+            "eyebrow": "Pre-launch · Interest survey",
+            "hero_title": "Interest Survey · Limited First Batch",
             "badge": "Late 2026 · Limited first batch · Interest survey",
             "hero_p": "MotorLab's precision motor break-in / test machine ships in a limited first batch in <b>late 2026</b>. Leave your details and tell us your buying intent.",
             "email_label": "Email (required)",
@@ -2897,6 +2899,8 @@ PRESALE = {
             "intent_opts": ["Ready to buy at launch", "Depends on the price", "Just exploring for now"],
             "edition_label": "Which edition",
             "edition_opts": ["PRO (full · with AI health management)", "M1 (entry)", "Not sure yet"],
+            "qty_label": "Quantity",
+            "qty_ph": "e.g. 1 / 2–3 units",
             "price_label": "Target price (optional)",
             "price_ph": "e.g. US$120 / NT$3500 / ¥15000",
             "country_label": "Country / region",
@@ -2914,13 +2918,13 @@ PRESALE = {
             }
         },
         "ja": {
-            "title": "先行登録・限定初回ロット | MotorLab",
+            "title": "意向調査・限定初回ロット | MotorLab",
             "description": "MotorLab 精密モーター慣らし/検査機は 2026 年末に限定初回ロットで発売予定。メールと購入意向をご登録いただくと、発売時に一番にお知らせします。",
-            "keywords": "MotorLab 予約, モーター慣らし機 予約, 限定初回ロット, 先行登録, 意向調査, ミニ四駆 モーター慣らし機",
-            "breadcrumb": "先行登録",
-            "h1_for_ld": "MotorLab 先行登録・限定初回ロット",
-            "eyebrow": "Pre-launch · 先行登録",
-            "hero_title": "先行登録・限定初回ロット",
+            "keywords": "MotorLab 予約, モーター慣らし機 予約, 限定初回ロット, 意向調査, ミニ四駆 モーター慣らし機",
+            "breadcrumb": "意向調査",
+            "h1_for_ld": "MotorLab 意向調査・限定初回ロット",
+            "eyebrow": "Pre-launch · 意向調査",
+            "hero_title": "意向調査・限定初回ロット",
             "badge": "2026 年末限定初回ロット・意向調査",
             "hero_p": "MotorLab 精密モーター慣らし/検査機は <b>2026 年末</b>に限定初回ロットで発売予定です。ご連絡先と購入意向をお知らせください。",
             "email_label": "メール(必須)",
@@ -2929,6 +2933,8 @@ PRESALE = {
             "intent_opts": ["発売したら買いたい", "価格次第", "まずは検討中"],
             "edition_label": "希望バージョン",
             "edition_opts": ["PRO(フル・AI ヘルス管理付き)", "M1(エントリー)", "まだ未定"],
+            "qty_label": "購入台数",
+            "qty_ph": "例:1 台 / 2–3 台",
             "price_label": "希望価格(任意)",
             "price_ph": "例:¥15000 / US$120 / NT$3500",
             "country_label": "国 / 地域",
@@ -2957,8 +2963,8 @@ PRESALE_APP_JS = r"""
   var I18N = __I18N_JSON__;
   function byId(id) { return document.getElementById(id); }
   var form = byId('ps-form'), email = byId('ps-email'), intent = byId('ps-intent'),
-      edition = byId('ps-edition'), price = byId('ps-price'), country = byId('ps-country'),
-      btn = byId('ps-btn'), msg = byId('ps-msg');
+      edition = byId('ps-edition'), qty = byId('ps-qty'), price = byId('ps-price'),
+      country = byId('ps-country'), btn = byId('ps-btn'), msg = byId('ps-msg');
   // 所在國家:時區→ISO 區碼(退回語系副標籤),用 Intl.DisplayNames 在地化成國名並預填(可改)
   var TZ = { 'Asia/Taipei':'TW','Asia/Tokyo':'JP','Asia/Kuala_Lumpur':'MY','Asia/Kuching':'MY','Asia/Hong_Kong':'HK','Asia/Singapore':'SG','Asia/Shanghai':'CN','Asia/Chongqing':'CN','Asia/Urumqi':'CN','Asia/Macau':'MO','Asia/Seoul':'KR','Asia/Bangkok':'TH','Asia/Jakarta':'ID','Asia/Manila':'PH','Asia/Ho_Chi_Minh':'VN','Asia/Kolkata':'IN','Asia/Dubai':'AE','Australia/Sydney':'AU','Australia/Melbourne':'AU','Australia/Perth':'AU','Pacific/Auckland':'NZ','Europe/London':'GB','Europe/Paris':'FR','Europe/Berlin':'DE','Europe/Madrid':'ES','Europe/Rome':'IT','Europe/Amsterdam':'NL','Europe/Warsaw':'PL','America/New_York':'US','America/Chicago':'US','America/Denver':'US','America/Los_Angeles':'US','America/Toronto':'CA','America/Vancouver':'CA','America/Sao_Paulo':'BR','America/Mexico_City':'MX' };
   var det = { region: '', tz: '', locale: '' };
@@ -2987,6 +2993,7 @@ PRESALE_APP_JS = r"""
     var q = '?action=presale&email=' + encodeURIComponent(em)
       + '&intent=' + encodeURIComponent(intent ? intent.value : '')
       + '&edition=' + encodeURIComponent(edition ? edition.value : '')
+      + '&qty=' + encodeURIComponent(qty ? qty.value.trim() : '')
       + '&price=' + encodeURIComponent(price ? price.value.trim() : '')
       + '&country=' + encodeURIComponent(country ? country.value.trim() : '')
       + '&region=' + encodeURIComponent(det.region)
@@ -3150,6 +3157,9 @@ def build_presale_page(presale_cfg, lang, src_html, i18n):
         f'<select id="ps-intent" class="ps-input">{opts(s["intent_opts"])}</select></label>'
         f'<label class="ps-field"><span class="ps-lab">{s["edition_label"]}</span>'
         f'<select id="ps-edition" class="ps-input">{opts(s["edition_opts"])}</select></label>'
+        f'<label class="ps-field"><span class="ps-lab">{s["qty_label"]}</span>'
+        f'<input type="text" id="ps-qty" class="ps-input" maxlength="20" '
+        f'inputmode="numeric" placeholder="{s["qty_ph"]}"></label>'
         f'<label class="ps-field"><span class="ps-lab">{s["price_label"]}</span>'
         f'<input type="text" id="ps-price" class="ps-input" maxlength="40" '
         f'placeholder="{s["price_ph"]}"></label>'
@@ -3652,7 +3662,7 @@ def main():
         print(f"  ✅ {out_path:<45} {size:>9,} bytes  ({lang})")
 
     print()
-    print("=== 搶先登記・意向調查(/presale/,GAS presale / JSONP)===")
+    print("=== 意向調查(/presale/,GAS presale / JSONP)===")
     for lang in ("zh", "en", "ja"):
         if lang not in PRESALE["i18n"]:
             continue
