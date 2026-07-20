@@ -1150,13 +1150,13 @@
     .guide-article h3 {
       font-size: 19px;
     }
-    /* 寬表格(如 g9 全 15 款規格,含品番共 9 欄)在窄螢幕改為橫向捲動,
-       避免內容溢出撐破版面(整頁不會橫向捲,只有表格自己捲) */
-    .guide-table {
-      display: block;
-      overflow-x: auto;
-      white-space: nowrap;
-      -webkit-overflow-scrolling: touch;
+    /* 表格欄寬依內容自動分配(table-layout: auto,不固定欄寬);
+       窄螢幕下長文自然換行、不橫向捲動,縮小內距與字級以容納 9 欄 */
+    .guide-table th,
+    .guide-table td {
+      padding: 8px 8px;
+      font-size: 12px;
+      word-break: break-word;
     }
   }
 
