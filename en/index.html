@@ -1150,6 +1150,14 @@
     .guide-article h3 {
       font-size: 19px;
     }
+    /* 寬表格(如 g9 全 15 款規格,含品番共 9 欄)在窄螢幕改為橫向捲動,
+       避免內容溢出撐破版面(整頁不會橫向捲,只有表格自己捲) */
+    .guide-table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
   }
 
   /* ===== 教學分頁專用 (zh-only at the moment) ===== */
@@ -3492,6 +3500,7 @@
       'g9.h2': 'Mini 4WD PRO 系列(雙軸,6 款)',
       'g9.h3': 'Mini 4WD 標準系列(單軸,9 款)',
       'g9.t.name': '型號',
+      'g9.t.item': '品番',
       'g9.t.speed': 'SPEED',
       'g9.t.torque': 'TORQUE',
       'g9.t.voltage': '電壓',
@@ -3506,6 +3515,7 @@
       'g9.pro5.note': '高轉速、長直線(建議小徑輪)',
       'g9.pro6.note': '高轉高性能,進階玩家(建議小徑輪)',
       'g9.t.name2': '型號',
+      'g9.t.item2': '品番',
       'g9.t.speed2': 'SPEED',
       'g9.t.torque2': 'TORQUE',
       'g9.t.voltage2': '電壓',
@@ -4406,6 +4416,7 @@
       'g9.h2': 'Mini 4WD PRO Series (double-shaft, 6 models)',
       'g9.h3': 'Standard Mini 4WD Series (single-shaft, 9 models)',
       'g9.t.name': 'Model',
+      'g9.t.item': 'Item №',
       'g9.t.speed': 'SPEED',
       'g9.t.torque': 'TORQUE',
       'g9.t.voltage': 'Voltage',
@@ -4420,6 +4431,7 @@
       'g9.pro5.note': 'High rev for long straights (small-dia. tires recommended)',
       'g9.pro6.note': 'High rev high performance (advanced, small-dia. tires recommended)',
       'g9.t.name2': 'Model',
+      'g9.t.item2': 'Item №',
       'g9.t.speed2': 'SPEED',
       'g9.t.torque2': 'TORQUE',
       'g9.t.voltage2': 'Voltage',
@@ -5443,6 +5455,7 @@
       'g9.h2': 'Mini 4WD PRO シリーズ(両軸、6 種)',
       'g9.h3': 'Mini 4WD 標準シリーズ(片軸、9 種)',
       'g9.t.name': '型式',
+      'g9.t.item': '品番',
       'g9.t.speed': 'SPEED',
       'g9.t.torque': 'TORQUE',
       'g9.t.voltage': '電圧',
@@ -5457,6 +5470,7 @@
       'g9.pro5.note': '高回転、長いストレート向け(小径タイヤ推奨)',
       'g9.pro6.note': '高回転高性能(上級者向け、小径タイヤ推奨)',
       'g9.t.name2': '型式',
+      'g9.t.item2': '品番',
       'g9.t.speed2': 'SPEED',
       'g9.t.torque2': 'TORQUE',
       'g9.t.voltage2': '電圧',

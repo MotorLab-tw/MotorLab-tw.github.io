@@ -950,6 +950,14 @@
     .guide-article h3 {
       font-size: 19px;
     }
+    /* 寬表格(如 g9 全 15 款規格,含品番共 9 欄)在窄螢幕改為橫向捲動,
+       避免內容溢出撐破版面(整頁不會橫向捲,只有表格自己捲) */
+    .guide-table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
   }
 
   /* ===== 教學分頁專用 (zh-only at the moment) ===== */
@@ -1914,7 +1922,7 @@
     "@id": "https://motorlab-tw.github.io/ja/benchmarks/tamiya-mini-4wd-motor-specs-list/"
   },
   "datePublished": "2026-05-25",
-  "dateModified": "2026-07-19",
+  "dateModified": "2026-07-20",
   "author": {
     "@type": "Organization",
     "name": "MotorLab Team",
@@ -1957,7 +1965,7 @@
 }</script></head>
 <body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/ja/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/ja/">← ホームへ戻る</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/ja/">ホーム</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/ja/#guides">ベンチマーク</a><span class="sep">/</span><span class="current">全 15 種モーター規格</span></nav><article class="guide-article">
 <span class="guide-tag" data-i18n="g9.tag">REFERENCE · 全モーター速査</span>
-<h1 data-i18n="g9.title">タミヤ Mini 4WD® 全 15 種モーター規格対照表(PRO シリーズ含む)</h1><p class="guide-byline">編集者:MotorLab Team</p><p class="guide-dates">公開 2026-05-25　·　更新 2026-07-19</p>
+<h1 data-i18n="g9.title">タミヤ Mini 4WD® 全 15 種モーター規格対照表(PRO シリーズ含む)</h1><p class="guide-byline">編集者:MotorLab Team</p><p class="guide-dates">公開 2026-05-25　·　更新 2026-07-20</p>
 <p class="guide-lead" data-i18n="g9.lead">タミヤ(TAMIYA, INC.)が現在展開している Mini 4WD® モーターは合計 15 種、<strong>Mini 4WD 標準シリーズ 9 種(片軸)</strong>と <strong>Mini 4WD PRO シリーズ 6 種(両軸)</strong>を網羅します。本対照表は公式公表の RPM、トルク(mN·m)、電流(A)スペックを整理し、競技ルールでの使用制限を注記。シャーシタイプとコース特性に応じたモーター選びにご活用ください。</p>
 <figure data-i18n="g9.figchart"><img alt="タミヤ Mini 4WD 全 15 機種 規格早見表:PRO 両軸 6＋標準片軸 9、負荷 RPM・トルク(mN·m)・電流(A)・速度/トルク評価" class="chart" loading="lazy" src="/images/tamiya-15-motor-spec-chart_j.png"/></figure>
 <div class="guide-tip">
@@ -1970,6 +1978,7 @@
 <thead>
 <tr>
 <th data-i18n="g9.t.name">型式</th>
+<th data-i18n="g9.t.item">品番</th>
 <th data-i18n="g9.t.speed">SPEED</th>
 <th data-i18n="g9.t.torque">TORQUE</th>
 <th data-i18n="g9.t.voltage">電圧</th>
@@ -1980,12 +1989,12 @@
 </tr>
 </thead>
 <tbody>
-<tr><td>Torque-Tuned 2 PRO</td><td>★</td><td>★★</td><td>2.4–3.0V</td><td>12,200–14,400</td><td>1.6–1.8</td><td>1.7–2.0</td><td data-i18n="g9.pro1.note">コーナー多めや上り坂、最高速より加速重視</td></tr>
-<tr><td>Light-Dash PRO</td><td>★★</td><td>★★</td><td>2.4–3.0V</td><td>14,600–17,800</td><td>1.3–1.9</td><td>1.5–2.2</td><td data-i18n="g9.pro2.note">Torque PRO と Hyper-Dash PRO の中間(上級者向け)</td></tr>
-<tr><td>Atomic-Tuned 2 PRO</td><td>★</td><td>★</td><td>2.4–3.0V</td><td>12,300–14,500</td><td>1.6–1.8</td><td>1.5–1.7</td><td data-i18n="g9.pro3.note">スピードとトルクのバランス、ミックスコース向け</td></tr>
-<tr><td>Hyper-Dash PRO</td><td>★★★</td><td>★</td><td>2.4–3.0V</td><td>17,200–21,200</td><td>1.4–1.9</td><td>1.6–3.0</td><td data-i18n="g9.pro4.note">バランスの高性能、上級セッティングで真価を発揮</td></tr>
-<tr><td>Rev-Tuned 2 PRO</td><td>★★</td><td>★</td><td>2.4–3.0V</td><td>13,200–14,900</td><td>1.2–1.5</td><td>1.5–1.8</td><td data-i18n="g9.pro5.note">高回転、長いストレート向け(小径タイヤ推奨)</td></tr>
-<tr><td>Mach-Dash PRO</td><td>★★★</td><td>★★</td><td>2.4–3.0V</td><td>20,000–24,500</td><td>1.3–1.8</td><td>2.6–3.5</td><td data-i18n="g9.pro6.note">高回転高性能(上級者向け、小径タイヤ推奨)</td></tr>
+<tr><td>Torque-Tuned 2 PRO</td><td>15487</td><td>★</td><td>★★</td><td>2.4–3.0V</td><td>12,200–14,400</td><td>1.6–1.8</td><td>1.7–2.0</td><td data-i18n="g9.pro1.note">コーナー多めや上り坂、最高速より加速重視</td></tr>
+<tr><td>Light-Dash PRO</td><td>15402</td><td>★★</td><td>★★</td><td>2.4–3.0V</td><td>14,600–17,800</td><td>1.3–1.9</td><td>1.5–2.2</td><td data-i18n="g9.pro2.note">Torque PRO と Hyper-Dash PRO の中間(上級者向け)</td></tr>
+<tr><td>Atomic-Tuned 2 PRO</td><td>15489</td><td>★</td><td>★</td><td>2.4–3.0V</td><td>12,300–14,500</td><td>1.6–1.8</td><td>1.5–1.7</td><td data-i18n="g9.pro3.note">スピードとトルクのバランス、ミックスコース向け</td></tr>
+<tr><td>Hyper-Dash PRO</td><td>15375</td><td>★★★</td><td>★</td><td>2.4–3.0V</td><td>17,200–21,200</td><td>1.4–1.9</td><td>1.6–3.0</td><td data-i18n="g9.pro4.note">バランスの高性能、上級セッティングで真価を発揮</td></tr>
+<tr><td>Rev-Tuned 2 PRO</td><td>15488</td><td>★★</td><td>★</td><td>2.4–3.0V</td><td>13,200–14,900</td><td>1.2–1.5</td><td>1.5–1.8</td><td data-i18n="g9.pro5.note">高回転、長いストレート向け(小径タイヤ推奨)</td></tr>
+<tr><td>Mach-Dash PRO</td><td>15433</td><td>★★★</td><td>★★</td><td>2.4–3.0V</td><td>20,000–24,500</td><td>1.3–1.8</td><td>2.6–3.5</td><td data-i18n="g9.pro6.note">高回転高性能(上級者向け、小径タイヤ推奨)</td></tr>
 </tbody>
 </table>
 <h2 data-i18n="g9.h3">Mini 4WD 標準シリーズ(片軸、9 種)</h2>
@@ -1993,6 +2002,7 @@
 <thead>
 <tr>
 <th data-i18n="g9.t.name2">型式</th>
+<th data-i18n="g9.t.item2">品番</th>
 <th data-i18n="g9.t.speed2">SPEED</th>
 <th data-i18n="g9.t.torque2">TORQUE</th>
 <th data-i18n="g9.t.voltage2">電圧</th>
@@ -2003,15 +2013,15 @@
 </tr>
 </thead>
 <tbody>
-<tr><td>Torque-Tuned 2</td><td>★</td><td>★★</td><td>2.4–3.0V</td><td>12,300–14,700</td><td>1.6–2.0</td><td>1.7–2.0</td><td data-i18n="g9.std1.note">コーナー多めや上り坂、加速優先</td></tr>
-<tr><td>Light-Dash</td><td>★★</td><td>★★</td><td>2.4–3.0V</td><td>14,600–17,800</td><td>1.3–1.9</td><td>1.5–2.2</td><td data-i18n="g9.std2.note">Atomic-Tuned 2 と Hyper-Dash 3 の中間(上級者向け)</td></tr>
-<tr><td>Sprint-Dash</td><td>★★★</td><td>★★</td><td>2.4–3.0V</td><td>20,700–27,200</td><td>1.3–1.8</td><td>2.8–3.8</td><td data-i18n="g9.std3.note">高回転で最高速、長いストレート専用(小径タイヤ推奨)</td></tr>
-<tr><td>Atomic-Tuned 2</td><td>★</td><td>★</td><td>2.4–3.0V</td><td>12,700–14,900</td><td>1.5–1.8</td><td>1.8–2.2</td><td data-i18n="g9.std4.note">スピードとトルクのバランス、ミックスコース向け</td></tr>
-<tr><td>Hyper-Dash 3</td><td>★★★</td><td>★</td><td>2.4–3.0V</td><td>17,200–21,200</td><td>1.4–1.9</td><td>1.6–3.0</td><td data-i18n="g9.std5.note">バランスの高性能、各種コースに対応(上級者向け)</td></tr>
-<tr><td>Ultra-Dash</td><td>★★★</td><td>★</td><td>2.4–3.0V</td><td>20,400–27,500</td><td>1.4–1.9</td><td>4.0–5.0</td><td data-i18n="g9.std6.note">⚠ 最高速計時用、日本公式競技では<strong>使用不可</strong></td></tr>
-<tr><td>Rev-Tuned 2</td><td>★★</td><td>★</td><td>2.4–3.0V</td><td>13,400–15,200</td><td>1.2–1.5</td><td>1.6–2.0</td><td data-i18n="g9.std7.note">高回転、長いストレート向け(小径タイヤ推奨)</td></tr>
-<tr><td>Power-Dash</td><td>★★★</td><td>★★★</td><td>2.4–3.0V</td><td>19,900–23,600</td><td>1.5–2.0</td><td>2.5–3.3</td><td data-i18n="g9.std8.note">高トルク、テクニカルコースや上り坂区間向け</td></tr>
-<tr><td>Plasma-Dash</td><td>★★★★</td><td>★★★</td><td>2.4–3.0V</td><td>25,000–28,000</td><td>1.4–1.9</td><td>4.1–5.2</td><td data-i18n="g9.std9.note">⚠ 最高回転 + 高トルク、ヒートシンク内蔵、日本公式競技では<strong>使用不可</strong></td></tr>
+<tr><td>Torque-Tuned 2</td><td>15484</td><td>★</td><td>★★</td><td>2.4–3.0V</td><td>12,300–14,700</td><td>1.6–2.0</td><td>1.7–2.0</td><td data-i18n="g9.std1.note">コーナー多めや上り坂、加速優先</td></tr>
+<tr><td>Light-Dash</td><td>15455</td><td>★★</td><td>★★</td><td>2.4–3.0V</td><td>14,600–17,800</td><td>1.3–1.9</td><td>1.5–2.2</td><td data-i18n="g9.std2.note">Atomic-Tuned 2 と Hyper-Dash 3 の中間(上級者向け)</td></tr>
+<tr><td>Sprint-Dash</td><td>15318</td><td>★★★</td><td>★★</td><td>2.4–3.0V</td><td>20,700–27,200</td><td>1.3–1.8</td><td>2.8–3.8</td><td data-i18n="g9.std3.note">高回転で最高速、長いストレート専用(小径タイヤ推奨)</td></tr>
+<tr><td>Atomic-Tuned 2</td><td>15486</td><td>★</td><td>★</td><td>2.4–3.0V</td><td>12,700–14,900</td><td>1.5–1.8</td><td>1.8–2.2</td><td data-i18n="g9.std4.note">スピードとトルクのバランス、ミックスコース向け</td></tr>
+<tr><td>Hyper-Dash 3</td><td>15477</td><td>★★★</td><td>★</td><td>2.4–3.0V</td><td>17,200–21,200</td><td>1.4–1.9</td><td>1.6–3.0</td><td data-i18n="g9.std5.note">バランスの高性能、各種コースに対応(上級者向け)</td></tr>
+<tr><td>Ultra-Dash</td><td>15307</td><td>★★★</td><td>★</td><td>2.4–3.0V</td><td>20,400–27,500</td><td>1.4–1.9</td><td>4.0–5.0</td><td data-i18n="g9.std6.note">⚠ 最高速計時用、日本公式競技では<strong>使用不可</strong></td></tr>
+<tr><td>Rev-Tuned 2</td><td>15485</td><td>★★</td><td>★</td><td>2.4–3.0V</td><td>13,400–15,200</td><td>1.2–1.5</td><td>1.6–2.0</td><td data-i18n="g9.std7.note">高回転、長いストレート向け(小径タイヤ推奨)</td></tr>
+<tr><td>Power-Dash</td><td>15317</td><td>★★★</td><td>★★★</td><td>2.4–3.0V</td><td>19,900–23,600</td><td>1.5–2.0</td><td>2.5–3.3</td><td data-i18n="g9.std8.note">高トルク、テクニカルコースや上り坂区間向け</td></tr>
+<tr><td>Plasma-Dash</td><td>15186</td><td>★★★★</td><td>★★★</td><td>2.4–3.0V</td><td>25,000–28,000</td><td>1.4–1.9</td><td>4.1–5.2</td><td data-i18n="g9.std9.note">⚠ 最高回転 + 高トルク、ヒートシンク内蔵、日本公式競技では<strong>使用不可</strong></td></tr>
 </tbody>
 </table>
 <h2 data-i18n="g9.h4">公式競技ルールと使用範囲</h2>

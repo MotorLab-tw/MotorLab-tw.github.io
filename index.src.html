@@ -1046,6 +1046,14 @@
     .guide-article h3 {
       font-size: 19px;
     }
+    /* 寬表格(如 g9 全 15 款規格,含品番共 9 欄)在窄螢幕改為橫向捲動,
+       避免內容溢出撐破版面(整頁不會橫向捲,只有表格自己捲) */
+    .guide-table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
   }
 
   /* ===== 教學分頁專用 (zh-only at the moment) ===== */
@@ -3254,6 +3262,7 @@
           <thead>
             <tr>
               <th data-i18n="g9.t.name">型號</th>
+              <th data-i18n="g9.t.item">品番</th>
               <th data-i18n="g9.t.speed">SPEED</th>
               <th data-i18n="g9.t.torque">TORQUE</th>
               <th data-i18n="g9.t.voltage">電壓</th>
@@ -3264,12 +3273,12 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td>Torque-Tuned 2 PRO</td><td>★</td><td>★★</td><td>2.4–3.0V</td><td>12,200–14,400</td><td>1.6–1.8</td><td>1.7–2.0</td><td data-i18n="g9.pro1.note">多彎賽道、上坡路段,加速優於極速</td></tr>
-            <tr><td>Light-Dash PRO</td><td>★★</td><td>★★</td><td>2.4–3.0V</td><td>14,600–17,800</td><td>1.3–1.9</td><td>1.5–2.2</td><td data-i18n="g9.pro2.note">Torque PRO 與 Hyper-Dash PRO 之間的中階,進階玩家</td></tr>
-            <tr><td>Atomic-Tuned 2 PRO</td><td>★</td><td>★</td><td>2.4–3.0V</td><td>12,300–14,500</td><td>1.6–1.8</td><td>1.5–1.7</td><td data-i18n="g9.pro3.note">速度與扭力平衡,適合混合賽道</td></tr>
-            <tr><td>Hyper-Dash PRO</td><td>★★★</td><td>★</td><td>2.4–3.0V</td><td>17,200–21,200</td><td>1.4–1.9</td><td>1.6–3.0</td><td data-i18n="g9.pro4.note">平衡高性能,進階車架設定可發揮全潛力</td></tr>
-            <tr><td>Rev-Tuned 2 PRO</td><td>★★</td><td>★</td><td>2.4–3.0V</td><td>13,200–14,900</td><td>1.2–1.5</td><td>1.5–1.8</td><td data-i18n="g9.pro5.note">高轉速、長直線(建議小徑輪)</td></tr>
-            <tr><td>Mach-Dash PRO</td><td>★★★</td><td>★★</td><td>2.4–3.0V</td><td>20,000–24,500</td><td>1.3–1.8</td><td>2.6–3.5</td><td data-i18n="g9.pro6.note">高轉高性能,進階玩家(建議小徑輪)</td></tr>
+            <tr><td>Torque-Tuned 2 PRO</td><td>15487</td><td>★</td><td>★★</td><td>2.4–3.0V</td><td>12,200–14,400</td><td>1.6–1.8</td><td>1.7–2.0</td><td data-i18n="g9.pro1.note">多彎賽道、上坡路段,加速優於極速</td></tr>
+            <tr><td>Light-Dash PRO</td><td>15402</td><td>★★</td><td>★★</td><td>2.4–3.0V</td><td>14,600–17,800</td><td>1.3–1.9</td><td>1.5–2.2</td><td data-i18n="g9.pro2.note">Torque PRO 與 Hyper-Dash PRO 之間的中階,進階玩家</td></tr>
+            <tr><td>Atomic-Tuned 2 PRO</td><td>15489</td><td>★</td><td>★</td><td>2.4–3.0V</td><td>12,300–14,500</td><td>1.6–1.8</td><td>1.5–1.7</td><td data-i18n="g9.pro3.note">速度與扭力平衡,適合混合賽道</td></tr>
+            <tr><td>Hyper-Dash PRO</td><td>15375</td><td>★★★</td><td>★</td><td>2.4–3.0V</td><td>17,200–21,200</td><td>1.4–1.9</td><td>1.6–3.0</td><td data-i18n="g9.pro4.note">平衡高性能,進階車架設定可發揮全潛力</td></tr>
+            <tr><td>Rev-Tuned 2 PRO</td><td>15488</td><td>★★</td><td>★</td><td>2.4–3.0V</td><td>13,200–14,900</td><td>1.2–1.5</td><td>1.5–1.8</td><td data-i18n="g9.pro5.note">高轉速、長直線(建議小徑輪)</td></tr>
+            <tr><td>Mach-Dash PRO</td><td>15433</td><td>★★★</td><td>★★</td><td>2.4–3.0V</td><td>20,000–24,500</td><td>1.3–1.8</td><td>2.6–3.5</td><td data-i18n="g9.pro6.note">高轉高性能,進階玩家(建議小徑輪)</td></tr>
           </tbody>
         </table>
 
@@ -3278,6 +3287,7 @@
           <thead>
             <tr>
               <th data-i18n="g9.t.name2">型號</th>
+              <th data-i18n="g9.t.item2">品番</th>
               <th data-i18n="g9.t.speed2">SPEED</th>
               <th data-i18n="g9.t.torque2">TORQUE</th>
               <th data-i18n="g9.t.voltage2">電壓</th>
@@ -3288,15 +3298,15 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td>Torque-Tuned 2</td><td>★</td><td>★★</td><td>2.4–3.0V</td><td>12,300–14,700</td><td>1.6–2.0</td><td>1.7–2.0</td><td data-i18n="g9.std1.note">多彎與上坡賽道,加速優先</td></tr>
-            <tr><td>Light-Dash</td><td>★★</td><td>★★</td><td>2.4–3.0V</td><td>14,600–17,800</td><td>1.3–1.9</td><td>1.5–2.2</td><td data-i18n="g9.std2.note">Atomic 與 Hyper-Dash 3 之間的中階(進階玩家)</td></tr>
-            <tr><td>Sprint-Dash</td><td>★★★</td><td>★★</td><td>2.4–3.0V</td><td>20,700–27,200</td><td>1.3–1.8</td><td>2.8–3.8</td><td data-i18n="g9.std3.note">高轉速衝最高速、長直線專用(建議小徑輪)</td></tr>
-            <tr><td>Atomic-Tuned 2</td><td>★</td><td>★</td><td>2.4–3.0V</td><td>12,700–14,900</td><td>1.5–1.8</td><td>1.8–2.2</td><td data-i18n="g9.std4.note">速度扭力平衡,適合混合賽道</td></tr>
-            <tr><td>Hyper-Dash 3</td><td>★★★</td><td>★</td><td>2.4–3.0V</td><td>17,200–21,200</td><td>1.4–1.9</td><td>1.6–3.0</td><td data-i18n="g9.std5.note">平衡高性能,適合多種賽道(進階)</td></tr>
-            <tr><td>Ultra-Dash</td><td>★★★</td><td>★</td><td>2.4–3.0V</td><td>20,400–27,500</td><td>1.4–1.9</td><td>4.0–5.0</td><td data-i18n="g9.std6.note">⚠ 極速計時挑戰用,日本官方比賽<strong>禁用</strong></td></tr>
-            <tr><td>Rev-Tuned 2</td><td>★★</td><td>★</td><td>2.4–3.0V</td><td>13,400–15,200</td><td>1.2–1.5</td><td>1.6–2.0</td><td data-i18n="g9.std7.note">高轉速、長直線(建議小徑輪)</td></tr>
-            <tr><td>Power-Dash</td><td>★★★</td><td>★★★</td><td>2.4–3.0V</td><td>19,900–23,600</td><td>1.5–2.0</td><td>2.5–3.3</td><td data-i18n="g9.std8.note">高扭力,適合技術賽道與多上坡</td></tr>
-            <tr><td>Plasma-Dash</td><td>★★★★</td><td>★★★</td><td>2.4–3.0V</td><td>25,000–28,000</td><td>1.4–1.9</td><td>4.1–5.2</td><td data-i18n="g9.std9.note">⚠ 最高轉速 + 高扭力,內建散熱端蓋,日本官方比賽<strong>禁用</strong></td></tr>
+            <tr><td>Torque-Tuned 2</td><td>15484</td><td>★</td><td>★★</td><td>2.4–3.0V</td><td>12,300–14,700</td><td>1.6–2.0</td><td>1.7–2.0</td><td data-i18n="g9.std1.note">多彎與上坡賽道,加速優先</td></tr>
+            <tr><td>Light-Dash</td><td>15455</td><td>★★</td><td>★★</td><td>2.4–3.0V</td><td>14,600–17,800</td><td>1.3–1.9</td><td>1.5–2.2</td><td data-i18n="g9.std2.note">Atomic 與 Hyper-Dash 3 之間的中階(進階玩家)</td></tr>
+            <tr><td>Sprint-Dash</td><td>15318</td><td>★★★</td><td>★★</td><td>2.4–3.0V</td><td>20,700–27,200</td><td>1.3–1.8</td><td>2.8–3.8</td><td data-i18n="g9.std3.note">高轉速衝最高速、長直線專用(建議小徑輪)</td></tr>
+            <tr><td>Atomic-Tuned 2</td><td>15486</td><td>★</td><td>★</td><td>2.4–3.0V</td><td>12,700–14,900</td><td>1.5–1.8</td><td>1.8–2.2</td><td data-i18n="g9.std4.note">速度扭力平衡,適合混合賽道</td></tr>
+            <tr><td>Hyper-Dash 3</td><td>15477</td><td>★★★</td><td>★</td><td>2.4–3.0V</td><td>17,200–21,200</td><td>1.4–1.9</td><td>1.6–3.0</td><td data-i18n="g9.std5.note">平衡高性能,適合多種賽道(進階)</td></tr>
+            <tr><td>Ultra-Dash</td><td>15307</td><td>★★★</td><td>★</td><td>2.4–3.0V</td><td>20,400–27,500</td><td>1.4–1.9</td><td>4.0–5.0</td><td data-i18n="g9.std6.note">⚠ 極速計時挑戰用,日本官方比賽<strong>禁用</strong></td></tr>
+            <tr><td>Rev-Tuned 2</td><td>15485</td><td>★★</td><td>★</td><td>2.4–3.0V</td><td>13,400–15,200</td><td>1.2–1.5</td><td>1.6–2.0</td><td data-i18n="g9.std7.note">高轉速、長直線(建議小徑輪)</td></tr>
+            <tr><td>Power-Dash</td><td>15317</td><td>★★★</td><td>★★★</td><td>2.4–3.0V</td><td>19,900–23,600</td><td>1.5–2.0</td><td>2.5–3.3</td><td data-i18n="g9.std8.note">高扭力,適合技術賽道與多上坡</td></tr>
+            <tr><td>Plasma-Dash</td><td>15186</td><td>★★★★</td><td>★★★</td><td>2.4–3.0V</td><td>25,000–28,000</td><td>1.4–1.9</td><td>4.1–5.2</td><td data-i18n="g9.std9.note">⚠ 最高轉速 + 高扭力,內建散熱端蓋,日本官方比賽<strong>禁用</strong></td></tr>
           </tbody>
         </table>
 
@@ -4465,6 +4475,7 @@
       'g9.h2': 'Mini 4WD PRO 系列(雙軸,6 款)',
       'g9.h3': 'Mini 4WD 標準系列(單軸,9 款)',
       'g9.t.name': '型號',
+      'g9.t.item': '品番',
       'g9.t.speed': 'SPEED',
       'g9.t.torque': 'TORQUE',
       'g9.t.voltage': '電壓',
@@ -4479,6 +4490,7 @@
       'g9.pro5.note': '高轉速、長直線(建議小徑輪)',
       'g9.pro6.note': '高轉高性能,進階玩家(建議小徑輪)',
       'g9.t.name2': '型號',
+      'g9.t.item2': '品番',
       'g9.t.speed2': 'SPEED',
       'g9.t.torque2': 'TORQUE',
       'g9.t.voltage2': '電壓',
@@ -5379,6 +5391,7 @@
       'g9.h2': 'Mini 4WD PRO Series (double-shaft, 6 models)',
       'g9.h3': 'Standard Mini 4WD Series (single-shaft, 9 models)',
       'g9.t.name': 'Model',
+      'g9.t.item': 'Item №',
       'g9.t.speed': 'SPEED',
       'g9.t.torque': 'TORQUE',
       'g9.t.voltage': 'Voltage',
@@ -5393,6 +5406,7 @@
       'g9.pro5.note': 'High rev for long straights (small-dia. tires recommended)',
       'g9.pro6.note': 'High rev high performance (advanced, small-dia. tires recommended)',
       'g9.t.name2': 'Model',
+      'g9.t.item2': 'Item №',
       'g9.t.speed2': 'SPEED',
       'g9.t.torque2': 'TORQUE',
       'g9.t.voltage2': 'Voltage',
@@ -6416,6 +6430,7 @@
       'g9.h2': 'Mini 4WD PRO シリーズ(両軸、6 種)',
       'g9.h3': 'Mini 4WD 標準シリーズ(片軸、9 種)',
       'g9.t.name': '型式',
+      'g9.t.item': '品番',
       'g9.t.speed': 'SPEED',
       'g9.t.torque': 'TORQUE',
       'g9.t.voltage': '電圧',
@@ -6430,6 +6445,7 @@
       'g9.pro5.note': '高回転、長いストレート向け(小径タイヤ推奨)',
       'g9.pro6.note': '高回転高性能(上級者向け、小径タイヤ推奨)',
       'g9.t.name2': '型式',
+      'g9.t.item2': '品番',
       'g9.t.speed2': 'SPEED',
       'g9.t.torque2': 'TORQUE',
       'g9.t.voltage2': '電圧',
