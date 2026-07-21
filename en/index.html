@@ -132,6 +132,7 @@
     "1~6 趟可程式化馬達磨合(每趟 10 階段,最多 60 組參數)",
     "單階段精密馬達測試",
     "AI 智慧馬達健康管理",
+    "AI 智慧扭力預測(以田宮標準參數為數學模型,預測磨合後 @2.4V / @3.0V 扭力與體質對照)",
     "FFT 振動頻譜分析",
     "軸承阻力測試(斷電滑行靜止時間量測)",
     "電刷接觸穩定度 CV 分析",
@@ -2217,7 +2218,7 @@
 <div class="container">
 <div class="section-header">
 <div class="section-tag" data-i18n="features.tag">CORE FEATURES</div>
-<h2 class="section-title" data-i18n="features.title">Fourteen Professional Tools</h2>
+<h2 class="section-title" data-i18n="features.title">Fifteen Professional Tools</h2>
 <p class="section-subtitle" data-i18n="features.subtitle">From break-in to diagnostics, covering every critical phase of the Mini 4WD motor lifecycle.</p>
 </div>
 <div class="features-grid">
@@ -2271,6 +2272,19 @@
 <span class="feature-tag" data-i18n="f3.tag1">FFT spectrum</span>
 <span class="feature-tag" data-i18n="f3.tag2">Radar chart</span>
 <span class="feature-tag">20 motors</span>
+</div>
+</div>
+<!-- AI 智慧扭力預測 (PRO) -->
+<div class="feature-card pro-only">
+<div class="feature-icon">
+<svg viewbox="0 0 24 24"><path d="M3 3v18h18"></path><path d="M7 15l4-4 3 3 5-6"></path><circle cx="19" cy="8" r="1.5"></circle></svg>
+</div>
+<h3 data-i18n="f3b.title">AI Torque Prediction</h3>
+<p data-i18n="f3b.desc">Using each Tamiya motor's standard parameters as a math model, an AI-accelerated computation predicts post-break-in torque: separate values at @2.4V and @3.0V, with the individual motor's constitution compared against Tamiya's standard — so you can see where this motor will land once broken in.</p>
+<div class="feature-meta">
+<span class="feature-tag" data-i18n="f3b.tag1">@2.4V / @3.0V</span>
+<span class="feature-tag" data-i18n="f3b.tag2">vs Tamiya std</span>
+<span class="feature-tag" data-i18n="f3b.tag3">Math model</span>
 </div>
 </div>
 <!-- 軸承阻力 -->
@@ -2988,7 +3002,7 @@
       'mock.temp': '溫度',
       'mock.status': '● 磨合進行中 · 階段 6/10 · 已運行 02:48:33',
       'features.tag': 'CORE FEATURES',
-      'features.title': '十四大專業功能',
+      'features.title': '十五大專業功能',
       'features.subtitle': '從磨合到診斷,涵蓋 Mini 4WD 馬達生命週期的每一個關鍵環節。',
       'f1.title': '馬達磨合程式',
       'f1.desc': '低速長時間運轉,讓電刷與整流子貼合到最佳接觸。馬達磨合三種模式任選:電壓模式(傳統定電壓,1~6 趟各趟 10 階段可程式化)、轉速模式 Beta(PID 控速到設定的轉速,數值穩定自動換階)、智慧模式 Beta(系統自動磨合,磨合完成自動停)。',
@@ -3003,6 +3017,11 @@
       'f3.desc': '為每顆馬達建立基準健康指紋,後續檢測自動比對五大指標:電流特性、轉速衰減、溫升曲線、電流穩定度、振動頻譜分析,合成 0–100 分健康評級並提供文字診斷建議。',
       'f3.tag1': 'FFT 頻譜',
       'f3.tag2': '雷達圖',
+      'f3b.title': 'AI 智慧扭力預測',
+      'f3b.desc': '以田宮各款馬達的標準參數作為數學模型,透過 AI 加速指令運算,預測馬達磨合後的扭力表現:分別給出 @2.4V 與 @3.0V 的預測值,並將個體體質與田宮標準值對照,看出這顆馬達磨完會落在標準的哪個位置。',
+      'f3b.tag1': '@2.4V / @3.0V',
+      'f3b.tag2': '體質 vs 標準',
+      'f3b.tag3': '數學模型',
       'f4.title': '軸承阻力測試',
       'f4.desc': '選擇測試電壓(2.4V / 3V),加速至穩定轉速後直接斷電滑行,量測「完全靜止時間」— 時間越久軸承越順。只顯示時間供相對比較,不做評定。',
       'f4.tag1': '斷電滑行',
@@ -3898,7 +3917,7 @@
       'mock.temp': 'Temp',
       'mock.status': '● Break-in running · Stage 6/10 · 02:48:33 elapsed',
       'features.tag': 'CORE FEATURES',
-      'features.title': 'Fourteen Professional Tools',
+      'features.title': 'Fifteen Professional Tools',
       'features.subtitle': 'From break-in to diagnostics, covering every critical phase of the Mini 4WD motor lifecycle.',
       'f1.title': 'Motor Break-in Program',
       'f1.desc': 'Long, low-speed running that beds the brushes to the commutator. Motor break-in offers three modes: Voltage mode (classic fixed-voltage, 1–6 passes of 10 programmable stages each), Speed mode Beta (PID speed control to the target RPM, auto-advancing once the reading stabilises), and Smart mode Beta (the system runs the break-in and stops automatically when done).',
@@ -3913,6 +3932,11 @@
       'f3.desc': 'Establish a baseline fingerprint per motor; subsequent checks compare against five metrics — current profile, RPM decay, thermal rise, current stability, and vibration spectrum — producing a 0–100 health score with diagnostic recommendations.',
       'f3.tag1': 'FFT spectrum',
       'f3.tag2': 'Radar chart',
+      'f3b.title': 'AI Torque Prediction',
+      'f3b.desc': 'Using each Tamiya motor\'s standard parameters as a math model, an AI-accelerated computation predicts post-break-in torque: separate values at @2.4V and @3.0V, with the individual motor\'s constitution compared against Tamiya\'s standard — so you can see where this motor will land once broken in.',
+      'f3b.tag1': '@2.4V / @3.0V',
+      'f3b.tag2': 'vs Tamiya std',
+      'f3b.tag3': 'Math model',
       'f4.title': 'Bearing Resistance Test',
       'f4.desc': 'Pick a test voltage (2.4V / 3V), spin up to steady RPM, then cut power and let it coast — measuring the time to a complete stop. Longer means a smoother bearing. Time is shown for relative comparison only, with no rating.',
       'f4.tag1': 'Coast-down',
@@ -4890,7 +4914,7 @@
       'mock.temp': '温度',
       'mock.status': '● 慣らし運転中 · ステージ 6/10 · 経過時間 02:48:33',
       'features.tag': 'CORE FEATURES',
-      'features.title': '14 のプロ機能',
+      'features.title': '15 のプロ機能',
       'features.subtitle': '慣らしから診断まで、Mini 4WD モーターのライフサイクルにおけるすべての重要工程を網羅。',
       'f1.title': 'モーター慣らしプログラム',
       'f1.desc': '低速の長時間運転でブラシと整流子を最適な接触に馴染ませます。慣らしは 3 つのモードから選択:電圧モード(従来の定電圧、1〜6 パス・各パス 10 段階をプログラム可)、回転数モード Beta(PID で設定回転数に速度制御し、数値が安定すると自動で次段階へ)、スマートモード Beta(システムが自動で慣らし、完了すると自動停止)。',
@@ -4905,6 +4929,11 @@
       'f3.desc': 'モーターごとに基準健康指紋を作成。以降の検査で 5 大指標（電流特性・回転数減衰・温度上昇曲線・電流安定度・振動スペクトル解析）を自動比較し、0〜100 点の健康評価と文章診断を提供します。',
       'f3.tag1': 'FFT スペクトル',
       'f3.tag2': 'レーダーチャート',
+      'f3b.title': 'AI スマートトルク予測',
+      'f3b.desc': 'タミヤ各モーターの標準パラメータを数学モデルとし、AI アクセラレート演算で慣らし後のトルクを予測:@2.4V と @3.0V の予測値をそれぞれ提示し、個体の素性をタミヤ標準値と対照 —— このモーターが慣らし後に標準のどこに位置するかが分かります。',
+      'f3b.tag1': '@2.4V / @3.0V',
+      'f3b.tag2': '素性 vs 標準',
+      'f3b.tag3': '数学モデル',
       'f4.title': 'ベアリング抵抗テスト',
       'f4.desc': 'テスト電圧(2.4V / 3V)を選び、安定回転数まで加速してから電源を切って惰性走行させ、「完全停止までの時間」を測定。長いほどベアリングが滑らか。時間は相対比較用に表示するのみで評定は行いません。',
       'f4.tag1': '惰性走行',
