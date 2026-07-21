@@ -2509,6 +2509,11 @@
 <td class="center"><span class="check">✓</span></td>
 </tr>
 <tr>
+<td data-i18n="vt.r8b">AI Torque Prediction (@2.4V / @3.0V, constitution vs Tamiya std)</td>
+<td class="center"><span class="cross">—</span></td>
+<td class="center"><span class="check">✓</span></td>
+</tr>
+<tr>
 <td data-i18n="vt.r9">FFT vibration spectrum</td>
 <td class="center"><span class="cross">—</span></td>
 <td class="center"><span class="check">✓</span></td>
@@ -2668,6 +2673,7 @@
 <tr><td data-i18n="specs.sw.r2">Motor Test Program</td><td class="spec-val" data-i18n="specs.sw.v2">Single stage</td></tr>
 <tr><td data-i18n="specs.sw.r3">History Records</td><td class="spec-val" data-i18n="specs.sw.v3">Up to 50 entries</td></tr>
 <tr><td data-i18n="specs.sw.r4">AI Motor Health Manager (PRO)</td><td class="spec-val" data-i18n="specs.sw.v4">Up to 20 motors</td></tr>
+<tr><td data-i18n="specs.sw.r4b">AI Torque Prediction (PRO)</td><td class="spec-val" data-i18n="specs.sw.v4b">Single automated run</td></tr>
 <tr><td data-i18n="specs.sw.r5">Bearing Resistance Test</td><td class="spec-val" data-i18n="specs.sw.v5">Single stage</td></tr>
 <tr><td data-i18n="specs.sw.r6">Brush Contact Stability Test</td><td class="spec-val" data-i18n="specs.sw.v6">Single stage</td></tr>
 </tbody>
@@ -2782,7 +2788,7 @@
 </div>
 <div class="spec-note" data-i18n="specs.range.g3note">The system auto-generates 5 evenly-spaced measurement points as "start voltage + 4 × voltage step".</div>
 <!-- 3.4 / 3.5 自動程序 -->
-<div class="spec-subgroup" data-i18n="specs.range.g4">Motor Characterization · Bearing Resistance Test · Brush Contact Stability Test</div>
+<div class="spec-subgroup" data-i18n="specs.range.g4">Motor Characterization · AI Torque Prediction · Bearing Resistance Test · Brush Contact Stability Test</div>
 <div class="spec-auto" data-i18n="specs.range.g4note">Fully automated procedures (Motor Characterization: forward/reverse selectable; Bearing Resistance: 2.4V / 3V selectable); no other numeric input.</div>
 </div>
 </div>
@@ -3091,6 +3097,7 @@
       'vt.r7': '線上韌體更新',
       'vt.r12': '三層安全保護機制',
       'vt.r8': 'AI 智慧馬達健康管理(最多 20 顆)',
+      'vt.r8b': 'AI 智慧扭力預測(@2.4V / @3.0V,體質 vs 田宮標準)',
       'vt.r9': 'FFT 振動頻譜分析',
       'vt.r10': '五大指標雷達圖診斷',
       'vt.r11': '健康趨勢曲線追蹤',
@@ -3156,6 +3163,7 @@
       'specs.sw.r2': '馬達測試程式', 'specs.sw.v2': '單一階段',
       'specs.sw.r3': '歷史紀錄', 'specs.sw.v3': '最多 50 筆',
       'specs.sw.r4': 'AI 智慧馬達健康管理 (PRO)', 'specs.sw.v4': '最多 20 顆馬達',
+      'specs.sw.r4b': 'AI 智慧扭力預測 (PRO)', 'specs.sw.v4b': '單一程序(全自動)',
       'specs.sw.r5': '軸承阻力測試', 'specs.sw.v5': '單一階段',
       'specs.sw.r6': '電刷接觸穩定測試', 'specs.sw.v6': '單一階段',
       'specs.sw.r7': '馬達特性量測', 'specs.sw.v7': '單一程序(全自動)',
@@ -3164,7 +3172,7 @@
       'specs.range.g3': 'AI 智慧馬達健康管理（PRO）',
       'specs.range.g1note': '電壓輸入 0 = 跳過該階段。',
       'specs.range.g3note': '系統自動以「起始電壓 + 4 × 電壓間距」生成 5 個等距量測點。',
-      'specs.range.g4': '馬達特性量測 · 軸承阻力測試 · 電刷接觸穩定測試',
+      'specs.range.g4': '馬達特性量測 · AI智慧扭力預測 · 軸承阻力測試 · 電刷接觸穩定測試',
       'specs.range.g4note': '全自動量測程序(馬達特性量測可選正/反轉,軸承阻力測試可選 2.4V / 3V),其餘無數值輸入。',
       'specs.p.volt': '電壓',
       'specs.p.dir': '運轉方向',
@@ -4006,6 +4014,7 @@
       'vt.r7': 'OTA firmware updates',
       'vt.r12': 'Triple-layer safety protection',
       'vt.r8': 'AI Motor Health Manager (up to 20 motors)',
+      'vt.r8b': 'AI Torque Prediction (@2.4V / @3.0V, constitution vs Tamiya std)',
       'vt.r9': 'FFT vibration spectrum',
       'vt.r10': '5-metric radar diagnostic',
       'vt.r11': 'Health trend tracking',
@@ -4071,6 +4080,7 @@
       'specs.sw.r2': 'Motor Test Program', 'specs.sw.v2': 'Single stage',
       'specs.sw.r3': 'History Records', 'specs.sw.v3': 'Up to 50 entries',
       'specs.sw.r4': 'AI Motor Health Manager (PRO)', 'specs.sw.v4': 'Up to 20 motors',
+      'specs.sw.r4b': 'AI Torque Prediction (PRO)', 'specs.sw.v4b': 'Single automated run',
       'specs.sw.r5': 'Bearing Resistance Test', 'specs.sw.v5': 'Single stage',
       'specs.sw.r6': 'Brush Contact Stability Test', 'specs.sw.v6': 'Single stage',
       'specs.sw.r7': 'Motor Characterization', 'specs.sw.v7': 'Single procedure (automatic)',
@@ -4079,7 +4089,7 @@
       'specs.range.g3': 'AI Motor Health Manager (PRO)',
       'specs.range.g1note': 'Voltage input of 0 = skip that stage.',
       'specs.range.g3note': 'The system auto-generates 5 evenly-spaced measurement points as "start voltage + 4 × voltage step".',
-      'specs.range.g4': 'Motor Characterization · Bearing Resistance Test · Brush Contact Stability Test',
+      'specs.range.g4': 'Motor Characterization · AI Torque Prediction · Bearing Resistance Test · Brush Contact Stability Test',
       'specs.range.g4note': 'Fully automated procedures (Motor Characterization: forward/reverse selectable; Bearing Resistance: 2.4V / 3V selectable); no other numeric input.',
       'specs.p.volt': 'Voltage',
       'specs.p.dir': 'Rotation Direction',
@@ -5003,6 +5013,7 @@
       'vt.r7': 'オンラインファームウェア更新',
       'vt.r12': '三層安全保護機構',
       'vt.r8': 'AI スマートモーター健康管理（最大 20 個）',
+      'vt.r8b': 'AI スマートトルク予測(@2.4V / @3.0V、素性 vs タミヤ標準)',
       'vt.r9': 'FFT 振動スペクトル解析',
       'vt.r10': '5 大指標レーダーチャート診断',
       'vt.r11': '健康トレンド曲線追跡',
@@ -5066,6 +5077,7 @@
       'specs.sw.r2': 'モーターテストプログラム', 'specs.sw.v2': '単一ステージ',
       'specs.sw.r3': '履歴記録', 'specs.sw.v3': '最大 50 件',
       'specs.sw.r4': 'AI スマートモーター健康管理 (PRO)', 'specs.sw.v4': '最大 20 個',
+      'specs.sw.r4b': 'AI スマートトルク予測 (PRO)', 'specs.sw.v4b': '単一プロセス(全自動)',
       'specs.sw.r5': 'ベアリング抵抗テスト', 'specs.sw.v5': '単一ステージ',
       'specs.sw.r6': 'ブラシ接触安定テスト', 'specs.sw.v6': '単一ステージ',
       'specs.sw.r7': 'モーター特性測定', 'specs.sw.v7': '単一プログラム(全自動)',
@@ -5074,7 +5086,7 @@
       'specs.range.g3': 'AI スマートモーター健康管理（PRO）',
       'specs.range.g1note': '電圧入力 0 = そのステージをスキップ。',
       'specs.range.g3note': 'システムが「開始電圧 + 4 × 電圧間隔」で 5 つの等間隔測定点を自動生成します。',
-      'specs.range.g4': 'モーター特性測定 · ベアリング抵抗テスト · ブラシ接触安定テスト',
+      'specs.range.g4': 'モーター特性測定 · AI スマートトルク予測 · ベアリング抵抗テスト · ブラシ接触安定テスト',
       'specs.range.g4note': '全自動測定プログラム(モーター特性測定は正転/逆転を選択可、ベアリング抵抗テストは 2.4V / 3V を選択可)、その他は数値入力なし。',
       'specs.p.volt': '電圧',
       'specs.p.dir': '回転方向',
