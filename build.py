@@ -3643,6 +3643,22 @@ def main():
         print(f"  i18n[{lang}]: {len(i18n.get(lang, {}))} keys")
     print()
 
+    # 防呆:body 的每個 data-i18n key,en/ja i18n 都必須覆蓋,否則該語言頁會 fallback 成中文。
+    #   架構:zh 內容寫在 body(data-i18n 預設文字),en/ja 由 const i18n 覆蓋。
+    #   這道閘擋住「zh 加了新 key、忘了加 en/ja i18n」的常見錯 → 建置中止,不會出漏翻的頁。
+    _body_keys = set(re.findall(r'data-i18n="([a-zA-Z0-9._]+)"', src_html))
+    _i18n_gap = []
+    for _lang in ("en", "ja"):
+        _miss = sorted(_body_keys - set(i18n.get(_lang, {})))
+        if _miss:
+            _i18n_gap.append((_lang, _miss))
+    if _i18n_gap:
+        print("❌ 建置中止:i18n 三語未同步(en/ja 缺 body key → 該語言頁會 fallback 成中文):")
+        for _lang, _miss in _i18n_gap:
+            print(f"   [{_lang}] 缺 {len(_miss)} 個:{', '.join(_miss[:20])}{' …' if len(_miss)>20 else ''}")
+        print("   → 請在 index.src.html 的 const i18n 對應語言區塊補上這些 key。")
+        sys.exit(1)
+
     for lang, cfg in LANGS.items():
         html_out = build_lang(src_html, lang, i18n)
         out_path = cfg["out"]
