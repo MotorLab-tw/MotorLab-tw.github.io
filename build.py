@@ -3283,7 +3283,7 @@ MANUAL = {
     "sections": {
         "zh": [
             {"id": "precautions", "t": "〇、使用前必讀・安全須知", "html": (
-                "<div class='manual-note'><b>首次使用前請詳閱本章。未依安全須知使用所造成之人身傷害、財物損失或機器損害,本公司不負責任、亦不予保固。</b></div>"
+                "<div class='manual-note'><b>首次使用前請詳閱本章。未依安全須知使用所造成之人身傷害、財物損失或機器損害,使用者須自負責任,亦不予保固。</b></div>"
                 "<h3>🔴 電源安全</h3><ul><li>本機須用 <b>DC 5V／6A 以上</b>、<b>具安規認證</b>的電源供應器。</li><li><b>使用規格不符的電源(電壓過高、劣質、無安規、來路不明或改裝)將導致機器損壞,並有引發火災的危險;因此造成的故障或損害不予保固。</b></li><li>勿在電源線材或接頭破損、發燙、有異味時繼續使用。</li></ul>"
                 "<h3>🔴 運轉安全(馬達高速旋轉)</h3><ul><li><b>馬達運轉中,嚴禁用手、工具或任何物體觸碰轉軸、齒輪或反射盤</b>——高速旋轉會造成割傷、捲入、飛甩傷害。</li><li>運轉前確認馬達<b>牢固裝在治具上</b>,未固定的馬達高速旋轉可能飛脫。</li><li><b>臉部、頭髮、鬆散衣物、飾品</b>勿靠近運轉中的馬達。</li><li>馬達與周邊零件運轉後會<b>發熱燙手</b>,停機後勿立即徒手觸摸。</li><li>運轉中若有異音、異味、冒煙、火花,<b>立即切斷電源</b>並檢查。</li></ul>"
                 "<h3>🔴 環境安全</h3><ul><li><b>本機不防水</b>:使用與存放<b>遠離水源、潮濕、雨淋</b>;勿讓液體(水、油、飲料)潑濺到機身或電路。</li><li>放置於<b>平穩、堅固、耐熱、不可燃</b>的桌面;勿在鋪毯、紙張、易燃物上運作。</li><li>保持四周<b>通風散熱</b>,勿覆蓋機身散熱孔;勿在密閉高溫環境長時間運作。</li><li>遠離火源、熱源、陽光直曬。</li></ul>"
@@ -3346,7 +3346,7 @@ MANUAL = {
         ],
         "en": [
             {"id": "precautions", "t": "0. Read First — Safety", "html": (
-                "<div class='manual-note'><b>Read this chapter before first use. We are not liable for, and do not warrant against, injury, property loss or machine damage caused by use that ignores these safety notes.</b></div>"
+                "<div class='manual-note'><b>Read this chapter before first use. The user bears sole responsibility for any injury, property loss or machine damage caused by use that ignores these safety notes, which is also not covered by warranty.</b></div>"
                 "<h3>🔴 Power safety</h3><ul><li>Use a <b>DC 5V / 6A or higher</b>, <b>safety-certified</b> power adapter.</li><li><b>Using an out-of-spec adapter (over-voltage, poor quality, uncertified, unknown origin or modified) will damage the machine and risks fire; resulting faults or damage are not covered by warranty.</b></li><li>Stop using if the power cable or connector is damaged, hot or smells odd.</li></ul>"
                 "<h3>🔴 Operation safety (high-speed rotation)</h3><ul><li><b>While the motor is running, never touch the shaft, gears or reflector with hands, tools or any object</b> — high-speed rotation can cut, entangle or fling parts.</li><li>Confirm the motor is <b>firmly mounted on the jig</b> before running; an unsecured motor may fly off.</li><li>Keep <b>face, hair, loose clothing and jewellery</b> away from a running motor.</li><li>The motor and nearby parts get <b>hot</b> after running — do not touch bare-handed right after stopping.</li><li>If you notice abnormal noise, smell, smoke or sparks, <b>cut the power immediately</b> and inspect.</li></ul>"
                 "<h3>🔴 Environment safety</h3><ul><li><b>Not waterproof</b>: keep away from water, damp and rain; do not let liquids (water, oil, drinks) splash onto the body or circuitry.</li><li>Place on a <b>flat, solid, heat-resistant, non-flammable</b> surface; never run it on carpet, paper or flammable materials.</li><li>Keep the surroundings <b>ventilated</b>; do not cover the vents; do not run for long in a sealed, hot space.</li><li>Keep away from fire, heat sources and direct sunlight.</li></ul>"
@@ -3409,7 +3409,7 @@ MANUAL = {
         ],
         "ja": [
             {"id": "precautions", "t": "〇、使用前に必ずお読みください・安全上の注意", "html": (
-                "<div class='manual-note'><b>初回使用前に本章を必ずお読みください。安全上の注意に従わない使用による人身傷害・財物損失・機器損傷について、当社は責任を負わず、保証も致しません。</b></div>"
+                "<div class='manual-note'><b>初回使用前に本章を必ずお読みください。安全上の注意に従わない使用による人身傷害・財物損失・機器損傷については、使用者が自己責任を負うものとし、保証の対象外です。</b></div>"
                 "<h3>🔴 電源の安全</h3><ul><li>本機には <b>DC 5V／6A 以上</b>、<b>安全規格認証済み</b>の電源アダプターを使用してください。</li><li><b>規格外の電源(過電圧・粗悪品・無認証・出所不明・改造品)は機器を損傷させ、火災の危険があります。これによる故障・損害は保証対象外です。</b></li><li>電源ケーブルやコネクタが破損・発熱・異臭がある場合は使用を中止してください。</li></ul>"
                 "<h3>🔴 運転の安全(モーター高速回転)</h3><ul><li><b>モーター運転中は、手・工具・その他の物で回転軸・ギア・反射板に絶対に触れないでください</b>——高速回転により切創・巻き込み・飛散の危険があります。</li><li>運転前にモーターが<b>治具にしっかり固定</b>されているか確認してください。未固定のモーターは飛び出す恐れがあります。</li><li><b>顔・髪・ゆるい衣服・装飾品</b>を運転中のモーターに近づけないでください。</li><li>モーターと周辺部品は運転後<b>高温になります</b>。停止直後に素手で触れないでください。</li><li>運転中に異音・異臭・発煙・火花があれば、<b>直ちに電源を切り</b>点検してください。</li></ul>"
                 "<h3>🔴 環境の安全</h3><ul><li><b>本機は防水ではありません</b>:水・湿気・雨から遠ざけて使用・保管し、液体(水・油・飲料)を本体や回路にかけないでください。</li><li><b>平らで頑丈・耐熱・不燃</b>の台に置いてください。カーペット・紙・可燃物の上で動作させないでください。</li><li>周囲の<b>通風・放熱</b>を保ち、放熱孔を塞がないでください。密閉した高温環境での長時間運転は避けてください。</li><li>火源・熱源・直射日光から遠ざけてください。</li></ul>"
