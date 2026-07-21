@@ -2707,7 +2707,7 @@
 </div>
 <div class="spec-note" data-i18n="specs.range.g1note">Voltage input of 0 = skip that stage.</div>
 <!-- 3.1b 轉速模式 Beta -->
-<div class="spec-subgroup" data-i18n="specs.range.g1r">Break-in Program · Speed mode Beta</div>
+<div class="spec-subgroup" data-i18n="specs.range.g1r">Break-in Program · Speed mode Beta (1–6 runs × 10 stages)</div>
 <div class="spec-table-wrap">
 <table class="spec-table">
 <thead>
@@ -2726,7 +2726,7 @@
 </tbody>
 </table>
 </div>
-<div class="spec-note" data-i18n="specs.range.g1rnote">Advances early once voltage stabilises; run time is the upper bound. If the target RPM can't be reached, it runs the full time and is flagged "not reached." Target RPM 0 = skip that stage.</div>
+<div class="spec-note" data-i18n="specs.range.g1rnote">Advances once voltage stabilises; run time is the upper bound. If the target RPM still can't be reached after the full run time, it advances automatically and is flagged "not reached." Target RPM 0 = skip that stage.</div>
 <!-- 3.1c 智慧模式 Beta -->
 <div class="spec-subgroup" data-i18n="specs.range.g1s">Break-in Program · Smart mode Beta</div>
 <div class="spec-table-wrap">
@@ -3185,8 +3185,8 @@
       'specs.u.sec': '秒',
       'specs.d.bystage': '依階段',
       'specs.d.fwd': '正轉',
-      'specs.range.g1r': '馬達磨合程式 · 轉速模式 Beta',
-      'specs.range.g1rnote': '電壓穩定即提前換階,運轉時間為上限;推不到目標轉速時跑滿時間並標示「未達標」。目標轉速 0 = 跳過該階段。',
+      'specs.range.g1r': '馬達磨合程式 · 轉速模式 Beta（1~6 趟 × 10 階段）',
+      'specs.range.g1rnote': '電壓穩定即進行換階,運轉時間為上限;跑滿時間仍推不到目標轉速時自動進行換階並標示「未達標」。目標轉速 0 = 跳過該階段。',
       'specs.range.g1s': '馬達磨合程式 · 智慧模式 Beta',
       'specs.range.g1snote': '一鍵自動磨合,偵測到穩態自動停止並繪製磨合指標曲線。',
       'specs.range.g2note': '判停標準與磨合頁獨立設定。',
@@ -4102,8 +4102,8 @@
       'specs.u.sec': 'sec',
       'specs.d.bystage': 'Per stage',
       'specs.d.fwd': 'Forward',
-      'specs.range.g1r': 'Break-in Program · Speed mode Beta',
-      'specs.range.g1rnote': 'Advances early once voltage stabilises; run time is the upper bound. If the target RPM can\'t be reached, it runs the full time and is flagged "not reached." Target RPM 0 = skip that stage.',
+      'specs.range.g1r': 'Break-in Program · Speed mode Beta (1–6 runs × 10 stages)',
+      'specs.range.g1rnote': 'Advances once voltage stabilises; run time is the upper bound. If the target RPM still can\'t be reached after the full run time, it advances automatically and is flagged "not reached." Target RPM 0 = skip that stage.',
       'specs.range.g1s': 'Break-in Program · Smart mode Beta',
       'specs.range.g1snote': 'One-tap auto break-in; stops automatically on detecting steady state and plots the break-in metric curve.',
       'specs.range.g2note': 'Stop criterion is set independently from the break-in page.',
@@ -5099,8 +5099,8 @@
       'specs.u.sec': '秒',
       'specs.d.bystage': 'ステージ毎',
       'specs.d.fwd': '正転',
-      'specs.range.g1r': '慣らしプログラム · 回転数モード Beta',
-      'specs.range.g1rnote': '電圧が安定すると早めに次段階へ、運転時間は上限。目標回転数に到達できない場合は時間いっぱい運転し「未達」と表示。目標回転数 0 = そのステージをスキップ。',
+      'specs.range.g1r': '慣らしプログラム · 回転数モード Beta（1~6 回 × 10 段階）',
+      'specs.range.g1rnote': '電圧が安定すると次段階へ、運転時間は上限。時間いっぱい運転しても目標回転数に到達できない場合は自動で次段階へ進み「未達」と表示。目標回転数 0 = そのステージをスキップ。',
       'specs.range.g1s': '慣らしプログラム · スマートモード Beta',
       'specs.range.g1snote': 'ワンタップ自動慣らし。定常状態を検出すると自動停止し、慣らし指標カーブを描画します。',
       'specs.range.g2note': '判停基準は慣らしページと独立して設定します。',
