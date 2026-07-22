@@ -467,7 +467,7 @@ GUIDES = [
         "slug": "tamiya-mini-4wd-motor-specs-list",
         "key": "g9",
         "published": "2026-05-25",
-        "updated": "2026-07-20",
+        "updated": "2026-07-22",
         "type": "benchmarks",
         "i18n": {
             "zh": {
