@@ -1065,14 +1065,14 @@
     </image:image>
   </url>
   <url>
-    <loc>https://motorlab-tw.github.io/guides/when-to-stop-motor-break-in/</loc>
+    <loc>https://motorlab-tw.github.io/benchmarks/when-to-stop-motor-break-in/</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/when-to-stop-motor-break-in/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/when-to-stop-motor-break-in/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/when-to-stop-motor-break-in/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/when-to-stop-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/benchmarks/when-to-stop-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/benchmarks/when-to-stop-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/benchmarks/when-to-stop-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/benchmarks/when-to-stop-motor-break-in/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/motor-break-in-current-plateau_c.png</image:loc>
       <image:title>馬達磨合要磨多久:12 小時同轉速電流實測</image:title>
@@ -1087,14 +1087,14 @@
     </image:image>
   </url>
   <url>
-    <loc>https://motorlab-tw.github.io/en/guides/when-to-stop-motor-break-in/</loc>
+    <loc>https://motorlab-tw.github.io/en/benchmarks/when-to-stop-motor-break-in/</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/when-to-stop-motor-break-in/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/when-to-stop-motor-break-in/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/when-to-stop-motor-break-in/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/when-to-stop-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/benchmarks/when-to-stop-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/benchmarks/when-to-stop-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/benchmarks/when-to-stop-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/benchmarks/when-to-stop-motor-break-in/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/motor-break-in-current-plateau_e.png</image:loc>
       <image:title>How long to break in a motor: 12-hour same-RPM current test</image:title>
@@ -1109,14 +1109,14 @@
     </image:image>
   </url>
   <url>
-    <loc>https://motorlab-tw.github.io/ja/guides/when-to-stop-motor-break-in/</loc>
+    <loc>https://motorlab-tw.github.io/ja/benchmarks/when-to-stop-motor-break-in/</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/when-to-stop-motor-break-in/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/when-to-stop-motor-break-in/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/when-to-stop-motor-break-in/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/when-to-stop-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/benchmarks/when-to-stop-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/benchmarks/when-to-stop-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/benchmarks/when-to-stop-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/benchmarks/when-to-stop-motor-break-in/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/motor-break-in-current-plateau_j.png</image:loc>
       <image:title>モーター慣らしはどれくらい:12 時間同回転数電流実測</image:title>

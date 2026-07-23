@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="ja" translate="no">
+<html lang="en" translate="no">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="ja" http-equiv="Content-Language"/>
-<title>ミニ四駆モーターの慣らしはどれくらい?12 時間実測の答え | MotorLab</title>
-<meta content="モーターの慣らしはどれくらいやればいい?Mach-Dash PRO 1 個を連続 12 時間・550 万回転以上磨き続けた実測:利得は最初の 1 時間で出切り、その後は回転数だけが上がる——それは磁力流失の錯覚で、体質は不可逆に低下。スマート慣らしは定常状態を検出し、ちょうどいいところで自動停止します。" name="description"/>
+<meta content="en" http-equiv="Content-Language"/>
+<title>How Long Should You Break In a Mini 4WD Motor? A 12-Hour Test | MotorLab</title>
+<meta content="How long should motor break-in run? We ground one Mach-Dash PRO for 12 straight hours — over 5.5 million revolutions. The gains were banked within an hour; grinding on made RPM climb, an illusion of fading magnets while the motor irreversibly declined. Smart break-in detects steady state and stops at just right." name="description"/>
 <meta content="MotorLab.tw" name="author"/>
-<meta content="ミニ四駆 慣らし 時間, モーター 慣らし どのくらい, 慣らし やりすぎ, 過慣らし, スマート慣らし, MotorLab, when to stop motor break-in, how long to break in mini 4wd motor, over break-in motor, motor break-in time, smart break-in, MotorLab" name="keywords"/>
+<meta content="when to stop motor break-in, how long to break in mini 4wd motor, over break-in motor, motor break-in time, smart break-in, tamiya 15 motor test, MotorLab" name="keywords"/>
 <!-- 正規網址 (避免重複內容問題) -->
-<link href="https://motorlab-tw.github.io/ja/guides/when-to-stop-motor-break-in/" rel="canonical"/>
+<link href="https://motorlab-tw.github.io/en/benchmarks/when-to-stop-motor-break-in/" rel="canonical"/>
 <!-- 搜尋引擎指示 -->
 <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
 <meta content="index, follow" name="googlebot"/>
@@ -31,22 +31,22 @@
 <meta content="MotorLab" name="apple-mobile-web-app-title"/>
 <!-- Open Graph (Facebook, LINE, Discord) -->
 <meta content="article" property="og:type"/>
-<meta content="https://motorlab-tw.github.io/ja/guides/when-to-stop-motor-break-in/" property="og:url"/>
-<meta content="ミニ四駆モーターの慣らしはどれくらい?12 時間実測の答え | MotorLab" property="og:title"/>
-<meta content="モーターの慣らしはどれくらいやればいい?Mach-Dash PRO 1 個を連続 12 時間・550 万回転以上磨き続けた実測:利得は最初の 1 時間で出切り、その後は回転数だけが上がる——それは磁力流失の錯覚で、体質は不可逆に低下。スマート慣らしは定常状態を検出し、ちょうどいいところで自動停止します。" property="og:description"/>
+<meta content="https://motorlab-tw.github.io/en/benchmarks/when-to-stop-motor-break-in/" property="og:url"/>
+<meta content="How Long Should You Break In a Mini 4WD Motor? A 12-Hour Test | MotorLab" property="og:title"/>
+<meta content="How long should motor break-in run? We ground one Mach-Dash PRO for 12 straight hours — over 5.5 million revolutions. The gains were banked within an hour; grinding on made RPM climb, an illusion of fading magnets while the motor irreversibly declined. Smart break-in detects steady state and stops at just right." property="og:description"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" property="og:image"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" property="og:image:secure_url"/>
 <meta content="image/png" property="og:image:type"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
 <meta content="MotorLab — Mini 4WD® 馬達精密測試系統官方網站預覽圖" property="og:image:alt"/>
-<meta content="ja_JP" property="og:locale"/>
+<meta content="en_US" property="og:locale"/>
 <meta content="en_US" property="og:locale:alternate"/>
 <meta content="MotorLab.tw" property="og:site_name"/>
 <!-- Twitter Card -->
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="ミニ四駆モーターの慣らしはどれくらい?12 時間実測の答え | MotorLab" name="twitter:title"/>
-<meta content="モーターの慣らしはどれくらいやればいい?Mach-Dash PRO 1 個を連続 12 時間・550 万回転以上磨き続けた実測:利得は最初の 1 時間で出切り、その後は回転数だけが上がる——それは磁力流失の錯覚で、体質は不可逆に低下。スマート慣らしは定常状態を検出し、ちょうどいいところで自動停止します。" name="twitter:description"/>
+<meta content="How Long Should You Break In a Mini 4WD Motor? A 12-Hour Test | MotorLab" name="twitter:title"/>
+<meta content="How long should motor break-in run? We ground one Mach-Dash PRO for 12 straight hours — over 5.5 million revolutions. The gains were banked within an hour; grinding on made RPM climb, an illusion of fading magnets while the motor irreversibly declined. Smart break-in detects steady state and stops at just right." name="twitter:description"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" name="twitter:image"/>
 <meta content="MotorLab 官方網站預覽圖" name="twitter:image:alt"/>
 <!-- 結構化資料 1: Organization (公司/工作室) -->
@@ -1909,17 +1909,17 @@
   })();
 </script>
 <script async="" data-goatcounter="https://motorlab-tw.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
-<link href="https://motorlab-tw.github.io/guides/when-to-stop-motor-break-in/" hreflang="zh-TW" rel="alternate"/><link href="https://motorlab-tw.github.io/en/guides/when-to-stop-motor-break-in/" hreflang="en" rel="alternate"/><link href="https://motorlab-tw.github.io/ja/guides/when-to-stop-motor-break-in/" hreflang="ja" rel="alternate"/><link href="https://motorlab-tw.github.io/guides/when-to-stop-motor-break-in/" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
+<link href="https://motorlab-tw.github.io/benchmarks/when-to-stop-motor-break-in/" hreflang="zh-TW" rel="alternate"/><link href="https://motorlab-tw.github.io/en/benchmarks/when-to-stop-motor-break-in/" hreflang="en" rel="alternate"/><link href="https://motorlab-tw.github.io/ja/benchmarks/when-to-stop-motor-break-in/" hreflang="ja" rel="alternate"/><link href="https://motorlab-tw.github.io/benchmarks/when-to-stop-motor-break-in/" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "スマート慣らし:ちょうどいいところで、止まる",
-  "description": "モーターの慣らしはどれくらいやればいい?Mach-Dash PRO 1 個を連続 12 時間・550 万回転以上磨き続けた実測:利得は最初の 1 時間で出切り、その後は回転数だけが上がる——それは磁力流失の錯覚で、体質は不可逆に低下。スマート慣らしは定常状態を検出し、ちょうどいいところで自動停止します。",
-  "keywords": "ミニ四駆 慣らし 時間, モーター 慣らし どのくらい, 慣らし やりすぎ, 過慣らし, スマート慣らし, MotorLab",
-  "inLanguage": "ja",
-  "url": "https://motorlab-tw.github.io/ja/guides/when-to-stop-motor-break-in/",
+  "headline": "Smart Break-In: Grind to Just Right, Then Stop",
+  "description": "How long should motor break-in run? We ground one Mach-Dash PRO for 12 straight hours — over 5.5 million revolutions. The gains were banked within an hour; grinding on made RPM climb, an illusion of fading magnets while the motor irreversibly declined. Smart break-in detects steady state and stops at just right.",
+  "keywords": "when to stop motor break-in, how long to break in mini 4wd motor, over break-in motor, motor break-in time, smart break-in, tamiya 15 motor test, MotorLab",
+  "inLanguage": "en",
+  "url": "https://motorlab-tw.github.io/en/benchmarks/when-to-stop-motor-break-in/",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://motorlab-tw.github.io/ja/guides/when-to-stop-motor-break-in/"
+    "@id": "https://motorlab-tw.github.io/en/benchmarks/when-to-stop-motor-break-in/"
   },
   "datePublished": "2026-07-23",
   "dateModified": "2026-07-23",
@@ -1946,61 +1946,63 @@
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "ホーム",
-      "item": "https://motorlab-tw.github.io/ja/"
+      "name": "Home",
+      "item": "https://motorlab-tw.github.io/en/"
     },
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "ガイド",
-      "item": "https://motorlab-tw.github.io/ja/#guides"
+      "name": "Benchmarks",
+      "item": "https://motorlab-tw.github.io/en/#guides"
     },
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "慣らしの止めどき",
-      "item": "https://motorlab-tw.github.io/ja/guides/when-to-stop-motor-break-in/"
+      "name": "When to Stop Break-In",
+      "item": "https://motorlab-tw.github.io/en/benchmarks/when-to-stop-motor-break-in/"
     }
   ]
 }</script></head>
-<body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/ja/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/ja/">← ホームへ戻る</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/ja/">ホーム</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/ja/#guides">ガイド</a><span class="sep">/</span><span class="current">慣らしの止めどき</span></nav><article class="guide-article">
-<span class="guide-tag" data-i18n="g17.tag">METHODOLOGY · スマート慣らし</span>
-<h1 data-i18n="g17.title">スマート慣らし:ちょうどいいところで、止まる</h1><p class="guide-byline">編集者:MotorLab Team</p><p class="guide-dates">公開 2026-07-23</p>
-<p class="guide-lead" data-i18n="g17.lead">ワンタップで、機械が自分で慣らし、自分で測り、<strong>仕上がったら自動停止</strong>。なぜ「ちょうどいい」と言い切れるのか?新品の Mach-Dash PRO 1 個を<strong>連続 12 時間・550 万回転以上</strong>、新品から引退までわざと磨き続けて、止めるべき点を探したからです。このページに形容詞はありません。あの実験の実データだけ:慣らしの利得はどこで終わり、過慣らしの代償はどこから始まるのか——そしてスマート慣らしがその間でどう止めるのか。</p>
-<h2 data-i18n="g17.h1">慣らしの利得は、最初の 1 時間で出切る</h2>
-<p data-i18n="g17.p1">下図の縦軸は<strong>同回転数で消費する電流</strong>——モーターの消費電力で、慣らしが本当に改善する唯一のもの。横軸は累積慣らし時間、全点が実測値です。最初のセッションで同回転数電流は <strong>175 → 156 mA、約 1 割の節約</strong>:ブラシと整流子が馴染み、内部の「引っかかり」が磨き取られました。</p>
-<figure data-i18n="g17.figcur"><img alt="モーターの慣らしはどれくらい:12 時間実測の同回転数電流カーブ、利得は 1 時間で出切り、その後 11 時間は消費が下がらない" class="chart" loading="lazy" src="/images/motor-break-in-current-plateau_j.png"/></figure>
-<p data-i18n="g17.p2">磨き取れる「引っかかり」には限りがあります。その後どれだけセッションを重ねても、<strong>消費電力は一切下がりませんでした</strong>——仕上がりの信号は実は明確です。問題は、人には見えないこと。人が見ているのは回転数です。</p>
-<h2 data-i18n="g17.h2">人が見ているのは回転数——そしてそれは騙す</h2>
-<p data-i18n="g17.p3">仕上がった後も磨き続けると(わざとやりました)、同じ電圧で回転数は<strong>上がり続けます(+4.9%)</strong>。「回転数がまだ伸びている=まだ良くなっている」——回転数で判断するプレイヤーはほぼ全員そう考え、磨き続けてしまいます。</p>
-<figure data-i18n="g17.figrpm"><img alt="過慣らしの回転数の錯覚:同電圧で回転数が +4.9% 上がり続ける——強くなったのではなく磁力流失" class="chart" loading="lazy" src="/images/motor-break-in-rpm-illusion_j.png"/></figure>
-<p data-i18n="g17.p4">この錯覚は教科書の 1 式で見破れます:<code>V = I·R + Ke·ω</code>(電圧 = 抵抗降下 + 磁力×回転数の逆起電力)。つまり電圧が一定なら、<strong>磁力(Ke)と回転数(ω)はシーソー</strong>——理由なく回転数が上がるとき、最も多い原因はモーターが強くなったのではなく、磁力側が軽くなったことです。</p>
-<p data-i18n="g17.p5">磁石の磁力は「使って減る」ものではありません(放置なら百年もちます)。<strong>「叩かれて減る」</strong>のです——ブラシが整流するたびの小さな火花は逆磁場の微打撃;550 万回転で累計は億単位、磁力は少しずつ<strong>不可逆に弱まります</strong>。「磨くほど速くなっていた」まさにその時間帯、この個体の体質スコアは同時に下がり続けていました。</p>
-<h2 data-i18n="g17.h3">過慣らしの代償は体質が払う——しかも不可逆</h2>
-<p data-i18n="g17.p6">実験全程を <strong>AI トルク予測</strong>で追跡:慣らし期に体質は <strong>79 → 84(ピーク)</strong>、モーターは自己ベストへ;ピーク後は一路 <strong>73 まで低下——新品より低い</strong>。一晩完全に休ませて再測定:やはり 73。<strong>5 点稼いで 11 点失い、戻りません。</strong></p>
-<figure data-i18n="g17.figlife"><img alt="過慣らしの代償:体質スコアが 79 から 84 に上がり 73 まで低下、一晩休ませても回復しない不可逆の摩耗" class="chart" loading="lazy" src="/images/motor-over-break-in-damage_j.png"/></figure>
-<h2 data-i18n="g17.h4">スマート慣らし:「止めどき」を感覚ではなく測定に任せる</h2>
-<p data-i18n="g17.m0">止めどきの信号は存在し、測定できます。しかし回転数だけを見ている人には見えず、回転数の錯覚がさらに磨かせようとします。スマート慣らしが代わりにやるのは、この 3 つ:</p>
+<body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/en/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/en/">← Back to home</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/en/">Home</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/en/#guides">Benchmarks</a><span class="sep">/</span><span class="current">When to Stop Break-In</span></nav><article class="guide-article">
+<span class="guide-tag" data-i18n="g17.tag">BENCHMARK · 15-Motor Test: Prologue</span>
+<h1 data-i18n="g17.title">Smart Break-In: Grind to Just Right, Then Stop</h1><p class="guide-byline">Edited by MotorLab Team</p><p class="guide-dates">Published 2026-07-23</p>
+<p class="guide-lead" data-i18n="g17.lead">One tap and the machine breaks in, measures, and <strong>stops itself when the motor is done</strong>. How do we dare say "just right"? Because we took a brand-new Mach-Dash PRO and ground it for <strong>12 straight hours — over 5.5 million revolutions</strong> — from new all the way to retirement, just to find the point where you should stop. This page has no adjectives, only the real data from that experiment: where the gains of break-in end, where the cost of over-break-in begins — and how smart break-in stops you between the two. It is also the opening chapter of our <strong>15-motor, same-conditions test series</strong>: this experiment sets the method and the metrics; from here, we test all 15 Tamiya motors under identical conditions, one by one.</p>
+<h2 data-i18n="g17.h1">The gains are banked within the first hour</h2>
+<p data-i18n="g17.p1">The vertical axis below is the <strong>current drawn at the same RPM</strong> — the motor power draw, the one thing break-in truly improves; the horizontal axis is cumulative break-in time, and every point is a real measurement. In the first session, same-RPM current went <strong>175 → 156 mA, about a 10% saving</strong>: the brushes bedded into the commutator and the internal "stickiness" was ground away.</p>
+<figure data-i18n="g17.figcur"><img alt="How long to break in a motor: 12-hour measured current curve at the same RPM — gains are banked within an hour, no further drop over the next 11 hours" class="chart" loading="lazy" src="/images/motor-break-in-current-plateau_e.png"/></figure>
+<p data-i18n="g17.p2">There is only so much "stickiness" to grind away. However many more sessions we ran, <strong>the power draw never dropped again</strong> — the done signal is actually very clear. The problem: people cannot see it. What people see is RPM.</p>
+<h2 data-i18n="g17.h2">What you see is RPM — and it lies to you</h2>
+<p data-i18n="g17.p3">If you keep grinding after the motor is done (we did, on purpose), RPM at the same voltage keeps <strong>climbing (+4.9%)</strong>. "RPM is still rising, so it is still improving" — almost everyone judging by RPM thinks exactly that, and keeps grinding.</p>
+<figure data-i18n="g17.figrpm"><img alt="The over-break-in RPM illusion: at the same voltage RPM keeps climbing +4.9% — fading magnets, not a stronger motor" class="chart" loading="lazy" src="/images/motor-break-in-rpm-illusion_e.png"/></figure>
+<p data-i18n="g17.p4">One textbook formula breaks the illusion: <code>V = I·R + Ke·ω</code> (voltage = resistive drop + back-EMF, magnet strength × speed). It says: at a fixed voltage, <strong>magnet strength (Ke) and speed (ω) sit on a seesaw</strong> — when RPM rises for no reason, the most common cause is not a stronger motor, but a lighter magnet end.</p>
+<p data-i18n="g17.p5">Magnet strength is not "used up" (a magnet on a shelf keeps it for a century) — it is <strong>knocked off</strong>: every commutation spark is a tiny reverse-field hit; over 5.5 million revolutions that is hundreds of millions of hits, and the magnets <strong>irreversibly weaken</strong>. In the very same stretch where RPM was "improving", this motor's constitution score was sliding.</p>
+<h2 data-i18n="g17.h3">The price of over-break-in is paid by the motor — irreversibly</h2>
+<p data-i18n="g17.p6">Throughout the run we tracked the constitution score with <strong>AI torque prediction</strong>: break-in pushed it from <strong>79 to a peak of 84</strong> — the motor at its personal best; past the peak it slid all the way to <strong>73, lower than brand new</strong>. Retested after a full overnight rest: still 73. <strong>Gained 5, lost 11, never coming back.</strong></p>
+<figure data-i18n="g17.figlife"><img alt="The cost of over-break-in: constitution score rises 79 to 84 then falls to 73, no recovery after overnight rest — irreversible wear" class="chart" loading="lazy" src="/images/motor-over-break-in-damage_e.png"/></figure>
+<h2 data-i18n="g17.h4">Smart break-in: hand "when to stop" to measurement, not to feel</h2>
+<p data-i18n="g17.m0">The stop signal exists and can be measured — but people staring at RPM cannot see it, and the RPM illusion keeps urging them on. Smart break-in does three things for you:</p>
 <ul>
-<li data-i18n="g17.m1"><strong>自分で磨き、自分で測る</strong> —— ワンタップ後は全自動:漸進的な回転数で慣らしながら連続測定し、正転・逆転を交互に行ってブラシ両面を対称に馴染ませます。</li>
-<li data-i18n="g17.m2"><strong>定常状態で自動停止</strong> —— 慣らし指標を監視し続け、「もう改善しない」を検出した瞬間にビープと共に自動停止——1 セッションも余計に磨かず、磁力を偽の回転数と交換しません。</li>
-<li data-i18n="g17.m3"><strong>全過程が見える</strong> —— ラウンド、収束進捗、指標カーブ(各ラウンドの点 + 移動平均)をリアルタイム表示;カーブが平坦になれば完了間近。時間上限を保険として設定でき、いつでも途中停止できます。</li>
+<li data-i18n="g17.m1"><strong>It grinds and measures by itself</strong> — fully automatic after one tap: the system breaks in at progressive speeds while measuring continuously, alternating forward and reverse so both brush faces bed symmetrically.</li>
+<li data-i18n="g17.m2"><strong>It stops at steady state, automatically</strong> — it keeps watching the break-in metric and stops with a beep the moment it detects "no more improvement" — not one session more, never trading your magnets for fake RPM.</li>
+<li data-i18n="g17.m3"><strong>You see the whole process</strong> — live rounds, convergence progress and the metric curve (per-round points + moving average); a flattening curve means nearly done. A time cap backstops it, and you can stop gracefully anytime.</li>
 </ul>
 <div class="guide-tip">
-<p data-i18n="g17.tip">慣らしは<strong>予算のある消耗行為</strong>です:磨き取れる「引っかかり」には限りがあり、磁石の寿命にも限りがあります。<strong>消費電力が下がらなくなった瞬間が、止めるべき瞬間</strong>——スマート慣らしはその判断を測定に任せ、ちょうどいいところで止めます。</p>
+<p data-i18n="g17.tip">Break-in is <strong>spending from a budget</strong>: there is only so much "stickiness" to remove, and magnets have finite life. <strong>The moment power draw stops falling is the moment to stop</strong> — smart break-in hands that call to measurement and stops you at just right.</p>
 </div>
-<p data-i18n="g17.note">実験メモ:Mach-Dash PRO 1 個、連続低回転慣らし 12 時間(スマート慣らし複数セッション + AI トルク予測で全程追跡)、全データは同一機器での実測;測定異常の 1 セッションは再測の上除外。物理根拠:直流モーターの電圧方程式 V = I·R + Ke·ω。体質スコアは公式規格比の参考値で、判読はトレンド重視。スマート慣らしはカーボンブラシ系列に対応。</p>
-<p class="guide-related" data-i18n="g17.related">関連:慣らしの全体フローと 3 モード —— <a href="../motor-break-in-guide/">モーター慣らし完全ガイド</a>;なぜ回転数を固定するのか —— <a href="../motor-break-in-speed-vs-voltage/">回転数固定、電圧固定にしない理由</a>;モーターが遅くなる 5 つの原因(減磁含む)—— <a href="../motor-slow-causes-fixes/">モーターが遅くなった原因と対処</a>。</p>
-</article><div class="guide-pagination"><div class="left"><a href="/ja/guides/motor-slow-causes-fixes/"><span class="label">← 前の記事</span><span>モーターが遅い</span></a></div><div class="center"><a href="https://motorlab-tw.github.io/ja/#guides"><span class="label">︿</span><span>ガイド一覧へ</span></a></div><div class="right"><span class="label">次の記事 →</span><span class="disabled">—</span></div></div></div></main><footer>
+<h2 data-i18n="g17.h5">Next: 15 motors, one set of conditions</h2>
+<p data-i18n="g17.p7">This 12-hour run fixed the test framework for the whole series: the same machine, the same break-in and measurement flow, and the same three dimensions — <strong>same-RPM current (power draw), same-voltage RPM, and constitution score</strong>. From here we put all 15 Tamiya motors through identical conditions: where each golden zone sits, how early the stop point arrives, and how much over-break-in costs — published one by one, all collected in <a href="../">Benchmarks</a>.</p>
+<p data-i18n="g17.note"><strong>Test conditions:</strong><br/>1. Mach-Dash PRO<br/>2. 12 hours of continuous low-speed break-in<br/>3. All data measured on the same machine<br/>4. Physics: the DC motor voltage equation <code>V = I·R + Ke·ω</code><br/>5. Constitution scores are reference values against Tamiya official spec — read the trend</p>
+<p class="guide-related" data-i18n="g17.related">Further reading: the full break-in flow and all three modes in <a href="../../guides/motor-break-in-guide/">the complete break-in guide</a>; why break-in and measurement lock RPM in <a href="../../guides/motor-break-in-speed-vs-voltage/">locked RPM, not fixed voltage</a>; the 5 causes of a slow motor (incl. demagnetization) in <a href="../../guides/motor-slow-causes-fixes/">motor got slow: causes and fixes</a>.</p>
+</article><div class="guide-pagination"><div class="left"><a href="/en/guides/motor-slow-causes-fixes/"><span class="label">← Previous</span><span>Motor Got Slow</span></a></div><div class="center"><a href="https://motorlab-tw.github.io/en/#guides"><span class="label">︿</span><span>Back to guides</span></a></div><div class="right"><span class="label">Next →</span><span class="disabled">—</span></div></div></div></main><footer>
 <div class="container">
-<div class="footer-trademark" data-i18n="footer.trademark">「Mini 4WD」<sup>®</sup> および「ミニ四駆」<sup>®</sup> は株式会社タミヤ（TAMIYA, INC.）の登録商標です（日本商標登録番号 第 2168392 号）。MotorLab は独立系スタジオであり、株式会社タミヤとは一切の関連がなく、その許諾・協賛・推奨も受けていません。本サイトでの当該名称への言及は、製品の適用範囲を示す目的のみで行われており、すべての商標権は各権利者に帰属します。</div>
+<div class="footer-trademark" data-i18n="footer.trademark">"Mini 4WD"<sup>®</sup> and "ミニ四駆"<sup>®</sup> are registered trademarks of TAMIYA, INC. (Japan Trademark Registration No. 2168392). MotorLab is an independent studio and has no affiliation with, authorization from, sponsorship by, or endorsement from TAMIYA, INC. References to these names on this site are made solely to indicate product compatibility. All trademark rights belong to their respective owners.</div>
 <div class="footer-inner">
 <div>
 <strong>MotorLab.tw</strong> · <span data-i18n="footer.tagline">Mini 4WD Performance Lab</span>
-        · <a data-i18n="footer.verify" href="/ja/verify/">正規品認証</a>
+        · <a data-i18n="footer.verify" href="/en/verify/">Verify genuine product</a>
 </div>
 <div class="mono">
-        © 2026 MotorLab · <span data-i18n="footer.firmware">ファームウェア</span> v3.5.0
+        © 2026 MotorLab · <span data-i18n="footer.firmware">Firmware</span> v3.5.0
       </div>
 </div>
 <div class="footer-visits mono" hidden="" id="visit-count"></div>
