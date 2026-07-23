@@ -2167,7 +2167,7 @@
 <div class="hero-grid">
 <div>
 <div class="hero-badge">
-<span data-i18n="hero.badge">System running · v3.5.0</span>
+<span data-i18n="hero.badge">System running · v3.5.1</span>
 </div>
 <h1 data-i18n="hero.title">Build a <span class="accent">health fingerprint</span><br/>for every<br/>Mini 4WD<sup>®</sup> motor</h1>
 <p class="lead" data-i18n="hero.lead">MotorLab is a precision motor break-in and diagnostic system built for Mini 4WD<sup>®</sup> enthusiasts. From 10-stage programmable break-in to bearing decay analysis, brush contact diagnostics, and AI motor health management — make every tune measurable, repeatable, and comparable.</p>
@@ -2218,7 +2218,7 @@
 <div class="container">
 <div class="section-header">
 <div class="section-tag" data-i18n="features.tag">CORE FEATURES</div>
-<h2 class="section-title" data-i18n="features.title">Fifteen Professional Tools</h2>
+<h2 class="section-title" data-i18n="features.title">Sixteen Professional Tools</h2>
 <p class="section-subtitle" data-i18n="features.subtitle">From break-in to diagnostics, covering every critical phase of the Mini 4WD motor lifecycle.</p>
 </div>
 <div class="features-grid">
@@ -2241,7 +2241,7 @@
 <svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="3"></circle><path d="M12 3v3M12 18v3M3 12h3M18 12h3"></path></svg>
 </div>
 <h3 data-i18n="f1.title">Motor Break-in Program</h3>
-<p data-i18n="f1.desc">Long, low-speed running that beds the brushes to the commutator. Motor break-in offers three modes: Voltage mode (classic fixed-voltage, 1–6 passes of 10 programmable stages each), Speed mode Beta (PID speed control to the target RPM, auto-advancing once the reading stabilises), and Smart mode Beta (the system runs the break-in and stops automatically when done).</p>
+<p data-i18n="f1.desc">Long, low-speed running that beds the brushes to the commutator. Two manual modes: Voltage mode (classic fixed-voltage, 1–6 passes of 10 programmable stages) and Speed mode Beta (auto speed-control to your target RPM, advancing once voltage stabilizes); for one-tap full auto, hand it to AI Smart Break-In (PRO).</p>
 <div class="feature-meta">
 <span class="feature-tag" data-i18n="f1.tag1">Voltage mode</span>
 <span class="feature-tag" data-i18n="f1.tag2">Speed mode Beta</span>
@@ -2415,6 +2415,18 @@
 </div>
 </div>
 </div>
+<div class="feature-card pro-only">
+<div class="feature-icon">
+<svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M10 8.5l5.5 3.5-5.5 3.5z"></path></svg>
+</div>
+<h3 data-i18n="f3c.title">AI Smart Break-In</h3>
+<p data-i18n="f3c.desc">One-tap fully automatic break-in: the system grinds and measures itself at progressive speeds and stops on steady state; the built-in Break-in Guide reads across sessions — still improving, sweet spot reached, past the point — answering how many sessions this motor really needs. Supports all 15 Tamiya motors.</p>
+<div class="feature-meta">
+<span class="feature-tag" data-i18n="f3c.tag1">Auto-stop when done</span>
+<span class="feature-tag" data-i18n="f3c.tag2">Break-in Guide</span>
+<span class="feature-tag" data-i18n="f3c.tag3">15 Tamiya motors</span>
+</div>
+</div>
 </div>
 </section>
 <!-- 全球馬達磨合資料庫導流入口 -->
@@ -2454,7 +2466,7 @@
 <td class="center"><span class="check">✓</span></td>
 </tr>
 <tr>
-<td data-i18n="vt.r1">Three break-in modes (Voltage / Speed Beta / Smart Beta)</td>
+<td data-i18n="vt.r1">Two manual break-in modes (Voltage / Speed Beta)</td>
 <td class="center"><span class="check">✓</span></td>
 <td class="center"><span class="check">✓</span></td>
 </tr>
@@ -2510,6 +2522,11 @@
 </tr>
 <tr>
 <td data-i18n="vt.r8b">AI Torque Prediction (@2.4V / @3.0V, constitution vs Tamiya std)</td>
+<td class="center"><span class="cross">—</span></td>
+<td class="center"><span class="check">✓</span></td>
+</tr>
+<tr>
+<td data-i18n="vt.r8c">AI Smart Break-In (one-tap auto + Break-in Guide)</td>
 <td class="center"><span class="cross">—</span></td>
 <td class="center"><span class="check">✓</span></td>
 </tr>
@@ -2606,6 +2623,16 @@
 <div class="tech-name">LOSS_DECOMP</div>
 <h4 data-i18n="t16.title">Loss-Torque Decomposition</h4>
 <p data-i18n="t16.desc">Instead of a single "friction" number, least-squares fitting separates loss torque into multiple physical components, and an R² threshold automatically rejects untrustworthy measurements.</p>
+</div>
+<div class="tech-card">
+<div class="tech-name">BREAKIN_COACH</div>
+<h4 data-i18n="t17.title">Cross-Session Break-in Guide</h4>
+<p data-i18n="t17.desc">Every session is recorded and compared across sessions, telling you outright: still improving / sweet spot — stop / past the point. Over-break-in spends brush and magnet life; the Guide catches the session where you should stop.</p>
+</div>
+<div class="tech-card">
+<div class="tech-name">TORQUE_PROFILE</div>
+<h4 data-i18n="t18.title">Measured Torque Constitution</h4>
+<p data-i18n="t18.desc">Torque and constitution derived from real measurements of this exact unit against Tamiya official standards — units of the same model score differently, and that difference is true individual constitution.</p>
 </div>
 <div class="tech-card">
 <div class="tech-name">EMI_SUPPRESSION</div>
@@ -2727,8 +2754,8 @@
 </table>
 </div>
 <div class="spec-note" data-i18n="specs.range.g1rnote">Advances once voltage stabilises; run time is the upper bound. If the target RPM still can't be reached after the full run time, it advances automatically and is flagged "not reached." Target RPM 0 = skip that stage.</div>
-<!-- 3.1c 智慧模式 Beta -->
-<div class="spec-subgroup" data-i18n="specs.range.g1s">Break-in Program · Smart mode Beta</div>
+<!-- 3.1c AI 智慧磨合(PRO)-->
+<div class="spec-subgroup" data-i18n="specs.range.g1s">AI Smart Break-In (PRO)</div>
 <div class="spec-table-wrap">
 <table class="spec-table">
 <thead>
@@ -2741,11 +2768,13 @@
 </thead>
 <tbody>
 <tr><td data-i18n="specs.p.timecap">Time Cap</td><td data-i18n="specs.v.timecap">Until done / 2h / 3h / 4h</td><td>—</td><td class="spec-val">3h</td></tr>
-<tr><td data-i18n="specs.p.model">Applicable Models</td><td data-i18n="specs.v.brushed">Brushed series</td><td>—</td><td class="spec-val">Hyper-Dash PRO</td></tr>
+<tr><td data-i18n="specs.p.model">Applicable Models</td><td data-i18n="specs.v.all15">All 15 Tamiya motors</td><td>—</td><td class="spec-val">Hyper-Dash PRO</td></tr>
+<tr><td data-i18n="specs.p.coach">Break-in Guide</td><td data-i18n="specs.v.coach">Cross-session auto verdicts (improving / sweet spot / past the point); on start choose same motor or new motor</td><td>—</td><td class="spec-val">—</td></tr>
+<tr><td data-i18n="specs.p.stopb">Stop behavior</td><td data-i18n="specs.v.stopb">Stop halts immediately; completed-round data is kept</td><td>—</td><td class="spec-val">—</td></tr>
 </tbody>
 </table>
 </div>
-<div class="spec-note" data-i18n="specs.range.g1snote">One-tap auto break-in; stops automatically on detecting steady state and plots the break-in metric curve.</div>
+<div class="spec-note" data-i18n="specs.range.g1snote">One-tap auto break-in; stops automatically on detecting steady state and plots the break-in metric curve; the Break-in Guide reads across sessions to answer how many sessions.</div>
 <!-- 3.2 馬達測試程式 -->
 <div class="spec-subgroup" data-i18n="specs.range.g2">Motor Test Program (single stage)</div>
 <div class="spec-table-wrap">
@@ -2813,10 +2842,20 @@
 <p class="section-subtitle" data-i18n="cl.subtitle">All versions push automatically to activated devices via OTA update.</p>
 </div>
 <div class="changelog">
+<!-- v3.5.1 -->
+<div class="changelog-item">
+<div class="changelog-meta">
+<span class="version-badge latest">v3.5.1</span>
+<span class="changelog-date">2026-07-23</span>
+</div>
+<div class="changelog-content">
+<h4 data-i18n="cl.v351.title">AI Torque Prediction · AI Smart Break-In</h4>
+</div>
+</div>
 <!-- v3.5.0 -->
 <div class="changelog-item">
 <div class="changelog-meta">
-<span class="version-badge latest">v3.5.0</span>
+<span class="version-badge">v3.5.0</span>
 <span class="changelog-date">2026-07-15</span>
 </div>
 <div class="changelog-content">
@@ -2994,7 +3033,7 @@
       'nav.about': '關於',
       'nav.contact': '聯絡',
       'nav.verify': '正版查驗',
-      'hero.badge': '系統運作中 · v3.5.0',
+      'hero.badge': '系統運作中 · v3.5.1',
       'hero.title': '為每一顆<br>Mini 4WD<sup>®</sup> 馬達<br>建立<span class="accent">健康指紋</span>',
       'hero.lead': 'MotorLab 是為 Mini 4WD<sup>®</sup> 玩家打造的精密馬達磨合與測試系統。從十階段可程式化磨合、軸承衰減量測、電刷接觸穩定診斷,到 AI 馬達健康管理 — 讓每一次調校都可量化、可重複、可比較。',
       'hero.cta1': '瀏覽功能',
@@ -3008,10 +3047,10 @@
       'mock.temp': '溫度',
       'mock.status': '● 磨合進行中 · 階段 6/10 · 已運行 02:48:33',
       'features.tag': 'CORE FEATURES',
-      'features.title': '十五大專業功能',
+      'features.title': '十六大專業功能',
       'features.subtitle': '從磨合到診斷,涵蓋 Mini 4WD 馬達生命週期的每一個關鍵環節。',
       'f1.title': '馬達磨合程式',
-      'f1.desc': '低速長時間運轉,讓電刷與整流子貼合到最佳接觸。馬達磨合三種模式任選:電壓模式(傳統定電壓,1~6 趟各趟 10 階段可程式化)、轉速模式 Beta(PID 控速到設定的轉速,數值穩定自動換階)、智慧模式 Beta(系統自動磨合,磨合完成自動停)。',
+      'f1.desc': '低速長時間運轉,讓電刷與整流子貼合到最佳接觸。兩種手動模式任選:電壓模式(傳統定電壓,1~6 趟各趟 10 階段可程式化)、轉速模式 Beta(自動控速到設定轉速,電壓穩定自動換階);想一鍵全自動,交給 AI 智慧磨合(PRO)。',
       'f1.tag1': '電壓模式',
       'f1.tag2': '轉速模式 Beta',
       'f1.tag3': '智慧模式 Beta',
@@ -3028,6 +3067,11 @@
       'f3b.tag1': '@2.4V / @3.0V',
       'f3b.tag2': '體質 vs 標準',
       'f3b.tag3': '數學模型',
+      'f3c.title': 'AI 智慧磨合',
+      'f3c.desc': '一鍵全自動磨合:系統以漸進轉速自己磨、自己量,偵測到穩態自動停;內建磨合導引跨場判讀 —— 還在進步、已到黃金點建議停、已過頭 —— 回答「到底要磨幾場」。支援田宮全 15 款馬達。',
+      'f3c.tag1': '磨好自動停',
+      'f3c.tag2': '磨合導引',
+      'f3c.tag3': '田宮 15 款',
       'f4.title': '軸承阻力測試',
       'f4.desc': '選擇測試電壓(2.4V / 3V),加速至穩定轉速後直接斷電滑行,量測「完全靜止時間」— 時間越久軸承越順。只顯示時間供相對比較,不做評定。',
       'f4.tag1': '斷電滑行',
@@ -3085,7 +3129,7 @@
       'versions.title': 'M1 與 PRO',
       'versions.subtitle': '同一台機器,兩種授權層級。隨時可線上升級。',
       'vt.feature': '功能',
-      'vt.r1': '馬達磨合三模式（電壓／轉速 Beta／智慧 Beta）',
+      'vt.r1': '馬達磨合兩種手動模式(電壓/轉速 Beta)',
       'vt.r13': '馬達特性量測（三趟平均）',
       'vt.r14': '全球馬達磨合資料庫',
       'vt.r15': '田宮馬達規格速查',
@@ -3098,6 +3142,7 @@
       'vt.r12': '三層安全保護機制',
       'vt.r8': 'AI 智慧馬達健康管理(最多 20 顆)',
       'vt.r8b': 'AI 智慧扭力預測(@2.4V / @3.0V,體質 vs 田宮標準)',
+      'vt.r8c': 'AI 智慧磨合(一鍵自動磨合+磨合導引)',
       'vt.r9': 'FFT 振動頻譜分析',
       'vt.r10': '五大指標雷達圖診斷',
       'vt.r11': '健康趨勢曲線追蹤',
@@ -3136,6 +3181,10 @@
       't15.desc': '硬體只能量到供電端,系統即時補償驅動級壓降與供電下垂,推算馬達端子實際吃到的電壓 ——「設定 3V」馬達就真的看到 3V,畫面並列顯示供電與馬達電壓。',
       't16.title': '損耗轉矩分解',
       't16.desc': '不只給一個「摩擦」數字,而是用最小平方把損耗分解成多個物理成分,並以 R² 擬合門檻自動剔除不可信的量測。',
+      't17.title': '磨合導引跨場判讀',
+      't17.desc': '每場磨完自動記錄、跨場比對,直接告訴你「還在進步 / 已到黃金點建議停 / 已過頭」—— 過磨消耗的是電刷與磁鐵壽命,導引幫你抓住該停手的那一場。',
+      't18.title': '扭力體質實測推算',
+      't18.desc': '以本顆實測數據對照田宮官方標準推算扭力與體質 —— 同型號不同顆結果不同,反映的正是個體真實體質。',
 
       // ===== Specifications 技術規格 =====
       'specs.tag': 'SPECIFICATIONS',
@@ -3187,8 +3236,8 @@
       'specs.d.fwd': '正轉',
       'specs.range.g1r': '馬達磨合程式 · 轉速模式 Beta（1~6 趟 × 10 階段）',
       'specs.range.g1rnote': '電壓穩定即進行換階,運轉時間為上限;跑滿時間仍推不到目標轉速時自動進行換階並標示「未達標」。目標轉速 0 = 跳過該階段。',
-      'specs.range.g1s': '馬達磨合程式 · 智慧模式 Beta',
-      'specs.range.g1snote': '一鍵自動磨合,偵測到穩態自動停止並繪製磨合指標曲線。',
+      'specs.range.g1s': 'AI 智慧磨合(PRO)',
+      'specs.range.g1snote': '一鍵自動磨合,偵測到穩態自動停止並繪製磨合指標曲線;磨合導引跨場判讀「要磨幾場」。',
       'specs.range.g2note': '判停標準與磨合頁獨立設定。',
       'specs.p.stopmode': '判停標準',
       'specs.p.targetrpm': '目標轉速',
@@ -3201,6 +3250,11 @@
       'specs.v.sameas': '同電壓模式',
       'specs.v.timecap': '磨到完成 / 2h / 3h / 4h',
       'specs.v.brushed': '碳刷系列',
+      'specs.v.all15': '田宮全 15 款',
+      'specs.p.coach': '磨合導引',
+      'specs.v.coach': '跨場自動判讀(還在進步 / 已到黃金點 / 已過頭);啟動可選「同一顆繼續 / 新馬達重新開始」',
+      'specs.p.stopb': '停止行為',
+      'specs.v.stopb': '按停止立即停止,已完成輪次數據保留',
       'specs.d.smartstop': '智慧穩定電流',
       'specs.d.std': '標準',
 
@@ -3234,11 +3288,11 @@
       'g1.h4': '標準磨合流程(10 階段建議)',
       'g1.p7': '業界主流的「漸進升壓」磨合方法,將馬達磨合分成 10 階段、低電壓到高電壓、並穿插反向運轉與冷卻時間。',
       'g1.tip': 'MotorLab M1/PRO 內建的<strong>十階段可程式化磨合</strong>會自動執行這套流程,每階段可獨立調整電壓、方向、時間、冷卻、與穩定電流容差。並透過<strong>智慧穩流判定</strong>—當電流連續波動小於設定值時自動進入下階段,確保每顆馬達都磨到位。',
-      'g1.h6': '用機器磨合:v3.5.0 三種模式',
-      'g1.m1': '上面的十階段是<strong>電壓模式</strong>的手動配方。MotorLab v3.5.0 另外提供兩種自動化模式,依你想花多少心力挑一種:',
+      'g1.h6': '用機器磨合:兩種手動模式 + AI 智慧磨合',
+      'g1.m1': '上面的十階段是<strong>電壓模式</strong>的手動配方。MotorLab 提供兩種手動模式,以及一鍵全自動的 AI 智慧磨合,依你想花多少心力挑一種:',
       'g1.m2': '<strong>電壓模式</strong> —— 各階段固定電壓(即上述十階段流程),適合有自己配方、想完全掌控的玩家。',
       'g1.m3': '<strong>轉速模式(Beta)</strong> —— 機器自動調電壓,把馬達鎖在你設定的轉速磨。鎖轉速 = 鎖住碳刷滑動速度,跨馬達同基準、可重現;為什麼「鎖轉速比鎖電壓更適合磨合與量測」,見 <a href="../motor-break-in-speed-vs-voltage/">為什麼磨馬達要鎖轉速、不鎖電壓 →</a>。',
-      'g1.m4': '<strong>智慧模式(Beta)</strong> —— 一鍵自動磨合:機器自己磨、自己量,<strong>偵測到穩態(馬達不再進步)就自動停</strong>,不必憑感覺猜要磨幾趟、磨多久(碳刷 Dash 系適用)。憑什麼敢自動停?看 <a href="../../benchmarks/when-to-stop-motor-break-in/">12 小時過磨實驗:磨到剛剛好,然後停 →</a>。',
+      'g1.m4': '<strong>AI 智慧磨合(Pro)</strong> —— 一鍵全自動:機器自己磨、自己量,<strong>偵測到穩態就自動停</strong>,內建磨合導引告訴你「要磨幾場」(支援田宮全 15 款)。憑什麼敢自動停?看 <a href="../../benchmarks/when-to-stop-motor-break-in/">12 小時過磨實驗:磨到剛剛好,然後停 →</a>。',
       'g1.m5': '<strong>別用「導電磨合油」衝數字。</strong>加了導電油轉速瞬間上升,是碳粉暫時導電的<strong>假象</strong>、不是真的磨好,油一洗掉就打回原形。完整拆解見 <a href="../conductive-oil-motor-break-in/">導電油磨馬達真的有效嗎 →</a>。',
       'g1.related': '延伸閱讀:挑馬達先看 <a href="../../benchmarks/tamiya-mini-4wd-motor-specs-list/">田宮全 15 款馬達規格對照表 →</a>;想知道馬達何時該退役,看 <a href="../motor-degradation-signs/">馬達衰退的判定訊號 →</a>。',
       'g1.h5': '磨合完成的判定標準',
@@ -3872,6 +3926,7 @@
       'cl.FIX': '修正',
       'cl.IMPROVE': '改進',
       'cl.SECURITY': '安全',
+      'cl.v351.title': 'AI 扭力預測 · AI 智慧磨合上線',
       'cl.v350.title': '磨合三模式 · 自動磨合上線',
       'cl.v346.title': '正版查驗上線 · 軟體更新優化',
       'cl.v340.title': '磨合多趟化 · KV 值顯示',
@@ -3911,7 +3966,7 @@
       'nav.about': 'About',
       'nav.contact': 'Contact',
       'nav.verify': 'Verify',
-      'hero.badge': 'System running · v3.5.0',
+      'hero.badge': 'System running · v3.5.1',
       'hero.title': 'Build a <span class="accent">health fingerprint</span><br>for every<br>Mini 4WD<sup>®</sup> motor',
       'hero.lead': 'MotorLab is a precision motor break-in and diagnostic system built for Mini 4WD<sup>®</sup> enthusiasts. From 10-stage programmable break-in to bearing decay analysis, brush contact diagnostics, and AI motor health management — make every tune measurable, repeatable, and comparable.',
       'hero.cta1': 'Browse Features',
@@ -3925,10 +3980,10 @@
       'mock.temp': 'Temp',
       'mock.status': '● Break-in running · Stage 6/10 · 02:48:33 elapsed',
       'features.tag': 'CORE FEATURES',
-      'features.title': 'Fifteen Professional Tools',
+      'features.title': 'Sixteen Professional Tools',
       'features.subtitle': 'From break-in to diagnostics, covering every critical phase of the Mini 4WD motor lifecycle.',
       'f1.title': 'Motor Break-in Program',
-      'f1.desc': 'Long, low-speed running that beds the brushes to the commutator. Motor break-in offers three modes: Voltage mode (classic fixed-voltage, 1–6 passes of 10 programmable stages each), Speed mode Beta (PID speed control to the target RPM, auto-advancing once the reading stabilises), and Smart mode Beta (the system runs the break-in and stops automatically when done).',
+      'f1.desc': 'Long, low-speed running that beds the brushes to the commutator. Two manual modes: Voltage mode (classic fixed-voltage, 1–6 passes of 10 programmable stages) and Speed mode Beta (auto speed-control to your target RPM, advancing once voltage stabilizes); for one-tap full auto, hand it to AI Smart Break-In (PRO).',
       'f1.tag1': 'Voltage mode',
       'f1.tag2': 'Speed mode Beta',
       'f1.tag3': 'Smart mode Beta',
@@ -3945,6 +4000,11 @@
       'f3b.tag1': '@2.4V / @3.0V',
       'f3b.tag2': 'vs Tamiya std',
       'f3b.tag3': 'Math model',
+      'f3c.title': 'AI Smart Break-In',
+      'f3c.desc': 'One-tap fully automatic break-in: the system grinds and measures itself at progressive speeds and stops on steady state; the built-in Break-in Guide reads across sessions — still improving, sweet spot reached, past the point — answering how many sessions this motor really needs. Supports all 15 Tamiya motors.',
+      'f3c.tag1': 'Auto-stop when done',
+      'f3c.tag2': 'Break-in Guide',
+      'f3c.tag3': '15 Tamiya motors',
       'f4.title': 'Bearing Resistance Test',
       'f4.desc': 'Pick a test voltage (2.4V / 3V), spin up to steady RPM, then cut power and let it coast — measuring the time to a complete stop. Longer means a smoother bearing. Time is shown for relative comparison only, with no rating.',
       'f4.tag1': 'Coast-down',
@@ -4002,7 +4062,7 @@
       'versions.title': 'M1 and PRO',
       'versions.subtitle': 'Same hardware, two license tiers. Online upgrade anytime.',
       'vt.feature': 'Feature',
-      'vt.r1': 'Three break-in modes (Voltage / Speed Beta / Smart Beta)',
+      'vt.r1': 'Two manual break-in modes (Voltage / Speed Beta)',
       'vt.r13': 'Motor characterization (3-pass average)',
       'vt.r14': 'Global motor break-in database',
       'vt.r15': 'Tamiya motor spec lookup',
@@ -4015,6 +4075,7 @@
       'vt.r12': 'Triple-layer safety protection',
       'vt.r8': 'AI Motor Health Manager (up to 20 motors)',
       'vt.r8b': 'AI Torque Prediction (@2.4V / @3.0V, constitution vs Tamiya std)',
+      'vt.r8c': 'AI Smart Break-In (one-tap auto + Break-in Guide)',
       'vt.r9': 'FFT vibration spectrum',
       'vt.r10': '5-metric radar diagnostic',
       'vt.r11': 'Health trend tracking',
@@ -4053,6 +4114,10 @@
       't15.desc': 'The hardware can only meter the supply, so the system compensates drive-stage drop and supply sag in real time to compute the voltage the motor terminals actually see — "set 3V" means the motor really gets 3V, with supply and motor voltage shown side by side.',
       't16.title': 'Loss-Torque Decomposition',
       't16.desc': 'Instead of a single "friction" number, least-squares fitting separates loss torque into multiple physical components, and an R² threshold automatically rejects untrustworthy measurements.',
+      't17.title': 'Cross-Session Break-in Guide',
+      't17.desc': 'Every session is recorded and compared across sessions, telling you outright: still improving / sweet spot — stop / past the point. Over-break-in spends brush and magnet life; the Guide catches the session where you should stop.',
+      't18.title': 'Measured Torque Constitution',
+      't18.desc': 'Torque and constitution derived from real measurements of this exact unit against Tamiya official standards — units of the same model score differently, and that difference is true individual constitution.',
 
       // ===== Specifications =====
       'specs.tag': 'SPECIFICATIONS',
@@ -4104,8 +4169,8 @@
       'specs.d.fwd': 'Forward',
       'specs.range.g1r': 'Break-in Program · Speed mode Beta (1–6 runs × 10 stages)',
       'specs.range.g1rnote': 'Advances once voltage stabilises; run time is the upper bound. If the target RPM still can\'t be reached after the full run time, it advances automatically and is flagged "not reached." Target RPM 0 = skip that stage.',
-      'specs.range.g1s': 'Break-in Program · Smart mode Beta',
-      'specs.range.g1snote': 'One-tap auto break-in; stops automatically on detecting steady state and plots the break-in metric curve.',
+      'specs.range.g1s': 'AI Smart Break-In (PRO)',
+      'specs.range.g1snote': 'One-tap auto break-in; stops automatically on detecting steady state and plots the break-in metric curve; the Break-in Guide reads across sessions to answer how many sessions.',
       'specs.range.g2note': 'Stop criterion is set independently from the break-in page.',
       'specs.p.stopmode': 'Stop Criterion',
       'specs.p.targetrpm': 'Target RPM',
@@ -4118,6 +4183,11 @@
       'specs.v.sameas': 'Same as Voltage mode',
       'specs.v.timecap': 'Until done / 2h / 3h / 4h',
       'specs.v.brushed': 'Brushed series',
+      'specs.v.all15': 'All 15 Tamiya motors',
+      'specs.p.coach': 'Break-in Guide',
+      'specs.v.coach': 'Cross-session auto verdicts (improving / sweet spot / past the point); on start choose same motor or new motor',
+      'specs.p.stopb': 'Stop behavior',
+      'specs.v.stopb': 'Stop halts immediately; completed-round data is kept',
       'specs.d.smartstop': 'Smart stable current',
       'specs.d.std': 'Standard',
 
@@ -4152,11 +4222,11 @@
       'g1.h4': 'Standard break-in procedure (10-stage recommendation)',
       'g1.p7': 'The mainstream "progressive voltage ramp" method divides break-in into 10 stages, from low voltage to high voltage, with reverse runs and cooling pauses interleaved.',
       'g1.tip': 'MotorLab M1/PRO\'s built-in <strong>10-stage programmable break-in</strong> automatically executes this protocol. Each stage independently sets voltage, direction, time, cooling, and current stability tolerance. The <strong>smart stable-current latch</strong> auto-advances when current variation falls below threshold, ensuring every motor reaches optimal break-in.',
-      'g1.h6': 'Breaking in with the machine: three v3.5.0 modes',
-      'g1.m1': 'The 10 stages above are a manual <strong>voltage-mode</strong> recipe. MotorLab v3.5.0 adds two automated modes — pick one by how hands-on you want to be:',
+      'g1.h6': 'Breaking in with the machine: two manual modes + AI Smart Break-In',
+      'g1.m1': 'The 10 stages above are a manual <strong>voltage-mode</strong> recipe. MotorLab offers two manual modes plus one-tap AI Smart Break-In — pick by how hands-on you want to be:',
       'g1.m2': '<strong>Voltage mode</strong> — fixed voltage per stage (the 10-stage flow above), for players who have their own recipe and want full control.',
       'g1.m3': '<strong>Speed mode (Beta)</strong> — the machine adjusts voltage automatically to hold the motor at a target RPM. Locking RPM locks the brush sliding speed, giving a repeatable baseline across motors; for why "lock RPM, not voltage" suits break-in and measurement, see <a href="../motor-break-in-speed-vs-voltage/">Why break in at a locked RPM, not a fixed voltage →</a>.',
-      'g1.m4': '<strong>Smart mode (Beta)</strong> — one-tap automatic break-in: the machine breaks in and measures on its own and <strong>auto-stops once it detects a steady state (the motor stops improving)</strong>, so you never guess how many passes or how long (for brushed Dash-series motors). How can it dare to stop itself? See <a href="../../benchmarks/when-to-stop-motor-break-in/">the 12-hour over-break-in experiment →</a>.',
+      'g1.m4': '<strong>AI Smart Break-In (Pro)</strong> — one-tap fully automatic: the machine grinds and measures itself and <strong>auto-stops at steady state</strong>, with the built-in Break-in Guide answering how many sessions (supports all 15 Tamiya motors). How can it dare to stop itself? See <a href="../../benchmarks/when-to-stop-motor-break-in/">the 12-hour over-break-in experiment →</a>.',
       'g1.m5': '<strong>Don\'t chase numbers with "conductive break-in oil."</strong> The instant RPM jump is an <strong>illusion</strong> from carbon powder briefly conducting — not real break-in, and it reverts once washed off. Full breakdown: <a href="../conductive-oil-motor-break-in/">Does conductive oil really break in a motor? →</a>',
       'g1.related': 'Further reading: pick a motor with the <a href="../../benchmarks/tamiya-mini-4wd-motor-specs-list/">Tamiya Mini 4WD motor chart (all 15) →</a>; to tell when a motor is worn out, see the <a href="../motor-degradation-signs/">signs of motor degradation →</a>.',
       'g1.h5': 'How to know when break-in is complete',
@@ -4886,7 +4956,7 @@
       'g17.h5': 'Next: 15 motors, one set of conditions',
       'g17.p7': 'This 12-hour run fixed the test framework for the whole series: the same machine, the same break-in and measurement flow, and the same three dimensions — <strong>same-RPM current (power draw), same-voltage RPM, and constitution score</strong>. From here we put all 15 Tamiya motors through identical conditions: where each golden zone sits, how early the stop point arrives, and how much over-break-in costs — published one by one, all collected in <a href="../">Benchmarks</a>.',
       'g17.note': '<strong>Test conditions:</strong><br>1. Mach-Dash PRO<br>2. 12 hours of continuous low-speed break-in<br>3. All data measured on the same machine<br>4. Physics: the DC motor voltage equation <code>V = I·R + Ke·ω</code><br>5. Constitution scores are reference values against Tamiya official spec — read the trend',
-      'g17.related': 'Further reading: the full break-in flow and all three modes in <a href="../../guides/motor-break-in-guide/">the complete break-in guide</a>; why break-in and measurement lock RPM in <a href="../../guides/motor-break-in-speed-vs-voltage/">locked RPM, not fixed voltage</a>; the 5 causes of a slow motor (incl. demagnetization) in <a href="../../guides/motor-slow-causes-fixes/">motor got slow: causes and fixes</a>.',
+      'g17.related': 'Further reading: the full break-in flow and the modes in <a href="../../guides/motor-break-in-guide/">the complete break-in guide</a>; why break-in and measurement lock RPM in <a href="../../guides/motor-break-in-speed-vs-voltage/">locked RPM, not fixed voltage</a>; the 5 causes of a slow motor (incl. demagnetization) in <a href="../../guides/motor-slow-causes-fixes/">motor got slow: causes and fixes</a>.',
       'g15.figsum': '<img class="chart" src="/images/conductive-oil-verdict_e.png" alt="Does conductive oil really break in a motor: higher RPM isn\'t done, film break falls back, the oil taints the read" loading="lazy">',
 
       'cl.tag': 'CHANGELOG',
@@ -4896,6 +4966,7 @@
       'cl.FIX': 'FIX',
       'cl.IMPROVE': 'IMPROVE',
       'cl.SECURITY': 'SECURITY',
+      'cl.v351.title': 'AI Torque Prediction · AI Smart Break-In',
       'cl.v350.title': 'Three Break-in Modes · Auto Break-in',
       'cl.v346.title': 'Genuine-Product Verification · Update Experience',
       'cl.v340.title': 'Multi-Pass Break-in · KV Display',
@@ -4935,7 +5006,7 @@
       'nav.about': '概要',
       'nav.contact': 'お問い合わせ',
       'nav.verify': '正規品認証',
-      'hero.badge': 'システム稼働中 · v3.5.0',
+      'hero.badge': 'システム稼働中 · v3.5.1',
       'hero.title': 'すべての<br>Mini 4WD<sup>®</sup> モーターに<br><span class="accent">健康指紋</span>を',
       'hero.lead': 'MotorLab は Mini 4WD<sup>®</sup> プレイヤーのために設計された精密モーター慣らし・測定システムです。10 段階プログラム慣らし、ベアリング減衰測定、ブラシ接触安定診断、AI モーター健康管理まで — すべての調整を定量化・再現・比較できます。',
       'hero.cta1': '機能を見る',
@@ -4949,10 +5020,10 @@
       'mock.temp': '温度',
       'mock.status': '● 慣らし運転中 · ステージ 6/10 · 経過時間 02:48:33',
       'features.tag': 'CORE FEATURES',
-      'features.title': '15 のプロ機能',
+      'features.title': '16 のプロ機能',
       'features.subtitle': '慣らしから診断まで、Mini 4WD モーターのライフサイクルにおけるすべての重要工程を網羅。',
       'f1.title': 'モーター慣らしプログラム',
-      'f1.desc': '低速の長時間運転でブラシと整流子を最適な接触に馴染ませます。慣らしは 3 つのモードから選択:電圧モード(従来の定電圧、1〜6 パス・各パス 10 段階をプログラム可)、回転数モード Beta(PID で設定回転数に速度制御し、数値が安定すると自動で次段階へ)、スマートモード Beta(システムが自動で慣らし、完了すると自動停止)。',
+      'f1.desc': '低速の長時間運転でブラシと整流子を最適な接触に馴染ませます。手動 2 モードから選択:電圧モード(従来の定電圧、1〜6 パス・各パス 10 段階をプログラム可)、回転数モード Beta(設定回転数へ自動制御、電圧が安定すると自動で次段階へ);ワンタップ全自動なら AI スマート慣らし(PRO)へ。',
       'f1.tag1': '電圧モード',
       'f1.tag2': '回転数モード Beta',
       'f1.tag3': 'スマートモード Beta',
@@ -4969,6 +5040,11 @@
       'f3b.tag1': '@2.4V / @3.0V',
       'f3b.tag2': '素性 vs 標準',
       'f3b.tag3': '数学モデル',
+      'f3c.title': 'AI スマート慣らし',
+      'f3c.desc': 'ワンタップ全自動慣らし:漸進回転数で自分で回して自分で測り、定常状態で自動停止;内蔵の慣らしガイドがセッション横断で判読 —— まだ進歩中・スイートスポット到達・行き過ぎ —— 「何セッション?」に答えます。タミヤ全 15 機種対応。',
+      'f3c.tag1': '自動停止',
+      'f3c.tag2': '慣らしガイド',
+      'f3c.tag3': 'タミヤ 15 機種',
       'f4.title': 'ベアリング抵抗テスト',
       'f4.desc': 'テスト電圧(2.4V / 3V)を選び、安定回転数まで加速してから電源を切って惰性走行させ、「完全停止までの時間」を測定。長いほどベアリングが滑らか。時間は相対比較用に表示するのみで評定は行いません。',
       'f4.tag1': '惰性走行',
@@ -5026,7 +5102,7 @@
       'versions.title': 'M1 と PRO',
       'versions.subtitle': '同一の本体、2 つのライセンスレベル。いつでもオンラインでアップグレード可能。',
       'vt.feature': '機能',
-      'vt.r1': '慣らし 3 モード（電圧／回転数 Beta／スマート Beta）',
+      'vt.r1': '慣らし 2 つの手動モード(電圧/回転数 Beta)',
       'vt.r13': 'モーター特性測定（3 パス平均）',
       'vt.r14': 'グローバル慣らしデータベース',
       'vt.r15': 'タミヤモーター規格早見',
@@ -5039,6 +5115,7 @@
       'vt.r12': '三層安全保護機構',
       'vt.r8': 'AI スマートモーター健康管理（最大 20 個）',
       'vt.r8b': 'AI スマートトルク予測(@2.4V / @3.0V、素性 vs タミヤ標準)',
+      'vt.r8c': 'AI スマート慣らし(ワンタップ自動+慣らしガイド)',
       'vt.r9': 'FFT 振動スペクトル解析',
       'vt.r10': '5 大指標レーダーチャート診断',
       'vt.r11': '健康トレンド曲線追跡',
@@ -5077,6 +5154,10 @@
       't15.desc': 'ハードは供給側しか測れないため、駆動段の電圧降下と供給の垂れをリアルタイム補償してモーター端子の実効電圧を算出 ——「3V 設定」でモーターが本当に 3V を受け、供給電圧とモーター電圧を並べて表示。',
       't16.title': '損失トルクの分解',
       't16.desc': '「摩擦」を 1 つの数値で済ませず、最小二乗で損失トルクを複数の物理成分に分解し、R² のしきい値で信頼できない測定を自動的に除外します。',
+      't17.title': '慣らしガイド(セッション横断判読)',
+      't17.desc': 'セッションごとに自動記録し横断比較 —— 「まだ進歩中 / スイートスポット・停止推奨 / 行き過ぎ」を直接提示。慣らしすぎはブラシと磁石の寿命の消耗;止めるべきセッションをガイドが捕まえます。',
+      't18.title': 'トルク・体質の実測推算',
+      't18.desc': '実測データをタミヤ公式標準と対照してトルクと体質を推算 —— 同機種でも個体ごとに結果が違う=それこそが個体の真の体質。',
       'specs.tag': 'SPECIFICATIONS',
       'specs.title': '技術仕様',
       'specs.subtitle': 'ハードウェアとソフトウェアの完全な仕様、および各機能の数値入力範囲。',
@@ -5126,8 +5207,8 @@
       'specs.d.fwd': '正転',
       'specs.range.g1r': '慣らしプログラム · 回転数モード Beta（1~6 回 × 10 段階）',
       'specs.range.g1rnote': '電圧が安定すると次段階へ、運転時間は上限。時間いっぱい運転しても目標回転数に到達できない場合は自動で次段階へ進み「未達」と表示。目標回転数 0 = そのステージをスキップ。',
-      'specs.range.g1s': '慣らしプログラム · スマートモード Beta',
-      'specs.range.g1snote': 'ワンタップ自動慣らし。定常状態を検出すると自動停止し、慣らし指標カーブを描画します。',
+      'specs.range.g1s': 'AI スマート慣らし(PRO)',
+      'specs.range.g1snote': 'ワンタップ自動慣らし。定常状態を検出すると自動停止し、慣らし指標カーブを描画;慣らしガイドがセッション横断で「何セッション?」を判読します。',
       'specs.range.g2note': '判停基準は慣らしページと独立して設定します。',
       'specs.p.stopmode': '判停基準',
       'specs.p.targetrpm': '目標回転数',
@@ -5140,6 +5221,11 @@
       'specs.v.sameas': '電圧モードと同じ',
       'specs.v.timecap': '完了まで / 2h / 3h / 4h',
       'specs.v.brushed': 'カーボンブラシ系',
+      'specs.v.all15': 'タミヤ全 15 機種',
+      'specs.p.coach': '慣らしガイド',
+      'specs.v.coach': 'セッション横断の自動判定(進歩中 / スイートスポット / 行き過ぎ);開始時に「同じモーター / 新しいモーター」を選択',
+      'specs.p.stopb': '停止動作',
+      'specs.v.stopb': '停止で即時停止、完了済みラウンドのデータは保持',
       'specs.d.smartstop': 'スマート安定電流',
       'specs.d.std': '標準',
       'g.tag': 'KNOWLEDGE BASE',
@@ -5152,6 +5238,7 @@
       'cl.FIX': '修正',
       'cl.IMPROVE': '改善',
       'cl.SECURITY': 'セキュリティ',
+      'cl.v351.title': 'AI トルク予測 · AI スマート慣らし搭載',
       'cl.v350.title': '慣らし 3 モード · 自動慣らし搭載',
       'cl.v346.title': '正規品認証 · アップデート体験の最適化',
       'cl.v340.title': '慣らしマルチパス · KV 値表示',
@@ -5212,11 +5299,11 @@
       'g1.h4': '標準慣らしフロー(10 段階推奨)',
       'g1.p7': '業界主流の「段階昇圧」慣らし手法では、モーター慣らしを 10 段階に分け、低電圧から高電圧へ、逆回転と冷却時間を挟みます。',
       'g1.tip': 'MotorLab M1/PRO 内蔵の<strong>10 段階プログラム慣らし</strong>は本フローを自動実行し、各段階で電圧・方向・時間・冷却・安定電流公差を個別に調整できます。さらに<strong>スマート安定電流判定</strong>—電流の連続変動が設定値以下になると自動で次段階へ進み、すべてのモーターを確実に仕上げます。',
-      'g1.h6': '機械で慣らす:v3.5.0 の 3 モード',
-      'g1.m1': '上の 10 段階は<strong>電圧モード</strong>の手動レシピです。MotorLab v3.5.0 は自動化された 2 モードも用意——どれだけ手をかけるかで選べます:',
+      'g1.h6': '機械で慣らす:手動 2 モード + AI スマート慣らし',
+      'g1.m1': '上の 10 段階は<strong>電圧モード</strong>の手動レシピです。MotorLab は手動 2 モードとワンタップ全自動の AI スマート慣らしを用意——どれだけ手をかけるかで選べます:',
       'g1.m2': '<strong>電圧モード</strong> —— 各段階を固定電圧で運転(上記の 10 段階フロー)。自分のレシピがあり、完全に制御したい人向け。',
       'g1.m3': '<strong>回転数モード(Beta)</strong> —— 機器が電圧を自動調整し、モーターを設定回転数に固定して慣らします。回転数を固定=ブラシの滑り速度を固定で、機種をまたいで同一基準・再現可能;「電圧ではなく回転数を固定する」理由は <a href="../motor-break-in-speed-vs-voltage/">なぜ慣らしは回転数を固定し電圧を固定しないのか →</a> を参照。',
-      'g1.m4': '<strong>スマートモード(Beta)</strong> —— ワンタップ自動慣らし:機器が自分で慣らし・測定し、<strong>定常状態(モーターが改善しなくなった)を検出すると自動停止</strong>。何パス・何分やるか勘で悩む必要はありません(カーボンブラシ Dash 系対応)。なぜ自動で止まれるのか?<a href="../../benchmarks/when-to-stop-motor-break-in/">12 時間慣らしすぎ実験 →</a>。',
+      'g1.m4': '<strong>AI スマート慣らし(Pro)</strong> —— ワンタップ全自動:機器が自分で回して自分で測り、<strong>定常状態で自動停止</strong>。内蔵の慣らしガイドが「何セッション?」に答えます(タミヤ全 15 機種対応)。なぜ自動で止まれるのか?<a href="../../benchmarks/when-to-stop-motor-break-in/">12 時間慣らしすぎ実験 →</a>。',
       'g1.m5': '<strong>「導電慣らしオイル」で数値を稼がないこと。</strong>入れた瞬間の回転数上昇は、カーボン粉が一時的に導通する<strong>錯覚</strong>で真の慣らしではなく、洗い流すと元に戻ります。詳しい分解は <a href="../conductive-oil-motor-break-in/">導電オイルは本当にモーターを慣らせるのか →</a>。',
       'g1.related': '関連記事:モーター選びは <a href="../../benchmarks/tamiya-mini-4wd-motor-specs-list/">タミヤ全 15 種モーター規格対照表 →</a>;引退時期の見極めは <a href="../motor-degradation-signs/">モーター劣化のサイン →</a> を参照。',
       'g1.h5': '慣らし完了の判定基準',
@@ -5958,7 +6045,7 @@
       'g17.h5': '次は:15 機種、同じ条件で',
       'g17.p7': 'この 12 時間の実験でシリーズのテスト枠組みが決まりました:同一機器、同一の慣らし・測定フロー、同じ 3 つの観測軸——<strong>同回転数電流(消費)、同電圧回転数、体質スコア</strong>。ここから同一条件でタミヤ 15 機種を 1 つずつ:各機種のゴールデン期はどこか、停止点はどれだけ早く来るか、慣らしすぎの代償はどれほどか——1 機種ずつ公開し、すべて<a href="../">ベンチマーク</a>に収録します。',
       'g17.note': '<strong>実験条件:</strong><br>1. Mach-Dash PRO<br>2. 連続低回転慣らし 12 時間<br>3. 全データは同一機器での実測<br>4. 物理根拠:直流モーターの電圧方程式 <code>V = I·R + Ke·ω</code><br>5. 体質スコアはタミヤ公式規格の参考値、判読はトレンド重視',
-      'g17.related': '関連:慣らしの全体フローと 3 モード —— <a href="../../guides/motor-break-in-guide/">モーター慣らし完全ガイド</a>;なぜ回転数を固定するのか —— <a href="../../guides/motor-break-in-speed-vs-voltage/">回転数固定、電圧固定にしない理由</a>;モーターが遅くなる 5 つの原因(減磁含む)—— <a href="../../guides/motor-slow-causes-fixes/">モーターが遅くなった原因と対処</a>。',
+      'g17.related': '関連:慣らしの全体フローとモード選択 —— <a href="../../guides/motor-break-in-guide/">モーター慣らし完全ガイド</a>;なぜ回転数を固定するのか —— <a href="../../guides/motor-break-in-speed-vs-voltage/">回転数固定、電圧固定にしない理由</a>;モーターが遅くなる 5 つの原因(減磁含む)—— <a href="../../guides/motor-slow-causes-fixes/">モーターが遅くなった原因と対処</a>。',
       'g15.figsum': '<img class="chart" src="/images/conductive-oil-verdict_j.png" alt="導電オイルは本当に効くか:回転上昇は完了でない、皮膜切れで戻る、オイルが読みを汚すの3点" loading="lazy">',
     }
   };

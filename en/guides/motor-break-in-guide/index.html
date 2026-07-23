@@ -1999,12 +1999,12 @@
 <div class="guide-tip">
 <p data-i18n="g1.tip">MotorLab M1/PRO's built-in <strong>10-stage programmable break-in</strong> automatically executes this protocol. Each stage independently sets voltage, direction, time, cooling, and current stability tolerance. The <strong>smart stable-current latch</strong> auto-advances when current variation falls below threshold, ensuring every motor reaches optimal break-in.</p>
 </div>
-<h2 data-i18n="g1.h6">Breaking in with the machine: three v3.5.0 modes</h2>
-<p data-i18n="g1.m1">The 10 stages above are a manual <strong>voltage-mode</strong> recipe. MotorLab v3.5.0 adds two automated modes — pick one by how hands-on you want to be:</p>
+<h2 data-i18n="g1.h6">Breaking in with the machine: two manual modes + AI Smart Break-In</h2>
+<p data-i18n="g1.m1">The 10 stages above are a manual <strong>voltage-mode</strong> recipe. MotorLab offers two manual modes plus one-tap AI Smart Break-In — pick by how hands-on you want to be:</p>
 <ul>
 <li data-i18n="g1.m2"><strong>Voltage mode</strong> — fixed voltage per stage (the 10-stage flow above), for players who have their own recipe and want full control.</li>
 <li data-i18n="g1.m3"><strong>Speed mode (Beta)</strong> — the machine adjusts voltage automatically to hold the motor at a target RPM. Locking RPM locks the brush sliding speed, giving a repeatable baseline across motors; for why "lock RPM, not voltage" suits break-in and measurement, see <a href="../motor-break-in-speed-vs-voltage/">Why break in at a locked RPM, not a fixed voltage →</a>.</li>
-<li data-i18n="g1.m4"><strong>Smart mode (Beta)</strong> — one-tap automatic break-in: the machine breaks in and measures on its own and <strong>auto-stops once it detects a steady state (the motor stops improving)</strong>, so you never guess how many passes or how long (for brushed Dash-series motors). How can it dare to stop itself? See <a href="../../benchmarks/when-to-stop-motor-break-in/">the 12-hour over-break-in experiment →</a>.</li>
+<li data-i18n="g1.m4"><strong>AI Smart Break-In (Pro)</strong> — one-tap fully automatic: the machine grinds and measures itself and <strong>auto-stops at steady state</strong>, with the built-in Break-in Guide answering how many sessions (supports all 15 Tamiya motors). How can it dare to stop itself? See <a href="../../benchmarks/when-to-stop-motor-break-in/">the 12-hour over-break-in experiment →</a>.</li>
 </ul>
 <div class="guide-tip">
 <p data-i18n="g1.m5"><strong>Don't chase numbers with "conductive break-in oil."</strong> The instant RPM jump is an <strong>illusion</strong> from carbon powder briefly conducting — not real break-in, and it reverts once washed off. Full breakdown: <a href="../conductive-oil-motor-break-in/">Does conductive oil really break in a motor? →</a></p>
