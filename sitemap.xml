@@ -1123,11 +1123,11 @@
     </image:image>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/motor-break-in-rpm-illusion_j.png</image:loc>
-      <image:title>過慣らしの回転数の錯覚(+4.9%)</image:title>
+      <image:title>慣らしすぎの回転数の錯覚(+4.9%)</image:title>
     </image:image>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/motor-over-break-in-damage_j.png</image:loc>
-      <image:title>過慣らしは不可逆:体質スコア 79→84→73</image:title>
+      <image:title>慣らしすぎは不可逆:体質スコア 79→84→73</image:title>
     </image:image>
   </url>
 </urlset>
