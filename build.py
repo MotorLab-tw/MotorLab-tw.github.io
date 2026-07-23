@@ -234,7 +234,7 @@ GUIDES = [
         "slug": "motor-break-in-guide",
         "key": "g1",
         "published": "2026-05-22",
-        "updated": "2026-07-19",
+        "updated": "2026-07-23",
         "i18n": {
             "zh": {
                 "title": "四驅車馬達磨合完全指南:從原理到實作 | MotorLab",
@@ -709,6 +709,37 @@ GUIDES = [
             },
         },
     },
+    # ---------- g17:智慧磨合宣傳頁(磨合何時該停,12 小時過磨實驗)----------
+    {
+        "slug": "when-to-stop-motor-break-in",
+        "key": "g17",
+        "published": "2026-07-23",
+        "updated": "2026-07-23",
+        "type": "guides",
+        "i18n": {
+            "zh": {
+                "title": "馬達磨合要磨多久?12 小時實測告訴你何時該停 | MotorLab",
+                "description": "馬達磨合要磨多久?我們把一顆 Mach-Dash PRO 連續磨 12 小時、超過 550 萬轉:收益一小時就領完,繼續磨轉速反而越磨越快——那是磁力流失的假象,體質不可逆下滑。智慧磨合偵測穩態自動停,替你停在剛剛好。",
+                "keywords": "馬達磨合 何時停, 磨合 磨多久, 過度磨合, 馬達 過磨, 智慧磨合, 迷你四驅車 馬達磨合, MotorLab",
+                "breadcrumb": "磨合何時該停",
+                "h1_for_ld": "智慧磨合:磨到剛剛好,然後停",
+            },
+            "en": {
+                "title": "How Long Should You Break In a Mini 4WD Motor? A 12-Hour Test | MotorLab",
+                "description": "How long should motor break-in run? We ground one Mach-Dash PRO for 12 straight hours — over 5.5 million revolutions. The gains were banked within an hour; grinding on made RPM climb, an illusion of fading magnets while the motor irreversibly declined. Smart break-in detects steady state and stops at just right.",
+                "keywords": "when to stop motor break-in, how long to break in mini 4wd motor, over break-in motor, motor break-in time, smart break-in, MotorLab",
+                "breadcrumb": "When to Stop Break-In",
+                "h1_for_ld": "Smart Break-In: Grind to Just Right, Then Stop",
+            },
+            "ja": {
+                "title": "ミニ四駆モーターの慣らしはどれくらい?12 時間実測の答え | MotorLab",
+                "description": "モーターの慣らしはどれくらいやればいい?Mach-Dash PRO 1 個を連続 12 時間・550 万回転以上磨き続けた実測:利得は最初の 1 時間で出切り、その後は回転数だけが上がる——それは磁力流失の錯覚で、体質は不可逆に低下。スマート慣らしは定常状態を検出し、ちょうどいいところで自動停止します。",
+                "keywords": "ミニ四駆 慣らし 時間, モーター 慣らし どのくらい, 慣らし やりすぎ, 過慣らし, スマート慣らし, MotorLab",
+                "breadcrumb": "慣らしの止めどき",
+                "h1_for_ld": "スマート慣らし:ちょうどいいところで、止まる",
+            },
+        },
+    },
 ]
 
 # UI 字串(教學頁面通用元件:nav / 麵包屑 / 分頁)
@@ -849,7 +880,7 @@ HUBS = [
     },
     {
         "slug": "methodology",
-        "include": ["g5", "g6", "g7", "g8", "g10", "g11", "g12", "g13", "g14", "g15"],
+        "include": ["g5", "g6", "g7", "g8", "g10", "g11", "g12", "g13", "g14", "g15", "g17"],
         "i18n": {
             "zh": {
                 "title": "方法論 — Mini 4WD® 馬達分析與比賽策略 | MotorLab",

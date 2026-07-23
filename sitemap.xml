@@ -145,7 +145,7 @@
   <!-- /guides/ articles -->
   <url>
     <loc>https://motorlab-tw.github.io/guides/motor-break-in-guide/</loc>
-    <lastmod>2026-07-19</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-break-in-guide/"/>
@@ -159,7 +159,7 @@
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/en/guides/motor-break-in-guide/</loc>
-    <lastmod>2026-07-19</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-break-in-guide/"/>
@@ -173,7 +173,7 @@
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/ja/guides/motor-break-in-guide/</loc>
-    <lastmod>2026-07-19</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-break-in-guide/"/>
@@ -1062,6 +1062,72 @@
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/motor-slow-causes-fix_j.png</image:loc>
       <image:title>遅いモーターの 5 つの原因と対処</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://motorlab-tw.github.io/guides/when-to-stop-motor-break-in/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/when-to-stop-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/when-to-stop-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/when-to-stop-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/when-to-stop-motor-break-in/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motor-break-in-current-plateau_c.png</image:loc>
+      <image:title>馬達磨合要磨多久:12 小時同轉速電流實測</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motor-break-in-rpm-illusion_c.png</image:loc>
+      <image:title>磨合過度的轉速假象(+4.9%)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motor-over-break-in-damage_c.png</image:loc>
+      <image:title>過度磨合不可逆:體質分數 79→84→73</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://motorlab-tw.github.io/en/guides/when-to-stop-motor-break-in/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/when-to-stop-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/when-to-stop-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/when-to-stop-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/when-to-stop-motor-break-in/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motor-break-in-current-plateau_e.png</image:loc>
+      <image:title>How long to break in a motor: 12-hour same-RPM current test</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motor-break-in-rpm-illusion_e.png</image:loc>
+      <image:title>The over-break-in RPM illusion (+4.9%)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motor-over-break-in-damage_e.png</image:loc>
+      <image:title>Irreversible over-break-in: constitution 79-84-73</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://motorlab-tw.github.io/ja/guides/when-to-stop-motor-break-in/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/when-to-stop-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/when-to-stop-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/when-to-stop-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/when-to-stop-motor-break-in/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motor-break-in-current-plateau_j.png</image:loc>
+      <image:title>モーター慣らしはどれくらい:12 時間同回転数電流実測</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motor-break-in-rpm-illusion_j.png</image:loc>
+      <image:title>過慣らしの回転数の錯覚(+4.9%)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motor-over-break-in-damage_j.png</image:loc>
+      <image:title>過慣らしは不可逆:体質スコア 79→84→73</image:title>
     </image:image>
   </url>
 </urlset>

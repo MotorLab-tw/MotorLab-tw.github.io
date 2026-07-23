@@ -2799,7 +2799,7 @@
         <ul>
           <li data-i18n="g1.m2"><strong>電壓模式</strong> —— 各階段固定電壓(即上述十階段流程),適合有自己配方、想完全掌控的玩家。</li>
           <li data-i18n="g1.m3"><strong>轉速模式(Beta)</strong> —— 機器自動調電壓,把馬達鎖在你設定的轉速磨。鎖轉速 = 鎖住碳刷滑動速度,跨馬達同基準、可重現;為什麼「鎖轉速比鎖電壓更適合磨合與量測」,見 <a href="../motor-break-in-speed-vs-voltage/">為什麼磨馬達要鎖轉速、不鎖電壓 →</a>。</li>
-          <li data-i18n="g1.m4"><strong>智慧模式(Beta)</strong> —— 一鍵自動磨合:機器自己磨、自己量,<strong>偵測到穩態(馬達不再進步)就自動停</strong>,不必憑感覺猜要磨幾趟、磨多久(碳刷 Dash 系適用)。</li>
+          <li data-i18n="g1.m4"><strong>智慧模式(Beta)</strong> —— 一鍵自動磨合:機器自己磨、自己量,<strong>偵測到穩態(馬達不再進步)就自動停</strong>,不必憑感覺猜要磨幾趟、磨多久(碳刷 Dash 系適用)。憑什麼敢自動停?看 <a href="../when-to-stop-motor-break-in/">12 小時過磨實驗:磨到剛剛好,然後停 →</a>。</li>
         </ul>
         <div class="guide-tip">
           <p data-i18n="g1.m5"><strong>別用「導電磨合油」衝數字。</strong>加了導電油轉速瞬間上升,是碳粉暫時導電的<strong>假象</strong>、不是真的磨好,油一洗掉就打回原形。完整拆解見 <a href="../conductive-oil-motor-break-in/">導電油磨馬達真的有效嗎 →</a>。</p>
@@ -3755,6 +3755,40 @@
         </div>
       </article>
 
+      <article class="guide-article">
+        <span class="guide-tag" data-i18n="g17.tag">METHODOLOGY · 智慧磨合</span>
+        <h3 data-i18n="g17.title">智慧磨合:磨到剛剛好,然後停</h3>
+        <p class="guide-lead" data-i18n="g17.lead">一鍵啟動,機器自己磨、自己量、<strong>磨好自動停</strong>。憑什麼說「剛剛好」?因為我們把一顆全新 Mach-Dash PRO 連續磨了 <strong>12 小時、超過 550 萬轉</strong>,從全新一路磨到退役,只為找出該停手的那個點。這一頁沒有形容詞,只有那場實驗的真實數據:磨合的收益在哪裡結束、過磨的代價從哪裡開始——以及智慧磨合如何替你在兩者之間停住。</p>
+
+        <h4 data-i18n="g17.h1">磨合的收益,一小時就領完了</h4>
+        <p data-i18n="g17.p1">下圖縱軸是<strong>同轉速下吃掉的電流</strong>——馬達的耗電,磨合唯一真正改善的東西;橫軸是累積磨合時間,每一點都是真實量測值。第一場磨合裡,同轉速電流 <strong>175 → 156 mA,省了約一成</strong>:電刷與整流子貼合、內部的「卡」被磨掉。</p>
+        <figure data-i18n="g17.figcur"><img class="chart" src="/images/motor-break-in-current-plateau_c.png" alt="馬達磨合要磨多久:12 小時實測同轉速電流曲線,收益一小時領完,之後 11 小時耗電不再下降" loading="lazy"></figure>
+        <p data-i18n="g17.p2">能磨掉的「卡」是有限的。之後不管再磨幾場,<strong>耗電一點都沒有再變少</strong>——磨好的訊號其實很明確,問題是:人看不到它,人看到的是轉速。</p>
+
+        <h4 data-i18n="g17.h2">人看到的是轉速——而它會騙你</h4>
+        <p data-i18n="g17.p3">磨好之後如果繼續磨(我們故意這麼做了),同樣電壓下,轉速<strong>越磨越快(+4.9%)</strong>。「轉速還在漲,就是還在進步」——憑轉速判斷的玩家幾乎都會這樣想,然後繼續磨下去。</p>
+        <figure data-i18n="g17.figrpm"><img class="chart" src="/images/motor-break-in-rpm-illusion_c.png" alt="磨合過度的轉速假象:同電壓下轉速越磨越快 +4.9%,其實是磁力流失不是變強" loading="lazy"></figure>
+        <p data-i18n="g17.p4">拆穿這個假象,只需要一條教科書等級的公式:<code>V = I·R + Ke·ω</code>(電壓 = 電阻壓降 + 磁力×轉速的反電動勢)。它說:電壓固定時,<strong>磁力(Ke)和轉速(ω)是一組蹺蹺板</strong>——轉速無緣無故變快,最常見的原因不是馬達變強,是磁力那一端變輕了。</p>
+        <p data-i18n="g17.p5">磁鐵的磁力不是被「用掉」的(放著一百年也不會少),是被「敲掉」的——電刷每次換向的小火花,都是一次反向磁場的微打擊;550 萬轉累積上億次,磁力就一點一點<strong>不可逆地變弱</strong>。就在「越磨越快」的同一段時間,這顆馬達的體質分數正在同步下滑。</p>
+
+        <h4 data-i18n="g17.h3">過磨的代價由體質來付,而且不可逆</h4>
+        <p data-i18n="g17.p6">整場實驗我們用 <strong>AI 扭力預測</strong>持續追蹤這顆的體質分數:磨合期 <strong>79 → 84(峰值)</strong>,馬達被推上自己的最佳狀態;峰值之後一路下滑到 <strong>73——比全新還低</strong>。隔夜完全休息後重測:還是 73。<strong>賺 5 分、賠 11 分,回不來。</strong></p>
+        <figure data-i18n="g17.figlife"><img class="chart" src="/images/motor-over-break-in-damage_c.png" alt="過度磨合的代價:體質分數 79 升到 84 又跌到 73,隔夜重測不恢復,不可逆磨損" loading="lazy"></figure>
+
+        <h4 data-i18n="g17.h4">智慧磨合:把「停手」交給量測,不交給感覺</h4>
+        <p data-i18n="g17.m0">停手的訊號存在、可以被量到,但人只盯著轉速看不到它,還會被轉速假象引導著繼續磨。智慧磨合替你做的,就是三件事:</p>
+        <ul>
+          <li data-i18n="g17.m1"><strong>自己磨、自己量</strong> —— 一鍵啟動後全自動:系統以漸進轉速磨合並持續量測,過程中正反轉交替,讓電刷兩面對稱貼合。</li>
+          <li data-i18n="g17.m2"><strong>磨到穩態,自動停</strong> —— 持續偵測磨合指標,偵測到「不再進步」就自動停止並嗶聲提示——不多磨一場,不把你的磁力拿去換假轉速。</li>
+          <li data-i18n="g17.m3"><strong>全程看得到</strong> —— 畫面即時顯示輪次、收斂進度與指標曲線圖(每輪落點 + 移動平均),曲線走平就是接近完成;可設時間上限兜底,隨時可優雅停止。</li>
+        </ul>
+        <div class="guide-tip">
+          <p data-i18n="g17.tip">磨合是<strong>有預算的消耗行為</strong>:能磨掉的「卡」有限,磁鐵的壽命也有限。<strong>耗電不再變少的那一刻,就是停手的時刻</strong>——智慧磨合把這個判斷交給量測,替你在剛剛好的地方停下來。</p>
+        </div>
+        <p data-i18n="g17.note">實驗註記:Mach-Dash PRO 一顆,連續低轉速磨合 12 小時(智慧磨合多場 + AI 扭力預測全程追蹤),所有數據為同一台機器實測;1 個量測異常場已複測排除。物理依據:直流馬達電壓方程 V = I·R + Ke·ω。體質分數為相對官方標準的參考值,判讀以趨勢為準。智慧磨合適用碳刷系列。</p>
+        <p class="guide-related" data-i18n="g17.related">延伸閱讀:磨合的完整流程與三種模式,見 <a href="../motor-break-in-guide/">馬達磨合完全指南</a>;為什麼磨合與量測要鎖轉速,見 <a href="../motor-break-in-speed-vs-voltage/">鎖轉速不鎖電壓</a>;馬達變慢的 5 個原因(含退磁),見 <a href="../motor-slow-causes-fixes/">馬達變慢原因與對策</a>。</p>
+      </article>
+
 
 
 
@@ -4216,7 +4250,7 @@
       'g1.m1': '上面的十階段是<strong>電壓模式</strong>的手動配方。MotorLab v3.5.0 另外提供兩種自動化模式,依你想花多少心力挑一種:',
       'g1.m2': '<strong>電壓模式</strong> —— 各階段固定電壓(即上述十階段流程),適合有自己配方、想完全掌控的玩家。',
       'g1.m3': '<strong>轉速模式(Beta)</strong> —— 機器自動調電壓,把馬達鎖在你設定的轉速磨。鎖轉速 = 鎖住碳刷滑動速度,跨馬達同基準、可重現;為什麼「鎖轉速比鎖電壓更適合磨合與量測」,見 <a href="../motor-break-in-speed-vs-voltage/">為什麼磨馬達要鎖轉速、不鎖電壓 →</a>。',
-      'g1.m4': '<strong>智慧模式(Beta)</strong> —— 一鍵自動磨合:機器自己磨、自己量,<strong>偵測到穩態(馬達不再進步)就自動停</strong>,不必憑感覺猜要磨幾趟、磨多久(碳刷 Dash 系適用)。',
+      'g1.m4': '<strong>智慧模式(Beta)</strong> —— 一鍵自動磨合:機器自己磨、自己量,<strong>偵測到穩態(馬達不再進步)就自動停</strong>,不必憑感覺猜要磨幾趟、磨多久(碳刷 Dash 系適用)。憑什麼敢自動停?看 <a href="../when-to-stop-motor-break-in/">12 小時過磨實驗:磨到剛剛好,然後停 →</a>。',
       'g1.m5': '<strong>別用「導電磨合油」衝數字。</strong>加了導電油轉速瞬間上升,是碳粉暫時導電的<strong>假象</strong>、不是真的磨好,油一洗掉就打回原形。完整拆解見 <a href="../conductive-oil-motor-break-in/">導電油磨馬達真的有效嗎 →</a>。',
       'g1.related': '延伸閱讀:挑馬達先看 <a href="../../benchmarks/tamiya-mini-4wd-motor-specs-list/">田宮全 15 款馬達規格對照表 →</a>;想知道馬達何時該退役,看 <a href="../motor-degradation-signs/">馬達衰退的判定訊號 →</a>。',
       'g1.h5': '磨合完成的判定標準',
@@ -5134,7 +5168,7 @@
       'g1.m1': 'The 10 stages above are a manual <strong>voltage-mode</strong> recipe. MotorLab v3.5.0 adds two automated modes — pick one by how hands-on you want to be:',
       'g1.m2': '<strong>Voltage mode</strong> — fixed voltage per stage (the 10-stage flow above), for players who have their own recipe and want full control.',
       'g1.m3': '<strong>Speed mode (Beta)</strong> — the machine adjusts voltage automatically to hold the motor at a target RPM. Locking RPM locks the brush sliding speed, giving a repeatable baseline across motors; for why "lock RPM, not voltage" suits break-in and measurement, see <a href="../motor-break-in-speed-vs-voltage/">Why break in at a locked RPM, not a fixed voltage →</a>.',
-      'g1.m4': '<strong>Smart mode (Beta)</strong> — one-tap automatic break-in: the machine breaks in and measures on its own and <strong>auto-stops once it detects a steady state (the motor stops improving)</strong>, so you never guess how many passes or how long (for brushed Dash-series motors).',
+      'g1.m4': '<strong>Smart mode (Beta)</strong> — one-tap automatic break-in: the machine breaks in and measures on its own and <strong>auto-stops once it detects a steady state (the motor stops improving)</strong>, so you never guess how many passes or how long (for brushed Dash-series motors). How can it dare to stop itself? See <a href="../when-to-stop-motor-break-in/">the 12-hour over-break-in experiment →</a>.',
       'g1.m5': '<strong>Don\'t chase numbers with "conductive break-in oil."</strong> The instant RPM jump is an <strong>illusion</strong> from carbon powder briefly conducting — not real break-in, and it reverts once washed off. Full breakdown: <a href="../conductive-oil-motor-break-in/">Does conductive oil really break in a motor? →</a>',
       'g1.related': 'Further reading: pick a motor with the <a href="../../benchmarks/tamiya-mini-4wd-motor-specs-list/">Tamiya Mini 4WD motor chart (all 15) →</a>; to tell when a motor is worn out, see the <a href="../motor-degradation-signs/">signs of motor degradation →</a>.',
       'g1.h5': 'How to know when break-in is complete',
@@ -5840,6 +5874,29 @@
       'g16.key': 'In one line: when a motor slows, <strong>rule out battery, dirt and lube first</strong> — most cases end here. Only if all three are cleared and it is still slow is it true degradation; judge retirement by data, so you neither replace a motor too early on a hunch nor let a demagnetized one drag your results.',
       'g16.related': 'Further reading: clean-and-oil or retire? See <a href="../motor-wash-vs-break-in/">motor wash vs break-in</a>; confirm real degradation with <a href="../motor-degradation-signs/">8 signs your motor is dying and when to retire</a>; quantify it with <a href="../motor-break-in-resistance-curve/">the R break-in curve</a>.',
       'g16.w1': 'This is general troubleshooting. Real slowdowns are often several causes stacked (e.g. an aging battery plus light carbon buildup); rule them out one at a time, change only one variable per test, and compare under the same battery and temperature for a reliable read.',
+      'g17.tag': 'METHODOLOGY · Smart Break-In',
+      'g17.title': 'Smart Break-In: Grind to Just Right, Then Stop',
+      'g17.lead': 'One tap and the machine breaks in, measures, and <strong>stops itself when the motor is done</strong>. How do we dare say "just right"? Because we took a brand-new Mach-Dash PRO and ground it for <strong>12 straight hours — over 5.5 million revolutions</strong> — from new all the way to retirement, just to find the point where you should stop. This page has no adjectives, only the real data from that experiment: where the gains of break-in end, where the cost of over-break-in begins — and how smart break-in stops you between the two.',
+      'g17.h1': 'The gains are banked within the first hour',
+      'g17.p1': 'The vertical axis below is the <strong>current drawn at the same RPM</strong> — the motor power draw, the one thing break-in truly improves; the horizontal axis is cumulative break-in time, and every point is a real measurement. In the first session, same-RPM current went <strong>175 → 156 mA, about a 10% saving</strong>: the brushes bedded into the commutator and the internal "stickiness" was ground away.',
+      'g17.figcur': '<img class="chart" src="/images/motor-break-in-current-plateau_e.png" alt="How long to break in a motor: 12-hour measured current curve at the same RPM — gains are banked within an hour, no further drop over the next 11 hours" loading="lazy">',
+      'g17.p2': 'There is only so much "stickiness" to grind away. However many more sessions we ran, <strong>the power draw never dropped again</strong> — the done signal is actually very clear. The problem: people cannot see it. What people see is RPM.',
+      'g17.h2': 'What you see is RPM — and it lies to you',
+      'g17.p3': 'If you keep grinding after the motor is done (we did, on purpose), RPM at the same voltage keeps <strong>climbing (+4.9%)</strong>. "RPM is still rising, so it is still improving" — almost everyone judging by RPM thinks exactly that, and keeps grinding.',
+      'g17.figrpm': '<img class="chart" src="/images/motor-break-in-rpm-illusion_e.png" alt="The over-break-in RPM illusion: at the same voltage RPM keeps climbing +4.9% — fading magnets, not a stronger motor" loading="lazy">',
+      'g17.p4': 'One textbook formula breaks the illusion: <code>V = I·R + Ke·ω</code> (voltage = resistive drop + back-EMF, magnet strength × speed). It says: at a fixed voltage, <strong>magnet strength (Ke) and speed (ω) sit on a seesaw</strong> — when RPM rises for no reason, the most common cause is not a stronger motor, but a lighter magnet end.',
+      'g17.p5': 'Magnet strength is not "used up" (a magnet on a shelf keeps it for a century) — it is <strong>knocked off</strong>: every commutation spark is a tiny reverse-field hit; over 5.5 million revolutions that is hundreds of millions of hits, and the magnets <strong>irreversibly weaken</strong>. In the very same stretch where RPM was "improving", this motor\'s constitution score was sliding.',
+      'g17.h3': 'The price of over-break-in is paid by the motor — irreversibly',
+      'g17.p6': 'Throughout the run we tracked the constitution score with <strong>AI torque prediction</strong>: break-in pushed it from <strong>79 to a peak of 84</strong> — the motor at its personal best; past the peak it slid all the way to <strong>73, lower than brand new</strong>. Retested after a full overnight rest: still 73. <strong>Gained 5, lost 11, never coming back.</strong>',
+      'g17.figlife': '<img class="chart" src="/images/motor-over-break-in-damage_e.png" alt="The cost of over-break-in: constitution score rises 79 to 84 then falls to 73, no recovery after overnight rest — irreversible wear" loading="lazy">',
+      'g17.h4': 'Smart break-in: hand "when to stop" to measurement, not to feel',
+      'g17.m0': 'The stop signal exists and can be measured — but people staring at RPM cannot see it, and the RPM illusion keeps urging them on. Smart break-in does three things for you:',
+      'g17.m1': '<strong>It grinds and measures by itself</strong> — fully automatic after one tap: the system breaks in at progressive speeds while measuring continuously, alternating forward and reverse so both brush faces bed symmetrically.',
+      'g17.m2': '<strong>It stops at steady state, automatically</strong> — it keeps watching the break-in metric and stops with a beep the moment it detects "no more improvement" — not one session more, never trading your magnets for fake RPM.',
+      'g17.m3': '<strong>You see the whole process</strong> — live rounds, convergence progress and the metric curve (per-round points + moving average); a flattening curve means nearly done. A time cap backstops it, and you can stop gracefully anytime.',
+      'g17.tip': 'Break-in is <strong>spending from a budget</strong>: there is only so much "stickiness" to remove, and magnets have finite life. <strong>The moment power draw stops falling is the moment to stop</strong> — smart break-in hands that call to measurement and stops you at just right.',
+      'g17.note': 'Experiment notes: one Mach-Dash PRO, 12 hours of continuous low-speed break-in (multiple smart break-in sessions + AI torque prediction tracking throughout), all data measured on the same machine; one anomalous session was excluded after retest. Physics: the DC motor voltage equation V = I·R + Ke·ω. Constitution scores are reference values relative to official spec — read the trend. Smart break-in supports brushed-series motors.',
+      'g17.related': 'Further reading: the full break-in flow and all three modes in <a href="../motor-break-in-guide/">the complete break-in guide</a>; why break-in and measurement lock RPM in <a href="../motor-break-in-speed-vs-voltage/">locked RPM, not fixed voltage</a>; the 5 causes of a slow motor (incl. demagnetization) in <a href="../motor-slow-causes-fixes/">motor got slow: causes and fixes</a>.',
       'g15.figsum': '<img class="chart" src="/images/conductive-oil-verdict_e.png" alt="Does conductive oil really break in a motor: higher RPM isn\'t done, film break falls back, the oil taints the read" loading="lazy">',
 
       'cl.tag': 'CHANGELOG',
@@ -6169,7 +6226,7 @@
       'g1.m1': '上の 10 段階は<strong>電圧モード</strong>の手動レシピです。MotorLab v3.5.0 は自動化された 2 モードも用意——どれだけ手をかけるかで選べます:',
       'g1.m2': '<strong>電圧モード</strong> —— 各段階を固定電圧で運転(上記の 10 段階フロー)。自分のレシピがあり、完全に制御したい人向け。',
       'g1.m3': '<strong>回転数モード(Beta)</strong> —— 機器が電圧を自動調整し、モーターを設定回転数に固定して慣らします。回転数を固定=ブラシの滑り速度を固定で、機種をまたいで同一基準・再現可能;「電圧ではなく回転数を固定する」理由は <a href="../motor-break-in-speed-vs-voltage/">なぜ慣らしは回転数を固定し電圧を固定しないのか →</a> を参照。',
-      'g1.m4': '<strong>スマートモード(Beta)</strong> —— ワンタップ自動慣らし:機器が自分で慣らし・測定し、<strong>定常状態(モーターが改善しなくなった)を検出すると自動停止</strong>。何パス・何分やるか勘で悩む必要はありません(カーボンブラシ Dash 系対応)。',
+      'g1.m4': '<strong>スマートモード(Beta)</strong> —— ワンタップ自動慣らし:機器が自分で慣らし・測定し、<strong>定常状態(モーターが改善しなくなった)を検出すると自動停止</strong>。何パス・何分やるか勘で悩む必要はありません(カーボンブラシ Dash 系対応)。なぜ自動で止まれるのか?<a href="../when-to-stop-motor-break-in/">12 時間過慣らし実験 →</a>。',
       'g1.m5': '<strong>「導電慣らしオイル」で数値を稼がないこと。</strong>入れた瞬間の回転数上昇は、カーボン粉が一時的に導通する<strong>錯覚</strong>で真の慣らしではなく、洗い流すと元に戻ります。詳しい分解は <a href="../conductive-oil-motor-break-in/">導電オイルは本当にモーターを慣らせるのか →</a>。',
       'g1.related': '関連記事:モーター選びは <a href="../../benchmarks/tamiya-mini-4wd-motor-specs-list/">タミヤ全 15 種モーター規格対照表 →</a>;引退時期の見極めは <a href="../motor-degradation-signs/">モーター劣化のサイン →</a> を参照。',
       'g1.h5': '慣らし完了の判定基準',
@@ -6887,6 +6944,29 @@
       'g16.key': '一言:モーターが遅くなったら、<strong>まず電池・汚れ・潤滑</strong>の 3 つを排除 —— 多くはここで解決。3 つとも排除しても遅いなら本当の劣化。データで引退を判断し、勘で早く替えず、減磁したモーターで成績を落とさない。',
       'g16.related': '関連:清掃・注油か引退か —— <a href="../motor-wash-vs-break-in/">モーター洗浄 vs 慣らし</a>;本当に劣化かを確認 —— <a href="../motor-degradation-signs/">劣化の 8 サインと引退判定</a>;数値化するなら —— <a href="../motor-break-in-resistance-curve/">R 慣らしカーブ</a>。',
       'g16.w1': '本記事は一般的なトラブル対処です。実際の低下は複数要因が重なることも多い(例:電池劣化 + 軽い堆積)。1 つずつ切り分け、1 回に 1 変数だけ変え、同じ電池・温度で比較すると判断が正確です。',
+      'g17.tag': 'METHODOLOGY · スマート慣らし',
+      'g17.title': 'スマート慣らし:ちょうどいいところで、止まる',
+      'g17.lead': 'ワンタップで、機械が自分で慣らし、自分で測り、<strong>仕上がったら自動停止</strong>。なぜ「ちょうどいい」と言い切れるのか?新品の Mach-Dash PRO 1 個を<strong>連続 12 時間・550 万回転以上</strong>、新品から引退までわざと磨き続けて、止めるべき点を探したからです。このページに形容詞はありません。あの実験の実データだけ:慣らしの利得はどこで終わり、過慣らしの代償はどこから始まるのか——そしてスマート慣らしがその間でどう止めるのか。',
+      'g17.h1': '慣らしの利得は、最初の 1 時間で出切る',
+      'g17.p1': '下図の縦軸は<strong>同回転数で消費する電流</strong>——モーターの消費電力で、慣らしが本当に改善する唯一のもの。横軸は累積慣らし時間、全点が実測値です。最初のセッションで同回転数電流は <strong>175 → 156 mA、約 1 割の節約</strong>:ブラシと整流子が馴染み、内部の「引っかかり」が磨き取られました。',
+      'g17.figcur': '<img class="chart" src="/images/motor-break-in-current-plateau_j.png" alt="モーターの慣らしはどれくらい:12 時間実測の同回転数電流カーブ、利得は 1 時間で出切り、その後 11 時間は消費が下がらない" loading="lazy">',
+      'g17.p2': '磨き取れる「引っかかり」には限りがあります。その後どれだけセッションを重ねても、<strong>消費電力は一切下がりませんでした</strong>——仕上がりの信号は実は明確です。問題は、人には見えないこと。人が見ているのは回転数です。',
+      'g17.h2': '人が見ているのは回転数——そしてそれは騙す',
+      'g17.p3': '仕上がった後も磨き続けると(わざとやりました)、同じ電圧で回転数は<strong>上がり続けます(+4.9%)</strong>。「回転数がまだ伸びている=まだ良くなっている」——回転数で判断するプレイヤーはほぼ全員そう考え、磨き続けてしまいます。',
+      'g17.figrpm': '<img class="chart" src="/images/motor-break-in-rpm-illusion_j.png" alt="過慣らしの回転数の錯覚:同電圧で回転数が +4.9% 上がり続ける——強くなったのではなく磁力流失" loading="lazy">',
+      'g17.p4': 'この錯覚は教科書の 1 式で見破れます:<code>V = I·R + Ke·ω</code>(電圧 = 抵抗降下 + 磁力×回転数の逆起電力)。つまり電圧が一定なら、<strong>磁力(Ke)と回転数(ω)はシーソー</strong>——理由なく回転数が上がるとき、最も多い原因はモーターが強くなったのではなく、磁力側が軽くなったことです。',
+      'g17.p5': '磁石の磁力は「使って減る」ものではありません(放置なら百年もちます)。<strong>「叩かれて減る」</strong>のです——ブラシが整流するたびの小さな火花は逆磁場の微打撃;550 万回転で累計は億単位、磁力は少しずつ<strong>不可逆に弱まります</strong>。「磨くほど速くなっていた」まさにその時間帯、この個体の体質スコアは同時に下がり続けていました。',
+      'g17.h3': '過慣らしの代償は体質が払う——しかも不可逆',
+      'g17.p6': '実験全程を <strong>AI トルク予測</strong>で追跡:慣らし期に体質は <strong>79 → 84(ピーク)</strong>、モーターは自己ベストへ;ピーク後は一路 <strong>73 まで低下——新品より低い</strong>。一晩完全に休ませて再測定:やはり 73。<strong>5 点稼いで 11 点失い、戻りません。</strong>',
+      'g17.figlife': '<img class="chart" src="/images/motor-over-break-in-damage_j.png" alt="過慣らしの代償:体質スコアが 79 から 84 に上がり 73 まで低下、一晩休ませても回復しない不可逆の摩耗" loading="lazy">',
+      'g17.h4': 'スマート慣らし:「止めどき」を感覚ではなく測定に任せる',
+      'g17.m0': '止めどきの信号は存在し、測定できます。しかし回転数だけを見ている人には見えず、回転数の錯覚がさらに磨かせようとします。スマート慣らしが代わりにやるのは、この 3 つ:',
+      'g17.m1': '<strong>自分で磨き、自分で測る</strong> —— ワンタップ後は全自動:漸進的な回転数で慣らしながら連続測定し、正転・逆転を交互に行ってブラシ両面を対称に馴染ませます。',
+      'g17.m2': '<strong>定常状態で自動停止</strong> —— 慣らし指標を監視し続け、「もう改善しない」を検出した瞬間にビープと共に自動停止——1 セッションも余計に磨かず、磁力を偽の回転数と交換しません。',
+      'g17.m3': '<strong>全過程が見える</strong> —— ラウンド、収束進捗、指標カーブ(各ラウンドの点 + 移動平均)をリアルタイム表示;カーブが平坦になれば完了間近。時間上限を保険として設定でき、いつでも途中停止できます。',
+      'g17.tip': '慣らしは<strong>予算のある消耗行為</strong>です:磨き取れる「引っかかり」には限りがあり、磁石の寿命にも限りがあります。<strong>消費電力が下がらなくなった瞬間が、止めるべき瞬間</strong>——スマート慣らしはその判断を測定に任せ、ちょうどいいところで止めます。',
+      'g17.note': '実験メモ:Mach-Dash PRO 1 個、連続低回転慣らし 12 時間(スマート慣らし複数セッション + AI トルク予測で全程追跡)、全データは同一機器での実測;測定異常の 1 セッションは再測の上除外。物理根拠:直流モーターの電圧方程式 V = I·R + Ke·ω。体質スコアは公式規格比の参考値で、判読はトレンド重視。スマート慣らしはカーボンブラシ系列に対応。',
+      'g17.related': '関連:慣らしの全体フローと 3 モード —— <a href="../motor-break-in-guide/">モーター慣らし完全ガイド</a>;なぜ回転数を固定するのか —— <a href="../motor-break-in-speed-vs-voltage/">回転数固定、電圧固定にしない理由</a>;モーターが遅くなる 5 つの原因(減磁含む)—— <a href="../motor-slow-causes-fixes/">モーターが遅くなった原因と対処</a>。',
       'g15.figsum': '<img class="chart" src="/images/conductive-oil-verdict_j.png" alt="導電オイルは本当に効くか:回転上昇は完了でない、皮膜切れで戻る、オイルが読みを汚すの3点" loading="lazy">',
     }
   };

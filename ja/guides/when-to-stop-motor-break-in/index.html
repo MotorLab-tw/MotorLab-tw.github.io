@@ -4,12 +4,12 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="ja" http-equiv="Content-Language"/>
-<title>Mini 4WD® モーター分析方法論 | MotorLab</title>
-<meta content="感覚からデータへ — 上級者向け方法論:なぜ慣らしがレース結果を決めるか、勝者がやる 5 つの準備技、3 支柱分析フレームワーク、衰退診断。" name="description"/>
+<title>ミニ四駆モーターの慣らしはどれくらい?12 時間実測の答え | MotorLab</title>
+<meta content="モーターの慣らしはどれくらいやればいい?Mach-Dash PRO 1 個を連続 12 時間・550 万回転以上磨き続けた実測:利得は最初の 1 時間で出切り、その後は回転数だけが上がる——それは磁力流失の錯覚で、体質は不可逆に低下。スマート慣らしは定常状態を検出し、ちょうどいいところで自動停止します。" name="description"/>
 <meta content="MotorLab.tw" name="author"/>
-<meta content="ミニ四駆 モーター 分析 方法論, モーター 調整 方法論, レース 戦略, モーター 健康指紋, RPM 分析, Mini 4WD motor analysis methodology, motor tuning methodology, racing strategy, motor health fingerprint, RPM analysis" name="keywords"/>
+<meta content="ミニ四駆 慣らし 時間, モーター 慣らし どのくらい, 慣らし やりすぎ, 過慣らし, スマート慣らし, MotorLab, when to stop motor break-in, how long to break in mini 4wd motor, over break-in motor, motor break-in time, smart break-in, MotorLab" name="keywords"/>
 <!-- 正規網址 (避免重複內容問題) -->
-<link href="https://motorlab-tw.github.io/ja/methodology/" rel="canonical"/>
+<link href="https://motorlab-tw.github.io/ja/guides/when-to-stop-motor-break-in/" rel="canonical"/>
 <!-- 搜尋引擎指示 -->
 <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
 <meta content="index, follow" name="googlebot"/>
@@ -30,10 +30,10 @@
 <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
 <meta content="MotorLab" name="apple-mobile-web-app-title"/>
 <!-- Open Graph (Facebook, LINE, Discord) -->
-<meta content="website" property="og:type"/>
-<meta content="https://motorlab-tw.github.io/ja/methodology/" property="og:url"/>
-<meta content="Mini 4WD® モーター分析方法論 | MotorLab" property="og:title"/>
-<meta content="感覚からデータへ — 上級者向け方法論:なぜ慣らしがレース結果を決めるか、勝者がやる 5 つの準備技、3 支柱分析フレームワーク、衰退診断。" property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://motorlab-tw.github.io/ja/guides/when-to-stop-motor-break-in/" property="og:url"/>
+<meta content="ミニ四駆モーターの慣らしはどれくらい?12 時間実測の答え | MotorLab" property="og:title"/>
+<meta content="モーターの慣らしはどれくらいやればいい?Mach-Dash PRO 1 個を連続 12 時間・550 万回転以上磨き続けた実測:利得は最初の 1 時間で出切り、その後は回転数だけが上がる——それは磁力流失の錯覚で、体質は不可逆に低下。スマート慣らしは定常状態を検出し、ちょうどいいところで自動停止します。" property="og:description"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" property="og:image"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" property="og:image:secure_url"/>
 <meta content="image/png" property="og:image:type"/>
@@ -45,8 +45,8 @@
 <meta content="MotorLab.tw" property="og:site_name"/>
 <!-- Twitter Card -->
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Mini 4WD® モーター分析方法論 | MotorLab" name="twitter:title"/>
-<meta content="感覚からデータへ — 上級者向け方法論:なぜ慣らしがレース結果を決めるか、勝者がやる 5 つの準備技、3 支柱分析フレームワーク、衰退診断。" name="twitter:description"/>
+<meta content="ミニ四駆モーターの慣らしはどれくらい?12 時間実測の答え | MotorLab" name="twitter:title"/>
+<meta content="モーターの慣らしはどれくらいやればいい?Mach-Dash PRO 1 個を連続 12 時間・550 万回転以上磨き続けた実測:利得は最初の 1 時間で出切り、その後は回転数だけが上がる——それは磁力流失の錯覚で、体質は不可逆に低下。スマート慣らしは定常状態を検出し、ちょうどいいところで自動停止します。" name="twitter:description"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" name="twitter:image"/>
 <meta content="MotorLab 官方網站預覽圖" name="twitter:image:alt"/>
 <!-- 結構化資料 1: Organization (公司/工作室) -->
@@ -1909,90 +1909,36 @@
   })();
 </script>
 <script async="" data-goatcounter="https://motorlab-tw.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
-<link href="https://motorlab-tw.github.io/methodology/" hreflang="zh-TW" rel="alternate"/><link href="https://motorlab-tw.github.io/en/methodology/" hreflang="en" rel="alternate"/><link href="https://motorlab-tw.github.io/ja/methodology/" hreflang="ja" rel="alternate"/><link href="https://motorlab-tw.github.io/methodology/" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
+<link href="https://motorlab-tw.github.io/guides/when-to-stop-motor-break-in/" hreflang="zh-TW" rel="alternate"/><link href="https://motorlab-tw.github.io/en/guides/when-to-stop-motor-break-in/" hreflang="en" rel="alternate"/><link href="https://motorlab-tw.github.io/ja/guides/when-to-stop-motor-break-in/" hreflang="ja" rel="alternate"/><link href="https://motorlab-tw.github.io/guides/when-to-stop-motor-break-in/" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
   "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "Mini 4WD® モーター分析方法論 | MotorLab",
-  "description": "感覚からデータへ — 上級者向け方法論:なぜ慣らしがレース結果を決めるか、勝者がやる 5 つの準備技、3 支柱分析フレームワーク、衰退診断。",
+  "@type": "Article",
+  "headline": "スマート慣らし:ちょうどいいところで、止まる",
+  "description": "モーターの慣らしはどれくらいやればいい?Mach-Dash PRO 1 個を連続 12 時間・550 万回転以上磨き続けた実測:利得は最初の 1 時間で出切り、その後は回転数だけが上がる——それは磁力流失の錯覚で、体質は不可逆に低下。スマート慣らしは定常状態を検出し、ちょうどいいところで自動停止します。",
+  "keywords": "ミニ四駆 慣らし 時間, モーター 慣らし どのくらい, 慣らし やりすぎ, 過慣らし, スマート慣らし, MotorLab",
   "inLanguage": "ja",
-  "url": "https://motorlab-tw.github.io/ja/methodology/",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "MotorLab.tw",
+  "url": "https://motorlab-tw.github.io/ja/guides/when-to-stop-motor-break-in/",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://motorlab-tw.github.io/ja/guides/when-to-stop-motor-break-in/"
+  },
+  "datePublished": "2026-07-23",
+  "dateModified": "2026-07-23",
+  "author": {
+    "@type": "Organization",
+    "name": "MotorLab Team",
     "url": "https://motorlab-tw.github.io/"
   },
-  "mainEntity": {
-    "@type": "ItemList",
-    "numberOfItems": 11,
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "url": "https://motorlab-tw.github.io/ja/guides/racing-motor-break-in/",
-        "name": "なぜモーター慣らしが Mini 4WD レースの勝敗を決めるのか:競技レベルの慣らし格差"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "url": "https://motorlab-tw.github.io/ja/guides/racing-prep-techniques/",
-        "name": "ミニ四駆 競技上級者が実は静かにやっている 5 つの準備テクニック"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "url": "https://motorlab-tw.github.io/ja/guides/motor-analysis-methodology/",
-        "name": "感覚からデータへ:モーター分析の三本柱方法論"
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "url": "https://motorlab-tw.github.io/ja/guides/motor-degradation-signs/",
-        "name": "ミニ四駆 モーターが死にかけ?寿命の 8 サインと引退判定"
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "url": "https://motorlab-tw.github.io/ja/guides/track-analysis-motor-selection/",
-        "name": "Mini 4WD コース分析とモーター選び:区間比率で高速/テクニカル/立体を判定"
-      },
-      {
-        "@type": "ListItem",
-        "position": 6,
-        "url": "https://motorlab-tw.github.io/ja/guides/crash-risk-trigger-model/",
-        "name": "ミニ四駆がコースアウトする原因?Speed / Geometry / Stability 3-Trigger モデル"
-      },
-      {
-        "@type": "ListItem",
-        "position": 7,
-        "url": "https://motorlab-tw.github.io/ja/guides/motor-selection-before-break-in/",
-        "name": "選別してから慣らす:電流でモーターの素性を読む"
-      },
-      {
-        "@type": "ListItem",
-        "position": 8,
-        "url": "https://motorlab-tw.github.io/ja/guides/motor-break-in-resistance-curve/",
-        "name": "モーター慣らしはどれくらい必要?同じモーターを連続 560 回計測した答え"
-      },
-      {
-        "@type": "ListItem",
-        "position": 9,
-        "url": "https://motorlab-tw.github.io/ja/guides/motor-break-in-speed-vs-voltage/",
-        "name": "なぜモーター慣らしは電圧ではなく回転数を固定するのか?"
-      },
-      {
-        "@type": "ListItem",
-        "position": 10,
-        "url": "https://motorlab-tw.github.io/ja/guides/conductive-oil-motor-break-in/",
-        "name": "導電オイルは本当にモーターを慣らせる?回転数上昇の物理的な正体"
-      },
-      {
-        "@type": "ListItem",
-        "position": 11,
-        "url": "https://motorlab-tw.github.io/ja/guides/when-to-stop-motor-break-in/",
-        "name": "スマート慣らし:ちょうどいいところで、止まる"
-      }
-    ]
-  }
+  "publisher": {
+    "@type": "Organization",
+    "name": "MotorLab.tw",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://motorlab-tw.github.io/favicon-192.png",
+      "width": 192,
+      "height": 192
+    }
+  },
+  "image": "https://motorlab-tw.github.io/og-image.png"
 }</script><script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -2006,29 +1952,55 @@
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "ナレッジベース",
+      "name": "ガイド",
       "item": "https://motorlab-tw.github.io/ja/#guides"
     },
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "方法論",
-      "item": "https://motorlab-tw.github.io/ja/methodology/"
+      "name": "慣らしの止めどき",
+      "item": "https://motorlab-tw.github.io/ja/guides/when-to-stop-motor-break-in/"
     }
   ]
 }</script></head>
-<body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/ja/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/ja/">← ホームへ戻る</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/ja/">ホーム</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/ja/#guides">ナレッジベース</a><span class="sep">/</span><span class="current">方法論</span></nav><div class="hub-header"><h1>方法論</h1><p class="hub-lead">上級分析方法論と競技戦略 — モーター調整を「感覚」から「データ」へ、個別テクニックから体系的フレームワークへ。</p></div><div class="guides-grid"><article class="guide-article"><span class="guide-tag" data-i18n="g5.tag">GUIDE · 競技視点</span><h3 data-i18n="g5.title">なぜモーター慣らしが Mini 4WD レースの勝敗を決めるのか:競技レベルの慣らし格差</h3><p class="guide-lead" data-i18n="g5.lead">Mini 4WD のレースは 0.1 秒で勝敗が決まる世界です。このコンマ秒の争いで、多くのレーサーが軽視しているにもかかわらず、決定的な差を生むのが「モーター慣らし」。本記事では競技視点から、なぜアマチュア手法が本番で通用しないのか、トップレーサーがどうモーターを準備しているのかを解説します。</p><a class="guide-card-link" href="/ja/guides/racing-motor-break-in/">全文を読む →</a></article><article class="guide-article"><span class="guide-tag" data-i18n="g6.tag">GUIDE · 上級準備</span><h3 data-i18n="g6.title">ミニ四駆 競技上級者が実は静かにやっている 5 つの準備テクニック</h3><p class="guide-lead" data-i18n="g6.lead">モーター慣らしのガイドもチューニングの記事も世の中にたくさんありますが、表彰台に乗る常連が実際にやっていることは、その大半が公開記事には書かれません。本記事では JCO などの主要大会で観察される 5 つの準備テクニックを整理します。理論ではなく、本番で検証可能な実務です。</p><a class="guide-card-link" href="/ja/guides/racing-prep-techniques/">全文を読む →</a></article><article class="guide-article"><span class="guide-tag" data-i18n="g7.tag">GUIDE · 方法論</span><h3 data-i18n="g7.title">感覚からデータへ:モーター分析の三本柱方法論</h3><p class="guide-lead" data-i18n="g7.lead">多くのレーサーは経験で判断します — 「走らせた感覚がいい」「音がそれっぽい」。問題は、経験は引き継げず、再現できず、検証もできないこと。本記事ではモーター分析を「感覚」からシステム工学へ変える 3 ステップの方法論を紹介します:<strong>測定、比較、健康判定</strong>。これが MotorLab の分析システム全体を支える概念フレームワークです。</p><a class="guide-card-link" href="/ja/guides/motor-analysis-methodology/">全文を読む →</a></article><article class="guide-article"><span class="guide-tag" data-i18n="g8.tag">GUIDE · 故障診断</span><h3 data-i18n="g8.title">ミニ四駆 モーターが死にかけ?寿命の 8 サインと引退判定</h3><p class="guide-lead" data-i18n="g8.lead">慣らし完了モーターも永久に最高性能を保つわけではありません。第 5 レース頃から衰退が始まりますが、多くのレーサーは「明らかに走らない」状態になってから気づきます。本記事ではモーター衰退の 8 サイン + 引退判定の閾値を整理。本番でモーターが死ぬ前に「洗う・引退・続行」の判断ができるようになります。</p><a class="guide-card-link" href="/ja/guides/motor-degradation-signs/">全文を読む →</a></article><article class="guide-article"><span class="guide-tag" data-i18n="g10.tag">GUIDE · レース戦略</span><h3 data-i18n="g10.title">Mini 4WD コース分析とモーター選び:区間比率で高速 / テクニカル / 立体を判定</h3><p class="guide-lead" data-i18n="g10.lead">同じモーターでもコースが違えば結果は段違い —— 高速コースの王者モーターを立体コースに持ち込むと完走すら難しいことも。本記事は定量化できる「コース区間比率法」を提案:あらゆる Mini 4WD<sup>®</sup> コースをストレート・カーブ・特殊の 3 区間に分解し、比率で高速・テクニカル・立体を判定して、最適なモーター・ギア比・タイヤ径を対応づけます。</p><a class="guide-card-link" href="/ja/guides/track-analysis-motor-selection/">全文を読む →</a></article><article class="guide-article"><span class="guide-tag" data-i18n="g11.tag">GUIDE · レース戦略</span><h3 data-i18n="g11.title">ミニ四駆がコースアウトする原因?Speed / Geometry / Stability 3-Trigger モデル</h3><p class="guide-lead" data-i18n="g11.lead">レースでのコースアウトは「運が悪い」と片づけられがちですが、実は予測可能です —— スピード・コース形状・車体安定性の 3 つのトリガーが重なり、臨界条件を超えた結果です。本記事はコースアウトを Speed / Geometry / Stability の 3 トリガーに分解し、レース現場で素早くリスクを数える方法と、リスクレベル別のセッティング対策を解説します。</p><a class="guide-card-link" href="/ja/guides/crash-risk-trigger-model/">全文を読む →</a></article><article class="guide-article"><span class="guide-tag" data-i18n="g12.tag">METHODOLOGY · モーター選別</span><h3 data-i18n="g12.title">選別してから慣らす：電流でモーターの素性を読む</h3><p class="guide-lead" data-i18n="g12.lead">同じロット、同じ型番でも、モーターの素性は生まれつき違う。慣らしで改善できるのはブラシと整流子の接触面だけ —— 鉄芯、磁路、ローターバランスなどの先天的な差は、どれだけ慣らしても良くならない。正しいやり方は「先に測る、後で慣らす」：データに育てる価値のある個体を先に選ばせ、時間とブラシ寿命をそこに投資する。</p><a class="guide-card-link" href="/ja/guides/motor-selection-before-break-in/">全文を読む →</a></article><article class="guide-article"><span class="guide-tag" data-i18n="g13.tag">METHODOLOGY · 慣らし実測</span><h3 data-i18n="g13.title">モーター慣らしはどれくらい必要?連続 560 回計測が答える</h3><p class="guide-lead" data-i18n="g13.lead">同じ Mach-Dash PRO を、回転数ロック・低電圧・無負荷の条件で連続 560 回計測し、内部抵抗(ブラシと整流子の接触状態を反映)の累積回数に対する変化を 1 本の曲線に描いた。この線はモーターの全行程 —— 新品から慣らし完了、そして劣化まで —— を記録する。読めば、手元のモーターが今どの段階か(まだ慣らしが必要・最良状態・ピーク過ぎ)を判断できる。</p><a class="guide-card-link" href="/ja/guides/motor-break-in-resistance-curve/">全文を読む →</a></article><article class="guide-article"><span class="guide-tag" data-i18n="g14.tag">METHODOLOGY · 慣らし制御</span><h3 data-i18n="g14.title">なぜモーター慣らしは電圧ではなく回転数を固定するのか?</h3><p class="guide-lead" data-i18n="g14.lead">ほぼすべての慣らし方法は「電圧を設定して回す」—— 定電圧慣らしだ。回転数は?せいぜい「測る」だけで「制御」はしない。だが物理的には、慣らしの品質を決めるのは<strong>回転数</strong>(接触面の摺動速度)であって、電圧ではない。本記事は定電圧 vs 定回転数、その違いを分解する。</p><a class="guide-card-link" href="/ja/guides/motor-break-in-speed-vs-voltage/">全文を読む →</a></article><article class="guide-article"><span class="guide-tag" data-i18n="g15.tag">METHODOLOGY · 慣らしの誤解</span><h3 data-i18n="g15.title">導電オイルは慣らしに効く?回転数上昇の正体</h3><p class="guide-lead" data-i18n="g15.lead">導電オイル(導電性慣らしオイル)はここ数年よく話題になる慣らしオイル — 挿すと回転数が一気に上がり、音も滑らかになり、慣らしが一気に進んだように見える。でも「回転数が上がる」は本当に「慣らせた」なのか?本記事はこのオイルを物理で分解する:実の部分はどこで、見かけの部分はどこか、そしてなぜオイルが入った状態で測った回転数を、モーターの本当の素性と見なせないのか。</p><a class="guide-card-link" href="/ja/guides/conductive-oil-motor-break-in/">全文を読む →</a></article><article class="guide-article"><span class="guide-tag" data-i18n="g17.tag">METHODOLOGY · スマート慣らし</span><h3 data-i18n="g17.title">スマート慣らし:ちょうどいいところで、止まる</h3><p class="guide-lead" data-i18n="g17.lead">ワンタップで、機械が自分で慣らし、自分で測り、<strong>仕上がったら自動停止</strong>。なぜ「ちょうどいい」と言い切れるのか?新品の Mach-Dash PRO 1 個を<strong>連続 12 時間・550 万回転以上</strong>、新品から引退までわざと磨き続けて、止めるべき点を探したからです。このページに形容詞はありません。あの実験の実データだけ:慣らしの利得はどこで終わり、過慣らしの代償はどこから始まるのか——そしてスマート慣らしがその間でどう止めるのか。</p><a class="guide-card-link" href="/ja/guides/when-to-stop-motor-break-in/">全文を読む →</a></article></div></div></main><footer>
+<body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/ja/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/ja/">← ホームへ戻る</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/ja/">ホーム</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/ja/#guides">ガイド</a><span class="sep">/</span><span class="current">慣らしの止めどき</span></nav><article class="guide-article">
+<span class="guide-tag" data-i18n="g17.tag">METHODOLOGY · スマート慣らし</span>
+<h1 data-i18n="g17.title">スマート慣らし:ちょうどいいところで、止まる</h1><p class="guide-byline">編集者:MotorLab Team</p><p class="guide-dates">公開 2026-07-23</p>
+<p class="guide-lead" data-i18n="g17.lead">ワンタップで、機械が自分で慣らし、自分で測り、<strong>仕上がったら自動停止</strong>。なぜ「ちょうどいい」と言い切れるのか?新品の Mach-Dash PRO 1 個を<strong>連続 12 時間・550 万回転以上</strong>、新品から引退までわざと磨き続けて、止めるべき点を探したからです。このページに形容詞はありません。あの実験の実データだけ:慣らしの利得はどこで終わり、過慣らしの代償はどこから始まるのか——そしてスマート慣らしがその間でどう止めるのか。</p>
+<h2 data-i18n="g17.h1">慣らしの利得は、最初の 1 時間で出切る</h2>
+<p data-i18n="g17.p1">下図の縦軸は<strong>同回転数で消費する電流</strong>——モーターの消費電力で、慣らしが本当に改善する唯一のもの。横軸は累積慣らし時間、全点が実測値です。最初のセッションで同回転数電流は <strong>175 → 156 mA、約 1 割の節約</strong>:ブラシと整流子が馴染み、内部の「引っかかり」が磨き取られました。</p>
+<figure data-i18n="g17.figcur"><img alt="モーターの慣らしはどれくらい:12 時間実測の同回転数電流カーブ、利得は 1 時間で出切り、その後 11 時間は消費が下がらない" class="chart" loading="lazy" src="/images/motor-break-in-current-plateau_j.png"/></figure>
+<p data-i18n="g17.p2">磨き取れる「引っかかり」には限りがあります。その後どれだけセッションを重ねても、<strong>消費電力は一切下がりませんでした</strong>——仕上がりの信号は実は明確です。問題は、人には見えないこと。人が見ているのは回転数です。</p>
+<h2 data-i18n="g17.h2">人が見ているのは回転数——そしてそれは騙す</h2>
+<p data-i18n="g17.p3">仕上がった後も磨き続けると(わざとやりました)、同じ電圧で回転数は<strong>上がり続けます(+4.9%)</strong>。「回転数がまだ伸びている=まだ良くなっている」——回転数で判断するプレイヤーはほぼ全員そう考え、磨き続けてしまいます。</p>
+<figure data-i18n="g17.figrpm"><img alt="過慣らしの回転数の錯覚:同電圧で回転数が +4.9% 上がり続ける——強くなったのではなく磁力流失" class="chart" loading="lazy" src="/images/motor-break-in-rpm-illusion_j.png"/></figure>
+<p data-i18n="g17.p4">この錯覚は教科書の 1 式で見破れます:<code>V = I·R + Ke·ω</code>(電圧 = 抵抗降下 + 磁力×回転数の逆起電力)。つまり電圧が一定なら、<strong>磁力(Ke)と回転数(ω)はシーソー</strong>——理由なく回転数が上がるとき、最も多い原因はモーターが強くなったのではなく、磁力側が軽くなったことです。</p>
+<p data-i18n="g17.p5">磁石の磁力は「使って減る」ものではありません(放置なら百年もちます)。<strong>「叩かれて減る」</strong>のです——ブラシが整流するたびの小さな火花は逆磁場の微打撃;550 万回転で累計は億単位、磁力は少しずつ<strong>不可逆に弱まります</strong>。「磨くほど速くなっていた」まさにその時間帯、この個体の体質スコアは同時に下がり続けていました。</p>
+<h2 data-i18n="g17.h3">過慣らしの代償は体質が払う——しかも不可逆</h2>
+<p data-i18n="g17.p6">実験全程を <strong>AI トルク予測</strong>で追跡:慣らし期に体質は <strong>79 → 84(ピーク)</strong>、モーターは自己ベストへ;ピーク後は一路 <strong>73 まで低下——新品より低い</strong>。一晩完全に休ませて再測定:やはり 73。<strong>5 点稼いで 11 点失い、戻りません。</strong></p>
+<figure data-i18n="g17.figlife"><img alt="過慣らしの代償:体質スコアが 79 から 84 に上がり 73 まで低下、一晩休ませても回復しない不可逆の摩耗" class="chart" loading="lazy" src="/images/motor-over-break-in-damage_j.png"/></figure>
+<h2 data-i18n="g17.h4">スマート慣らし:「止めどき」を感覚ではなく測定に任せる</h2>
+<p data-i18n="g17.m0">止めどきの信号は存在し、測定できます。しかし回転数だけを見ている人には見えず、回転数の錯覚がさらに磨かせようとします。スマート慣らしが代わりにやるのは、この 3 つ:</p>
+<ul>
+<li data-i18n="g17.m1"><strong>自分で磨き、自分で測る</strong> —— ワンタップ後は全自動:漸進的な回転数で慣らしながら連続測定し、正転・逆転を交互に行ってブラシ両面を対称に馴染ませます。</li>
+<li data-i18n="g17.m2"><strong>定常状態で自動停止</strong> —— 慣らし指標を監視し続け、「もう改善しない」を検出した瞬間にビープと共に自動停止——1 セッションも余計に磨かず、磁力を偽の回転数と交換しません。</li>
+<li data-i18n="g17.m3"><strong>全過程が見える</strong> —— ラウンド、収束進捗、指標カーブ(各ラウンドの点 + 移動平均)をリアルタイム表示;カーブが平坦になれば完了間近。時間上限を保険として設定でき、いつでも途中停止できます。</li>
+</ul>
+<div class="guide-tip">
+<p data-i18n="g17.tip">慣らしは<strong>予算のある消耗行為</strong>です:磨き取れる「引っかかり」には限りがあり、磁石の寿命にも限りがあります。<strong>消費電力が下がらなくなった瞬間が、止めるべき瞬間</strong>——スマート慣らしはその判断を測定に任せ、ちょうどいいところで止めます。</p>
+</div>
+<p data-i18n="g17.note">実験メモ:Mach-Dash PRO 1 個、連続低回転慣らし 12 時間(スマート慣らし複数セッション + AI トルク予測で全程追跡)、全データは同一機器での実測;測定異常の 1 セッションは再測の上除外。物理根拠:直流モーターの電圧方程式 V = I·R + Ke·ω。体質スコアは公式規格比の参考値で、判読はトレンド重視。スマート慣らしはカーボンブラシ系列に対応。</p>
+<p class="guide-related" data-i18n="g17.related">関連:慣らしの全体フローと 3 モード —— <a href="../motor-break-in-guide/">モーター慣らし完全ガイド</a>;なぜ回転数を固定するのか —— <a href="../motor-break-in-speed-vs-voltage/">回転数固定、電圧固定にしない理由</a>;モーターが遅くなる 5 つの原因(減磁含む)—— <a href="../motor-slow-causes-fixes/">モーターが遅くなった原因と対処</a>。</p>
+</article><div class="guide-pagination"><div class="left"><a href="/ja/guides/motor-slow-causes-fixes/"><span class="label">← 前の記事</span><span>モーターが遅い</span></a></div><div class="center"><a href="https://motorlab-tw.github.io/ja/#guides"><span class="label">︿</span><span>ガイド一覧へ</span></a></div><div class="right"><span class="label">次の記事 →</span><span class="disabled">—</span></div></div></div></main><footer>
 <div class="container">
-<div class="footer-trademark" data-i18n="footer.trademark">
-      "Mini 4WD"<sup>®</sup> 與 "ミニ四駆"<sup>®</sup> 為株式会社タミヤ（TAMIYA, INC.）的註冊商標（日本商標登錄號 第 2168392 號）。MotorLab 為獨立工作室，與株式会社タミヤ無任何關聯，亦未受其授權、贊助或背書。本網站提及之相關名稱僅用於指涉產品適用範圍，所有商標權益歸原權利人所有。
-    </div>
+<div class="footer-trademark" data-i18n="footer.trademark">「Mini 4WD」<sup>®</sup> および「ミニ四駆」<sup>®</sup> は株式会社タミヤ（TAMIYA, INC.）の登録商標です（日本商標登録番号 第 2168392 号）。MotorLab は独立系スタジオであり、株式会社タミヤとは一切の関連がなく、その許諾・協賛・推奨も受けていません。本サイトでの当該名称への言及は、製品の適用範囲を示す目的のみで行われており、すべての商標権は各権利者に帰属します。</div>
 <div class="footer-inner">
 <div>
 <strong>MotorLab.tw</strong> · <span data-i18n="footer.tagline">Mini 4WD Performance Lab</span>
-        · <a data-i18n="footer.verify" href="/ja/verify/">正版查驗</a>
+        · <a data-i18n="footer.verify" href="/ja/verify/">正規品認証</a>
 </div>
 <div class="mono">
-        © 2026 MotorLab · <span data-i18n="footer.firmware">韌體</span> v3.5.0
+        © 2026 MotorLab · <span data-i18n="footer.firmware">ファームウェア</span> v3.5.0
       </div>
 </div>
 <div class="footer-visits mono" hidden="" id="visit-count"></div>
