@@ -1916,7 +1916,12 @@ def _card_for_guide_on_hub(soup, src_html, i18n, guide_cfg, lang):
     for sel in (".guide-tag", "h3", ".guide-lead"):
         node = target.select_one(sel)
         if node is not None:
-            new_card.append(BeautifulSoup(str(node), "html.parser"))
+            frag = BeautifulSoup(str(node), "html.parser")
+            # 拆掉 lead/標題內的內嵌連結,只留文字:文章內的相對連結(如 ../slug/)
+            # 在 hub 層級會解析到錯誤路徑(見 g18 → root 404);read-more 連結另外加。
+            for a in frag.find_all("a"):
+                a.unwrap()
+            new_card.append(frag)
     link = soup.new_tag("a", attrs={"class": "guide-card-link", "href": href})
     link.string = UI_STRINGS[lang]["read_more"]
     new_card.append(link)
