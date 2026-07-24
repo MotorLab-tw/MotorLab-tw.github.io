@@ -696,24 +696,15 @@
     grid-auto-rows: 1fr;
     gap: 16px;
   }
-  .sb-card {
-    background: linear-gradient(135deg, rgba(94,129,172,0.18), rgba(136,192,208,0.10));
-    border: 1px solid var(--accent-blue);
-    border-radius: 14px;
-    padding: 36px 40px;
-  }
   .sb-figure {
-    margin: 6px 0 0;
+    flex: 1 1 100%;
+    margin: 8px 0 0;
     border: 1px solid var(--border);
     border-radius: 12px;
     overflow: hidden;
     background: var(--bg-secondary);
   }
   .sb-figure img { width: 100%; display: block; }
-  #smart-breakin .section-header { text-align: left; margin-bottom: 28px; }
-  #smart-breakin .section-subtitle { margin: 0; max-width: none; }
-  .sb-cta { text-align: right; margin-top: 24px; }
-  @media (max-width: 640px) { .sb-card { padding: 28px 22px; } }
   .feature-card {
     background: var(--bg-secondary);
     border: 1px solid var(--border);
@@ -2474,16 +2465,16 @@
 </div>
 </section>
 <!-- AI 智慧磨合 主打 -->
-<section id="smart-breakin" style="background: rgba(0,0,0,0.15);">
+<section class="datalab-cta" id="smart-breakin">
 <div class="container">
-<div class="sb-card">
-<div class="section-header">
+<div class="dlcta-inner">
+<div class="dlcta-text">
 <div class="section-tag" data-i18n="sb.tag">独占 AI スマート慣らし <span class="pro-badge">PRO</span></div>
-<h2 class="section-title" data-i18n="sb.title">ちょうどいいところで、自動停止</h2>
-<p class="section-subtitle" data-i18n="sb.sub">慣らしガイドが定常状態を検出して自動停止——余計に 1 セッションも回しません。</p>
+<h2 class="dlcta-title" data-i18n="sb.title">ちょうどいいところで、自動停止</h2>
+<p class="dlcta-desc" data-i18n="sb.sub">慣らしガイドが定常状態を検出して自動停止——余計に 1 セッションも回しません。</p>
 </div>
+<a class="btn btn-primary dlcta-btn" data-i18n="sb.cta" href="benchmarks/when-to-stop-motor-break-in/">12 時間の実測を見る →</a>
 <figure class="sb-figure" data-i18n="sb.img"><img alt="AI スマート慣らし:ゴールデンポイントで自動停止、どの個体も一番スムーズに仕上げる" loading="lazy" src="/images/promo-smart-breakin_j.png"/></figure>
-<div class="sb-cta"><a class="btn btn-primary" data-i18n="sb.cta" href="benchmarks/when-to-stop-motor-break-in/">12 時間の実測を見る →</a></div>
 </div>
 </div>
 </section>

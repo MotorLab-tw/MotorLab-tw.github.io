@@ -592,24 +592,15 @@
     grid-auto-rows: 1fr;
     gap: 16px;
   }
-  .sb-card {
-    background: linear-gradient(135deg, rgba(94,129,172,0.18), rgba(136,192,208,0.10));
-    border: 1px solid var(--accent-blue);
-    border-radius: 14px;
-    padding: 36px 40px;
-  }
   .sb-figure {
-    margin: 6px 0 0;
+    flex: 1 1 100%;
+    margin: 8px 0 0;
     border: 1px solid var(--border);
     border-radius: 12px;
     overflow: hidden;
     background: var(--bg-secondary);
   }
   .sb-figure img { width: 100%; display: block; }
-  #smart-breakin .section-header { text-align: left; margin-bottom: 28px; }
-  #smart-breakin .section-subtitle { margin: 0; max-width: none; }
-  .sb-cta { text-align: right; margin-top: 24px; }
-  @media (max-width: 640px) { .sb-card { padding: 28px 22px; } }
   .feature-card {
     background: var(--bg-secondary);
     border: 1px solid var(--border);
@@ -2408,16 +2399,16 @@
 </section>
 
 <!-- AI 智慧磨合 主打 -->
-<section id="smart-breakin" style="background: rgba(0,0,0,0.15);">
+<section id="smart-breakin" class="datalab-cta">
   <div class="container">
-    <div class="sb-card">
-      <div class="section-header">
+    <div class="dlcta-inner">
+      <div class="dlcta-text">
         <div class="section-tag" data-i18n="sb.tag">獨家 AI 智慧磨合 <span class="pro-badge">PRO</span></div>
-        <h2 class="section-title" data-i18n="sb.title">磨到剛剛好,自動停</h2>
-        <p class="section-subtitle" data-i18n="sb.sub">磨合導引偵測到穩態就自動停,不多磨一場、不過磨。</p>
+        <h2 class="dlcta-title" data-i18n="sb.title">磨到剛剛好,自動停</h2>
+        <p class="dlcta-desc" data-i18n="sb.sub">磨合導引偵測到穩態就自動停,不多磨一場、不過磨。</p>
       </div>
+      <a class="btn btn-primary dlcta-btn" href="benchmarks/when-to-stop-motor-break-in/" data-i18n="sb.cta">看 12 小時實測 →</a>
       <figure class="sb-figure" data-i18n="sb.img"><img src="/images/promo-smart-breakin_c.png" alt="AI 智慧磨合:磨到黃金點自動停,把每顆馬達都磨到最順" loading="lazy"></figure>
-      <div class="sb-cta"><a class="btn btn-primary" href="benchmarks/when-to-stop-motor-break-in/" data-i18n="sb.cta">看 12 小時實測 →</a></div>
     </div>
   </div>
 </section>
