@@ -696,6 +696,16 @@
     grid-auto-rows: 1fr;
     gap: 16px;
   }
+  .sb-figure {
+    max-width: 940px;
+    margin: 6px auto 0;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--bg-secondary);
+  }
+  .sb-figure img { width: 100%; display: block; }
+  .sb-cta { text-align: center; margin-top: 24px; }
   .feature-card {
     background: var(--bg-secondary);
     border: 1px solid var(--border);
@@ -720,6 +730,18 @@
     font-weight: bold;
     padding: 2px 8px;
     border-radius: 3px;
+  }
+  .pro-badge {
+    display: inline-block;
+    background: var(--accent-purple);
+    color: var(--bg-primary);
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: normal;
+    padding: 2px 8px;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-left: 4px;
   }
   .feature-icon {
     width: 40px;
@@ -2443,6 +2465,18 @@
 </div>
 </div>
 </section>
+<!-- AI 智慧磨合 主打 -->
+<section id="smart-breakin" style="background: rgba(0,0,0,0.15);">
+<div class="container">
+<div class="section-header">
+<div class="section-tag" data-i18n="sb.tag">獨家 AI 智慧磨合 <span class="pro-badge">PRO</span></div>
+<h2 class="section-title" data-i18n="sb.title">磨到剛剛好,自動停</h2>
+<p class="section-subtitle" data-i18n="sb.sub">磨合導引偵測到穩態就自動停,不多磨一場、不過磨。</p>
+</div>
+<figure class="sb-figure" data-i18n="sb.img"><img alt="AI 智慧磨合:磨到黃金點自動停,把每顆馬達都磨到最順" loading="lazy" src="/images/promo-smart-breakin_c.png"/></figure>
+<div class="sb-cta"><a class="btn btn-primary" data-i18n="sb.cta" href="benchmarks/when-to-stop-motor-break-in/">看 12 小時實測 →</a></div>
+</div>
+</section>
 <!-- 全球馬達磨合資料庫導流入口 -->
 <section class="datalab-cta" id="datalab-cta">
 <div class="container">
@@ -4092,7 +4126,12 @@
       'dlcta.title': 'Global Motor Break-in Data Library',
       'dlcta.desc': 'Exchange break-in profiles with Mini 4WD® racers worldwide. Every record is signature-verified by a break-in machine, and the original file re-imports straight into yours to reproduce verified settings from other players.',
       'dlcta.btn': 'Open the library →',
-      'versions.tag': 'EDITIONS',
+
+      'sb.tag': 'Exclusive AI Smart Break-In <span class="pro-badge">PRO</span>',
+      'sb.title': 'Grind to just right, then stop',
+      'sb.sub': 'The Break-in Guide detects steady state and stops on its own — not one session more.',
+      'sb.img': '<img src="/images/promo-smart-breakin_e.png" alt="AI Smart Break-In: stops at the golden point, grinding every motor to its smoothest" loading="lazy">',
+      'sb.cta': 'See the 12-hour test →',      'versions.tag': 'EDITIONS',
       'versions.title': 'M1 and PRO',
       'versions.subtitle': 'Same hardware, two license tiers. Online upgrade anytime.',
       'vt.feature': 'Feature',
@@ -5168,7 +5207,12 @@
       'dlcta.title': 'グローバル モーター慣らしデータ庫',
       'dlcta.desc': '世界中の Mini 4WD® プレイヤーと慣らしレシピを交換。各記録は慣らし機で署名検証され、元ファイルをそのまま自分のモーター慣らし機に再インポートして、検証済みの設定を再現できます。',
       'dlcta.btn': 'データ庫へ →',
-      'versions.tag': 'EDITIONS',
+
+      'sb.tag': '独占 AI スマート慣らし <span class="pro-badge">PRO</span>',
+      'sb.title': 'ちょうどいいところで、自動停止',
+      'sb.sub': '慣らしガイドが定常状態を検出して自動停止——余計に 1 セッションも回しません。',
+      'sb.img': '<img src="/images/promo-smart-breakin_j.png" alt="AI スマート慣らし:ゴールデンポイントで自動停止、どの個体も一番スムーズに仕上げる" loading="lazy">',
+      'sb.cta': '12 時間の実測を見る →',      'versions.tag': 'EDITIONS',
       'versions.title': 'M1 と PRO',
       'versions.subtitle': '同一の本体、2 つのライセンスレベル。いつでもオンラインでアップグレード可能。',
       'vt.feature': '機能',
