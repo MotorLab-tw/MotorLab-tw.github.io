@@ -2218,7 +2218,7 @@
 <div class="container">
 <div class="section-header">
 <div class="section-tag" data-i18n="features.tag">CORE FEATURES</div>
-<h2 class="section-title" data-i18n="features.title">16 のプロ機能</h2>
+<h2 class="section-title" data-i18n="features.title">17 のプロ機能</h2>
 <p class="section-subtitle" data-i18n="features.subtitle">慣らしから診断まで、Mini 4WD モーターのライフサイクルにおけるすべての重要工程を網羅。</p>
 </div>
 <div class="features-grid">
@@ -2372,6 +2372,18 @@
 <span class="feature-tag" data-i18n="f9.tag1">電磁干渉抑制</span>
 <span class="feature-tag" data-i18n="f9.tag2">&lt; 100 ms 緊急停止</span>
 <span class="feature-tag" data-i18n="f9.tag3">自動復旧</span>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">
+<svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M9 9l6 6M15 9l-6 6"></path></svg>
+</div>
+<h3 data-i18n="f15.title">モーター運転保護</h3>
+<p data-i18n="f15.desc">モーターを駆動する全プロセスを常時監視:モーター未検出・固着・回転信号なし・出力短絡 —— 異常時は即時停止して理由を表示、ハードウェア保護を補完します。</p>
+<div class="feature-meta">
+<span class="feature-tag" data-i18n="f15.tag1">即時停止</span>
+<span class="feature-tag" data-i18n="f15.tag2">4 種検出</span>
+<span class="feature-tag" data-i18n="f15.tag3">理由表示</span>
 </div>
 </div>
 <!-- 全球馬達磨合資料庫(網站服務,可點連 /lab/) -->
@@ -2627,7 +2639,7 @@
 <div class="tech-card">
 <div class="tech-name">BREAKIN_COACH</div>
 <h4 data-i18n="t17.title">慣らしガイド(セッション横断判読)</h4>
-<p data-i18n="t17.desc">セッションごとに自動記録し横断比較 —— 「まだ進歩中 / スイートスポット・停止推奨 / 行き過ぎ」を直接提示。慣らしすぎはブラシと磁石の寿命の消耗;止めるべきセッションをガイドが捕まえます。</p>
+<p data-i18n="t17.desc">セッションごとに自動記録し横断比較 —— 「まだ進歩中 / スイートスポット・停止推奨 / 行き過ぎ」を直接提示し、止めるべきセッションを捕まえます。</p>
 </div>
 <div class="tech-card">
 <div class="tech-name">TORQUE_PROFILE</div>
@@ -2636,6 +2648,11 @@
 </div>
 <div class="tech-card">
 <div class="tech-name">EMI_SUPPRESSION</div>
+<div class="tech-card">
+<div class="tech-name">STEADY_STATE</div>
+<h4 data-i18n="t19.title">定常状態の自動停止</h4>
+<p data-i18n="t19.desc">AI スマート慣らしは漸進回転数で慣らしながら連続測定し、定常状態を検出すると自動停止 —— 仕上がったら、機械が教えてくれます。</p>
+</div>
 <h4 data-i18n="t7.title">電磁干渉抑制回路設計</h4>
 <p data-i18n="t7.desc">電源とセンサー信号に電磁干渉抑制設計を採用し、モーターの高周波ノイズの回り込みを効果的に抑制。センサー読値の汚染やロジックの誤作動を防ぎます。</p>
 </div>
@@ -2697,6 +2714,7 @@
 <tr><td data-i18n="specs.sw.r7">モーター特性測定</td><td class="spec-val" data-i18n="specs.sw.v7">単一プログラム(全自動)</td></tr>
 <tr><td data-i18n="specs.sw.r8">特性測定履歴</td><td class="spec-val" data-i18n="specs.sw.v8">最大 50 件</td></tr>
 <tr><td data-i18n="specs.sw.r1">モーター慣らしプログラム</td><td class="spec-val" data-i18n="specs.sw.v1">1〜6 パス × 10 ステージ</td></tr>
+<tr><td data-i18n="specs.sw.r1b">AI スマート慣らし (PRO)</td><td class="spec-val" data-i18n="specs.sw.v1b">単一プログラム(全自動)</td></tr>
 <tr><td data-i18n="specs.sw.r2">モーターテストプログラム</td><td class="spec-val" data-i18n="specs.sw.v2">単一ステージ</td></tr>
 <tr><td data-i18n="specs.sw.r3">履歴記録</td><td class="spec-val" data-i18n="specs.sw.v3">最大 50 件</td></tr>
 <tr><td data-i18n="specs.sw.r4">AI スマートモーター健康管理 (PRO)</td><td class="spec-val" data-i18n="specs.sw.v4">最大 20 個</td></tr>
@@ -3047,7 +3065,7 @@
       'mock.temp': '溫度',
       'mock.status': '● 磨合進行中 · 階段 6/10 · 已運行 02:48:33',
       'features.tag': 'CORE FEATURES',
-      'features.title': '十六大專業功能',
+      'features.title': '十七大專業功能',
       'features.subtitle': '從磨合到診斷,涵蓋 Mini 4WD 馬達生命週期的每一個關鍵環節。',
       'f1.title': '馬達磨合程式',
       'f1.desc': '低速長時間運轉,讓電刷與整流子貼合到最佳接觸。兩種手動模式任選:電壓模式(傳統定電壓,1~6 趟各趟 10 階段可程式化)、轉速模式 Beta(自動控速到設定轉速,電壓穩定自動換階);想一鍵全自動,交給 AI 智慧磨合(PRO)。',
@@ -3097,6 +3115,11 @@
       'f9.tag1': '電磁干擾抑制',
       'f9.tag2': '< 100 ms 急停',
       'f9.tag3': '自動恢復',
+      'f15.title': '馬達運轉防護',
+      'f15.desc': '驅動馬達的每一道程序全程自動監測:未偵測到馬達、馬達卡住、讀不到轉速訊號、輸出短路 —— 任一異常立即停機並顯示原因,與硬體保護互補。',
+      'f15.tag1': '即時停機',
+      'f15.tag2': '四種偵測',
+      'f15.tag3': '顯示原因',
       'f10.title': '全球馬達磨合資料庫',
       'f10.desc': '把馬達磨合機產出的磨合配方紀錄分享給全世界或下載別人的配方,下載原檔可直接匯入你的馬達磨合機重現。',
       'f10.tag1': '全球共享',
@@ -3182,9 +3205,11 @@
       't16.title': '損耗轉矩分解',
       't16.desc': '不只給一個「摩擦」數字,而是用最小平方把損耗分解成多個物理成分,並以 R² 擬合門檻自動剔除不可信的量測。',
       't17.title': '磨合導引跨場判讀',
-      't17.desc': '每場磨完自動記錄、跨場比對,直接告訴你「還在進步 / 已到黃金點建議停 / 已過頭」—— 過磨消耗的是電刷與磁鐵壽命,導引幫你抓住該停手的那一場。',
+      't17.desc': '每場磨完自動記錄、跨場比對,告訴你「還在進步 / 已到黃金點建議停 / 已過頭」,導引幫你抓住該停手的那一場。',
       't18.title': '扭力體質實測推算',
       't18.desc': '以本顆實測數據對照田宮官方標準推算扭力與體質 —— 同型號不同顆結果不同,反映的正是個體真實體質。',
+      't19.title': '穩態偵測自動判停',
+      't19.desc': 'AI 智慧磨合以漸進轉速磨合並持續量測,偵測到穩態自動停止 —— 磨好了,機器告訴你。',
 
       // ===== Specifications 技術規格 =====
       'specs.tag': 'SPECIFICATIONS',
@@ -3208,6 +3233,8 @@
       'specs.hw.r6': '溫度偵測', 'specs.hw.v6': '-50°C ~ +125°C',
       'specs.hw.r7': '散熱風扇', 'specs.hw.v7': 'DC 5V × 2',
       'specs.sw.r1': '馬達磨合程式', 'specs.sw.v1': '1~6 趟 × 10 階段',
+      'specs.sw.r1b': 'AI 智慧磨合 (PRO)',
+      'specs.sw.v1b': '單一程序(全自動)',
       'specs.sw.r8': '特性量測歷史', 'specs.sw.v8': '最多 50 筆',
       'specs.sw.r2': '馬達測試程式', 'specs.sw.v2': '單一階段',
       'specs.sw.r3': '歷史紀錄', 'specs.sw.v3': '最多 50 筆',
@@ -3980,7 +4007,7 @@
       'mock.temp': 'Temp',
       'mock.status': '● Break-in running · Stage 6/10 · 02:48:33 elapsed',
       'features.tag': 'CORE FEATURES',
-      'features.title': 'Sixteen Professional Tools',
+      'features.title': 'Seventeen Professional Tools',
       'features.subtitle': 'From break-in to diagnostics, covering every critical phase of the Mini 4WD motor lifecycle.',
       'f1.title': 'Motor Break-in Program',
       'f1.desc': 'Long, low-speed running that beds the brushes to the commutator. Two manual modes: Voltage mode (classic fixed-voltage, 1–6 passes of 10 programmable stages) and Speed mode Beta (auto speed-control to your target RPM, advancing once voltage stabilizes); for one-tap full auto, hand it to AI Smart Break-In (PRO).',
@@ -4029,6 +4056,11 @@
       'f9.tag1': 'EMI suppression',
       'f9.tag2': '< 100 ms cutoff',
       'f9.tag3': 'Auto recovery',
+      'f15.title': 'Motor-Run Protection',
+      'f15.desc': 'Every motor-driving routine is monitored continuously: motor not detected, stalled, no speed signal, or output short — any anomaly stops immediately and shows the reason, complementing the hardware protection.',
+      'f15.tag1': 'Instant stop',
+      'f15.tag2': '4 detections',
+      'f15.tag3': 'Shows reason',
       'f8.tag2': 'Auto revert',
       'f10.title': 'Global Break-in Data Library',
       'f10.desc': 'Share the break-in profiles your machine produces with the world, or download profiles from others — the original file re-imports straight into your machine.',
@@ -4115,9 +4147,11 @@
       't16.title': 'Loss-Torque Decomposition',
       't16.desc': 'Instead of a single "friction" number, least-squares fitting separates loss torque into multiple physical components, and an R² threshold automatically rejects untrustworthy measurements.',
       't17.title': 'Cross-Session Break-in Guide',
-      't17.desc': 'Every session is recorded and compared across sessions, telling you outright: still improving / sweet spot — stop / past the point. Over-break-in spends brush and magnet life; the Guide catches the session where you should stop.',
+      't17.desc': 'Every session is recorded and compared across sessions, telling you outright: still improving / sweet spot — stop / past the point — and catches the session where you should stop.',
       't18.title': 'Measured Torque Constitution',
       't18.desc': 'Torque and constitution derived from real measurements of this exact unit against Tamiya official standards — units of the same model score differently, and that difference is true individual constitution.',
+      't19.title': 'Steady-State Auto-Stop',
+      't19.desc': 'AI Smart Break-In runs at progressive speeds while measuring continuously and stops automatically on detecting steady state — when it is done, the machine tells you.',
 
       // ===== Specifications =====
       'specs.tag': 'SPECIFICATIONS',
@@ -4141,6 +4175,8 @@
       'specs.hw.r6': 'Temperature Sensing', 'specs.hw.v6': '-50°C ~ +125°C',
       'specs.hw.r7': 'Cooling Fans', 'specs.hw.v7': 'DC 5V × 2',
       'specs.sw.r1': 'Motor Break-in Program', 'specs.sw.v1': '1–6 passes × 10 stages',
+      'specs.sw.r1b': 'AI Smart Break-In (PRO)',
+      'specs.sw.v1b': 'Single procedure (automatic)',
       'specs.sw.r8': 'Characterization History', 'specs.sw.v8': 'Up to 50 records',
       'specs.sw.r2': 'Motor Test Program', 'specs.sw.v2': 'Single stage',
       'specs.sw.r3': 'History Records', 'specs.sw.v3': 'Up to 50 entries',
@@ -5020,7 +5056,7 @@
       'mock.temp': '温度',
       'mock.status': '● 慣らし運転中 · ステージ 6/10 · 経過時間 02:48:33',
       'features.tag': 'CORE FEATURES',
-      'features.title': '16 のプロ機能',
+      'features.title': '17 のプロ機能',
       'features.subtitle': '慣らしから診断まで、Mini 4WD モーターのライフサイクルにおけるすべての重要工程を網羅。',
       'f1.title': 'モーター慣らしプログラム',
       'f1.desc': '低速の長時間運転でブラシと整流子を最適な接触に馴染ませます。手動 2 モードから選択:電圧モード(従来の定電圧、1〜6 パス・各パス 10 段階をプログラム可)、回転数モード Beta(設定回転数へ自動制御、電圧が安定すると自動で次段階へ);ワンタップ全自動なら AI スマート慣らし(PRO)へ。',
@@ -5070,6 +5106,11 @@
       'f9.tag1': '電磁干渉抑制',
       'f9.tag2': '< 100 ms 緊急停止',
       'f9.tag3': '自動復旧',
+      'f15.title': 'モーター運転保護',
+      'f15.desc': 'モーターを駆動する全プロセスを常時監視:モーター未検出・固着・回転信号なし・出力短絡 —— 異常時は即時停止して理由を表示、ハードウェア保護を補完します。',
+      'f15.tag1': '即時停止',
+      'f15.tag2': '4 種検出',
+      'f15.tag3': '理由表示',
       'f10.title': 'グローバル モーター慣らしデータ庫',
       'f10.desc': 'モーター慣らし機が生成した慣らしレシピ記録を世界に共有、あるいは他のプレイヤーのレシピをダウンロード。元ファイルはそのままモーター慣らし機に再インポートできます。',
       'f10.tag1': 'グローバル共有',
@@ -5155,9 +5196,11 @@
       't16.title': '損失トルクの分解',
       't16.desc': '「摩擦」を 1 つの数値で済ませず、最小二乗で損失トルクを複数の物理成分に分解し、R² のしきい値で信頼できない測定を自動的に除外します。',
       't17.title': '慣らしガイド(セッション横断判読)',
-      't17.desc': 'セッションごとに自動記録し横断比較 —— 「まだ進歩中 / スイートスポット・停止推奨 / 行き過ぎ」を直接提示。慣らしすぎはブラシと磁石の寿命の消耗;止めるべきセッションをガイドが捕まえます。',
+      't17.desc': 'セッションごとに自動記録し横断比較 —— 「まだ進歩中 / スイートスポット・停止推奨 / 行き過ぎ」を直接提示し、止めるべきセッションを捕まえます。',
       't18.title': 'トルク・体質の実測推算',
       't18.desc': '実測データをタミヤ公式標準と対照してトルクと体質を推算 —— 同機種でも個体ごとに結果が違う=それこそが個体の真の体質。',
+      't19.title': '定常状態の自動停止',
+      't19.desc': 'AI スマート慣らしは漸進回転数で慣らしながら連続測定し、定常状態を検出すると自動停止 —— 仕上がったら、機械が教えてくれます。',
       'specs.tag': 'SPECIFICATIONS',
       'specs.title': '技術仕様',
       'specs.subtitle': 'ハードウェアとソフトウェアの完全な仕様、および各機能の数値入力範囲。',
@@ -5179,6 +5222,8 @@
       'specs.hw.r6': '温度検出', 'specs.hw.v6': '-50°C ~ +125°C',
       'specs.hw.r7': '冷却ファン', 'specs.hw.v7': 'DC 5V × 2',
       'specs.sw.r1': 'モーター慣らしプログラム', 'specs.sw.v1': '1〜6 パス × 10 ステージ',
+      'specs.sw.r1b': 'AI スマート慣らし (PRO)',
+      'specs.sw.v1b': '単一プログラム(全自動)',
       'specs.sw.r8': '特性測定履歴', 'specs.sw.v8': '最大 50 件',
       'specs.sw.r2': 'モーターテストプログラム', 'specs.sw.v2': '単一ステージ',
       'specs.sw.r3': '履歴記録', 'specs.sw.v3': '最大 50 件',
