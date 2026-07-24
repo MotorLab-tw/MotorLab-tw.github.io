@@ -495,15 +495,22 @@
     grid-auto-rows: 1fr;
     gap: 16px;
   }
+  .sb-card {
+    background: linear-gradient(135deg, rgba(94,129,172,0.18), rgba(136,192,208,0.10));
+    border: 1px solid var(--accent-blue);
+    border-radius: 14px;
+    padding: 36px 40px;
+  }
   .sb-figure {
     margin: 6px 0 0;
     border: 1px solid var(--border);
-    border-radius: 14px;
+    border-radius: 12px;
     overflow: hidden;
     background: var(--bg-secondary);
   }
   .sb-figure img { width: 100%; display: block; }
   .sb-cta { text-align: center; margin-top: 24px; }
+  @media (max-width: 640px) { .sb-card { padding: 28px 22px; } }
   .feature-card {
     background: var(--bg-secondary);
     border: 1px solid var(--border);
