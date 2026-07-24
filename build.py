@@ -741,6 +741,37 @@ GUIDES = [
             },
         },
     },
+    # ---------- g18:洗馬達 benchmark(衰退拆解 #02;接續 g17 的後續測試)----------
+    {
+        "slug": "does-washing-a-motor-work",
+        "key": "g18",
+        "published": "2026-07-24",
+        "updated": "2026-07-24",
+        "type": "benchmarks",
+        "i18n": {
+            "zh": {
+                "title": "洗馬達有用嗎?洗後跑 11 小時實測給你看 | MotorLab",
+                "description": "洗馬達真的有用嗎?我們把一顆衰退的 Mach-Dash PRO 洗淨後連續操 11 小時實測:髒污洗得掉、體質 +5.9 分而且留得住;但電刷與整流子的磨損洗不回,接觸穩定度卡在 44%(健康是 24~26%)。第一次用數據把「洗得回」與「洗不回」分清楚,附去漬油掏空軸承的翻車實錄。",
+                "keywords": "洗馬達, 洗馬達有用嗎, 馬達清洗, 四驅車洗馬達, 去漬油 馬達, 馬達衰退, 迷你四驅車 馬達, MotorLab",
+                "breadcrumb": "洗馬達有用嗎",
+                "h1_for_ld": "洗馬達有用嗎?洗後跑 11 小時給你看",
+            },
+            "en": {
+                "title": "Does Washing a Mini 4WD Motor Work? An 11-Hour Test | MotorLab",
+                "description": "Does washing a motor actually work? We washed a decayed Mach-Dash PRO and ran it 11 hours straight. Dirt comes off (+5.9 constitution, and it stays); brush and commutator wear does not — contact stability stayed stuck at 44% versus 24-26% for a healthy unit. The first time recoverable vs unrecoverable decay was split cleanly by data, plus a bearing-seizure cautionary tale.",
+                "keywords": "does washing a motor work, clean mini 4wd motor, motor wash, degreaser motor, motor decay, mini 4wd motor, MotorLab",
+                "breadcrumb": "Does Washing Work",
+                "h1_for_ld": "Does Washing a Motor Work? An 11-Hour Test",
+            },
+            "ja": {
+                "title": "モーター洗浄は効果ある?洗浄後 11 時間の実測 | MotorLab",
+                "description": "モーター洗浄は本当に効くのか?劣化した Mach-Dash PRO を洗浄後 11 時間連続運転で実測:汚れは落ちて体質 +5.9、しかも戻らない;だがブラシと整流子の摩耗は戻らず、接触安定度は 44% のまま(健康は 24~26%)。「戻る劣化」と「戻らない劣化」を初めてデータで分離、ベアリング油枯渇の失敗談も。",
+                "keywords": "ミニ四駆 モーター 洗浄, モーター 掃除 効果, 洗浄 効く, パーツクリーナー モーター, モーター 劣化, ミニ四駆 モーター, MotorLab",
+                "breadcrumb": "洗浄は効く?",
+                "h1_for_ld": "モーター洗浄は効果ある?11 時間の実測",
+            },
+        },
+    },
 ]
 
 # UI 字串(教學頁面通用元件:nav / 麵包屑 / 分頁)
@@ -854,7 +885,7 @@ HUBS = [
     },
     {
         "slug": "benchmarks",
-        "include": ["g3", "g9", "g17"],
+        "include": ["g3", "g9", "g17", "g18"],
         "i18n": {
             "zh": {
                 "title": "效能對比 — 田宮 Mini 4WD® 馬達規格速查 | MotorLab",

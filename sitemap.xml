@@ -1130,4 +1130,70 @@
       <image:title>慣らしすぎは不可逆:体質スコア 79→84→73</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://motorlab-tw.github.io/benchmarks/does-washing-a-motor-work/</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/benchmarks/does-washing-a-motor-work/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/benchmarks/does-washing-a-motor-work/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/benchmarks/does-washing-a-motor-work/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/benchmarks/does-washing-a-motor-work/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motor-wash-constitution-timeline_c.png</image:loc>
+      <image:title>洗馬達有用嗎:洗後體質沉降收斂</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motor-wash-underlying-params_c.png</image:loc>
+      <image:title>底層參數平原:Ke 與 I0 收斂</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motor-wash-contact-stability_c.png</image:loc>
+      <image:title>接觸穩定度洗不回=永久磨損</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://motorlab-tw.github.io/en/benchmarks/does-washing-a-motor-work/</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/benchmarks/does-washing-a-motor-work/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/benchmarks/does-washing-a-motor-work/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/benchmarks/does-washing-a-motor-work/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/benchmarks/does-washing-a-motor-work/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motor-wash-constitution-timeline_e.png</image:loc>
+      <image:title>Does washing a motor work: constitution settles after wash</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motor-wash-underlying-params_e.png</image:loc>
+      <image:title>Underlying parameters plateau: Ke and I0</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motor-wash-contact-stability_e.png</image:loc>
+      <image:title>Contact stability unrecoverable = permanent wear</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://motorlab-tw.github.io/ja/benchmarks/does-washing-a-motor-work/</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/benchmarks/does-washing-a-motor-work/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/benchmarks/does-washing-a-motor-work/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/benchmarks/does-washing-a-motor-work/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/benchmarks/does-washing-a-motor-work/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motor-wash-constitution-timeline_j.png</image:loc>
+      <image:title>モーター洗浄は効果ある:洗浄後の体質沈降</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motor-wash-underlying-params_j.png</image:loc>
+      <image:title>下層パラメータの平原:Ke と I0</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motor-wash-contact-stability_j.png</image:loc>
+      <image:title>接触安定度は洗い戻せない=不可逆摩耗</image:title>
+    </image:image>
+  </url>
 </urlset>

@@ -3843,7 +3843,49 @@
         <p data-i18n="g17.p7">這場 12 小時實驗定下了本系列的測試框架:同一台機器、相同的磨合與量測流程、同樣三個觀測維度——<strong>同轉速電流(耗電)、同電壓轉速、體質分數</strong>。接下來我們會用完全相同的條件,把田宮 15 款馬達一款一款測過去:每款的黃金期在哪裡、停手點多早到、過磨的代價多大——測完一款、發布一款,全部收錄在<a href="../">效能對比</a>。</p>
 
         <p data-i18n="g17.note"><strong>實驗條件:</strong><br>1. Mach-Dash PRO<br>2. 連續低轉速磨合 12 小時<br>3. 所有數據為同一台機器實測<br>4. 物理依據:直流馬達電壓方程 <code>V = I·R + Ke·ω</code><br>5. 體質分數為田宮官方標準的參考值,判讀以趨勢為準</p>
-        <p class="guide-related" data-i18n="g17.related">延伸閱讀:磨合的完整流程與模式選擇,見 <a href="../../guides/motor-break-in-guide/">馬達磨合完全指南</a>;為什麼磨合與量測要鎖轉速,見 <a href="../../guides/motor-break-in-speed-vs-voltage/">鎖轉速不鎖電壓</a>;馬達變慢的 5 個原因(含退磁),見 <a href="../../guides/motor-slow-causes-fixes/">馬達變慢原因與對策</a>。</p>
+        <p class="guide-related" data-i18n="g17.related">延伸閱讀:磨合的完整流程與模式選擇,見 <a href="../../guides/motor-break-in-guide/">馬達磨合完全指南</a>;為什麼磨合與量測要鎖轉速,見 <a href="../../guides/motor-break-in-speed-vs-voltage/">鎖轉速不鎖電壓</a>;馬達變慢的 5 個原因(含退磁),見 <a href="../../guides/motor-slow-causes-fixes/">馬達變慢原因與對策</a>;洗馬達到底有沒有用,見 <a href="../does-washing-a-motor-work/">洗馬達有用嗎</a>。</p>
+      </article>
+
+      <article class="guide-article">
+        <span class="guide-tag" data-i18n="g18.tag">BENCHMARK · 衰退拆解</span>
+        <h3 data-i18n="g18.title">洗馬達有用嗎?洗後跑 11 小時給你看</h3>
+        <p class="guide-lead" data-i18n="g18.lead">一顆操老了的馬達,拿去用溶劑洗一洗,轉速和數據真的變好了——那到底是洗回了青春,還是只是回光返照?我們拿一顆跑完生命測試、已經衰退的 Mach-Dash PRO,洗完立刻測,再連續操 <strong>11 小時</strong>,用同一套量測看它怎麼走。答案很乾脆:<strong>洗掉髒污回得來,磨損零件回不來</strong>——這兩件事,第一次被數據分得清清楚楚。本文是接續 <a href="../when-to-stop-motor-break-in/">12 小時過磨實驗</a> 的後續測試。</p>
+
+        <div class="guide-tip">
+          <p data-i18n="g18.concl"><strong>三行結論:</strong><br>▸ <strong>洗得回</strong> —— 髒污(碳粉、氧化膜)洗掉,體質分數 +5.9 分(69.6→75.5)、耗電降、起轉變輕,而且留得住。<br>▸ <strong>洗不回</strong> —— 零件磨損(電刷、整流子)救不回,接觸穩定度卡在爛的 44%(健康馬達是 24~26%),這是永久的。<br>▸ <strong>有代價</strong> —— 去漬油會掏空軸承裡的油,洗完不補油就會乾磨、卡死,這步千萬別漏。</p>
+        </div>
+
+        <h4 data-i18n="g18.h1">一、洗一次,數據全面變好——像回春</h4>
+        <p data-i18n="g18.p1">先看洗前 vs 洗後(同一顆、機溫差不到 1.5°C,公平比較)。幾乎每個指標都往好的方向走:</p>
+        <div data-i18n="g18.tbl"><table class="guide-table"><thead><tr><th>指標</th><th>洗前</th><th>洗後</th><th>變化</th></tr></thead><tbody><tr><td>體質分數</td><td>69.6%</td><td>75.5%</td><td>+5.9 分 ▲</td></tr><tr><td>耗電(空載電流)</td><td>182 mA</td><td>167 mA</td><td>−8% ▼</td></tr><tr><td>起轉電壓</td><td>0.26 V</td><td>0.19 V</td><td>−0.07 ▼</td></tr><tr><td>1V 空載轉速</td><td>10,648</td><td>11,230</td><td>+5.5% ▲</td></tr><tr><td>接觸穩定度 CV</td><td>42.7%</td><td>44.1%</td><td>幾乎持平(仍爛)</td></tr></tbody></table></div>
+        <p data-i18n="g18.p1b">五個指標變好、一個沒動。變好的那些,都是「髒」造成的——碳粉和氧化膜卡在接觸面,洗掉就通了。但最後一行沒動,這行是伏筆,下面就講。</p>
+
+        <h4 data-i18n="g18.h2">二、連續操 11 小時:紅利在回吐</h4>
+        <p data-i18n="g18.p2">洗完那一下的好,是永久的嗎?我們接著用一鍵磨合連續操它 11 小時、等效約 470 回,每隔一段就量一次體質。結果不是「越操越好」,也不是「一路壞掉」——是<strong>沉降</strong>:從虛高的頂,沉回真實水準。</p>
+        <figure data-i18n="g18.fig1"><img class="chart" src="/images/motor-wash-constitution-timeline_c.png" alt="洗馬達有用嗎:洗後體質分數從虛高 80.2 沉降收斂到 75.9,真實磨損基準 75.5" loading="lazy"></figure>
+        <p data-i18n="g18.p2b">分兩層看:80.2 的頂是「洗淨＋冷機＋新油膜」墊出來的<strong>暫時紅利</strong>,操一操就還回去;但還完之後穩在 75.5,不會再往洗前的 69.6 跌。那 6 分(69.6→75.5)是<strong>真的洗回來、留得住的</strong>。所以「回光返照」只說對一半:虛高的部分是,但底下墊高的那截是真的。</p>
+
+        <h4 data-i18n="g18.h3s">三、為什麼收斂?因為底層參數不動了</h4>
+        <p data-i18n="g18.p3">怎麼知道 75.5 是「真實水準」而不是還在往下掉?看兩個底層參數——扭力常數 Ke(馬達的磁力體質)與空載電流 I0(空轉耗電)。它們是量測直接讀到的原始值,比體質分數更難騙;在後半段幾乎凍結了:</p>
+        <figure data-i18n="g18.fig2"><img class="chart" src="/images/motor-wash-underlying-params_c.png" alt="底層參數平原:扭力常數 Ke 與空載電流 I0 在第 6~9 場幾乎不動,證明馬達已收斂到穩定磨損態" loading="lazy"></figure>
+        <p data-i18n="g18.p3b">底層參數都平 → 體質分數的小幅下滑只是接觸面沉降收尾,不是零件在惡化。它收斂到一個<strong>穩定的磨損態</strong>——洗掉的髒是真的走了,剩下的就是這顆的真實底子。</p>
+
+        <h4 data-i18n="g18.h4s">四、那條沒動的線:磨損是永久的</h4>
+        <p data-i18n="g18.p4">回到第一節的伏筆——接觸穩定度 CV,洗前 42.7%、洗後 44.1%,動都沒動。這個指標量的是電刷跟整流子接觸得穩不穩,<strong>越小越穩</strong>。健康、狀態正常的同型馬達大約落在 24~26%(同一台儀器實測基準),而這顆卡在 44%,接觸品質差了一截。</p>
+        <figure data-i18n="g18.fig3"><img class="chart" src="/images/motor-wash-contact-stability_c.png" alt="接觸穩定度洗不回:這顆馬達洗前後都卡在 42~44%,健康同型只有 24~26%,證明是永久磨損" loading="lazy"></figure>
+        <p data-i18n="g18.p4b">溶劑能溶掉髒東西,但磨掉的金屬回不來——這是幾何形狀的破壞,泡再久的油也長不回去。所以這顆的判定不變:<strong>不可逆衰退</strong>。到這裡,「衰退」第一次被拆成兩種成分:<strong>汙染</strong>(次要,洗得掉、+5.9 分)與<strong>磨損</strong>(主要,洗不掉、CV 卡 44%)。</p>
+
+        <h4 data-i18n="g18.h5">五、翻車實錄:去漬油會掏空你的軸承</h4>
+        <div class="guide-warning">
+          <p data-i18n="g18.warn"><strong>洗完沒補油=乾磨咬軸。</strong>第一次洗完上機,馬達在高速衝速時當場崩潰——嘯叫、電流飆高、卡住轉不動。原因:去漬油是溶劑,會把含油軸承孔隙裡的油一起掏空,乾掉的軸承直接乾磨咬死。重新上油、讓油滲透進去之後復跑,一切正常,軸承滑行測試也證明沒有留下永久損傷。結論:<strong>用溶劑洗馬達,洗完「補油」是必做步驟,不是選配。</strong></p>
+        </div>
+
+        <h4 data-i18n="g18.h6">六、所以,該不該洗馬達?</h4>
+        <p data-i18n="g18.p6"><strong>值得洗</strong>:馬達操久了、感覺變鈍,數據上是「髒污型衰退」(起轉變重、耗電上升,但轉速還在)。洗一次能把髒污紅利拿回來,而且留得住,CP 值很高。<strong>洗不回</strong>:如果接觸穩定度已經爛掉(CV 遠高於正常)、真值電流超出目錄帶,那是零件磨損,洗只能拿回髒污那一小截,救不回本體——該換馬達了。</p>
+        <p data-i18n="g18.p6b">怎麼判斷自己是哪一種?光看轉速分不出來——髒污和磨損都會讓馬達變鈍。要靠三個數字拆解:<strong>體質分數</strong>(本體好壞)、<strong>空載電流</strong>(髒不髒)、<strong>接觸穩定度</strong>(零件磨損程度)。這正是機上 <a href="../../guides/motor-break-in-guide/">AI 扭力預測</a> 十幾分鐘會告訴你的事。</p>
+
+        <p data-i18n="g18.note"><strong>實驗條件:</strong><br>1. Mach-Dash PRO(生命測試後的衰退態樣本)<br>2. 清洗:以去漬油清洗、帶出殘液,並重新為軸承上油<br>3. 連續操 11 小時(等效約 470 回),同一台機器實測<br>4. 量測:AI 扭力預測 + 電刷接觸穩定測試 + 軸承阻力測試<br>5. 24~26% 為同型正常馬達的同機實測基準,非官方數據</p>
+        <p class="guide-related" data-i18n="g18.related">延伸閱讀:過磨如何一步步磨壞馬達,見 <a href="../when-to-stop-motor-break-in/">12 小時過磨實驗</a>;洗馬達 vs 磨合的觀念,見 <a href="../../guides/motor-wash-vs-break-in/">洗馬達 vs 磨合</a>;馬達變慢的 5 個原因,見 <a href="../../guides/motor-slow-causes-fixes/">馬達變慢原因與對策</a>。</p>
       </article>
 
 
@@ -6015,8 +6057,35 @@
       'g17.h5': 'Next: 15 motors, one set of conditions',
       'g17.p7': 'This 12-hour run fixed the test framework for the whole series: the same machine, the same break-in and measurement flow, and the same three dimensions — <strong>same-RPM current (power draw), same-voltage RPM, and constitution score</strong>. From here we put all 15 Tamiya motors through identical conditions: where each golden zone sits, how early the stop point arrives, and how much over-break-in costs — published one by one, all collected in <a href="../">Benchmarks</a>.',
       'g17.note': '<strong>Test conditions:</strong><br>1. Mach-Dash PRO<br>2. 12 hours of continuous low-speed break-in<br>3. All data measured on the same machine<br>4. Physics: the DC motor voltage equation <code>V = I·R + Ke·ω</code><br>5. Constitution scores are reference values against Tamiya official spec — read the trend',
-      'g17.related': 'Further reading: the full break-in flow and the modes in <a href="../../guides/motor-break-in-guide/">the complete break-in guide</a>; why break-in and measurement lock RPM in <a href="../../guides/motor-break-in-speed-vs-voltage/">locked RPM, not fixed voltage</a>; the 5 causes of a slow motor (incl. demagnetization) in <a href="../../guides/motor-slow-causes-fixes/">motor got slow: causes and fixes</a>.',
-      'g15.figsum': '<img class="chart" src="/images/conductive-oil-verdict_e.png" alt="Does conductive oil really break in a motor: higher RPM isn\'t done, film break falls back, the oil taints the read" loading="lazy">',
+      'g17.related': 'Further reading: the full break-in flow and the modes in <a href="../../guides/motor-break-in-guide/">the complete break-in guide</a>; why break-in and measurement lock RPM in <a href="../../guides/motor-break-in-speed-vs-voltage/">locked RPM, not fixed voltage</a>; the 5 causes of a slow motor (incl. demagnetization) in <a href="../../guides/motor-slow-causes-fixes/">motor got slow: causes and fixes</a>; whether washing a motor works in <a href="../does-washing-a-motor-work/">does washing a motor work</a>.',
+
+      'g18.tag': 'BENCHMARK · Decay Breakdown',
+      'g18.title': 'Does Washing a Motor Work? An 11-Hour Test',
+      'g18.lead': 'Take a worn-out motor, clean it with solvent, and the RPM and readings really do improve — but is that youth restored, or just a last flicker? We took a decayed Mach-Dash PRO (fresh off a life test), measured it right after washing, then ran it <strong>11 hours</strong> straight on the same measurement suite. The answer is blunt: <strong>dirt comes back off, worn parts do not</strong> — and for the first time the two are split cleanly by data. This is a follow-up to the <a href="../when-to-stop-motor-break-in/">12-hour over-break-in test</a>.',
+      'g18.concl': '<strong>Three-line verdict:</strong><br>▸ <strong>Recoverable</strong> — dirt (carbon, oxide film) washes off: constitution +5.9 (69.6→75.5), lower power draw, easier start — and it stays.<br>▸ <strong>Not recoverable</strong> — part wear (brushes, commutator) can\'t be saved: contact stability stuck at a poor 44% (a healthy unit is 24-26%). This is permanent.<br>▸ <strong>There is a cost</strong> — degreaser empties the oil from the bearing; skip re-oiling and it runs dry and seizes. Never skip that step.',
+      'g18.h1': '1. One wash, and everything improves — like rejuvenation',
+      'g18.p1': 'First, before vs after (same unit, machine temperature within 1.5°C — a fair comparison). Almost every metric moves the good way:',
+      'g18.tbl': '<table class="guide-table"><thead><tr><th>Metric</th><th>Before</th><th>After</th><th>Change</th></tr></thead><tbody><tr><td>Constitution score</td><td>69.6%</td><td>75.5%</td><td>+5.9 ▲</td></tr><tr><td>Power draw (no-load current)</td><td>182 mA</td><td>167 mA</td><td>−8% ▼</td></tr><tr><td>Start-up voltage</td><td>0.26 V</td><td>0.19 V</td><td>−0.07 ▼</td></tr><tr><td>1V no-load RPM</td><td>10,648</td><td>11,230</td><td>+5.5% ▲</td></tr><tr><td>Contact stability CV</td><td>42.7%</td><td>44.1%</td><td>Flat (still bad)</td></tr></tbody></table>',
+      'g18.p1b': 'Five metrics improve, one doesn\'t. The ones that improved were all caused by dirt — carbon and oxide film on the contact surface; wash it off and it clears. But the last line didn\'t move, and that line is the setup for everything below.',
+      'g18.h2': '2. Run it 11 hours: the bonus gets paid back',
+      'g18.p2': 'Is that just-washed gain permanent? We ran it with one-tap break-in for 11 hours — about 470 equivalent rounds — measuring constitution along the way. It wasn\'t "better and better," nor "steadily worse": it <strong>settled</strong>, sinking from a virtual peak back to the real level.',
+      'g18.fig1': '<img class="chart" src="/images/motor-wash-constitution-timeline_e.png" alt="Does washing a motor work: after washing, constitution sinks from a virtual 80.2 to a converged 75.9, true wear baseline 75.5" loading="lazy">',
+      'g18.p2b': 'Read it in two layers: the 80.2 peak is a <strong>temporary bonus</strong> from wash + cold start + fresh oil film — run it and it reverts; but after it settles it holds at 75.5 and never falls back toward the pre-wash 69.6. Those 6 points (69.6→75.5) are <strong>genuinely washed back and here to stay</strong>. So "last flicker" is only half right: the virtual part is, but the real lift underneath is not.',
+      'g18.h3s': '3. Why does it converge? Because the underlying parameters stop moving',
+      'g18.p3': 'How do we know 75.5 is the "real level" and not still dropping? Look at two underlying parameters — torque constant Ke (the motor\'s magnetic constitution) and no-load current I0 (idle power draw). These are raw values read directly by measurement, harder to fool than the score; in the latter half they are essentially frozen:',
+      'g18.fig2': '<img class="chart" src="/images/motor-wash-underlying-params_e.png" alt="Underlying parameters plateau: torque constant Ke and no-load current I0 barely move across sessions 6-9, proving the motor has converged to a stable wear state" loading="lazy">',
+      'g18.p3b': 'Underlying parameters flat → the small dip in constitution is just the contact surface settling, not parts deteriorating. It converged to a <strong>stable wear state</strong> — the dirt genuinely left, and what remains is this unit\'s true baseline.',
+      'g18.h4s': '4. The line that never moved: wear is permanent',
+      'g18.p4': 'Back to the setup from section 1 — contact stability CV, 42.7% before, 44.1% after: no movement at all. This metric measures how steady the brush-commutator contact is; <strong>lower is steadier</strong>. Healthy, normal units of this model sit around 24-26% (a same-rig measured baseline), while this one is stuck at 44% — clearly worse contact.',
+      'g18.fig3': '<img class="chart" src="/images/motor-wash-contact-stability_e.png" alt="Contact stability can\'t be washed back: this motor stays at 42-44% before and after, a healthy same model is only 24-26% — proof of permanent wear" loading="lazy">',
+      'g18.p4b': 'Solvent dissolves dirt, but metal that\'s been worn away does not come back — this is geometric damage, and no amount of soaking regrows it. So the verdict is unchanged: <strong>irreversible decay</strong>. Here, "decay" is split for the first time into two components: <strong>contamination</strong> (secondary, washable, +5.9) and <strong>wear</strong> (primary, unwashable, CV stuck at 44%).',
+      'g18.h5': '5. Cautionary tale: degreaser will empty your bearing',
+      'g18.warn': '<strong>Wash without re-oiling = dry-run seizure.</strong> On the first wash-and-mount, the motor collapsed mid-run at high speed — screech, current spike, jammed. The cause: degreaser is a solvent that pulls the oil out of the porous sleeve bearing too, and the dry bearing seizes. After re-oiling and letting it soak in, it ran fine, and a bearing coast test confirmed no permanent damage. Conclusion: <strong>if you wash a motor with solvent, re-oiling afterward is mandatory, not optional.</strong>',
+      'g18.h6': '6. So, should you wash a motor?',
+      'g18.p6': '<strong>Worth washing</strong>: the motor feels dull after long use and the data says "contamination-type decay" (heavier start, higher draw, but RPM still there). One wash reclaims the dirt bonus and it stays — great value. <strong>Not recoverable</strong>: if contact stability is already bad (CV far above normal) and true-value current exceeds the catalog band, that\'s part wear — washing only reclaims the small dirt slice, not the body. Time to replace the motor.',
+      'g18.p6b': 'How to tell which you have? RPM alone won\'t separate them — both dirt and wear make a motor feel dull. It takes three numbers: <strong>constitution score</strong> (body health), <strong>no-load current</strong> (how dirty), and <strong>contact stability</strong> (degree of wear). That is exactly what on-machine <a href="../../guides/motor-break-in-guide/">AI torque prediction</a> tells you in about fifteen minutes.',
+      'g18.note': '<strong>Test conditions:</strong><br>1. Mach-Dash PRO (a decayed sample after a life test)<br>2. Cleaning: solvent wash, flush out residue, and re-oil the bearing<br>3. 11 hours continuous run (about 470 equivalent rounds), same machine<br>4. Measurement: AI torque prediction + brush contact stability test + bearing resistance test<br>5. 24-26% is a same-rig measured baseline for normal units of this model, not official data',
+      'g18.related': 'Further reading: how over-break-in wears a motor down step by step in <a href="../when-to-stop-motor-break-in/">the 12-hour over-break-in test</a>; the concept of wash vs break-in in <a href="../../guides/motor-wash-vs-break-in/">motor wash vs break-in</a>; the 5 causes of a slow motor in <a href="../../guides/motor-slow-causes-fixes/">motor got slow: causes and fixes</a>.',      'g15.figsum': '<img class="chart" src="/images/conductive-oil-verdict_e.png" alt="Does conductive oil really break in a motor: higher RPM isn\'t done, film break falls back, the oil taints the read" loading="lazy">',
 
       'cl.tag': 'CHANGELOG',
       'cl.title': 'Firmware Release Notes',
@@ -7114,7 +7183,34 @@
       'g17.p7': 'この 12 時間の実験でシリーズのテスト枠組みが決まりました:同一機器、同一の慣らし・測定フロー、同じ 3 つの観測軸——<strong>同回転数電流(消費)、同電圧回転数、体質スコア</strong>。ここから同一条件でタミヤ 15 機種を 1 つずつ:各機種のゴールデン期はどこか、停止点はどれだけ早く来るか、慣らしすぎの代償はどれほどか——1 機種ずつ公開し、すべて<a href="../">ベンチマーク</a>に収録します。',
       'g17.note': '<strong>実験条件:</strong><br>1. Mach-Dash PRO<br>2. 連続低回転慣らし 12 時間<br>3. 全データは同一機器での実測<br>4. 物理根拠:直流モーターの電圧方程式 <code>V = I·R + Ke·ω</code><br>5. 体質スコアはタミヤ公式規格の参考値、判読はトレンド重視',
       'g17.related': '関連:慣らしの全体フローとモード選択 —— <a href="../../guides/motor-break-in-guide/">モーター慣らし完全ガイド</a>;なぜ回転数を固定するのか —— <a href="../../guides/motor-break-in-speed-vs-voltage/">回転数固定、電圧固定にしない理由</a>;モーターが遅くなる 5 つの原因(減磁含む)—— <a href="../../guides/motor-slow-causes-fixes/">モーターが遅くなった原因と対処</a>。',
-      'g15.figsum': '<img class="chart" src="/images/conductive-oil-verdict_j.png" alt="導電オイルは本当に効くか:回転上昇は完了でない、皮膜切れで戻る、オイルが読みを汚すの3点" loading="lazy">',
+
+      'g18.tag': 'BENCHMARK · 劣化の分解',
+      'g18.title': 'モーター洗浄は効果ある?洗浄後 11 時間の実測',
+      'g18.lead': '使い込んだモーターを溶剤で洗うと、回転数も数値も本当に良くなる——だがそれは若返りか、それとも一時的な回光返照か?寿命テストを終えて劣化した Mach-Dash PRO を、洗浄直後に測定し、同じ測定一式で <strong>11 時間</strong>連続運転しました。答えは明快:<strong>汚れは戻り、摩耗した部品は戻らない</strong>——この 2 つを初めてデータで分離しました。本記事は <a href="../when-to-stop-motor-break-in/">12 時間慣らしすぎ実験</a> の後続テストです。',
+      'g18.concl': '<strong>3 行の結論:</strong><br>▸ <strong>戻る</strong> —— 汚れ(カーボン・酸化膜)は落ちる:体質 +5.9(69.6→75.5)、消費減、起動が軽く——しかも戻らない。<br>▸ <strong>戻らない</strong> —— 部品摩耗(ブラシ・整流子)は救えない:接触安定度は悪いまま 44%(健康な個体は 24〜26%)。これは不可逆。<br>▸ <strong>代償あり</strong> —— 脱脂剤はベアリングの油まで抜く。洗浄後に注油しないと空回りして固着する。この工程は絶対に省かない。',
+      'g18.h1': '一、一度洗うと、数値が全面的に改善——若返りのよう',
+      'g18.p1': 'まず洗浄前 vs 後(同一個体、機器温度差 1.5°C 以内の公平比較)。ほぼ全指標が良い方向へ:',
+      'g18.tbl': '<table class="guide-table"><thead><tr><th>指標</th><th>洗浄前</th><th>洗浄後</th><th>変化</th></tr></thead><tbody><tr><td>体質スコア</td><td>69.6%</td><td>75.5%</td><td>+5.9 ▲</td></tr><tr><td>消費(無負荷電流)</td><td>182 mA</td><td>167 mA</td><td>−8% ▼</td></tr><tr><td>起動電圧</td><td>0.26 V</td><td>0.19 V</td><td>−0.07 ▼</td></tr><tr><td>1V 無負荷回転</td><td>10,648</td><td>11,230</td><td>+5.5% ▲</td></tr><tr><td>接触安定度 CV</td><td>42.7%</td><td>44.1%</td><td>ほぼ横ばい(悪いまま)</td></tr></tbody></table>',
+      'g18.p1b': '5 指標が改善、1 指標が不動。改善したものはすべて「汚れ」由来——接触面のカーボンと酸化膜が、洗えば通る。しかし最後の 1 行は動かず、これが以降すべての伏線です。',
+      'g18.h2': '二、11 時間連続運転:ボーナスが返っていく',
+      'g18.p2': '洗った直後の良さは永続なのか?ワンタップ慣らしで 11 時間・約 470 回相当を連続運転し、随時 体質を測定。「回すほど良い」でも「一途に悪化」でもなく——<strong>沈降</strong>:見かけの頂から真の水準へ沈みました。',
+      'g18.fig1': '<img class="chart" src="/images/motor-wash-constitution-timeline_j.png" alt="モーター洗浄は効果ある:洗浄後の体質が見かけの 80.2 から収束値 75.9 へ沈降、真の摩耗基準 75.5" loading="lazy">',
+      'g18.p2b': '2 層で読む:80.2 の頂は「洗浄+冷間+新しい油膜」が押し上げた<strong>一時的ボーナス</strong>で、回せば戻る;だが戻り切った後は 75.5 で安定し、洗浄前の 69.6 へは二度と落ちません。この 6 点(69.6→75.5)は<strong>本当に洗い戻せて、残る</strong>分。だから「回光返照」は半分だけ正解——見かけの分はそうだが、底上げされた分は本物です。',
+      'g18.h3s': '三、なぜ収束?下層パラメータが動かなくなったから',
+      'g18.p3': '75.5 が「真の水準」でまだ下降中ではない、とどう分かるのか?下層の 2 パラメータ——トルク定数 Ke(モーターの磁気体質)と無負荷電流 I0(空転消費)を見ます。測定が直接読む原始値で、スコアより騙しにくい;後半でほぼ凍結:',
+      'g18.fig2': '<img class="chart" src="/images/motor-wash-underlying-params_j.png" alt="下層パラメータの平原:トルク定数 Ke と無負荷電流 I0 が第 6〜9 セッションでほぼ不動、安定摩耗状態への収束を証明" loading="lazy">',
+      'g18.p3b': '下層パラメータが平ら → 体質の小幅な下降は接触面の沈降の収尾で、部品の悪化ではない。<strong>安定した摩耗状態</strong>へ収束——汚れは本当に去り、残るのはこの個体の真の素地です。',
+      'g18.h4s': '四、動かなかったあの線:摩耗は不可逆',
+      'g18.p4': '一節目の伏線へ——接触安定度 CV、洗浄前 42.7%・後 44.1%、まったく動かず。ブラシと整流子の接触の安定さを測る指標で、<strong>低いほど安定</strong>。健康で正常な同型は約 24〜26%(同一機器の実測基準)、この個体は 44% のまま——接触品質が一段劣ります。',
+      'g18.fig3': '<img class="chart" src="/images/motor-wash-contact-stability_j.png" alt="接触安定度は洗い戻せない:この個体は洗浄前後とも 42〜44%、健康な同型は 24〜26% のみ、不可逆の摩耗の証拠" loading="lazy">',
+      'g18.p4b': '溶剤は汚れを溶かせるが、削れた金属は戻らない——これは幾何形状の破壊で、いくら浸けても再生しない。だから判定は不変:<strong>不可逆劣化</strong>。ここで「劣化」が初めて 2 成分に分解されます:<strong>汚染</strong>(二次、洗える、+5.9)と<strong>摩耗</strong>(主因、洗えない、CV 44%)。',
+      'g18.h5': '五、失敗談:脱脂剤はベアリングを空にする',
+      'g18.warn': '<strong>洗浄後に注油しない=空回りで固着。</strong>最初の洗浄・装着で、高速運転中にモーターが崩壊——異音、電流スパイク、固着。原因:脱脂剤は溶剤で、含油スリーブベアリングの孔から油まで抜き取り、乾いたベアリングが固着する。再注油して浸透させてから復帰運転すると正常、ベアリング惰行テストでも恒久損傷なしを確認。結論:<strong>溶剤でモーターを洗ったら、後の「注油」は必須工程で、任意ではありません。</strong>',
+      'g18.h6': '六、では、モーターは洗うべきか?',
+      'g18.p6': '<strong>洗う価値あり</strong>:長く使って鈍く感じ、データが「汚染型劣化」(起動が重い、消費増、でも回転はある)。一度洗えば汚れボーナスを取り戻し、しかも残る——コスパ良好。<strong>戻らない</strong>:接触安定度が既に悪化(CV が正常より大幅に高い)、真値電流がカタログ帯を超えるなら部品摩耗;洗っても汚れの小片しか戻らず本体は救えません——交換時です。',
+      'g18.p6b': '自分がどちらか、どう見分ける?回転数だけでは分けられません——汚れも摩耗もモーターを鈍くします。3 つの数字で分解:<strong>体質スコア</strong>(本体の良否)、<strong>無負荷電流</strong>(汚れ具合)、<strong>接触安定度</strong>(摩耗の程度)。これこそ機器上の <a href="../../guides/motor-break-in-guide/">AI トルク予測</a> が十数分で教えてくれることです。',
+      'g18.note': '<strong>実験条件:</strong><br>1. Mach-Dash PRO(寿命テスト後の劣化サンプル)<br>2. 洗浄:溶剤で洗い、残液を除去し、ベアリングを再注油<br>3. 11 時間連続運転(約 470 回相当)、同一機器で実測<br>4. 測定:AI トルク予測 + ブラシ接触安定テスト + ベアリング抵抗テスト<br>5. 24〜26% は同型の正常個体の同一機器実測基準で、公式データではありません',
+      'g18.related': '関連:過慣らしがモーターを一歩ずつ削る様子は <a href="../when-to-stop-motor-break-in/">12 時間慣らしすぎ実験</a>;洗浄 vs 慣らしの考え方は <a href="../../guides/motor-wash-vs-break-in/">モーター洗浄 vs 慣らし</a>;モーターが遅くなる 5 つの原因は <a href="../../guides/motor-slow-causes-fixes/">モーターが遅くなった原因と対処</a>;洗浄が効くのかは <a href="../does-washing-a-motor-work/">モーター洗浄は効果ある?</a>。',      'g15.figsum': '<img class="chart" src="/images/conductive-oil-verdict_j.png" alt="導電オイルは本当に効くか:回転上昇は完了でない、皮膜切れで戻る、オイルが読みを汚すの3点" loading="lazy">',
     }
   };
 
