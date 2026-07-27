@@ -3925,6 +3925,40 @@
       </article>
 
 
+      <article class="guide-article">
+        <span class="guide-tag" data-i18n="g19.tag">BENCHMARK · 電擊修復</span>
+        <h3 data-i18n="g19.title">退役死亡的馬達還有救嗎?馬達電擊修復實驗給你看</h3>
+        <p class="guide-lead" data-i18n="g19.lead">一顆已經退役、磁力流失的 Mach-Dash PRO,還救得回來嗎?我們用 MotorLab ＋ 外部電源,對它做一次「電擊修復」——把工業界<strong>變磁通記憶馬達 VFMM</strong>(用電流脈衝重新充磁)的原理,搬到四驅車馬達上實測。結果很有意思:<strong>磁力充得回(可逆),磨損救不回(不可逆)</strong>。本文是接續 <a href="../does-washing-a-motor-work/">洗馬達實驗</a> 的後續測試,同一顆退役樣本再往下走一步。</p>
+
+        <div class="guide-tip">
+          <p data-i18n="g19.concl"><strong>三行結論:</strong><br>▸ <strong>磁力:充得回(可逆)。</strong>一次 9V 電擊,把退役馬達流失的磁力重新充強 +18%——但這是暫時的,運轉後會慢慢再流失,不是永久。<br>▸ <strong>磨損:救不回(不可逆)。</strong>碳刷和整流子是物理磨耗,電擊、清洗都補不回材料。<br>▸ <strong>原理:</strong>借工業界變磁通記憶馬達 VFMM 的概念——用電流脈衝把鐵氧體磁鐵重新充磁。</p>
+        </div>
+
+        <h4 data-i18n="g19.h1">一、實驗怎麼做</h4>
+        <p data-i18n="g19.p1">流程很單純:<strong>電擊前量測 → 電擊 → 洗馬達 → 電擊後量測 → AI 智慧磨合長時運轉(間隔量測)→ 結束</strong>。電擊用外部電源 DC 9V、正轉 60 秒(脈衝電擊);之後洗掉電擊產生的碳粉、補油,再回機量測——先把暫態髒污清掉,才能單看電擊留下的<strong>永久</strong>效果,不被髒污糊了判讀。全程量測都用機上內建功能:AI 扭力預測、AI 智慧磨合、電刷接觸穩定測試、軸承阻力測試。</p>
+
+        <h4 data-i18n="g19.h2">二、磁力:一次電擊,充回 +18%</h4>
+        <p data-i18n="g19.p2">我們用一個很難騙的指標當「退磁照妖鏡」——<strong>磁力指標 Ke</strong>(反電動勢常數,正比於磁鐵強度;碳粉、洗不洗都動不到它)。電擊前這顆穩定卡在 0.000415,電擊後<strong>跳到 0.000491,+18%</strong>。而且不只 Ke:定壓下轉速降、同轉速要餵更高電壓、同轉速更省電流——四條各自獨立的線全部同向指「磁變強」,這正是重新充磁的教科書簽名。</p>
+        <figure data-i18n="g19.fig"><img class="chart" src="/images/motor-remagnetize-shock-reform_c.png" alt="退役馬達電擊修復:9V 電擊把磁力指標 Ke 充回 +18%(可逆),運轉 6.7 小時後保留 63%;只有磁鐵族大動,接觸/軸承/繞組不動,證明磨損不可逆" loading="lazy"></figure>
+        <p data-i18n="g19.p2b">上排左邊那格就是磁力充回來的軌跡:從退役基線一發電擊跳上峰值。這一步證明——<strong>退役馬達流失的磁力,是可以充回來的。</strong></p>
+
+        <h4 data-i18n="g19.h3s">三、但只是暫時的:運轉後慢慢流失</h4>
+        <p data-i18n="g19.p3">充回來能撐多久?我們接著用 AI 智慧磨合連續操它 <strong>6.7 小時</strong>,每隔一段量一次 Ke。結果不是一路掉光,也不是永久定住——磁力從峰值慢慢往下沉,最後<strong>仍保留約 63% 的電擊增益</strong>,而且衰減在減速,趨向一條比退役前更高的新水準。所以「充磁回魂」是真的,但它會隨正常使用慢慢再流失,不是一勞永逸。</p>
+
+        <h4 data-i18n="g19.h4s">四、磨損:電擊、清洗都救不回</h4>
+        <p data-i18n="g19.p4">磁力充回來了,那接觸面呢?看下排右邊那格機制分解:大動的只有磁鐵族(綠),而<strong>電刷接觸穩定度、軸承阻力、繞組電阻幾乎沒動(灰)</strong>。這說明電擊只補了磁力,對磨損毫無幫助——碳刷和整流子是物理磨耗,磨掉的金屬回不來,電擊補不回、清洗也補不回。體質分數看起來變好,大半是磁力變強的連帶,不是接觸面真的修復了。</p>
+
+        <div class="guide-warning">
+          <p data-i18n="g19.warn"><strong>電擊有代價,別亂試。</strong>高壓電擊本身會磨蝕接觸面:對已經磨爛的馬達沒救,對狀態還好的馬達只會傷。而且這是 <strong>n=1</strong> 的單顆實驗、機制尚未完全鎖死,換更高電壓或更久,可能反而加速退磁與侵蝕。這是實驗紀錄,不是操作教學,請勿對堪用馬達自行電擊。</p>
+        </div>
+
+        <h4 data-i18n="g19.h5">五、所以,退役馬達還有救嗎?</h4>
+        <p data-i18n="g19.p5">看它「死在哪」。如果是<strong>磁力流失</strong>(掉磁),那有機會用充磁的概念補回一截——但暫時。如果是<strong>接觸面磨損</strong>(碳刷、整流子磨耗),那電擊、清洗都救不回,該退就退。一句話:<strong>電擊能幫退役馬達「充磁回魂」,但磨爛的接觸面沒救。</strong>怎麼分辨自己是哪一種?靠機上的 AI 扭力預測十幾分鐘拆給你看——磁力體質、耗電、接觸穩定度,三個數字各說各話。</p>
+
+        <p data-i18n="g19.note"><strong>實驗條件:</strong><br>1. Mach-Dash PRO(退役樣本)<br>2. 高壓電擊:外部電源 DC 9V／60 秒(脈衝電擊)<br>3. 清洗:環保去漬油,DC 1.5V／3 分鐘,並重新為軸承補油<br>4. AI 智慧磨合長時運轉 6.7 小時,同一台機器實測<br>5. 量測:AI 扭力預測 + 電刷接觸穩定測試 + 軸承阻力測試<br>6. n=1 單顆實驗,結論待複製;磁力數據以 Ke 為主軸(不受清洗影響)</p>
+        <p class="guide-related" data-i18n="g19.related">延伸閱讀:同一顆樣本的洗馬達實驗,見 <a href="../does-washing-a-motor-work/">洗馬達有用嗎</a>;過磨如何磨壞馬達,見 <a href="../when-to-stop-motor-break-in/">12 小時過磨實驗</a>;洗馬達 vs 磨合的觀念,見 <a href="../../guides/motor-wash-vs-break-in/">洗馬達 vs 磨合</a>。</p>
+      </article>
+
 
 
     </div>
@@ -6126,7 +6160,29 @@
       'g18.p6': '<strong>Worth washing</strong>: the motor feels dull after long use and the data says "contamination-type decay" (heavier start, higher draw, but RPM still there). One wash reclaims the dirt bonus and it stays — great value. <strong>Not recoverable</strong>: if contact stability is already bad (CV far above normal) and true-value current exceeds the catalog band, that\'s part wear — washing only reclaims the small dirt slice, not the body. Time to replace the motor.',
       'g18.p6b': 'How to tell which you have? RPM alone won\'t separate them — both dirt and wear make a motor feel dull. It takes three numbers: <strong>constitution score</strong> (body health), <strong>no-load current</strong> (how dirty), and <strong>contact stability</strong> (degree of wear). That is exactly what the on-machine AI torque prediction tells you in about fifteen minutes.',
       'g18.note': '<strong>Test conditions:</strong><br>1. Mach-Dash PRO (a decayed sample after a life test)<br>2. Cleaning: solvent wash, flush out residue, and re-oil the bearing<br>3. 11 hours continuous run (about 470 equivalent rounds), same machine<br>4. Measurement: AI torque prediction + brush contact stability test + bearing resistance test<br>5. 24-26% is a same-rig measured baseline for normal units of this model, not official data',
-      'g18.related': 'Further reading: how over-break-in wears a motor down step by step in <a href="../when-to-stop-motor-break-in/">the 12-hour over-break-in test</a>; the concept of wash vs break-in in <a href="../../guides/motor-wash-vs-break-in/">motor wash vs break-in</a>; the 5 causes of a slow motor in <a href="../../guides/motor-slow-causes-fixes/">motor got slow: causes and fixes</a>.',      'g15.figsum': '<img class="chart" src="/images/conductive-oil-verdict_e.png" alt="Does conductive oil really break in a motor: higher RPM isn\'t done, film break falls back, the oil taints the read" loading="lazy">',
+      'g18.related': 'Further reading: how over-break-in wears a motor down step by step in <a href="../when-to-stop-motor-break-in/">the 12-hour over-break-in test</a>; the concept of wash vs break-in in <a href="../../guides/motor-wash-vs-break-in/">motor wash vs break-in</a>; the 5 causes of a slow motor in <a href="../../guides/motor-slow-causes-fixes/">motor got slow: causes and fixes</a>.',
+
+      'g19.tag': 'BENCHMARK · Shock Repair',
+      'g19.title': 'Can a Dead, Retired Motor Be Saved? An Electric-Shock Repair Experiment',
+      'g19.lead': 'Can a retired, magnet-drained Mach-Dash PRO be brought back? Using MotorLab + an external power supply, we gave it one "electric-shock repair" — borrowing the principle of the industrial <strong>Variable Flux Memory Motor (VFMM)</strong> (a current pulse re-magnetizes the magnet) and testing it on a Mini 4WD motor. The result is interesting: <strong>magnetism can be recharged (reversible), wear cannot (irreversible)</strong>. This is a follow-up to the <a href="../does-washing-a-motor-work/">motor-wash experiment</a>, taking the same retired sample one step further.',
+      'g19.concl': '<strong>Three-line verdict:</strong><br>▸ <strong>Magnetism: rechargeable (reversible).</strong> One 9V shock re-charges a retired motor\'s drained magnetism +18% — but it\'s temporary; it bleeds off again as you run, not permanent.<br>▸ <strong>Wear: unrecoverable (irreversible).</strong> Brushes and commutator are physical wear; neither shock nor wash puts material back.<br>▸ <strong>The principle:</strong> borrowed from the industrial Variable Flux Memory Motor (VFMM) — a current pulse re-magnetizes the ferrite magnet.',
+      'g19.h1': '1. How the experiment was run',
+      'g19.p1': 'The flow is simple: <strong>pre-shock measurement → shock → motor wash → post-shock measurement → long run under AI Smart Break-In (measuring at intervals) → done</strong>. The shock was an external supply at DC 9V, forward, 60 seconds (a pulse shock); afterward we washed off the carbon the shock produced, re-oiled, and remeasured — clearing the transient dirt first so we read only the <strong>permanent</strong> effect of the shock, not a dirt-blurred one. Everything was measured with on-machine built-ins: AI Torque Prediction, AI Smart Break-In, the brush contact-stability test, and the bearing drag test.',
+      'g19.h2': '2. Magnetism: one shock, recharged +18%',
+      'g19.p2': 'We used a hard-to-fool metric as the "demag detector" — the <strong>magnet index Ke</strong> (back-EMF constant, proportional to magnet strength; carbon and washing can\'t touch it). Before the shock it sat steady at 0.000415; after, it <strong>jumped to 0.000491, +18%</strong>. And not just Ke: at fixed voltage the RPM dropped, at the same speed it needed more voltage, and at the same speed it drew less current — four independent lines all pointing the same way, "stronger magnet." That is the textbook signature of re-magnetization.',
+      'g19.fig': '<img class="chart" src="/images/motor-remagnetize-shock-reform_e.png" alt="Reviving a dead motor with an electric shock: a 9V shock recharges the magnet index Ke +18% (reversible), 63% kept after a 6.7-hour run; only the magnet family moves while contact, bearing and winding stay flat — proof that wear is irreversible" loading="lazy">',
+      'g19.p2b': 'The top-left panel is the recharge trajectory: from the retired baseline, one shock jumps to the peak. This step proves it — <strong>a retired motor\'s drained magnetism can be recharged.</strong>',
+      'g19.h3s': '3. But only temporary: it bleeds off as you run',
+      'g19.p3': 'How long does it hold? We then ran it under AI Smart Break-In for <strong>6.7 hours</strong>, sampling Ke along the way. It did not drain all the way, nor lock in place — magnetism sank slowly from the peak and finally <strong>kept about 63% of the shock gain</strong>, with the decay slowing down, trending toward a new level higher than pre-retirement. So the "magnetic revival" is real, but it slowly bleeds off again with normal use — not a one-and-done fix.',
+      'g19.h4s': '4. Wear: neither shock nor wash brings it back',
+      'g19.p4': 'The magnet came back — what about the contact face? Look at the mechanism breakdown (bottom-right panel): the only thing that moves is the magnet family (green), while <strong>brush contact stability, bearing drag and winding resistance barely move (grey)</strong>. So the shock only topped up the magnet and did nothing for wear — brushes and commutator are physical wear, and metal ground away does not come back; no shock or wash restores it. The constitution score looks better mostly as a knock-on of the stronger magnet, not because the contact face was actually repaired.',
+      'g19.warn': '<strong>The shock has a cost — do not just try it.</strong> A high-voltage shock itself erodes the contact face: no help for an already-worn motor, and only damage to a healthy one. This is also an <strong>n=1</strong> single-unit experiment with the mechanism not fully pinned down; a higher voltage or longer pulse could instead accelerate demagnetization and erosion. This is an experiment log, not a how-to — do not shock a serviceable motor yourself.',
+      'g19.h5': '5. So — can a retired motor be saved?',
+      'g19.p5': 'It depends on how it "died." If it is <strong>lost magnetism</strong> (demag), there is a chance to recharge some of it back — but temporarily. If it is <strong>contact-face wear</strong> (brush, commutator), neither shock nor wash saves it; retire it. In one line: <strong>a shock can bring a retired motor\'s magnetism back from the dead, but a worn-out contact face is beyond saving.</strong> How to tell which you have? The on-machine AI Torque Prediction breaks it down in about fifteen minutes — magnetic health, power draw, and contact stability, three numbers each telling their own story.',
+      'g19.note': '<strong>Test conditions:</strong><br>1. Mach-Dash PRO (retired sample)<br>2. High-voltage shock: external supply, DC 9V / 60 s (pulse shock)<br>3. Cleaning: eco degreaser, DC 1.5V / 3 min, and re-oil the bearing<br>4. AI Smart Break-In long run, 6.7 hours, same machine<br>5. Measurement: AI Torque Prediction + brush contact-stability test + bearing drag test<br>6. n=1 single-unit experiment, verdict pending replication; magnet data anchored on Ke (unaffected by washing)',
+      'g19.related': 'Further reading: the motor-wash experiment on the same sample in <a href="../does-washing-a-motor-work/">does washing a motor work</a>; how over-break-in wears a motor down in <a href="../when-to-stop-motor-break-in/">the 12-hour over-break-in test</a>; the concept of wash vs break-in in <a href="../../guides/motor-wash-vs-break-in/">motor wash vs break-in</a>.',
+
+      'g15.figsum': '<img class="chart" src="/images/conductive-oil-verdict_e.png" alt="Does conductive oil really break in a motor: higher RPM isn\'t done, film break falls back, the oil taints the read" loading="lazy">',
 
       'cl.tag': 'CHANGELOG',
       'cl.title': 'Firmware Release Notes',
@@ -7256,7 +7312,29 @@
       'g18.p6': '<strong>洗う価値あり</strong>:長く使って鈍く感じ、データが「汚染型劣化」(起動が重い、消費増、でも回転はある)。一度洗えば汚れボーナスを取り戻し、しかも残る——コスパ良好。<strong>戻らない</strong>:接触安定度が既に悪化(CV が正常より大幅に高い)、真値電流がカタログ帯を超えるなら部品摩耗;洗っても汚れの小片しか戻らず本体は救えません——交換時です。',
       'g18.p6b': '自分がどちらか、どう見分ける?回転数だけでは分けられません——汚れも摩耗もモーターを鈍くします。3 つの数字で分解:<strong>体質スコア</strong>(本体の良否)、<strong>無負荷電流</strong>(汚れ具合)、<strong>接触安定度</strong>(摩耗の程度)。これこそ機器上の AI トルク予測が十数分で教えてくれることです。',
       'g18.note': '<strong>実験条件:</strong><br>1. Mach-Dash PRO(寿命テスト後の劣化サンプル)<br>2. 洗浄:溶剤で洗い、残液を除去し、ベアリングを再注油<br>3. 11 時間連続運転(約 470 回相当)、同一機器で実測<br>4. 測定:AI トルク予測 + ブラシ接触安定テスト + ベアリング抵抗テスト<br>5. 24〜26% は同型の正常個体の同一機器実測基準で、公式データではありません',
-      'g18.related': '関連:過慣らしがモーターを一歩ずつ削る様子は <a href="../when-to-stop-motor-break-in/">12 時間慣らしすぎ実験</a>;洗浄 vs 慣らしの考え方は <a href="../../guides/motor-wash-vs-break-in/">モーター洗浄 vs 慣らし</a>;モーターが遅くなる 5 つの原因は <a href="../../guides/motor-slow-causes-fixes/">モーターが遅くなった原因と対処</a>;洗浄が効くのかは <a href="../does-washing-a-motor-work/">モーター洗浄は効果ある?</a>。',      'g15.figsum': '<img class="chart" src="/images/conductive-oil-verdict_j.png" alt="導電オイルは本当に効くか:回転上昇は完了でない、皮膜切れで戻る、オイルが読みを汚すの3点" loading="lazy">',
+      'g18.related': '関連:過慣らしがモーターを一歩ずつ削る様子は <a href="../when-to-stop-motor-break-in/">12 時間慣らしすぎ実験</a>;洗浄 vs 慣らしの考え方は <a href="../../guides/motor-wash-vs-break-in/">モーター洗浄 vs 慣らし</a>;モーターが遅くなる 5 つの原因は <a href="../../guides/motor-slow-causes-fixes/">モーターが遅くなった原因と対処</a>;洗浄が効くのかは <a href="../does-washing-a-motor-work/">モーター洗浄は効果ある?</a>。',
+
+      'g19.tag': 'BENCHMARK · 電気ショック修復',
+      'g19.title': '死んだミニ四駆モーターは救える?電気ショック修復実験',
+      'g19.lead': '引退して磁力が抜けたマッハダッシュPRO は、まだ救えるのか?MotorLab ＋ 外部電源で一度「電気ショック修復」をかけた——産業用<strong>可変磁束メモリーモーター VFMM</strong>(電流パルスで再着磁する)の原理を、ミニ四駆モーターで実測。結果は面白い:<strong>磁力は充て直せる(可逆)、摩耗は戻せない(不可逆)</strong>。本記事は <a href="../does-washing-a-motor-work/">モーター洗浄実験</a> の続きで、同じ引退サンプルをさらに一歩進めたものです。',
+      'g19.concl': '<strong>3 行の結論:</strong><br>▸ <strong>磁力:充て直せる(可逆)。</strong>9V 一発で引退モーターの抜けた磁力を +18% 充て直せる——ただし一時的で、回すとまた少しずつ抜けていく。永久ではない。<br>▸ <strong>摩耗:戻せない(不可逆)。</strong>ブラシと整流子は物理的な摩耗で、ショックも洗浄も材料は戻せない。<br>▸ <strong>原理:</strong>産業用の可変磁束メモリーモーター VFMM の概念を借用——電流パルスでフェライト磁石を再着磁する。',
+      'g19.h1': '一、実験のやり方',
+      'g19.p1': '流れはシンプル:<strong>ショック前の測定 → 電気ショック → モーター洗浄 → ショック後の測定 → AIスマート慣らしで長時間運転(途中で測定)→ 終了</strong>。ショックは外部電源で DC 9V・正転 60 秒(パルスショック);その後ショックで出たカーボンを洗い落とし、注油してから再測定——先に一時的な汚れを消すことで、ショックが残した<strong>永久</strong>効果だけを、汚れにぼかされず読める。測定はすべて本体の内蔵機能:AIトルク予測、AIスマート慣らし、ブラシ接触安定テスト、ベアリング抵抗テスト。',
+      'g19.h2': '二、磁力:一発のショックで +18% 充て直せた',
+      'g19.p2': 'だましにくい指標を「減磁の検出役」に使った——<strong>磁力の指標 Ke</strong>(逆起電力定数、磁石の強さに比例;カーボンも洗浄も動かせない)。ショック前は 0.000415 で安定、ショック後は<strong>0.000491 に跳ね上がり +18%</strong>。しかも Ke だけでなく:定電圧で回転数が下がる、同回転数でより高い電圧が必要、同回転数で電流が減る——独立した 4 本の線がすべて「磁力が強くなった」を指す。これは再着磁の教科書的サイン。',
+      'g19.fig': '<img class="chart" src="/images/motor-remagnetize-shock-reform_j.png" alt="引退モーターの電気ショック修復:9V ショックで磁力の指標 Ke を +18% 充て直し(可逆)、6.7 時間運転後も 63% 保持;大きく動くのは磁石系だけで、接触/軸受/巻線は不動——摩耗が不可逆である証拠" loading="lazy">',
+      'g19.p2b': '上段左のグラフが磁力を充て直した推移:引退ベースラインから一発のショックでピークへ跳ね上がる。このステップが証明する——<strong>引退モーターの抜けた磁力は、充て直せる。</strong>',
+      'g19.h3s': '三、ただし一時的:回すと少しずつ抜ける',
+      'g19.p3': 'どれくらい保つ?続けて AIスマート慣らしで <strong>6.7 時間</strong> 連続運転し、途中で Ke を測った。抜け切りもせず、固定もされず——磁力はピークからゆっくり沈み、最終的に<strong>ショック増分の約 63% を保持</strong>、しかも減衰は鈍化し、引退前より高い新しい水準へ向かう。つまり「磁力の喝入れ」は本物だが、普通に使えばまた少しずつ抜けていく。一発で永久ではない。',
+      'g19.h4s': '四、摩耗:ショックも洗浄も戻せない',
+      'g19.p4': '磁力は戻った、では接触面は?下段右のメカニズム分解を見ると、大きく動くのは磁石系(緑)だけで、<strong>ブラシ接触安定度・ベアリング抵抗・巻線抵抗はほぼ不動(灰)</strong>。ショックは磁力を補っただけで、摩耗には何もしていない——ブラシと整流子は物理的な摩耗で、削れた金属は戻らず、ショックでも洗浄でも戻せない。体質スコアが良く見えるのは大半が磁力強化の副次で、接触面が本当に直ったわけではない。',
+      'g19.warn': '<strong>ショックには代償がある、むやみに試さないこと。</strong>高電圧ショック自体が接触面を侵食する:すでに摩耗したモーターは救えず、状態の良い個体はむしろ傷めるだけ。しかもこれは <strong>n=1</strong> の 1 個実験でメカニズムも完全には固まっておらず、より高電圧・長時間だと逆に減磁と侵食を早める可能性がある。これは実験記録であって操作の手引きではない。使えるモーターに自分でショックをかけないこと。',
+      'g19.h5': '五、で、引退モーターは救えるのか?',
+      'g19.p5': '「どこで死んだか」による。<strong>磁力抜け</strong>(減磁)なら、再着磁の概念で一部は充て直せる——ただし一時的。<strong>接触面の摩耗</strong>(ブラシ・整流子)なら、ショックも洗浄も戻せない、引退させるべき。一言で:<strong>ショックは引退モーターの「磁力を蘇らせる」ことはできても、摩耗しきった接触面は救えない。</strong>自分がどちらか見分けるには?本体の AIトルク予測が十数分で分解してくれる——磁力の体質、消費電流、接触安定度、3 つの数字がそれぞれを語る。',
+      'g19.note': '<strong>実験条件:</strong><br>1. マッハダッシュPRO(引退サンプル)<br>2. 高電圧ショック:外部電源 DC 9V／60 秒(パルスショック)<br>3. 洗浄:環境配慮型の脱脂剤、DC 1.5V／3 分、そしてベアリングに再注油<br>4. AIスマート慣らしで長時間運転 6.7 時間、同一の機械で実測<br>5. 測定:AIトルク予測 + ブラシ接触安定テスト + ベアリング抵抗テスト<br>6. n=1 の 1 個実験、結論は再現待ち;磁力データは Ke を主軸(洗浄の影響を受けない)',
+      'g19.related': '関連:同じサンプルのモーター洗浄実験は <a href="../does-washing-a-motor-work/">モーター洗浄は効果ある?</a>;慣らしすぎがモーターを削る話は <a href="../when-to-stop-motor-break-in/">12 時間慣らしすぎ実験</a>;洗浄 vs 慣らしの考え方は <a href="../../guides/motor-wash-vs-break-in/">モーター洗浄 vs 慣らし</a>。',
+
+      'g15.figsum': '<img class="chart" src="/images/conductive-oil-verdict_j.png" alt="導電オイルは本当に効くか:回転上昇は完了でない、皮膜切れで戻る、オイルが読みを汚すの3点" loading="lazy">',
     }
   };
 

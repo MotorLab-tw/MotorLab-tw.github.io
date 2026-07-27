@@ -772,6 +772,37 @@ GUIDES = [
             },
         },
     },
+    # ---------- g19:電擊修復 benchmark(衰退拆解 #03;接續 g18 的後續測試)----------
+    {
+        "slug": "revive-dead-motor-electric-shock",
+        "key": "g19",
+        "published": "2026-07-27",
+        "updated": "2026-07-27",
+        "type": "benchmarks",
+        "i18n": {
+            "zh": {
+                "title": "退役馬達還有救嗎?電擊修復實測:磁力充得回、磨損救不回 | MotorLab",
+                "description": "退役死亡的馬達還有救嗎?我們對一顆退役 Mach-Dash PRO 做「電擊修復」實測:一次 9V 電擊把流失的磁力充回 +18%(可逆但暫時,運轉 6.7 小時後仍保留 63%);但碳刷、整流子的磨損,電擊、清洗都救不回。原理是工業界的變磁通記憶馬達 VFMM。",
+                "keywords": "退役馬達 修復, 馬達電擊, 馬達充磁, 馬達磁力 恢復, VFMM, 迷你四驅車 馬達, 馬達磨損, MotorLab",
+                "breadcrumb": "電擊修復",
+                "h1_for_ld": "退役死亡的馬達還有救嗎?馬達電擊修復實驗給你看",
+            },
+            "en": {
+                "title": "Can a Dead Motor Be Revived? An Electric-Shock Repair Test | MotorLab",
+                "description": "Can a dead, retired motor be saved? We ran an electric-shock repair on a retired Mach-Dash PRO: one 9V shock recharged the lost magnetism +18% (reversible but temporary — 63% still kept after a 6.7-hour run). But brush and commutator wear can't be shocked or washed back. The principle: the industrial Variable Flux Memory Motor (VFMM).",
+                "keywords": "revive dead motor, motor electric shock repair, re-magnetize motor, restore motor magnetism, VFMM, mini 4wd motor, motor wear, MotorLab",
+                "breadcrumb": "Shock Repair",
+                "h1_for_ld": "Can a Dead, Retired Motor Be Saved? An Electric-Shock Repair Experiment",
+            },
+            "ja": {
+                "title": "死んだミニ四駆モーターは救える?電気ショック修復の実測 | MotorLab",
+                "description": "引退して死んだモーターは救えるのか?引退した Mach-Dash PRO に電気ショック修復を実施:9V 一発で抜けた磁力を +18% 充て直せた(可逆だが一時的、6.7 時間運転後も 63% 保持)。だがブラシ・整流子の摩耗はショックも洗浄も戻せない。原理は産業用の可変磁束メモリーモーター VFMM。",
+                "keywords": "ミニ四駆 モーター 死亡, ミニ四駆 モーター 寿命, モーター 復活, モーター 電気ショック, モーター 着磁, 磁力 回復, VFMM, MotorLab",
+                "breadcrumb": "電気ショック修復",
+                "h1_for_ld": "引退して死んだモーターは救える?電気ショック修復実験",
+            },
+        },
+    },
 ]
 
 # UI 字串(教學頁面通用元件:nav / 麵包屑 / 分頁)
@@ -885,7 +916,7 @@ HUBS = [
     },
     {
         "slug": "benchmarks",
-        "include": ["g3", "g9", "g17", "g18"],
+        "include": ["g3", "g9", "g17", "g18", "g19"],
         "i18n": {
             "zh": {
                 "title": "效能對比 — 田宮 Mini 4WD® 馬達規格速查 | MotorLab",

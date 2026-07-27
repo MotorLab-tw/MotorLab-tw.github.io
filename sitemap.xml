@@ -6,7 +6,7 @@
   <!-- Homepages -->
   <url>
     <loc>https://motorlab-tw.github.io/</loc>
-    <lastmod>2026-07-24</lastmod>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/"/>
@@ -21,7 +21,7 @@
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/en/</loc>
-    <lastmod>2026-07-24</lastmod>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/"/>
@@ -36,7 +36,7 @@
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/ja/</loc>
-    <lastmod>2026-07-24</lastmod>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/"/>
@@ -1194,6 +1194,48 @@
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/motor-wash-contact-stability_j.png</image:loc>
       <image:title>接触安定度は洗い戻せない=不可逆摩耗</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://motorlab-tw.github.io/benchmarks/revive-dead-motor-electric-shock/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/benchmarks/revive-dead-motor-electric-shock/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/benchmarks/revive-dead-motor-electric-shock/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/benchmarks/revive-dead-motor-electric-shock/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/benchmarks/revive-dead-motor-electric-shock/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motor-remagnetize-shock-reform_c.png</image:loc>
+      <image:title>退役馬達電擊修復:磁力充回 +18%(可逆),磨損救不回</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://motorlab-tw.github.io/en/benchmarks/revive-dead-motor-electric-shock/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/benchmarks/revive-dead-motor-electric-shock/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/benchmarks/revive-dead-motor-electric-shock/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/benchmarks/revive-dead-motor-electric-shock/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/benchmarks/revive-dead-motor-electric-shock/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motor-remagnetize-shock-reform_e.png</image:loc>
+      <image:title>Reviving a dead motor: magnet recharged +18% (reversible), wear not</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://motorlab-tw.github.io/ja/benchmarks/revive-dead-motor-electric-shock/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/benchmarks/revive-dead-motor-electric-shock/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/benchmarks/revive-dead-motor-electric-shock/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/benchmarks/revive-dead-motor-electric-shock/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/benchmarks/revive-dead-motor-electric-shock/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motor-remagnetize-shock-reform_j.png</image:loc>
+      <image:title>引退モーターの電気ショック修復:磁力を +18% 充て直し(可逆)、摩耗は戻せない</image:title>
     </image:image>
   </url>
 </urlset>
