@@ -1996,7 +1996,7 @@
 <h2 data-i18n="g19.h1">一、實驗怎麼做</h2>
 <p data-i18n="g19.p1">流程很單純:<strong>電擊前量測 → 電擊 → 洗馬達 → 電擊後量測 → AI 智慧磨合長時運轉(間隔量測)→ 結束</strong>。電擊用外部電源 DC 9V、正轉 60 秒(脈衝電擊);之後洗掉電擊產生的碳粉、補油,再回機量測——先把暫態髒污清掉,才能單看電擊留下的<strong>永久</strong>效果,不被髒污糊了判讀。全程量測都用機上內建功能:AI 扭力預測、AI 智慧磨合、電刷接觸穩定測試、軸承阻力測試。</p>
 <h2 data-i18n="g19.h2">二、磁力:一次電擊,充回 +18%</h2>
-<p data-i18n="g19.p2">我們用一個很難騙的指標當「退磁照妖鏡」——<strong>磁力指標 Ke</strong>(反電動勢常數,正比於磁鐵強度;碳粉、洗不洗都動不到它)。電擊前這顆穩定卡在 0.000415,電擊後<strong>跳到 0.000491,+18%</strong>。而且不只 Ke:定壓下轉速降、同轉速要餵更高電壓、同轉速更省電流——四條各自獨立的線全部同向指「磁變強」,這正是重新充磁的教科書簽名。</p>
+<p data-i18n="g19.p2">我們用一個很難騙的指標當「退磁照妖鏡」——<strong>磁力指標 Ke</strong>。電擊前這顆穩定卡在 0.000415,電擊後<strong>跳到 0.000491,+18%</strong>。而且不只 Ke:定壓下轉速降、同轉速要餵更高電壓、同轉速更省電流——四條各自獨立的線全部同向指「磁變強」,這正是重新充磁的教科書簽名。</p>
 <figure data-i18n="g19.fig"><img alt="退役馬達電擊修復:9V 電擊把磁力指標 Ke 充回 +18%(可逆),運轉 6.7 小時後保留 63%;只有磁鐵族大動,接觸/軸承/繞組不動,證明磨損不可逆" class="chart" loading="lazy" src="/images/motor-remagnetize-shock-reform_c.png"/></figure>
 <p data-i18n="g19.p2b">上排左邊那格就是磁力充回來的軌跡:從退役基線一發電擊跳上峰值。這一步證明——<strong>退役馬達流失的磁力,是可以充回來的。</strong></p>
 <h2 data-i18n="g19.h3s">三、但只是暫時的:運轉後慢慢流失</h2>
@@ -2008,7 +2008,7 @@
 </div>
 <h2 data-i18n="g19.h5">五、所以,退役馬達還有救嗎?</h2>
 <p data-i18n="g19.p5">看它「死在哪」。如果是<strong>磁力流失</strong>(掉磁),那有機會用充磁的概念補回一截——但暫時。如果是<strong>接觸面磨損</strong>(碳刷、整流子磨耗),那電擊、清洗都救不回,該退就退。一句話:<strong>電擊能幫退役馬達「充磁回魂」,但磨爛的接觸面沒救。</strong>怎麼分辨自己是哪一種?靠機上的 AI 扭力預測十幾分鐘拆給你看——磁力體質、耗電、接觸穩定度,三個數字各說各話。</p>
-<p data-i18n="g19.note"><strong>實驗條件:</strong><br/>1. Mach-Dash PRO(退役樣本)<br/>2. 高壓電擊:外部電源 DC 9V／60 秒(脈衝電擊)<br/>3. 清洗:環保去漬油,DC 1.5V／3 分鐘,並重新為軸承補油<br/>4. AI 智慧磨合長時運轉 6.7 小時,同一台機器實測<br/>5. 量測:AI 扭力預測 + 電刷接觸穩定測試 + 軸承阻力測試<br/>6. n=1 單顆實驗,結論待複製;磁力數據以 Ke 為主軸(不受清洗影響)</p>
+<p data-i18n="g19.note"><strong>實驗條件:</strong><br/>1. Mach-Dash PRO(退役樣本)<br/>2. 高壓電擊:外部電源 DC 9V／60 秒(脈衝電擊)<br/>3. 清洗:環保去漬油,DC 1.5V／3 分鐘,並重新為軸承補油<br/>4. AI 智慧磨合長時運轉 6.7 小時,同一台機器實測<br/>5. 量測:AI 扭力預測 + 電刷接觸穩定測試 + 軸承阻力測試</p>
 <p class="guide-related" data-i18n="g19.related">延伸閱讀:同一顆樣本的洗馬達實驗,見 <a href="../does-washing-a-motor-work/">洗馬達有用嗎</a>;過磨如何磨壞馬達,見 <a href="../when-to-stop-motor-break-in/">12 小時過磨實驗</a>;洗馬達 vs 磨合的觀念,見 <a href="../../guides/motor-wash-vs-break-in/">洗馬達 vs 磨合</a>。</p>
 </article><div class="guide-pagination"><div class="left"><a href="/benchmarks/does-washing-a-motor-work/"><span class="label">← 上一篇</span><span>洗馬達有用嗎</span></a></div><div class="center"><a href="https://motorlab-tw.github.io/#guides"><span class="label">︿</span><span>回教學首頁</span></a></div><div class="right"><span class="label">下一篇 →</span><span class="disabled">—</span></div></div></div></main><footer>
 <div class="container">
