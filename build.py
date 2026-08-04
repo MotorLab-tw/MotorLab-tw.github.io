@@ -2987,6 +2987,9 @@ PRESALE = {
             "hero_title": "意向調查・限量首批",
             "badge": "2026 年底限量首批・意向調查",
             "hero_p": "MotorLab 精密馬達磨合/檢測機預計 <b>2026 年底</b>限量首批發售。留個資料、告訴我你的購買意向。",
+            "photos_title": "首批開發測試版・實機實拍",
+            "photos_note": "此為首批開發測試版實機,已可通電運作;非最終量產版本,最終外觀與規格以量產版為準。",
+            "photos_alt": ["MotorLab 馬達磨合機開發測試版實機外觀", "MotorLab 馬達磨合機通電運作,藍色電源指示燈亮起", "MotorLab 開發測試版實機多台實拍"],
             "email_label": "Email(必填)",
             "email_ph": "you@example.com",
             "intent_label": "購買意願",
@@ -3023,6 +3026,9 @@ PRESALE = {
             "hero_title": "Interest Survey · Limited First Batch",
             "badge": "Late 2026 · Limited first batch · Interest survey",
             "hero_p": "MotorLab's precision motor break-in / test machine ships in a limited first batch in <b>late 2026</b>. Leave your details and tell us your buying intent.",
+            "photos_title": "First-batch dev / test units · real photos",
+            "photos_note": "These are first-batch development / test units, shown powered on — not the final production version. Final appearance and specs follow the production release.",
+            "photos_alt": ["MotorLab motor break-in machine, first-batch development / test unit", "MotorLab motor break-in machine powered on, blue indicator LED lit", "MotorLab first-batch development / test units"],
             "email_label": "Email (required)",
             "email_ph": "you@example.com",
             "intent_label": "Buying intent",
@@ -3059,6 +3065,9 @@ PRESALE = {
             "hero_title": "意向調査・限定初回ロット",
             "badge": "2026 年末限定初回ロット・意向調査",
             "hero_p": "MotorLab 精密モーター慣らし/検査機は <b>2026 年末</b>に限定初回ロットで発売予定です。ご連絡先と購入意向をお知らせください。",
+            "photos_title": "初回ロット開発・テスト版・実機写真",
+            "photos_note": "初回ロットの開発・テスト版実機です(通電動作中)。最終量産版ではなく、最終的な外観・仕様は量産版に準じます。",
+            "photos_alt": ["MotorLab モーター慣らし機 開発・テスト版の実機", "MotorLab モーター慣らし機 通電動作、青色の電源LED点灯", "MotorLab 初回ロット開発・テスト版の実機(複数台)"],
             "email_label": "メール(必須)",
             "email_ph": "you@example.com",
             "intent_label": "購入意向",
@@ -3165,7 +3174,14 @@ PRESALE_CSS = """
 .ps-done{text-align:center;padding:48px 12px}
 .ps-done-t{font-size:clamp(26px,5vw,40px);font-weight:700;color:var(--text-primary,#e8ebf0);line-height:1.35;margin-bottom:14px}
 .ps-done-s{font-size:16px;line-height:1.7;color:var(--text-muted)}
+.ps-photos-sec{padding-top:6px}
+.ps-photos-t{text-align:center;font-size:clamp(17px,3vw,22px);font-weight:700;color:var(--text-primary,#e8ebf0);margin:0 0 18px}
+.ps-photos{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:1000px;margin:0 auto}
+.ps-photo{margin:0;border:1px solid var(--border,#2b313c);border-radius:12px;overflow:hidden;background:var(--bg-primary,#0f1216)}
+.ps-photo img{width:100%;height:auto;display:block;aspect-ratio:4/3;object-fit:cover}
+.ps-photos-note{margin-top:14px}
 @media(max-width:520px){.ps-grid{grid-template-columns:1fr}}
+@media(max-width:640px){.ps-photos{grid-template-columns:1fr;max-width:420px}}
 """
 
 
@@ -3279,6 +3295,25 @@ def build_presale_page(presale_cfg, lang, src_html, i18n):
         f'</div></section>'
     )
     main_el.append(BeautifulSoup(hero_html, "html.parser"))
+
+    # 首批開發測試版・實機實拍(信任佐證;放在 hero 與表單之間)
+    ps_photos = ["motorlab-first-batch-unit.jpg",
+                 "motorlab-first-batch-powered.jpg",
+                 "motorlab-first-batch-units.jpg"]
+    ps_alts = s["photos_alt"]
+    figs = "".join(
+        f'<figure class="ps-photo"><img src="/images/{fn}" '
+        f'alt="{html.escape(ps_alts[i])}" loading="lazy" width="1200" height="900"></figure>'
+        for i, fn in enumerate(ps_photos)
+    )
+    photos_html = (
+        f'<section class="lab-section ps-photos-sec"><div class="container">'
+        f'<h2 class="ps-photos-t">{html.escape(s["photos_title"])}</h2>'
+        f'<div class="ps-photos">{figs}</div>'
+        f'<p class="ps-note ps-photos-note">{html.escape(s["photos_note"])}</p>'
+        f'</div></section>'
+    )
+    main_el.append(BeautifulSoup(photos_html, "html.parser"))
 
     def opts(items):
         o = f'<option value="" selected>{html.escape(s["select_ph"])}</option>'

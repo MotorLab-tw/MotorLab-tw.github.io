@@ -740,33 +740,69 @@
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/presale/</loc>
-    <lastmod>2026-07-19</lastmod>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/presale/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/presale/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/presale/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/presale/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motorlab-first-batch-unit.jpg</image:loc>
+      <image:title>MotorLab 馬達磨合機 開發測試版實機</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motorlab-first-batch-powered.jpg</image:loc>
+      <image:title>MotorLab 馬達磨合機 通電運作(藍色電源指示燈)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motorlab-first-batch-units.jpg</image:loc>
+      <image:title>MotorLab 開發測試版實機(多台)</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/en/presale/</loc>
-    <lastmod>2026-07-19</lastmod>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/presale/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/presale/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/presale/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/presale/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motorlab-first-batch-unit.jpg</image:loc>
+      <image:title>MotorLab motor break-in machine, dev/test unit</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motorlab-first-batch-powered.jpg</image:loc>
+      <image:title>MotorLab motor break-in machine powered on</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motorlab-first-batch-units.jpg</image:loc>
+      <image:title>MotorLab first-batch dev/test units</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/ja/presale/</loc>
-    <lastmod>2026-07-19</lastmod>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/presale/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/presale/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/presale/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/presale/"/>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motorlab-first-batch-unit.jpg</image:loc>
+      <image:title>MotorLab モーター慣らし機 開発・テスト版実機</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motorlab-first-batch-powered.jpg</image:loc>
+      <image:title>MotorLab モーター慣らし機 通電動作</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://motorlab-tw.github.io/images/motorlab-first-batch-units.jpg</image:loc>
+      <image:title>MotorLab 初回ロット開発・テスト版実機(複数台)</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/docs/user-manual/</loc>
