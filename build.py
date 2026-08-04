@@ -2990,6 +2990,9 @@ PRESALE = {
             "photos_title": "首批開發測試版・實機實拍",
             "photos_note": "此為首批開發測試版實機,已可通電運作;非最終量產版本,最終外觀與規格以量產版為準。",
             "photos_alt": ["MotorLab 馬達磨合機開發測試版實機外觀", "MotorLab 馬達磨合機通電運作,藍色電源指示燈亮起", "MotorLab 開發測試版實機多台實拍"],
+            "video_title": "實機測試・馬達運轉即時數據",
+            "video_cap": "同一台開發測試版實機:實際運轉馬達,Web 介面即時顯示電流、轉速、功率與溫度。",
+            "video_alt": "MotorLab 開發測試版實機運轉馬達,Web 介面即時顯示電流與轉速",
             "email_label": "Email(必填)",
             "email_ph": "you@example.com",
             "intent_label": "購買意願",
@@ -3029,6 +3032,9 @@ PRESALE = {
             "photos_title": "First-batch dev / test units · real photos",
             "photos_note": "These are first-batch development / test units, shown powered on — not the final production version. Final appearance and specs follow the production release.",
             "photos_alt": ["MotorLab motor break-in machine, first-batch development / test unit", "MotorLab motor break-in machine powered on, blue indicator LED lit", "MotorLab first-batch development / test units"],
+            "video_title": "Live motor test · real-time telemetry",
+            "video_cap": "The same dev / test unit actually running a motor — the web UI shows current, RPM, power and temperature live.",
+            "video_alt": "MotorLab dev / test unit running a motor, web UI showing live current and RPM",
             "email_label": "Email (required)",
             "email_ph": "you@example.com",
             "intent_label": "Buying intent",
@@ -3068,6 +3074,9 @@ PRESALE = {
             "photos_title": "初回ロット開発・テスト版・実機写真",
             "photos_note": "初回ロットの開発・テスト版実機です(通電動作中)。最終量産版ではなく、最終的な外観・仕様は量産版に準じます。",
             "photos_alt": ["MotorLab モーター慣らし機 開発・テスト版の実機", "MotorLab モーター慣らし機 通電動作、青色の電源LED点灯", "MotorLab 初回ロット開発・テスト版の実機(複数台)"],
+            "video_title": "実機テスト・モーター回転のリアルタイム計測",
+            "video_cap": "同じ開発・テスト版実機で実際にモーターを回転させ、Web UI が電流・回転数・電力・温度をリアルタイム表示。",
+            "video_alt": "MotorLab 開発・テスト版実機がモーターを回転、Web UI が電流と回転数をリアルタイム表示",
             "email_label": "メール(必須)",
             "email_ph": "you@example.com",
             "intent_label": "購入意向",
@@ -3180,6 +3189,9 @@ PRESALE_CSS = """
 .ps-photo{margin:0;border:1px solid var(--border,#2b313c);border-radius:12px;overflow:hidden;background:var(--bg-primary,#0f1216)}
 .ps-photo img{width:100%;height:auto;display:block;aspect-ratio:4/3;object-fit:cover}
 .ps-photos-note{margin-top:14px}
+.ps-video-sec{padding-bottom:8px}
+.ps-video-wrap{max-width:900px;margin:0 auto;border:1px solid var(--border,#2b313c);border-radius:12px;overflow:hidden;background:#000}
+.ps-video{width:100%;height:auto;display:block;aspect-ratio:16/9}
 @media(max-width:520px){.ps-grid{grid-template-columns:1fr}}
 @media(max-width:640px){.ps-photos{grid-template-columns:1fr;max-width:420px}}
 """
@@ -3295,6 +3307,21 @@ def build_presale_page(presale_cfg, lang, src_html, i18n):
         f'</div></section>'
     )
     main_el.append(BeautifulSoup(hero_html, "html.parser"))
+
+    # 實機測試 demo 影片(最強佐證:機器實際運轉馬達 + Web UI 即時數據)
+    video_html = (
+        f'<section class="lab-section ps-video-sec"><div class="container">'
+        f'<h2 class="ps-photos-t">{html.escape(s["video_title"])}</h2>'
+        f'<div class="ps-video-wrap">'
+        f'<video class="ps-video" controls playsinline preload="none" '
+        f'poster="/images/motorlab-motor-test-demo-poster.jpg" '
+        f'aria-label="{html.escape(s["video_alt"])}" width="1280" height="720">'
+        f'<source src="/images/motorlab-motor-test-demo.mp4" type="video/mp4">'
+        f'</video></div>'
+        f'<p class="ps-note ps-photos-note">{html.escape(s["video_cap"])}</p>'
+        f'</div></section>'
+    )
+    main_el.append(BeautifulSoup(video_html, "html.parser"))
 
     # 首批開發測試版・實機實拍(信任佐證;放在 hero 與表單之間)
     ps_photos = ["motorlab-first-batch-unit.jpg",
