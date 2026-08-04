@@ -3314,6 +3314,8 @@ def build_presale_page(presale_cfg, lang, src_html, i18n):
         f'<h2 class="ps-photos-t">{html.escape(s["video_title"])}</h2>'
         f'<div class="ps-video-wrap">'
         f'<video class="ps-video" controls playsinline preload="none" '
+        f'controlslist="nodownload noremoteplayback" disablepictureinpicture '
+        f'oncontextmenu="return false" '
         f'poster="/images/motorlab-motor-test-demo-poster.jpg" '
         f'aria-label="{html.escape(s["video_alt"])}" width="1280" height="720">'
         f'<source src="/images/motorlab-motor-test-demo.mp4" type="video/mp4">'
