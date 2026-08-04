@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/0.9">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 
   <!-- Homepages -->
   <url>
@@ -759,6 +760,16 @@
       <image:loc>https://motorlab-tw.github.io/images/motorlab-first-batch-units.jpg</image:loc>
       <image:title>MotorLab 開發測試版實機(多台)</image:title>
     </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://motorlab-tw.github.io/images/motorlab-motor-test-demo-poster.jpg</video:thumbnail_loc>
+      <video:title>實機測試・馬達運轉即時數據</video:title>
+      <video:description>MotorLab 精密馬達磨合/檢測機開發測試版實機操作片段:實際運轉馬達,Web 介面即時顯示電流、轉速、功率與溫度。</video:description>
+      <video:content_loc>https://motorlab-tw.github.io/images/motorlab-motor-test-demo.mp4</video:content_loc>
+      <video:duration>23</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:requires_subscription>no</video:requires_subscription>
+      <video:live>no</video:live>
+    </video:video>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/en/presale/</loc>
@@ -781,6 +792,16 @@
       <image:loc>https://motorlab-tw.github.io/images/motorlab-first-batch-units.jpg</image:loc>
       <image:title>MotorLab first-batch dev/test units</image:title>
     </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://motorlab-tw.github.io/images/motorlab-motor-test-demo-poster.jpg</video:thumbnail_loc>
+      <video:title>Live motor test · real-time telemetry</video:title>
+      <video:description>Operation clip of a MotorLab precision motor break-in / test machine (dev / test unit): running a motor while the web UI shows current, RPM, power and temperature live.</video:description>
+      <video:content_loc>https://motorlab-tw.github.io/images/motorlab-motor-test-demo.mp4</video:content_loc>
+      <video:duration>23</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:requires_subscription>no</video:requires_subscription>
+      <video:live>no</video:live>
+    </video:video>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/ja/presale/</loc>
@@ -803,6 +824,16 @@
       <image:loc>https://motorlab-tw.github.io/images/motorlab-first-batch-units.jpg</image:loc>
       <image:title>MotorLab 初回ロット開発・テスト版実機(複数台)</image:title>
     </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://motorlab-tw.github.io/images/motorlab-motor-test-demo-poster.jpg</video:thumbnail_loc>
+      <video:title>実機テスト・モーター回転のリアルタイム計測</video:title>
+      <video:description>MotorLab 精密モーター慣らし/検査機 開発・テスト版実機の操作クリップ:実際にモーターを回転させ、Web UI が電流・回転数・電力・温度をリアルタイム表示。</video:description>
+      <video:content_loc>https://motorlab-tw.github.io/images/motorlab-motor-test-demo.mp4</video:content_loc>
+      <video:duration>23</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:requires_subscription>no</video:requires_subscription>
+      <video:live>no</video:live>
+    </video:video>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/docs/user-manual/</loc>
