@@ -2002,10 +2002,13 @@
 <tr><td data-i18n="g20.r4.i">トルク @2.4V / @3.0V</td><td data-i18n="g20.r4.b">1.377/1.722</td><td data-i18n="g20.r4.a">1.371/1.714</td><td data-i18n="g20.r4.c"><strong>維持</strong></td><td data-i18n="g20.r4.m">慣らしは磁石を傷めない</td></tr>
 </tbody>
 </table>
+<figure data-i18n="g20.figV"><img alt="慣らし前後の同回転で必要な電圧の折れ線:後(緑)は前(青)より全体的に低く、4,000〜12,000 回転で省力" class="chart" loading="lazy" src="/images/g20-fig1-voltage_j.png"/></figure>
 <h2 data-i18n="g20.h2">「慣れた」は当て推量ではない——曲線が自ら平らになる</h2>
 <p data-i18n="g20.p2">AI スマート慣らしの全過程で、各ラウンド、システムは<strong>同一条件</strong>で測定する。この個体の曲線:<strong>最初の 4 ラウンドで明確に低下</strong>(接触面が馴染み中)→ その後は平らに(進歩が尽きた)→ システムが連続して進歩なしと確認し、<strong>11 ラウンド目で自動停止</strong>。これが「完了で自動停止」の根拠だ——時間設定ではなく、<strong>これ以上進歩しないと検出したら止める</strong>、余計に 1 分回してブラシと磁石を傷めない。</p>
+<figure data-i18n="g20.figCurve"><img alt="慣らし曲線:11 ラウンド 0.9370→0.9180、最初の 4 ラウンドで急降下し以降は平坦、11 ラウンド目で改善停止を検知し自動停止" class="chart" loading="lazy" src="/images/g20-fig3-curve_j.png"/></figure>
 <h2 data-i18n="g20.h3">新品の「直感に反する」数字:内耗微増、素性やや低下</h2>
 <p data-i18n="g20.p3">同じデータに、一見「悪化」した数字が 2 つある:<strong>無負荷内耗% 25.8 → 27.1</strong>(微増)、<strong>素性スコア 83.4 → 79.1</strong>(やや低下)。これは慣らしで壊れた?<strong>いいえ。</strong>新品未慣らしのモーターは元来クリーンで低抵抗;慣らしでブラシ接触面積が広がり、接触が良くなると同時に<strong>摩擦面積も微増</strong>、無負荷の消費電力がやや上がるのは新品の正常な現象。素性スコアは無負荷自己消費の成分を含むため少し下がる——これは「ブラシが馴染んだ」を反映し、「磁石が壊れた」ではない(トルク維持が磁石無事を既に証明)。</p>
+<figure data-i18n="g20.figI"><img alt="慣らし前後の同回転で流れる電流の折れ線:後(緑)は前(青)よりやや高い、接触面積増加で摩擦微増、新品の正常現象" class="chart" loading="lazy" src="/images/g20-fig2-current_j.png"/></figure>
 <div class="guide-tip">
 <p data-i18n="g20.tip"><strong>判読の要点</strong>:新品では<strong>内耗% だけで慣らし効果を判断しない</strong>——起点は個体とベアリング潤滑の程度により異なり、慣らし後の明確な低下も横ばい・微増も<strong>どちらも正常</strong>。信頼できるのは<strong>同電圧の回転が上がったか</strong>、<strong>慣らし曲線が低下して平らになったか</strong>。「内耗が明確に低下＝馴染んだ」の判読は主に<strong>使用済み・汚れた・長期保管のモーター</strong>に当てはまる。</p>
 </div>

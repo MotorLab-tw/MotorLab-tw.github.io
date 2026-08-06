@@ -3974,12 +3974,15 @@
         <tr><td data-i18n="g20.r4.i">扭力 @2.4V / @3.0V</td><td data-i18n="g20.r4.b">1.377/1.722</td><td data-i18n="g20.r4.a">1.371/1.714</td><td data-i18n="g20.r4.c"><strong>持平</strong></td><td data-i18n="g20.r4.m">磨合不傷磁鐵,力氣沒少</td></tr>
         </tbody>
         </table>
+        <figure data-i18n="g20.figV"><img class="chart" src="/images/g20-fig1-voltage_c.png" alt="磨合前後同轉速需要的電壓折線:磨後(綠)整條低於磨前(藍),4,000~12,000 轉都更省力" loading="lazy"></figure>
 
         <h4 data-i18n="g20.h2">「磨好了」不是猜的——磨合曲線自己走平</h4>
         <p data-i18n="g20.p2">AI 智慧磨合全程,系統每一輪都在<strong>相同條件下</strong>量一次。這顆的曲線:<strong>前 4 輪明顯下降</strong>(接觸面正在磨開)→ 之後開始走平(進步吃完)→ 系統確認連續不再進步,<strong>第 11 輪自動停止</strong>。這就是「磨好自動停」的依據——不是設定時間,是<strong>偵測到馬達不再進步才停</strong>,不多磨一分鐘去傷電刷與磁鐵。</p>
+        <figure data-i18n="g20.figCurve"><img class="chart" src="/images/g20-fig3-curve_c.png" alt="磨合曲線折線:11 輪逐輪數值 0.9370→0.9180,前 4 輪明顯下降、之後走平,第 11 輪偵測到不再進步自動停止" loading="lazy"></figure>
 
         <h4 data-i18n="g20.h3">全新品的「反直覺」數字:內耗微升、體質略降</h4>
         <p data-i18n="g20.p3">同一份數據裡有兩個乍看「變差」的數字:<strong>空轉內耗% 25.8 → 27.1</strong>(微升)、<strong>體質分數 83.4 → 79.1</strong>(略降)。這會不會代表磨壞了?<strong>不會。</strong>全新未磨的馬達本來就乾淨、低阻;磨合讓電刷貼合面積變大,接觸變好的同時<strong>摩擦面積也微增</strong>,空轉耗電略升是全新品的正常現象。體質分數含空轉自耗的成分,也因此略降——這反映的是「電刷貼合了」,不是「磁鐵壞了」(扭力持平已經證明磁鐵沒事)。</p>
+        <figure data-i18n="g20.figI"><img class="chart" src="/images/g20-fig2-current_c.png" alt="磨合前後同轉速吃的電流折線:磨後(綠)略高於磨前(藍),接觸面積變大、摩擦微增,全新品正常現象" loading="lazy"></figure>
         <div class="guide-tip">
         <p data-i18n="g20.tip"><strong>判讀重點</strong>:全新品<strong>不要用內耗% 單獨判斷磨合效果</strong>——它的起點高低因個體與軸承潤滑程度而異,磨後明顯下降或持平微升<strong>兩種都正常</strong>。看<strong>同電壓轉速有沒有上升</strong>、<strong>磨合曲線有沒有下降走平</strong>才準。「內耗明顯下降 = 磨開了」的判讀,主要適用於<strong>用過、變髒或久置的馬達</strong>。</p>
         </div>
@@ -6248,6 +6251,9 @@
       'g20.t.before': 'Before',
       'g20.t.after': 'After',
       'g20.fig': '<img class="chart" src="/images/g20-before-after_e.png" alt="AI smart break-in same-temperature before/after: same-voltage RPM 10,661 to 10,947 (+2.7%), drive voltage -3 to -5%, contact resistance 2.97 to 2.65 Ohm (~-7%), torque held" loading="lazy">',
+      'g20.figV': '<img class="chart" src="/images/g20-fig1-voltage_e.png" alt="Voltage-vs-RPM line chart before/after break-in: the after (green) line sits below the before (blue) line across 4,000-12,000 RPM, less drive voltage" loading="lazy">',
+      'g20.figCurve': '<img class="chart" src="/images/g20-fig3-curve_e.png" alt="Break-in curve: 11 rounds from 0.9370 to 0.9180, steep drop over the first 4 rounds then flattens, auto-stops at round 11 when no more improvement" loading="lazy">',
+      'g20.figI': '<img class="chart" src="/images/g20-fig2-current_e.png" alt="Current-vs-RPM line chart before/after break-in: the after (green) line is slightly above before (blue), larger contact area means a little more draw, normal for a new motor" loading="lazy">',
       'g20.r1.b': '10,661', 'g20.r1.a': '10,947',
       'g20.r2.b': '0.41~1.15V', 'g20.r2.a': '0.40~1.11V',
       'g20.r3.b': '2.97 Ω', 'g20.r3.a': '2.65~2.78 Ω',
@@ -7436,6 +7442,9 @@
       'g20.t.before': '慣らし前',
       'g20.t.after': '慣らし後',
       'g20.fig': '<img class="chart" src="/images/g20-before-after_j.png" alt="AI スマート慣らしの同温前後対照:同電圧回転数 10,661→10,947(+2.7%)、駆動電圧 -3~5%、接触抵抗 2.97→2.65Ω(約-7%)、トルク維持" loading="lazy">',
+      'g20.figV': '<img class="chart" src="/images/g20-fig1-voltage_j.png" alt="慣らし前後の同回転で必要な電圧の折れ線:後(緑)は前(青)より全体的に低く、4,000〜12,000 回転で省力" loading="lazy">',
+      'g20.figCurve': '<img class="chart" src="/images/g20-fig3-curve_j.png" alt="慣らし曲線:11 ラウンド 0.9370→0.9180、最初の 4 ラウンドで急降下し以降は平坦、11 ラウンド目で改善停止を検知し自動停止" loading="lazy">',
+      'g20.figI': '<img class="chart" src="/images/g20-fig2-current_j.png" alt="慣らし前後の同回転で流れる電流の折れ線:後(緑)は前(青)よりやや高い、接触面積増加で摩擦微増、新品の正常現象" loading="lazy">',
       'g20.r1.b': '10,661', 'g20.r1.a': '10,947',
       'g20.r2.b': '0.41~1.15V', 'g20.r2.a': '0.40~1.11V',
       'g20.r3.b': '2.97 Ω', 'g20.r3.a': '2.65~2.78 Ω',
