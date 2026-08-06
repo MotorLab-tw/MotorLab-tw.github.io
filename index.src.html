@@ -3964,13 +3964,14 @@
 
         <h4 data-i18n="g20.h1">三個最直觀的結果</h4>
         <p data-i18n="g20.p1">先講結論。磨合後,同樣的電壓下馬達<strong>轉得更快、帶動更省力,而力氣(扭力)一點沒少</strong>:</p>
+        <figure data-i18n="g20.fig"><img class="chart" src="/images/g20-before-after_c.png" alt="AI 智慧磨合前後同溫對照:同電壓轉速 10,661→10,947(+2.7%)、驅動電壓 -3~5%、接觸電阻 2.97→2.65Ω(約-7%)、扭力持平" loading="lazy"></figure>
         <table class="guide-table">
-        <thead><tr><th data-i18n="g20.t.item">項目</th><th data-i18n="g20.t.change">磨合後變化</th><th data-i18n="g20.t.mean">意義</th></tr></thead>
+        <thead><tr><th data-i18n="g20.t.item">項目</th><th data-i18n="g20.t.before">磨合前</th><th data-i18n="g20.t.after">磨合後</th><th data-i18n="g20.t.change">變化</th><th data-i18n="g20.t.mean">意義</th></tr></thead>
         <tbody>
-        <tr><td data-i18n="g20.r1.i">同電壓(1V)轉速</td><td data-i18n="g20.r1.c"><strong>+2.7%</strong></td><td data-i18n="g20.r1.m">磨開了,最直觀</td></tr>
-        <tr><td data-i18n="g20.r2.i">帶動同轉速所需電壓</td><td data-i18n="g20.r2.c"><strong>−3~5%</strong></td><td data-i18n="g20.r2.m">同樣速度更省力</td></tr>
-        <tr><td data-i18n="g20.r3.i">內部接觸電阻</td><td data-i18n="g20.r3.c"><strong>約 −7%</strong></td><td data-i18n="g20.r3.m">電刷與整流子接觸變好</td></tr>
-        <tr><td data-i18n="g20.r4.i">扭力 @2.4V / @3.0V</td><td data-i18n="g20.r4.c"><strong>持平</strong></td><td data-i18n="g20.r4.m">磨合不傷磁鐵,力氣沒少</td></tr>
+        <tr><td data-i18n="g20.r1.i">同電壓(1V)轉速</td><td data-i18n="g20.r1.b">10,661</td><td data-i18n="g20.r1.a">10,947</td><td data-i18n="g20.r1.c"><strong>+2.7%</strong></td><td data-i18n="g20.r1.m">磨開了,最直觀</td></tr>
+        <tr><td data-i18n="g20.r2.i">帶動同轉速所需電壓</td><td data-i18n="g20.r2.b">0.41~1.15V</td><td data-i18n="g20.r2.a">0.40~1.11V</td><td data-i18n="g20.r2.c"><strong>-3~5%</strong></td><td data-i18n="g20.r2.m">同樣速度更省力</td></tr>
+        <tr><td data-i18n="g20.r3.i">內部接觸電阻</td><td data-i18n="g20.r3.b">2.97 Ω</td><td data-i18n="g20.r3.a">2.65~2.78 Ω</td><td data-i18n="g20.r3.c"><strong>約 -7%</strong></td><td data-i18n="g20.r3.m">電刷與整流子接觸變好</td></tr>
+        <tr><td data-i18n="g20.r4.i">扭力 @2.4V / @3.0V</td><td data-i18n="g20.r4.b">1.377/1.722</td><td data-i18n="g20.r4.a">1.371/1.714</td><td data-i18n="g20.r4.c"><strong>持平</strong></td><td data-i18n="g20.r4.m">磨合不傷磁鐵,力氣沒少</td></tr>
         </tbody>
         </table>
 
@@ -6243,7 +6244,14 @@
       'g20.h1': 'The three most direct results',
       'g20.p1': 'The bottom line first. After break-in, at the same voltage the motor <strong>spins faster, takes less to drive, and its strength (torque) is unchanged</strong>:',
       'g20.t.item': 'Item',
-      'g20.t.change': 'Change after break-in',
+      'g20.t.change': 'Change',
+      'g20.t.before': 'Before',
+      'g20.t.after': 'After',
+      'g20.fig': '<img class="chart" src="/images/g20-before-after_e.png" alt="AI smart break-in same-temperature before/after: same-voltage RPM 10,661 to 10,947 (+2.7%), drive voltage -3 to -5%, contact resistance 2.97 to 2.65 Ohm (~-7%), torque held" loading="lazy">',
+      'g20.r1.b': '10,661', 'g20.r1.a': '10,947',
+      'g20.r2.b': '0.41~1.15V', 'g20.r2.a': '0.40~1.11V',
+      'g20.r3.b': '2.97 Ω', 'g20.r3.a': '2.65~2.78 Ω',
+      'g20.r4.b': '1.377/1.722', 'g20.r4.a': '1.371/1.714',
       'g20.t.mean': 'Meaning',
       'g20.r1.i': 'RPM at the same voltage (1V)',
       'g20.r1.c': '<strong>+2.7%</strong>',
@@ -7424,7 +7432,14 @@
       'g20.h1': '最も直感的な 3 つの結果',
       'g20.p1': 'まず結論。慣らし後、同じ電圧でモーターは<strong>より速く回り、駆動がより省力で、力(トルク)は一切減っていない</strong>:',
       'g20.t.item': '項目',
-      'g20.t.change': '慣らし後の変化',
+      'g20.t.change': '変化',
+      'g20.t.before': '慣らし前',
+      'g20.t.after': '慣らし後',
+      'g20.fig': '<img class="chart" src="/images/g20-before-after_j.png" alt="AI スマート慣らしの同温前後対照:同電圧回転数 10,661→10,947(+2.7%)、駆動電圧 -3~5%、接触抵抗 2.97→2.65Ω(約-7%)、トルク維持" loading="lazy">',
+      'g20.r1.b': '10,661', 'g20.r1.a': '10,947',
+      'g20.r2.b': '0.41~1.15V', 'g20.r2.a': '0.40~1.11V',
+      'g20.r3.b': '2.97 Ω', 'g20.r3.a': '2.65~2.78 Ω',
+      'g20.r4.b': '1.377/1.722', 'g20.r4.a': '1.371/1.714',
       'g20.t.mean': '意味',
       'g20.r1.i': '同電圧(1V)の回転数',
       'g20.r1.c': '<strong>+2.7%</strong>',
