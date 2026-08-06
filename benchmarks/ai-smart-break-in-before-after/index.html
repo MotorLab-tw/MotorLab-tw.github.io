@@ -4,12 +4,12 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="zh-TW" http-equiv="Content-Language"/>
-<title>效能對比 — 田宮 Mini 4WD® 馬達規格速查 | MotorLab</title>
-<meta content="田宮 Mini 4WD® 馬達官方規格速查與磨合策略對照 — 涵蓋 8 款主流入門/進階馬達,以及全 15 款 PRO + 標準系列完整對照(RPM、扭力、電流、比賽合規)。" name="description"/>
+<title>AI 智慧磨合前後實測:轉速+2.7%、扭力持平不傷磁鐵 | MotorLab</title>
+<meta content="AI 智慧磨合到底有沒有效?一顆全新 Mach-Dash PRO,磨前量一次 → AI 自動磨到停 → 等溫度回到磨前再量(同溫對照)。結果:同電壓轉速 +2.7%、帶動更省力、扭力持平(不傷磁鐵)。全新品內耗微升是正常,判讀看轉速上升與磨合曲線下降。" name="description"/>
 <meta content="MotorLab.tw" name="author"/>
-<meta content="田宮馬達規格對照, Mini 4WD 馬達速查, Tamiya motor specs, Mini 4WD PRO 馬達, 紅二, 黑金剛, Hyper Dash, Plasma Dash, Tamiya Mini 4WD motor specs, Mini 4WD PRO motors, motor benchmarks, Hyper-Dash PRO, Plasma-Dash, Sprint-Dash, Tamiya motor comparison" name="keywords"/>
+<meta content="AI 智慧磨合, 馬達磨合 前後, 磨合有效嗎, 磨合實測, 磨馬達 效果, 同溫對照, Mach-Dash PRO, 迷你四驅車 馬達磨合, MotorLab, AI smart break-in, motor break-in before after, does break-in work, break-in test, Mini 4WD motor break-in, same-temperature comparison, Mach-Dash PRO, MotorLab" name="keywords"/>
 <!-- 正規網址 (避免重複內容問題) -->
-<link href="https://motorlab-tw.github.io/benchmarks/" rel="canonical"/>
+<link href="https://motorlab-tw.github.io/benchmarks/ai-smart-break-in-before-after/" rel="canonical"/>
 <!-- 搜尋引擎指示 -->
 <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
 <meta content="index, follow" name="googlebot"/>
@@ -30,10 +30,10 @@
 <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
 <meta content="MotorLab" name="apple-mobile-web-app-title"/>
 <!-- Open Graph (Facebook, LINE, Discord) -->
-<meta content="website" property="og:type"/>
-<meta content="https://motorlab-tw.github.io/benchmarks/" property="og:url"/>
-<meta content="效能對比 — 田宮 Mini 4WD® 馬達規格速查 | MotorLab" property="og:title"/>
-<meta content="田宮 Mini 4WD® 馬達官方規格速查與磨合策略對照 — 涵蓋 8 款主流入門/進階馬達,以及全 15 款 PRO + 標準系列完整對照(RPM、扭力、電流、比賽合規)。" property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://motorlab-tw.github.io/benchmarks/ai-smart-break-in-before-after/" property="og:url"/>
+<meta content="AI 智慧磨合前後實測:轉速+2.7%、扭力持平不傷磁鐵 | MotorLab" property="og:title"/>
+<meta content="AI 智慧磨合到底有沒有效?一顆全新 Mach-Dash PRO,磨前量一次 → AI 自動磨到停 → 等溫度回到磨前再量(同溫對照)。結果:同電壓轉速 +2.7%、帶動更省力、扭力持平(不傷磁鐵)。全新品內耗微升是正常,判讀看轉速上升與磨合曲線下降。" property="og:description"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" property="og:image"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" property="og:image:secure_url"/>
 <meta content="image/png" property="og:image:type"/>
@@ -45,8 +45,8 @@
 <meta content="MotorLab.tw" property="og:site_name"/>
 <!-- Twitter Card -->
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="效能對比 — 田宮 Mini 4WD® 馬達規格速查 | MotorLab" name="twitter:title"/>
-<meta content="田宮 Mini 4WD® 馬達官方規格速查與磨合策略對照 — 涵蓋 8 款主流入門/進階馬達,以及全 15 款 PRO + 標準系列完整對照(RPM、扭力、電流、比賽合規)。" name="twitter:description"/>
+<meta content="AI 智慧磨合前後實測:轉速+2.7%、扭力持平不傷磁鐵 | MotorLab" name="twitter:title"/>
+<meta content="AI 智慧磨合到底有沒有效?一顆全新 Mach-Dash PRO,磨前量一次 → AI 自動磨到停 → 等溫度回到磨前再量(同溫對照)。結果:同電壓轉速 +2.7%、帶動更省力、扭力持平(不傷磁鐵)。全新品內耗微升是正常,判讀看轉速上升與磨合曲線下降。" name="twitter:description"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" name="twitter:image"/>
 <meta content="MotorLab 官方網站預覽圖" name="twitter:image:alt"/>
 <!-- 結構化資料 1: Organization (公司/工作室) -->
@@ -1932,60 +1932,36 @@
   })();
 </script>
 <script async="" data-goatcounter="https://motorlab-tw.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
-<link href="https://motorlab-tw.github.io/benchmarks/" hreflang="zh-TW" rel="alternate"/><link href="https://motorlab-tw.github.io/en/benchmarks/" hreflang="en" rel="alternate"/><link href="https://motorlab-tw.github.io/ja/benchmarks/" hreflang="ja" rel="alternate"/><link href="https://motorlab-tw.github.io/benchmarks/" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
+<link href="https://motorlab-tw.github.io/benchmarks/ai-smart-break-in-before-after/" hreflang="zh-TW" rel="alternate"/><link href="https://motorlab-tw.github.io/en/benchmarks/ai-smart-break-in-before-after/" hreflang="en" rel="alternate"/><link href="https://motorlab-tw.github.io/ja/benchmarks/ai-smart-break-in-before-after/" hreflang="ja" rel="alternate"/><link href="https://motorlab-tw.github.io/benchmarks/ai-smart-break-in-before-after/" hreflang="x-default" rel="alternate"/><script type="application/ld+json">{
   "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "效能對比 — 田宮 Mini 4WD® 馬達規格速查 | MotorLab",
-  "description": "田宮 Mini 4WD® 馬達官方規格速查與磨合策略對照 — 涵蓋 8 款主流入門/進階馬達,以及全 15 款 PRO + 標準系列完整對照(RPM、扭力、電流、比賽合規)。",
+  "@type": "Article",
+  "headline": "AI 智慧磨合前後,數據變了什麼?一顆全新馬達的同溫對照實測",
+  "description": "AI 智慧磨合到底有沒有效?一顆全新 Mach-Dash PRO,磨前量一次 → AI 自動磨到停 → 等溫度回到磨前再量(同溫對照)。結果:同電壓轉速 +2.7%、帶動更省力、扭力持平(不傷磁鐵)。全新品內耗微升是正常,判讀看轉速上升與磨合曲線下降。",
+  "keywords": "AI 智慧磨合, 馬達磨合 前後, 磨合有效嗎, 磨合實測, 磨馬達 效果, 同溫對照, Mach-Dash PRO, 迷你四驅車 馬達磨合, MotorLab",
   "inLanguage": "zh-TW",
-  "url": "https://motorlab-tw.github.io/benchmarks/",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "MotorLab.tw",
+  "url": "https://motorlab-tw.github.io/benchmarks/ai-smart-break-in-before-after/",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://motorlab-tw.github.io/benchmarks/ai-smart-break-in-before-after/"
+  },
+  "datePublished": "2026-08-05",
+  "dateModified": "2026-08-05",
+  "author": {
+    "@type": "Organization",
+    "name": "MotorLab Team",
     "url": "https://motorlab-tw.github.io/"
   },
-  "mainEntity": {
-    "@type": "ItemList",
-    "numberOfItems": 6,
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "url": "https://motorlab-tw.github.io/guides/tamiya-motor-specs/",
-        "name": "田宮主流馬達規格與磨合策略對照表"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "url": "https://motorlab-tw.github.io/benchmarks/tamiya-mini-4wd-motor-specs-list/",
-        "name": "田宮 Mini 4WD® 全 15 款馬達規格對照表(含 PRO 系列)"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "url": "https://motorlab-tw.github.io/benchmarks/when-to-stop-motor-break-in/",
-        "name": "轉速越磨越快,其實已磨壞了?12 小時連續磨給你看"
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "url": "https://motorlab-tw.github.io/benchmarks/does-washing-a-motor-work/",
-        "name": "洗馬達有用嗎?洗後跑 11 小時給你看"
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "url": "https://motorlab-tw.github.io/benchmarks/revive-dead-motor-electric-shock/",
-        "name": "退役死亡的馬達還有救嗎?馬達電擊修復實驗給你看"
-      },
-      {
-        "@type": "ListItem",
-        "position": 6,
-        "url": "https://motorlab-tw.github.io/benchmarks/ai-smart-break-in-before-after/",
-        "name": "AI 智慧磨合前後,數據變了什麼?一顆全新馬達的同溫對照實測"
-      }
-    ]
-  }
+  "publisher": {
+    "@type": "Organization",
+    "name": "MotorLab.tw",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://motorlab-tw.github.io/favicon-192.png",
+      "width": 192,
+      "height": 192
+    }
+  },
+  "image": "https://motorlab-tw.github.io/og-image.png"
 }</script><script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -1999,22 +1975,48 @@
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "知識庫",
+      "name": "效能對比",
       "item": "https://motorlab-tw.github.io/#guides"
     },
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "效能對比",
-      "item": "https://motorlab-tw.github.io/benchmarks/"
+      "name": "AI 磨合前後實測",
+      "item": "https://motorlab-tw.github.io/benchmarks/ai-smart-break-in-before-after/"
     }
   ]
 }</script></head>
-<body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/">← 回首頁</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/">首頁</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/#guides">知識庫</a><span class="sep">/</span><span class="current">效能對比</span></nav><div class="hub-header"><h1>效能對比</h1><p class="hub-lead">Mini 4WD 各款馬達的官方規格速查與性能對照,協助你依車架類型與賽道特性挑選最佳搭配。</p></div><div class="guides-grid"><article class="guide-article"><span class="guide-tag" data-i18n="g3.tag">REFERENCE · 馬達速查</span><h3 data-i18n="g3.title">田宮主流馬達規格與磨合策略對照表</h3><p class="guide-lead" data-i18n="g3.lead">不同馬達的設計用途、轉速、扭力特性都不同,磨合方式自然也該有差。整理田宮 8 款主流馬達的官方規格與建議磨合策略。</p><a class="guide-card-link" href="/guides/tamiya-motor-specs/">閱讀完整文章 →</a></article><article class="guide-article"><span class="guide-tag" data-i18n="g9.tag">REFERENCE · 全馬達速查</span><h3 data-i18n="g9.title">田宮 Mini 4WD® 全 15 款馬達規格對照表(含 PRO 系列)</h3><p class="guide-lead" data-i18n="g9.lead">田宮(TAMIYA, INC.)目前推出的 Mini 4WD® 馬達共 15 款,涵蓋 <strong>Mini 4WD 標準系列 9 款(單軸)</strong>與 <strong>Mini 4WD PRO 系列 6 款(雙軸)</strong>。本對照表整理官方公布的 RPM、扭力(mN·m)、電流(A)規格,並標註比賽合規限制,協助你依車架類型與賽道特性挑馬達。</p><a class="guide-card-link" href="/benchmarks/tamiya-mini-4wd-motor-specs-list/">閱讀完整文章 →</a></article><article class="guide-article"><span class="guide-tag" data-i18n="g17.tag">BENCHMARK · 15 款馬達測試序章</span><h3 data-i18n="g17.title">轉速越磨越快,其實已磨壞了?12 小時連續磨給你看</h3><p class="guide-lead" data-i18n="g17.lead">一鍵啟動,機器自己磨、自己量、<strong>磨好自動停</strong>。憑什麼說「剛剛好」?因為我們把一顆全新 Mach-Dash PRO 連續磨了 <strong>12 小時、超過 550 萬轉</strong>,從全新一路磨到退役,只為找出該停手的那個點。這一頁沒有形容詞,只有那場實驗的真實數據:磨合的收益在哪裡結束、過磨的代價從哪裡開始——以及智慧磨合如何替你在兩者之間停住。這同時是<strong>田宮 15 款馬達同條件實測</strong>系列的起始章:先用這場實驗定調方法與量測維度,接下來,同一套條件,逐款測給你看。</p><a class="guide-card-link" href="/benchmarks/when-to-stop-motor-break-in/">閱讀完整文章 →</a></article><article class="guide-article"><span class="guide-tag" data-i18n="g18.tag">BENCHMARK · 衰退拆解</span><h3 data-i18n="g18.title">洗馬達有用嗎?洗後跑 11 小時給你看</h3><p class="guide-lead" data-i18n="g18.lead">一顆操老了的馬達,拿去用溶劑洗一洗,轉速和數據真的變好了——那到底是洗回了青春,還是只是回光返照?我們拿一顆跑完生命測試、已經衰退的 Mach-Dash PRO,洗完立刻測,再連續操 <strong>11 小時</strong>,用同一套量測看它怎麼走。答案很乾脆:<strong>洗掉髒污回得來,磨損零件回不來</strong>——這兩件事,第一次被數據分得清清楚楚。本文是接續 12 小時過磨實驗 的後續測試。</p><a class="guide-card-link" href="/benchmarks/does-washing-a-motor-work/">閱讀完整文章 →</a></article><article class="guide-article"><span class="guide-tag" data-i18n="g19.tag">BENCHMARK · 電擊修復</span><h3 data-i18n="g19.title">退役死亡的馬達還有救嗎?馬達電擊修復實驗給你看</h3><p class="guide-lead" data-i18n="g19.lead">一顆已經退役、磁力流失的 Mach-Dash PRO,還救得回來嗎?我們用 MotorLab ＋ 外部電源,對它做一次「電擊修復」——把工業界<strong>變磁通記憶馬達 VFMM</strong>(用電流脈衝重新充磁)的原理,搬到四驅車馬達上實測。結果很有意思:<strong>磁力充得回(可逆),磨損救不回(不可逆)</strong>。本文是接續 洗馬達實驗 的後續測試,同一顆退役樣本再往下走一步。</p><a class="guide-card-link" href="/benchmarks/revive-dead-motor-electric-shock/">閱讀完整文章 →</a></article><article class="guide-article"><span class="guide-tag" data-i18n="g20.tag">BENCHMARK · 磨合前後實測</span><h3 data-i18n="g20.title">AI 智慧磨合前後,數據變了什麼?一顆全新馬達的同溫對照實測</h3><p class="guide-lead" data-i18n="g20.lead">「磨合到底有沒有效?」這問題在玩家圈吵很久,因為多數人只憑手感、沒有前後對照數據。這篇給你一份乾淨的實測:一顆<strong>全新 Mach-Dash PRO</strong>,磨合前量一次 → 用 <strong>AI 智慧磨合</strong>(46 分鐘,磨好自動停)→ <strong>等溫度回到與磨前完全相同(27.5°C)再量一次</strong>。同溫對照,才是公平比較——剛磨完是熱的,直接量會低估效果。</p><a class="guide-card-link" href="/benchmarks/ai-smart-break-in-before-after/">閱讀完整文章 →</a></article></div></div></main><footer>
+<body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/">← 回首頁</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/">首頁</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/#guides">效能對比</a><span class="sep">/</span><span class="current">AI 磨合前後實測</span></nav><article class="guide-article">
+<span class="guide-tag" data-i18n="g20.tag">BENCHMARK · 磨合前後實測</span>
+<h1 data-i18n="g20.title">AI 智慧磨合前後,數據變了什麼?一顆全新馬達的同溫對照實測</h1><p class="guide-byline">編輯者:MotorLab Team</p><p class="guide-dates">發表 2026-08-05</p>
+<p class="guide-lead" data-i18n="g20.lead">「磨合到底有沒有效?」這問題在玩家圈吵很久,因為多數人只憑手感、沒有前後對照數據。這篇給你一份乾淨的實測:一顆<strong>全新 Mach-Dash PRO</strong>,磨合前量一次 → 用 <strong>AI 智慧磨合</strong>(46 分鐘,磨好自動停)→ <strong>等溫度回到與磨前完全相同(27.5°C)再量一次</strong>。同溫對照,才是公平比較——剛磨完是熱的,直接量會低估效果。</p>
+<h2 data-i18n="g20.h1">三個最直觀的結果</h2>
+<p data-i18n="g20.p1">先講結論。磨合後,同樣的電壓下馬達<strong>轉得更快、帶動更省力,而力氣(扭力)一點沒少</strong>:</p>
+<table class="guide-table">
+<thead><tr><th data-i18n="g20.t.item">項目</th><th data-i18n="g20.t.change">磨合後變化</th><th data-i18n="g20.t.mean">意義</th></tr></thead>
+<tbody>
+<tr><td data-i18n="g20.r1.i">同電壓(1V)轉速</td><td data-i18n="g20.r1.c"><strong>+2.7%</strong></td><td data-i18n="g20.r1.m">磨開了,最直觀</td></tr>
+<tr><td data-i18n="g20.r2.i">帶動同轉速所需電壓</td><td data-i18n="g20.r2.c"><strong>−3~5%</strong></td><td data-i18n="g20.r2.m">同樣速度更省力</td></tr>
+<tr><td data-i18n="g20.r3.i">內部接觸電阻</td><td data-i18n="g20.r3.c"><strong>約 −7%</strong></td><td data-i18n="g20.r3.m">電刷與整流子接觸變好</td></tr>
+<tr><td data-i18n="g20.r4.i">扭力 @2.4V / @3.0V</td><td data-i18n="g20.r4.c"><strong>持平</strong></td><td data-i18n="g20.r4.m">磨合不傷磁鐵,力氣沒少</td></tr>
+</tbody>
+</table>
+<h2 data-i18n="g20.h2">「磨好了」不是猜的——磨合曲線自己走平</h2>
+<p data-i18n="g20.p2">AI 智慧磨合全程,系統每一輪都在<strong>相同條件下</strong>量一次「磨合指標」(帶動固定轉速所需的電壓,<strong>數字越低 = 內部越順</strong>)。這顆的曲線:<strong>前 4 輪明顯下降</strong>(接觸面正在磨開)→ 之後開始走平(進步吃完)→ 系統確認連續不再進步,<strong>第 11 輪自動停止</strong>。這就是「磨好自動停」的依據——不是設定時間,是<strong>偵測到馬達不再進步才停</strong>,不多磨一分鐘去傷電刷與磁鐵。</p>
+<h2 data-i18n="g20.h3">全新品的「反直覺」數字:內耗微升、體質略降</h2>
+<p data-i18n="g20.p3">同一份數據裡有兩個乍看「變差」的數字:<strong>空轉內耗% 25.8 → 27.1</strong>(微升)、<strong>體質分數 83.4 → 79.1</strong>(略降)。這會不會代表磨壞了?<strong>不會。</strong>全新未磨的馬達本來就乾淨、低阻;磨合讓電刷貼合面積變大,接觸變好的同時<strong>摩擦面積也微增</strong>,空轉耗電略升是全新品的正常現象。體質分數含空轉自耗的成分,也因此略降——這反映的是「電刷貼合了」,不是「磁鐵壞了」(扭力持平已經證明磁鐵沒事)。</p>
+<div class="guide-tip">
+<p data-i18n="g20.tip"><strong>判讀重點</strong>:全新品<strong>不要用內耗% 單獨判斷磨合效果</strong>——它的起點高低因個體與油況而異,磨後明顯下降或持平微升<strong>兩種都正常</strong>。看<strong>同電壓轉速有沒有上升</strong>、<strong>磨合曲線有沒有下降走平</strong>才準。「內耗明顯下降 = 磨開了」的判讀,主要適用於<strong>用過、變髒或久置的馬達</strong>。</p>
+</div>
+<h2 data-i18n="g20.h4">怎麼自己量出這種對照?(標準磨合流程)</h2>
+<p data-i18n="g20.p4">想知道「自己這顆磨合有沒有效、效果多大」,照三步驟就能得到像本報告一樣的對照:<br/><strong>① 磨前量測</strong> —— 先跑一次 AI 扭力預測(約 1~2 分鐘),記下數據與畫面顯示的溫度,這是基準。<br/><strong>② 磨合</strong> —— 用 AI 智慧磨合讓它磨到自動停;或用你慣用的配方磨,效果一樣量得出來。<br/><strong>③ 磨後量測</strong> —— <strong>等溫度降回與磨前相同再量一次</strong>(剛磨完是熱的,直接量會低估),同溫對照,前後數據才公平可比。</p>
+<div class="guide-warning">
+<p data-i18n="g20.w1">本報告為單一樣本(一顆全新 Mach-Dash PRO)的同溫對照實測,用於示範磨合前後可量化的變化與正確判讀方式;不同型號、不同個體、不同磨合條件的絕對數字會有差異,請以「同一顆、同一台機、同溫」的自身前後對照為準。</p>
+</div>
+<p class="guide-related" data-i18n="g20.related">延伸閱讀:為什麼磨到剛好就要停(過磨會傷馬達),見 <a href="../when-to-stop-motor-break-in/">12 小時過磨實驗</a>;磨合要磨多久、R 曲線怎麼看,見 <a href="../../guides/motor-break-in-resistance-curve/">560 次磨合曲線</a>;導電油讓數字漂亮是假象,見 <a href="../../guides/conductive-oil-motor-break-in/">導電油磨馬達真的有效嗎</a>。詳細操作見 <a href="/docs/user-manual/#standardflow">使用者手冊「標準磨合流程」</a>。</p>
+</article><div class="guide-pagination"><div class="left"><a href="/benchmarks/revive-dead-motor-electric-shock/"><span class="label">← 上一篇</span><span>電擊修復</span></a></div><div class="center"><a href="https://motorlab-tw.github.io/#guides"><span class="label">︿</span><span>回教學首頁</span></a></div><div class="right"><span class="label">下一篇 →</span><span class="disabled">—</span></div></div></div></main><footer>
 <div class="container">
-<div class="footer-trademark" data-i18n="footer.trademark">
-      "Mini 4WD"<sup>®</sup> 與 "ミニ四駆"<sup>®</sup> 為株式会社タミヤ（TAMIYA, INC.）的註冊商標（日本商標登錄號 第 2168392 號）。MotorLab 為獨立工作室，與株式会社タミヤ無任何關聯，亦未受其授權、贊助或背書。本網站提及之相關名稱僅用於指涉產品適用範圍，所有商標權益歸原權利人所有。
-    </div>
+<div class="footer-trademark" data-i18n="footer.trademark">"Mini 4WD"<sup>®</sup> 與 "ミニ四駆"<sup>®</sup> 為株式会社タミヤ(TAMIYA, INC.)的註冊商標(日本商標登錄號 第 2168392 號)。MotorLab 為獨立工作室,與株式会社タミヤ無任何關聯,亦未受其授權、贊助或背書。本網站提及之相關名稱僅用於指涉產品適用範圍,所有商標權益歸原權利人所有。</div>
 <div class="footer-inner">
 <div>
 <strong>MotorLab.tw</strong> · <span data-i18n="footer.tagline">Mini 4WD Performance Lab</span>

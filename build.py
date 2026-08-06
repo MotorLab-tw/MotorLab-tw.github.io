@@ -803,6 +803,37 @@ GUIDES = [
             },
         },
     },
+    # ---------- g20:AI 智慧磨合前後實測(benchmarks hub)----------
+    {
+        "slug": "ai-smart-break-in-before-after",
+        "key": "g20",
+        "published": "2026-08-05",
+        "updated": "2026-08-05",
+        "type": "benchmarks",
+        "i18n": {
+            "zh": {
+                "title": "AI 智慧磨合前後實測:轉速+2.7%、扭力持平不傷磁鐵 | MotorLab",
+                "description": "AI 智慧磨合到底有沒有效?一顆全新 Mach-Dash PRO,磨前量一次 → AI 自動磨到停 → 等溫度回到磨前再量(同溫對照)。結果:同電壓轉速 +2.7%、帶動更省力、扭力持平(不傷磁鐵)。全新品內耗微升是正常,判讀看轉速上升與磨合曲線下降。",
+                "keywords": "AI 智慧磨合, 馬達磨合 前後, 磨合有效嗎, 磨合實測, 磨馬達 效果, 同溫對照, Mach-Dash PRO, 迷你四驅車 馬達磨合, MotorLab",
+                "breadcrumb": "AI 磨合前後實測",
+                "h1_for_ld": "AI 智慧磨合前後,數據變了什麼?一顆全新馬達的同溫對照實測",
+            },
+            "en": {
+                "title": "AI Smart Break-in Before & After: +2.7% RPM, Torque Held | MotorLab",
+                "description": "Does AI smart break-in work? A brand-new Mach-Dash PRO, measured before and after at the same temperature: +2.7% RPM, less drive voltage, torque held.",
+                "keywords": "AI smart break-in, motor break-in before after, does break-in work, break-in test, Mini 4WD motor break-in, same-temperature comparison, Mach-Dash PRO, MotorLab",
+                "breadcrumb": "Break-in Before/After",
+                "h1_for_ld": "AI Smart Break-in, Before & After: A Same-Temperature Test on One Brand-New Motor",
+            },
+            "ja": {
+                "title": "AI スマート慣らし前後の実測:回転+2.7%、トルク維持で磁石無害 | MotorLab",
+                "description": "AI スマート慣らしは本当に効くのか?新品 Mach-Dash PRO を慣らし前に測定 → 自動で慣らして停止 → 同じ温度に戻してから再測定(同温対照)。結果:同電圧で回転 +2.7%、駆動がより省力、トルク維持(磁石無害)。新品の内耗微増は正常で、判読は回転上昇と慣らし曲線の低下を見る。",
+                "keywords": "AI スマート慣らし, モーター慣らし 前後, 慣らし 効果, 慣らし 実測, ミニ四駆 モーター慣らし, 同温対照, マッハダッシュ PRO, MotorLab",
+                "breadcrumb": "慣らし前後の実測",
+                "h1_for_ld": "AI スマート慣らしの前後で何が変わった?新品モーター 1 個の同温対照実測",
+            },
+        },
+    },
 ]
 
 # UI 字串(教學頁面通用元件:nav / 麵包屑 / 分頁)
@@ -916,7 +947,7 @@ HUBS = [
     },
     {
         "slug": "benchmarks",
-        "include": ["g3", "g9", "g17", "g18", "g19"],
+        "include": ["g3", "g9", "g17", "g18", "g19", "g20"],
         "i18n": {
             "zh": {
                 "title": "效能對比 — 田宮 Mini 4WD® 馬達規格速查 | MotorLab",

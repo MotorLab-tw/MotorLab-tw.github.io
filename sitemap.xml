@@ -1305,4 +1305,34 @@
       <image:title>引退モーターの電気ショック修復:磁力を +18% 充て直し(可逆)、摩耗は戻せない</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://motorlab-tw.github.io/benchmarks/ai-smart-break-in-before-after/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/benchmarks/ai-smart-break-in-before-after/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/benchmarks/ai-smart-break-in-before-after/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/benchmarks/ai-smart-break-in-before-after/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/benchmarks/ai-smart-break-in-before-after/"/>
+  </url>
+  <url>
+    <loc>https://motorlab-tw.github.io/en/benchmarks/ai-smart-break-in-before-after/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/benchmarks/ai-smart-break-in-before-after/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/benchmarks/ai-smart-break-in-before-after/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/benchmarks/ai-smart-break-in-before-after/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/benchmarks/ai-smart-break-in-before-after/"/>
+  </url>
+  <url>
+    <loc>https://motorlab-tw.github.io/ja/benchmarks/ai-smart-break-in-before-after/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/benchmarks/ai-smart-break-in-before-after/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/benchmarks/ai-smart-break-in-before-after/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/benchmarks/ai-smart-break-in-before-after/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/benchmarks/ai-smart-break-in-before-after/"/>
+  </url>
 </urlset>
