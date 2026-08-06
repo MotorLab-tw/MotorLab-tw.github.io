@@ -963,6 +963,36 @@
     color: var(--text-primary);
     font-weight: 500;
   }
+  /* g20 三大數字卡 */
+  .guide-stat3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin: 16px 0;
+  }
+  .guide-stat3 .s3card {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    text-align: center;
+  }
+  .guide-stat3 .s3v {
+    font-size: 24px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+  .guide-stat3 .s3v.up { color: var(--success); }
+  .guide-stat3 .s3v.flat { color: var(--accent-cyan); }
+  .guide-stat3 .s3k {
+    font-size: 12.5px;
+    color: var(--text-muted);
+    margin-top: 4px;
+    line-height: 1.5;
+  }
+  @media (max-width: 560px) {
+    .guide-stat3 { grid-template-columns: 1fr; }
+  }
 
   /* RWD: 行動裝置 */
   @media (max-width: 720px) {
