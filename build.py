@@ -263,7 +263,7 @@ GUIDES = [
         "slug": "motor-break-in-mistakes",
         "key": "g2",
         "published": "2026-05-22",
-        "updated": "2026-05-22",
+        "updated": "2026-08-13",
         "i18n": {
             "zh": {
                 "title": "業餘車手磨合馬達總是失敗?5 個常見錯誤與正確做法 | MotorLab",

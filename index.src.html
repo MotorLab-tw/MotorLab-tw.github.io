@@ -2896,7 +2896,7 @@
         <ul>
           <li data-i18n="g1.l1"><strong>電流不穩</strong>—碳刷跳動造成電流劇烈起伏,馬達抖動發熱</li>
           <li data-i18n="g1.l2"><strong>轉速無法發揮</strong>—標稱 19,300 RPM 的紅二,可能只能跑出 14,000 RPM</li>
-          <li data-i18n="g1.l3"><strong>磁鐵退磁風險</strong>—持續高溫會永久降低馬達輸出</li>
+          <li data-i18n="g1.l3"><strong>過熱的永久損害</strong>—鐵氧體磁鐵耐熱、受熱的磁力下降降溫會回復,但持續高溫會永久劣化軸承潤滑、電刷彈片與絕緣</li>
           <li data-i18n="g1.l4"><strong>銅頭過早磨損</strong>—未磨合的硬碰硬接觸會傷整流子</li>
         </ul>
         <p data-i18n="g1.p3"><strong>磨合的目的</strong>就是讓平面碳刷漸進磨出與銅頭曲面吻合的「半圓弧凹槽」,讓接觸面積最大化,電流順暢流動,馬達才能達到設計的轉速與扭力。</p>
@@ -2958,7 +2958,7 @@
         <p data-i18n="g2.p1">最常見的錯誤就是<strong>「拿乾電池(1.5V × 2 = 3V)直接讓馬達狂跑半小時」</strong>。看起來合理,實際後果是:</p>
         <ul>
           <li data-i18n="g2.l1">3V 對紅二、黑金剛來說已經接近全速,等於沒磨合就直接操</li>
-          <li data-i18n="g2.l2">長時間運轉沒冷卻,溫度可能衝到 80℃ 以上,<strong>磁鐵永久退磁</strong></li>
+          <li data-i18n="g2.l2">長時間運轉沒冷卻會一路累積高溫,<strong>永久劣化軸承潤滑與電刷彈片</strong>(鐵氧體磁鐵耐熱,磁力的熱衰退降溫會回復)</li>
           <li data-i18n="g2.l3">碳刷可能在還沒磨成弧形前就燒斷</li>
         </ul>
         <div class="guide-warning">
@@ -3876,7 +3876,7 @@
         <ol>
           <li data-i18n="g16.f1"><strong>換滿電電池</strong> → 轉速回來了?→ 是「電池問題」,馬達沒事。</li>
           <li data-i18n="g16.f2"><strong>清潔沖洗 + 軸承上油</strong> → 轉速回來了?→ 是「髒污 / 潤滑」,養好即可。</li>
-          <li data-i18n="g16.f3"><strong>還是慢</strong> → 量特性(I0 / R / Ke)與軸承:若損耗類升高但 Ke 正常 → 可能還有救;若轉速就是回不來、或有過熱史 → <strong>退磁 / 磨損</strong>,進入退役判定。</li>
+          <li data-i18n="g16.f3"><strong>還是慢</strong> → 量特性(I0 / R / Ke)與軸承:若損耗類升高但 Ke 正常 → 可能還有救;若 <strong>Ke 明顯偏低</strong>(磁力衰退)或轉速就是回不來 → <strong>磁力衰退 / 磨損</strong>,進入退役判定。</li>
         </ol>
         <div class="guide-tip">
         <p data-i18n="g16.key">一句話:馬達變慢,<strong>先排電池、髒污、潤滑</strong>三個可逆因素 —— 大多數「變慢」到這裡就解決了;三個都排除還是慢,才是真衰退,用數據判退役,別憑感覺提早換馬達、也別讓退磁的馬達拖累成績。</p>
@@ -4520,7 +4520,7 @@
       'g1.p2': '這時直接全速運轉,馬達會因為電刷接觸不良而產生以下狀況:',
       'g1.l1': '<strong>電流不穩</strong>—碳刷跳動造成電流劇烈起伏,馬達抖動發熱',
       'g1.l2': '<strong>轉速無法發揮</strong>—標稱 19,300 RPM 的紅二,可能只能跑出 14,000 RPM',
-      'g1.l3': '<strong>磁鐵退磁風險</strong>—持續高溫會永久降低馬達輸出',
+      'g1.l3': '<strong>過熱的永久損害</strong>—鐵氧體磁鐵耐熱、受熱的磁力下降降溫會回復,但持續高溫會永久劣化軸承潤滑、電刷彈片與絕緣',
       'g1.l4': '<strong>銅頭過早磨損</strong>—未磨合的硬碰硬接觸會傷整流子',
       'g1.p3': '<strong>磨合的目的</strong>就是讓平面碳刷漸進磨出與銅頭曲面吻合的「半圓弧凹槽」,讓接觸面積最大化,電流順暢流動,馬達才能達到設計的轉速與扭力。',
       'g1.h2': '磨合的物理原理',
@@ -4557,7 +4557,7 @@
       'g2.h1': '錯誤 1:電壓過高、時間過長',
       'g2.p1': '最常見的錯誤就是<strong>「拿乾電池(1.5V × 2 = 3V)直接讓馬達狂跑半小時」</strong>。看起來合理,實際後果是:',
       'g2.l1': '3V 對紅二、黑金剛來說已經接近全速,等於沒磨合就直接操',
-      'g2.l2': '長時間運轉沒冷卻,溫度可能衝到 80℃ 以上,<strong>磁鐵永久退磁</strong>',
+      'g2.l2': '長時間運轉沒冷卻會一路累積高溫,<strong>永久劣化軸承潤滑與電刷彈片</strong>(鐵氧體磁鐵耐熱,磁力的熱衰退降溫會回復)',
       'g2.l3': '碳刷可能在還沒磨成弧形前就燒斷',
       'g2.w1': '正確做法:從低電壓起步,每階段升 0.2V,每階段間須充分冷卻。',
       'g2.h2': '錯誤 2:用水磨但水量太多、沒擦乾',
@@ -5464,7 +5464,7 @@
       'g1.p2': 'Running at full speed in this state causes:',
       'g1.l1': '<strong>Unstable current</strong> — brush bounce produces erratic current swings, motor vibrates and overheats',
       'g1.l2': '<strong>Unrealized RPM</strong> — a Hyper Dash 2 rated 19,300 RPM may only deliver 14,000 RPM',
-      'g1.l3': '<strong>Magnet demagnetization risk</strong> — sustained heat permanently reduces motor output',
+      'g1.l3': '<strong>Permanent damage from overheating</strong> — ferrite magnets are heat-tolerant and their heat-related loss returns on cooling, but sustained heat permanently degrades bearing lubricant, brush springs and insulation',
       'g1.l4': '<strong>Premature commutator wear</strong> — hard contact between un-mated surfaces damages the copper',
       'g1.p3': '<strong>The goal of break-in</strong> is to gradually wear the flat brush into a half-circle arc that matches the commutator surface — maximizing contact area, enabling smooth current flow, and letting the motor reach its designed RPM and torque.',
       'g1.h2': 'The physics behind break-in',
@@ -5502,7 +5502,7 @@
       'g2.h1': 'Mistake 1: Voltage too high, time too long',
       'g2.p1': 'The most common error: <strong>"Two AA batteries (3V) and let it run for half an hour"</strong>. Sounds reasonable. Actual consequences:',
       'g2.l1': '3V is near full-speed for Hyper Dash and Plasma Dash — you\'re basically skipping break-in',
-      'g2.l2': 'Sustained running without cooling can reach 80°C+, causing <strong>permanent magnet demagnetization</strong>',
+      'g2.l2': 'Running for long stretches without cooling piles up heat and <strong>permanently degrades bearing lubricant and brush springs</strong> (ferrite magnets are heat-tolerant — their heat-related loss returns on cooling)',
       'g2.l3': 'Brushes may burn out before forming a proper arc',
       'g2.w1': 'Correct approach: start at a low voltage, increase by 0.2V per stage, with adequate cooling between stages.',
       'g2.h2': 'Mistake 2: Water break-in with too much water or no drying',
@@ -6187,7 +6187,7 @@
       'g16.h3': 'How to pinpoint it fast: a 3-step rule-out',
       'g16.f1': '<strong>Swap in a full battery</strong> → RPM back? → it was the battery; the motor is fine.',
       'g16.f2': '<strong>Flush-clean and oil the bearings</strong> → RPM back? → it was dirt / lube; just maintain it.',
-      'g16.f3': '<strong>Still slow</strong> → measure characteristics (I0 / R / Ke) and the bearing: if loss metrics rose but Ke is normal, there may still be hope; if RPM simply will not return, or there is a heat history → <strong>demagnetization / wear</strong>, move to the retirement check.',
+      'g16.f3': '<strong>Still slow</strong> → measure characteristics (I0 / R / Ke) and the bearing: if loss metrics rose but Ke is normal, there may still be hope; if <strong>Ke itself is clearly low</strong> (weakened magnets) or RPM simply will not return → <strong>magnet weakening / wear</strong>, move to the retirement check.',
       'g16.key': 'In one line: when a motor slows, <strong>rule out battery, dirt and lube first</strong> — most cases end here. Only if all three are cleared and it is still slow is it true degradation; judge retirement by data, so you neither replace a motor too early on a hunch nor let a demagnetized one drag your results.',
       'g16.related': 'Further reading: clean-and-oil or retire? See <a href="../motor-wash-vs-break-in/">motor wash vs break-in</a>; confirm real degradation with <a href="../motor-degradation-signs/">8 signs your motor is dying and when to retire</a>; quantify it with <a href="../motor-break-in-resistance-curve/">the R break-in curve</a>.',
       'g16.w1': 'This is general troubleshooting. Real slowdowns are often several causes stacked (e.g. an aging battery plus light carbon buildup); rule them out one at a time, change only one variable per test, and compare under the same battery and temperature for a reliable read.',
@@ -6631,7 +6631,7 @@
       'g1.p2': 'この状態で全速運転すると、ブラシ接触不良により以下の状況が発生します:',
       'g1.l1': '<strong>電流が不安定</strong>—ブラシの跳ねにより電流が激しく変動し、モーターが振動・発熱する',
       'g1.l2': '<strong>回転数が出ない</strong>—公称 19,300 RPM のハイパーダッシュ 2 が 14,000 RPM しか出ないことも',
-      'g1.l3': '<strong>磁石減磁リスク</strong>—持続的な高温はモーター出力を永久的に低下させる',
+      'g1.l3': '<strong>過熱による永久的なダメージ</strong>—フェライト磁石は耐熱性が高く熱による磁力低下は冷えれば戻るが、持続的な高温はベアリング潤滑・ブラシばね・絶縁を永久に劣化させる',
       'g1.l4': '<strong>整流子の早期摩耗</strong>—慣らしなしの硬接触は整流子を傷める',
       'g1.p3': '<strong>慣らしの目的</strong>は、平面ブラシを段階的に整流子の曲面と合う「半円弧の凹み」に削り出し、接触面積を最大化して電流をスムーズに流し、モーターが設計通りの回転数とトルクに到達できるようにすることです。',
       'g1.h2': '慣らしの物理原理',
@@ -6677,7 +6677,7 @@
       'g2.h1': '間違い 1:電圧過大・時間過長',
       'g2.p1': '最もよくある間違いは<strong>「乾電池(1.5V × 2 = 3V)でモーターを 30 分間ぶっ通しで回す」</strong>です。一見合理的に見えますが、実際の結果は:',
       'g2.l1': '3V はハイパーダッシュ 2 やプラズマダッシュにとってほぼ全速、慣らしなしで即フル稼働と同じ',
-      'g2.l2': '長時間冷却なしで運転すると温度が 80℃ を超え、<strong>磁石が永久減磁</strong>',
+      'g2.l2': '長時間冷却なしで運転すると熱が蓄積し、<strong>ベアリング潤滑とブラシばねが永久に劣化</strong>(フェライト磁石は耐熱性が高く、熱による磁力低下は冷えれば戻る)',
       'g2.l3': 'ブラシが弧形になる前に焼損する可能性',
       'g2.w1': '正しい手順:低電圧から開始、各段階 0.2V ずつ昇圧、各段階間に十分な冷却を挟む。',
       'g2.h2': '間違い 2:水慣らしの水量過多・拭き残し',
@@ -7376,7 +7376,7 @@
       'g16.h3': '素早く特定する:3 ステップ切り分け',
       'g16.f1': '<strong>満充電の電池に交換</strong> → 回転が戻った?→ 電池が原因、モーターは正常。',
       'g16.f2': '<strong>洗浄しベアリング注油</strong> → 回転が戻った?→ 汚れ / 潤滑が原因、整備でOK。',
-      'g16.f3': '<strong>まだ遅い</strong> → 特性(I0 / R / Ke)とベアリングを測定:損失系が上昇でも Ke が正常なら救える可能性;回転がどうしても戻らない、または高温履歴あり → <strong>減磁 / 摩耗</strong>、引退判定へ。',
+      'g16.f3': '<strong>まだ遅い</strong> → 特性(I0 / R / Ke)とベアリングを測定:損失系が上昇でも Ke が正常なら救える可能性;<strong>Ke 自体が明らかに低い</strong>(磁力低下)、または回転がどうしても戻らない → <strong>磁力の低下 / 摩耗</strong>、引退判定へ。',
       'g16.key': '一言:モーターが遅くなったら、<strong>まず電池・汚れ・潤滑</strong>の 3 つを排除 —— 多くはここで解決。3 つとも排除しても遅いなら本当の劣化。データで引退を判断し、勘で早く替えず、減磁したモーターで成績を落とさない。',
       'g16.related': '関連:清掃・注油か引退か —— <a href="../motor-wash-vs-break-in/">モーター洗浄 vs 慣らし</a>;本当に劣化かを確認 —— <a href="../motor-degradation-signs/">劣化の 8 サインと引退判定</a>;数値化するなら —— <a href="../motor-break-in-resistance-curve/">R 慣らしカーブ</a>。',
       'g16.w1': '本記事は一般的なトラブル対処です。実際の低下は複数要因が重なることも多い(例:電池劣化 + 軽い堆積)。1 つずつ切り分け、1 回に 1 変数だけ変え、同じ電池・温度で比較すると判断が正確です。',
