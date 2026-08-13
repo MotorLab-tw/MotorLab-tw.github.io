@@ -1697,16 +1697,27 @@ def _transform_guides_to_cards(soup, lang):
 
 
 # ============================================================
-def _fix_footer_verify(footer_el, lang):
-    """獨立頁沿用母版 footer(原樣搬入,不經 build_lang)。這裡把 footer 內
-    的 data-verifylink 連結改寫成對應語言的 /verify/,並清掉屬性,避免屬性外洩
-    與 en/ja 頁連到中文 /verify/。footer 其餘文字沿用母版既有行為(不動)。"""
+def _fix_footer_verify(footer_el, lang, i18n=None):
+    """獨立頁沿用母版 footer(原樣搬入,不經 build_lang)。這裡做兩件事:
+    (1) 把 data-verifylink 連結改寫成對應語言的 /verify/ 並清掉屬性,避免屬性
+        外洩與 en/ja 頁連到中文 /verify/;
+    (2) 依 i18n 翻譯 footer 內的 data-i18n 文字(tagline / trademark / verify)。
+        獨立頁不含 i18n dict、不跑前端翻譯,若不在這裡翻,en/ja 子頁的商標與
+        免責聲明會留在中文母版文字(法律聲明語言錯誤)。"""
     if footer_el is None:
         return
     prefix = "" if lang == "zh" else f"/{lang}"
     for a in footer_el.select("a[data-verifylink]"):
         a["href"] = f"{prefix}/verify/"
         del a["data-verifylink"]
+    # 文字翻譯:zh 為母版原文不需動;en/ja 依 dict 覆寫
+    if i18n and lang != "zh":
+        table = i18n.get(lang, {})
+        for el in footer_el.select("[data-i18n]"):
+            txt = table.get(el.get("data-i18n"))
+            if txt:
+                el.clear()
+                el.append(BeautifulSoup(txt, "html.parser"))
 
 
 # 獨立教學分頁產生器:/guides/<slug>/index.html
@@ -1782,7 +1793,7 @@ def build_guide_page(slug, lang, src_html, i18n, guide_cfg):
     # 4. 保留 footer
     footer_el = soup.find("footer")
     footer_extracted = footer_el.extract() if footer_el else None
-    _fix_footer_verify(footer_extracted, lang)
+    _fix_footer_verify(footer_extracted, lang, i18n)
 
     # 5. 砍掉現有 JSON-LD 與 hreflang(加 guide 專用的)
     for s in soup.find_all("script", {"type": "application/ld+json"}):
@@ -2015,7 +2026,7 @@ def build_hub_page(hub_cfg, lang, src_html, i18n):
     # 3. 留 footer,清掉 body 其他
     footer_el = soup.find("footer")
     footer_extracted = footer_el.extract() if footer_el else None
-    _fix_footer_verify(footer_extracted, lang)
+    _fix_footer_verify(footer_extracted, lang, i18n)
 
     # 4. <title> / meta / canonical
     if soup.title:
@@ -2186,7 +2197,7 @@ def build_system_page(sys_cfg, lang, src_html, i18n):
     # 3. 留 footer(含 D10 商標聲明),清掉 body 其他
     footer_el = soup.find("footer")
     footer_extracted = footer_el.extract() if footer_el else None
-    _fix_footer_verify(footer_extracted, lang)
+    _fix_footer_verify(footer_extracted, lang, i18n)
 
     # 4. <title> / meta / canonical
     if soup.title:
@@ -2550,7 +2561,7 @@ def build_lab_page(lab_cfg, lang, src_html, i18n):
     # 3. 留 footer(含 D10 商標聲明)
     footer_el = soup.find("footer")
     footer_extracted = footer_el.extract() if footer_el else None
-    _fix_footer_verify(footer_extracted, lang)
+    _fix_footer_verify(footer_extracted, lang, i18n)
 
     # 4. <title> / meta / canonical
     if soup.title:
@@ -2873,7 +2884,7 @@ def build_verify_page(verify_cfg, lang, src_html, i18n):
 
     footer_el = soup.find("footer")
     footer_extracted = footer_el.extract() if footer_el else None
-    _fix_footer_verify(footer_extracted, lang)
+    _fix_footer_verify(footer_extracted, lang, i18n)
 
     if soup.title:
         soup.title.string = s["title"]
@@ -3247,7 +3258,7 @@ def build_presale_page(presale_cfg, lang, src_html, i18n):
 
     footer_el = soup.find("footer")
     footer_extracted = footer_el.extract() if footer_el else None
-    _fix_footer_verify(footer_extracted, lang)
+    _fix_footer_verify(footer_extracted, lang, i18n)
 
     if soup.title:
         soup.title.string = s["title"]
@@ -3703,7 +3714,7 @@ def build_manual_page(man_cfg, lang, src_html, i18n):
 
     footer_el = soup.find("footer")
     footer_extracted = footer_el.extract() if footer_el else None
-    _fix_footer_verify(footer_extracted, lang)
+    _fix_footer_verify(footer_extracted, lang, i18n)
 
     if soup.title:
         soup.title.string = s["title"]
