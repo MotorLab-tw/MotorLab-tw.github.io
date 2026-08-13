@@ -7,12 +7,21 @@ Sitemap: https://motorlab-tw.github.io/sitemap.xml
 # 主流搜尋引擎明確列出
 User-agent: Googlebot
 Allow: /
+Disallow: /counter/
 
 User-agent: Bingbot
 Allow: /
+Disallow: /counter/
 
 User-agent: DuckDuckBot
 Allow: /
+Disallow: /counter/
 
+# 其餘爬蟲通則
+User-agent: *
+Allow: /
+Disallow: /counter/
 
-
+# 說明:/counter/ 為瀏覽計數(GoatCounter)的 API 路徑,計數服務在外部網域
+# (motorlab-tw.goatcounter.com),本站並無此目錄。爬蟲會從前端 JS 取出
+# "/counter/TOTAL.json" 字串、誤以本站網域嘗試抓取而回報 404,故明確排除。
