@@ -234,7 +234,7 @@ GUIDES = [
         "slug": "motor-break-in-guide",
         "key": "g1",
         "published": "2026-05-22",
-        "updated": "2026-07-23",
+        "updated": "2026-08-13",
         "i18n": {
             "zh": {
                 "title": "四驅車馬達磨合完全指南:從原理到實作 | MotorLab",
@@ -437,7 +437,7 @@ GUIDES = [
         "slug": "motor-degradation-signs",
         "key": "g8",
         "published": "2026-05-24",
-        "updated": "2026-06-12",
+        "updated": "2026-08-13",
         "i18n": {
             "zh": {
                 "title": "四驅車馬達衰退的 8 個徵兆與退役判定門檻 | MotorLab",
@@ -683,7 +683,7 @@ GUIDES = [
         "slug": "motor-slow-causes-fixes",
         "key": "g16",
         "published": "2026-07-17",
-        "updated": "2026-07-17",
+        "updated": "2026-08-13",
         "type": "guides",
         "i18n": {
             "zh": {
