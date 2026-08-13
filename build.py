@@ -2899,6 +2899,10 @@ def build_verify_page(verify_cfg, lang, src_html, i18n):
     if lang != "en" and "en" in verify_cfg["i18n"]:
         kw = kw + ", " + verify_cfg["i18n"]["en"]["keywords"]
     set_meta("name", "keywords", kw)
+    # 工具頁不進搜尋索引:本頁是給既有機主輸入設備 ID 的查驗工具,無搜尋需求
+    # 且內容單薄(Google 實際回報「已檢索 — 目前尚未建立索引」)。用 noindex,
+    # follow 明確表態(頁面照常可用、連結權重照走),並同步自 sitemap 移除。
+    set_meta("name", "robots", "noindex, follow")
     set_meta("http-equiv", "Content-Language", cfg["html_lang"])
     set_meta("property", "og:type", "website")
     set_meta("property", "og:url", page_url)
