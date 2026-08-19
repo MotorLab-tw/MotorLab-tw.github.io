@@ -1491,7 +1491,8 @@ def build_lang(src_html, lang, i18n):
         elif hl == "ja":
             tag["href"] = LANGS["ja"]["url"]
         elif hl == "x-default":
-            tag["href"] = LANGS["zh"]["url"]
+            # x-default = 非中/日語系的 fallback → 指英文版(國際通用)
+            tag["href"] = LANGS["en"]["url"]
 
     # --- 7. favicon / manifest 路徑改絕對路徑(子目錄也能正確載入) ---
     for tag in soup.find_all("link"):
@@ -1837,10 +1838,10 @@ def build_guide_page(slug, lang, src_html, i18n, guide_cfg):
         hl_url = f"{SITE}{hl_prefix}/{article_type}/{slug}/"
         link = soup.new_tag("link", attrs={"rel": "alternate", "hreflang": hl_attr, "href": hl_url})
         head.append(link)
-    # x-default 指 zh
+    # x-default = 非中/日語系的 fallback → 指英文版(國際通用)
     link = soup.new_tag("link", attrs={
         "rel": "alternate", "hreflang": "x-default",
-        "href": f"{SITE}/{article_type}/{slug}/",
+        "href": f"{SITE}/en/{article_type}/{slug}/",
     })
     head.append(link)
 
@@ -2065,7 +2066,7 @@ def build_hub_page(hub_cfg, lang, src_html, i18n):
             "rel": "alternate", "hreflang": hl_cfg["html_lang"], "href": hl_url
         }))
     head.append(soup.new_tag("link", attrs={
-        "rel": "alternate", "hreflang": "x-default", "href": f"{SITE}/{slug}/"
+        "rel": "alternate", "hreflang": "x-default", "href": f"{SITE}/en/{slug}/"
     }))
 
     # 6. JSON-LD: CollectionPage + BreadcrumbList + ItemList
@@ -2235,7 +2236,7 @@ def build_system_page(sys_cfg, lang, src_html, i18n):
             "rel": "alternate", "hreflang": hl_cfg["html_lang"], "href": hl_url
         }))
     head.append(soup.new_tag("link", attrs={
-        "rel": "alternate", "hreflang": "x-default", "href": f"{SITE}/{page_type}/{slug}/"
+        "rel": "alternate", "hreflang": "x-default", "href": f"{SITE}/en/{page_type}/{slug}/"
     }))
 
     # 6. JSON-LD: WebPage(primaryImageOfPage)+ BreadcrumbList
@@ -2598,7 +2599,7 @@ def build_lab_page(lab_cfg, lang, src_html, i18n):
             "rel": "alternate", "hreflang": hl_cfg["html_lang"], "href": f"{SITE}{hl_prefix}/lab/"
         }))
     head.append(soup.new_tag("link", attrs={
-        "rel": "alternate", "hreflang": "x-default", "href": f"{SITE}/lab/"
+        "rel": "alternate", "hreflang": "x-default", "href": f"{SITE}/en/lab/"
     }))
 
     # 6. JSON-LD: WebApplication + BreadcrumbList
@@ -2923,7 +2924,7 @@ def build_verify_page(verify_cfg, lang, src_html, i18n):
             "rel": "alternate", "hreflang": hl_cfg["html_lang"], "href": f"{SITE}{hl_prefix}/verify/"
         }))
     head.append(soup.new_tag("link", attrs={
-        "rel": "alternate", "hreflang": "x-default", "href": f"{SITE}/verify/"
+        "rel": "alternate", "hreflang": "x-default", "href": f"{SITE}/en/verify/"
     }))
 
     # 查驗頁專屬 CSS
@@ -3297,7 +3298,7 @@ def build_presale_page(presale_cfg, lang, src_html, i18n):
             "rel": "alternate", "hreflang": hl_cfg["html_lang"], "href": f"{SITE}{hl_prefix}/presale/"
         }))
     head.append(soup.new_tag("link", attrs={
-        "rel": "alternate", "hreflang": "x-default", "href": f"{SITE}/presale/"
+        "rel": "alternate", "hreflang": "x-default", "href": f"{SITE}/en/presale/"
     }))
 
     style_tag = soup.new_tag("style")
@@ -3754,7 +3755,7 @@ def build_manual_page(man_cfg, lang, src_html, i18n):
             "href": f"{SITE}{hl_prefix}/docs/{man_cfg['slug']}/"
         }))
     head.append(soup.new_tag("link", attrs={
-        "rel": "alternate", "hreflang": "x-default", "href": f"{SITE}/docs/{man_cfg['slug']}/"
+        "rel": "alternate", "hreflang": "x-default", "href": f"{SITE}/en/docs/{man_cfg['slug']}/"
     }))
 
     # JSON-LD: TechArticle + BreadcrumbList

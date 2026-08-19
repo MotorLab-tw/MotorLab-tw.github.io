@@ -13,7 +13,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/og-image.png</image:loc>
       <image:title>MotorLab — Mini 4WD Motor Lab</image:title>
@@ -28,7 +28,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/og-image.png</image:loc>
       <image:title>MotorLab — Mini 4WD Motor Lab</image:title>
@@ -43,7 +43,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/og-image.png</image:loc>
       <image:title>MotorLab — Mini 4WD モーターラボ</image:title>
@@ -60,7 +60,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/"/>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/en/guides/</loc>
@@ -70,7 +70,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/"/>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/ja/guides/</loc>
@@ -80,7 +80,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/"/>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/benchmarks/</loc>
@@ -90,7 +90,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/benchmarks/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/benchmarks/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/benchmarks/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/benchmarks/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/benchmarks/"/>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/en/benchmarks/</loc>
@@ -100,7 +100,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/benchmarks/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/benchmarks/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/benchmarks/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/benchmarks/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/benchmarks/"/>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/ja/benchmarks/</loc>
@@ -110,7 +110,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/benchmarks/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/benchmarks/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/benchmarks/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/benchmarks/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/benchmarks/"/>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/methodology/</loc>
@@ -120,7 +120,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/methodology/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/methodology/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/methodology/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/methodology/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/methodology/"/>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/en/methodology/</loc>
@@ -130,7 +130,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/methodology/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/methodology/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/methodology/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/methodology/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/methodology/"/>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/ja/methodology/</loc>
@@ -140,7 +140,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/methodology/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/methodology/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/methodology/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/methodology/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/methodology/"/>
   </url>
 
   <!-- /guides/ articles -->
@@ -152,7 +152,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-break-in-guide/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-break-in-guide/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-break-in-guide/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-break-in-guide/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/motor-break-in-guide/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/break-in-4-key-variables_c.png</image:loc>
       <image:title>專業馬達磨合的 4 個關鍵變數:電壓、時間、方向、冷卻,以及各自控制不當的後果</image:title>
@@ -166,7 +166,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-break-in-guide/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-break-in-guide/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-break-in-guide/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-break-in-guide/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/motor-break-in-guide/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/break-in-4-key-variables_e.png</image:loc>
       <image:title>The 4 key motor break-in variables: voltage, time, direction, cooling — and what goes wrong if each is off</image:title>
@@ -180,7 +180,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-break-in-guide/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-break-in-guide/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-break-in-guide/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-break-in-guide/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/motor-break-in-guide/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/break-in-4-key-variables_j.png</image:loc>
       <image:title>モーター慣らしの 4 つの重要変数:電圧・時間・方向・冷却と、それぞれ誤ったときの結果</image:title>
@@ -194,7 +194,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-break-in-mistakes/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-break-in-mistakes/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-break-in-mistakes/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-break-in-mistakes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/motor-break-in-mistakes/"/>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/en/guides/motor-break-in-mistakes/</loc>
@@ -204,7 +204,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-break-in-mistakes/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-break-in-mistakes/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-break-in-mistakes/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-break-in-mistakes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/motor-break-in-mistakes/"/>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/ja/guides/motor-break-in-mistakes/</loc>
@@ -214,7 +214,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-break-in-mistakes/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-break-in-mistakes/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-break-in-mistakes/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-break-in-mistakes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/motor-break-in-mistakes/"/>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/guides/tamiya-motor-specs/</loc>
@@ -224,7 +224,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/tamiya-motor-specs/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/tamiya-motor-specs/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/tamiya-motor-specs/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/tamiya-motor-specs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/tamiya-motor-specs/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/tamiya-motor-break-in-strategy_c.png</image:loc>
       <image:title>田宮主流 8 款馬達磨合策略對照:銅刷入門款 vs 碳刷進階款,各自的負載轉速、扭力與建議磨合方式</image:title>
@@ -238,7 +238,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/tamiya-motor-specs/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/tamiya-motor-specs/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/tamiya-motor-specs/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/tamiya-motor-specs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/tamiya-motor-specs/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/tamiya-motor-break-in-strategy_e.png</image:loc>
       <image:title>Break-in strategy for 8 mainstream Tamiya motors: copper-brush entry vs carbon-brush advanced, with load RPM, torque and recommended break-in</image:title>
@@ -252,7 +252,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/tamiya-motor-specs/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/tamiya-motor-specs/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/tamiya-motor-specs/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/tamiya-motor-specs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/tamiya-motor-specs/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/tamiya-motor-break-in-strategy_j.png</image:loc>
       <image:title>タミヤ主流 8 機種の慣らし戦略対照:銅ブラシ入門 vs カーボンブラシ上級、負荷回転数・トルクと推奨慣らし方法</image:title>
@@ -266,7 +266,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-wash-vs-break-in/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-wash-vs-break-in/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-wash-vs-break-in/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-wash-vs-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/motor-wash-vs-break-in/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/wash-vs-break-in-motor_c.png</image:loc>
       <image:title>洗馬達 vs 磨馬達:時機、目的、工具、耗時、後續五項對照</image:title>
@@ -280,7 +280,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-wash-vs-break-in/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-wash-vs-break-in/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-wash-vs-break-in/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-wash-vs-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/motor-wash-vs-break-in/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/wash-vs-break-in-motor_e.png</image:loc>
       <image:title>Wash vs break-in compared: when, purpose, tools, duration and aftercare</image:title>
@@ -294,7 +294,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-wash-vs-break-in/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-wash-vs-break-in/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-wash-vs-break-in/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-wash-vs-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/motor-wash-vs-break-in/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/wash-vs-break-in-motor_j.png</image:loc>
       <image:title>洗浄 vs 慣らし:タイミング・目的・工具・所要時間・後処理の対照</image:title>
@@ -308,7 +308,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/racing-motor-break-in/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/racing-motor-break-in/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/racing-motor-break-in/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/racing-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/racing-motor-break-in/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/amateur-vs-race-break-in_c.png</image:loc>
       <image:title>業餘 vs 競賽水準:RPM 波動、同型差異、重現度三項對照</image:title>
@@ -322,7 +322,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/racing-motor-break-in/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/racing-motor-break-in/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/racing-motor-break-in/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/racing-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/racing-motor-break-in/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/amateur-vs-race-break-in_e.png</image:loc>
       <image:title>Amateur vs competition level: RPM variance, motor spread and repeatability</image:title>
@@ -336,7 +336,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/racing-motor-break-in/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/racing-motor-break-in/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/racing-motor-break-in/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/racing-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/racing-motor-break-in/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/amateur-vs-race-break-in_j.png</image:loc>
       <image:title>アマチュア vs 競技水準:RPM 変動・ばらつき・再現性の対照</image:title>
@@ -350,7 +350,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/racing-prep-techniques/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/racing-prep-techniques/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/racing-prep-techniques/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/racing-prep-techniques/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/racing-prep-techniques/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/track-type-motor-match_c.png</image:loc>
       <image:title>跑道屬性對應適合的馬達特性</image:title>
@@ -364,7 +364,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/racing-prep-techniques/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/racing-prep-techniques/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/racing-prep-techniques/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/racing-prep-techniques/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/racing-prep-techniques/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/track-type-motor-match_e.png</image:loc>
       <image:title>Mini 4WD track type to motor characteristic</image:title>
@@ -378,7 +378,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/racing-prep-techniques/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/racing-prep-techniques/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/racing-prep-techniques/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/racing-prep-techniques/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/racing-prep-techniques/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/track-type-motor-match_j.png</image:loc>
       <image:title>コース特性と適したモーター特性</image:title>
@@ -392,7 +392,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-analysis-methodology/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-analysis-methodology/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-analysis-methodology/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-analysis-methodology/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/motor-analysis-methodology/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/motor-analysis-3-pillars_c.png</image:loc>
       <image:title>馬達分析的三支柱方法論</image:title>
@@ -410,7 +410,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-analysis-methodology/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-analysis-methodology/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-analysis-methodology/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-analysis-methodology/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/motor-analysis-methodology/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/motor-analysis-3-pillars_e.png</image:loc>
       <image:title>Three-pillar methodology for motor analysis</image:title>
@@ -428,7 +428,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-analysis-methodology/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-analysis-methodology/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-analysis-methodology/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-analysis-methodology/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/motor-analysis-methodology/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/motor-analysis-3-pillars_j.png</image:loc>
       <image:title>モーター分析の三本柱方法論</image:title>
@@ -446,7 +446,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-degradation-signs/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-degradation-signs/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-degradation-signs/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-degradation-signs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/motor-degradation-signs/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/motor-retire-decision_c.png</image:loc>
       <image:title>馬達衰退退役判定(依 RPM 下降幅度)</image:title>
@@ -460,7 +460,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-degradation-signs/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-degradation-signs/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-degradation-signs/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-degradation-signs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/motor-degradation-signs/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/motor-retire-decision_e.png</image:loc>
       <image:title>Mini 4WD motor degradation &amp; retirement decision by RPM drop</image:title>
@@ -474,7 +474,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-degradation-signs/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-degradation-signs/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-degradation-signs/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-degradation-signs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/motor-degradation-signs/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/motor-retire-decision_j.png</image:loc>
       <image:title>モーター劣化・引退判断(RPM 低下幅による)</image:title>
@@ -488,7 +488,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/track-analysis-motor-selection/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/track-analysis-motor-selection/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/track-analysis-motor-selection/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/track-analysis-motor-selection/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/track-analysis-motor-selection/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/track-segment-types_c.png</image:loc>
       <image:title>軌道三種基本區段:直線 S、彎道 C、特殊 X 對馬達的需求</image:title>
@@ -510,7 +510,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/track-analysis-motor-selection/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/track-analysis-motor-selection/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/track-analysis-motor-selection/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/track-analysis-motor-selection/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/track-analysis-motor-selection/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/track-segment-types_e.png</image:loc>
       <image:title>Three track section types — straight, curve, special — and their motor demands</image:title>
@@ -532,7 +532,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/track-analysis-motor-selection/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/track-analysis-motor-selection/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/track-analysis-motor-selection/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/track-analysis-motor-selection/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/track-analysis-motor-selection/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/track-segment-types_j.png</image:loc>
       <image:title>コースの3区間:ストレート S・カーブ C・特殊 X のモーター要求</image:title>
@@ -554,7 +554,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/crash-risk-trigger-model/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/crash-risk-trigger-model/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/crash-risk-trigger-model/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/crash-risk-trigger-model/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/crash-risk-trigger-model/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/crash-risk-trigger-count_c.png</image:loc>
       <image:title>四驅車飛車風險計數模型(三觸發)</image:title>
@@ -568,7 +568,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/crash-risk-trigger-model/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/crash-risk-trigger-model/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/crash-risk-trigger-model/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/crash-risk-trigger-model/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/crash-risk-trigger-model/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/crash-risk-trigger-count_e.png</image:loc>
       <image:title>Mini 4WD crash risk-count model (three triggers)</image:title>
@@ -582,7 +582,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/crash-risk-trigger-model/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/crash-risk-trigger-model/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/crash-risk-trigger-model/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/crash-risk-trigger-model/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/crash-risk-trigger-model/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/crash-risk-trigger-count_j.png</image:loc>
       <image:title>ミニ四駆 コースアウト リスク計数モデル</image:title>
@@ -598,7 +598,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/benchmarks/tamiya-mini-4wd-motor-specs-list/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/benchmarks/tamiya-mini-4wd-motor-specs-list/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/benchmarks/tamiya-mini-4wd-motor-specs-list/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/benchmarks/tamiya-mini-4wd-motor-specs-list/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/benchmarks/tamiya-mini-4wd-motor-specs-list/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/tamiya-15-motor-spec-chart_c.png</image:loc>
       <image:title>田宮 Mini 4WD 全 15 款馬達規格速查表:PRO 雙軸 6 款＋標準單軸 9 款,含負載 RPM、扭力(mN·m)、電流(A)與極速/扭力星等</image:title>
@@ -612,7 +612,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/benchmarks/tamiya-mini-4wd-motor-specs-list/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/benchmarks/tamiya-mini-4wd-motor-specs-list/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/benchmarks/tamiya-mini-4wd-motor-specs-list/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/benchmarks/tamiya-mini-4wd-motor-specs-list/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/benchmarks/tamiya-mini-4wd-motor-specs-list/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/tamiya-15-motor-spec-chart_e.png</image:loc>
       <image:title>Tamiya Mini 4WD all 15 motors spec chart: 6 PRO dual-shaft + 9 standard single-shaft, with load RPM, torque (mN·m), current (A) and speed/torque ratings</image:title>
@@ -626,7 +626,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/benchmarks/tamiya-mini-4wd-motor-specs-list/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/benchmarks/tamiya-mini-4wd-motor-specs-list/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/benchmarks/tamiya-mini-4wd-motor-specs-list/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/benchmarks/tamiya-mini-4wd-motor-specs-list/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/benchmarks/tamiya-mini-4wd-motor-specs-list/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/tamiya-15-motor-spec-chart_j.png</image:loc>
       <image:title>タミヤ Mini 4WD 全 15 機種 規格早見表:PRO 両軸 6＋標準片軸 9、負荷 RPM・トルク(mN·m)・電流(A)・速度/トルク評価</image:title>
@@ -642,7 +642,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/system/product-design/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/system/product-design/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/system/product-design/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/system/product-design/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/system/product-design/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/og/MotorLab_V1-1.png</image:loc>
       <image:title>MotorLab 馬達磨合機外觀設計</image:title>
@@ -657,7 +657,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/system/product-design/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/system/product-design/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/system/product-design/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/system/product-design/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/system/product-design/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/og/MotorLab_V1-1.png</image:loc>
       <image:title>MotorLab Motor Break-in Machine — Exterior Design</image:title>
@@ -672,7 +672,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/system/product-design/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/system/product-design/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/system/product-design/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/system/product-design/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/system/product-design/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/og/MotorLab_V1-1.png</image:loc>
       <image:title>MotorLab モーター慣らし機の外観デザイン</image:title>
@@ -687,7 +687,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/lab/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/lab/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/lab/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/lab/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/lab/"/>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/en/lab/</loc>
@@ -697,7 +697,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/lab/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/lab/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/lab/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/lab/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/lab/"/>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/ja/lab/</loc>
@@ -707,7 +707,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/lab/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/lab/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/lab/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/lab/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/lab/"/>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/presale/</loc>
@@ -717,7 +717,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/presale/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/presale/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/presale/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/presale/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/presale/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/motorlab-first-batch-unit.jpg</image:loc>
       <image:title>MotorLab 馬達磨合機 開發測試版實機</image:title>
@@ -749,7 +749,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/presale/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/presale/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/presale/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/presale/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/presale/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/motorlab-first-batch-unit.jpg</image:loc>
       <image:title>MotorLab motor break-in machine, dev/test unit</image:title>
@@ -781,7 +781,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/presale/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/presale/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/presale/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/presale/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/presale/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/motorlab-first-batch-unit.jpg</image:loc>
       <image:title>MotorLab モーター慣らし機 開発・テスト版実機</image:title>
@@ -813,7 +813,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/docs/user-manual/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/docs/user-manual/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/docs/user-manual/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/docs/user-manual/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/docs/user-manual/"/>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/en/docs/user-manual/</loc>
@@ -823,7 +823,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/docs/user-manual/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/docs/user-manual/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/docs/user-manual/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/docs/user-manual/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/docs/user-manual/"/>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/ja/docs/user-manual/</loc>
@@ -833,7 +833,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/docs/user-manual/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/docs/user-manual/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/docs/user-manual/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/docs/user-manual/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/docs/user-manual/"/>
   </url>
 
   <!-- g12:先選別後磨合(methodology 收錄,實體住 /guides/) -->
@@ -845,7 +845,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-selection-before-break-in/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-selection-before-break-in/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-selection-before-break-in/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-selection-before-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/motor-selection-before-break-in/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/measure-before-break-in_c.png</image:loc>
       <image:title>先量測，後磨合：磨合只改善接觸面，鐵芯與磁路是先天</image:title>
@@ -863,7 +863,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-selection-before-break-in/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-selection-before-break-in/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-selection-before-break-in/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-selection-before-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/motor-selection-before-break-in/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/measure-before-break-in_e.png</image:loc>
       <image:title>Measure first, break in later — break-in only fixes the brush contact surface</image:title>
@@ -881,7 +881,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-selection-before-break-in/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-selection-before-break-in/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-selection-before-break-in/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-selection-before-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/motor-selection-before-break-in/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/measure-before-break-in_j.png</image:loc>
       <image:title>先に測って後で慣らす：慣らしで直るのは接触面だけ、鉄芯と磁路は先天</image:title>
@@ -901,7 +901,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-break-in-resistance-curve/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-break-in-resistance-curve/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-break-in-resistance-curve/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-break-in-resistance-curve/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/motor-break-in-resistance-curve/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/r_test_c.jpg</image:loc>
       <image:title>一顆 Mach-Dash PRO 連續量測 560 次的內部電阻循環校正曲線,呈現磨合三階段</image:title>
@@ -915,7 +915,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-break-in-resistance-curve/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-break-in-resistance-curve/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-break-in-resistance-curve/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-break-in-resistance-curve/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/motor-break-in-resistance-curve/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/r_test_e.jpg</image:loc>
       <image:title>Internal-resistance cycle-aligned curve of one Mach-Dash PRO over 560 continuous runs, showing the three break-in stages</image:title>
@@ -929,7 +929,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-break-in-resistance-curve/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-break-in-resistance-curve/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-break-in-resistance-curve/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-break-in-resistance-curve/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/motor-break-in-resistance-curve/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/r_test_j.jpg</image:loc>
       <image:title>1 個の Mach-Dash PRO を連続 560 回計測した内部抵抗の周期補正曲線、慣らし 3 段階を示す</image:title>
@@ -945,7 +945,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-break-in-speed-vs-voltage/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-break-in-speed-vs-voltage/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-break-in-speed-vs-voltage/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-break-in-speed-vs-voltage/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/motor-break-in-speed-vs-voltage/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/fixed-speed-break-in-key-points_c.png</image:loc>
       <image:title>為什麼磨馬達要鎖轉速不鎖電壓:電壓只是代理、鎖電壓會漂、鎖轉速才鎖住磨合條件三重點</image:title>
@@ -963,7 +963,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-break-in-speed-vs-voltage/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-break-in-speed-vs-voltage/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-break-in-speed-vs-voltage/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-break-in-speed-vs-voltage/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/motor-break-in-speed-vs-voltage/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/fixed-speed-break-in-key-points_e.png</image:loc>
       <image:title>Why lock RPM not voltage when breaking in a motor: voltage is a proxy, fixed voltage drifts, fixed RPM pins the condition down</image:title>
@@ -981,7 +981,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-break-in-speed-vs-voltage/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-break-in-speed-vs-voltage/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-break-in-speed-vs-voltage/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-break-in-speed-vs-voltage/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/motor-break-in-speed-vs-voltage/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/fixed-speed-break-in-key-points_j.png</image:loc>
       <image:title>なぜ慣らしは電圧でなく回転数を固定するのか:電圧は代理、定電圧は流れる、定回転数で条件固定の3点</image:title>
@@ -1000,7 +1000,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/conductive-oil-motor-break-in/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/conductive-oil-motor-break-in/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/conductive-oil-motor-break-in/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/conductive-oil-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/conductive-oil-motor-break-in/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/conductive-oil-verdict_c.png</image:loc>
       <image:title>導電油磨馬達真的有效嗎:轉速升不等於磨好、皮膜切れ會回落、油污染讀數三重點</image:title>
@@ -1022,7 +1022,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/conductive-oil-motor-break-in/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/conductive-oil-motor-break-in/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/conductive-oil-motor-break-in/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/conductive-oil-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/conductive-oil-motor-break-in/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/conductive-oil-verdict_e.png</image:loc>
       <image:title>Does conductive oil really break in a motor: higher RPM isn't done, film break falls back, the oil taints the read</image:title>
@@ -1044,7 +1044,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/conductive-oil-motor-break-in/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/conductive-oil-motor-break-in/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/conductive-oil-motor-break-in/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/conductive-oil-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/conductive-oil-motor-break-in/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/conductive-oil-verdict_j.png</image:loc>
       <image:title>導電オイルは本当に効くか:回転上昇は完了でない、皮膜切れで戻る、オイルが読みを汚すの3点</image:title>
@@ -1067,7 +1067,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-slow-causes-fixes/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-slow-causes-fixes/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-slow-causes-fixes/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-slow-causes-fixes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/motor-slow-causes-fixes/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/motor-slow-causes-fix_c.png</image:loc>
       <image:title>馬達變慢的 5 個原因與對策(可逆 vs 不可逆)</image:title>
@@ -1081,7 +1081,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-slow-causes-fixes/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-slow-causes-fixes/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-slow-causes-fixes/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-slow-causes-fixes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/motor-slow-causes-fixes/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/motor-slow-causes-fix_e.png</image:loc>
       <image:title>Mini 4WD motor got slow: 5 causes and fixes</image:title>
@@ -1095,7 +1095,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/guides/motor-slow-causes-fixes/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/guides/motor-slow-causes-fixes/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/guides/motor-slow-causes-fixes/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/guides/motor-slow-causes-fixes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/guides/motor-slow-causes-fixes/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/motor-slow-causes-fix_j.png</image:loc>
       <image:title>遅いモーターの 5 つの原因と対処</image:title>
@@ -1109,7 +1109,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/benchmarks/when-to-stop-motor-break-in/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/benchmarks/when-to-stop-motor-break-in/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/benchmarks/when-to-stop-motor-break-in/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/benchmarks/when-to-stop-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/benchmarks/when-to-stop-motor-break-in/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/motor-break-in-current-plateau_c.png</image:loc>
       <image:title>馬達磨合要磨多久:12 小時同轉速電流實測</image:title>
@@ -1131,7 +1131,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/benchmarks/when-to-stop-motor-break-in/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/benchmarks/when-to-stop-motor-break-in/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/benchmarks/when-to-stop-motor-break-in/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/benchmarks/when-to-stop-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/benchmarks/when-to-stop-motor-break-in/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/motor-break-in-current-plateau_e.png</image:loc>
       <image:title>How long to break in a motor: 12-hour same-RPM current test</image:title>
@@ -1153,7 +1153,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/benchmarks/when-to-stop-motor-break-in/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/benchmarks/when-to-stop-motor-break-in/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/benchmarks/when-to-stop-motor-break-in/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/benchmarks/when-to-stop-motor-break-in/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/benchmarks/when-to-stop-motor-break-in/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/motor-break-in-current-plateau_j.png</image:loc>
       <image:title>モーター慣らしはどれくらい:12 時間同回転数電流実測</image:title>
@@ -1175,7 +1175,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/benchmarks/does-washing-a-motor-work/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/benchmarks/does-washing-a-motor-work/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/benchmarks/does-washing-a-motor-work/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/benchmarks/does-washing-a-motor-work/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/benchmarks/does-washing-a-motor-work/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/motor-wash-constitution-timeline_c.png</image:loc>
       <image:title>洗馬達有用嗎:洗後體質沉降收斂</image:title>
@@ -1197,7 +1197,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/benchmarks/does-washing-a-motor-work/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/benchmarks/does-washing-a-motor-work/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/benchmarks/does-washing-a-motor-work/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/benchmarks/does-washing-a-motor-work/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/benchmarks/does-washing-a-motor-work/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/motor-wash-constitution-timeline_e.png</image:loc>
       <image:title>Does washing a motor work: constitution settles after wash</image:title>
@@ -1219,7 +1219,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/benchmarks/does-washing-a-motor-work/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/benchmarks/does-washing-a-motor-work/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/benchmarks/does-washing-a-motor-work/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/benchmarks/does-washing-a-motor-work/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/benchmarks/does-washing-a-motor-work/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/motor-wash-constitution-timeline_j.png</image:loc>
       <image:title>モーター洗浄は効果ある:洗浄後の体質沈降</image:title>
@@ -1241,7 +1241,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/benchmarks/revive-dead-motor-electric-shock/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/benchmarks/revive-dead-motor-electric-shock/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/benchmarks/revive-dead-motor-electric-shock/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/benchmarks/revive-dead-motor-electric-shock/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/benchmarks/revive-dead-motor-electric-shock/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/motor-remagnetize-shock-reform_c.png</image:loc>
       <image:title>退役馬達電擊修復:磁力充回 +18%(可逆),磨損救不回</image:title>
@@ -1255,7 +1255,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/benchmarks/revive-dead-motor-electric-shock/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/benchmarks/revive-dead-motor-electric-shock/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/benchmarks/revive-dead-motor-electric-shock/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/benchmarks/revive-dead-motor-electric-shock/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/benchmarks/revive-dead-motor-electric-shock/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/motor-remagnetize-shock-reform_e.png</image:loc>
       <image:title>Reviving a dead motor: magnet recharged +18% (reversible), wear not</image:title>
@@ -1269,7 +1269,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/benchmarks/revive-dead-motor-electric-shock/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/benchmarks/revive-dead-motor-electric-shock/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/benchmarks/revive-dead-motor-electric-shock/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/benchmarks/revive-dead-motor-electric-shock/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/benchmarks/revive-dead-motor-electric-shock/"/>
     <image:image>
       <image:loc>https://motorlab-tw.github.io/images/motor-remagnetize-shock-reform_j.png</image:loc>
       <image:title>引退モーターの電気ショック修復:磁力を +18% 充て直し(可逆)、摩耗は戻せない</image:title>
@@ -1283,7 +1283,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/benchmarks/ai-smart-break-in-before-after/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/benchmarks/ai-smart-break-in-before-after/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/benchmarks/ai-smart-break-in-before-after/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/benchmarks/ai-smart-break-in-before-after/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/benchmarks/ai-smart-break-in-before-after/"/>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/en/benchmarks/ai-smart-break-in-before-after/</loc>
@@ -1293,7 +1293,7 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/benchmarks/ai-smart-break-in-before-after/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/benchmarks/ai-smart-break-in-before-after/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/benchmarks/ai-smart-break-in-before-after/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/benchmarks/ai-smart-break-in-before-after/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/benchmarks/ai-smart-break-in-before-after/"/>
   </url>
   <url>
     <loc>https://motorlab-tw.github.io/ja/benchmarks/ai-smart-break-in-before-after/</loc>
@@ -1303,6 +1303,6 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/benchmarks/ai-smart-break-in-before-after/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/benchmarks/ai-smart-break-in-before-after/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/benchmarks/ai-smart-break-in-before-after/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/benchmarks/ai-smart-break-in-before-after/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/en/benchmarks/ai-smart-break-in-before-after/"/>
   </url>
 </urlset>
