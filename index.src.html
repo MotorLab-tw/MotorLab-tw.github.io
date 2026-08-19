@@ -19,8 +19,8 @@
 
 <!-- 多語言版本標示 (hreflang) -->
 <link rel="alternate" hreflang="zh-TW" href="https://motorlab-tw.github.io/">
-<link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/?lang=en">
-<link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/?lang=ja">
+<link rel="alternate" hreflang="en" href="https://motorlab-tw.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://motorlab-tw.github.io/ja/">
 <link rel="alternate" hreflang="x-default" href="https://motorlab-tw.github.io/">
 
 <!-- Favicon -->
@@ -7508,63 +7508,22 @@
     }
   };
 
-  let currentLang = 'zh';
-
-  // 套用指定語言到頁面
-  function applyLang(lang) {
-    currentLang = lang;
-    var langMap = { zh: 'zh-TW', en: 'en', ja: 'ja' };
-    document.documentElement.lang = langMap[lang] || 'en';
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.getAttribute('data-i18n');
-      // 日文版若缺少 key(如教學文章),回退至中文,避免空白
-      const text = i18n[lang][key] || i18n['zh'][key];
-      if (text) el.innerHTML = text;
-    });
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.lang === lang);
-    });
-  }
-
-  // 將瀏覽器語系代碼對應到網站支援的語言
-  function detectBrowserLang() {
-    var raw = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
-    // 日文
-    if (raw.indexOf('ja') === 0) return 'ja';
-    // 中文(繁簡都導向繁體中文版)
-    if (raw.indexOf('zh') === 0) return 'zh';
-    // 英文與其他所有語言 → 英文版
-    return 'en';
-  }
-
-  // 決定初始語言:localStorage 記憶 > 網址參數 > 瀏覽器偵測
-  function resolveInitialLang() {
-    // 1) 使用者過去手動選過的語言(最優先)
-    try {
-      var saved = localStorage.getItem('motorlab-lang');
-      if (saved && i18n[saved]) return saved;
-    } catch (e) { /* localStorage 不可用時略過 */ }
-    // 2) 網址參數 ?lang=xx
-    var param = new URLSearchParams(location.search).get('lang');
-    if (param && i18n[param]) return param;
-    // 3) 瀏覽器語系自動偵測
-    return detectBrowserLang();
-  }
-
-  // 手動切換:套用 + 記住選擇
-  function selectLang(lang) {
-    applyLang(lang);
-    try {
-      localStorage.setItem('motorlab-lang', lang);
-    } catch (e) { /* localStorage 不可用時略過 */ }
-  }
-
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.addEventListener('click', () => selectLang(btn.dataset.lang));
-  });
-
-  // 進站時套用偵測 / 記憶的語言
-  applyLang(resolveInitialLang());
+  // ===== 語言切換(刻意不做前端偵測)=====
+  // 三語頁面在建置時就各自產生完成(/、/en/、/ja/):內文、<html lang>、title、
+  // description、canonical、hreflang 全由 build.py 依語言寫好;語言切換器也在建置時
+  // 轉成指向三個網址的 <a> 連結,active 由伺服器端標記。
+  //
+  // 因此這裡不再做瀏覽器語系偵測與整頁改寫。舊的 applyLang()/detectBrowserLang()
+  // 會在載入後依瀏覽器語系覆寫內文與 <html lang>,造成四個問題:
+  //   1. 正規網址與內容不符 —— / 的 canonical 是中文版,卻可能渲染成日文內容
+  //   2. title / meta description 不會一起被改 → 中文標題配英文內文的混合訊號
+  //   3. 連 /en/、/ja/ 都會被訪客瀏覽器語系覆寫,蓋掉建置好的正確內容
+  //   4. 產出頁的 .lang-btn 已是 <a>(沒有 data-lang),舊 click 監聽會傳 undefined
+  //      進 applyLang 而拋 TypeError
+  // 要切換語言請用語言切換器的連結(或直接連 /en/、/ja/)。
+  //
+  // 注意:上方的 const i18n = {...} 不可刪除 —— build.py 的 extract_i18n() 以它
+  // 作為建置期翻譯來源;它是資料,不是執行期邏輯。
 
   // ===== 即時數據模擬動畫 =====
   function updateMockData() {
