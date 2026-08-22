@@ -2219,7 +2219,7 @@
 <div class="hero-grid">
 <div>
 <div class="hero-badge">
-<span data-i18n="hero.badge">系統運作中 · v3.8.0</span>
+<span data-i18n="hero.badge">系統運作中 · v3.9.0</span>
 </div>
 <h1 data-i18n="hero.title">為每一顆<br/>Mini 4WD<sup>®</sup> 馬達<br/>建立<span class="accent">健康指紋</span></h1>
 <p class="lead" data-i18n="hero.lead">MotorLab 是為 Mini 4WD<sup>®</sup> 玩家打造的精密馬達磨合與測試系統。從十階段可程式化磨合、軸承衰減量測、電刷接觸穩定診斷,到 AI 馬達健康管理 — 讓每一次調校都可量化、可重複、可比較。</p>
@@ -2319,10 +2319,10 @@
 <svg viewbox="0 0 24 24"><path d="M21 12a9 9 0 11-6.219-8.56"></path><path d="M22 4l-10 10-3-3"></path></svg>
 </div>
 <h3 data-i18n="f3.title">AI 智慧馬達健康管理</h3>
-<p data-i18n="f3.desc">為每顆馬達建立基準健康指紋,後續檢測自動比對五大指標:電流特性、轉速衰減、溫升曲線、電流穩定度、振動頻譜分析,合成 0–100 分健康評級並提供文字診斷建議。</p>
+<p data-i18n="f3.desc">為每顆馬達建立基準健康指紋,之後每次檢測都以<b>「這次 vs 上次」</b>的方式呈現差異:直接告訴你哪些項目變好、哪些變差、變化多少,不給抽象分數,讓你自己判讀這顆馬達離巔峰還有多遠。</p>
 <div class="feature-meta">
-<span class="feature-tag" data-i18n="f3.tag1">FFT 頻譜</span>
-<span class="feature-tag" data-i18n="f3.tag2">雷達圖</span>
+<span class="feature-tag" data-i18n="f3.tag1">這次 vs 上次</span>
+<span class="feature-tag" data-i18n="f3.tag2">差異呈現</span>
 <span class="feature-tag">20 motors</span>
 </div>
 </div>
@@ -2332,10 +2332,10 @@
 <svg viewbox="0 0 24 24"><path d="M3 3v18h18"></path><path d="M7 15l4-4 3 3 5-6"></path><circle cx="19" cy="8" r="1.5"></circle></svg>
 </div>
 <h3 data-i18n="f3b.title">AI 智慧扭力預測</h3>
-<p data-i18n="f3b.desc">以田宮各款馬達的標準參數作為數學模型,透過 AI 加速指令運算,預測馬達磨合後的扭力表現:分別給出 @2.4V 與 @3.0V 的預測值,並將個體體質與田宮標準值對照,看出這顆馬達磨完會落在標準的哪個位置。</p>
+<p data-i18n="f3b.desc">以田宮各款馬達的標準參數作為數學模型,透過 AI 加速指令運算,預測馬達磨合後的扭力表現:結果以<b>單張扭力預測圖</b>呈現,把這顆馬達與田宮標準值畫在同一張圖上直接對照,並分別標出 @2.4V 與 @3.0V 的預測值,一眼看出落在標準的哪個位置。</p>
 <div class="feature-meta">
 <span class="feature-tag" data-i18n="f3b.tag1">@2.4V / @3.0V</span>
-<span class="feature-tag" data-i18n="f3b.tag2">體質 vs 標準</span>
+<span class="feature-tag" data-i18n="f3b.tag2">視覺對照圖</span>
 <span class="feature-tag" data-i18n="f3b.tag3">數學模型</span>
 </div>
 </div>
@@ -2357,7 +2357,7 @@
 <svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
 </div>
 <h3 data-i18n="f4.title">軸承阻力測試</h3>
-<p data-i18n="f4.desc">選擇測試電壓(2.4V / 3V),加速至穩定轉速後直接斷電滑行,量測「完全靜止時間」— 時間越久軸承越順。只顯示時間供相對比較,不做評定。</p>
+<p data-i18n="f4.desc">選擇測試電壓(2.4V / 3V),加速至穩定轉速後直接斷電滑行,量測「完全靜止時間」——<b>時間越久代表阻力越小</b>。只顯示時間供相對比較,不做評定;結果一併標示<b>量測溫度</b>,不同時期的數據才對得起來。</p>
 <div class="feature-meta">
 <span class="feature-tag" data-i18n="f4.tag1">斷電滑行</span>
 <span class="feature-tag" data-i18n="f4.tag2">2.4V / 3V</span>
@@ -2369,7 +2369,7 @@
 <svg viewbox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
 </div>
 <h3 data-i18n="f5.title">電刷接觸穩定測試</h3>
-<p data-i18n="f5.desc">一鍵全自動:固定 1V 標準流程(緩升 → 保持 → 採樣電流 20 秒),以電流變異係數(CV%)量化電刷接觸品質。固定條件讓跨次、跨馬達可公平比較,磨合前後對照可見電刷貼合改善。約 35 秒,不需手動操作軸心。</p>
+<p data-i18n="f5.desc">一鍵全自動:固定 1V 標準流程(緩升 → 保持 → 採樣電流 20 秒),把電刷接觸的穩定程度以<b>落點圖</b>呈現,<b>不給分數、不做好壞判定</b>——固定條件讓跨次、跨馬達可公平比較,磨合前後對照可見電刷貼合改善。約 35 秒,不需手動操作軸心。</p>
 <div class="feature-meta">
 <span class="feature-tag" data-i18n="f5.tag1">CV 變異係數</span>
 <span class="feature-tag" data-i18n="f5.tag2">固定 1V 全自動</span>
@@ -2612,7 +2612,7 @@
 <td class="center"><span class="check">✓</span></td>
 </tr>
 <tr>
-<td data-i18n="vt.r8b">AI 智慧扭力預測(@2.4V / @3.0V,體質 vs 田宮標準)</td>
+<td data-i18n="vt.r8b">AI 智慧扭力預測(@2.4V / @3.0V,視覺對照圖)</td>
 <td class="center"><span class="cross">—</span></td>
 <td class="center"><span class="check">✓</span></td>
 </tr>
@@ -2623,11 +2623,6 @@
 </tr>
 <tr>
 <td data-i18n="vt.r9">FFT 振動頻譜分析</td>
-<td class="center"><span class="cross">—</span></td>
-<td class="center"><span class="check">✓</span></td>
-</tr>
-<tr>
-<td data-i18n="vt.r10">五大指標雷達圖診斷</td>
 <td class="center"><span class="cross">—</span></td>
 <td class="center"><span class="check">✓</span></td>
 </tr>
@@ -2666,9 +2661,9 @@
 <p data-i18n="t3.desc">馬達加速到穩定轉速後直接斷電,量測轉速自由滑行至完全靜止的時間。滑行越久代表軸承摩擦越小,是評估軸承順暢度的直觀物理量。</p>
 </div>
 <div class="tech-card">
-<div class="tech-name">BASELINE_FINGERPRINT</div>
-<h4 data-i18n="t4.title">基準指紋比對</h4>
-<p data-i18n="t4.desc">為每顆馬達建立首次量測基準,後續比對皆採同器同馬達原則,排除馬達本身個體差異,純粹反映健康狀態變化。</p>
+<div class="tech-name">HEALTH_DELTA</div>
+<h4 data-i18n="t4.title">健康變化追蹤</h4>
+<p data-i18n="t4.desc">為每顆馬達建立首次量測基準,之後每次檢測都以「這次 vs 上次」呈現變化量,採同器同馬達原則排除個體差異 —— 不給抽象分數,只如實告訴你哪裡變了、變多少。</p>
 </div>
 <div class="tech-card">
 <div class="tech-name">STABILITY_LATCH</div>
@@ -2721,9 +2716,9 @@
 <p data-i18n="t17.desc">把電刷與整流子的接觸穩定程度化為 0~100 評分,逐輪落點呈現「從毛躁磨到順」的完整過程,固定刻度跨場可比。</p>
 </div>
 <div class="tech-card">
-<div class="tech-name">TORQUE_PROFILE</div>
-<h4 data-i18n="t18.title">扭力體質實測推算</h4>
-<p data-i18n="t18.desc">以本顆實測數據對照田宮官方標準推算扭力與體質 —— 同型號不同顆結果不同,反映的正是個體真實體質。</p>
+<div class="tech-name">TORQUE_CHART</div>
+<h4 data-i18n="t18.title">扭力預測對照圖</h4>
+<p data-i18n="t18.desc">以本顆實測數據推算磨合後扭力,並把它與田宮官方標準畫在同一張圖上直接對照 —— 同型號不同顆位置不同,那正是個體差異。</p>
 </div>
 <div class="tech-card">
 <div class="tech-name">STEADY_STATE</div>
@@ -2939,34 +2934,34 @@
 <p class="section-subtitle" data-i18n="cl.subtitle">所有版本透過線上更新自動推送至已啟用裝置。</p>
 </div>
 <div class="changelog">
-<!-- v3.8.0 -->
+<!-- v3.9.0 -->
 <div class="changelog-item">
 <div class="changelog-meta">
-<span class="version-badge latest">v3.8.0</span>
-<span class="changelog-date">2026-08-09</span>
+<span class="version-badge latest">v3.9.0</span>
+<span class="changelog-date">2026-08-22</span>
 </div>
 <div class="changelog-content">
-<h4 data-i18n="cl.v380.title">AI 智慧磨合單場到位 · 運轉穩定度指標</h4>
+<h4 data-i18n="cl.v390.title">扭力預測改視覺對照圖 · 健康管理改差異呈現</h4>
 </div>
 </div>
-<!-- v3.7.1 -->
+<!-- v3.8.2 -->
 <div class="changelog-item">
 <div class="changelog-meta">
-<span class="version-badge">v3.7.1</span>
-<span class="changelog-date">2026-08-08</span>
+<span class="version-badge">v3.8.2</span>
+<span class="changelog-date">2026-08-12</span>
 </div>
 <div class="changelog-content">
-<h4 data-i18n="cl.v371.title">控速進場優化 · 平均轉速即時顯示</h4>
+<h4 data-i18n="cl.v382.title">量測狀態用語統一 · 一致性警語移除</h4>
 </div>
 </div>
-<!-- v3.7.0 -->
+<!-- v3.8.1 -->
 <div class="changelog-item">
 <div class="changelog-meta">
-<span class="version-badge">v3.7.0</span>
-<span class="changelog-date">2026-08-08</span>
+<span class="version-badge">v3.8.1</span>
+<span class="changelog-date">2026-08-11</span>
 </div>
 <div class="changelog-content">
-<h4 data-i18n="cl.v370.title">程式演算優化 · WiFi 列表管理</h4>
+<h4 data-i18n="cl.v381.title">特性量測高轉速鎖定修復 · 三趟一致性提升</h4>
 </div>
 </div>
 </div>
@@ -3120,7 +3115,7 @@
       'nav.about': '關於',
       'nav.contact': '聯絡',
       'nav.verify': '正版查驗',
-      'hero.badge': '系統運作中 · v3.8.0',
+      'hero.badge': '系統運作中 · v3.9.0',
       'hero.title': '為每一顆<br>Mini 4WD<sup>®</sup> 馬達<br>建立<span class="accent">健康指紋</span>',
       'hero.lead': 'MotorLab 是為 Mini 4WD<sup>®</sup> 玩家打造的精密馬達磨合與測試系統。從十階段可程式化磨合、軸承衰減量測、電刷接觸穩定診斷,到 AI 馬達健康管理 — 讓每一次調校都可量化、可重複、可比較。',
       'hero.cta1': '瀏覽功能',
@@ -3146,13 +3141,13 @@
       'f2.tag2': '即時圖表',
       'f2.tag3': '雙模式',
       'f3.title': 'AI 智慧馬達健康管理',
-      'f3.desc': '為每顆馬達建立基準健康指紋,後續檢測自動比對五大指標:電流特性、轉速衰減、溫升曲線、電流穩定度、振動頻譜分析,合成 0–100 分健康評級並提供文字診斷建議。',
-      'f3.tag1': 'FFT 頻譜',
-      'f3.tag2': '雷達圖',
+      'f3.desc': '為每顆馬達建立基準健康指紋,之後每次檢測都以<b>「這次 vs 上次」</b>的方式呈現差異:直接告訴你哪些項目變好、哪些變差、變化多少,不給抽象分數,讓你自己判讀這顆馬達離巔峰還有多遠。',
+      'f3.tag1': '這次 vs 上次',
+      'f3.tag2': '差異呈現',
       'f3b.title': 'AI 智慧扭力預測',
-      'f3b.desc': '以田宮各款馬達的標準參數作為數學模型,透過 AI 加速指令運算,預測馬達磨合後的扭力表現:分別給出 @2.4V 與 @3.0V 的預測值,並將個體體質與田宮標準值對照,看出這顆馬達磨完會落在標準的哪個位置。',
+      'f3b.desc': '以田宮各款馬達的標準參數作為數學模型,透過 AI 加速指令運算,預測馬達磨合後的扭力表現:結果以<b>單張扭力預測圖</b>呈現,把這顆馬達與田宮標準值畫在同一張圖上直接對照,並分別標出 @2.4V 與 @3.0V 的預測值,一眼看出落在標準的哪個位置。',
       'f3b.tag1': '@2.4V / @3.0V',
-      'f3b.tag2': '體質 vs 標準',
+      'f3b.tag2': '視覺對照圖',
       'f3b.tag3': '數學模型',
       'f3c.title': 'AI 智慧磨合',
       'f3c.desc': '一鍵全自動磨合:<b>一場磨到這顆的最佳狀態、自動停止</b>——全新品自動完整整型、已磨合品快速確認、嚴重耗損如實告知;主視覺「運轉穩定度」落點圖直讀電刷與整流子的接觸穩定程度,完成顯示磨前後對照。支援田宮全 15 款馬達。',
@@ -3160,11 +3155,11 @@
       'f3c.tag2': '運轉穩定度',
       'f3c.tag3': '田宮 15 款',
       'f4.title': '軸承阻力測試',
-      'f4.desc': '選擇測試電壓(2.4V / 3V),加速至穩定轉速後直接斷電滑行,量測「完全靜止時間」— 時間越久軸承越順。只顯示時間供相對比較,不做評定。',
+      'f4.desc': '選擇測試電壓(2.4V / 3V),加速至穩定轉速後直接斷電滑行,量測「完全靜止時間」——<b>時間越久代表阻力越小</b>。只顯示時間供相對比較,不做評定;結果一併標示<b>量測溫度</b>,不同時期的數據才對得起來。',
       'f4.tag1': '斷電滑行',
       'f4.tag2': '2.4V / 3V',
       'f5.title': '電刷接觸穩定測試',
-      'f5.desc': '一鍵全自動:固定 1V 標準流程(緩升 → 保持 → 採樣電流 20 秒),以電流變異係數(CV%)量化電刷接觸品質。固定條件讓跨次、跨馬達可公平比較,磨合前後對照可見電刷貼合改善。約 35 秒,不需手動操作軸心。',
+      'f5.desc': '一鍵全自動:固定 1V 標準流程(緩升 → 保持 → 採樣電流 20 秒),把電刷接觸的穩定程度以<b>落點圖</b>呈現,<b>不給分數、不做好壞判定</b>——固定條件讓跨次、跨馬達可公平比較,磨合前後對照可見電刷貼合改善。約 35 秒,不需手動操作軸心。',
       'f5.tag1': 'CV 變異係數',
       'f5.tag2': '固定 1V 全自動',
       'f6.title': '歷史紀錄管理',
@@ -3238,10 +3233,9 @@
       'vt.r7': '線上韌體更新',
       'vt.r12': '三層安全保護機制',
       'vt.r8': 'AI 智慧馬達健康管理(最多 20 顆)',
-      'vt.r8b': 'AI 智慧扭力預測(@2.4V / @3.0V,體質 vs 田宮標準)',
+      'vt.r8b': 'AI 智慧扭力預測(@2.4V / @3.0V,視覺對照圖)',
       'vt.r8c': 'AI 智慧磨合(單場到位自動磨合)',
       'vt.r9': 'FFT 振動頻譜分析',
-      'vt.r10': '五大指標雷達圖診斷',
       'vt.r11': '健康趨勢曲線追蹤',
       'tech.tag': 'TECHNOLOGY',
       'tech.title': '內建專業分析技術',
@@ -3252,8 +3246,8 @@
       't2.desc': '統計學標準離散度指標(標準差 / 平均值),用於量化電刷接觸的穩定性。CV 越低代表接觸越均勻、打火越少。',
       't3.title': '滑行停止時間量測',
       't3.desc': '馬達加速到穩定轉速後直接斷電,量測轉速自由滑行至完全靜止的時間。滑行越久代表軸承摩擦越小,是評估軸承順暢度的直觀物理量。',
-      't4.title': '基準指紋比對',
-      't4.desc': '為每顆馬達建立首次量測基準,後續比對皆採同器同馬達原則,排除馬達本身個體差異,純粹反映健康狀態變化。',
+      't4.title': '健康變化追蹤',
+      't4.desc': '為每顆馬達建立首次量測基準,之後每次檢測都以「這次 vs 上次」呈現變化量,採同器同馬達原則排除個體差異 —— 不給抽象分數,只如實告訴你哪裡變了、變多少。',
       't5.title': '穩定電流鎖定演算法',
       't5.desc': '偵測電流在一段時間內趨於平穩後鎖定讀值,避免暫時擾動造成誤判,提升量測重現性。',
       't6.title': '雜訊底線扣除',
@@ -3280,8 +3274,8 @@
       't16.desc': '不只給一個「摩擦」數字,而是用最小平方把損耗分解成多個物理成分,並以 R² 擬合門檻自動剔除不可信的量測。',
       't17.title': '運轉穩定度指標',
       't17.desc': '把電刷與整流子的接觸穩定程度化為 0~100 評分,逐輪落點呈現「從毛躁磨到順」的完整過程,固定刻度跨場可比。',
-      't18.title': '扭力體質實測推算',
-      't18.desc': '以本顆實測數據對照田宮官方標準推算扭力與體質 —— 同型號不同顆結果不同,反映的正是個體真實體質。',
+      't18.title': '扭力預測對照圖',
+      't18.desc': '以本顆實測數據推算磨合後扭力,並把它與田宮官方標準畫在同一張圖上直接對照 —— 同型號不同顆位置不同,那正是個體差異。',
       't19.title': '單場到位自動判停',
       't19.desc': 'AI 智慧磨合在一場內持續量測,自動磨到該顆的最佳狀態才停止:全新品完整整型、已磨合品快速確認、嚴重耗損如實告知 —— 磨好了,機器告訴你。',
 
@@ -4029,9 +4023,9 @@
       'cl.FIX': '修正',
       'cl.IMPROVE': '改進',
       'cl.SECURITY': '安全',
-      'cl.v380.title': 'AI 智慧磨合單場到位 · 運轉穩定度指標',
-      'cl.v371.title': '控速進場優化 · 平均轉速即時顯示',
-      'cl.v370.title': '程式演算優化 · WiFi 列表管理',
+      'cl.v390.title': '扭力預測改視覺對照圖 · 健康管理改差異呈現',
+      'cl.v382.title': '量測狀態用語統一 · 一致性警語移除',
+      'cl.v381.title': '特性量測高轉速鎖定修復 · 三趟一致性提升',
       'about.tag': 'ABOUT',
       'about.title': '關於 MotorLab',
       'about.p1': 'MotorLab 是一個專注於 Mini 4WD<sup>®</sup> 馬達精密測試的獨立工作室。',
@@ -4059,7 +4053,7 @@
       'nav.about': 'About',
       'nav.contact': 'Contact',
       'nav.verify': 'Verify',
-      'hero.badge': 'System running · v3.8.0',
+      'hero.badge': 'System running · v3.9.0',
       'hero.title': 'Build a <span class="accent">health fingerprint</span><br>for every<br>Mini 4WD<sup>®</sup> motor',
       'hero.lead': 'MotorLab is a precision motor break-in and diagnostic system built for Mini 4WD<sup>®</sup> enthusiasts. From 10-stage programmable break-in to bearing decay analysis, brush contact diagnostics, and AI motor health management — make every tune measurable, repeatable, and comparable.',
       'hero.cta1': 'Browse Features',
@@ -4085,13 +4079,13 @@
       'f2.tag2': 'Live charts',
       'f2.tag3': 'Dual mode',
       'f3.title': 'AI Motor Health Manager',
-      'f3.desc': 'Establish a baseline fingerprint per motor; subsequent checks compare against five metrics — current profile, RPM decay, thermal rise, current stability, and vibration spectrum — producing a 0–100 health score with diagnostic recommendations.',
-      'f3.tag1': 'FFT spectrum',
-      'f3.tag2': 'Radar chart',
+      'f3.desc': 'Build a baseline health fingerprint per motor; every later check is presented as <b>&quot;this time vs last time&quot;</b> — showing which items improved, which declined and by how much. No abstract score: you read the change yourself and judge how far the motor is from its peak.',
+      'f3.tag1': 'This vs last',
+      'f3.tag2': 'Change shown',
       'f3b.title': 'AI Torque Prediction',
-      'f3b.desc': 'Using each Tamiya motor\'s standard parameters as a math model, an AI-accelerated computation predicts post-break-in torque: separate values at @2.4V and @3.0V, with the individual motor\'s constitution compared against Tamiya\'s standard — so you can see where this motor will land once broken in.',
+      'f3b.desc': 'Using the standard parameters of each Tamiya motor as a math model, an AI-accelerated computation predicts post-break-in torque. The result is a <b>single torque prediction chart</b> that plots this motor against the Tamiya standard on the same axes, with the predicted value marked at @2.4V and @3.0V — so you can see at a glance where it lands.',
       'f3b.tag1': '@2.4V / @3.0V',
-      'f3b.tag2': 'vs Tamiya std',
+      'f3b.tag2': 'Comparison chart',
       'f3b.tag3': 'Math model',
       'f3c.title': 'AI Smart Break-In',
       'f3c.desc': 'One-tap fully automatic break-in: <b>it breaks the motor in to its best state in a single session, then stops</b> — a brand-new motor gets fully shaped, an already broken-in one is confirmed quickly, and severe wear is reported honestly; the main Running Stability scatter chart reads brush-commutator contact stability directly, and completion shows a before/after comparison. Supports all 15 Tamiya motors.',
@@ -4099,11 +4093,11 @@
       'f3c.tag2': 'Running Stability',
       'f3c.tag3': '15 Tamiya motors',
       'f4.title': 'Bearing Resistance Test',
-      'f4.desc': 'Pick a test voltage (2.4V / 3V), spin up to steady RPM, then cut power and let it coast — measuring the time to a complete stop. Longer means a smoother bearing. Time is shown for relative comparison only, with no rating.',
+      'f4.desc': 'Pick a test voltage (2.4V / 3V), spin up to steady RPM, then cut power and let it coast — measuring the time to a complete stop. <b>Longer means less drag.</b> Time is shown for relative comparison only, with no rating; the <b>measurement temperature</b> is shown alongside so readings from different days line up.',
       'f4.tag1': 'Coast-down',
       'f4.tag2': '2.4V / 3V',
       'f5.title': 'Brush Contact Stability',
-      'f5.desc': 'One-tap and fully automatic: a fixed 1V routine (ramp → hold → sample current for 20s) quantifies brush contact quality via Coefficient of Variation (CV%). Fixed conditions make runs and motors fairly comparable, and before/after break-in shows the improvement in brush seating. About 35s, no manual shaft handling.',
+      'f5.desc': 'One-tap and fully automatic: a fixed 1V routine (ramp → hold → sample current for 20s) presents brush contact stability as a <b>scatter chart</b> — <b>no score, no good/bad verdict</b>. Fixed conditions make runs and motors fairly comparable, and a before/after comparison shows the improvement in brush seating. About 35 seconds, no need to turn the shaft by hand.',
       'f5.tag1': 'CV coefficient',
       'f5.tag2': 'Fixed 1V, automatic',
       'f6.title': 'Records Management',
@@ -4182,10 +4176,9 @@
       'vt.r7': 'OTA firmware updates',
       'vt.r12': 'Triple-layer safety protection',
       'vt.r8': 'AI Motor Health Manager (up to 20 motors)',
-      'vt.r8b': 'AI Torque Prediction (@2.4V / @3.0V, constitution vs Tamiya std)',
+      'vt.r8b': 'AI Torque Prediction (@2.4V / @3.0V, comparison chart)',
       'vt.r8c': 'AI Smart Break-In (done in one session)',
       'vt.r9': 'FFT vibration spectrum',
-      'vt.r10': '5-metric radar diagnostic',
       'vt.r11': 'Health trend tracking',
       'tech.tag': 'TECHNOLOGY',
       'tech.title': 'Professional Analysis Built-In',
@@ -4196,8 +4189,8 @@
       't2.desc': 'Standard statistical dispersion measure (σ/μ), used to quantify brush contact stability. Lower CV means more uniform contact and less sparking.',
       't3.title': 'Coast-Down Stop Time',
       't3.desc': 'After reaching steady RPM the motor is powered off and the time it freely coasts to a complete stop is measured. A longer coast means lower bearing friction — an intuitive physical measure of bearing smoothness.',
-      't4.title': 'Baseline Fingerprint Comparison',
-      't4.desc': 'Each motor establishes its own first-measurement baseline. All subsequent comparisons follow same-device-same-motor principle, eliminating individual motor variance to expose pure health changes.',
+      't4.title': 'Health Change Tracking',
+      't4.desc': 'Each motor gets its own first-measurement baseline; every later check is shown as &quot;this time vs last time.&quot; Same-device-same-motor comparison removes individual variance — no abstract score, just what changed and by how much.',
       't5.title': 'Stable Current Latch Algorithm',
       't5.desc': 'Once the current settles over a period, the reading latches — preventing transient perturbations from causing misjudgment and boosting repeatability.',
       't6.title': 'Noise Floor Subtraction',
@@ -4224,8 +4217,8 @@
       't16.desc': 'Instead of a single "friction" number, least-squares fitting separates loss torque into multiple physical components, and an R² threshold automatically rejects untrustworthy measurements.',
       't17.title': 'Running Stability Metric',
       't17.desc': 'Turns brush-commutator contact stability into a 0–100 score, plotting round-by-round points that show the whole arc from rough to smooth — on a fixed scale, so sessions compare directly.',
-      't18.title': 'Measured Torque Constitution',
-      't18.desc': 'Torque and constitution derived from real measurements of this exact unit against Tamiya official standards — units of the same model score differently, and that difference is true individual constitution.',
+      't18.title': 'Torque Prediction Chart',
+      't18.desc': 'Predicts post-break-in torque from measurements taken on this very unit, plotted against the Tamiya official standard on one chart — units of the same model land in different places, and that is genuine individual variation.',
       't19.title': 'Single-Session Auto-Stop',
       't19.desc': 'AI Smart Break-In measures continuously within a single session and only stops once the motor is broken in to its best state: a brand-new one is fully shaped, an already broken-in one is confirmed quickly, and severe wear is reported honestly — when it is done, the machine tells you.',
 
@@ -5179,9 +5172,9 @@
       'cl.FIX': 'FIX',
       'cl.IMPROVE': 'IMPROVE',
       'cl.SECURITY': 'SECURITY',
-      'cl.v380.title': 'AI Smart Break-In done in one session · Running stability metric',
-      'cl.v371.title': 'Speed-control ramp-in tuning · Live average RPM',
-      'cl.v370.title': 'Algorithm optimization · WiFi list management',
+      'cl.v390.title': 'Torque prediction is now a visual comparison chart · Health check shows the change',
+      'cl.v382.title': 'Unified measurement status wording · Consistency warning removed',
+      'cl.v381.title': 'High-RPM lock fix in characterization · Better 3-pass consistency',
       'about.tag': 'ABOUT',
       'about.title': 'About MotorLab',
       'about.p1': 'MotorLab is an independent studio dedicated to precision Mini 4WD<sup>®</sup> motor diagnostics.',
@@ -5209,7 +5202,7 @@
       'nav.about': '概要',
       'nav.contact': 'お問い合わせ',
       'nav.verify': '正規品認証',
-      'hero.badge': 'システム稼働中 · v3.8.0',
+      'hero.badge': 'システム稼働中 · v3.9.0',
       'hero.title': 'すべての<br>Mini 4WD<sup>®</sup> モーターに<br><span class="accent">健康指紋</span>を',
       'hero.lead': 'MotorLab は Mini 4WD<sup>®</sup> プレイヤーのために設計された精密モーター慣らし・測定システムです。10 段階プログラム慣らし、ベアリング減衰測定、ブラシ接触安定診断、AI モーター健康管理まで — すべての調整を定量化・再現・比較できます。',
       'hero.cta1': '機能を見る',
@@ -5235,13 +5228,13 @@
       'f2.tag2': 'リアルタイムグラフ',
       'f2.tag3': 'デュアルモード',
       'f3.title': 'AI スマートモーター健康管理',
-      'f3.desc': 'モーターごとに基準健康指紋を作成。以降の検査で 5 大指標（電流特性・回転数減衰・温度上昇曲線・電流安定度・振動スペクトル解析）を自動比較し、0〜100 点の健康評価と文章診断を提供します。',
-      'f3.tag1': 'FFT スペクトル',
-      'f3.tag2': 'レーダーチャート',
+      'f3.desc': 'モーターごとに基準健康指紋を作成し、以降の検査は<b>「今回 vs 前回」</b>の差分で表示。どの項目が良くなり、どれが悪化し、どれだけ変化したかを直接提示します。抽象的なスコアは出さず、ピークからどれだけ離れたかはご自身で判読できます。',
+      'f3.tag1': '今回 vs 前回',
+      'f3.tag2': '変化量表示',
       'f3b.title': 'AI スマートトルク予測',
-      'f3b.desc': 'タミヤ各モーターの標準パラメータを数学モデルとし、AI アクセラレート演算で慣らし後のトルクを予測:@2.4V と @3.0V の予測値をそれぞれ提示し、個体の素性をタミヤ標準値と対照 —— このモーターが慣らし後に標準のどこに位置するかが分かります。',
+      'f3b.desc': 'タミヤ各モーターの標準パラメータを数学モデルとし、AI アクセラレート演算で慣らし後のトルクを予測。結果は<b>1 枚のトルク予測図</b>で示し、この個体とタミヤ標準値を同じ図上で直接対照。@2.4V と @3.0V の予測値をそれぞれ明示し、標準のどの位置に来るか一目で分かります。',
       'f3b.tag1': '@2.4V / @3.0V',
-      'f3b.tag2': '素性 vs 標準',
+      'f3b.tag2': '視覚比較図',
       'f3b.tag3': '数学モデル',
       'f3c.title': 'AI スマート慣らし',
       'f3c.desc': 'ワンタップ全自動慣らし:<b>1 回でこの個体の最良状態まで慣らして自動停止</b>——新品は完全に整形、慣らし済みは素早く確認、重度摩耗は正直に通知;メインの「運転安定度」散布図でブラシと整流子の接触安定度を直読でき、完了時は慣らし前後の対照を表示。タミヤ全 15 機種対応。',
@@ -5249,11 +5242,11 @@
       'f3c.tag2': '運転安定度',
       'f3c.tag3': 'タミヤ 15 機種',
       'f4.title': 'ベアリング抵抗テスト',
-      'f4.desc': 'テスト電圧(2.4V / 3V)を選び、安定回転数まで加速してから電源を切って惰性走行させ、「完全停止までの時間」を測定。長いほどベアリングが滑らか。時間は相対比較用に表示するのみで評定は行いません。',
+      'f4.desc': 'テスト電圧(2.4V / 3V)を選び、安定回転数まで加速してから電源を切って惰性走行させ、「完全停止までの時間」を測定。<b>長いほど抵抗が小さい</b>ことを意味します。時間は相対比較用に表示するのみで評定は行わず、<b>測定温度</b>も併記するので時期をまたいでも比較できます。',
       'f4.tag1': '惰性走行',
       'f4.tag2': '2.4V / 3V',
       'f5.title': 'ブラシ接触安定テスト',
-      'f5.desc': 'ワンタップで全自動:固定 1V の標準手順(緩やか昇圧 → 保持 → 電流を 20 秒サンプリング)で、電流変異係数（CV%）によりブラシ接触品質を定量化。条件が固定なので回・モーターをまたいで公平に比較でき、慣らし前後の対照でブラシの当たりの改善が見えます。約 35 秒、シャフトの手動操作は不要。',
+      'f5.desc': 'ワンタップで全自動:固定 1V の標準手順(緩やか昇圧 → 保持 → 電流を 20 秒サンプリング)で、ブラシ接触の安定度を<b>散布図</b>で表示——<b>スコアは出さず、良否判定も行いません</b>。条件が固定なので回・モーターをまたいで公平に比較でき、慣らし前後の対照でブラシの馴染み改善が分かります。約 35 秒、軸を手で回す必要はありません。',
       'f5.tag1': 'CV 変異係数',
       'f5.tag2': '固定 1V 全自動',
       'f6.title': '履歴記録管理',
@@ -5332,10 +5325,9 @@
       'vt.r7': 'オンラインファームウェア更新',
       'vt.r12': '三層安全保護機構',
       'vt.r8': 'AI スマートモーター健康管理（最大 20 個）',
-      'vt.r8b': 'AI スマートトルク予測(@2.4V / @3.0V、素性 vs タミヤ標準)',
+      'vt.r8b': 'AI スマートトルク予測(@2.4V / @3.0V、視覚比較図)',
       'vt.r8c': 'AI スマート慣らし(1 回で完了)',
       'vt.r9': 'FFT 振動スペクトル解析',
-      'vt.r10': '5 大指標レーダーチャート診断',
       'vt.r11': '健康トレンド曲線追跡',
       'tech.tag': 'TECHNOLOGY',
       'tech.title': '内蔵プロ解析技術',
@@ -5346,8 +5338,8 @@
       't2.desc': '統計学の標準的なばらつき指標（標準偏差 / 平均値）で、ブラシ接触の安定性を定量化。CV が低いほど接触が均一で火花が少ないことを示します。',
       't3.title': '惰性停止時間の測定',
       't3.desc': '安定回転数まで加速してから電源を切り、回転数が自由に惰性走行して完全停止するまでの時間を測定。惰性が長いほどベアリング摩擦が小さく、ベアリングの滑らかさを直感的に表す物理量です。',
-      't4.title': '基準指紋比較',
-      't4.desc': 'モーターごとに初回測定基準を作成。以降の比較は同一機器・同一モーターの原則で行い、モーター個体差を排除して健康状態の変化のみを純粋に反映します。',
+      't4.title': '健康変化の追跡',
+      't4.desc': 'モーターごとに初回測定の基準を作成し、以降は「今回 vs 前回」の変化量で表示。同一機器・同一モーターの原則で個体差を排除 —— 抽象的なスコアは出さず、どこがどれだけ変わったかだけを正直に示します。',
       't5.title': '安定電流ロックアルゴリズム',
       't5.desc': '電流が一定時間で安定した後に読値をロックし、一時的な擾乱による誤判定を防ぎ、測定再現性を向上させます。',
       't6.title': 'ノイズフロア減算',
@@ -5374,8 +5366,8 @@
       't16.desc': '「摩擦」を 1 つの数値で済ませず、最小二乗で損失トルクを複数の物理成分に分解し、R² のしきい値で信頼できない測定を自動的に除外します。',
       't17.title': '運転安定度の指標',
       't17.desc': 'ブラシと整流子の接触安定度を 0~100 のスコア化し、ラウンドごとの落点で「毛羽立ちから滑らかへ」の全過程を可視化 —— 固定目盛りなので回をまたいで比較できます。',
-      't18.title': 'トルク・体質の実測推算',
-      't18.desc': '実測データをタミヤ公式標準と対照してトルクと体質を推算 —— 同機種でも個体ごとに結果が違う=それこそが個体の真の体質。',
+      't18.title': 'トルク予測対照図',
+      't18.desc': '実測データからこの個体の慣らし後トルクを推算し、タミヤ公式標準と同じ図上で直接対照 —— 同機種でも個体ごとに位置が違い、それが個体差そのものです。',
       't19.title': '1 回で完了する自動停止',
       't19.desc': 'AI スマート慣らしは 1 回の中で連続測定し、この個体の最良状態まで慣らしてから停止:新品は完全整形、慣らし済みは素早く確認、重度摩耗は正直に通知 —— 仕上がったら、機械が教えてくれます。',
       'specs.tag': 'SPECIFICATIONS',
@@ -5462,9 +5454,9 @@
       'cl.FIX': '修正',
       'cl.IMPROVE': '改善',
       'cl.SECURITY': 'セキュリティ',
-      'cl.v380.title': 'AIスマート慣らしが 1 回で完了 · 運転安定度の指標',
-      'cl.v371.title': '速度制御の進入最適化 · 平均回転数のリアルタイム表示',
-      'cl.v370.title': 'プログラム最適化 · WiFi リスト管理',
+      'cl.v390.title': 'トルク予測を視覚比較図に · 健康管理は変化量表示に',
+      'cl.v382.title': '測定ステータス用語の統一 · 一貫性の警告を削除',
+      'cl.v381.title': '特性測定の高回転ロック修正 · 3 回の一貫性向上',
       'about.tag': 'ABOUT',
       'about.title': 'MotorLab について',
       'about.p1': 'MotorLab は Mini 4WD<sup>®</sup> モーターの精密測定に特化した独立系スタジオです。',
