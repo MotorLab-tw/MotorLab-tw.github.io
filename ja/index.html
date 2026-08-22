@@ -2332,7 +2332,7 @@
 <svg viewbox="0 0 24 24"><path d="M3 3v18h18"></path><path d="M7 15l4-4 3 3 5-6"></path><circle cx="19" cy="8" r="1.5"></circle></svg>
 </div>
 <h3 data-i18n="f3b.title">AI スマートトルク予測</h3>
-<p data-i18n="f3b.desc">タミヤ各モーターの標準パラメータを数学モデルとし、AI アクセラレート演算で慣らし後のトルクを予測。結果は<b>1 枚のトルク予測図</b>で示し、この個体とタミヤ標準値を同じ図上で直接対照。@2.4V と @3.0V の予測値をそれぞれ明示し、標準のどの位置に来るか一目で分かります。</p>
+<p data-i18n="f3b.desc">型番を選んでワンタップ、全自動の連続測定のあと<b>トルク予測グラフ</b>を 1 枚出力:タミヤ公式標準線とこの個体の推算線を並べ、標準線の上か下かが一目で分かります;@2.4V／@3.0V それぞれに予測トルク値。同型番でも個体ごとに結果が違う＝個体差の反映です。結果には測定温度帯が付きます。</p>
 <div class="feature-meta">
 <span class="feature-tag" data-i18n="f3b.tag1">@2.4V / @3.0V</span>
 <span class="feature-tag" data-i18n="f3b.tag2">視覚比較図</span>
@@ -2369,10 +2369,10 @@
 <svg viewbox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
 </div>
 <h3 data-i18n="f5.title">ブラシ接触安定テスト</h3>
-<p data-i18n="f5.desc">ワンタップで全自動:固定 1V の標準手順(緩やか昇圧 → 保持 → 電流を 20 秒サンプリング)で、ブラシ接触の安定度を<b>散布図</b>で表示——<b>スコアは出さず、良否判定も行いません</b>。条件が固定なので回・モーターをまたいで公平に比較でき、慣らし前後の対照でブラシの馴染み改善が分かります。約 35 秒、軸を手で回す必要はありません。</p>
+<p data-i18n="f5.desc">ブラシと整流子の接触安定度を全自動で測定し、結果を<b>散布図</b>で表示:波形が安定しているほど接触が安定。<b>スコアは出さず、良否判定も行いません</b>——同一個体の時期別、または同型番の個体間の比較に。</p>
 <div class="feature-meta">
-<span class="feature-tag" data-i18n="f5.tag1">CV 変異係数</span>
-<span class="feature-tag" data-i18n="f5.tag2">固定 1V 全自動</span>
+<span class="feature-tag" data-i18n="f5.tag1">散布図で表示</span>
+<span class="feature-tag" data-i18n="f5.tag2">ワンタップ全自動</span>
 </div>
 </div>
 <!-- 歷史紀錄 -->
@@ -2490,17 +2490,17 @@
 <span class="feature-tag" data-i18n="f14.tag3">本体で早見</span>
 </div>
 </div>
-<!-- 全自動溫度管理 -->
+<!-- 量測條件自動一致化 -->
 <div class="feature-card">
 <div class="feature-icon">
 <svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="4.5"></circle><circle cx="12" cy="12" r="1"></circle></svg>
 </div>
-<h3 data-i18n="f16.title">全自動温度管理</h3>
-<p data-i18n="f16.desc">独自アルゴリズムでデータをより正確で判読しやすく。</p>
+<h3 data-i18n="f16.title">測定条件の自動一致化</h3>
+<p data-i18n="f16.desc">測定と慣らし判定の条件はシステムが全自動で処理し、手動の待機や設定は不要です;複数パス測定ではパスとパスの間も同様に条件を自動で揃え(「準備中」と表示)、条件が適さない場合は「データは参考のみ」と提示してテストは続行します。</p>
 <div class="feature-meta">
 <span class="feature-tag" data-i18n="f16.tag1">全自動</span>
-<span class="feature-tag" data-i18n="f16.tag2">独自アルゴリズム</span>
-<span class="feature-tag" data-i18n="f16.tag3">より正確</span>
+<span class="feature-tag" data-i18n="f16.tag2">条件を統一</span>
+<span class="feature-tag" data-i18n="f16.tag3">回をまたいで比較可</span>
 </div>
 </div>
 </div>
@@ -2651,9 +2651,9 @@
 <p data-i18n="t1.desc">モーター電流信号を周波数領域に変換し、基本周波数・高調波・ノイズ成分を分離。スペクトル特徴からベアリング異音、ローター不均衡、整流子欠陥などの潜在的問題を読み取れます。</p>
 </div>
 <div class="tech-card">
-<div class="tech-name">CV_COEFFICIENT</div>
-<h4 data-i18n="t2.title">変異係数解析</h4>
-<p data-i18n="t2.desc">統計学の標準的なばらつき指標（標準偏差 / 平均値）で、ブラシ接触の安定性を定量化。CV が低いほど接触が均一で火花が少ないことを示します。</p>
+<div class="tech-name">CONTACT_MAP</div>
+<h4 data-i18n="t2.title">ブラシ接触散布図</h4>
+<p data-i18n="t2.desc">ブラシと整流子の接触状態を 1 点ずつ散布図に描きます:波形が安定しているほど接触が安定。スコアは出さず良否判定も行わず、同一個体の時期別や同型番の個体間の相対比較に使います。</p>
 </div>
 <div class="tech-card">
 <div class="tech-name">COAST_DOWN</div>
@@ -2764,7 +2764,7 @@
 </thead>
 <tbody>
 <tr><td data-i18n="specs.hw.r1">入力電源</td><td class="spec-val" data-i18n="specs.hw.v1">DC 5V / 6A · ジャック 5.5 × 2.5 mm</td></tr>
-<tr><td data-i18n="specs.hw.r2">出力電圧</td><td class="spec-val" data-i18n="specs.hw.v2">DC 4.0V Max / 4A Max</td></tr>
+<tr><td data-i18n="specs.hw.r2">出力電圧</td><td class="spec-val" data-i18n="specs.hw.v2">DC 4.0V Max / 4A Max(出荷時に個体ごと校正、全量程 ±2%)</td></tr>
 <tr><td data-i18n="specs.hw.r4">電流検出</td><td class="spec-val" data-i18n="specs.hw.v4">-4A ~ +4A Max</td></tr>
 <tr><td data-i18n="specs.hw.r5">回転数検出</td><td class="spec-val" data-i18n="specs.hw.v5">0 ~ 50,000 RPM</td></tr>
 <tr><td data-i18n="specs.hw.r6">温度検出</td><td class="spec-val" data-i18n="specs.hw.v6">-50°C ~ +125°C</td></tr>
@@ -2772,6 +2772,29 @@
 </tbody>
 </table>
 </div>
+</div>
+<!-- 量測重複性 -->
+<div class="spec-block">
+<div class="spec-block-title" data-i18n="specs.rep.title">測定の再現性</div>
+<div class="spec-table-wrap">
+<table class="spec-table">
+<thead>
+<tr>
+<th data-i18n="specs.th.item">項目</th>
+<th data-i18n="specs.th.rep">再現性</th>
+</tr>
+</thead>
+<tbody>
+<tr><td data-i18n="specs.rep.r1">磁力系</td><td class="spec-val" data-i18n="specs.rep.v1">±5%</td></tr>
+<tr><td data-i18n="specs.rep.r2">損失系</td><td class="spec-val" data-i18n="specs.rep.v2">±3%</td></tr>
+<tr><td data-i18n="specs.rep.r3">回転数</td><td class="spec-val" data-i18n="specs.rep.v3">±1%</td></tr>
+<tr><td data-i18n="specs.rep.r4">トルク予測</td><td class="spec-val" data-i18n="specs.rep.v4">±10%</td></tr>
+<tr><td data-i18n="specs.rep.r5">ベアリング完全停止時間</td><td class="spec-val" data-i18n="specs.rep.v5">±0.2 秒</td></tr>
+<tr><td data-i18n="specs.rep.r6">ブラシ接触安定</td><td class="spec-val" data-i18n="specs.rep.v6">相対比較、絶対規格は設けません</td></tr>
+</tbody>
+</table>
+</div>
+<div class="spec-note" data-i18n="specs.rep.note">同一機・同一モーターで回をまたいだばらつき(確度ではありません)。各測定結果にはその回の測定温度が付きます;温度変化は一定のばらつきを生むため、データは参考値です。</div>
 </div>
 <!-- 軟體規格 -->
 <div class="spec-block">
@@ -2861,7 +2884,7 @@
 <tbody>
 <tr><td data-i18n="specs.p.timecap">時間上限</td><td data-i18n="specs.v.timecap">完了まで / 2h / 3h / 4h</td><td>—</td><td class="spec-val">3h</td></tr>
 <tr><td data-i18n="specs.p.model">対応機種</td><td data-i18n="specs.v.all15">タミヤ全 15 機種</td><td>—</td><td class="spec-val">Hyper-Dash PRO</td></tr>
-<tr><td data-i18n="specs.p.coach">完了判定</td><td data-i18n="specs.v.coach">1 回で完了:この個体の最良状態まで慣らして停止;慣らし済みは素早く確認;重度摩耗は正直に通知し継続を非推奨</td><td>—</td><td class="spec-val">—</td></tr><tr><td data-i18n="specs.p.mainviz">メインビジュアル</td><td data-i18n="specs.v.mainviz">運転安定度の散布図(0~100 固定目盛り);完了時は慣らし前後の対照(1V 参考回転数の初回・最終と向上幅)を表示</td><td>—</td><td class="spec-val">—</td></tr>
+<tr><td data-i18n="specs.p.coach">完了判定</td><td data-i18n="specs.v.coach">1 回で完了:この個体の最良状態まで慣らして停止;慣らし済みは素早く確認;重度摩耗は正直に通知し継続を非推奨</td><td>—</td><td class="spec-val">—</td></tr><tr><td data-i18n="specs.p.mainviz">メインビジュアル</td><td data-i18n="specs.v.mainviz">運転安定度の散布図(0~100 固定目盛り);完了時は慣らし前後の対照(慣らし前／後の回転数と向上幅)を表示</td><td>—</td><td class="spec-val">—</td></tr>
 <tr><td data-i18n="specs.p.stopb">停止動作</td><td data-i18n="specs.v.stopb">停止で即時停止、今回のデータは画面に保持(セッション横断の履歴は残さない)</td><td>—</td><td class="spec-val">—</td></tr>
 </tbody>
 </table>
@@ -2891,23 +2914,7 @@
 <div class="spec-note" data-i18n="specs.range.g2note">判停基準は慣らしページと独立して設定します。</div>
 <!-- 3.3 AI 智慧馬達健康管理 -->
 <div class="spec-subgroup" data-i18n="specs.range.g3">AI スマートモーター健康管理（PRO）</div>
-<div class="spec-table-wrap">
-<table class="spec-table">
-<thead>
-<tr>
-<th data-i18n="specs.th.param">パラメータ</th>
-<th data-i18n="specs.th.rangeu">範囲</th>
-<th data-i18n="specs.th.unit">単位</th>
-<th data-i18n="specs.th.default">初期値</th>
-</tr>
-</thead>
-<tbody>
-<tr><td data-i18n="specs.p.vstart">開始電圧</td><td class="spec-val">1.0 ~ 3.0 (step 0.1)</td><td class="spec-val">V</td><td class="spec-val">1.0</td></tr>
-<tr><td data-i18n="specs.p.vstep">電圧間隔</td><td class="spec-val">0.1 ~ 0.2 (step 0.01)</td><td class="spec-val">V</td><td class="spec-val">0.2</td></tr>
-</tbody>
-</table>
-</div>
-<div class="spec-note" data-i18n="specs.range.g3note">システムが「開始電圧 + 4 × 電圧間隔」で 5 つの等間隔測定点を自動生成します。</div>
+<div class="spec-auto" data-i18n="specs.range.g3note">全自動の検査プログラムで数値入力はありません;フル検査／クイック検査の 2 モード、結果は前回との差分を直接表示します。</div>
 <!-- 3.4 / 3.5 自動程序 -->
 <div class="spec-subgroup" data-i18n="specs.range.g4">モーター特性測定 · AI スマートトルク予測 · ベアリング抵抗テスト · ブラシ接触安定テスト</div>
 <div class="spec-auto" data-i18n="specs.range.g4note">全自動測定プログラム(モーター特性測定は正転/逆転を選択可、ベアリング抵抗テストは 2.4V / 3V を選択可)、その他は数値入力なし。</div>
@@ -2941,7 +2948,7 @@
 <span class="changelog-date">2026-08-22</span>
 </div>
 <div class="changelog-content">
-<h4 data-i18n="cl.v390.title">トルク予測を視覚比較図に · 健康管理は変化量表示に</h4>
+<h4 data-i18n="cl.v390.title">トルク予測を視覚比較図に · 健康管理は変化量表示に · 測定温度を全面表示</h4>
 </div>
 </div>
 <!-- v3.8.2 -->
@@ -3145,7 +3152,7 @@
       'f3.tag1': '這次 vs 上次',
       'f3.tag2': '差異呈現',
       'f3b.title': 'AI 智慧扭力預測',
-      'f3b.desc': '以田宮各款馬達的標準參數作為數學模型,透過 AI 加速指令運算,預測馬達磨合後的扭力表現:結果以<b>單張扭力預測圖</b>呈現,把這顆馬達與田宮標準值畫在同一張圖上直接對照,並分別標出 @2.4V 與 @3.0V 的預測值,一眼看出落在標準的哪個位置。',
+      'f3b.desc': '選型號一鍵預測,全自動連續量測後出一張<b>扭力預測圖</b>:田宮官方標準線與本顆的推算線並列,一眼看出本顆落在標準線上或下;@2.4V／@3.0V 各出一個預測扭力值。同型號不同顆結果不同＝反映個體真實差異。結果附量測溫度區間。',
       'f3b.tag1': '@2.4V / @3.0V',
       'f3b.tag2': '視覺對照圖',
       'f3b.tag3': '數學模型',
@@ -3159,9 +3166,9 @@
       'f4.tag1': '斷電滑行',
       'f4.tag2': '2.4V / 3V',
       'f5.title': '電刷接觸穩定測試',
-      'f5.desc': '一鍵全自動:固定 1V 標準流程(緩升 → 保持 → 採樣電流 20 秒),把電刷接觸的穩定程度以<b>落點圖</b>呈現,<b>不給分數、不做好壞判定</b>——固定條件讓跨次、跨馬達可公平比較,磨合前後對照可見電刷貼合改善。約 35 秒,不需手動操作軸心。',
-      'f5.tag1': 'CV 變異係數',
-      'f5.tag2': '固定 1V 全自動',
+      'f5.desc': '全自動量測電刷與整流子的接觸穩定度,結果以<b>落點圖</b>呈現:波形越穩＝接觸越穩。<b>不給分數、不做判定</b>,供同一顆馬達不同時期、或同型號不同顆互相比較。',
+      'f5.tag1': '落點圖呈現',
+      'f5.tag2': '一鍵全自動',
       'f6.title': '歷史紀錄管理',
       'f6.desc': '自動儲存最多 50 筆完整磨合紀錄,包含每階段詳細數據。支援 JSON / CSV 匯出、檔案匯入、一鍵套用回磨合頁。所有資料離線儲存於裝置,無雲端依賴。',
       'f6.tag2': '離線儲存',
@@ -3203,11 +3210,11 @@
       'f14.tag1': '15 款',
       'f14.tag2': '官方負載數據',
       'f14.tag3': '機上速查',
-      'f16.title': '全自動溫度管理',
-      'f16.desc': '獨家演算法讓數據更精準可判讀。',
+      'f16.title': '量測條件自動一致化',
+      'f16.desc': '量測與磨合判定的條件由系統全自動處理,使用者不需手動等待或設定;多趟量測的每一趟之間同樣自動維持條件一致(顯示「準備中」),條件不適合時提示「數據僅供參考」,測試照常進行。',
       'f16.tag1': '全自動',
-      'f16.tag2': '獨家演算法',
-      'f16.tag3': '數據更精準',
+      'f16.tag2': '條件一致',
+      'f16.tag3': '跨場可比',
       'f13.title': '馬達特性量測',
       'f13.desc': '全自動量出馬達的特性參數與損耗 — 品質因數、磁路強度、內部電阻、損耗轉矩、KV 等,提供參考數據(不評分、不排名)。自動跑三趟取平均並附「3 趟一致性」,結果自動存入量測歷史庫供回顧比較;適合同型號互比與磨合前後對照,可選正 / 反轉。',
       'f13.tag1': '全自動',
@@ -3242,8 +3249,8 @@
       'tech.subtitle': '每一項數據都來自業界驗證的量測方法。',
       't1.title': '快速傅立葉變換頻譜',
       't1.desc': '將馬達電流訊號轉換為頻域,分離出基頻、諧波與雜訊成分。從頻譜特徵即可判讀軸承異音、轉子失衡、整流子缺陷等隱性問題。',
-      't2.title': '變異係數分析',
-      't2.desc': '統計學標準離散度指標(標準差 / 平均值),用於量化電刷接觸的穩定性。CV 越低代表接觸越均勻、打火越少。',
+      't2.title': '電刷接觸落點圖',
+      't2.desc': '把電刷與整流子的接觸狀態逐點畫成落點圖,波形越穩＝接觸越穩。不給分數、不做判定,供同一顆馬達不同時期、或同型號不同顆互相比較。',
       't3.title': '滑行停止時間量測',
       't3.desc': '馬達加速到穩定轉速後直接斷電,量測轉速自由滑行至完全靜止的時間。滑行越久代表軸承摩擦越小,是評估軸承順暢度的直觀物理量。',
       't4.title': '健康變化追蹤',
@@ -3295,7 +3302,16 @@
       'specs.th.unit': '單位',
       'specs.th.default': '預設',
       'specs.hw.r1': '輸入電源', 'specs.hw.v1': 'DC 5V / 6A · 接頭 5.5 × 2.5 mm',
-      'specs.hw.r2': '輸出電壓', 'specs.hw.v2': 'DC 4.0V Max / 4A Max',
+      'specs.hw.r2': '輸出電壓', 'specs.hw.v2': 'DC 4.0V Max / 4A Max(出廠逐台校正,全量程 ±2%)',
+ 'specs.th.rep': '重複性',
+ 'specs.rep.title': '量測重複性',
+ 'specs.rep.note': '同一台機器、同一顆馬達、跨場次的散布(非準確度)。各量測結果附當次量測溫度;溫度變化會造成一定變異,數據僅供參考。',
+ 'specs.rep.r1': '磁力類', 'specs.rep.v1': '±5%',
+ 'specs.rep.r2': '損耗類', 'specs.rep.v2': '±3%',
+ 'specs.rep.r3': '轉速', 'specs.rep.v3': '±1%',
+ 'specs.rep.r4': '扭力預測', 'specs.rep.v4': '±10%',
+ 'specs.rep.r5': '軸承完全靜止時間', 'specs.rep.v5': '±0.2 秒',
+ 'specs.rep.r6': '電刷接觸穩定', 'specs.rep.v6': '相對比較,不設絕對規格',
       'specs.hw.r4': '電流偵測', 'specs.hw.v4': '-4A ~ +4A Max',
       'specs.hw.r5': '轉速偵測', 'specs.hw.v5': '0 ~ 50,000 RPM',
       'specs.hw.r6': '溫度偵測', 'specs.hw.v6': '-50°C ~ +125°C',
@@ -3315,7 +3331,7 @@
       'specs.range.g2': '馬達測試程式（單一階段）',
       'specs.range.g3': 'AI 智慧馬達健康管理（PRO）',
       'specs.range.g1note': '電壓輸入 0 = 跳過該階段。',
-      'specs.range.g3note': '系統自動以「起始電壓 + 4 × 電壓間距」生成 5 個等距量測點。',
+      'specs.range.g3note': '全自動檢測程序,無數值輸入;完整檢測／快速檢測兩種模式,結果直接呈現這次與上次的差異。',
       'specs.range.g4': '馬達特性量測 · AI智慧扭力預測 · 軸承阻力測試 · 電刷接觸穩定測試',
       'specs.range.g4note': '全自動量測程序(馬達特性量測可選正/反轉,軸承阻力測試可選 2.4V / 3V),其餘無數值輸入。',
       'specs.p.volt': '電壓',
@@ -3323,8 +3339,6 @@
       'specs.p.runtime': '運轉時間',
       'specs.p.cooltime': '冷卻時間',
       'specs.p.tol': '穩定電流容差',
-      'specs.p.vstart': '起始電壓',
-      'specs.p.vstep': '電壓間距',
       'specs.v.dir': '正轉 / 反轉',
       'specs.u.sec': '秒',
       'specs.d.bystage': '依階段',
@@ -3348,7 +3362,7 @@
       'specs.v.all15': '田宮全 15 款',
       'specs.p.coach': '完成判定',
       'specs.p.mainviz': '主視覺',
-      'specs.v.mainviz': '運轉穩定度落點圖(0~100 固定刻度);完成顯示磨前後對照(1V 參考轉速首末與提升幅度)',
+      'specs.v.mainviz': '運轉穩定度落點圖(0~100 固定刻度);完成顯示磨前後對照(磨合前／後轉速與提升幅度)',
       'specs.v.coach': '單場到位:自動磨到該顆的最佳狀態停止;已磨合品快速確認;嚴重耗損如實告知不建議續磨',
       'specs.p.stopb': '停止行為',
       'specs.v.stopb': '按停止立即停止,本場數據保留於畫面(不留跨場歷史)',
@@ -4023,7 +4037,7 @@
       'cl.FIX': '修正',
       'cl.IMPROVE': '改進',
       'cl.SECURITY': '安全',
-      'cl.v390.title': '扭力預測改視覺對照圖 · 健康管理改差異呈現',
+      'cl.v390.title': '扭力預測改視覺對照圖 · 健康管理改差異呈現 · 量測溫度全面標示',
       'cl.v382.title': '量測狀態用語統一 · 一致性警語移除',
       'cl.v381.title': '特性量測高轉速鎖定修復 · 三趟一致性提升',
       'about.tag': 'ABOUT',
@@ -4083,7 +4097,7 @@
       'f3.tag1': 'This vs last',
       'f3.tag2': 'Change shown',
       'f3b.title': 'AI Torque Prediction',
-      'f3b.desc': 'Using the standard parameters of each Tamiya motor as a math model, an AI-accelerated computation predicts post-break-in torque. The result is a <b>single torque prediction chart</b> that plots this motor against the Tamiya standard on the same axes, with the predicted value marked at @2.4V and @3.0V — so you can see at a glance where it lands.',
+      'f3b.desc': 'Pick the model, tap once: after a fully automatic measurement run it produces a single <b>torque prediction chart</b> — Tamiya\'s official reference line alongside this unit\'s estimated line, so you see at a glance whether it sits above or below standard; one predicted torque value each at @2.4V and @3.0V. Different units of the same model giving different results = real unit-to-unit variation. The result includes the measurement temperature range.',
       'f3b.tag1': '@2.4V / @3.0V',
       'f3b.tag2': 'Comparison chart',
       'f3b.tag3': 'Math model',
@@ -4097,9 +4111,9 @@
       'f4.tag1': 'Coast-down',
       'f4.tag2': '2.4V / 3V',
       'f5.title': 'Brush Contact Stability',
-      'f5.desc': 'One-tap and fully automatic: a fixed 1V routine (ramp → hold → sample current for 20s) presents brush contact stability as a <b>scatter chart</b> — <b>no score, no good/bad verdict</b>. Fixed conditions make runs and motors fairly comparable, and a before/after comparison shows the improvement in brush seating. About 35 seconds, no need to turn the shaft by hand.',
-      'f5.tag1': 'CV coefficient',
-      'f5.tag2': 'Fixed 1V, automatic',
+      'f5.desc': 'Fully automatic measurement of brush-to-commutator contact stability, presented as a <b>scatter chart</b>: the steadier the pattern, the steadier the contact. <b>No score, no judgement</b> — for comparing the same motor across time, or different units of the same model.',
+      'f5.tag1': 'Scatter chart',
+      'f5.tag2': 'One-tap automatic',
       'f6.title': 'Records Management',
       'f6.desc': 'Auto-stores up to 50 complete break-in records with per-stage detail. JSON / CSV export, file import, one-click re-apply. All data stored locally on the device — no cloud dependency.',
       'f6.tag2': 'Offline storage',
@@ -4141,11 +4155,11 @@
       'f14.tag1': '15 models',
       'f14.tag2': 'Official load data',
       'f14.tag3': 'On-device lookup',
-      'f16.title': 'Full-auto temperature management',
-      'f16.desc': 'Exclusive algorithms make the data more accurate and easier to read.',
+      'f16.title': 'Automatic measurement-condition consistency',
+      'f16.desc': 'The system handles the conditions behind every measurement and break-in judgement automatically — no manual waiting or setup. Between the passes of a multi-pass measurement it keeps conditions consistent the same way (showing "preparing"); if conditions are unsuitable it flags "data for reference only" and the test proceeds as usual.',
       'f16.tag1': 'Fully automatic',
-      'f16.tag2': 'Exclusive algorithm',
-      'f16.tag3': 'More accurate data',
+      'f16.tag2': 'Consistent conditions',
+      'f16.tag3': 'Comparable across sessions',
       'f13.title': 'Motor Characterization',
       'f13.desc': 'Fully automatic measurement of motor constants and losses — quality factor, magnetic strength, internal resistance, loss torque, KV and more — as reference data (no scoring or ranking). It runs three passes and averages them with a 3-pass consistency figure, and each result is saved to a measurement-history library for later comparison; great for same-model comparison and before/after break-in, forward or reverse.',
       'f13.tag1': 'Fully automatic',
@@ -4185,8 +4199,8 @@
       'tech.subtitle': 'Every data point comes from industry-validated measurement methods.',
       't1.title': 'Fast Fourier Transform Spectrum',
       't1.desc': 'Convert motor current signal to frequency domain, separating fundamental, harmonics, and noise. Spectral signatures reveal bearing anomalies, rotor imbalance, and commutator defects invisible to the naked eye.',
-      't2.title': 'Coefficient of Variation',
-      't2.desc': 'Standard statistical dispersion measure (σ/μ), used to quantify brush contact stability. Lower CV means more uniform contact and less sparking.',
+      't2.title': 'Brush contact scatter map',
+      't2.desc': 'Plots the brush-to-commutator contact state point by point as a scatter map: the steadier the pattern, the steadier the contact. No score, no judgement — a tool for relative comparison, across time on one motor or between units of the same model.',
       't3.title': 'Coast-Down Stop Time',
       't3.desc': 'After reaching steady RPM the motor is powered off and the time it freely coasts to a complete stop is measured. A longer coast means lower bearing friction — an intuitive physical measure of bearing smoothness.',
       't4.title': 'Health Change Tracking',
@@ -4238,7 +4252,16 @@
       'specs.th.unit': 'Unit',
       'specs.th.default': 'Default',
       'specs.hw.r1': 'Input Power', 'specs.hw.v1': 'DC 5V / 6A · 5.5 × 2.5 mm jack',
-      'specs.hw.r2': 'Output Voltage', 'specs.hw.v2': 'DC 4.0V Max / 4A Max',
+      'specs.hw.r2': 'Output Voltage', 'specs.hw.v2': 'DC 4.0V Max / 4A Max (calibrated per unit at the factory, ±2% full scale)',
+ 'specs.th.rep': 'Repeatability',
+ 'specs.rep.title': 'Measurement repeatability',
+ 'specs.rep.note': 'Scatter for the same machine and the same motor across sessions (not accuracy). Every result carries the measurement temperature for that run; temperature changes introduce some variation, so treat the data as reference.',
+ 'specs.rep.r1': 'Magnetic-strength group', 'specs.rep.v1': '±5%',
+ 'specs.rep.r2': 'Loss group', 'specs.rep.v2': '±3%',
+ 'specs.rep.r3': 'RPM', 'specs.rep.v3': '±1%',
+ 'specs.rep.r4': 'Torque prediction', 'specs.rep.v4': '±10%',
+ 'specs.rep.r5': 'Bearing full-stop time', 'specs.rep.v5': '±0.2 s',
+ 'specs.rep.r6': 'Brush contact stability', 'specs.rep.v6': 'Relative comparison; no absolute spec',
       'specs.hw.r4': 'Current Sensing', 'specs.hw.v4': '-4A ~ +4A Max',
       'specs.hw.r5': 'RPM Sensing', 'specs.hw.v5': '0 ~ 50,000 RPM',
       'specs.hw.r6': 'Temperature Sensing', 'specs.hw.v6': '-50°C ~ +125°C',
@@ -4258,7 +4281,7 @@
       'specs.range.g2': 'Motor Test Program (single stage)',
       'specs.range.g3': 'AI Motor Health Manager (PRO)',
       'specs.range.g1note': 'Voltage input of 0 = skip that stage.',
-      'specs.range.g3note': 'The system auto-generates 5 evenly-spaced measurement points as "start voltage + 4 × voltage step".',
+      'specs.range.g3note': 'A fully automatic check with no numeric inputs; full check and quick check modes, with the result showing the change since last time directly.',
       'specs.range.g4': 'Motor Characterization · AI Torque Prediction · Bearing Resistance Test · Brush Contact Stability Test',
       'specs.range.g4note': 'Fully automated procedures (Motor Characterization: forward/reverse selectable; Bearing Resistance: 2.4V / 3V selectable); no other numeric input.',
       'specs.p.volt': 'Voltage',
@@ -4266,8 +4289,6 @@
       'specs.p.runtime': 'Run Time',
       'specs.p.cooltime': 'Cooling Time',
       'specs.p.tol': 'Stable Current Tolerance',
-      'specs.p.vstart': 'Start Voltage',
-      'specs.p.vstep': 'Voltage Step',
       'specs.v.dir': 'Forward / Reverse',
       'specs.u.sec': 'sec',
       'specs.d.bystage': 'Per stage',
@@ -4291,7 +4312,7 @@
       'specs.v.all15': 'All 15 Tamiya motors',
       'specs.p.coach': 'Completion verdict',
       'specs.p.mainviz': 'Main visual',
-      'specs.v.mainviz': 'Running Stability scatter chart (fixed 0–100 scale); completion shows a before/after comparison (first/last 1V reference RPM and the gain)',
+      'specs.v.mainviz': 'Running Stability scatter chart (fixed 0–100 scale); completion shows a before/after comparison (break-in RPM before / after and the gain)',
       'specs.v.coach': 'Done in one session: breaks in to the motor\'s best state then stops; an already broken-in motor is confirmed quickly; severe wear is reported honestly with further break-in not recommended',
       'specs.p.stopb': 'Stop behavior',
       'specs.v.stopb': 'Stop halts immediately; this session\'s data stays on screen (no cross-session history)',
@@ -5172,7 +5193,7 @@
       'cl.FIX': 'FIX',
       'cl.IMPROVE': 'IMPROVE',
       'cl.SECURITY': 'SECURITY',
-      'cl.v390.title': 'Torque prediction is now a visual comparison chart · Health check shows the change',
+      'cl.v390.title': 'Torque prediction is now a visual comparison chart · Health check shows the change · Measurement temperature shown throughout',
       'cl.v382.title': 'Unified measurement status wording · Consistency warning removed',
       'cl.v381.title': 'High-RPM lock fix in characterization · Better 3-pass consistency',
       'about.tag': 'ABOUT',
@@ -5232,7 +5253,7 @@
       'f3.tag1': '今回 vs 前回',
       'f3.tag2': '変化量表示',
       'f3b.title': 'AI スマートトルク予測',
-      'f3b.desc': 'タミヤ各モーターの標準パラメータを数学モデルとし、AI アクセラレート演算で慣らし後のトルクを予測。結果は<b>1 枚のトルク予測図</b>で示し、この個体とタミヤ標準値を同じ図上で直接対照。@2.4V と @3.0V の予測値をそれぞれ明示し、標準のどの位置に来るか一目で分かります。',
+      'f3b.desc': '型番を選んでワンタップ、全自動の連続測定のあと<b>トルク予測グラフ</b>を 1 枚出力:タミヤ公式標準線とこの個体の推算線を並べ、標準線の上か下かが一目で分かります;@2.4V／@3.0V それぞれに予測トルク値。同型番でも個体ごとに結果が違う＝個体差の反映です。結果には測定温度帯が付きます。',
       'f3b.tag1': '@2.4V / @3.0V',
       'f3b.tag2': '視覚比較図',
       'f3b.tag3': '数学モデル',
@@ -5246,9 +5267,9 @@
       'f4.tag1': '惰性走行',
       'f4.tag2': '2.4V / 3V',
       'f5.title': 'ブラシ接触安定テスト',
-      'f5.desc': 'ワンタップで全自動:固定 1V の標準手順(緩やか昇圧 → 保持 → 電流を 20 秒サンプリング)で、ブラシ接触の安定度を<b>散布図</b>で表示——<b>スコアは出さず、良否判定も行いません</b>。条件が固定なので回・モーターをまたいで公平に比較でき、慣らし前後の対照でブラシの馴染み改善が分かります。約 35 秒、軸を手で回す必要はありません。',
-      'f5.tag1': 'CV 変異係数',
-      'f5.tag2': '固定 1V 全自動',
+      'f5.desc': 'ブラシと整流子の接触安定度を全自動で測定し、結果を<b>散布図</b>で表示:波形が安定しているほど接触が安定。<b>スコアは出さず、良否判定も行いません</b>——同一個体の時期別、または同型番の個体間の比較に。',
+      'f5.tag1': '散布図で表示',
+      'f5.tag2': 'ワンタップ全自動',
       'f6.title': '履歴記録管理',
       'f6.desc': '最大 50 件の完全な慣らし記録を自動保存、各ステージの詳細データを含みます。JSON / CSV エクスポート、ファイルインポート、ワンタップで慣らしページへ再適用に対応。すべてのデータは端末にオフライン保存され、クラウド依存はありません。',
       'f6.tag2': 'オフライン保存',
@@ -5290,11 +5311,11 @@
       'f14.tag1': '15 機種',
       'f14.tag2': '公式負荷データ',
       'f14.tag3': '本体で早見',
-      'f16.title': '全自動温度管理',
-      'f16.desc': '独自アルゴリズムでデータをより正確で判読しやすく。',
+      'f16.title': '測定条件の自動一致化',
+      'f16.desc': '測定と慣らし判定の条件はシステムが全自動で処理し、手動の待機や設定は不要です;複数パス測定ではパスとパスの間も同様に条件を自動で揃え(「準備中」と表示)、条件が適さない場合は「データは参考のみ」と提示してテストは続行します。',
       'f16.tag1': '全自動',
-      'f16.tag2': '独自アルゴリズム',
-      'f16.tag3': 'より正確',
+      'f16.tag2': '条件を統一',
+      'f16.tag3': '回をまたいで比較可',
       'f13.title': 'モーター特性測定',
       'f13.desc': 'モーターの特性パラメータと損失(品質係数・磁気強度・内部抵抗・損失トルク・KV など)を全自動で測定し、参考データを提供(採点・ランキングなし)。自動で 3 パス実行して平均し「3 パス一致性」を表示、結果は測定履歴ライブラリに自動保存して後で比較可能。同型比較や慣らし前後の対照に最適、正転/逆転を選択可。',
       'f13.tag1': '全自動',
@@ -5334,8 +5355,8 @@
       'tech.subtitle': 'すべてのデータは業界で検証された測定方法に基づいています。',
       't1.title': '高速フーリエ変換スペクトル',
       't1.desc': 'モーター電流信号を周波数領域に変換し、基本周波数・高調波・ノイズ成分を分離。スペクトル特徴からベアリング異音、ローター不均衡、整流子欠陥などの潜在的問題を読み取れます。',
-      't2.title': '変異係数解析',
-      't2.desc': '統計学の標準的なばらつき指標（標準偏差 / 平均値）で、ブラシ接触の安定性を定量化。CV が低いほど接触が均一で火花が少ないことを示します。',
+      't2.title': 'ブラシ接触散布図',
+      't2.desc': 'ブラシと整流子の接触状態を 1 点ずつ散布図に描きます:波形が安定しているほど接触が安定。スコアは出さず良否判定も行わず、同一個体の時期別や同型番の個体間の相対比較に使います。',
       't3.title': '惰性停止時間の測定',
       't3.desc': '安定回転数まで加速してから電源を切り、回転数が自由に惰性走行して完全停止するまでの時間を測定。惰性が長いほどベアリング摩擦が小さく、ベアリングの滑らかさを直感的に表す物理量です。',
       't4.title': '健康変化の追跡',
@@ -5385,7 +5406,16 @@
       'specs.th.unit': '単位',
       'specs.th.default': '初期値',
       'specs.hw.r1': '入力電源', 'specs.hw.v1': 'DC 5V / 6A · ジャック 5.5 × 2.5 mm',
-      'specs.hw.r2': '出力電圧', 'specs.hw.v2': 'DC 4.0V Max / 4A Max',
+      'specs.hw.r2': '出力電圧', 'specs.hw.v2': 'DC 4.0V Max / 4A Max(出荷時に個体ごと校正、全量程 ±2%)',
+ 'specs.th.rep': '再現性',
+ 'specs.rep.title': '測定の再現性',
+ 'specs.rep.note': '同一機・同一モーターで回をまたいだばらつき(確度ではありません)。各測定結果にはその回の測定温度が付きます;温度変化は一定のばらつきを生むため、データは参考値です。',
+ 'specs.rep.r1': '磁力系', 'specs.rep.v1': '±5%',
+ 'specs.rep.r2': '損失系', 'specs.rep.v2': '±3%',
+ 'specs.rep.r3': '回転数', 'specs.rep.v3': '±1%',
+ 'specs.rep.r4': 'トルク予測', 'specs.rep.v4': '±10%',
+ 'specs.rep.r5': 'ベアリング完全停止時間', 'specs.rep.v5': '±0.2 秒',
+ 'specs.rep.r6': 'ブラシ接触安定', 'specs.rep.v6': '相対比較、絶対規格は設けません',
       'specs.hw.r4': '電流検出', 'specs.hw.v4': '-4A ~ +4A Max',
       'specs.hw.r5': '回転数検出', 'specs.hw.v5': '0 ~ 50,000 RPM',
       'specs.hw.r6': '温度検出', 'specs.hw.v6': '-50°C ~ +125°C',
@@ -5405,7 +5435,7 @@
       'specs.range.g2': 'モーターテストプログラム（単一ステージ）',
       'specs.range.g3': 'AI スマートモーター健康管理（PRO）',
       'specs.range.g1note': '電圧入力 0 = そのステージをスキップ。',
-      'specs.range.g3note': 'システムが「開始電圧 + 4 × 電圧間隔」で 5 つの等間隔測定点を自動生成します。',
+      'specs.range.g3note': '全自動の検査プログラムで数値入力はありません;フル検査／クイック検査の 2 モード、結果は前回との差分を直接表示します。',
       'specs.range.g4': 'モーター特性測定 · AI スマートトルク予測 · ベアリング抵抗テスト · ブラシ接触安定テスト',
       'specs.range.g4note': '全自動測定プログラム(モーター特性測定は正転/逆転を選択可、ベアリング抵抗テストは 2.4V / 3V を選択可)、その他は数値入力なし。',
       'specs.p.volt': '電圧',
@@ -5413,8 +5443,6 @@
       'specs.p.runtime': '運転時間',
       'specs.p.cooltime': '冷却時間',
       'specs.p.tol': '安定電流許容差',
-      'specs.p.vstart': '開始電圧',
-      'specs.p.vstep': '電圧間隔',
       'specs.v.dir': '正転 / 逆転',
       'specs.u.sec': '秒',
       'specs.d.bystage': 'ステージ毎',
@@ -5438,7 +5466,7 @@
       'specs.v.all15': 'タミヤ全 15 機種',
       'specs.p.coach': '完了判定',
       'specs.p.mainviz': 'メインビジュアル',
-      'specs.v.mainviz': '運転安定度の散布図(0~100 固定目盛り);完了時は慣らし前後の対照(1V 参考回転数の初回・最終と向上幅)を表示',
+      'specs.v.mainviz': '運転安定度の散布図(0~100 固定目盛り);完了時は慣らし前後の対照(慣らし前／後の回転数と向上幅)を表示',
       'specs.v.coach': '1 回で完了:この個体の最良状態まで慣らして停止;慣らし済みは素早く確認;重度摩耗は正直に通知し継続を非推奨',
       'specs.p.stopb': '停止動作',
       'specs.v.stopb': '停止で即時停止、今回のデータは画面に保持(セッション横断の履歴は残さない)',
@@ -5454,7 +5482,7 @@
       'cl.FIX': '修正',
       'cl.IMPROVE': '改善',
       'cl.SECURITY': 'セキュリティ',
-      'cl.v390.title': 'トルク予測を視覚比較図に · 健康管理は変化量表示に',
+      'cl.v390.title': 'トルク予測を視覚比較図に · 健康管理は変化量表示に · 測定温度を全面表示',
       'cl.v382.title': '測定ステータス用語の統一 · 一貫性の警告を削除',
       'cl.v381.title': '特性測定の高回転ロック修正 · 3 回の一貫性向上',
       'about.tag': 'ABOUT',
