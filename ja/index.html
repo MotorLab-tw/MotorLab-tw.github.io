@@ -5,7 +5,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="ja" http-equiv="Content-Language"/>
 <title>MotorLab — Mini 4WD® モーター慣らし・テストシステム | 精密モーター診断スタジオ</title>
-<meta content="MotorLab — Mini 4WD® プレイヤー向けの精密モーター慣らし・診断システム。モーター特性測定、慣らし 3 モード、AI 健康管理、ベアリング抵抗、CV ブラシ安定診断、高温保護を搭載。" name="description"/>
+<meta content="MotorLab — Mini 4WD® プレイヤー向けの精密モーター慣らし・診断システム。モーター特性測定、慣らし 3 モード、AI 健康管理、ベアリング抵抗、ブラシ接触散布図、高温保護を搭載。" name="description"/>
 <meta content="MotorLab.tw" name="author"/>
 <meta content="モーター慣らし, モーター慣らし機, ミニ四駆 モーター慣らし, ミニ四駆のモーター慣らし, モーターブレークイン, ミニ四駆, ミニ四駆 モーター 慣らし, タミヤ モーター 慣らし, モーター ブレークイン 方法, ミニ四駆 モーター チューニング, MotorLab, Mini 4WD, Hyper Dash, Plasma Dash, motor break-in, motor test, Tamiya Mini 4WD, overcurrent protection, motor safety, How to Break in Mini4WD Motors, DIY Mini4WD Motor Analyzer, Mini4WD RPM Benchmark and Analysis, Motor Health Monitoring Using RPM Telemetry" name="keywords"/>
 <!-- 正規網址 (避免重複內容問題) -->
@@ -33,7 +33,7 @@
 <meta content="website" property="og:type"/>
 <meta content="https://motorlab-tw.github.io/ja/" property="og:url"/>
 <meta content="MotorLab — Mini 4WD® モーター慣らし・テストシステム" property="og:title"/>
-<meta content="すべての Mini 4WD® モーターに定量化できる健康指紋を。15 のプロ機能:モーター特性測定、10 段階慣らし、AI 健康管理、AI トルク予測、ベアリング抵抗解析、ブラシ安定診断、三層安全保護、高温ロック、グローバル慣らしデータ庫。" property="og:description"/>
+<meta content="すべての Mini 4WD® モーターに定量化できる健康指紋を。18 のプロ機能:モーター特性測定、慣らし 3 モード、AI 健康管理、AI トルク予測、ベアリング抵抗解析、ブラシ接触散布図、三層安全保護、高温ロック、グローバル慣らしデータ庫。" property="og:description"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" property="og:image"/>
 <meta content="https://motorlab-tw.github.io/og-image.png" property="og:image:secure_url"/>
 <meta content="image/png" property="og:image:type"/>
@@ -134,7 +134,7 @@
     "AI 智慧扭力預測(以田宮標準參數為數學模型,預測磨合後 @2.4V / @3.0V 扭力與體質對照)",
     "FFT 振動頻譜分析",
     "軸承阻力測試(斷電滑行靜止時間量測)",
-    "電刷接觸穩定度 CV 分析",
+    "電刷接觸穩定度落點圖",
     "歷史紀錄 50 筆 (JSON / CSV 匯入匯出)",
     "內建 Web 操作介面 (即時數據推送)",
     "線上韌體更新 (數位簽章驗證)",
@@ -154,7 +154,7 @@
       "name": "Mini 4WD モーター慣らしシステムとは?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "モーター慣らしシステムは新品モーターに対して制御された再現性のある初期運転を行い、ブラシと整流子の接触面を安定化させて電流とノイズを下げる装置です。MotorLab は Mini 4WD® モーター専用の精密慣らし・測定システムで、10 段階プログラム慣らしと全工程テレメトリーを提供します。"
+        "text": "モーター慣らしシステムは新品モーターに対して制御された再現性のある初期運転を行い、ブラシと整流子の接触面を安定化させて電流とノイズを下げる装置です。MotorLab は Mini 4WD® モーター専用の精密慣らし・測定システムで、慣らし 3 モード(電圧／回転数 Beta／AI スマート)と全工程テレメトリーを提供します。"
       }
     },
     {
@@ -2222,7 +2222,7 @@
 <span data-i18n="hero.badge">システム稼働中 · v3.9.0</span>
 </div>
 <h1 data-i18n="hero.title">すべての<br/>Mini 4WD<sup>®</sup> モーターに<br/><span class="accent">健康指紋</span>を</h1>
-<p class="lead" data-i18n="hero.lead">MotorLab は Mini 4WD<sup>®</sup> プレイヤーのために設計された精密モーター慣らし・測定システムです。10 段階プログラム慣らし、ベアリング減衰測定、ブラシ接触安定診断、AI モーター健康管理まで — すべての調整を定量化・再現・比較できます。</p>
+<p class="lead" data-i18n="hero.lead">MotorLab は Mini 4WD<sup>®</sup> プレイヤーのために設計された精密モーター慣らし・測定システムです。慣らし 3 モード(電圧／回転数 Beta／AI スマート)、ベアリング減衰測定、ブラシ接触安定診断、AI モーター健康管理まで — すべての調整を定量化・再現・比較できます。</p>
 <div class="hero-cta">
 <a class="btn btn-primary" data-i18n="hero.cta1" href="#features">機能を見る</a>
 <a class="btn btn-secondary" data-i18n="hero.cta2" href="#versions">M1 vs PRO</a>
@@ -3124,7 +3124,7 @@
       'nav.verify': '正版查驗',
       'hero.badge': '系統運作中 · v3.9.0',
       'hero.title': '為每一顆<br>Mini 4WD<sup>®</sup> 馬達<br>建立<span class="accent">健康指紋</span>',
-      'hero.lead': 'MotorLab 是為 Mini 4WD<sup>®</sup> 玩家打造的精密馬達磨合與測試系統。從十階段可程式化磨合、軸承衰減量測、電刷接觸穩定診斷,到 AI 馬達健康管理 — 讓每一次調校都可量化、可重複、可比較。',
+      'hero.lead': 'MotorLab 是為 Mini 4WD<sup>®</sup> 玩家打造的精密馬達磨合與測試系統。從磨合三模式(電壓／轉速 Beta／AI 智慧)、軸承衰減量測、電刷接觸穩定診斷,到 AI 馬達健康管理 — 讓每一次調校都可量化、可重複、可比較。',
       'hero.cta1': '瀏覽功能',
       'hero.cta2': 'M1 vs PRO',
       'hero.cta3': '立即購買',
@@ -3398,7 +3398,7 @@
       'g1.t.v4': '冷卻(s)', 'g1.t.r4': '避免溫度累積', 'g1.t.x4': '熱會讓量測漂移,並永久劣化軸承潤滑與電刷彈片',
       'g1.h4': '標準磨合流程(10 階段建議)',
       'g1.p7': '業界主流的「漸進升壓」磨合方法,將馬達磨合分成 10 階段、低電壓到高電壓、並穿插反向運轉與冷卻時間。',
-      'g1.tip': 'MotorLab M1/PRO 內建的<strong>十階段可程式化磨合</strong>會自動執行這套流程,每階段可獨立調整電壓、方向、時間、冷卻、與穩定電流容差。並透過<strong>智慧穩流判定</strong>—當電流連續波動小於設定值時自動進入下階段,確保每顆馬達都磨到位。',
+      'g1.tip': 'MotorLab M1/PRO 內建的<strong>十階段可程式化磨合(電壓模式)</strong>會自動執行這套流程,每階段可獨立調整電壓、方向、時間、冷卻、與穩定電流容差。並透過<strong>智慧穩流判定</strong>—當電流連續波動小於設定值時自動進入下階段,確保每顆馬達都磨到位。',
       'g1.h6': '用機器磨合:兩種手動模式 + AI 智慧磨合',
       'g1.m1': '上面的十階段是<strong>電壓模式</strong>的手動配方。MotorLab 提供兩種手動模式,以及一鍵全自動的 AI 智慧磨合,依你想花多少心力挑一種:',
       'g1.m2': '<strong>電壓模式</strong> —— 各階段固定電壓(即上述十階段流程),適合有自己配方、想完全掌控的玩家。',
@@ -4069,7 +4069,7 @@
       'nav.verify': 'Verify',
       'hero.badge': 'System running · v3.9.0',
       'hero.title': 'Build a <span class="accent">health fingerprint</span><br>for every<br>Mini 4WD<sup>®</sup> motor',
-      'hero.lead': 'MotorLab is a precision motor break-in and diagnostic system built for Mini 4WD<sup>®</sup> enthusiasts. From 10-stage programmable break-in to bearing decay analysis, brush contact diagnostics, and AI motor health management — make every tune measurable, repeatable, and comparable.',
+      'hero.lead': 'MotorLab is a precision motor break-in and diagnostic system built for Mini 4WD<sup>®</sup> enthusiasts. From three break-in modes (voltage / speed Beta / AI smart) to bearing decay analysis, brush contact diagnostics, and AI motor health management — make every tune measurable, repeatable, and comparable.',
       'hero.cta1': 'Browse Features',
       'hero.cta2': 'M1 vs PRO',
       'hero.cta3': 'Buy Now',
@@ -4349,7 +4349,7 @@
       'g1.t.v4': 'Cooling (s)', 'g1.t.r4': 'Prevents heat buildup', 'g1.t.x4': 'Heat skews readings and permanently degrades bearing lube and brush springs',
       'g1.h4': 'Standard break-in procedure (10-stage recommendation)',
       'g1.p7': 'The mainstream "progressive voltage ramp" method divides break-in into 10 stages, from low voltage to high voltage, with reverse runs and cooling pauses interleaved.',
-      'g1.tip': 'MotorLab M1/PRO\'s built-in <strong>10-stage programmable break-in</strong> automatically executes this protocol. Each stage independently sets voltage, direction, time, cooling, and current stability tolerance. The <strong>smart stable-current latch</strong> auto-advances when current variation falls below threshold, ensuring every motor reaches optimal break-in.',
+      'g1.tip': 'MotorLab M1/PRO\'s built-in <strong>10-stage programmable break-in (voltage mode)</strong> automatically executes this protocol. Each stage independently sets voltage, direction, time, cooling, and current stability tolerance. The <strong>smart stable-current latch</strong> auto-advances when current variation falls below threshold, ensuring every motor reaches optimal break-in.',
       'g1.h6': 'Breaking in with the machine: two manual modes + AI Smart Break-In',
       'g1.m1': 'The 10 stages above are a manual <strong>voltage-mode</strong> recipe. MotorLab offers two manual modes plus one-tap AI Smart Break-In — pick by how hands-on you want to be:',
       'g1.m2': '<strong>Voltage mode</strong> — fixed voltage per stage (the 10-stage flow above), for players who have their own recipe and want full control.',
@@ -5083,7 +5083,7 @@
       'g17.tip': 'Break-in is <strong>spending from a budget</strong>: there is only so much "stickiness" to remove, and magnets have finite life. <strong>The moment power draw stops falling is the moment to stop</strong> — smart break-in hands that call to measurement and stops you at just right.',
       'g17.h5': 'Next: 15 motors, one set of conditions',
       'g17.p7': 'This 12-hour run fixed the test framework for the whole series: the same machine, the same break-in and measurement flow, and the same three dimensions — <strong>same-RPM current (power draw), same-voltage RPM, and constitution score</strong>. From here we put all 15 Tamiya motors through identical conditions: where each golden zone sits, how early the stop point arrives, and how much over-break-in costs — published one by one, all collected in <a href="../">Benchmarks</a>.',
-      'g17.note': '<strong>Test conditions:</strong><br>1. Mach-Dash PRO<br>2. 12 hours of continuous low-speed break-in<br>3. All data measured on the same machine<br>4. Physics: the DC motor voltage equation <code>V = I·R + Ke·ω</code><br>5. Constitution scores are reference values against Tamiya official spec — read the trend',
+      'g17.note': '<strong>Test conditions:</strong><br>1. Mach-Dash PRO<br>2. 12 hours of continuous low-speed break-in<br>3. All data measured on the same machine<br>4. Physics: the DC motor voltage equation <code>V = I·R + Ke·ω</code><br>5. Constitution scores are reference values against Tamiya official spec — read the trend<br>6. The “constitution score” used here was an AI Torque Prediction output field up to v3.8.x; from v3.9.0 it was replaced by the <strong>torque prediction comparison chart</strong> (this unit plotted against the Tamiya official reference on one chart) and is no longer shown as a single score. The figures here are what the machine displayed at the time; the way the trend is read is unchanged.',
       'g17.related': 'Further reading: the full break-in flow and the modes in <a href="../../guides/motor-break-in-guide/">the complete break-in guide</a>; why break-in and measurement lock RPM in <a href="../../guides/motor-break-in-speed-vs-voltage/">locked RPM, not fixed voltage</a>; the 5 causes of a slow motor (incl. demagnetization) in <a href="../../guides/motor-slow-causes-fixes/">motor got slow: causes and fixes</a>; whether washing a motor works in <a href="../does-washing-a-motor-work/">does washing a motor work</a>.',
 
       'g18.tag': 'BENCHMARK · Decay Breakdown',
@@ -5109,9 +5109,9 @@
       'g18.h5': '5. Cautionary tale: degreaser will empty your bearing',
       'g18.warn': '<strong>Wash without re-oiling = dry-run seizure.</strong> On the first wash-and-mount, the motor collapsed mid-run at high speed — screech, current spike, jammed. The cause: degreaser is a solvent that pulls the oil out of the porous sleeve bearing too, and the dry bearing seizes. After re-oiling and letting it soak in, it ran fine, and a bearing coast test confirmed no permanent damage. Conclusion: <strong>if you wash a motor with solvent, re-oiling afterward is mandatory, not optional.</strong>',
       'g18.h6': '6. So, should you wash a motor?',
-      'g18.p6': '<strong>Worth washing</strong>: the motor feels dull after long use and the data says "contamination-type decay" (heavier start, higher draw, but RPM still there). One wash reclaims the dirt bonus and it stays — great value. <strong>Not recoverable</strong>: if contact stability is already bad (CV far above normal) and true-value current exceeds the catalog band, that\'s part wear — washing only reclaims the small dirt slice, not the body. Time to replace the motor.',
+      'g18.p6': '<strong>Worth washing</strong>: the motor feels dull after long use and the data says "contamination-type decay" (heavier start, higher draw, but RPM still there). One wash reclaims the dirt bonus and it stays — great value. <strong>Not recoverable</strong>: if the brush contact-stability scatter never settles and no-load current I0 at the same RPM is clearly high, that\'s part wear — washing only reclaims the small dirt slice, not the body. Time to replace the motor.',
       'g18.p6b': 'How to tell which you have? RPM alone won\'t separate them — both dirt and wear make a motor feel dull. It takes three numbers: <strong>constitution score</strong> (body health), <strong>no-load current</strong> (how dirty), and <strong>contact stability</strong> (degree of wear). That is exactly what the on-machine AI torque prediction tells you in about fifteen minutes.',
-      'g18.note': '<strong>Test conditions:</strong><br>1. Mach-Dash PRO (a decayed sample after a life test)<br>2. Cleaning: solvent wash, flush out residue, and re-oil the bearing<br>3. 11 hours continuous run (about 470 equivalent rounds), same machine<br>4. Measurement: AI torque prediction + brush contact stability test + bearing resistance test<br>5. 24-26% is a same-rig measured baseline for normal units of this model, not official data',
+      'g18.note': '<strong>Test conditions:</strong><br>1. Mach-Dash PRO (a decayed sample after a life test)<br>2. Cleaning: solvent wash, flush out residue, and re-oil the bearing<br>3. 11 hours continuous run (about 470 equivalent rounds), same machine<br>4. Measurement: AI torque prediction + brush contact stability test + bearing resistance test<br>5. 24-26% is a same-rig measured baseline for normal units of this model, not official data<br>6. The “constitution score” and “contact stability CV” used here were output fields up to v3.8.x; from v3.9.0 torque prediction became a <strong>comparison chart</strong> and brush contact stability became a <strong>scatter map</strong>, neither of which shows a single score. The figures here are what the machine displayed at the time; the way the trend is read is unchanged.',
       'g18.related': 'Further reading: how over-break-in wears a motor down step by step in <a href="../when-to-stop-motor-break-in/">the 12-hour over-break-in test</a>; the concept of wash vs break-in in <a href="../../guides/motor-wash-vs-break-in/">motor wash vs break-in</a>; the 5 causes of a slow motor in <a href="../../guides/motor-slow-causes-fixes/">motor got slow: causes and fixes</a>.',
 
       'g19.tag': 'BENCHMARK · Shock Repair',
@@ -5131,7 +5131,7 @@
       'g19.warn': '<strong>The shock has a cost — do not just try it.</strong> A high-voltage shock itself erodes the contact face: no help for an already-worn motor, and only damage to a healthy one. This is also an <strong>n=1</strong> single-unit experiment with the mechanism not fully pinned down; a higher voltage or longer pulse could instead accelerate demagnetization and erosion. This is an experiment log, not a how-to — do not shock a serviceable motor yourself.',
       'g19.h5': '5. So — can a retired motor be saved?',
       'g19.p5': 'It depends on how it "died." If it is <strong>lost magnetism</strong> (demag), there is a chance to recharge some of it back — but temporarily. If it is <strong>contact-face wear</strong> (brush, commutator), neither shock nor wash saves it; retire it. In one line: <strong>a shock can bring a retired motor\'s magnetism back from the dead, but a worn-out contact face is beyond saving.</strong> How to tell which you have? The on-machine AI Torque Prediction breaks it down in about fifteen minutes — magnetic health, power draw, and contact stability, three numbers each telling their own story.',
-      'g19.note': '<strong>Test conditions:</strong><br>1. Mach-Dash PRO (retired sample)<br>2. High-voltage shock: external supply, DC 9V / 60 s (pulse shock)<br>3. Cleaning: eco degreaser, DC 1.5V / 3 min, and re-oil the bearing<br>4. AI Smart Break-In long run, 6.7 hours, same machine<br>5. Measurement: AI Torque Prediction + brush contact-stability test + bearing drag test',
+      'g19.note': '<strong>Test conditions:</strong><br>1. Mach-Dash PRO (retired sample)<br>2. High-voltage shock: external supply, DC 9V / 60 s (pulse shock)<br>3. Cleaning: eco degreaser, DC 1.5V / 3 min, and re-oil the bearing<br>4. AI Smart Break-In long run, 6.7 hours, same machine<br>5. Measurement: AI Torque Prediction + brush contact-stability test + bearing drag test<br>6. The “constitution score” used here was an AI Torque Prediction output field up to v3.8.x; from v3.9.0 it was replaced by the <strong>torque prediction comparison chart</strong> and is no longer shown as a single score. The figures here are what the machine displayed at the time; the way the trend is read is unchanged.',
       'g19.related': 'Further reading: the motor-wash experiment on the same sample in <a href="../does-washing-a-motor-work/">does washing a motor work</a>; how over-break-in wears a motor down in <a href="../when-to-stop-motor-break-in/">the 12-hour over-break-in test</a>; the concept of wash vs break-in in <a href="../../guides/motor-wash-vs-break-in/">motor wash vs break-in</a>.',
       'g20.tag': 'BENCHMARK · Break-in Before/After',
       'g20.title': 'AI Smart Break-in, Before & After: A Same-Temperature Test on One Brand-New Motor',
@@ -5225,7 +5225,7 @@
       'nav.verify': '正規品認証',
       'hero.badge': 'システム稼働中 · v3.9.0',
       'hero.title': 'すべての<br>Mini 4WD<sup>®</sup> モーターに<br><span class="accent">健康指紋</span>を',
-      'hero.lead': 'MotorLab は Mini 4WD<sup>®</sup> プレイヤーのために設計された精密モーター慣らし・測定システムです。10 段階プログラム慣らし、ベアリング減衰測定、ブラシ接触安定診断、AI モーター健康管理まで — すべての調整を定量化・再現・比較できます。',
+      'hero.lead': 'MotorLab は Mini 4WD<sup>®</sup> プレイヤーのために設計された精密モーター慣らし・測定システムです。慣らし 3 モード(電圧／回転数 Beta／AI スマート)、ベアリング減衰測定、ブラシ接触安定診断、AI モーター健康管理まで — すべての調整を定量化・再現・比較できます。',
       'hero.cta1': '機能を見る',
       'hero.cta2': 'M1 vs PRO',
       'hero.cta3': '今すぐ購入',
@@ -5532,7 +5532,7 @@
       'g1.t.x4': '熱は測定をぶらし、ベアリング潤滑とブラシばねを永久に劣化させる',
       'g1.h4': '標準慣らしフロー(10 段階推奨)',
       'g1.p7': '業界主流の「段階昇圧」慣らし手法では、モーター慣らしを 10 段階に分け、低電圧から高電圧へ、逆回転と冷却時間を挟みます。',
-      'g1.tip': 'MotorLab M1/PRO 内蔵の<strong>10 段階プログラム慣らし</strong>は本フローを自動実行し、各段階で電圧・方向・時間・冷却・安定電流公差を個別に調整できます。さらに<strong>スマート安定電流判定</strong>—電流の連続変動が設定値以下になると自動で次段階へ進み、すべてのモーターを確実に仕上げます。',
+      'g1.tip': 'MotorLab M1/PRO 内蔵の<strong>10 段階プログラム慣らし(電圧モード)</strong>は本フローを自動実行し、各段階で電圧・方向・時間・冷却・安定電流公差を個別に調整できます。さらに<strong>スマート安定電流判定</strong>—電流の連続変動が設定値以下になると自動で次段階へ進み、すべてのモーターを確実に仕上げます。',
       'g1.h6': '機械で慣らす:手動 2 モード + AI スマート慣らし',
       'g1.m1': '上の 10 段階は<strong>電圧モード</strong>の手動レシピです。MotorLab は手動 2 モードとワンタップ全自動の AI スマート慣らしを用意——どれだけ手をかけるかで選べます:',
       'g1.m2': '<strong>電圧モード</strong> —— 各段階を固定電圧で運転(上記の 10 段階フロー)。自分のレシピがあり、完全に制御したい人向け。',
@@ -6278,7 +6278,7 @@
       'g17.tip': '慣らしは<strong>予算のある消耗行為</strong>です:削り取れる「引っかかり」には限りがあり、磁石の寿命にも限りがあります。<strong>消費電力が下がらなくなった瞬間が、止めるべき瞬間</strong>——スマート慣らしはその判断を測定に任せ、ちょうどいいところで止めます。',
       'g17.h5': '次は:15 機種、同じ条件で',
       'g17.p7': 'この 12 時間の実験でシリーズのテスト枠組みが決まりました:同一機器、同一の慣らし・測定フロー、同じ 3 つの観測軸——<strong>同回転数電流(消費)、同電圧回転数、体質スコア</strong>。ここから同一条件でタミヤ 15 機種を 1 つずつ:各機種のゴールデン期はどこか、停止点はどれだけ早く来るか、慣らしすぎの代償はどれほどか——1 機種ずつ公開し、すべて<a href="../">ベンチマーク</a>に収録します。',
-      'g17.note': '<strong>実験条件:</strong><br>1. Mach-Dash PRO<br>2. 連続低回転慣らし 12 時間<br>3. 全データは同一機器での実測<br>4. 物理根拠:直流モーターの電圧方程式 <code>V = I·R + Ke·ω</code><br>5. 体質スコアはタミヤ公式規格の参考値、判読はトレンド重視',
+      'g17.note': '<strong>実験条件:</strong><br>1. Mach-Dash PRO<br>2. 連続低回転慣らし 12 時間<br>3. 全データは同一機器での実測<br>4. 物理根拠:直流モーターの電圧方程式 <code>V = I·R + Ke·ω</code><br>5. 体質スコアはタミヤ公式規格の参考値、判読はトレンド重視<br>6. 本記事の「体質スコア」は v3.8.x までの AI トルク予測の出力項目です;v3.9.0 からは<strong>トルク予測対照グラフ</strong>(この個体とタミヤ公式標準を同じグラフに描く)に変わり、単一のスコアとしては表示されません——本記事の数値は当時の実測で、トレンドの判読方法は変わりません。',
       'g17.related': '関連:慣らしの全体フローとモード選択 —— <a href="../../guides/motor-break-in-guide/">モーター慣らし完全ガイド</a>;なぜ回転数を固定するのか —— <a href="../../guides/motor-break-in-speed-vs-voltage/">回転数固定、電圧固定にしない理由</a>;モーターが遅くなる 5 つの原因(減磁含む)—— <a href="../../guides/motor-slow-causes-fixes/">モーターが遅くなった原因と対処</a>。',
 
       'g18.tag': 'BENCHMARK · 劣化の分解',
@@ -6304,9 +6304,9 @@
       'g18.h5': '五、失敗談:脱脂剤はベアリングを空にする',
       'g18.warn': '<strong>洗浄後に注油しない=空回りで固着。</strong>最初の洗浄・装着で、高速運転中にモーターが崩壊——異音、電流スパイク、固着。原因:脱脂剤は溶剤で、含油スリーブベアリングの孔から油まで抜き取り、乾いたベアリングが固着する。再注油して浸透させてから復帰運転すると正常、ベアリング惰行テストでも恒久損傷なしを確認。結論:<strong>溶剤でモーターを洗ったら、後の「注油」は必須工程で、任意ではありません。</strong>',
       'g18.h6': '六、では、モーターは洗うべきか?',
-      'g18.p6': '<strong>洗う価値あり</strong>:長く使って鈍く感じ、データが「汚染型劣化」(起動が重い、消費増、でも回転はある)。一度洗えば汚れボーナスを取り戻し、しかも残る——コスパ良好。<strong>戻らない</strong>:接触安定度が既に悪化(CV が正常より大幅に高い)、真値電流がカタログ帯を超えるなら部品摩耗;洗っても汚れの小片しか戻らず本体は救えません——交換時です。',
+      'g18.p6': '<strong>洗う価値あり</strong>:長く使って鈍く感じ、データが「汚染型劣化」(起動が重い、消費増、でも回転はある)。一度洗えば汚れボーナスを取り戻し、しかも残る——コスパ良好。<strong>戻らない</strong>:ブラシ接触安定テストの散布がどうやっても安定せず、同回転数の無負荷電流 I0 も明らかに高いなら部品摩耗;洗っても汚れの小片しか戻らず本体は救えません——交換時です。',
       'g18.p6b': '自分がどちらか、どう見分ける?回転数だけでは分けられません——汚れも摩耗もモーターを鈍くします。3 つの数字で分解:<strong>体質スコア</strong>(本体の良否)、<strong>無負荷電流</strong>(汚れ具合)、<strong>接触安定度</strong>(摩耗の程度)。これこそ機器上の AI トルク予測が十数分で教えてくれることです。',
-      'g18.note': '<strong>実験条件:</strong><br>1. Mach-Dash PRO(寿命テスト後の劣化サンプル)<br>2. 洗浄:溶剤で洗い、残液を除去し、ベアリングを再注油<br>3. 11 時間連続運転(約 470 回相当)、同一機器で実測<br>4. 測定:AI トルク予測 + ブラシ接触安定テスト + ベアリング抵抗テスト<br>5. 24〜26% は同型の正常個体の同一機器実測基準で、公式データではありません',
+      'g18.note': '<strong>実験条件:</strong><br>1. Mach-Dash PRO(寿命テスト後の劣化サンプル)<br>2. 洗浄:溶剤で洗い、残液を除去し、ベアリングを再注油<br>3. 11 時間連続運転(約 470 回相当)、同一機器で実測<br>4. 測定:AI トルク予測 + ブラシ接触安定テスト + ベアリング抵抗テスト<br>5. 24〜26% は同型の正常個体の同一機器実測基準で、公式データではありません<br>6. 本記事の「体質スコア」と「接触安定度 CV」は v3.8.x までの出力項目です;v3.9.0 からトルク予測は<strong>対照グラフ</strong>、ブラシ接触安定は<strong>散布図</strong>になり、いずれも単一スコアは表示しません——本記事の数値は当時の実測で、トレンドの判読方法は変わりません。',
       'g18.related': '関連:過慣らしがモーターを一歩ずつ削る様子は <a href="../when-to-stop-motor-break-in/">12 時間慣らしすぎ実験</a>;洗浄 vs 慣らしの考え方は <a href="../../guides/motor-wash-vs-break-in/">モーター洗浄 vs 慣らし</a>;モーターが遅くなる 5 つの原因は <a href="../../guides/motor-slow-causes-fixes/">モーターが遅くなった原因と対処</a>;洗浄が効くのかは <a href="../does-washing-a-motor-work/">モーター洗浄は効果ある?</a>。',
 
       'g19.tag': 'BENCHMARK · 電気ショック修復',
@@ -6326,7 +6326,7 @@
       'g19.warn': '<strong>ショックには代償がある、むやみに試さないこと。</strong>高電圧ショック自体が接触面を侵食する:すでに摩耗したモーターは救えず、状態の良い個体はむしろ傷めるだけ。しかもこれは <strong>n=1</strong> の 1 個実験でメカニズムも完全には固まっておらず、より高電圧・長時間だと逆に減磁と侵食を早める可能性がある。これは実験記録であって操作の手引きではない。使えるモーターに自分でショックをかけないこと。',
       'g19.h5': '五、で、引退モーターは救えるのか?',
       'g19.p5': '「どこで死んだか」による。<strong>磁力抜け</strong>(減磁)なら、再着磁の概念で一部は充て直せる——ただし一時的。<strong>接触面の摩耗</strong>(ブラシ・整流子)なら、ショックも洗浄も戻せない、引退させるべき。一言で:<strong>ショックは引退モーターの「磁力を蘇らせる」ことはできても、摩耗しきった接触面は救えない。</strong>自分がどちらか見分けるには?本体の AIトルク予測が十数分で分解してくれる——磁力の体質、消費電流、接触安定度、3 つの数字がそれぞれを語る。',
-      'g19.note': '<strong>実験条件:</strong><br>1. マッハダッシュPRO(引退サンプル)<br>2. 高電圧ショック:外部電源 DC 9V／60 秒(パルスショック)<br>3. 洗浄:環境配慮型の脱脂剤、DC 1.5V／3 分、そしてベアリングに再注油<br>4. AIスマート慣らしで長時間運転 6.7 時間、同一の機械で実測<br>5. 測定:AIトルク予測 + ブラシ接触安定テスト + ベアリング抵抗テスト',
+      'g19.note': '<strong>実験条件:</strong><br>1. マッハダッシュPRO(引退サンプル)<br>2. 高電圧ショック:外部電源 DC 9V／60 秒(パルスショック)<br>3. 洗浄:環境配慮型の脱脂剤、DC 1.5V／3 分、そしてベアリングに再注油<br>4. AIスマート慣らしで長時間運転 6.7 時間、同一の機械で実測<br>5. 測定:AIトルク予測 + ブラシ接触安定テスト + ベアリング抵抗テスト<br>6. 本記事の「体質スコア」は v3.8.x までの AI トルク予測の出力項目です;v3.9.0 からは<strong>トルク予測対照グラフ</strong>に変わり、単一スコアは表示されません——本記事の数値は当時の実測で、トレンドの判読方法は変わりません。',
       'g19.related': '関連:同じサンプルのモーター洗浄実験は <a href="../does-washing-a-motor-work/">モーター洗浄は効果ある?</a>;慣らしすぎがモーターを削る話は <a href="../when-to-stop-motor-break-in/">12 時間慣らしすぎ実験</a>;洗浄 vs 慣らしの考え方は <a href="../../guides/motor-wash-vs-break-in/">モーター洗浄 vs 慣らし</a>。',
       'g20.tag': 'BENCHMARK · 慣らし前後の実測',
       'g20.title': 'AI スマート慣らしの前後で何が変わった?新品モーター 1 個の同温対照実測',

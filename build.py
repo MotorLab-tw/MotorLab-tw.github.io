@@ -62,31 +62,31 @@ LANGS = {
 SEO = {
     "zh": {
         "title": "MotorLab — Mini 4WD® 馬達磨合測試系統 | 精密馬達診斷工作室",
-        "description": "MotorLab — 專為 Mini 4WD® 玩家打造的精密馬達磨合測試系統。十五大專業功能:磨合三模式、馬達特性量測、AI 健康管理、AI 扭力預測、軸承阻力、CV 電刷穩定診斷、三層安全保護、高溫鎖定、線上更新、田宮馬達規格速查。讓馬達調校可量化。",
+        "description": "MotorLab — 專為 Mini 4WD® 玩家打造的精密馬達磨合測試系統。十八大專業功能:磨合三模式、馬達特性量測、AI 健康管理、AI 扭力預測、軸承阻力、電刷接觸落點圖、三層安全保護、高溫鎖定、線上更新、田宮馬達規格速查。讓馬達調校可量化。",
         "og_title": "MotorLab — Mini 4WD® 馬達磨合測試系統",
-        "og_desc": "為每一顆 Mini 4WD® 馬達建立可量化的健康指紋。十五大專業功能:磨合三模式、馬達特性量測、AI 健康管理、AI 扭力預測、軸承阻力分析、電刷穩定診斷、三層安全保護、高溫鎖定、田宮馬達規格速查。",
+        "og_desc": "為每一顆 Mini 4WD® 馬達建立可量化的健康指紋。十八大專業功能:磨合三模式、馬達特性量測、AI 健康管理、AI 扭力預測、軸承阻力分析、電刷接觸落點圖、三層安全保護、高溫鎖定、田宮馬達規格速查。",
         "tw_title": "MotorLab — Mini 4WD® Motor Lab",
         "tw_desc": "為每一顆 Mini 4WD® 馬達建立可量化的健康指紋",
         "ld_org_desc": "為 Mini 4WD® 玩家打造的精密馬達磨合與測試系統研發工作室",
         "ld_site_desc": "MotorLab — Mini 4WD® 馬達磨合與精密測試系統官方網站",
-        "ld_app_desc": "Mini 4WD® 馬達磨合與精密測試系統。內建十階段可程式化磨合、AI 智慧馬達健康管理、AI 智慧扭力預測、軸承阻力測試、電刷接觸穩定診斷。",
+        "ld_app_desc": "Mini 4WD® 馬達磨合與精密測試系統。內建磨合三模式(電壓／轉速 Beta／AI 智慧)、AI 智慧馬達健康管理、AI 智慧扭力預測、軸承阻力測試、電刷接觸穩定測試。",
     },
     "en": {
         "title": "MotorLab — Mini 4WD® Motor Break-in & Diagnostics System",
         "description": "MotorLab — precision Mini 4WD® motor break-in & diagnostics. Motor characterization, three-mode break-in, AI health management, bearing resistance.",
         "og_title": "MotorLab — Mini 4WD® Motor Break-in & Test System",
-        "og_desc": "Build a measurable health fingerprint for every Mini 4WD® motor. Fifteen professional tools: motor characterization, three-mode break-in, AI health management, AI torque prediction, bearing resistance analysis, brush stability diagnostics, triple-layer safety protection, overheat lock and a global break-in data library.",
+        "og_desc": "Build a measurable health fingerprint for every Mini 4WD® motor. Eighteen professional tools: motor characterization, three-mode break-in, AI health management, AI torque prediction, bearing resistance analysis, brush contact scatter map, triple-layer safety protection, overheat lock and a global break-in data library.",
         "tw_title": "MotorLab — Mini 4WD® Motor Lab",
         "tw_desc": "Build a measurable health fingerprint for every Mini 4WD® motor",
         "ld_org_desc": "An R&D studio building precision motor break-in and testing systems for Mini 4WD® racers.",
         "ld_site_desc": "Official site of the MotorLab Mini 4WD® motor break-in and precision testing system.",
-        "ld_app_desc": "Mini 4WD® motor break-in and precision testing system. Includes 10-stage programmable break-in, AI motor health management, AI torque prediction, bearing resistance analysis and brush contact stability diagnostics.",
+        "ld_app_desc": "Mini 4WD® motor break-in and precision testing system. Includes three break-in modes (voltage / speed Beta / AI smart), AI motor health management, AI torque prediction, bearing resistance analysis and the brush contact-stability test.",
     },
     "ja": {
         "title": "MotorLab — Mini 4WD® モーター慣らし・テストシステム | 精密モーター診断スタジオ",
-        "description": "MotorLab — Mini 4WD® プレイヤー向けの精密モーター慣らし・診断システム。モーター特性測定、慣らし 3 モード、AI 健康管理、ベアリング抵抗、CV ブラシ安定診断、高温保護を搭載。",
+        "description": "MotorLab — Mini 4WD® プレイヤー向けの精密モーター慣らし・診断システム。モーター特性測定、慣らし 3 モード、AI 健康管理、ベアリング抵抗、ブラシ接触散布図、高温保護を搭載。",
         "og_title": "MotorLab — Mini 4WD® モーター慣らし・テストシステム",
-        "og_desc": "すべての Mini 4WD® モーターに定量化できる健康指紋を。15 のプロ機能:モーター特性測定、10 段階慣らし、AI 健康管理、AI トルク予測、ベアリング抵抗解析、ブラシ安定診断、三層安全保護、高温ロック、グローバル慣らしデータ庫。",
+        "og_desc": "すべての Mini 4WD® モーターに定量化できる健康指紋を。18 のプロ機能:モーター特性測定、慣らし 3 モード、AI 健康管理、AI トルク予測、ベアリング抵抗解析、ブラシ接触散布図、三層安全保護、高温ロック、グローバル慣らしデータ庫。",
         "tw_title": "MotorLab — Mini 4WD® Motor Lab",
         "tw_desc": "すべての Mini 4WD® モーターに定量化できる健康指紋を",
         "ld_org_desc": "Mini 4WD® プレイヤーのための精密モーター慣らし・測定システムを開発するスタジオ。",
@@ -107,7 +107,7 @@ FAQ = {
     "zh": [
         {
             "q": "什麼是 Mini 4WD 馬達磨合系統?",
-            "a": "馬達磨合系統是為新馬達進行受控、可重複的初期運轉程序,目的是讓電刷與整流子建立穩定的接觸面、降低運轉雜訊與電流震盪。MotorLab 是專為 Mini 4WD® 馬達設計的精密磨合與測試系統,提供十階段可程式化磨合與全程遙測。",
+            "a": "馬達磨合系統是為新馬達進行受控、可重複的初期運轉程序,目的是讓電刷與整流子建立穩定的接觸面、降低運轉雜訊與電流震盪。MotorLab 是專為 Mini 4WD® 馬達設計的精密磨合與測試系統,提供磨合三模式(電壓／轉速 Beta／AI 智慧)與全程遙測。",
         },
         {
             "q": "MotorLab 與傳統馬達磨合機有何不同?",
@@ -133,7 +133,7 @@ FAQ = {
     "en": [
         {
             "q": "What is a Mini 4WD motor break-in system?",
-            "a": "A motor break-in system runs a new motor through a controlled, repeatable initial-operation procedure so the brushes and commutator form a stable contact surface and current/RPM noise drops. MotorLab is a precision break-in and testing system built for Mini 4WD® motors, with 10-stage programmable break-in and full-run telemetry.",
+            "a": "A motor break-in system runs a new motor through a controlled, repeatable initial-operation procedure so the brushes and commutator form a stable contact surface and current/RPM noise drops. MotorLab is a precision break-in and testing system built for Mini 4WD® motors, with three break-in modes (voltage / speed Beta / AI smart) and full-run telemetry.",
         },
         {
             "q": "How does MotorLab differ from a traditional break-in box?",
@@ -145,7 +145,7 @@ FAQ = {
         },
         {
             "q": "Why is real-time telemetry important for motor break-in?",
-            "a": "Real-time telemetry turns break-in from 'just run the timer' into 'converge on actual motor state'. MotorLab uses real-time current measurement to detect brush instability, bearing tau decay and CV drift, auto-stopping before damage and providing FFT spectrum analysis.",
+            "a": "Real-time telemetry turns break-in from 'just run the timer' into 'converge on actual motor state'. MotorLab uses real-time current measurement to detect brush instability, bearing tau decay and contact-stability drift, auto-stopping before damage and providing FFT spectrum analysis.",
         },
         {
             "q": "What is a Gen5 motor tuning system?",
@@ -159,7 +159,7 @@ FAQ = {
     "ja": [
         {
             "q": "Mini 4WD モーター慣らしシステムとは?",
-            "a": "モーター慣らしシステムは新品モーターに対して制御された再現性のある初期運転を行い、ブラシと整流子の接触面を安定化させて電流とノイズを下げる装置です。MotorLab は Mini 4WD® モーター専用の精密慣らし・測定システムで、10 段階プログラム慣らしと全工程テレメトリーを提供します。",
+            "a": "モーター慣らしシステムは新品モーターに対して制御された再現性のある初期運転を行い、ブラシと整流子の接触面を安定化させて電流とノイズを下げる装置です。MotorLab は Mini 4WD® モーター専用の精密慣らし・測定システムで、慣らし 3 モード(電圧／回転数 Beta／AI スマート)と全工程テレメトリーを提供します。",
         },
         {
             "q": "MotorLab と従来のモーター慣らし機の違いは?",
@@ -715,7 +715,7 @@ GUIDES = [
         "slug": "when-to-stop-motor-break-in",
         "key": "g17",
         "published": "2026-07-23",
-        "updated": "2026-07-23",
+        "updated": "2026-08-22",
         "type": "benchmarks",
         "i18n": {
             "zh": {
@@ -746,7 +746,7 @@ GUIDES = [
         "slug": "does-washing-a-motor-work",
         "key": "g18",
         "published": "2026-07-24",
-        "updated": "2026-07-24",
+        "updated": "2026-08-22",
         "type": "benchmarks",
         "i18n": {
             "zh": {
@@ -777,7 +777,7 @@ GUIDES = [
         "slug": "revive-dead-motor-electric-shock",
         "key": "g19",
         "published": "2026-07-27",
-        "updated": "2026-07-27",
+        "updated": "2026-08-22",
         "type": "benchmarks",
         "i18n": {
             "zh": {
