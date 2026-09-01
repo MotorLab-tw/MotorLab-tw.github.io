@@ -2125,6 +2125,10 @@
   .manual-table tbody th { background: rgba(46,52,64,0.4); color: var(--text-primary); white-space: nowrap; font-weight: 600; width: 1%; }
   .manual-table td { color: var(--text-secondary); }
   .manual-table code { white-space: nowrap; }
+  /* 表格捲動容器:與首頁 .spec-table-wrap 同一套做法 —— 手機上文字正常換行,
+     真的塞不下的寬表格才在容器內左右捲,頁面本身永遠不會橫向捲動。 */
+  .manual-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 0 0 14px; }
+  .manual-table-wrap > .manual-table { margin: 0; }
 
   @media (max-width: 880px) {
     .manual-layout { grid-template-columns: 1fr; gap: 20px; }
@@ -2132,7 +2136,9 @@
       position: static; max-height: none; border-left: none;
       border: 1px solid var(--border); border-radius: 10px; padding: 16px;
     }
-    .manual-table { display: block; overflow-x: auto; white-space: nowrap; }
+    .manual-table { font-size: 13px; }
+    .manual-table th, .manual-table td { padding: 8px 10px; }
+    .manual-table thead th, .manual-table tbody th { white-space: normal; }
   }
 </style>
 <!-- GoatCounter 訪問統計(隱私友善、無 cookie;按 URL path 自動分別統計每頁/每語言版本) -->

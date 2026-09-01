@@ -3699,6 +3699,11 @@ MANUAL = {
 }
 
 
+def _wrap_manual_tables(html_str):
+    """把手冊表格包進 .manual-table-wrap —— 手機上文字換行,寬表格才在容器內捲動。"""
+    return re.sub(r"(<table class='manual-table'>.*?</table>)",
+                  r'<div class="manual-table-wrap">\1</div>', html_str, flags=re.S)
+
 def build_manual_page(man_cfg, lang, src_html, i18n):
     """產生 /docs/user-manual/ 使用者手冊頁(左目錄 + 右章節,沿用 .guide-page 殼)。"""
     soup = BeautifulSoup(src_html, "lxml")
@@ -3814,7 +3819,7 @@ def build_manual_page(man_cfg, lang, src_html, i18n):
     toc_items = "".join(f'<li><a href="#{x["id"]}">{x["t"]}</a></li>' for x in secs)
     sections_html = "".join(
         f'<section class="manual-section" id="{x["id"]}">'
-        f'<h2>{x["t"]}</h2>{x["html"]}</section>'
+        f'<h2>{x["t"]}</h2>{_wrap_manual_tables(x["html"])}</section>'
         for x in secs
     )
     body_html = (
