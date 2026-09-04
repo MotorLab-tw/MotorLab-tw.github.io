@@ -894,6 +894,22 @@
     color: var(--text-primary);
     font-weight: 600;
   }
+  /* 延伸閱讀:文末站內導引 —— 標籤沿用 .guide-tag 的樣式,清單沿用 .guide-article ul li */
+  .guide-related {
+    margin: 24px 0 0;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+  .guide-related-label {
+    display: inline-block;
+    color: var(--accent-cyan);
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+  .guide-related ul { margin: 0; }
+  .guide-related li { margin: 4px 0; }
   .guide-article code {
     background: var(--bg-tertiary);
     color: var(--accent-cyan);
@@ -1981,7 +1997,7 @@
     "@id": "https://motorlab-tw.github.io/en/guides/motor-break-in-mistakes/"
   },
   "datePublished": "2026-05-22",
-  "dateModified": "2026-08-13",
+  "dateModified": "2026-09-04",
   "author": {
     "@type": "Organization",
     "name": "MotorLab Team",
@@ -2024,7 +2040,7 @@
 }</script></head>
 <body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/en/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/en/">← Back to home</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/en/">Home</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/en/#guides">Guides</a><span class="sep">/</span><span class="current">5 Common Break-in Mistakes</span></nav><article class="guide-article">
 <span class="guide-tag" data-i18n="g2.tag">GUIDE · Avoid Mistakes</span>
-<h1 data-i18n="g2.title">Why Amateur Break-ins Fail: 5 Common Mistakes</h1><p class="guide-byline">Edited by MotorLab Team</p><p class="guide-dates">Published 2026-05-22　·　Updated 2026-08-13</p>
+<h1 data-i18n="g2.title">Why Amateur Break-ins Fail: 5 Common Mistakes</h1><p class="guide-byline">Edited by MotorLab Team</p><p class="guide-dates">Published 2026-05-22　·　Updated 2026-09-04</p>
 <p class="guide-lead" data-i18n="g2.lead">Many returning hobbyists hear "break in your motor" and grab dry batteries — only to burn the motor or end up no faster. Here are the 5 most common mistakes and how to fix them.</p>
 <h2 data-i18n="g2.h1">Mistake 1: Voltage too high, time too long</h2>
 <p data-i18n="g2.p1">The most common error: <strong>"Two AA batteries (3V) and let it run for half an hour"</strong>. Sounds reasonable. Actual consequences:</p>
@@ -2072,7 +2088,7 @@
 <div class="guide-tip">
 <p data-i18n="g2.t5">Build a <strong>Health Fingerprint</strong> for every motor — record its current, RPM, temperature rise, and vibration spectrum under standard conditions. Compare anytime in the future for precise diagnosis. This is the core of MotorLab PRO's AI Health Manager.</p>
 </div>
-<p class="guide-related" data-i18n="g2.related">Further reading: get break-in right first — <a href="../motor-break-in-guide/">the complete break-in guide</a>; already damaged the motor? See <a href="../motor-degradation-signs/">8 signs of motor degradation and when to retire</a>; clean or retire? See <a href="../motor-wash-vs-break-in/">motor wash vs break-in</a>.</p>
+<div class="guide-related" data-i18n="g2.related"><div class="guide-related-label">Further reading</div><ul><li>get break-in right first — <a href="../motor-break-in-guide/">the complete break-in guide</a></li><li>already damaged the motor? See <a href="../motor-degradation-signs/">8 signs of motor degradation and when to retire</a></li><li>clean or retire? See <a href="../motor-wash-vs-break-in/">motor wash vs break-in</a></li></ul></div>
 </article><div class="guide-pagination"><div class="left"><a href="/en/guides/motor-break-in-guide/"><span class="label">← Previous</span><span>Motor Break-in Guide</span></a></div><div class="center"><a href="https://motorlab-tw.github.io/en/#guides"><span class="label">︿</span><span>Back to guides</span></a></div><div class="right"><a href="/en/guides/tamiya-motor-specs/"><span class="label">Next →</span><span>Which Motor to Use</span></a></div></div></div></main><footer>
 <div class="container">
 <div class="footer-trademark" data-i18n="footer.trademark">"Mini 4WD"<sup>®</sup> and "ミニ四駆"<sup>®</sup> are registered trademarks of TAMIYA, INC. (Japan Trademark Registration No. 2168392). MotorLab is an independent studio and has no affiliation with, authorization from, sponsorship by, or endorsement from TAMIYA, INC. References to these names on this site are made solely to indicate product compatibility. All trademark rights belong to their respective owners. Measurement data and methodology are produced by the author through hands-on experience and instrument testing; the multilingual versions are translated with AI assistance.</div>

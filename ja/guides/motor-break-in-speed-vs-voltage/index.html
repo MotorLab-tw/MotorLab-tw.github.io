@@ -894,6 +894,22 @@
     color: var(--text-primary);
     font-weight: 600;
   }
+  /* 延伸閱讀:文末站內導引 —— 標籤沿用 .guide-tag 的樣式,清單沿用 .guide-article ul li */
+  .guide-related {
+    margin: 24px 0 0;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+  .guide-related-label {
+    display: inline-block;
+    color: var(--accent-cyan);
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+  .guide-related ul { margin: 0; }
+  .guide-related li { margin: 4px 0; }
   .guide-article code {
     background: var(--bg-tertiary);
     color: var(--accent-cyan);
@@ -1981,7 +1997,7 @@
     "@id": "https://motorlab-tw.github.io/ja/guides/motor-break-in-speed-vs-voltage/"
   },
   "datePublished": "2026-07-14",
-  "dateModified": "2026-07-17",
+  "dateModified": "2026-09-04",
   "author": {
     "@type": "Organization",
     "name": "MotorLab Team",
@@ -2024,7 +2040,7 @@
 }</script></head>
 <body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/ja/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/ja/">← ホームへ戻る</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/ja/">ホーム</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/ja/#guides">ガイド</a><span class="sep">/</span><span class="current">定電圧 vs 定回転数</span></nav><article class="guide-article">
 <span class="guide-tag" data-i18n="g14.tag">METHODOLOGY · 慣らし制御</span>
-<h1 data-i18n="g14.title">なぜモーター慣らしは電圧ではなく回転数を固定するのか?</h1><p class="guide-byline">編集者:MotorLab Team</p><p class="guide-dates">公開 2026-07-14　·　更新 2026-07-17</p>
+<h1 data-i18n="g14.title">なぜモーター慣らしは電圧ではなく回転数を固定するのか?</h1><p class="guide-byline">編集者:MotorLab Team</p><p class="guide-dates">公開 2026-07-14　·　更新 2026-09-04</p>
 <p class="guide-lead" data-i18n="g14.lead">ほぼすべての慣らし方法は「電圧を設定して回す」—— 定電圧慣らしだ。回転数は?せいぜい「測る」だけで「制御」はしない。だが物理的には、慣らしの品質を決めるのは<strong>回転数</strong>(接触面の摺動速度)であって、電圧ではない。本記事は定電圧 vs 定回転数、その違いを分解する。</p>
 <figure data-i18n="g14.figsum"><img alt="なぜ慣らしは電圧でなく回転数を固定するのか:電圧は代理、定電圧は流れる、定回転数で条件固定の3点" class="chart" loading="lazy" src="/images/fixed-speed-break-in-key-points_j.png"/></figure>
 <h2 data-i18n="g14.h1">慣らしは結局なにを削っているのか</h2>
@@ -2052,7 +2068,7 @@
 <div class="guide-tip">
 <p data-i18n="g14.key">一言で:慣らしの品質は接触面の<strong>摺動速度</strong>で決まり、その摺動速度こそ回転数だ。定電圧は流れる代理を制御する;定回転数は実際に接触面を削る物理量を直接制御する。<strong>正確に・再現性よく・モーター間で比較可能に</strong>慣らすなら、物理的に固定すべきは回転数だ。</p>
 </div>
-<p data-i18n="g14.related">関連:慣らしの進行をデータで読む —— <a href="../motor-break-in-resistance-curve/">R 慣らしカーブ</a>;まず慣らす価値のあるモーターを選ぶ —— <a href="../motor-selection-before-break-in/">選別してから慣らす</a>;完全な原理と手順 —— <a href="../motor-break-in-guide/">モーター慣らし完全ガイド</a>。</p>
+<div class="guide-related" data-i18n="g14.related"><div class="guide-related-label">関連記事</div><ul><li>慣らしの進行をデータで読む —— <a href="../motor-break-in-resistance-curve/">R 慣らしカーブ</a></li><li>まず慣らす価値のあるモーターを選ぶ —— <a href="../motor-selection-before-break-in/">選別してから慣らす</a></li><li>完全な原理と手順 —— <a href="../motor-break-in-guide/">モーター慣らし完全ガイド</a></li></ul></div>
 <div class="guide-warning">
 <p data-i18n="g14.w1">この物理フレームは概念説明であり、実際の慣らしはブラシ種類・時間・温度・冷却などにも左右される。定回転数の利点は「慣らし条件を、流れる代理から直接制御できる物理量へ置き換える」点にあり、単一の数値が最適だと保証するものではない。</p>
 </div>

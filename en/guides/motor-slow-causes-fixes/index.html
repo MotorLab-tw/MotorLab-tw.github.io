@@ -894,6 +894,22 @@
     color: var(--text-primary);
     font-weight: 600;
   }
+  /* 延伸閱讀:文末站內導引 —— 標籤沿用 .guide-tag 的樣式,清單沿用 .guide-article ul li */
+  .guide-related {
+    margin: 24px 0 0;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+  .guide-related-label {
+    display: inline-block;
+    color: var(--accent-cyan);
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+  .guide-related ul { margin: 0; }
+  .guide-related li { margin: 4px 0; }
   .guide-article code {
     background: var(--bg-tertiary);
     color: var(--accent-cyan);
@@ -1981,7 +1997,7 @@
     "@id": "https://motorlab-tw.github.io/en/guides/motor-slow-causes-fixes/"
   },
   "datePublished": "2026-07-17",
-  "dateModified": "2026-08-13",
+  "dateModified": "2026-09-04",
   "author": {
     "@type": "Organization",
     "name": "MotorLab Team",
@@ -2024,7 +2040,7 @@
 }</script></head>
 <body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/en/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/en/">← Back to home</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/en/">Home</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/en/#guides">Guides</a><span class="sep">/</span><span class="current">Motor Got Slow</span></nav><article class="guide-article">
 <span class="guide-tag" data-i18n="g16.tag">GUIDE · Troubleshooting</span>
-<h1 data-i18n="g16.title">Motor Got Slow? First Tell Temporary from Worn Out</h1><p class="guide-byline">Edited by MotorLab Team</p><p class="guide-dates">Published 2026-07-17　·　Updated 2026-08-13</p>
+<h1 data-i18n="g16.title">Motor Got Slow? First Tell Temporary from Worn Out</h1><p class="guide-byline">Edited by MotorLab Team</p><p class="guide-dates">Published 2026-07-17　·　Updated 2026-09-04</p>
 <p class="guide-lead" data-i18n="g16.lead">A motor that suddenly got slow — duller acceleration, a changed sound — is not always worn out. Causes split into two kinds: <strong>reversible</strong> (a clean or a fresh battery brings it back) and <strong>irreversible</strong> (contact-face or magnetic damage that cannot be undone). Before you spend on a new one, rule out these 5 causes in order.</p>
 <h2 data-i18n="g16.h1">Why it slows down: two kinds first</h2>
 <p data-i18n="g16.p1">A slow motor feels the same (lower RPM, weak push, dull acceleration), but the root cause differs completely. <strong>Reversible</strong>: battery, dirt, lube — RPM returns once fixed. <strong>Irreversible</strong>: magnet weakening, brush / commutator wear — physical damage, retire only. Always <strong>rule out the reversible first, then accept the irreversible</strong>, so you neither toss a savable motor nor race a dying one.</p>
@@ -2046,7 +2062,7 @@
 <div class="guide-tip">
 <p data-i18n="g16.key">In one line: when a motor slows, <strong>rule out battery, dirt and lube first</strong> — most cases end here. Only if all three are cleared and it is still slow is it true degradation; judge retirement by data, so you neither replace a motor too early on a hunch nor let a demagnetized one drag your results.</p>
 </div>
-<p class="guide-related" data-i18n="g16.related">Further reading: clean-and-oil or retire? See <a href="../motor-wash-vs-break-in/">motor wash vs break-in</a>; confirm real degradation with <a href="../motor-degradation-signs/">8 signs your motor is dying and when to retire</a>; quantify it with <a href="../motor-break-in-resistance-curve/">the R break-in curve</a>.</p>
+<div class="guide-related" data-i18n="g16.related"><div class="guide-related-label">Further reading</div><ul><li>clean-and-oil or retire? See <a href="../motor-wash-vs-break-in/">motor wash vs break-in</a></li><li>confirm real degradation with <a href="../motor-degradation-signs/">8 signs your motor is dying and when to retire</a></li><li>quantify it with <a href="../motor-break-in-resistance-curve/">the R break-in curve</a></li></ul></div>
 <div class="guide-warning">
 <p data-i18n="g16.w1">This is general troubleshooting. Real slowdowns are often several causes stacked (e.g. an aging battery plus light carbon buildup); rule them out one at a time, change only one variable per test, and compare under the same battery and temperature for a reliable read.</p>
 </div>

@@ -894,6 +894,22 @@
     color: var(--text-primary);
     font-weight: 600;
   }
+  /* 延伸閱讀:文末站內導引 —— 標籤沿用 .guide-tag 的樣式,清單沿用 .guide-article ul li */
+  .guide-related {
+    margin: 24px 0 0;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+  .guide-related-label {
+    display: inline-block;
+    color: var(--accent-cyan);
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+  .guide-related ul { margin: 0; }
+  .guide-related li { margin: 4px 0; }
   .guide-article code {
     background: var(--bg-tertiary);
     color: var(--accent-cyan);
@@ -1981,7 +1997,7 @@
     "@id": "https://motorlab-tw.github.io/benchmarks/does-washing-a-motor-work/"
   },
   "datePublished": "2026-07-24",
-  "dateModified": "2026-08-22",
+  "dateModified": "2026-09-04",
   "author": {
     "@type": "Organization",
     "name": "MotorLab Team",
@@ -2024,7 +2040,7 @@
 }</script></head>
 <body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/">← 回首頁</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/">首頁</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/#guides">效能對比</a><span class="sep">/</span><span class="current">洗馬達有用嗎</span></nav><article class="guide-article">
 <span class="guide-tag" data-i18n="g18.tag">BENCHMARK · 衰退拆解</span>
-<h1 data-i18n="g18.title">洗馬達有用嗎?洗後跑 11 小時給你看</h1><p class="guide-byline">編輯者:MotorLab Team</p><p class="guide-dates">發表 2026-07-24　·　更新 2026-08-22</p>
+<h1 data-i18n="g18.title">洗馬達有用嗎?洗後跑 11 小時給你看</h1><p class="guide-byline">編輯者:MotorLab Team</p><p class="guide-dates">發表 2026-07-24　·　更新 2026-09-04</p>
 <p class="guide-lead" data-i18n="g18.lead">一顆操老了的馬達,拿去用溶劑洗一洗,轉速和數據真的變好了——那到底是洗回了青春,還是只是回光返照?我們拿一顆跑完生命測試、已經衰退的 Mach-Dash PRO,洗完立刻測,再連續操 <strong>11 小時</strong>,用同一套量測看它怎麼走。答案很乾脆:<strong>洗掉髒污回得來,磨損零件回不來</strong>——這兩件事,第一次被數據分得清清楚楚。本文是接續 <a href="../when-to-stop-motor-break-in/">12 小時過磨實驗</a> 的後續測試。</p>
 <div class="guide-tip">
 <p data-i18n="g18.concl"><strong>三行結論:</strong><br/>▸ <strong>洗得回</strong> —— 髒污(碳粉、氧化膜)洗掉,體質分數 +5.9 分(69.6→75.5)、耗電降、起轉變輕,而且留得住。<br/>▸ <strong>洗不回</strong> —— 零件磨損(電刷、整流子)救不回,接觸穩定度卡在爛的 44%(健康馬達是 24~26%),這是永久的。<br/>▸ <strong>有代價</strong> —— 去漬油會掏空軸承裡的油,洗完不補油就會乾磨、卡死,這步千萬別漏。</p>
@@ -2053,7 +2069,7 @@
 <p data-i18n="g18.p6"><strong>值得洗</strong>:馬達操久了、感覺變鈍,數據上是「髒污型衰退」(起轉變重、耗電上升,但轉速還在)。洗一次能把髒污紅利拿回來,而且留得住,CP 值很高。<strong>洗不回</strong>:如果電刷接觸穩定測試的落點怎麼跑都不穩、同轉速的無載電流 I0 又明顯偏高,那是零件磨損,洗只能拿回髒污那一小截,救不回本體——該換馬達了。</p>
 <p data-i18n="g18.p6b">怎麼判斷自己是哪一種?光看轉速分不出來——髒污和磨損都會讓馬達變鈍。要靠三個數字拆解:<strong>體質分數</strong>(本體好壞)、<strong>空載電流</strong>(髒不髒)、<strong>接觸穩定度</strong>(零件磨損程度)。這正是機上的 AI 扭力預測十幾分鐘會告訴你的事。</p>
 <p data-i18n="g18.note"><strong>實驗條件:</strong><br/>1. Mach-Dash PRO(生命測試後的衰退態樣本)<br/>2. 清洗:以去漬油清洗、帶出殘液,並重新為軸承上油<br/>3. 連續操 11 小時(等效約 470 回),同一台機器實測<br/>4. 量測:AI 扭力預測 + 電刷接觸穩定測試 + 軸承阻力測試<br/>5. 24~26% 為同型正常馬達的同機實測基準,非官方數據<br/>6. 本文的「體質分數」與「接觸穩定度 CV」是 v3.8.x 以前的輸出欄位;v3.9.0 起扭力預測改為<strong>對照圖</strong>、電刷接觸穩定改為<strong>落點圖</strong>,皆不再顯示單一分數——本文數據為當時實測,趨勢判讀方式不變</p>
-<p class="guide-related" data-i18n="g18.related">延伸閱讀:過磨如何一步步磨壞馬達,見 <a href="../when-to-stop-motor-break-in/">12 小時過磨實驗</a>;洗馬達 vs 磨合的觀念,見 <a href="../../guides/motor-wash-vs-break-in/">洗馬達 vs 磨合</a>;馬達變慢的 5 個原因,見 <a href="../../guides/motor-slow-causes-fixes/">馬達變慢原因與對策</a>。</p>
+<div class="guide-related" data-i18n="g18.related"><div class="guide-related-label">延伸閱讀</div><ul><li>過磨如何一步步磨壞馬達,見 <a href="../when-to-stop-motor-break-in/">12 小時過磨實驗</a></li><li>洗馬達 vs 磨合的觀念,見 <a href="../../guides/motor-wash-vs-break-in/">洗馬達 vs 磨合</a></li><li>馬達變慢的 5 個原因,見 <a href="../../guides/motor-slow-causes-fixes/">馬達變慢原因與對策</a></li></ul></div>
 </article><div class="guide-pagination"><div class="left"><a href="/benchmarks/when-to-stop-motor-break-in/"><span class="label">← 上一篇</span><span>磨合何時該停</span></a></div><div class="center"><a href="https://motorlab-tw.github.io/#guides"><span class="label">︿</span><span>回教學首頁</span></a></div><div class="right"><a href="/benchmarks/revive-dead-motor-electric-shock/"><span class="label">下一篇 →</span><span>電擊修復</span></a></div></div></div></main><footer>
 <div class="container">
 <div class="footer-trademark" data-i18n="footer.trademark">"Mini 4WD"<sup>®</sup> 與 "ミニ四駆"<sup>®</sup> 為株式会社タミヤ(TAMIYA, INC.)的註冊商標(日本商標登錄號 第 2168392 號)。MotorLab 為獨立工作室,與株式会社タミヤ無任何關聯,亦未受其授權、贊助或背書。本網站提及之相關名稱僅用於指涉產品適用範圍,所有商標權益歸原權利人所有。</div>

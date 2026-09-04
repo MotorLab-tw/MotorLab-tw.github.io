@@ -894,6 +894,22 @@
     color: var(--text-primary);
     font-weight: 600;
   }
+  /* 延伸閱讀:文末站內導引 —— 標籤沿用 .guide-tag 的樣式,清單沿用 .guide-article ul li */
+  .guide-related {
+    margin: 24px 0 0;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+  .guide-related-label {
+    display: inline-block;
+    color: var(--accent-cyan);
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+  .guide-related ul { margin: 0; }
+  .guide-related li { margin: 4px 0; }
   .guide-article code {
     background: var(--bg-tertiary);
     color: var(--accent-cyan);
@@ -1981,7 +1997,7 @@
     "@id": "https://motorlab-tw.github.io/benchmarks/when-to-stop-motor-break-in/"
   },
   "datePublished": "2026-07-23",
-  "dateModified": "2026-08-22",
+  "dateModified": "2026-09-04",
   "author": {
     "@type": "Organization",
     "name": "MotorLab Team",
@@ -2024,7 +2040,7 @@
 }</script></head>
 <body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/">← 回首頁</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/">首頁</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/#guides">效能對比</a><span class="sep">/</span><span class="current">磨合何時該停</span></nav><article class="guide-article">
 <span class="guide-tag" data-i18n="g17.tag">BENCHMARK · 15 款馬達測試序章</span>
-<h1 data-i18n="g17.title">轉速越磨越快,其實已磨壞了?12 小時連續磨給你看</h1><p class="guide-byline">編輯者:MotorLab Team</p><p class="guide-dates">發表 2026-07-23　·　更新 2026-08-22</p>
+<h1 data-i18n="g17.title">轉速越磨越快,其實已磨壞了?12 小時連續磨給你看</h1><p class="guide-byline">編輯者:MotorLab Team</p><p class="guide-dates">發表 2026-07-23　·　更新 2026-09-04</p>
 <p class="guide-lead" data-i18n="g17.lead">一鍵啟動,機器自己磨、自己量、<strong>磨好自動停</strong>。憑什麼說「剛剛好」?因為我們把一顆全新 Mach-Dash PRO 連續磨了 <strong>12 小時、超過 550 萬轉</strong>,從全新一路磨到退役,只為找出該停手的那個點。這一頁沒有形容詞,只有那場實驗的真實數據:磨合的收益在哪裡結束、過磨的代價從哪裡開始——以及智慧磨合如何替你在兩者之間停住。這同時是<strong>田宮 15 款馬達同條件實測</strong>系列的起始章:先用這場實驗定調方法與量測維度,接下來,同一套條件,逐款測給你看。</p>
 <h2 data-i18n="g17.h1">磨合的收益,一小時就領完了</h2>
 <p data-i18n="g17.p1">下圖縱軸是<strong>同轉速下吃掉的電流</strong>——馬達的耗電,磨合唯一真正改善的東西;橫軸是累積磨合時間,每一點都是真實量測值。第一場磨合裡,同轉速電流 <strong>175 → 156 mA,省了約一成</strong>:電刷與整流子貼合、內部的「卡」被磨掉。</p>
@@ -2051,7 +2067,7 @@
 <h2 data-i18n="g17.h5">接下來:15 款馬達,同一套條件</h2>
 <p data-i18n="g17.p7">這場 12 小時實驗定下了本系列的測試框架:同一台機器、相同的磨合與量測流程、同樣三個觀測維度——<strong>同轉速電流(耗電)、同電壓轉速、體質分數</strong>。接下來我們會用完全相同的條件,把田宮 15 款馬達一款一款測過去:每款的黃金期在哪裡、停手點多早到、過磨的代價多大——測完一款、發布一款,全部收錄在<a href="../">效能對比</a>。</p>
 <p data-i18n="g17.note"><strong>實驗條件:</strong><br/>1. Mach-Dash PRO<br/>2. 連續低轉速磨合 12 小時<br/>3. 所有數據為同一台機器實測<br/>4. 物理依據:直流馬達電壓方程 <code>V = I·R + Ke·ω</code><br/>5. 體質分數為田宮官方標準的參考值,判讀以趨勢為準<br/>6. 本文的「體質分數」是 v3.8.x 以前 AI 扭力預測的輸出欄位;v3.9.0 起改為<strong>扭力預測對照圖</strong>(把這顆與田宮官方標準畫在同一張圖),不再顯示單一分數——本文數據為當時實測,趨勢判讀方式不變</p>
-<p class="guide-related" data-i18n="g17.related">延伸閱讀:磨合的完整流程與模式選擇,見 <a href="../../guides/motor-break-in-guide/">馬達磨合完全指南</a>;為什麼磨合與量測要鎖轉速,見 <a href="../../guides/motor-break-in-speed-vs-voltage/">鎖轉速不鎖電壓</a>;馬達變慢的 5 個原因(含退磁),見 <a href="../../guides/motor-slow-causes-fixes/">馬達變慢原因與對策</a>;洗馬達到底有沒有用,見 <a href="../does-washing-a-motor-work/">洗馬達有用嗎</a>。</p>
+<div class="guide-related" data-i18n="g17.related"><div class="guide-related-label">延伸閱讀</div><ul><li>磨合的完整流程與模式選擇,見 <a href="../../guides/motor-break-in-guide/">馬達磨合完全指南</a></li><li>為什麼磨合與量測要鎖轉速,見 <a href="../../guides/motor-break-in-speed-vs-voltage/">鎖轉速不鎖電壓</a></li><li>馬達變慢的 5 個原因(含退磁),見 <a href="../../guides/motor-slow-causes-fixes/">馬達變慢原因與對策</a></li><li>洗馬達到底有沒有用,見 <a href="../does-washing-a-motor-work/">洗馬達有用嗎</a></li></ul></div>
 </article><div class="guide-pagination"><div class="left"><a href="/guides/motor-slow-causes-fixes/"><span class="label">← 上一篇</span><span>馬達變慢原因</span></a></div><div class="center"><a href="https://motorlab-tw.github.io/#guides"><span class="label">︿</span><span>回教學首頁</span></a></div><div class="right"><a href="/benchmarks/does-washing-a-motor-work/"><span class="label">下一篇 →</span><span>洗馬達有用嗎</span></a></div></div></div></main><footer>
 <div class="container">
 <div class="footer-trademark" data-i18n="footer.trademark">"Mini 4WD"<sup>®</sup> 與 "ミニ四駆"<sup>®</sup> 為株式会社タミヤ(TAMIYA, INC.)的註冊商標(日本商標登錄號 第 2168392 號)。MotorLab 為獨立工作室,與株式会社タミヤ無任何關聯,亦未受其授權、贊助或背書。本網站提及之相關名稱僅用於指涉產品適用範圍,所有商標權益歸原權利人所有。</div>

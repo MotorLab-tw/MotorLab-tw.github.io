@@ -894,6 +894,22 @@
     color: var(--text-primary);
     font-weight: 600;
   }
+  /* 延伸閱讀:文末站內導引 —— 標籤沿用 .guide-tag 的樣式,清單沿用 .guide-article ul li */
+  .guide-related {
+    margin: 24px 0 0;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+  .guide-related-label {
+    display: inline-block;
+    color: var(--accent-cyan);
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+  .guide-related ul { margin: 0; }
+  .guide-related li { margin: 4px 0; }
   .guide-article code {
     background: var(--bg-tertiary);
     color: var(--accent-cyan);
@@ -1981,7 +1997,7 @@
     "@id": "https://motorlab-tw.github.io/en/guides/motor-selection-before-break-in/"
   },
   "datePublished": "2026-07-02",
-  "dateModified": "2026-07-02",
+  "dateModified": "2026-09-04",
   "author": {
     "@type": "Organization",
     "name": "MotorLab Team",
@@ -2024,7 +2040,7 @@
 }</script></head>
 <body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/en/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/en/">← Back to home</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/en/">Home</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/en/#guides">Guides</a><span class="sep">/</span><span class="current">Select Before Break-in</span></nav><article class="guide-article">
 <span class="guide-tag" data-i18n="g12.tag">METHODOLOGY · Motor Selection</span>
-<h1 data-i18n="g12.title">Select Before Break-in: Read a Motor's Constitution by Current</h1><p class="guide-byline">Edited by MotorLab Team</p><p class="guide-dates">Published 2026-07-02</p>
+<h1 data-i18n="g12.title">Select Before Break-in: Read a Motor's Constitution by Current</h1><p class="guide-byline">Edited by MotorLab Team</p><p class="guide-dates">Published 2026-07-02　·　Updated 2026-09-04</p>
 <p class="guide-lead" data-i18n="g12.lead">Same batch, same model — yet no two motors are equal. Break-in only improves one thing: the contact between brushes and commutator. Iron core, magnetic circuit, rotor balance — those are born, not made, and no amount of running-in fixes them. The right move is measure first, break in later: let data pick the specimens worth developing before you spend time and brush life on them.</p>
 <figure data-i18n="g12.fig1"><img alt="Measure before break-in: break-in only fixes brush-commutator contact; core, magnetics and balance are born-in losses — invest in good motors" class="chart" loading="lazy" src="/images/measure-before-break-in_e.png"/></figure>
 <h2 data-i18n="g12.h1">Why select first</h2>
@@ -2064,7 +2080,7 @@
 <div class="guide-tip">
 <p data-i18n="g12.pit"><strong>⚠️ The I₀ trap</strong>: “lower no-load current is better” only holds <strong>within the same Ke group</strong>. Since I₀ = T_loss / Kt, a high-Ke motor can read lower I₀ even with larger losses. Comparing I₀ across the whole batch systematically favors high-Ke units — and high Ke is exactly a disadvantage where you need top speed. So always group first, then rank.</p>
 </div>
-<p data-i18n="g12.related">Further reading: the overall measure / compare / judge-health framework is in <a href="../motor-analysis-methodology/">the three-pillar methodology for motor analysis</a>; how to break in once you've picked a good motor is in <a href="../motor-break-in-guide/">the complete motor break-in guide</a>; deciding a target Ke by track is in <a href="../track-analysis-motor-selection/">track analysis &amp; motor selection</a>; once you have a baseline, judging when to retire is in <a href="../motor-degradation-signs/">8 signs your motor is dying</a>.</p>
+<div class="guide-related" data-i18n="g12.related"><div class="guide-related-label">Further reading</div><ul><li>the overall measure / compare / judge-health framework is in <a href="../motor-analysis-methodology/">the three-pillar methodology for motor analysis</a></li><li>how to break in once you've picked a good motor is in <a href="../motor-break-in-guide/">the complete motor break-in guide</a></li><li>deciding a target Ke by track is in <a href="../track-analysis-motor-selection/">track analysis &amp; motor selection</a></li><li>once you have a baseline, judging when to retire is in <a href="../motor-degradation-signs/">8 signs your motor is dying</a></li></ul></div>
 <div class="guide-warning">
 <p data-i18n="g12.w1">Relative comparison (ranking within one batch) is very robust; but the <strong>absolute</strong> torque converted from Kt depends on the accuracy of R, and brush contact resistance varies with current and speed — the largest source of systematic error. Everyday selection ranking is unaffected — only when matching against a datasheet or simulation do you need further calibration.</p>
 </div>

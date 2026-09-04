@@ -990,6 +990,22 @@
     color: var(--text-primary);
     font-weight: 600;
   }
+  /* 延伸閱讀:文末站內導引 —— 標籤沿用 .guide-tag 的樣式,清單沿用 .guide-article ul li */
+  .guide-related {
+    margin: 24px 0 0;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+  .guide-related-label {
+    display: inline-block;
+    color: var(--accent-cyan);
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+  .guide-related ul { margin: 0; }
+  .guide-related li { margin: 4px 0; }
   .guide-article code {
     background: var(--bg-tertiary);
     color: var(--accent-cyan);
@@ -2954,7 +2970,7 @@
           <li data-i18n="g1.l7"><strong>溫升曲線平緩</strong>—不再有跳躍性升溫</li>
           <li data-i18n="g1.l8"><strong>聲音平順</strong>—不再有「滋滋」的不規則噪音</li>
         </ul>
-        <p class="guide-related" data-i18n="g1.related">延伸閱讀:挑馬達先看 <a href="../../benchmarks/tamiya-mini-4wd-motor-specs-list/">田宮全 15 款馬達規格對照表 →</a>;想知道馬達何時該退役,看 <a href="../motor-degradation-signs/">馬達衰退的判定訊號 →</a>。</p>
+        <div class="guide-related" data-i18n="g1.related"><div class="guide-related-label">延伸閱讀</div><ul><li>挑馬達先看 <a href="../../benchmarks/tamiya-mini-4wd-motor-specs-list/">田宮全 15 款馬達規格對照表 →</a></li><li>想知道馬達何時該退役,看 <a href="../motor-degradation-signs/">馬達衰退的判定訊號 →</a></li></ul></div>
       </article>
 
       <!-- Guide 2: 5 大錯誤 -->
@@ -3013,7 +3029,7 @@
         <div class="guide-tip">
           <p data-i18n="g2.t5">建議建立每顆馬達的<strong>健康指紋(Health Fingerprint)</strong>—記錄它在標準條件下的電流、轉速、溫升、振動頻譜。後續任何時間都可比對,精準判斷馬達狀態。這也是 MotorLab PRO 內建 AI 健康管理的核心功能。</p>
         </div>
-        <p class="guide-related" data-i18n="g2.related">延伸閱讀:先把磨合做對,見 <a href="../motor-break-in-guide/">馬達磨合完整指南</a>;馬達已經磨壞了?看 <a href="../motor-degradation-signs/">馬達衰退的 8 個徵兆與退役判定</a>;該洗還是該退,見 <a href="../motor-wash-vs-break-in/">洗馬達 vs 磨合</a>。</p>
+        <div class="guide-related" data-i18n="g2.related"><div class="guide-related-label">延伸閱讀</div><ul><li>先把磨合做對,見 <a href="../motor-break-in-guide/">馬達磨合完整指南</a></li><li>馬達已經磨壞了?看 <a href="../motor-degradation-signs/">馬達衰退的 8 個徵兆與退役判定</a></li><li>該洗還是該退,見 <a href="../motor-wash-vs-break-in/">洗馬達 vs 磨合</a></li></ul></div>
       </article>
 
       <!-- Guide 3: 馬達特性表 -->
@@ -3116,7 +3132,7 @@
         <div class="guide-tip">
           <p data-i18n="g4.t1">這個保養週期透過 MotorLab 的 AI 智慧馬達健康管理功能精準追蹤,讓你知道每顆馬達「跑了幾場、衰減多少」,告別憑感覺保養的時代。</p>
         </div>
-        <p class="guide-related" data-i18n="g4.related">延伸閱讀:馬達衰退到什麼程度該退役?見 <a href="../motor-degradation-signs/">馬達衰退的 8 個徵兆與退役判定</a>;磨合的完整原理與流程,見 <a href="../motor-break-in-guide/">馬達磨合完整指南</a>;磨合常見錯誤,見 <a href="../motor-break-in-mistakes/">磨馬達的 5 個常見錯誤</a>。</p>
+        <div class="guide-related" data-i18n="g4.related"><div class="guide-related-label">延伸閱讀</div><ul><li>馬達衰退到什麼程度該退役?見 <a href="../motor-degradation-signs/">馬達衰退的 8 個徵兆與退役判定</a></li><li>磨合的完整原理與流程,見 <a href="../motor-break-in-guide/">馬達磨合完整指南</a></li><li>磨合常見錯誤,見 <a href="../motor-break-in-mistakes/">磨馬達的 5 個常見錯誤</a></li></ul></div>
       </article>
 
       <!-- Guide 5: 比賽磨合的重要性 -->
@@ -3402,7 +3418,7 @@
           <li data-i18n="g8.r3"><strong>不適合</strong>:整新後上正式賽(只能修表面,內部損傷仍在,且風險不可預測)</li>
           <li data-i18n="g8.r4"><strong>心態</strong>:馬達 EoL 不是失敗,是 Mini 4WD 競技的正常循環。職業車手平均每賽季退役 5–10 顆馬達,這是成本不是損失。</li>
         </ul>
-        <p class="guide-related" data-i18n="g8.related">延伸閱讀:馬達還能救嗎?看 <a href="../motor-wash-vs-break-in/">洗馬達 vs 磨合:該洗還是該退</a>;想用數據量化衰退、建立 baseline,見 <a href="../motor-break-in-resistance-curve/">R 磨合曲線</a>;回頭把磨合做對,見 <a href="../motor-break-in-guide/">馬達磨合完整指南</a>。</p>
+        <div class="guide-related" data-i18n="g8.related"><div class="guide-related-label">延伸閱讀</div><ul><li>馬達還能救嗎?看 <a href="../motor-wash-vs-break-in/">洗馬達 vs 磨合:該洗還是該退</a></li><li>想用數據量化衰退、建立 baseline,見 <a href="../motor-break-in-resistance-curve/">R 磨合曲線</a></li><li>回頭把磨合做對,見 <a href="../motor-break-in-guide/">馬達磨合完整指南</a></li></ul></div>
       </article>
 
       <!-- Guide 9: 田宮全 15 款馬達規格對照(benchmarks,D23 首篇) -->
@@ -3723,7 +3739,7 @@
         <div class="guide-tip">
         <p data-i18n="g12.pit"><strong>⚠️ I₀ 陷阱</strong>：「無載電流越低越好」只在<strong>同 Ke 群內</strong>成立。因為 I₀ = T_loss / Kt，一顆 Ke 高的馬達即使損耗較大，I₀ 也可能較低。直接拿整批比 I₀ 會系統性偏袒高 Ke 個體，而高 Ke 在需要極速時恰恰是劣勢。所以務必先分群、再排名。</p>
         </div>
-        <p data-i18n="g12.related">延伸閱讀：量測、比較、健康判斷的整體框架見 <a href="../motor-analysis-methodology/">馬達分析的三支柱方法論</a>；選出好馬達後如何磨，見 <a href="../motor-break-in-guide/">馬達磨合完整指南</a>；依賽道決定目標 Ke，見 <a href="../track-analysis-motor-selection/">軌道分析與馬達選型</a>。</p>
+        <div class="guide-related" data-i18n="g12.related"><div class="guide-related-label">延伸閱讀</div><ul><li>量測、比較、健康判斷的整體框架見 <a href="../motor-analysis-methodology/">馬達分析的三支柱方法論</a></li><li>選出好馬達後如何磨,見 <a href="../motor-break-in-guide/">馬達磨合完整指南</a></li><li>依賽道決定目標 Ke,見 <a href="../track-analysis-motor-selection/">軌道分析與馬達選型</a></li></ul></div>
 
         <div class="guide-warning">
         <p data-i18n="g12.w1">相對比較（同批排名）非常穩健；但由 Kt 換算的轉矩<strong>絕對值</strong>，精度取決於 R 的量測，而碳刷接觸電阻會隨電流與轉速變動，是最大的系統誤差來源。日常選別排名不受影響 —— 只有要對規格書或模擬比對時，才需要進一步校正。</p>
@@ -3753,7 +3769,7 @@
         <div class="guide-tip">
         <p data-i18n="g13.cond">馬達型號:Mach-Dash PRO<br>量測方式:PID 鎖定轉速、空載、全程 1.2V 以下低電壓<br>5 階段轉速:4,000 / 6,000 / 8,000 / 10,000 / 12,000 RPM<br>單次約 1.5 分鐘,總計 560 次連續量測</p>
         </div>
-        <p data-i18n="g13.related">延伸閱讀:先篩選出值得投入磨合的個體,見 <a href="../motor-selection-before-break-in/">先選別,後磨合</a>;磨合的完整原理與 10 階段流程,見 <a href="../motor-break-in-guide/">馬達磨合完整指南</a>;量測、比較、健康判斷的整體框架,見 <a href="../motor-analysis-methodology/">三支柱方法論</a>。</p>
+        <div class="guide-related" data-i18n="g13.related"><div class="guide-related-label">延伸閱讀</div><ul><li>先篩選出值得投入磨合的個體,見 <a href="../motor-selection-before-break-in/">先選別,後磨合</a></li><li>磨合的完整原理與 10 階段流程,見 <a href="../motor-break-in-guide/">馬達磨合完整指南</a></li><li>量測、比較、健康判斷的整體框架,見 <a href="../motor-analysis-methodology/">三支柱方法論</a></li></ul></div>
 
         <div class="guide-warning">
         <p data-i18n="g13.w1">此曲線反映的是<strong>同一顆馬達、同一組量測條件下的相對趨勢</strong>,而非絕對電阻值;跨機台或跨條件的絕對值不宜直接比較。其價值在於將單顆馬達的磨合進程與衰退,轉為可判讀的時間序列。</p>
@@ -3797,7 +3813,7 @@
         <p data-i18n="g14.key">一句話:磨合品質由接觸面的<strong>滑動速度</strong>決定,而滑動速度就是轉速。控電壓 = 控一個會漂的代理;控轉速 = 直接控住真正在磨接觸面的物理量。要磨得<strong>準、可重現、跨馬達可比</strong>,物理上該鎖的是轉速。</p>
         </div>
 
-        <p data-i18n="g14.related">延伸閱讀:磨合進度怎麼從數據看,見 <a href="../motor-break-in-resistance-curve/">R 磨合曲線</a>;先挑出值得磨的馬達,見 <a href="../motor-selection-before-break-in/">先選別,後磨合</a>;磨合的完整原理與流程,見 <a href="../motor-break-in-guide/">馬達磨合完整指南</a>。</p>
+        <div class="guide-related" data-i18n="g14.related"><div class="guide-related-label">延伸閱讀</div><ul><li>磨合進度怎麼從數據看,見 <a href="../motor-break-in-resistance-curve/">R 磨合曲線</a></li><li>先挑出值得磨的馬達,見 <a href="../motor-selection-before-break-in/">先選別,後磨合</a></li><li>磨合的完整原理與流程,見 <a href="../motor-break-in-guide/">馬達磨合完整指南</a></li></ul></div>
 
         <div class="guide-warning">
         <p data-i18n="g14.w1">物理框架為概念說明,實際磨合仍牽涉電刷類型、時間、溫度、冷卻等變數。控速的效益在於「把磨合條件從會漂的代理,換成直接可控的物理量」,而非保證單一數值最佳。</p>
@@ -3890,7 +3906,7 @@
         <div class="guide-tip">
         <p data-i18n="g16.key">一句話:馬達變慢,<strong>先排電池、髒污、潤滑</strong>三個可逆因素 —— 大多數「變慢」到這裡就解決了;三個都排除還是慢,才是真衰退,用數據判退役,別憑感覺提早換馬達、也別讓退磁的馬達拖累成績。</p>
         </div>
-        <p class="guide-related" data-i18n="g16.related">延伸閱讀:該清潔上油還是該退役,見 <a href="../motor-wash-vs-break-in/">洗馬達 vs 磨合</a>;確認是不是真衰退,見 <a href="../motor-degradation-signs/">馬達衰退的 8 個徵兆與退役判定</a>;用數據量化衰退,見 <a href="../motor-break-in-resistance-curve/">R 磨合曲線</a>。</p>
+        <div class="guide-related" data-i18n="g16.related"><div class="guide-related-label">延伸閱讀</div><ul><li>該清潔上油還是該退役,見 <a href="../motor-wash-vs-break-in/">洗馬達 vs 磨合</a></li><li>確認是不是真衰退,見 <a href="../motor-degradation-signs/">馬達衰退的 8 個徵兆與退役判定</a></li><li>用數據量化衰退,見 <a href="../motor-break-in-resistance-curve/">R 磨合曲線</a></li></ul></div>
         <div class="guide-warning">
         <p data-i18n="g16.w1">本文為一般故障排除說明。實際變慢原因可能多重疊加(例如電池老 + 輕微積碳),建議逐項排除、每次只改一個變數,並在相同電池與溫度條件下對照,判斷才準。</p>
         </div>
@@ -3931,7 +3947,7 @@
         <p data-i18n="g17.p7">這場 12 小時實驗定下了本系列的測試框架:同一台機器、相同的磨合與量測流程、同樣三個觀測維度——<strong>同轉速電流(耗電)、同電壓轉速、體質分數</strong>。接下來我們會用完全相同的條件,把田宮 15 款馬達一款一款測過去:每款的黃金期在哪裡、停手點多早到、過磨的代價多大——測完一款、發布一款,全部收錄在<a href="../">效能對比</a>。</p>
 
         <p data-i18n="g17.note"><strong>實驗條件:</strong><br>1. Mach-Dash PRO<br>2. 連續低轉速磨合 12 小時<br>3. 所有數據為同一台機器實測<br>4. 物理依據:直流馬達電壓方程 <code>V = I·R + Ke·ω</code><br>5. 體質分數為田宮官方標準的參考值,判讀以趨勢為準<br>6. 本文的「體質分數」是 v3.8.x 以前 AI 扭力預測的輸出欄位;v3.9.0 起改為<strong>扭力預測對照圖</strong>(把這顆與田宮官方標準畫在同一張圖),不再顯示單一分數——本文數據為當時實測,趨勢判讀方式不變</p>
-        <p class="guide-related" data-i18n="g17.related">延伸閱讀:磨合的完整流程與模式選擇,見 <a href="../../guides/motor-break-in-guide/">馬達磨合完全指南</a>;為什麼磨合與量測要鎖轉速,見 <a href="../../guides/motor-break-in-speed-vs-voltage/">鎖轉速不鎖電壓</a>;馬達變慢的 5 個原因(含退磁),見 <a href="../../guides/motor-slow-causes-fixes/">馬達變慢原因與對策</a>;洗馬達到底有沒有用,見 <a href="../does-washing-a-motor-work/">洗馬達有用嗎</a>。</p>
+        <div class="guide-related" data-i18n="g17.related"><div class="guide-related-label">延伸閱讀</div><ul><li>磨合的完整流程與模式選擇,見 <a href="../../guides/motor-break-in-guide/">馬達磨合完全指南</a></li><li>為什麼磨合與量測要鎖轉速,見 <a href="../../guides/motor-break-in-speed-vs-voltage/">鎖轉速不鎖電壓</a></li><li>馬達變慢的 5 個原因(含退磁),見 <a href="../../guides/motor-slow-causes-fixes/">馬達變慢原因與對策</a></li><li>洗馬達到底有沒有用,見 <a href="../does-washing-a-motor-work/">洗馬達有用嗎</a></li></ul></div>
       </article>
 
       <article class="guide-article">
@@ -3973,7 +3989,7 @@
         <p data-i18n="g18.p6b">怎麼判斷自己是哪一種?光看轉速分不出來——髒污和磨損都會讓馬達變鈍。要靠三個數字拆解:<strong>體質分數</strong>(本體好壞)、<strong>空載電流</strong>(髒不髒)、<strong>接觸穩定度</strong>(零件磨損程度)。這正是機上的 AI 扭力預測十幾分鐘會告訴你的事。</p>
 
         <p data-i18n="g18.note"><strong>實驗條件:</strong><br>1. Mach-Dash PRO(生命測試後的衰退態樣本)<br>2. 清洗:以去漬油清洗、帶出殘液,並重新為軸承上油<br>3. 連續操 11 小時(等效約 470 回),同一台機器實測<br>4. 量測:AI 扭力預測 + 電刷接觸穩定測試 + 軸承阻力測試<br>5. 24~26% 為同型正常馬達的同機實測基準,非官方數據<br>6. 本文的「體質分數」與「接觸穩定度 CV」是 v3.8.x 以前的輸出欄位;v3.9.0 起扭力預測改為<strong>對照圖</strong>、電刷接觸穩定改為<strong>落點圖</strong>,皆不再顯示單一分數——本文數據為當時實測,趨勢判讀方式不變</p>
-        <p class="guide-related" data-i18n="g18.related">延伸閱讀:過磨如何一步步磨壞馬達,見 <a href="../when-to-stop-motor-break-in/">12 小時過磨實驗</a>;洗馬達 vs 磨合的觀念,見 <a href="../../guides/motor-wash-vs-break-in/">洗馬達 vs 磨合</a>;馬達變慢的 5 個原因,見 <a href="../../guides/motor-slow-causes-fixes/">馬達變慢原因與對策</a>。</p>
+        <div class="guide-related" data-i18n="g18.related"><div class="guide-related-label">延伸閱讀</div><ul><li>過磨如何一步步磨壞馬達,見 <a href="../when-to-stop-motor-break-in/">12 小時過磨實驗</a></li><li>洗馬達 vs 磨合的觀念,見 <a href="../../guides/motor-wash-vs-break-in/">洗馬達 vs 磨合</a></li><li>馬達變慢的 5 個原因,見 <a href="../../guides/motor-slow-causes-fixes/">馬達變慢原因與對策</a></li></ul></div>
       </article>
 
 
@@ -4008,7 +4024,7 @@
         <p data-i18n="g19.p5">看它「死在哪」。如果是<strong>磁力流失</strong>(掉磁),那有機會用充磁的概念補回一截——但暫時。如果是<strong>接觸面磨損</strong>(碳刷、整流子磨耗),那電擊、清洗都救不回,該退就退。一句話:<strong>電擊能幫退役馬達「充磁回魂」,但磨爛的接觸面沒救。</strong>怎麼分辨自己是哪一種?靠機上的 AI 扭力預測十幾分鐘拆給你看——磁力體質、耗電、接觸穩定度,三個數字各說各話。</p>
 
         <p data-i18n="g19.note"><strong>實驗條件:</strong><br>1. Mach-Dash PRO(退役樣本)<br>2. 高壓電擊:外部電源 DC 9V／60 秒(脈衝電擊)<br>3. 清洗:環保去漬油,DC 1.5V／3 分鐘,並重新為軸承補油<br>4. AI 智慧磨合長時運轉 6.7 小時,同一台機器實測<br>5. 量測:AI 扭力預測 + 電刷接觸穩定測試 + 軸承阻力測試<br>6. 本文的「體質分數」是 v3.8.x 以前 AI 扭力預測的輸出欄位;v3.9.0 起改為<strong>扭力預測對照圖</strong>,不再顯示單一分數——本文數據為當時實測,趨勢判讀方式不變</p>
-        <p class="guide-related" data-i18n="g19.related">延伸閱讀:同一顆樣本的洗馬達實驗,見 <a href="../does-washing-a-motor-work/">洗馬達有用嗎</a>;過磨如何磨壞馬達,見 <a href="../when-to-stop-motor-break-in/">12 小時過磨實驗</a>;洗馬達 vs 磨合的觀念,見 <a href="../../guides/motor-wash-vs-break-in/">洗馬達 vs 磨合</a>。</p>
+        <div class="guide-related" data-i18n="g19.related"><div class="guide-related-label">延伸閱讀</div><ul><li>同一顆樣本的洗馬達實驗,見 <a href="../does-washing-a-motor-work/">洗馬達有用嗎</a></li><li>過磨如何磨壞馬達,見 <a href="../when-to-stop-motor-break-in/">12 小時過磨實驗</a></li><li>洗馬達 vs 磨合的觀念,見 <a href="../../guides/motor-wash-vs-break-in/">洗馬達 vs 磨合</a></li></ul></div>
       </article>
       <article class="guide-article">
         <span class="guide-tag" data-i18n="g20.tag">BENCHMARK · 磨合前後實測</span>
@@ -4055,7 +4071,7 @@
         <p data-i18n="g20.flow2"><strong>② 磨合</strong>:用「AI 智慧磨合」讓它磨到自動停;或用你慣用的配方磨——效果一樣能被量出來。</p>
         <p data-i18n="g20.flow3"><strong>③ 磨後量測</strong>:<strong>等溫度降回與磨前相同再量一次</strong>(剛磨完是熱的,直接量會低估效果)——同溫對照,前後數據才公平可比。</p>
 
-        <p class="guide-related" data-i18n="g20.related">延伸閱讀:為什麼磨到剛好就要停(過磨會傷馬達),見 <a href="../when-to-stop-motor-break-in/">12 小時過磨實驗</a>;磨合要磨多久、R 曲線怎麼看,見 <a href="../../guides/motor-break-in-resistance-curve/">560 次磨合曲線</a>;導電油讓數字漂亮是假象,見 <a href="../../guides/conductive-oil-motor-break-in/">導電油磨馬達真的有效嗎</a>。詳細操作見 <a href="/docs/user-manual/#standardflow">使用者手冊「標準磨合流程」</a>。</p>
+        <div class="guide-related" data-i18n="g20.related"><div class="guide-related-label">延伸閱讀</div><ul><li>為什麼磨到剛好就要停(過磨會傷馬達),見 <a href="../when-to-stop-motor-break-in/">12 小時過磨實驗</a></li><li>磨合要磨多久、R 曲線怎麼看,見 <a href="../../guides/motor-break-in-resistance-curve/">560 次磨合曲線</a></li><li>導電油讓數字漂亮是假象,見 <a href="../../guides/conductive-oil-motor-break-in/">導電油磨馬達真的有效嗎</a></li><li>詳細操作見 <a href="/docs/user-manual/#standardflow">使用者手冊「標準磨合流程」</a></li></ul></div>
       </article>
 
 
@@ -4557,7 +4573,7 @@
       'g1.m3': '<strong>轉速模式(Beta)</strong> —— 機器自動調電壓,把馬達鎖在你設定的轉速磨。鎖轉速 = 鎖住碳刷滑動速度,跨馬達同基準、可重現;為什麼「鎖轉速比鎖電壓更適合磨合與量測」,見 <a href="../motor-break-in-speed-vs-voltage/">為什麼磨馬達要鎖轉速、不鎖電壓 →</a>。',
       'g1.m4': '<strong>AI 智慧磨合(Pro)</strong> —— 一鍵全自動:機器自己磨、自己量,<strong>一場磨到這顆的最佳狀態就自動停</strong>,不必分多場、不必自己判斷(支援田宮全 15 款)。憑什麼敢自動停?看 <a href="../../benchmarks/when-to-stop-motor-break-in/">12 小時過磨實驗:磨到剛剛好,然後停 →</a>。',
       'g1.m5': '<strong>別用「導電磨合油」衝數字。</strong>加了導電油轉速瞬間上升,是碳粉暫時導電的<strong>假象</strong>、不是真的磨好,油一洗掉就打回原形。完整拆解見 <a href="../conductive-oil-motor-break-in/">導電油磨馬達真的有效嗎 →</a>。',
-      'g1.related': '延伸閱讀:挑馬達先看 <a href="../../benchmarks/tamiya-mini-4wd-motor-specs-list/">田宮全 15 款馬達規格對照表 →</a>;想知道馬達何時該退役,看 <a href="../motor-degradation-signs/">馬達衰退的判定訊號 →</a>。',
+      'g1.related': '<div class="guide-related-label">延伸閱讀</div><ul><li>挑馬達先看 <a href="../../benchmarks/tamiya-mini-4wd-motor-specs-list/">田宮全 15 款馬達規格對照表 →</a></li><li>想知道馬達何時該退役,看 <a href="../motor-degradation-signs/">馬達衰退的判定訊號 →</a></li></ul>',
       'g1.h5': '磨合完成的判定標準',
       'g1.p8': '怎麼知道馬達磨好了?有 4 個觀察點:',
       'g1.l5': '<strong>電流穩定度</strong>—同一電壓下,電流波動 ≤ ±5mA',
@@ -4599,7 +4615,7 @@
       'g2.l13': '換馬達時無從比較哪顆狀況最佳',
       'g2.l14': '調校軌道時不知道是車的問題還是馬達的問題',
       'g2.t5': '建議建立每顆馬達的<strong>健康指紋(Health Fingerprint)</strong>—記錄它在標準條件下的電流、轉速、溫升、振動頻譜。後續任何時間都可比對,精準判斷馬達狀態。這也是 MotorLab PRO 內建 AI 健康管理的核心功能。',
-      'g2.related': '延伸閱讀:先把磨合做對,見 <a href="../motor-break-in-guide/">馬達磨合完整指南</a>;馬達已經磨壞了?看 <a href="../motor-degradation-signs/">馬達衰退的 8 個徵兆與退役判定</a>;該洗還是該退,見 <a href="../motor-wash-vs-break-in/">洗馬達 vs 磨合</a>。',
+      'g2.related': '<div class="guide-related-label">延伸閱讀</div><ul><li>先把磨合做對,見 <a href="../motor-break-in-guide/">馬達磨合完整指南</a></li><li>馬達已經磨壞了?看 <a href="../motor-degradation-signs/">馬達衰退的 8 個徵兆與退役判定</a></li><li>該洗還是該退,見 <a href="../motor-wash-vs-break-in/">洗馬達 vs 磨合</a></li></ul>',
 
       // Guide 3
       'g3.tag': 'REFERENCE · 馬達速查',
@@ -4665,7 +4681,7 @@
       'g4.l14': '<strong>每運行 15-20 場</strong>—完整洗馬達 + 健康指紋複測',
       'g4.l15': '<strong>當複測指標下降 &gt; 10%</strong>—考慮退役換新',
       'g4.t1': '這個保養週期透過 MotorLab 的 AI 智慧馬達健康管理功能精準追蹤,讓你知道每顆馬達「跑了幾場、衰減多少」,告別憑感覺保養的時代。',
-      'g4.related': '延伸閱讀:馬達衰退到什麼程度該退役?見 <a href="../motor-degradation-signs/">馬達衰退的 8 個徵兆與退役判定</a>;磨合的完整原理與流程,見 <a href="../motor-break-in-guide/">馬達磨合完整指南</a>;磨合常見錯誤,見 <a href="../motor-break-in-mistakes/">磨馬達的 5 個常見錯誤</a>。',
+      'g4.related': '<div class="guide-related-label">延伸閱讀</div><ul><li>馬達衰退到什麼程度該退役?見 <a href="../motor-degradation-signs/">馬達衰退的 8 個徵兆與退役判定</a></li><li>磨合的完整原理與流程,見 <a href="../motor-break-in-guide/">馬達磨合完整指南</a></li><li>磨合常見錯誤,見 <a href="../motor-break-in-mistakes/">磨馬達的 5 個常見錯誤</a></li></ul>',
 
       'g5.tag': 'GUIDE · 競賽脈絡',
       'g5.title': '為什麼磨馬達決定四驅車比賽勝負?競賽水準的磨合差距',
@@ -4834,7 +4850,7 @@
       'g8.r2': '<strong>適合場景</strong>:練習用車、教學用解體標本(看 brush 磨耗模式建立經驗值)',
       'g8.r3': '<strong>不適合</strong>:整新後上正式賽(只能修表面,內部損傷仍在,且風險不可預測)',
       'g8.r4': '<strong>心態</strong>:馬達 EoL 不是失敗,是 Mini 4WD 競技的正常循環。職業車手平均每賽季退役 5–10 顆馬達,這是成本不是損失。',
-      'g8.related': '延伸閱讀:馬達還能救嗎?看 <a href="../motor-wash-vs-break-in/">洗馬達 vs 磨合:該洗還是該退</a>;想用數據量化衰退、建立 baseline,見 <a href="../motor-break-in-resistance-curve/">R 磨合曲線</a>;回頭把磨合做對,見 <a href="../motor-break-in-guide/">馬達磨合完整指南</a>。',
+      'g8.related': '<div class="guide-related-label">延伸閱讀</div><ul><li>馬達還能救嗎?看 <a href="../motor-wash-vs-break-in/">洗馬達 vs 磨合:該洗還是該退</a></li><li>想用數據量化衰退、建立 baseline,見 <a href="../motor-break-in-resistance-curve/">R 磨合曲線</a></li><li>回頭把磨合做對,見 <a href="../motor-break-in-guide/">馬達磨合完整指南</a></li></ul>',
       'g9.tag': 'REFERENCE · 全馬達速查',
       'g9.title': '田宮 Mini 4WD® 全 15 款馬達規格對照表(含 PRO 系列)',
       'g9.lead': '田宮(TAMIYA, INC.)目前推出的 Mini 4WD® 馬達共 15 款,涵蓋 <strong>Mini 4WD 標準系列 9 款(單軸)</strong>與 <strong>Mini 4WD PRO 系列 6 款(雙軸)</strong>。本對照表整理官方公布的 RPM、扭力(mN·m)、電流(A)規格,並標註比賽合規限制,協助你依車架類型與賽道特性挑馬達。',
@@ -5115,7 +5131,7 @@
       'g12.h5': '選別流程與一個常見陷阱',
       'g12.flow': '可執行的選別邏輯：<strong>① 先用一致性篩掉「量不準」的馬達</strong>（重現性差直接出局）→ <strong>② 按 Ke 分群</strong>（不是排名）→ <strong>③ 同群內用單向指標排名</strong>（T_loss 為主，Km 與漣波為輔）。',
       'g12.pit': '<strong>⚠️ I₀ 陷阱</strong>：「無載電流越低越好」只在<strong>同 Ke 群內</strong>成立。因為 I₀ = T_loss / Kt，一顆 Ke 高的馬達即使損耗較大，I₀ 也可能較低。直接拿整批比 I₀ 會系統性偏袒高 Ke 個體，而高 Ke 在需要極速時恰恰是劣勢。所以務必先分群、再排名。',
-      'g12.related': '延伸閱讀：量測、比較、健康判斷的整體框架見 <a href="../motor-analysis-methodology/">馬達分析的三支柱方法論</a>；選出好馬達後如何磨，見 <a href="../motor-break-in-guide/">馬達磨合完整指南</a>；依賽道決定目標 Ke，見 <a href="../track-analysis-motor-selection/">軌道分析與馬達選型</a>;建 baseline 後如何判退役,見 <a href="../motor-degradation-signs/">馬達衰退的 8 個徵兆與退役判定</a>。',
+      'g12.related': '<div class="guide-related-label">延伸閱讀</div><ul><li>量測、比較、健康判斷的整體框架見 <a href="../motor-analysis-methodology/">馬達分析的三支柱方法論</a></li><li>選出好馬達後如何磨,見 <a href="../motor-break-in-guide/">馬達磨合完整指南</a></li><li>依賽道決定目標 Ke,見 <a href="../track-analysis-motor-selection/">軌道分析與馬達選型</a></li><li>建 baseline 後如何判退役,見 <a href="../motor-degradation-signs/">馬達衰退的 8 個徵兆與退役判定</a></li></ul>',
       'g12.w1': '相對比較（同批排名）非常穩健；但由 Kt 換算的轉矩<strong>絕對值</strong>，精度取決於 R 的量測，而碳刷接觸電阻會隨電流與轉速變動，是最大的系統誤差來源。日常選別排名不受影響 —— 只有要對規格書或模擬比對時，才需要進一步校正。',
       'g13.tag': 'METHODOLOGY · 磨合實測',
       'g13.title': '磨馬達到底要磨多久?一顆馬達連續量測 560 次給你答案',
@@ -5133,7 +5149,7 @@
       'g13.j3': '<strong>三、可用「收斂所需次數」比較個體體質。</strong>快速收斂與長時間才穩定的馬達,接觸條件不同;此曲線把「磨合快慢」量化為可比較的指標,也可與選別數據交叉判斷。',
       'g13.h3': '測試條件',
       'g13.cond': '馬達型號:Mach-Dash PRO<br>量測方式:PID 鎖定轉速、空載、全程 1.2V 以下低電壓<br>5 階段轉速:4,000 / 6,000 / 8,000 / 10,000 / 12,000 RPM<br>單次約 1.5 分鐘,總計 560 次連續量測',
-      'g13.related': '延伸閱讀:先篩選出值得投入磨合的個體,見 <a href="../motor-selection-before-break-in/">先選別,後磨合</a>;磨合的完整原理與 10 階段流程,見 <a href="../motor-break-in-guide/">馬達磨合完整指南</a>;量測、比較、健康判斷的整體框架,見 <a href="../motor-analysis-methodology/">三支柱方法論</a>;R 值持續升高即衰退訊號,退役判定見 <a href="../motor-degradation-signs/">馬達衰退的 8 個徵兆</a>。',
+      'g13.related': '<div class="guide-related-label">延伸閱讀</div><ul><li>先篩選出值得投入磨合的個體,見 <a href="../motor-selection-before-break-in/">先選別,後磨合</a></li><li>磨合的完整原理與 10 階段流程,見 <a href="../motor-break-in-guide/">馬達磨合完整指南</a></li><li>量測、比較、健康判斷的整體框架,見 <a href="../motor-analysis-methodology/">三支柱方法論</a></li><li>R 值持續升高即衰退訊號,退役判定見 <a href="../motor-degradation-signs/">馬達衰退的 8 個徵兆</a></li></ul>',
       'g13.w1': '此曲線反映的是<strong>同一顆馬達、同一組量測條件下的相對趨勢</strong>,而非絕對電阻值;跨機台或跨條件的絕對值不宜直接比較。其價值在於將單顆馬達的磨合進程與衰退,轉為可判讀的時間序列。',
       'g14.tag': 'METHODOLOGY · 磨合控制',
       'g14.title': '為什麼磨馬達要鎖轉速,不鎖電壓?',
@@ -5179,7 +5195,7 @@
       'g14.h5': '誠實的取捨',
       'g14.p4': '控速不是沒有代價:它需要<strong>即時量測轉速並回授調壓</strong>(閉環),比「設一個電壓就好」複雜;而且在<strong>起步瞬間</strong>要先突破靜摩擦,不能只靠低壓硬推。定電壓的優點就是簡單、便宜。<br>一個常見的反論是:「實戰時電池近似定壓源,所以定電壓磨合才貼近使用工況。」但這站不住腳 —— 實戰的工作點是<strong>帶負載</strong>的(低轉速、高電流),而無負載的定電壓磨合同樣不重現賽道工況;反過來,控速架構下你可以直接把轉速鎖在<strong>貼近實戰的 ω</strong>,比定電壓更能對準你要的工作點。<br>另外釐清:本文談的是<strong>控制方式</strong>(控壓 vs 控速),不是<strong>目標值</strong> —— 你該用 2.4V(鎳氫)還是 3.0V(鹼性)、或該鎖幾轉,是另一個「依比賽電池選設定」的題目。',
       'g14.key': '一句話:磨合品質由接觸面的<strong>滑動速度</strong>決定,而滑動速度就是轉速。控電壓 = 控一個會漂的代理;控轉速 = 直接控住真正在磨接觸面的物理量。要磨得<strong>準、可重現、跨馬達可比</strong>,物理上該鎖的是轉速。',
-      'g14.related': '延伸閱讀:磨合進度怎麼從數據看,見 <a href="../motor-break-in-resistance-curve/">R 磨合曲線</a>;先挑出值得磨的馬達,見 <a href="../motor-selection-before-break-in/">先選別,後磨合</a>;磨合的完整原理與流程,見 <a href="../motor-break-in-guide/">馬達磨合完整指南</a>。',
+      'g14.related': '<div class="guide-related-label">延伸閱讀</div><ul><li>磨合進度怎麼從數據看,見 <a href="../motor-break-in-resistance-curve/">R 磨合曲線</a></li><li>先挑出值得磨的馬達,見 <a href="../motor-selection-before-break-in/">先選別,後磨合</a></li><li>磨合的完整原理與流程,見 <a href="../motor-break-in-guide/">馬達磨合完整指南</a></li></ul>',
       'g14.w1': '物理框架為概念說明,實際磨合仍牽涉電刷類型、時間、溫度、冷卻等變數。控速的效益在於「把磨合條件從會漂的代理,換成直接可控的物理量」,而非保證單一數值最佳。',
 
       'cl.tag': 'CHANGELOG',
@@ -5508,7 +5524,7 @@
       'g1.m3': '<strong>Speed mode (Beta)</strong> — the machine adjusts voltage automatically to hold the motor at a target RPM. Locking RPM locks the brush sliding speed, giving a repeatable baseline across motors; for why "lock RPM, not voltage" suits break-in and measurement, see <a href="../motor-break-in-speed-vs-voltage/">Why break in at a locked RPM, not a fixed voltage →</a>.',
       'g1.m4': '<strong>AI Smart Break-In (Pro)</strong> — one-tap fully automatic: the machine grinds and measures itself and <strong>breaks the motor in to its best state in a single session, then stops</strong> — no splitting sessions, no guesswork (supports all 15 Tamiya motors). How can it dare to stop itself? See <a href="../../benchmarks/when-to-stop-motor-break-in/">the 12-hour over-break-in experiment →</a>.',
       'g1.m5': '<strong>Don\'t chase numbers with "conductive break-in oil."</strong> The instant RPM jump is an <strong>illusion</strong> from carbon powder briefly conducting — not real break-in, and it reverts once washed off. Full breakdown: <a href="../conductive-oil-motor-break-in/">Does conductive oil really break in a motor? →</a>',
-      'g1.related': 'Further reading: pick a motor with the <a href="../../benchmarks/tamiya-mini-4wd-motor-specs-list/">Tamiya Mini 4WD motor chart (all 15) →</a>; to tell when a motor is worn out, see the <a href="../motor-degradation-signs/">signs of motor degradation →</a>.',
+      'g1.related': '<div class="guide-related-label">Further reading</div><ul><li>pick a motor with the <a href="../../benchmarks/tamiya-mini-4wd-motor-specs-list/">Tamiya Mini 4WD motor chart (all 15) →</a></li><li>to tell when a motor is worn out, see the <a href="../motor-degradation-signs/">signs of motor degradation →</a></li></ul>',
       'g1.h5': 'How to know when break-in is complete',
       'g1.p8': 'Four observation points tell you the motor is ready:',
       'g1.l5': '<strong>Current stability</strong> — at fixed voltage, current variation ≤ ±5mA',
@@ -5550,7 +5566,7 @@
       'g2.l13': 'When swapping motors, no way to compare which one is in best shape',
       'g2.l14': 'When tuning the track, can\'t isolate if the issue is the car or the motor',
       'g2.t5': 'Build a <strong>Health Fingerprint</strong> for every motor — record its current, RPM, temperature rise, and vibration spectrum under standard conditions. Compare anytime in the future for precise diagnosis. This is the core of MotorLab PRO\'s AI Health Manager.',
-      'g2.related': 'Further reading: get break-in right first — <a href="../motor-break-in-guide/">the complete break-in guide</a>; already damaged the motor? See <a href="../motor-degradation-signs/">8 signs of motor degradation and when to retire</a>; clean or retire? See <a href="../motor-wash-vs-break-in/">motor wash vs break-in</a>.',
+      'g2.related': '<div class="guide-related-label">Further reading</div><ul><li>get break-in right first — <a href="../motor-break-in-guide/">the complete break-in guide</a></li><li>already damaged the motor? See <a href="../motor-degradation-signs/">8 signs of motor degradation and when to retire</a></li><li>clean or retire? See <a href="../motor-wash-vs-break-in/">motor wash vs break-in</a></li></ul>',
 
       // Guide 3
       'g3.tag': 'REFERENCE · Motor Lookup',
@@ -5617,7 +5633,7 @@
       'g4.l14': '<strong>Every 15-20 races</strong> — full wash + health fingerprint re-test',
       'g4.l15': '<strong>When metrics drop >10%</strong> — consider retirement',
       'g4.t1': 'This schedule is precisely trackable via the AI Motor Health Manager in MotorLab, so you know exactly "how many races and how much degradation" for each motor — no more guess-based maintenance.',
-      'g4.related': 'Further reading: how degraded is too degraded to retire? See <a href="../motor-degradation-signs/">8 signs of motor degradation and when to retire</a>; the full break-in physics and procedure — <a href="../motor-break-in-guide/">the complete break-in guide</a>; common break-in mistakes — <a href="../motor-break-in-mistakes/">5 common motor break-in mistakes</a>.',
+      'g4.related': '<div class="guide-related-label">Further reading</div><ul><li>how degraded is too degraded to retire? See <a href="../motor-degradation-signs/">8 signs of motor degradation and when to retire</a></li><li>the full break-in physics and procedure — <a href="../motor-break-in-guide/">the complete break-in guide</a></li><li>common break-in mistakes — <a href="../motor-break-in-mistakes/">5 common motor break-in mistakes</a></li></ul>',
 
       'g5.tag': 'GUIDE · Race Context',
       'g5.title': 'Why Break-in Decides Mini 4WD Race Outcomes: The Competitive Edge Most Racers Miss',
@@ -5790,7 +5806,7 @@
       'g8.r2': '<strong>Good uses</strong>: Practice cars, dissection samples for learning (study brush wear patterns to calibrate your eye).',
       'g8.r3': '<strong>Bad uses</strong>: Reconditioning for sanctioned racing — surface cleanup doesn\'t fix internal damage, and the risk profile becomes unpredictable.',
       'g8.r4': '<strong>Mindset</strong>: Motor EoL isn\'t a failure — it\'s normal in the Mini 4WD competition cycle. Pro racers retire 5–10 motors per season on average. It\'s a cost, not a loss.',
-      'g8.related': 'Further reading: can the motor still be saved? See <a href="../motor-wash-vs-break-in/">motor wash vs break-in — clean or retire</a>; to quantify degradation and build a baseline, see <a href="../motor-break-in-resistance-curve/">the R break-in curve</a>; to get break-in right from the start, see <a href="../motor-break-in-guide/">the complete break-in guide</a>.',
+      'g8.related': '<div class="guide-related-label">Further reading</div><ul><li>can the motor still be saved? See <a href="../motor-wash-vs-break-in/">motor wash vs break-in — clean or retire</a></li><li>to quantify degradation and build a baseline, see <a href="../motor-break-in-resistance-curve/">the R break-in curve</a></li><li>to get break-in right from the start, see <a href="../motor-break-in-guide/">the complete break-in guide</a></li></ul>',
       'g9.tag': 'REFERENCE · Full Lineup',
       'g9.title': 'Tamiya Mini 4WD Motor Chart — All 15 Motors',
       'g9.lead': 'Tamiya (TAMIYA, INC.) currently offers 15 Mini 4WD® motors total — <strong>9 standard single-shaft motors</strong> and <strong>6 Mini 4WD PRO double-shaft motors</strong>. This reference table compiles the official RPM, torque (mN·m) and current (A) specs, annotated with race-compliance notes, so you can pick the right motor for your chassis and course profile.',
@@ -6073,7 +6089,7 @@
       'g12.h5': 'A selection workflow and one common trap',
       'g12.flow': 'An executable selection logic: <strong>① first use consistency to screen out “unmeasurable” motors</strong> (poor repeatability is out) → <strong>② group by Ke</strong> (not rank) → <strong>③ rank within each group by one-directional indicators</strong> (T_loss primary, Km and ripple secondary).',
       'g12.pit': '<strong>⚠️ The I₀ trap</strong>: “lower no-load current is better” only holds <strong>within the same Ke group</strong>. Since I₀ = T_loss / Kt, a high-Ke motor can read lower I₀ even with larger losses. Comparing I₀ across the whole batch systematically favors high-Ke units — and high Ke is exactly a disadvantage where you need top speed. So always group first, then rank.',
-      'g12.related': 'Further reading: the overall measure / compare / judge-health framework is in <a href="../motor-analysis-methodology/">the three-pillar methodology for motor analysis</a>; how to break in once you\'ve picked a good motor is in <a href="../motor-break-in-guide/">the complete motor break-in guide</a>; deciding a target Ke by track is in <a href="../track-analysis-motor-selection/">track analysis &amp; motor selection</a>; once you have a baseline, judging when to retire is in <a href="../motor-degradation-signs/">8 signs your motor is dying</a>.',
+      'g12.related': '<div class="guide-related-label">Further reading</div><ul><li>the overall measure / compare / judge-health framework is in <a href="../motor-analysis-methodology/">the three-pillar methodology for motor analysis</a></li><li>how to break in once you\'ve picked a good motor is in <a href="../motor-break-in-guide/">the complete motor break-in guide</a></li><li>deciding a target Ke by track is in <a href="../track-analysis-motor-selection/">track analysis &amp; motor selection</a></li><li>once you have a baseline, judging when to retire is in <a href="../motor-degradation-signs/">8 signs your motor is dying</a></li></ul>',
       'g12.w1': 'Relative comparison (ranking within one batch) is very robust; but the <strong>absolute</strong> torque converted from Kt depends on the accuracy of R, and brush contact resistance varies with current and speed — the largest source of systematic error. Everyday selection ranking is unaffected — only when matching against a datasheet or simulation do you need further calibration.',
       'g13.tag': 'METHODOLOGY · Break-in Data',
       'g13.title': 'How Long to Break In a Motor? 560 Runs on One Motor, Answered',
@@ -6091,7 +6107,7 @@
       'g13.j3': '<strong>3. Use “runs to converge” to compare a motor\'s constitution.</strong> Motors that settle fast versus those that take long have different contact conditions; the curve turns “break-in speed” into a comparable metric, and cross-reads well with selection data.',
       'g13.h3': 'Test conditions',
       'g13.cond': 'Motor: Mach-Dash PRO<br>Method: PID speed-lock, no load, low voltage throughout (below 1.2V)<br>5 speed steps: 4,000 / 6,000 / 8,000 / 10,000 / 12,000 RPM<br>~1.5 min per run, 560 continuous runs total',
-      'g13.related': 'Further reading: screen for motors worth breaking in first — <a href="../motor-selection-before-break-in/">select before break-in</a>; the full physics and 10-stage procedure — <a href="../motor-break-in-guide/">the complete break-in guide</a>; the measure / compare / judge-health framework — <a href="../motor-analysis-methodology/">the three-pillar methodology</a>; a steadily rising R is a degradation signal — see <a href="../motor-degradation-signs/">8 signs your motor is dying</a>.',
+      'g13.related': '<div class="guide-related-label">Further reading</div><ul><li>screen for motors worth breaking in first — <a href="../motor-selection-before-break-in/">select before break-in</a></li><li>the full physics and 10-stage procedure — <a href="../motor-break-in-guide/">the complete break-in guide</a></li><li>the measure / compare / judge-health framework — <a href="../motor-analysis-methodology/">the three-pillar methodology</a></li><li>a steadily rising R is a degradation signal — see <a href="../motor-degradation-signs/">8 signs your motor is dying</a></li></ul>',
       'g13.w1': 'This curve reflects a <strong>relative trend for one motor under one set of measurement conditions</strong>, not an absolute resistance value; absolute values across machines or conditions should not be compared directly. Its worth is turning a single motor\'s break-in progress and decline into a readable time series.',
       'g14.tag': 'METHODOLOGY · Break-in Control',
       'g14.title': 'Why Break In a Motor at Fixed Speed, Not Fixed Voltage',
@@ -6137,7 +6153,7 @@
       'g14.h5': 'The honest trade-off',
       'g14.p4': 'Fixed-speed isn\'t free: it needs <strong>real-time RPM measurement and feedback voltage adjustment</strong> (closed-loop), which is more complex than just setting a voltage; and at the <strong>very start</strong> it must break static friction first, not just push with low voltage. Fixed voltage wins on being simple and cheap.<br>A common rebuttal: "in a real race the battery is roughly a constant-voltage source, so fixed-voltage break-in is closer to actual use." It doesn\'t hold — the real operating point is <strong>under load</strong> (low RPM, high current), and no-load fixed-voltage break-in doesn\'t reproduce track conditions either; conversely, under speed control you can lock RPM <strong>close to the real-race ω</strong>, hitting your target operating point better than fixed voltage does.<br>One clarification: this article is about the <strong>control method</strong> (voltage vs speed), not the <strong>target value</strong> — whether you use 2.4V (NiMH) or 3.0V (alkaline), or which RPM to lock, is a separate "pick the setting by your race battery" question.',
       'g14.key': 'In one line: break-in quality is set by the <strong>sliding speed</strong> at the contact face, and that sliding speed is RPM. Fixed voltage controls a proxy that drifts; fixed speed controls the physical variable that actually grinds the contact face. To break in <strong>precisely, reproducibly, and comparably across motors</strong>, the thing to lock — physically — is RPM.',
-      'g14.related': 'Further reading: how to read break-in progress from data — <a href="../motor-break-in-resistance-curve/">the R break-in curve</a>; picking motors worth breaking in first — <a href="../motor-selection-before-break-in/">select before break-in</a>; the full physics and procedure — <a href="../motor-break-in-guide/">the complete break-in guide</a>.',
+      'g14.related': '<div class="guide-related-label">Further reading</div><ul><li>how to read break-in progress from data — <a href="../motor-break-in-resistance-curve/">the R break-in curve</a></li><li>picking motors worth breaking in first — <a href="../motor-selection-before-break-in/">select before break-in</a></li><li>the full physics and procedure — <a href="../motor-break-in-guide/">the complete break-in guide</a></li></ul>',
       'g14.w1': 'This physical framing is conceptual; real break-in still involves brush type, time, temperature and cooling. The benefit of fixed-speed is turning the break-in condition from a drifting proxy into a directly controllable physical variable — not a guarantee that any single value is optimal.',
       'g15.tag': 'METHODOLOGY · Break-in Myths',
       'g15.title': 'Does Conductive Oil Really Help Motor Break-In?',
@@ -6210,7 +6226,7 @@
       'g16.f2': '<strong>Flush-clean and oil the bearings</strong> → RPM back? → it was dirt / lube; just maintain it.',
       'g16.f3': '<strong>Still slow</strong> → measure characteristics (I0 / R / Ke) and the bearing: if loss metrics rose but Ke is normal, there may still be hope; if <strong>Ke itself is clearly low</strong> (weakened magnets) or RPM simply will not return → <strong>magnet weakening / wear</strong>, move to the retirement check.',
       'g16.key': 'In one line: when a motor slows, <strong>rule out battery, dirt and lube first</strong> — most cases end here. Only if all three are cleared and it is still slow is it true degradation; judge retirement by data, so you neither replace a motor too early on a hunch nor let a demagnetized one drag your results.',
-      'g16.related': 'Further reading: clean-and-oil or retire? See <a href="../motor-wash-vs-break-in/">motor wash vs break-in</a>; confirm real degradation with <a href="../motor-degradation-signs/">8 signs your motor is dying and when to retire</a>; quantify it with <a href="../motor-break-in-resistance-curve/">the R break-in curve</a>.',
+      'g16.related': '<div class="guide-related-label">Further reading</div><ul><li>clean-and-oil or retire? See <a href="../motor-wash-vs-break-in/">motor wash vs break-in</a></li><li>confirm real degradation with <a href="../motor-degradation-signs/">8 signs your motor is dying and when to retire</a></li><li>quantify it with <a href="../motor-break-in-resistance-curve/">the R break-in curve</a></li></ul>',
       'g16.w1': 'This is general troubleshooting. Real slowdowns are often several causes stacked (e.g. an aging battery plus light carbon buildup); rule them out one at a time, change only one variable per test, and compare under the same battery and temperature for a reliable read.',
       'g17.tag': 'BENCHMARK · 15-Motor Test: Prologue',
       'g17.title': 'Faster the Longer You Run It — Or Already Damaged? A 12-Hour Nonstop Break-In',
@@ -6236,7 +6252,7 @@
       'g17.h5': 'Next: 15 motors, one set of conditions',
       'g17.p7': 'This 12-hour run fixed the test framework for the whole series: the same machine, the same break-in and measurement flow, and the same three dimensions — <strong>same-RPM current (power draw), same-voltage RPM, and constitution score</strong>. From here we put all 15 Tamiya motors through identical conditions: where each golden zone sits, how early the stop point arrives, and how much over-break-in costs — published one by one, all collected in <a href="../">Benchmarks</a>.',
       'g17.note': '<strong>Test conditions:</strong><br>1. Mach-Dash PRO<br>2. 12 hours of continuous low-speed break-in<br>3. All data measured on the same machine<br>4. Physics: the DC motor voltage equation <code>V = I·R + Ke·ω</code><br>5. Constitution scores are reference values against Tamiya official spec — read the trend<br>6. The “constitution score” used here was an AI Torque Prediction output field up to v3.8.x; from v3.9.0 it was replaced by the <strong>torque prediction comparison chart</strong> (this unit plotted against the Tamiya official reference on one chart) and is no longer shown as a single score. The figures here are what the machine displayed at the time; the way the trend is read is unchanged.',
-      'g17.related': 'Further reading: the full break-in flow and the modes in <a href="../../guides/motor-break-in-guide/">the complete break-in guide</a>; why break-in and measurement lock RPM in <a href="../../guides/motor-break-in-speed-vs-voltage/">locked RPM, not fixed voltage</a>; the 5 causes of a slow motor (incl. demagnetization) in <a href="../../guides/motor-slow-causes-fixes/">motor got slow: causes and fixes</a>; whether washing a motor works in <a href="../does-washing-a-motor-work/">does washing a motor work</a>.',
+      'g17.related': '<div class="guide-related-label">Further reading</div><ul><li>the full break-in flow and the modes in <a href="../../guides/motor-break-in-guide/">the complete break-in guide</a></li><li>why break-in and measurement lock RPM in <a href="../../guides/motor-break-in-speed-vs-voltage/">locked RPM, not fixed voltage</a></li><li>the 5 causes of a slow motor (incl. demagnetization) in <a href="../../guides/motor-slow-causes-fixes/">motor got slow: causes and fixes</a></li><li>whether washing a motor works in <a href="../does-washing-a-motor-work/">does washing a motor work</a></li></ul>',
 
       'g18.tag': 'BENCHMARK · Decay Breakdown',
       'g18.title': 'Does Washing a Motor Work? An 11-Hour Test',
@@ -6264,7 +6280,7 @@
       'g18.p6': '<strong>Worth washing</strong>: the motor feels dull after long use and the data says "contamination-type decay" (heavier start, higher draw, but RPM still there). One wash reclaims the dirt bonus and it stays — great value. <strong>Not recoverable</strong>: if the brush contact-stability scatter never settles and no-load current I0 at the same RPM is clearly high, that\'s part wear — washing only reclaims the small dirt slice, not the body. Time to replace the motor.',
       'g18.p6b': 'How to tell which you have? RPM alone won\'t separate them — both dirt and wear make a motor feel dull. It takes three numbers: <strong>constitution score</strong> (body health), <strong>no-load current</strong> (how dirty), and <strong>contact stability</strong> (degree of wear). That is exactly what the on-machine AI torque prediction tells you in about fifteen minutes.',
       'g18.note': '<strong>Test conditions:</strong><br>1. Mach-Dash PRO (a decayed sample after a life test)<br>2. Cleaning: solvent wash, flush out residue, and re-oil the bearing<br>3. 11 hours continuous run (about 470 equivalent rounds), same machine<br>4. Measurement: AI torque prediction + brush contact stability test + bearing resistance test<br>5. 24-26% is a same-rig measured baseline for normal units of this model, not official data<br>6. The “constitution score” and “contact stability CV” used here were output fields up to v3.8.x; from v3.9.0 torque prediction became a <strong>comparison chart</strong> and brush contact stability became a <strong>scatter map</strong>, neither of which shows a single score. The figures here are what the machine displayed at the time; the way the trend is read is unchanged.',
-      'g18.related': 'Further reading: how over-break-in wears a motor down step by step in <a href="../when-to-stop-motor-break-in/">the 12-hour over-break-in test</a>; the concept of wash vs break-in in <a href="../../guides/motor-wash-vs-break-in/">motor wash vs break-in</a>; the 5 causes of a slow motor in <a href="../../guides/motor-slow-causes-fixes/">motor got slow: causes and fixes</a>.',
+      'g18.related': '<div class="guide-related-label">Further reading</div><ul><li>how over-break-in wears a motor down step by step in <a href="../when-to-stop-motor-break-in/">the 12-hour over-break-in test</a></li><li>the concept of wash vs break-in in <a href="../../guides/motor-wash-vs-break-in/">motor wash vs break-in</a></li><li>the 5 causes of a slow motor in <a href="../../guides/motor-slow-causes-fixes/">motor got slow: causes and fixes</a></li></ul>',
 
       'g19.tag': 'BENCHMARK · Shock Repair',
       'g19.title': 'Can a Dead, Retired Motor Be Saved? An Electric-Shock Repair Experiment',
@@ -6284,7 +6300,7 @@
       'g19.h5': '5. So — can a retired motor be saved?',
       'g19.p5': 'It depends on how it "died." If it is <strong>lost magnetism</strong> (demag), there is a chance to recharge some of it back — but temporarily. If it is <strong>contact-face wear</strong> (brush, commutator), neither shock nor wash saves it; retire it. In one line: <strong>a shock can bring a retired motor\'s magnetism back from the dead, but a worn-out contact face is beyond saving.</strong> How to tell which you have? The on-machine AI Torque Prediction breaks it down in about fifteen minutes — magnetic health, power draw, and contact stability, three numbers each telling their own story.',
       'g19.note': '<strong>Test conditions:</strong><br>1. Mach-Dash PRO (retired sample)<br>2. High-voltage shock: external supply, DC 9V / 60 s (pulse shock)<br>3. Cleaning: eco degreaser, DC 1.5V / 3 min, and re-oil the bearing<br>4. AI Smart Break-In long run, 6.7 hours, same machine<br>5. Measurement: AI Torque Prediction + brush contact-stability test + bearing drag test<br>6. The “constitution score” used here was an AI Torque Prediction output field up to v3.8.x; from v3.9.0 it was replaced by the <strong>torque prediction comparison chart</strong> and is no longer shown as a single score. The figures here are what the machine displayed at the time; the way the trend is read is unchanged.',
-      'g19.related': 'Further reading: the motor-wash experiment on the same sample in <a href="../does-washing-a-motor-work/">does washing a motor work</a>; how over-break-in wears a motor down in <a href="../when-to-stop-motor-break-in/">the 12-hour over-break-in test</a>; the concept of wash vs break-in in <a href="../../guides/motor-wash-vs-break-in/">motor wash vs break-in</a>.',
+      'g19.related': '<div class="guide-related-label">Further reading</div><ul><li>the motor-wash experiment on the same sample in <a href="../does-washing-a-motor-work/">does washing a motor work</a></li><li>how over-break-in wears a motor down in <a href="../when-to-stop-motor-break-in/">the 12-hour over-break-in test</a></li><li>the concept of wash vs break-in in <a href="../../guides/motor-wash-vs-break-in/">motor wash vs break-in</a></li></ul>',
       'g20.tag': 'BENCHMARK · Break-in Before/After',
       'g20.title': 'AI Smart Break-in, Before & After: A Same-Temperature Test on One Brand-New Motor',
       'g20.lead': 'One brand-new Mach-Dash PRO: measured once before break-in → <strong>AI Smart Break-in (46 min, stops itself when done)</strong> → measured again after the temperature returned to the same as before (27.5°C) — <strong>same-temperature comparison, a fair one</strong>.',
@@ -6334,7 +6350,7 @@
       'g20.flow1': '<strong>1. Measure before</strong>: run &quot;AI Torque Prediction&quot; once (about 1~2 min), <strong>noting the data and the on-screen temperature</strong> — this is the motor\'s baseline.',
       'g20.flow2': '<strong>2. Break in</strong>: let &quot;AI Smart Break-in&quot; run to auto-stop; or break in with your own recipe — the effect is measurable either way.',
       'g20.flow3': '<strong>3. Measure after</strong>: <strong>wait for the temperature to return to the same as before, then measure again</strong> (it\'s hot right after, so measuring immediately underestimates the effect) — same-temperature comparison makes the before/after data fairly comparable.',
-      'g20.related': 'Further reading: why to stop right at the sweet spot (over-break-in harms the motor), see <a href="../when-to-stop-motor-break-in/">the 12-hour over-break-in test</a>; how long to break in and how to read the R curve, see <a href="../../guides/motor-break-in-resistance-curve/">the 560-run break-in curve</a>; why conductive oil\'s pretty numbers are an illusion, see <a href="../../guides/conductive-oil-motor-break-in/">does conductive oil really work</a>. For the exact steps, see the <a href="/en/docs/user-manual/#standardflow">user manual &quot;Standard Break-in Flow&quot;</a>.',
+      'g20.related': '<div class="guide-related-label">Further reading</div><ul><li>why to stop right at the sweet spot (over-break-in harms the motor), see <a href="../when-to-stop-motor-break-in/">the 12-hour over-break-in test</a></li><li>how long to break in and how to read the R curve, see <a href="../../guides/motor-break-in-resistance-curve/">the 560-run break-in curve</a></li><li>why conductive oil\'s pretty numbers are an illusion, see <a href="../../guides/conductive-oil-motor-break-in/">does conductive oil really work</a></li><li>For the exact steps, see the <a href="/en/docs/user-manual/#standardflow">user manual &quot;Standard Break-in Flow&quot;</a></li></ul>',
 
       'g15.figsum': '<img class="chart" src="/images/conductive-oil-verdict_e.png" alt="Does conductive oil really break in a motor: higher RPM isn\'t done, film break falls back, the oil taints the read" loading="lazy">',
 
@@ -6691,7 +6707,7 @@
       'g1.m3': '<strong>回転数モード(Beta)</strong> —— 機器が電圧を自動調整し、モーターを設定回転数に固定して慣らします。回転数を固定=ブラシの滑り速度を固定で、機種をまたいで同一基準・再現可能;「電圧ではなく回転数を固定する」理由は <a href="../motor-break-in-speed-vs-voltage/">なぜ慣らしは回転数を固定し電圧を固定しないのか →</a> を参照。',
       'g1.m4': '<strong>AI スマート慣らし(Pro)</strong> —— ワンタップ全自動:機器が自分で回して自分で測り、<strong>1 回でこの個体の最良状態まで慣らして自動停止</strong>。複数回に分ける必要も自分で判断する必要もありません(タミヤ全 15 機種対応)。なぜ自動で止まれるのか?<a href="../../benchmarks/when-to-stop-motor-break-in/">12 時間慣らしすぎ実験 →</a>。',
       'g1.m5': '<strong>「導電慣らしオイル」で数値を稼がないこと。</strong>入れた瞬間の回転数上昇は、カーボン粉が一時的に導通する<strong>錯覚</strong>で真の慣らしではなく、洗い流すと元に戻ります。詳しい分解は <a href="../conductive-oil-motor-break-in/">導電オイルは本当にモーターを慣らせるのか →</a>。',
-      'g1.related': '関連記事:モーター選びは <a href="../../benchmarks/tamiya-mini-4wd-motor-specs-list/">タミヤ全 15 種モーター規格対照表 →</a>;引退時期の見極めは <a href="../motor-degradation-signs/">モーター劣化のサイン →</a> を参照。',
+      'g1.related': '<div class="guide-related-label">関連記事</div><ul><li>モーター選びは <a href="../../benchmarks/tamiya-mini-4wd-motor-specs-list/">タミヤ全 15 種モーター規格対照表 →</a></li><li>引退時期の見極めは <a href="../motor-degradation-signs/">モーター劣化のサイン →</a> を参照</li></ul>',
       'g1.h5': '慣らし完了の判定基準',
       'g1.p8': 'モーター慣らしが完了したかをどう判断するか?以下 4 つの観察ポイントがあります:',
       'g1.l5': '<strong>電流安定度</strong>—同一電圧下で電流変動 ≤ ±5mA',
@@ -6731,7 +6747,7 @@
       'g2.l13': 'モーター交換時にどれが最も状態が良いか比較できない',
       'g2.l14': 'コース調整時、車両の問題かモーターの問題か判別できない',
       'g2.t5': '各モーターに対し<strong>健康指紋(Health Fingerprint)</strong>を構築することを推奨—標準条件下での電流、回転数、温度上昇、振動スペクトルを記録します。以降いつでも比較可能で、モーター状態を精密に判定できます。これは MotorLab PRO 内蔵の AI 健康管理の核心機能でもあります。',
-      'g2.related': '関連:まず慣らしを正しく —— <a href="../motor-break-in-guide/">モーター慣らし完全ガイド</a>;もう傷めてしまった?—— <a href="../motor-degradation-signs/">劣化の 8 サインと引退判定</a>;洗うか引退か —— <a href="../motor-wash-vs-break-in/">モーター洗浄 vs 慣らし</a>。',
+      'g2.related': '<div class="guide-related-label">関連記事</div><ul><li>まず慣らしを正しく —— <a href="../motor-break-in-guide/">モーター慣らし完全ガイド</a></li><li>もう傷めてしまった?—— <a href="../motor-degradation-signs/">劣化の 8 サインと引退判定</a></li><li>洗うか引退か —— <a href="../motor-wash-vs-break-in/">モーター洗浄 vs 慣らし</a></li></ul>',
       'g3.tag': 'REFERENCE · モーター速査',
       'g3.title': 'タミヤ主要モーター特性と慣らし戦略対照表',
       'g3.lead': 'モーターによって設計用途・回転数・トルク特性が異なるため、慣らし方法も当然変わります。タミヤ主要 8 モーターの公式仕様と推奨慣らし戦略をまとめました。',
@@ -6812,7 +6828,7 @@
       'g4.l14': '<strong>15〜20 レースごと</strong>—完全モーター洗浄 + 健康指紋再測定',
       'g4.l15': '<strong>再測定指標が 10% 以上低下した時</strong>—引退・新品交換を検討',
       'g4.t1': 'このメンテナンス周期は MotorLab の AI スマートモーター健康管理機能で精密に追跡でき、各モーターが「何レース走り、どれだけ衰退したか」を把握できます。感覚頼りのメンテナンスから卒業しましょう。',
-      'g4.related': '関連:どこまで劣化したら引退?—— <a href="../motor-degradation-signs/">劣化の 8 サインと引退判定</a>;慣らしの原理と手順 —— <a href="../motor-break-in-guide/">モーター慣らし完全ガイド</a>;慣らしのよくある間違い —— <a href="../motor-break-in-mistakes/">モーター慣らしの 5 つの間違い</a>。',
+      'g4.related': '<div class="guide-related-label">関連記事</div><ul><li>どこまで劣化したら引退?—— <a href="../motor-degradation-signs/">劣化の 8 サインと引退判定</a></li><li>慣らしの原理と手順 —— <a href="../motor-break-in-guide/">モーター慣らし完全ガイド</a></li><li>慣らしのよくある間違い —— <a href="../motor-break-in-mistakes/">モーター慣らしの 5 つの間違い</a></li></ul>',
 
       'g5.tag': 'GUIDE · 競技視点',
       'g5.title': 'なぜモーター慣らしが Mini 4WD レースの勝敗を決めるのか:競技レベルの慣らし格差',
@@ -6985,7 +7001,7 @@
       'g8.r2': '<strong>適した用途</strong>:練習用車、解体教材(ブラシ摩耗パターンを観察して経験値を構築)',
       'g8.r3': '<strong>適さない用途</strong>:リコンディション後の公式戦投入 — 表面修復のみで内部損傷は残り、リスクプロファイルが予測不能になる',
       'g8.r4': '<strong>考え方</strong>:モーター EoL は失敗ではなく、ミニ四駆競技の正常な循環。プロレーサーは平均でシーズンあたり 5–10 個のモーターを引退させます。コストであり、損失ではない。',
-      'g8.related': '関連:まだ救える?—— <a href="../motor-wash-vs-break-in/">モーター洗浄 vs 慣らし:洗うか引退か</a>;劣化を数値化しベースラインを作る —— <a href="../motor-break-in-resistance-curve/">R 慣らしカーブ</a>;慣らしを最初から正しく —— <a href="../motor-break-in-guide/">モーター慣らし完全ガイド</a>。',
+      'g8.related': '<div class="guide-related-label">関連記事</div><ul><li>まだ救える?—— <a href="../motor-wash-vs-break-in/">モーター洗浄 vs 慣らし:洗うか引退か</a></li><li>劣化を数値化しベースラインを作る —— <a href="../motor-break-in-resistance-curve/">R 慣らしカーブ</a></li><li>慣らしを最初から正しく —— <a href="../motor-break-in-guide/">モーター慣らし完全ガイド</a></li></ul>',
       'g9.tag': 'REFERENCE · 全モーター速査',
       'g9.title': 'タミヤ Mini 4WD® 全 15 種モーター規格対照表(PRO シリーズ含む)',
       'g9.lead': 'タミヤ(TAMIYA, INC.)が現在展開している Mini 4WD® モーターは合計 15 種、<strong>Mini 4WD 標準シリーズ 9 種(片軸)</strong>と <strong>Mini 4WD PRO シリーズ 6 種(両軸)</strong>を網羅します。本対照表は公式公表の RPM、トルク(mN·m)、電流(A)スペックを整理し、競技ルールでの使用制限を注記。シャーシタイプとコース特性に応じたモーター選びにご活用ください。',
@@ -7268,7 +7284,7 @@
       'g12.h5': '選別フローとよくある落とし穴',
       'g12.flow': '実行可能な選別ロジック：<strong>① まず一貫性で「測れない」モーターを除外</strong>（再現性が悪ければ即退場）→ <strong>② Ke でグループ分け</strong>（ランキングではない）→ <strong>③ 同グループ内で単方向指標でランキング</strong>（T_loss を主、Km とリップルを補）。',
       'g12.pit': '<strong>⚠️ I₀ の落とし穴</strong>：「無負荷電流は低いほど良い」は<strong>同じ Ke グループ内</strong>でのみ成立する。I₀ = T_loss / Kt なので、Ke の高いモーターは損失が大きくても I₀ が低く出ることがある。バッチ全体で I₀ を比べると高 Ke 個体を体系的に優遇し、高 Ke は最高速が必要な場面ではまさに不利。だから必ず先にグループ分けしてからランキング。',
-      'g12.related': '関連：測定・比較・健康判定の全体フレームワークは <a href="../motor-analysis-methodology/">モーター分析の三本柱方法論</a>；選んだ後の慣らし方は <a href="../motor-break-in-guide/">モーター慣らし完全ガイド</a>；コースから目標 Ke を決めるのは <a href="../track-analysis-motor-selection/">コース分析とモーター選び</a>;ベースライン後の引退判定は <a href="../motor-degradation-signs/">劣化の 8 サインと引退判定</a>。',
+      'g12.related': '<div class="guide-related-label">関連記事</div><ul><li>測定・比較・健康判定の全体フレームワークは <a href="../motor-analysis-methodology/">モーター分析の三本柱方法論</a></li><li>選んだ後の慣らし方は <a href="../motor-break-in-guide/">モーター慣らし完全ガイド</a></li><li>コースから目標 Ke を決めるのは <a href="../track-analysis-motor-selection/">コース分析とモーター選び</a></li><li>ベースライン後の引退判定は <a href="../motor-degradation-signs/">劣化の 8 サインと引退判定</a></li></ul>',
       'g12.w1': '相対比較（同バッチ内のランキング）は非常に堅牢；だが Kt から換算したトルクの<strong>絶対値</strong>は R の測定精度に依存し、ブラシ接触抵抗は電流と回転数で変化するため、最大の系統誤差源。日常の選別ランキングには影響しない —— データシートやシミュレーションと照合するときのみ追加校正が必要。',
       'g13.tag': 'METHODOLOGY · 慣らし実測',
       'g13.title': 'モーター慣らしはどれくらい必要?連続 560 回計測が答える',
@@ -7286,7 +7302,7 @@
       'g13.j3': '<strong>3. 「収束までの回数」で個体の素性を比較できる。</strong>速く収束するモーターと長くかかるモーターは接触条件が異なる;この曲線は「慣らしの速さ」を比較可能な指標に変え、選別データとも交差判断できる。',
       'g13.h3': 'テスト条件',
       'g13.cond': 'モーター:Mach-Dash PRO<br>計測方法:PID 回転数ロック、無負荷、全工程 1.2V 以下の低電圧<br>5 段階回転数:4,000 / 6,000 / 8,000 / 10,000 / 12,000 RPM<br>1 回約 1.5 分、計 560 回連続計測',
-      'g13.related': '関連:まず慣らす価値のある個体を選別 —— <a href="../motor-selection-before-break-in/">選別してから慣らす</a>;完全な原理と 10 段階フロー —— <a href="../motor-break-in-guide/">モーター慣らし完全ガイド</a>;測定・比較・健康判定の全体フレームワーク —— <a href="../motor-analysis-methodology/">三本柱方法論</a>;R の継続的な上昇は劣化のサイン —— 引退判定は <a href="../motor-degradation-signs/">劣化の 8 サイン</a>。',
+      'g13.related': '<div class="guide-related-label">関連記事</div><ul><li>まず慣らす価値のある個体を選別 —— <a href="../motor-selection-before-break-in/">選別してから慣らす</a></li><li>完全な原理と 10 段階フロー —— <a href="../motor-break-in-guide/">モーター慣らし完全ガイド</a></li><li>測定・比較・健康判定の全体フレームワーク —— <a href="../motor-analysis-methodology/">三本柱方法論</a></li><li>R の継続的な上昇は劣化のサイン —— 引退判定は <a href="../motor-degradation-signs/">劣化の 8 サイン</a></li></ul>',
       'g13.w1': 'この曲線は<strong>同一モーター・同一計測条件下の相対トレンド</strong>を反映するものであり、絶対抵抗値ではない;機台や条件をまたいだ絶対値の直接比較は不可。その価値は、単一モーターの慣らし進行と劣化を読み取れる時系列に変える点にある。',
       'g14.tag': 'METHODOLOGY · 慣らし制御',
       'g14.title': 'なぜモーター慣らしは電圧ではなく回転数を固定するのか?',
@@ -7332,7 +7348,7 @@
       'g14.h5': '正直なトレードオフ',
       'g14.p4': '定回転数はタダではない:<strong>リアルタイムの回転数測定とフィードバックによる電圧調整</strong>(閉ループ)が必要で、「電圧を設定するだけ」より複雑;さらに<strong>始動の瞬間</strong>は静摩擦を先に破る必要があり、低電圧で押すだけでは足りない。定電圧は単純で安いのが利点。<br>よくある反論:「実戦では電池がほぼ定電圧源だから、定電圧慣らしの方が実使用に近い。」だがこれは成り立たない —— 実戦の動作点は<strong>負荷あり</strong>(低回転・高電流)で、無負荷の定電圧慣らしも同様にコース条件を再現しない;逆に速度制御なら回転数を<strong>実戦に近い ω</strong> に直接固定でき、定電圧より狙った動作点に合わせやすい。<br>念のため:本記事は<strong>制御方式</strong>(電圧 vs 回転数)の話であって<strong>目標値</strong>の話ではない —— 2.4V(ニッケル水素)か 3.0V(アルカリ)か、何回転で固定するかは別の「レース電池で設定を選ぶ」テーマだ。',
       'g14.key': '一言で:慣らしの品質は接触面の<strong>摺動速度</strong>で決まり、その摺動速度こそ回転数だ。定電圧は流れる代理を制御する;定回転数は実際に接触面を削る物理量を直接制御する。<strong>正確に・再現性よく・モーター間で比較可能に</strong>慣らすなら、物理的に固定すべきは回転数だ。',
-      'g14.related': '関連:慣らしの進行をデータで読む —— <a href="../motor-break-in-resistance-curve/">R 慣らしカーブ</a>;まず慣らす価値のあるモーターを選ぶ —— <a href="../motor-selection-before-break-in/">選別してから慣らす</a>;完全な原理と手順 —— <a href="../motor-break-in-guide/">モーター慣らし完全ガイド</a>。',
+      'g14.related': '<div class="guide-related-label">関連記事</div><ul><li>慣らしの進行をデータで読む —— <a href="../motor-break-in-resistance-curve/">R 慣らしカーブ</a></li><li>まず慣らす価値のあるモーターを選ぶ —— <a href="../motor-selection-before-break-in/">選別してから慣らす</a></li><li>完全な原理と手順 —— <a href="../motor-break-in-guide/">モーター慣らし完全ガイド</a></li></ul>',
       'g14.w1': 'この物理フレームは概念説明であり、実際の慣らしはブラシ種類・時間・温度・冷却などにも左右される。定回転数の利点は「慣らし条件を、流れる代理から直接制御できる物理量へ置き換える」点にあり、単一の数値が最適だと保証するものではない。',
       'g15.tag': 'METHODOLOGY · 慣らしの誤解',
       'g15.title': '導電オイルは慣らしに効く?回転数上昇の正体',
@@ -7405,7 +7421,7 @@
       'g16.f2': '<strong>洗浄しベアリング注油</strong> → 回転が戻った?→ 汚れ / 潤滑が原因、整備でOK。',
       'g16.f3': '<strong>まだ遅い</strong> → 特性(I0 / R / Ke)とベアリングを測定:損失系が上昇でも Ke が正常なら救える可能性;<strong>Ke 自体が明らかに低い</strong>(磁力低下)、または回転がどうしても戻らない → <strong>磁力の低下 / 摩耗</strong>、引退判定へ。',
       'g16.key': '一言:モーターが遅くなったら、<strong>まず電池・汚れ・潤滑</strong>の 3 つを排除 —— 多くはここで解決。3 つとも排除しても遅いなら本当の劣化。データで引退を判断し、勘で早く替えず、減磁したモーターで成績を落とさない。',
-      'g16.related': '関連:清掃・注油か引退か —— <a href="../motor-wash-vs-break-in/">モーター洗浄 vs 慣らし</a>;本当に劣化かを確認 —— <a href="../motor-degradation-signs/">劣化の 8 サインと引退判定</a>;数値化するなら —— <a href="../motor-break-in-resistance-curve/">R 慣らしカーブ</a>。',
+      'g16.related': '<div class="guide-related-label">関連記事</div><ul><li>清掃・注油か引退か —— <a href="../motor-wash-vs-break-in/">モーター洗浄 vs 慣らし</a></li><li>本当に劣化かを確認 —— <a href="../motor-degradation-signs/">劣化の 8 サインと引退判定</a></li><li>数値化するなら —— <a href="../motor-break-in-resistance-curve/">R 慣らしカーブ</a></li></ul>',
       'g16.w1': '本記事は一般的なトラブル対処です。実際の低下は複数要因が重なることも多い(例:電池劣化 + 軽い堆積)。1 つずつ切り分け、1 回に 1 変数だけ変え、同じ電池・温度で比較すると判断が正確です。',
       'g17.tag': 'BENCHMARK · 15 機種テスト序章',
       'g17.title': '回すほど速くなるのは慣らし失敗のサイン?寿命まで 12 時間回してみた',
@@ -7431,7 +7447,7 @@
       'g17.h5': '次は:15 機種、同じ条件で',
       'g17.p7': 'この 12 時間の実験でシリーズのテスト枠組みが決まりました:同一機器、同一の慣らし・測定フロー、同じ 3 つの観測軸——<strong>同回転数電流(消費)、同電圧回転数、体質スコア</strong>。ここから同一条件でタミヤ 15 機種を 1 つずつ:各機種のゴールデン期はどこか、停止点はどれだけ早く来るか、慣らしすぎの代償はどれほどか——1 機種ずつ公開し、すべて<a href="../">ベンチマーク</a>に収録します。',
       'g17.note': '<strong>実験条件:</strong><br>1. Mach-Dash PRO<br>2. 連続低回転慣らし 12 時間<br>3. 全データは同一機器での実測<br>4. 物理根拠:直流モーターの電圧方程式 <code>V = I·R + Ke·ω</code><br>5. 体質スコアはタミヤ公式規格の参考値、判読はトレンド重視<br>6. 本記事の「体質スコア」は v3.8.x までの AI トルク予測の出力項目です;v3.9.0 からは<strong>トルク予測対照グラフ</strong>(この個体とタミヤ公式標準を同じグラフに描く)に変わり、単一のスコアとしては表示されません——本記事の数値は当時の実測で、トレンドの判読方法は変わりません。',
-      'g17.related': '関連:慣らしの全体フローとモード選択 —— <a href="../../guides/motor-break-in-guide/">モーター慣らし完全ガイド</a>;なぜ回転数を固定するのか —— <a href="../../guides/motor-break-in-speed-vs-voltage/">回転数固定、電圧固定にしない理由</a>;モーターが遅くなる 5 つの原因(減磁含む)—— <a href="../../guides/motor-slow-causes-fixes/">モーターが遅くなった原因と対処</a>。',
+      'g17.related': '<div class="guide-related-label">関連記事</div><ul><li>慣らしの全体フローとモード選択 —— <a href="../../guides/motor-break-in-guide/">モーター慣らし完全ガイド</a></li><li>なぜ回転数を固定するのか —— <a href="../../guides/motor-break-in-speed-vs-voltage/">回転数固定、電圧固定にしない理由</a></li><li>モーターが遅くなる 5 つの原因(減磁含む)—— <a href="../../guides/motor-slow-causes-fixes/">モーターが遅くなった原因と対処</a></li><li>洗浄が効くのかは <a href="../does-washing-a-motor-work/">モーター洗浄は効果ある?</a></li></ul>',
 
       'g18.tag': 'BENCHMARK · 劣化の分解',
       'g18.title': 'モーター洗浄は効果ある?洗浄後 11 時間の実測',
@@ -7459,7 +7475,7 @@
       'g18.p6': '<strong>洗う価値あり</strong>:長く使って鈍く感じ、データが「汚染型劣化」(起動が重い、消費増、でも回転はある)。一度洗えば汚れボーナスを取り戻し、しかも残る——コスパ良好。<strong>戻らない</strong>:ブラシ接触安定テストの散布がどうやっても安定せず、同回転数の無負荷電流 I0 も明らかに高いなら部品摩耗;洗っても汚れの小片しか戻らず本体は救えません——交換時です。',
       'g18.p6b': '自分がどちらか、どう見分ける?回転数だけでは分けられません——汚れも摩耗もモーターを鈍くします。3 つの数字で分解:<strong>体質スコア</strong>(本体の良否)、<strong>無負荷電流</strong>(汚れ具合)、<strong>接触安定度</strong>(摩耗の程度)。これこそ機器上の AI トルク予測が十数分で教えてくれることです。',
       'g18.note': '<strong>実験条件:</strong><br>1. Mach-Dash PRO(寿命テスト後の劣化サンプル)<br>2. 洗浄:溶剤で洗い、残液を除去し、ベアリングを再注油<br>3. 11 時間連続運転(約 470 回相当)、同一機器で実測<br>4. 測定:AI トルク予測 + ブラシ接触安定テスト + ベアリング抵抗テスト<br>5. 24〜26% は同型の正常個体の同一機器実測基準で、公式データではありません<br>6. 本記事の「体質スコア」と「接触安定度 CV」は v3.8.x までの出力項目です;v3.9.0 からトルク予測は<strong>対照グラフ</strong>、ブラシ接触安定は<strong>散布図</strong>になり、いずれも単一スコアは表示しません——本記事の数値は当時の実測で、トレンドの判読方法は変わりません。',
-      'g18.related': '関連:過慣らしがモーターを一歩ずつ削る様子は <a href="../when-to-stop-motor-break-in/">12 時間慣らしすぎ実験</a>;洗浄 vs 慣らしの考え方は <a href="../../guides/motor-wash-vs-break-in/">モーター洗浄 vs 慣らし</a>;モーターが遅くなる 5 つの原因は <a href="../../guides/motor-slow-causes-fixes/">モーターが遅くなった原因と対処</a>;洗浄が効くのかは <a href="../does-washing-a-motor-work/">モーター洗浄は効果ある?</a>。',
+      'g18.related': '<div class="guide-related-label">関連記事</div><ul><li>過慣らしがモーターを一歩ずつ削る様子は <a href="../when-to-stop-motor-break-in/">12 時間慣らしすぎ実験</a></li><li>洗浄 vs 慣らしの考え方は <a href="../../guides/motor-wash-vs-break-in/">モーター洗浄 vs 慣らし</a></li><li>モーターが遅くなる 5 つの原因は <a href="../../guides/motor-slow-causes-fixes/">モーターが遅くなった原因と対処</a></li></ul>',
 
       'g19.tag': 'BENCHMARK · 電気ショック修復',
       'g19.title': '死んだミニ四駆モーターは救える?電気ショック修復実験',
@@ -7479,7 +7495,7 @@
       'g19.h5': '五、で、引退モーターは救えるのか?',
       'g19.p5': '「どこで死んだか」による。<strong>磁力抜け</strong>(減磁)なら、再着磁の概念で一部は充て直せる——ただし一時的。<strong>接触面の摩耗</strong>(ブラシ・整流子)なら、ショックも洗浄も戻せない、引退させるべき。一言で:<strong>ショックは引退モーターの「磁力を蘇らせる」ことはできても、摩耗しきった接触面は救えない。</strong>自分がどちらか見分けるには?本体の AIトルク予測が十数分で分解してくれる——磁力の体質、消費電流、接触安定度、3 つの数字がそれぞれを語る。',
       'g19.note': '<strong>実験条件:</strong><br>1. マッハダッシュPRO(引退サンプル)<br>2. 高電圧ショック:外部電源 DC 9V／60 秒(パルスショック)<br>3. 洗浄:環境配慮型の脱脂剤、DC 1.5V／3 分、そしてベアリングに再注油<br>4. AIスマート慣らしで長時間運転 6.7 時間、同一の機械で実測<br>5. 測定:AIトルク予測 + ブラシ接触安定テスト + ベアリング抵抗テスト<br>6. 本記事の「体質スコア」は v3.8.x までの AI トルク予測の出力項目です;v3.9.0 からは<strong>トルク予測対照グラフ</strong>に変わり、単一スコアは表示されません——本記事の数値は当時の実測で、トレンドの判読方法は変わりません。',
-      'g19.related': '関連:同じサンプルのモーター洗浄実験は <a href="../does-washing-a-motor-work/">モーター洗浄は効果ある?</a>;慣らしすぎがモーターを削る話は <a href="../when-to-stop-motor-break-in/">12 時間慣らしすぎ実験</a>;洗浄 vs 慣らしの考え方は <a href="../../guides/motor-wash-vs-break-in/">モーター洗浄 vs 慣らし</a>。',
+      'g19.related': '<div class="guide-related-label">関連記事</div><ul><li>同じサンプルのモーター洗浄実験は <a href="../does-washing-a-motor-work/">モーター洗浄は効果ある?</a></li><li>慣らしすぎがモーターを削る話は <a href="../when-to-stop-motor-break-in/">12 時間慣らしすぎ実験</a></li><li>洗浄 vs 慣らしの考え方は <a href="../../guides/motor-wash-vs-break-in/">モーター洗浄 vs 慣らし</a></li></ul>',
       'g20.tag': 'BENCHMARK · 慣らし前後の実測',
       'g20.title': 'AI スマート慣らしの前後で何が変わった?新品モーター 1 個の同温対照実測',
       'g20.lead': '新品 Mach-Dash PRO 1 個:慣らし前に一度測定 → <strong>AI スマート慣らし(46 分、完了で自動停止)</strong> → 温度が慣らし前と同じ(27.5°C)に戻ってから再測定——<strong>同温対照こそ公平な比較</strong>。',
@@ -7529,7 +7545,7 @@
       'g20.flow1': '<strong>① 慣らし前測定</strong>:まず「AI トルク予測」を一度実行(約 1~2 分)、<strong>データと画面表示の温度を記録</strong>——これがこの個体の基準。',
       'g20.flow2': '<strong>② 慣らし</strong>:「AI スマート慣らし」で自動停止まで;または慣れた配合で——効果は同じく測れる。',
       'g20.flow3': '<strong>③ 慣らし後測定</strong>:<strong>温度が慣らし前と同じに戻ってから再測定</strong>(直後は熱く、すぐ測ると効果を過小評価)——同温対照で前後データが公平に比較できる。',
-      'g20.related': '関連記事:ちょうどで止める理由(過慣らしはモーターを傷める)は <a href="../when-to-stop-motor-break-in/">12 時間過慣らし実験</a>;どれだけ慣らすか・R 曲線の見方は <a href="../../guides/motor-break-in-resistance-curve/">560 回の慣らし曲線</a>;導電油の綺麗な数字は錯覚、は <a href="../../guides/conductive-oil-motor-break-in/">導電油でモーターは本当に慣らせるか</a>。詳しい操作は <a href="/ja/docs/user-manual/#standardflow">ユーザーマニュアル「標準慣らしフロー」</a>。',
+      'g20.related': '<div class="guide-related-label">関連記事</div><ul><li>ちょうどで止める理由(過慣らしはモーターを傷める)は <a href="../when-to-stop-motor-break-in/">12 時間過慣らし実験</a></li><li>どれだけ慣らすか・R 曲線の見方は <a href="../../guides/motor-break-in-resistance-curve/">560 回の慣らし曲線</a></li><li>導電油の綺麗な数字は錯覚、は <a href="../../guides/conductive-oil-motor-break-in/">導電油でモーターは本当に慣らせるか</a></li><li>詳しい操作は <a href="/ja/docs/user-manual/#standardflow">ユーザーマニュアル「標準慣らしフロー」</a></li></ul>',
 
       'g15.figsum': '<img class="chart" src="/images/conductive-oil-verdict_j.png" alt="導電オイルは本当に効くか:回転上昇は完了でない、皮膜切れで戻る、オイルが読みを汚すの3点" loading="lazy">',
     }

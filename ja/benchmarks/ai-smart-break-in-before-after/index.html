@@ -894,6 +894,22 @@
     color: var(--text-primary);
     font-weight: 600;
   }
+  /* 延伸閱讀:文末站內導引 —— 標籤沿用 .guide-tag 的樣式,清單沿用 .guide-article ul li */
+  .guide-related {
+    margin: 24px 0 0;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+  .guide-related-label {
+    display: inline-block;
+    color: var(--accent-cyan);
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+  .guide-related ul { margin: 0; }
+  .guide-related li { margin: 4px 0; }
   .guide-article code {
     background: var(--bg-tertiary);
     color: var(--accent-cyan);
@@ -1981,7 +1997,7 @@
     "@id": "https://motorlab-tw.github.io/ja/benchmarks/ai-smart-break-in-before-after/"
   },
   "datePublished": "2026-08-05",
-  "dateModified": "2026-08-05",
+  "dateModified": "2026-09-04",
   "author": {
     "@type": "Organization",
     "name": "MotorLab Team",
@@ -2024,7 +2040,7 @@
 }</script></head>
 <body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/ja/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/ja/">← ホームへ戻る</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/ja/">ホーム</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/ja/#guides">ベンチマーク</a><span class="sep">/</span><span class="current">慣らし前後の実測</span></nav><article class="guide-article">
 <span class="guide-tag" data-i18n="g20.tag">BENCHMARK · 慣らし前後の実測</span>
-<h1 data-i18n="g20.title">AI スマート慣らしの前後で何が変わった?新品モーター 1 個の同温対照実測</h1><p class="guide-byline">編集者:MotorLab Team</p><p class="guide-dates">公開 2026-08-05</p>
+<h1 data-i18n="g20.title">AI スマート慣らしの前後で何が変わった?新品モーター 1 個の同温対照実測</h1><p class="guide-byline">編集者:MotorLab Team</p><p class="guide-dates">公開 2026-08-05　·　更新 2026-09-04</p>
 <p class="guide-lead" data-i18n="g20.lead">新品 Mach-Dash PRO 1 個:慣らし前に一度測定 → <strong>AI スマート慣らし(46 分、完了で自動停止)</strong> → 温度が慣らし前と同じ(27.5°C)に戻ってから再測定——<strong>同温対照こそ公平な比較</strong>。</p>
 <div class="guide-stat3">
 <div class="s3card"><div class="s3v up" data-i18n="g20.b1v">+2.7%</div><div class="s3k" data-i18n="g20.b1k">同電圧での回転数<br/>(馴染んだ、最も直感的)</div></div>
@@ -2059,7 +2075,7 @@
 <p data-i18n="g20.flow1"><strong>① 慣らし前測定</strong>:まず「AI トルク予測」を一度実行(約 1~2 分)、<strong>データと画面表示の温度を記録</strong>——これがこの個体の基準。</p>
 <p data-i18n="g20.flow2"><strong>② 慣らし</strong>:「AI スマート慣らし」で自動停止まで;または慣れた配合で——効果は同じく測れる。</p>
 <p data-i18n="g20.flow3"><strong>③ 慣らし後測定</strong>:<strong>温度が慣らし前と同じに戻ってから再測定</strong>(直後は熱く、すぐ測ると効果を過小評価)——同温対照で前後データが公平に比較できる。</p>
-<p class="guide-related" data-i18n="g20.related">関連記事:ちょうどで止める理由(過慣らしはモーターを傷める)は <a href="../when-to-stop-motor-break-in/">12 時間過慣らし実験</a>;どれだけ慣らすか・R 曲線の見方は <a href="../../guides/motor-break-in-resistance-curve/">560 回の慣らし曲線</a>;導電油の綺麗な数字は錯覚、は <a href="../../guides/conductive-oil-motor-break-in/">導電油でモーターは本当に慣らせるか</a>。詳しい操作は <a href="/ja/docs/user-manual/#standardflow">ユーザーマニュアル「標準慣らしフロー」</a>。</p>
+<div class="guide-related" data-i18n="g20.related"><div class="guide-related-label">関連記事</div><ul><li>ちょうどで止める理由(過慣らしはモーターを傷める)は <a href="../when-to-stop-motor-break-in/">12 時間過慣らし実験</a></li><li>どれだけ慣らすか・R 曲線の見方は <a href="../../guides/motor-break-in-resistance-curve/">560 回の慣らし曲線</a></li><li>導電油の綺麗な数字は錯覚、は <a href="../../guides/conductive-oil-motor-break-in/">導電油でモーターは本当に慣らせるか</a></li><li>詳しい操作は <a href="/ja/docs/user-manual/#standardflow">ユーザーマニュアル「標準慣らしフロー」</a></li></ul></div>
 </article><div class="guide-pagination"><div class="left"><a href="/ja/benchmarks/revive-dead-motor-electric-shock/"><span class="label">← 前の記事</span><span>電気ショック修復</span></a></div><div class="center"><a href="https://motorlab-tw.github.io/ja/#guides"><span class="label">︿</span><span>ガイド一覧へ</span></a></div><div class="right"><span class="label">次の記事 →</span><span class="disabled">—</span></div></div></div></main><footer>
 <div class="container">
 <div class="footer-trademark" data-i18n="footer.trademark">「Mini 4WD」<sup>®</sup> および「ミニ四駆」<sup>®</sup> は株式会社タミヤ（TAMIYA, INC.）の登録商標です（日本商標登録番号 第 2168392 号）。MotorLab は独立系スタジオであり、株式会社タミヤとは一切の関連がなく、その許諾・協賛・推奨も受けていません。本サイトでの当該名称への言及は、製品の適用範囲を示す目的のみで行われており、すべての商標権は各権利者に帰属します。測定データと方法論は、著者自身の経験と実機による実測に基づいて作成されています。多言語版は AI 支援による翻訳です。</div>

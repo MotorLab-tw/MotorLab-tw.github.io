@@ -894,6 +894,22 @@
     color: var(--text-primary);
     font-weight: 600;
   }
+  /* 延伸閱讀:文末站內導引 —— 標籤沿用 .guide-tag 的樣式,清單沿用 .guide-article ul li */
+  .guide-related {
+    margin: 24px 0 0;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+  .guide-related-label {
+    display: inline-block;
+    color: var(--accent-cyan);
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+  .guide-related ul { margin: 0; }
+  .guide-related li { margin: 4px 0; }
   .guide-article code {
     background: var(--bg-tertiary);
     color: var(--accent-cyan);
@@ -1981,7 +1997,7 @@
     "@id": "https://motorlab-tw.github.io/ja/guides/motor-break-in-mistakes/"
   },
   "datePublished": "2026-05-22",
-  "dateModified": "2026-08-13",
+  "dateModified": "2026-09-04",
   "author": {
     "@type": "Organization",
     "name": "MotorLab Team",
@@ -2024,7 +2040,7 @@
 }</script></head>
 <body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/ja/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/ja/">← ホームへ戻る</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/ja/">ホーム</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/ja/#guides">ガイド</a><span class="sep">/</span><span class="current">5 つの慣らしミス</span></nav><article class="guide-article">
 <span class="guide-tag" data-i18n="g2.tag">GUIDE · 間違いを避ける</span>
-<h1 data-i18n="g2.title">アマチュアのモーター慣らしが失敗する理由:5 つのよくある間違い</h1><p class="guide-byline">編集者:MotorLab Team</p><p class="guide-dates">公開 2026-05-22　·　更新 2026-08-13</p>
+<h1 data-i18n="g2.title">アマチュアのモーター慣らしが失敗する理由:5 つのよくある間違い</h1><p class="guide-byline">編集者:MotorLab Team</p><p class="guide-dates">公開 2026-05-22　·　更新 2026-09-04</p>
 <p class="guide-lead" data-i18n="g2.lead">ミニ四駆に出戻ったベテランや初心者の多くが、「モーター慣らしには乾電池で適当に回せばいい」と聞いてやった結果、モーター焼損か速度が出ないかで終わります。本記事は最もよくある 5 つの慣らしミスと正しい手順を整理します。</p>
 <h2 data-i18n="g2.h1">間違い 1:電圧過大・時間過長</h2>
 <p data-i18n="g2.p1">最もよくある間違いは<strong>「乾電池(1.5V × 2 = 3V)でモーターを 30 分間ぶっ通しで回す」</strong>です。一見合理的に見えますが、実際の結果は:</p>
@@ -2072,7 +2088,7 @@
 <div class="guide-tip">
 <p data-i18n="g2.t5">各モーターに対し<strong>健康指紋(Health Fingerprint)</strong>を構築することを推奨—標準条件下での電流、回転数、温度上昇、振動スペクトルを記録します。以降いつでも比較可能で、モーター状態を精密に判定できます。これは MotorLab PRO 内蔵の AI 健康管理の核心機能でもあります。</p>
 </div>
-<p class="guide-related" data-i18n="g2.related">関連:まず慣らしを正しく —— <a href="../motor-break-in-guide/">モーター慣らし完全ガイド</a>;もう傷めてしまった?—— <a href="../motor-degradation-signs/">劣化の 8 サインと引退判定</a>;洗うか引退か —— <a href="../motor-wash-vs-break-in/">モーター洗浄 vs 慣らし</a>。</p>
+<div class="guide-related" data-i18n="g2.related"><div class="guide-related-label">関連記事</div><ul><li>まず慣らしを正しく —— <a href="../motor-break-in-guide/">モーター慣らし完全ガイド</a></li><li>もう傷めてしまった?—— <a href="../motor-degradation-signs/">劣化の 8 サインと引退判定</a></li><li>洗うか引退か —— <a href="../motor-wash-vs-break-in/">モーター洗浄 vs 慣らし</a></li></ul></div>
 </article><div class="guide-pagination"><div class="left"><a href="/ja/guides/motor-break-in-guide/"><span class="label">← 前の記事</span><span>モーター慣らし完全ガイド</span></a></div><div class="center"><a href="https://motorlab-tw.github.io/ja/#guides"><span class="label">︿</span><span>ガイド一覧へ</span></a></div><div class="right"><a href="/ja/guides/tamiya-motor-specs/"><span class="label">次の記事 →</span><span>タミヤ モーター速査</span></a></div></div></div></main><footer>
 <div class="container">
 <div class="footer-trademark" data-i18n="footer.trademark">「Mini 4WD」<sup>®</sup> および「ミニ四駆」<sup>®</sup> は株式会社タミヤ（TAMIYA, INC.）の登録商標です（日本商標登録番号 第 2168392 号）。MotorLab は独立系スタジオであり、株式会社タミヤとは一切の関連がなく、その許諾・協賛・推奨も受けていません。本サイトでの当該名称への言及は、製品の適用範囲を示す目的のみで行われており、すべての商標権は各権利者に帰属します。測定データと方法論は、著者自身の経験と実機による実測に基づいて作成されています。多言語版は AI 支援による翻訳です。</div>

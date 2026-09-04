@@ -894,6 +894,22 @@
     color: var(--text-primary);
     font-weight: 600;
   }
+  /* 延伸閱讀:文末站內導引 —— 標籤沿用 .guide-tag 的樣式,清單沿用 .guide-article ul li */
+  .guide-related {
+    margin: 24px 0 0;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+  .guide-related-label {
+    display: inline-block;
+    color: var(--accent-cyan);
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+  .guide-related ul { margin: 0; }
+  .guide-related li { margin: 4px 0; }
   .guide-article code {
     background: var(--bg-tertiary);
     color: var(--accent-cyan);
@@ -1981,7 +1997,7 @@
     "@id": "https://motorlab-tw.github.io/guides/motor-break-in-speed-vs-voltage/"
   },
   "datePublished": "2026-07-14",
-  "dateModified": "2026-07-17",
+  "dateModified": "2026-09-04",
   "author": {
     "@type": "Organization",
     "name": "MotorLab Team",
@@ -2024,7 +2040,7 @@
 }</script></head>
 <body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/">← 回首頁</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/">首頁</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/#guides">教學</a><span class="sep">/</span><span class="current">控速 vs 控壓</span></nav><article class="guide-article">
 <span class="guide-tag" data-i18n="g14.tag">METHODOLOGY · 磨合控制</span>
-<h1 data-i18n="g14.title">為什麼磨馬達要鎖轉速,不鎖電壓?</h1><p class="guide-byline">編輯者:MotorLab Team</p><p class="guide-dates">發表 2026-07-14　·　更新 2026-07-17</p>
+<h1 data-i18n="g14.title">為什麼磨馬達要鎖轉速,不鎖電壓?</h1><p class="guide-byline">編輯者:MotorLab Team</p><p class="guide-dates">發表 2026-07-14　·　更新 2026-09-04</p>
 <p class="guide-lead" data-i18n="g14.lead">幾乎所有磨馬達的做法,都是「設一個電壓」讓它跑 —— 定電壓磨合。轉速?頂多拿來「量」,不拿來「控」。但從物理看,真正決定磨合品質的是<strong>轉速</strong>(接觸面的滑動速度),不是電壓。這篇拆解:磨馬達控電壓 vs 控轉速,差在哪。</p>
 <figure data-i18n="g14.figsum"><img alt="為什麼磨馬達要鎖轉速不鎖電壓:電壓只是代理、鎖電壓會漂、鎖轉速才鎖住磨合條件三重點" class="chart" loading="lazy" src="/images/fixed-speed-break-in-key-points_c.png"/></figure>
 <h2 data-i18n="g14.h1">磨合到底在磨什麼</h2>
@@ -2052,7 +2068,7 @@
 <div class="guide-tip">
 <p data-i18n="g14.key">一句話:磨合品質由接觸面的<strong>滑動速度</strong>決定,而滑動速度就是轉速。控電壓 = 控一個會漂的代理;控轉速 = 直接控住真正在磨接觸面的物理量。要磨得<strong>準、可重現、跨馬達可比</strong>,物理上該鎖的是轉速。</p>
 </div>
-<p data-i18n="g14.related">延伸閱讀:磨合進度怎麼從數據看,見 <a href="../motor-break-in-resistance-curve/">R 磨合曲線</a>;先挑出值得磨的馬達,見 <a href="../motor-selection-before-break-in/">先選別,後磨合</a>;磨合的完整原理與流程,見 <a href="../motor-break-in-guide/">馬達磨合完整指南</a>。</p>
+<div class="guide-related" data-i18n="g14.related"><div class="guide-related-label">延伸閱讀</div><ul><li>磨合進度怎麼從數據看,見 <a href="../motor-break-in-resistance-curve/">R 磨合曲線</a></li><li>先挑出值得磨的馬達,見 <a href="../motor-selection-before-break-in/">先選別,後磨合</a></li><li>磨合的完整原理與流程,見 <a href="../motor-break-in-guide/">馬達磨合完整指南</a></li></ul></div>
 <div class="guide-warning">
 <p data-i18n="g14.w1">物理框架為概念說明,實際磨合仍牽涉電刷類型、時間、溫度、冷卻等變數。控速的效益在於「把磨合條件從會漂的代理,換成直接可控的物理量」,而非保證單一數值最佳。</p>
 </div>

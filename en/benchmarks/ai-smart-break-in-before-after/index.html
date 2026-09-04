@@ -894,6 +894,22 @@
     color: var(--text-primary);
     font-weight: 600;
   }
+  /* 延伸閱讀:文末站內導引 —— 標籤沿用 .guide-tag 的樣式,清單沿用 .guide-article ul li */
+  .guide-related {
+    margin: 24px 0 0;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+  .guide-related-label {
+    display: inline-block;
+    color: var(--accent-cyan);
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+  .guide-related ul { margin: 0; }
+  .guide-related li { margin: 4px 0; }
   .guide-article code {
     background: var(--bg-tertiary);
     color: var(--accent-cyan);
@@ -1981,7 +1997,7 @@
     "@id": "https://motorlab-tw.github.io/en/benchmarks/ai-smart-break-in-before-after/"
   },
   "datePublished": "2026-08-05",
-  "dateModified": "2026-08-05",
+  "dateModified": "2026-09-04",
   "author": {
     "@type": "Organization",
     "name": "MotorLab Team",
@@ -2024,7 +2040,7 @@
 }</script></head>
 <body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/en/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/en/">← Back to home</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/en/">Home</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/en/#guides">Benchmarks</a><span class="sep">/</span><span class="current">Break-in Before/After</span></nav><article class="guide-article">
 <span class="guide-tag" data-i18n="g20.tag">BENCHMARK · Break-in Before/After</span>
-<h1 data-i18n="g20.title">AI Smart Break-in, Before &amp; After: A Same-Temperature Test on One Brand-New Motor</h1><p class="guide-byline">Edited by MotorLab Team</p><p class="guide-dates">Published 2026-08-05</p>
+<h1 data-i18n="g20.title">AI Smart Break-in, Before &amp; After: A Same-Temperature Test on One Brand-New Motor</h1><p class="guide-byline">Edited by MotorLab Team</p><p class="guide-dates">Published 2026-08-05　·　Updated 2026-09-04</p>
 <p class="guide-lead" data-i18n="g20.lead">One brand-new Mach-Dash PRO: measured once before break-in → <strong>AI Smart Break-in (46 min, stops itself when done)</strong> → measured again after the temperature returned to the same as before (27.5°C) — <strong>same-temperature comparison, a fair one</strong>.</p>
 <div class="guide-stat3">
 <div class="s3card"><div class="s3v up" data-i18n="g20.b1v">+2.7%</div><div class="s3k" data-i18n="g20.b1k">RPM at the same voltage<br/>(bedded in — the most direct sign)</div></div>
@@ -2059,7 +2075,7 @@
 <p data-i18n="g20.flow1"><strong>1. Measure before</strong>: run "AI Torque Prediction" once (about 1~2 min), <strong>noting the data and the on-screen temperature</strong> — this is the motor's baseline.</p>
 <p data-i18n="g20.flow2"><strong>2. Break in</strong>: let "AI Smart Break-in" run to auto-stop; or break in with your own recipe — the effect is measurable either way.</p>
 <p data-i18n="g20.flow3"><strong>3. Measure after</strong>: <strong>wait for the temperature to return to the same as before, then measure again</strong> (it's hot right after, so measuring immediately underestimates the effect) — same-temperature comparison makes the before/after data fairly comparable.</p>
-<p class="guide-related" data-i18n="g20.related">Further reading: why to stop right at the sweet spot (over-break-in harms the motor), see <a href="../when-to-stop-motor-break-in/">the 12-hour over-break-in test</a>; how long to break in and how to read the R curve, see <a href="../../guides/motor-break-in-resistance-curve/">the 560-run break-in curve</a>; why conductive oil's pretty numbers are an illusion, see <a href="../../guides/conductive-oil-motor-break-in/">does conductive oil really work</a>. For the exact steps, see the <a href="/en/docs/user-manual/#standardflow">user manual "Standard Break-in Flow"</a>.</p>
+<div class="guide-related" data-i18n="g20.related"><div class="guide-related-label">Further reading</div><ul><li>why to stop right at the sweet spot (over-break-in harms the motor), see <a href="../when-to-stop-motor-break-in/">the 12-hour over-break-in test</a></li><li>how long to break in and how to read the R curve, see <a href="../../guides/motor-break-in-resistance-curve/">the 560-run break-in curve</a></li><li>why conductive oil's pretty numbers are an illusion, see <a href="../../guides/conductive-oil-motor-break-in/">does conductive oil really work</a></li><li>For the exact steps, see the <a href="/en/docs/user-manual/#standardflow">user manual "Standard Break-in Flow"</a></li></ul></div>
 </article><div class="guide-pagination"><div class="left"><a href="/en/benchmarks/revive-dead-motor-electric-shock/"><span class="label">← Previous</span><span>Shock Repair</span></a></div><div class="center"><a href="https://motorlab-tw.github.io/en/#guides"><span class="label">︿</span><span>Back to guides</span></a></div><div class="right"><span class="label">Next →</span><span class="disabled">—</span></div></div></div></main><footer>
 <div class="container">
 <div class="footer-trademark" data-i18n="footer.trademark">"Mini 4WD"<sup>®</sup> and "ミニ四駆"<sup>®</sup> are registered trademarks of TAMIYA, INC. (Japan Trademark Registration No. 2168392). MotorLab is an independent studio and has no affiliation with, authorization from, sponsorship by, or endorsement from TAMIYA, INC. References to these names on this site are made solely to indicate product compatibility. All trademark rights belong to their respective owners. Measurement data and methodology are produced by the author through hands-on experience and instrument testing; the multilingual versions are translated with AI assistance.</div>

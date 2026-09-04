@@ -894,6 +894,22 @@
     color: var(--text-primary);
     font-weight: 600;
   }
+  /* 延伸閱讀:文末站內導引 —— 標籤沿用 .guide-tag 的樣式,清單沿用 .guide-article ul li */
+  .guide-related {
+    margin: 24px 0 0;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+  .guide-related-label {
+    display: inline-block;
+    color: var(--accent-cyan);
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+  .guide-related ul { margin: 0; }
+  .guide-related li { margin: 4px 0; }
   .guide-article code {
     background: var(--bg-tertiary);
     color: var(--accent-cyan);
@@ -1981,7 +1997,7 @@
     "@id": "https://motorlab-tw.github.io/benchmarks/ai-smart-break-in-before-after/"
   },
   "datePublished": "2026-08-05",
-  "dateModified": "2026-08-05",
+  "dateModified": "2026-09-04",
   "author": {
     "@type": "Organization",
     "name": "MotorLab Team",
@@ -2024,7 +2040,7 @@
 }</script></head>
 <body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/">← 回首頁</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/">首頁</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/#guides">效能對比</a><span class="sep">/</span><span class="current">AI 磨合前後實測</span></nav><article class="guide-article">
 <span class="guide-tag" data-i18n="g20.tag">BENCHMARK · 磨合前後實測</span>
-<h1 data-i18n="g20.title">AI 智慧磨合前後,數據變了什麼?一顆全新馬達的同溫對照實測</h1><p class="guide-byline">編輯者:MotorLab Team</p><p class="guide-dates">發表 2026-08-05</p>
+<h1 data-i18n="g20.title">AI 智慧磨合前後,數據變了什麼?一顆全新馬達的同溫對照實測</h1><p class="guide-byline">編輯者:MotorLab Team</p><p class="guide-dates">發表 2026-08-05　·　更新 2026-09-04</p>
 <p class="guide-lead" data-i18n="g20.lead">一顆全新 Mach-Dash PRO:磨合前量一次 → <strong>AI 智慧磨合(46 分鐘,磨好自動停)</strong> → 等溫度回到與磨前相同(27.5°C)再量一次——<strong>同溫對照,公平比較</strong>。</p>
 <div class="guide-stat3">
 <div class="s3card"><div class="s3v up" data-i18n="g20.b1v">+2.7%</div><div class="s3k" data-i18n="g20.b1k">同電壓下的轉速<br/>(磨開了,最直觀)</div></div>
@@ -2059,7 +2075,7 @@
 <p data-i18n="g20.flow1"><strong>① 磨前量測</strong>:先跑一次「AI 扭力預測」(約 1~2 分鐘),<strong>記下數據與畫面顯示的溫度</strong>——這是這顆的基準。</p>
 <p data-i18n="g20.flow2"><strong>② 磨合</strong>:用「AI 智慧磨合」讓它磨到自動停;或用你慣用的配方磨——效果一樣能被量出來。</p>
 <p data-i18n="g20.flow3"><strong>③ 磨後量測</strong>:<strong>等溫度降回與磨前相同再量一次</strong>(剛磨完是熱的,直接量會低估效果)——同溫對照,前後數據才公平可比。</p>
-<p class="guide-related" data-i18n="g20.related">延伸閱讀:為什麼磨到剛好就要停(過磨會傷馬達),見 <a href="../when-to-stop-motor-break-in/">12 小時過磨實驗</a>;磨合要磨多久、R 曲線怎麼看,見 <a href="../../guides/motor-break-in-resistance-curve/">560 次磨合曲線</a>;導電油讓數字漂亮是假象,見 <a href="../../guides/conductive-oil-motor-break-in/">導電油磨馬達真的有效嗎</a>。詳細操作見 <a href="/docs/user-manual/#standardflow">使用者手冊「標準磨合流程」</a>。</p>
+<div class="guide-related" data-i18n="g20.related"><div class="guide-related-label">延伸閱讀</div><ul><li>為什麼磨到剛好就要停(過磨會傷馬達),見 <a href="../when-to-stop-motor-break-in/">12 小時過磨實驗</a></li><li>磨合要磨多久、R 曲線怎麼看,見 <a href="../../guides/motor-break-in-resistance-curve/">560 次磨合曲線</a></li><li>導電油讓數字漂亮是假象,見 <a href="../../guides/conductive-oil-motor-break-in/">導電油磨馬達真的有效嗎</a></li><li>詳細操作見 <a href="/docs/user-manual/#standardflow">使用者手冊「標準磨合流程」</a></li></ul></div>
 </article><div class="guide-pagination"><div class="left"><a href="/benchmarks/revive-dead-motor-electric-shock/"><span class="label">← 上一篇</span><span>電擊修復</span></a></div><div class="center"><a href="https://motorlab-tw.github.io/#guides"><span class="label">︿</span><span>回教學首頁</span></a></div><div class="right"><span class="label">下一篇 →</span><span class="disabled">—</span></div></div></div></main><footer>
 <div class="container">
 <div class="footer-trademark" data-i18n="footer.trademark">"Mini 4WD"<sup>®</sup> 與 "ミニ四駆"<sup>®</sup> 為株式会社タミヤ(TAMIYA, INC.)的註冊商標(日本商標登錄號 第 2168392 號)。MotorLab 為獨立工作室,與株式会社タミヤ無任何關聯,亦未受其授權、贊助或背書。本網站提及之相關名稱僅用於指涉產品適用範圍,所有商標權益歸原權利人所有。</div>

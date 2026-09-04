@@ -894,6 +894,22 @@
     color: var(--text-primary);
     font-weight: 600;
   }
+  /* 延伸閱讀:文末站內導引 —— 標籤沿用 .guide-tag 的樣式,清單沿用 .guide-article ul li */
+  .guide-related {
+    margin: 24px 0 0;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+  .guide-related-label {
+    display: inline-block;
+    color: var(--accent-cyan);
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+  .guide-related ul { margin: 0; }
+  .guide-related li { margin: 4px 0; }
   .guide-article code {
     background: var(--bg-tertiary);
     color: var(--accent-cyan);
@@ -1981,7 +1997,7 @@
     "@id": "https://motorlab-tw.github.io/en/guides/motor-break-in-speed-vs-voltage/"
   },
   "datePublished": "2026-07-14",
-  "dateModified": "2026-07-17",
+  "dateModified": "2026-09-04",
   "author": {
     "@type": "Organization",
     "name": "MotorLab Team",
@@ -2024,7 +2040,7 @@
 }</script></head>
 <body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/en/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/en/">← Back to home</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/en/">Home</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/en/#guides">Guides</a><span class="sep">/</span><span class="current">Speed vs Voltage</span></nav><article class="guide-article">
 <span class="guide-tag" data-i18n="g14.tag">METHODOLOGY · Break-in Control</span>
-<h1 data-i18n="g14.title">Why Break In a Motor at Fixed Speed, Not Fixed Voltage</h1><p class="guide-byline">Edited by MotorLab Team</p><p class="guide-dates">Published 2026-07-14　·　Updated 2026-07-17</p>
+<h1 data-i18n="g14.title">Why Break In a Motor at Fixed Speed, Not Fixed Voltage</h1><p class="guide-byline">Edited by MotorLab Team</p><p class="guide-dates">Published 2026-07-14　·　Updated 2026-09-04</p>
 <p class="guide-lead" data-i18n="g14.lead">Almost every break-in method sets a voltage and lets the motor run — fixed-voltage break-in. RPM? At most it gets measured, not controlled. But physically, break-in quality is set by <strong>RPM</strong> (the sliding speed at the contact face), not voltage. Here is fixed-voltage vs fixed-speed, and where they differ.</p>
 <figure data-i18n="g14.figsum"><img alt="Why lock RPM not voltage when breaking in a motor: voltage is a proxy, fixed voltage drifts, fixed RPM pins the condition down" class="chart" loading="lazy" src="/images/fixed-speed-break-in-key-points_e.png"/></figure>
 <h2 data-i18n="g14.h1">What break-in is actually grinding</h2>
@@ -2052,7 +2068,7 @@
 <div class="guide-tip">
 <p data-i18n="g14.key">In one line: break-in quality is set by the <strong>sliding speed</strong> at the contact face, and that sliding speed is RPM. Fixed voltage controls a proxy that drifts; fixed speed controls the physical variable that actually grinds the contact face. To break in <strong>precisely, reproducibly, and comparably across motors</strong>, the thing to lock — physically — is RPM.</p>
 </div>
-<p data-i18n="g14.related">Further reading: how to read break-in progress from data — <a href="../motor-break-in-resistance-curve/">the R break-in curve</a>; picking motors worth breaking in first — <a href="../motor-selection-before-break-in/">select before break-in</a>; the full physics and procedure — <a href="../motor-break-in-guide/">the complete break-in guide</a>.</p>
+<div class="guide-related" data-i18n="g14.related"><div class="guide-related-label">Further reading</div><ul><li>how to read break-in progress from data — <a href="../motor-break-in-resistance-curve/">the R break-in curve</a></li><li>picking motors worth breaking in first — <a href="../motor-selection-before-break-in/">select before break-in</a></li><li>the full physics and procedure — <a href="../motor-break-in-guide/">the complete break-in guide</a></li></ul></div>
 <div class="guide-warning">
 <p data-i18n="g14.w1">This physical framing is conceptual; real break-in still involves brush type, time, temperature and cooling. The benefit of fixed-speed is turning the break-in condition from a drifting proxy into a directly controllable physical variable — not a guarantee that any single value is optimal.</p>
 </div>

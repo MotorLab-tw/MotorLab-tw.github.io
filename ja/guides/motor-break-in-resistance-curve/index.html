@@ -894,6 +894,22 @@
     color: var(--text-primary);
     font-weight: 600;
   }
+  /* 延伸閱讀:文末站內導引 —— 標籤沿用 .guide-tag 的樣式,清單沿用 .guide-article ul li */
+  .guide-related {
+    margin: 24px 0 0;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+  .guide-related-label {
+    display: inline-block;
+    color: var(--accent-cyan);
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+  .guide-related ul { margin: 0; }
+  .guide-related li { margin: 4px 0; }
   .guide-article code {
     background: var(--bg-tertiary);
     color: var(--accent-cyan);
@@ -1981,7 +1997,7 @@
     "@id": "https://motorlab-tw.github.io/ja/guides/motor-break-in-resistance-curve/"
   },
   "datePublished": "2026-07-07",
-  "dateModified": "2026-07-07",
+  "dateModified": "2026-09-04",
   "author": {
     "@type": "Organization",
     "name": "MotorLab Team",
@@ -2024,7 +2040,7 @@
 }</script></head>
 <body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/ja/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/ja/">← ホームへ戻る</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/ja/">ホーム</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/ja/#guides">ガイド</a><span class="sep">/</span><span class="current">慣らし曲線実測</span></nav><article class="guide-article">
 <span class="guide-tag" data-i18n="g13.tag">METHODOLOGY · 慣らし実測</span>
-<h1 data-i18n="g13.title">モーター慣らしはどれくらい必要?連続 560 回計測が答える</h1><p class="guide-byline">編集者:MotorLab Team</p><p class="guide-dates">公開 2026-07-07</p>
+<h1 data-i18n="g13.title">モーター慣らしはどれくらい必要?連続 560 回計測が答える</h1><p class="guide-byline">編集者:MotorLab Team</p><p class="guide-dates">公開 2026-07-07　·　更新 2026-09-04</p>
 <p class="guide-lead" data-i18n="g13.lead">同じ Mach-Dash PRO を、回転数ロック・低電圧・無負荷の条件で連続 560 回計測し、内部抵抗(ブラシと整流子の接触状態を反映)の累積回数に対する変化を 1 本の曲線に描いた。この線はモーターの全行程 —— 新品から慣らし完了、そして劣化まで —— を記録する。読めば、手元のモーターが今どの段階か(まだ慣らしが必要・最良状態・ピーク過ぎ)を判断できる。</p>
 <p data-i18n="g13.lead2">ミニ四駆モーターの慣らしは多くが感覚と経験頼り;数百回連続・ライフサイクル全体にわたる計測データは、ホビー界でほぼ公開前例がない。以下は同じモーターを連続 560 回計測した実録である。</p>
 <p data-i18n="g13.hook">「慣らしは接触面を広げ、電流が流れやすくなってモーターが速くなる」—— これがホビー界共通の直感だ。だからこの実録は少し戸惑わせるかもしれない:接触状態を表す R の線は、慣らしとともに<strong>上昇</strong>する。では慣らしはモーターを良くするのか、悪くするのか?鍵はこうだ:この R が測るのはブラシと整流子の<strong>接触状態</strong>であって、モーターの速さではない;その上昇は悪い知らせではなく、接触面が定まりつつある直接の痕跡だ。次の図が、それを分解して見せる。</p>
@@ -2041,7 +2057,7 @@
 <div class="guide-tip">
 <p data-i18n="g13.cond">モーター:Mach-Dash PRO<br/>計測方法:PID 回転数ロック、無負荷、全工程 1.2V 以下の低電圧<br/>5 段階回転数:4,000 / 6,000 / 8,000 / 10,000 / 12,000 RPM<br/>1 回約 1.5 分、計 560 回連続計測</p>
 </div>
-<p data-i18n="g13.related">関連:まず慣らす価値のある個体を選別 —— <a href="../motor-selection-before-break-in/">選別してから慣らす</a>;完全な原理と 10 段階フロー —— <a href="../motor-break-in-guide/">モーター慣らし完全ガイド</a>;測定・比較・健康判定の全体フレームワーク —— <a href="../motor-analysis-methodology/">三本柱方法論</a>;R の継続的な上昇は劣化のサイン —— 引退判定は <a href="../motor-degradation-signs/">劣化の 8 サイン</a>。</p>
+<div class="guide-related" data-i18n="g13.related"><div class="guide-related-label">関連記事</div><ul><li>まず慣らす価値のある個体を選別 —— <a href="../motor-selection-before-break-in/">選別してから慣らす</a></li><li>完全な原理と 10 段階フロー —— <a href="../motor-break-in-guide/">モーター慣らし完全ガイド</a></li><li>測定・比較・健康判定の全体フレームワーク —— <a href="../motor-analysis-methodology/">三本柱方法論</a></li><li>R の継続的な上昇は劣化のサイン —— 引退判定は <a href="../motor-degradation-signs/">劣化の 8 サイン</a></li></ul></div>
 <div class="guide-warning">
 <p data-i18n="g13.w1">この曲線は<strong>同一モーター・同一計測条件下の相対トレンド</strong>を反映するものであり、絶対抵抗値ではない;機台や条件をまたいだ絶対値の直接比較は不可。その価値は、単一モーターの慣らし進行と劣化を読み取れる時系列に変える点にある。</p>
 </div>

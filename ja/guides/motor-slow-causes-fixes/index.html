@@ -894,6 +894,22 @@
     color: var(--text-primary);
     font-weight: 600;
   }
+  /* 延伸閱讀:文末站內導引 —— 標籤沿用 .guide-tag 的樣式,清單沿用 .guide-article ul li */
+  .guide-related {
+    margin: 24px 0 0;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+  .guide-related-label {
+    display: inline-block;
+    color: var(--accent-cyan);
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+  .guide-related ul { margin: 0; }
+  .guide-related li { margin: 4px 0; }
   .guide-article code {
     background: var(--bg-tertiary);
     color: var(--accent-cyan);
@@ -1981,7 +1997,7 @@
     "@id": "https://motorlab-tw.github.io/ja/guides/motor-slow-causes-fixes/"
   },
   "datePublished": "2026-07-17",
-  "dateModified": "2026-08-13",
+  "dateModified": "2026-09-04",
   "author": {
     "@type": "Organization",
     "name": "MotorLab Team",
@@ -2024,7 +2040,7 @@
 }</script></head>
 <body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/ja/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/ja/">← ホームへ戻る</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/ja/">ホーム</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/ja/#guides">ガイド</a><span class="sep">/</span><span class="current">モーターが遅い</span></nav><article class="guide-article">
 <span class="guide-tag" data-i18n="g16.tag">GUIDE · トラブル対処</span>
-<h1 data-i18n="g16.title">モーターが遅い?まず「一時的」か「劣化」かを見分ける</h1><p class="guide-byline">編集者:MotorLab Team</p><p class="guide-dates">公開 2026-07-17　·　更新 2026-08-13</p>
+<h1 data-i18n="g16.title">モーターが遅い?まず「一時的」か「劣化」かを見分ける</h1><p class="guide-byline">編集者:MotorLab Team</p><p class="guide-dates">公開 2026-07-17　·　更新 2026-09-04</p>
 <p class="guide-lead" data-i18n="g16.lead">モーターが急に遅く・加速が鈍く・音が変わった —— それは必ずしも寿命ではありません。「遅くなった」原因は 2 種類:<strong>可逆</strong>(清掃や電池交換で戻る)と<strong>不可逆</strong>(接触面や磁力の損傷で戻らない)。買い替える前に、この 5 つの原因を順に切り分けましょう。</p>
 <h2 data-i18n="g16.h1">なぜ遅くなる:まず 2 種類に分ける</h2>
 <p data-i18n="g16.p1">遅いモーターの体感は似ています(回転低下・押しが弱い・加速が鈍い)が、根本原因は全く違います。<strong>可逆</strong>:電池・汚れ・潤滑 —— 直せば回転は戻る。<strong>不可逆</strong>:磁力の低下、ブラシ / 整流子の摩耗 —— 物理損傷で引退のみ。順序は必ず<strong>まず可逆を排除、次に不可逆を認める</strong>。救えるモーターを捨てず、死にかけを本番に出さないために。</p>
@@ -2046,7 +2062,7 @@
 <div class="guide-tip">
 <p data-i18n="g16.key">一言:モーターが遅くなったら、<strong>まず電池・汚れ・潤滑</strong>の 3 つを排除 —— 多くはここで解決。3 つとも排除しても遅いなら本当の劣化。データで引退を判断し、勘で早く替えず、減磁したモーターで成績を落とさない。</p>
 </div>
-<p class="guide-related" data-i18n="g16.related">関連:清掃・注油か引退か —— <a href="../motor-wash-vs-break-in/">モーター洗浄 vs 慣らし</a>;本当に劣化かを確認 —— <a href="../motor-degradation-signs/">劣化の 8 サインと引退判定</a>;数値化するなら —— <a href="../motor-break-in-resistance-curve/">R 慣らしカーブ</a>。</p>
+<div class="guide-related" data-i18n="g16.related"><div class="guide-related-label">関連記事</div><ul><li>清掃・注油か引退か —— <a href="../motor-wash-vs-break-in/">モーター洗浄 vs 慣らし</a></li><li>本当に劣化かを確認 —— <a href="../motor-degradation-signs/">劣化の 8 サインと引退判定</a></li><li>数値化するなら —— <a href="../motor-break-in-resistance-curve/">R 慣らしカーブ</a></li></ul></div>
 <div class="guide-warning">
 <p data-i18n="g16.w1">本記事は一般的なトラブル対処です。実際の低下は複数要因が重なることも多い(例:電池劣化 + 軽い堆積)。1 つずつ切り分け、1 回に 1 変数だけ変え、同じ電池・温度で比較すると判断が正確です。</p>
 </div>

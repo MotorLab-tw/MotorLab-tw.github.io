@@ -234,7 +234,7 @@ GUIDES = [
         "slug": "motor-break-in-guide",
         "key": "g1",
         "published": "2026-05-22",
-        "updated": "2026-08-13",
+        "updated": "2026-09-04",
         "i18n": {
             "zh": {
                 "title": "四驅車馬達磨合完全指南:從原理到實作 | MotorLab",
@@ -263,7 +263,7 @@ GUIDES = [
         "slug": "motor-break-in-mistakes",
         "key": "g2",
         "published": "2026-05-22",
-        "updated": "2026-08-13",
+        "updated": "2026-09-04",
         "i18n": {
             "zh": {
                 "title": "業餘車手磨合馬達總是失敗?5 個常見錯誤與正確做法 | MotorLab",
@@ -321,7 +321,7 @@ GUIDES = [
         "slug": "motor-wash-vs-break-in",
         "key": "g4",
         "published": "2026-05-22",
-        "updated": "2026-07-14",
+        "updated": "2026-09-04",
         "i18n": {
             "zh": {
                 "title": "洗馬達 vs 磨合馬達:差別在哪?什麼時候做? | MotorLab",
@@ -437,7 +437,7 @@ GUIDES = [
         "slug": "motor-degradation-signs",
         "key": "g8",
         "published": "2026-05-24",
-        "updated": "2026-08-13",
+        "updated": "2026-09-04",
         "i18n": {
             "zh": {
                 "title": "四驅車馬達衰退的 8 個徵兆與退役判定門檻 | MotorLab",
@@ -560,7 +560,7 @@ GUIDES = [
         "slug": "motor-selection-before-break-in",
         "key": "g12",
         "published": "2026-07-02",
-        "updated": "2026-07-02",
+        "updated": "2026-09-04",
         "type": "guides",
         "i18n": {
             "zh": {
@@ -591,7 +591,7 @@ GUIDES = [
         "slug": "motor-break-in-resistance-curve",
         "key": "g13",
         "published": "2026-07-07",
-        "updated": "2026-07-07",
+        "updated": "2026-09-04",
         "type": "guides",
         "i18n": {
             "zh": {
@@ -622,7 +622,7 @@ GUIDES = [
         "slug": "motor-break-in-speed-vs-voltage",
         "key": "g14",
         "published": "2026-07-14",
-        "updated": "2026-07-17",
+        "updated": "2026-09-04",
         "type": "guides",
         "i18n": {
             "zh": {
@@ -683,7 +683,7 @@ GUIDES = [
         "slug": "motor-slow-causes-fixes",
         "key": "g16",
         "published": "2026-07-17",
-        "updated": "2026-08-13",
+        "updated": "2026-09-04",
         "type": "guides",
         "i18n": {
             "zh": {
@@ -715,7 +715,7 @@ GUIDES = [
         "slug": "when-to-stop-motor-break-in",
         "key": "g17",
         "published": "2026-07-23",
-        "updated": "2026-08-22",
+        "updated": "2026-09-04",
         "type": "benchmarks",
         "i18n": {
             "zh": {
@@ -746,7 +746,7 @@ GUIDES = [
         "slug": "does-washing-a-motor-work",
         "key": "g18",
         "published": "2026-07-24",
-        "updated": "2026-08-22",
+        "updated": "2026-09-04",
         "type": "benchmarks",
         "i18n": {
             "zh": {
@@ -777,7 +777,7 @@ GUIDES = [
         "slug": "revive-dead-motor-electric-shock",
         "key": "g19",
         "published": "2026-07-27",
-        "updated": "2026-08-22",
+        "updated": "2026-09-04",
         "type": "benchmarks",
         "i18n": {
             "zh": {
@@ -808,7 +808,7 @@ GUIDES = [
         "slug": "ai-smart-break-in-before-after",
         "key": "g20",
         "published": "2026-08-05",
-        "updated": "2026-08-05",
+        "updated": "2026-09-04",
         "type": "benchmarks",
         "i18n": {
             "zh": {

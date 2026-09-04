@@ -894,6 +894,22 @@
     color: var(--text-primary);
     font-weight: 600;
   }
+  /* 延伸閱讀:文末站內導引 —— 標籤沿用 .guide-tag 的樣式,清單沿用 .guide-article ul li */
+  .guide-related {
+    margin: 24px 0 0;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+  .guide-related-label {
+    display: inline-block;
+    color: var(--accent-cyan);
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+  .guide-related ul { margin: 0; }
+  .guide-related li { margin: 4px 0; }
   .guide-article code {
     background: var(--bg-tertiary);
     color: var(--accent-cyan);
@@ -1981,7 +1997,7 @@
     "@id": "https://motorlab-tw.github.io/guides/motor-break-in-mistakes/"
   },
   "datePublished": "2026-05-22",
-  "dateModified": "2026-08-13",
+  "dateModified": "2026-09-04",
   "author": {
     "@type": "Organization",
     "name": "MotorLab Team",
@@ -2024,7 +2040,7 @@
 }</script></head>
 <body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/">← 回首頁</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/">首頁</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/#guides">教學</a><span class="sep">/</span><span class="current">5 個常見磨合錯誤</span></nav><article class="guide-article">
 <span class="guide-tag" data-i18n="g2.tag">GUIDE · 避免錯誤</span>
-<h1 data-i18n="g2.title">為什麼業餘車手磨合馬達總是失敗?5 個常見錯誤</h1><p class="guide-byline">編輯者:MotorLab Team</p><p class="guide-dates">發表 2026-05-22　·　更新 2026-08-13</p>
+<h1 data-i18n="g2.title">為什麼業餘車手磨合馬達總是失敗?5 個常見錯誤</h1><p class="guide-byline">編輯者:MotorLab Team</p><p class="guide-dates">發表 2026-05-22　·　更新 2026-09-04</p>
 <p class="guide-lead" data-i18n="g2.lead">許多新手回鍋玩四驅車,聽說要磨合馬達就拿乾電池亂跑,結果不是馬達燒掉就是跑不快。本文整理最常見的 5 個磨合錯誤與正確做法。</p>
 <h2 data-i18n="g2.h1">錯誤 1:電壓過高、時間過長</h2>
 <p data-i18n="g2.p1">最常見的錯誤就是<strong>「拿乾電池(1.5V × 2 = 3V)直接讓馬達狂跑半小時」</strong>。看起來合理,實際後果是:</p>
@@ -2072,7 +2088,7 @@
 <div class="guide-tip">
 <p data-i18n="g2.t5">建議建立每顆馬達的<strong>健康指紋(Health Fingerprint)</strong>—記錄它在標準條件下的電流、轉速、溫升、振動頻譜。後續任何時間都可比對,精準判斷馬達狀態。這也是 MotorLab PRO 內建 AI 健康管理的核心功能。</p>
 </div>
-<p class="guide-related" data-i18n="g2.related">延伸閱讀:先把磨合做對,見 <a href="../motor-break-in-guide/">馬達磨合完整指南</a>;馬達已經磨壞了?看 <a href="../motor-degradation-signs/">馬達衰退的 8 個徵兆與退役判定</a>;該洗還是該退,見 <a href="../motor-wash-vs-break-in/">洗馬達 vs 磨合</a>。</p>
+<div class="guide-related" data-i18n="g2.related"><div class="guide-related-label">延伸閱讀</div><ul><li>先把磨合做對,見 <a href="../motor-break-in-guide/">馬達磨合完整指南</a></li><li>馬達已經磨壞了?看 <a href="../motor-degradation-signs/">馬達衰退的 8 個徵兆與退役判定</a></li><li>該洗還是該退,見 <a href="../motor-wash-vs-break-in/">洗馬達 vs 磨合</a></li></ul></div>
 </article><div class="guide-pagination"><div class="left"><a href="/guides/motor-break-in-guide/"><span class="label">← 上一篇</span><span>馬達磨合完全指南</span></a></div><div class="center"><a href="https://motorlab-tw.github.io/#guides"><span class="label">︿</span><span>回教學首頁</span></a></div><div class="right"><a href="/guides/tamiya-motor-specs/"><span class="label">下一篇 →</span><span>田宮馬達速查表</span></a></div></div></div></main><footer>
 <div class="container">
 <div class="footer-trademark" data-i18n="footer.trademark">"Mini 4WD"<sup>®</sup> 與 "ミニ四駆"<sup>®</sup> 為株式会社タミヤ(TAMIYA, INC.)的註冊商標(日本商標登錄號 第 2168392 號)。MotorLab 為獨立工作室,與株式会社タミヤ無任何關聯,亦未受其授權、贊助或背書。本網站提及之相關名稱僅用於指涉產品適用範圍,所有商標權益歸原權利人所有。</div>

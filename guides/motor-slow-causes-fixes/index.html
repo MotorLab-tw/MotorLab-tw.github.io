@@ -894,6 +894,22 @@
     color: var(--text-primary);
     font-weight: 600;
   }
+  /* 延伸閱讀:文末站內導引 —— 標籤沿用 .guide-tag 的樣式,清單沿用 .guide-article ul li */
+  .guide-related {
+    margin: 24px 0 0;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+  .guide-related-label {
+    display: inline-block;
+    color: var(--accent-cyan);
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+  .guide-related ul { margin: 0; }
+  .guide-related li { margin: 4px 0; }
   .guide-article code {
     background: var(--bg-tertiary);
     color: var(--accent-cyan);
@@ -1981,7 +1997,7 @@
     "@id": "https://motorlab-tw.github.io/guides/motor-slow-causes-fixes/"
   },
   "datePublished": "2026-07-17",
-  "dateModified": "2026-08-13",
+  "dateModified": "2026-09-04",
   "author": {
     "@type": "Organization",
     "name": "MotorLab Team",
@@ -2024,7 +2040,7 @@
 }</script></head>
 <body class="guide-page"><nav class="guide-nav"><div class="container"><a class="brand" href="https://motorlab-tw.github.io/"><span>MotorLab<span class="tag">.tw</span></span></a><a class="back-link" href="https://motorlab-tw.github.io/">← 回首頁</a></div></nav><main><div class="container"><nav aria-label="Breadcrumb" class="breadcrumb"><a href="https://motorlab-tw.github.io/">首頁</a><span class="sep">/</span><a href="https://motorlab-tw.github.io/#guides">教學</a><span class="sep">/</span><span class="current">馬達變慢原因</span></nav><article class="guide-article">
 <span class="guide-tag" data-i18n="g16.tag">GUIDE · 故障排除</span>
-<h1 data-i18n="g16.title">馬達變慢、沒力了?先分清「暫時」還是「衰退」</h1><p class="guide-byline">編輯者:MotorLab Team</p><p class="guide-dates">發表 2026-07-17　·　更新 2026-08-13</p>
+<h1 data-i18n="g16.title">馬達變慢、沒力了?先分清「暫時」還是「衰退」</h1><p class="guide-byline">編輯者:MotorLab Team</p><p class="guide-dates">發表 2026-07-17　·　更新 2026-09-04</p>
 <p class="guide-lead" data-i18n="g16.lead">馬達突然變慢、加速變鈍、聲音變了 —— 不一定是壽命到了。「馬達變慢」的原因分兩類:<strong>可逆的</strong>(清一清、換顆電池就回來)和<strong>不可逆的</strong>(接觸面或磁性損傷,回不去)。先別急著花錢換新,照這篇 5 個原因逐一排除。</p>
 <h2 data-i18n="g16.h1">為什麼會變慢:先分兩類</h2>
 <p data-i18n="g16.p1">馬達變慢的體感都差不多(轉速掉、推力弱、加速鈍),但底層原因天差地遠。<strong>可逆</strong>:電池、髒污、潤滑 —— 排除後轉速會回來。<strong>不可逆</strong>:磁力衰退、電刷 / 整流子磨損 —— 物理損傷,只能退役。判斷順序永遠是<strong>先排可逆、再認不可逆</strong>,才不會把還能救的馬達丟掉、或把該退的硬撐上場。</p>
@@ -2046,7 +2062,7 @@
 <div class="guide-tip">
 <p data-i18n="g16.key">一句話:馬達變慢,<strong>先排電池、髒污、潤滑</strong>三個可逆因素 —— 大多數「變慢」到這裡就解決了;三個都排除還是慢,才是真衰退,用數據判退役,別憑感覺提早換馬達、也別讓退磁的馬達拖累成績。</p>
 </div>
-<p class="guide-related" data-i18n="g16.related">延伸閱讀:該清潔上油還是該退役,見 <a href="../motor-wash-vs-break-in/">洗馬達 vs 磨合</a>;確認是不是真衰退,見 <a href="../motor-degradation-signs/">馬達衰退的 8 個徵兆與退役判定</a>;用數據量化衰退,見 <a href="../motor-break-in-resistance-curve/">R 磨合曲線</a>。</p>
+<div class="guide-related" data-i18n="g16.related"><div class="guide-related-label">延伸閱讀</div><ul><li>該清潔上油還是該退役,見 <a href="../motor-wash-vs-break-in/">洗馬達 vs 磨合</a></li><li>確認是不是真衰退,見 <a href="../motor-degradation-signs/">馬達衰退的 8 個徵兆與退役判定</a></li><li>用數據量化衰退,見 <a href="../motor-break-in-resistance-curve/">R 磨合曲線</a></li></ul></div>
 <div class="guide-warning">
 <p data-i18n="g16.w1">本文為一般故障排除說明。實際變慢原因可能多重疊加(例如電池老 + 輕微積碳),建議逐項排除、每次只改一個變數,並在相同電池與溫度條件下對照,判斷才準。</p>
 </div>
