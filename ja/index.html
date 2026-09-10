@@ -1514,17 +1514,7 @@
     font-size: 12px;
     color: var(--text-muted);
     font-family: monospace;
-  }
-  /* 升級警語:僅用於必要的操作提醒,不放版本明細(沿用 .spec-note 的處理) */
-  .changelog-note {
-    margin: 8px 0 0;
-    font-size: 12.5px;
-    color: var(--text-muted);
-    line-height: 1.7;
-    padding-left: 12px;
-    border-left: 2px solid var(--accent-blue);
-  }
-  .changelog-content h4 {
+  }  .changelog-content h4 {
     font-size: 15px;
     margin-bottom: 10px;
     color: var(--text-primary);
@@ -2249,7 +2239,7 @@
 <div class="hero-grid">
 <div>
 <div class="hero-badge">
-<span data-i18n="hero.badge">システム稼働中 · v3.9.0</span>
+<span data-i18n="hero.badge">システム稼働中 · v3.11.1</span>
 </div>
 <h1 data-i18n="hero.title">すべての<br/>Mini 4WD<sup>®</sup> モーターに<br/><span class="accent">健康指紋</span>を</h1>
 <p class="lead" data-i18n="hero.lead">MotorLab は Mini 4WD<sup>®</sup> プレイヤーのために設計された精密モーター慣らし・測定システムです。慣らし 3 モード(電圧／回転数 Beta／AI スマート)、ベアリング減衰測定、ブラシ接触安定診断、AI モーター健康管理まで — すべての調整を定量化・再現・比較できます。</p>
@@ -2438,10 +2428,11 @@
 <svg viewbox="0 0 24 24"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c2-2 3-5 3-9s-1-7-3-9m0 18c-2-2-3-5-3-9s1-7 3-9"></path></svg>
 </div>
 <h3 data-i18n="f8.title">オンライン更新と偽造防止機構</h3>
-<p data-i18n="f8.desc">家庭用 WiFi 経由で最新ファームウェアを自動取得。すべてのファームウェアはデジタル署名で検証され、更新に失敗しても自動で前バージョンへ復帰、文鎮化リスクを排除します。</p>
+<p data-i18n="f8.desc">すべてのファームウェアはデジタル署名で検証されます;更新に失敗しても自動で前バージョンへ復帰するため文鎮化しません。バージョン照会中は待機の進捗を表示し、回線が遅い場合は警告して自動でリトライします。</p>
 <div class="feature-meta">
 <span class="feature-tag" data-i18n="f8.tag1">デジタル署名</span>
-<span class="feature-tag" data-i18n="f8.tag2">自動復帰</span>
+<span class="feature-tag" data-i18n="f8.tag2">自動ロールバック</span>
+<span class="feature-tag" data-i18n="f8.tag3">照会の自動リトライ</span>
 </div>
 </div>
 <!-- 三層安全保護機制 -->
@@ -2977,15 +2968,24 @@
 <p class="section-subtitle" data-i18n="cl.subtitle">すべてのバージョンはオンライン更新で有効化済み端末へ自動配信されます。</p>
 </div>
 <div class="changelog">
+<!-- v3.11.1 -->
+<div class="changelog-item">
+<div class="changelog-meta">
+<span class="version-badge latest">v3.11.1</span>
+<span class="changelog-date">2026-09-10</span>
+</div>
+<div class="changelog-content">
+<h4 data-i18n="cl.v3111.title">ソフトウェア更新の照会に待機表示 · 照会失敗時に自動リトライ</h4>
+</div>
+</div>
 <!-- v3.11.0 -->
 <div class="changelog-item">
 <div class="changelog-meta">
-<span class="version-badge latest">v3.11.0</span>
+<span class="version-badge">v3.11.0</span>
 <span class="changelog-date">2026-09-10</span>
 </div>
 <div class="changelog-content">
 <h4 data-i18n="cl.v3110.title">スマート慣らしが型番でロジックを選択 · 判定方式を刷新(カーボンブラシ) · シャーシと型番を全機設定に</h4>
-<p class="changelog-note" data-i18n="cl.v3110.note">銅ブラシ 8 種はスマート慣らし未対応です。<b>アップデート後はまずシステム設定でシャーシを選んでください</b>——型番とシャーシが合わない場合は開始できません。</p>
 </div>
 </div>
 <!-- v3.10.1 -->
@@ -2996,17 +2996,6 @@
 </div>
 <div class="changelog-content">
 <h4 data-i18n="cl.v3101.title">モーターの正転・逆転方向を修正 · スマート慣らしの単一セッション判定 · 健康管理トレンドを刷新</h4>
-<p class="changelog-note" data-i18n="cl.v3101.note"><b>アップデート後、モーターの回転方向は以前と逆になります</b>——修正前の「正転」は実際には逆転でした。治具やメモに方向を書いている場合は併せて修正してください。</p>
-</div>
-</div>
-<!-- v3.9.0 -->
-<div class="changelog-item">
-<div class="changelog-meta">
-<span class="version-badge">v3.9.0</span>
-<span class="changelog-date">2026-08-22</span>
-</div>
-<div class="changelog-content">
-<h4 data-i18n="cl.v390.title">トルク予測を視覚比較図に · 健康管理は変化量表示に · 測定温度を全面表示</h4>
 </div>
 </div>
 </div>
@@ -3160,7 +3149,7 @@
       'nav.about': '關於',
       'nav.contact': '聯絡',
       'nav.verify': '正版查驗',
-      'hero.badge': '系統運作中 · v3.9.0',
+      'hero.badge': '系統運作中 · v3.11.1',
       'hero.title': '為每一顆<br>Mini 4WD<sup>®</sup> 馬達<br>建立<span class="accent">健康指紋</span>',
       'hero.lead': 'MotorLab 是為 Mini 4WD<sup>®</sup> 玩家打造的精密馬達磨合與測試系統。從磨合三模式(電壓／轉速 Beta／AI 智慧)、軸承衰減量測、電刷接觸穩定診斷,到 AI 馬達健康管理 — 讓每一次調校都可量化、可重複、可比較。',
       'hero.cta1': '瀏覽功能',
@@ -3217,9 +3206,10 @@
       'f7.tag2': '跨平台',
       'f7.tag3': '繁中・EN・日本語',
       'f8.title': '線上更新與防偽機制',
-      'f8.desc': '透過家用 WiFi 自動取得最新韌體,每份韌體皆經數位簽章驗證;更新失敗自動回復前一版本,杜絕磚機風險。',
+      'f8.desc': '每份韌體皆經數位簽章驗證;更新失敗自動回復前一版本,不變磚;查詢版本時顯示等待進度,連線較慢會提示並自動重試。',
       'f8.tag1': '數位簽章',
       'f8.tag2': '自動回復前版',
+      'f8.tag3': '查詢自動重試',
       'f9.title': '三層安全保護機制',
       'f9.desc': '馬達磨合過程中,馬達產生的強烈電磁干擾、水磨合或堵轉時的瞬間電流飆升,都是傷害昂貴競賽馬達的潛在風險。MotorLab 內建三層硬體與韌體聯防 — 電磁干擾抑制設計持續被動防護、電流異常 < 100 ms 急停切斷電力、系統異常時數秒內自動恢復。',
       'f9.tag1': '電磁干擾抑制',
@@ -4081,16 +4071,14 @@
 
       'cl.tag': 'CHANGELOG',
       'cl.title': '韌體更新日誌',
+      'cl.v3111.title': '軟體更新查詢等待回饋 · 查詢自動重試',
       'cl.subtitle': '所有版本透過線上更新自動推送至已啟用裝置。',
       'cl.NEW': '新增',
       'cl.FIX': '修正',
       'cl.IMPROVE': '改進',
       'cl.SECURITY': '安全',
-      'cl.v390.title': '扭力預測改視覺對照圖 · 健康管理改差異呈現 · 量測溫度全面標示',
       'cl.v3110.title': '智慧磨合依型號選邏輯 · 判停改版(碳刷) · 底盤與型號全機設定',
-      'cl.v3110.note': '銅刷類 8 款暫不支援智慧磨合;<b>升級後請先到系統設定選底盤</b>,型號與底盤不符時無法啟動。',
       'cl.v3101.title': '馬達正逆轉方向修正 · 智慧磨合單場判停 · 健康管理趨勢改版',
-      'cl.v3101.note': '<b>升級後馬達轉向與升級前相反</b>——修正前的「正轉」實為反轉;若治具或筆記標了方向請一併更正。',
       'about.tag': 'ABOUT',
       'about.title': '關於 MotorLab',
       'about.p1': 'MotorLab 是一個專注於 Mini 4WD<sup>®</sup> 馬達精密測試的獨立工作室。',
@@ -4118,7 +4106,7 @@
       'nav.about': 'About',
       'nav.contact': 'Contact',
       'nav.verify': 'Verify',
-      'hero.badge': 'System running · v3.9.0',
+      'hero.badge': 'System running · v3.11.1',
       'hero.title': 'Build a <span class="accent">health fingerprint</span><br>for every<br>Mini 4WD<sup>®</sup> motor',
       'hero.lead': 'MotorLab is a precision motor break-in and diagnostic system built for Mini 4WD<sup>®</sup> enthusiasts. From three break-in modes (voltage / speed Beta / AI smart) to bearing decay analysis, brush contact diagnostics, and AI motor health management — make every tune measurable, repeatable, and comparable.',
       'hero.cta1': 'Browse Features',
@@ -4175,7 +4163,7 @@
       'f7.tag2': 'Cross-platform',
       'f7.tag3': '繁中・EN・日本語',
       'f8.title': 'OTA Update & Tamper Protection',
-      'f8.desc': 'Auto-fetches the latest firmware via home WiFi. Every firmware image is verified by digital signature; if an update fails, it automatically reverts to the previous version — no brick risk.',
+      'f8.desc': 'Every firmware image is verified by digital signature; a failed update rolls back to the previous version automatically, so it cannot brick. While it queries for a version it shows the waiting progress, warns you when the connection is slow, and retries automatically.',
       'f8.tag1': 'Digital signature',
       'f9.title': 'Triple-Layer Safety Protection',
       'f9.desc': 'During motor break-in, strong electromagnetic interference from the motor and current surges from water break-in or rotor lockup are all real threats to expensive race motors. MotorLab integrates three layers of hardware + firmware defense: continuous passive EMI suppression, emergency current cutoff within < 100 ms, and automatic recovery within seconds if the system faults.',
@@ -4187,7 +4175,8 @@
       'f15.tag1': 'Instant stop',
       'f15.tag2': '4 detections',
       'f15.tag3': 'Shows reason',
-      'f8.tag2': 'Auto revert',
+      'f8.tag2': 'Auto rollback',
+      'f8.tag3': 'Query auto-retry',
       'f10.title': 'Global Break-in Data Library',
       'f10.desc': 'Share the break-in profiles your machine produces with the world, or download profiles from others — the original file re-imports straight into your machine.',
       'f10.tag1': 'Global',
@@ -5250,16 +5239,14 @@
 
       'cl.tag': 'CHANGELOG',
       'cl.title': 'Firmware Release Notes',
+      'cl.v3111.title': 'Update check shows waiting feedback &middot; Automatic retry on the version query',
       'cl.subtitle': 'All versions push automatically to activated devices via OTA update.',
       'cl.NEW': 'NEW',
       'cl.FIX': 'FIX',
       'cl.IMPROVE': 'IMPROVE',
       'cl.SECURITY': 'SECURITY',
-      'cl.v390.title': 'Torque prediction is now a visual comparison chart · Health check shows the change · Measurement temperature shown throughout',
       'cl.v3110.title': 'Smart Break-in picks its logic by model &middot; New completion test (carbon brush) &middot; Chassis and model set machine-wide',
-      'cl.v3110.note': 'The 8 copper-brush models are not yet supported by Smart Break-in. <b>After updating, pick your chassis in System Settings first</b> &#8212; the machine will not start when the model and chassis do not match.',
       'cl.v3101.title': 'Motor forward/reverse direction corrected &middot; Single-session completion for Smart Break-in &middot; New health trend view',
-      'cl.v3101.note': '<b>After updating, the motor turns the opposite way</b> &#8212; what earlier firmware called &quot;forward&quot; was actually reverse. If your jig or notes are marked with a direction, update them too.',
       'about.tag': 'ABOUT',
       'about.title': 'About MotorLab',
       'about.p1': 'MotorLab is an independent studio dedicated to precision Mini 4WD<sup>®</sup> motor diagnostics.',
@@ -5287,7 +5274,7 @@
       'nav.about': '概要',
       'nav.contact': 'お問い合わせ',
       'nav.verify': '正規品認証',
-      'hero.badge': 'システム稼働中 · v3.9.0',
+      'hero.badge': 'システム稼働中 · v3.11.1',
       'hero.title': 'すべての<br>Mini 4WD<sup>®</sup> モーターに<br><span class="accent">健康指紋</span>を',
       'hero.lead': 'MotorLab は Mini 4WD<sup>®</sup> プレイヤーのために設計された精密モーター慣らし・測定システムです。慣らし 3 モード(電圧／回転数 Beta／AI スマート)、ベアリング減衰測定、ブラシ接触安定診断、AI モーター健康管理まで — すべての調整を定量化・再現・比較できます。',
       'hero.cta1': '機能を見る',
@@ -5344,9 +5331,10 @@
       'f7.tag2': 'クロスプラットフォーム',
       'f7.tag3': '繁中・EN・日本語',
       'f8.title': 'オンライン更新と偽造防止機構',
-      'f8.desc': '家庭用 WiFi 経由で最新ファームウェアを自動取得。すべてのファームウェアはデジタル署名で検証され、更新に失敗しても自動で前バージョンへ復帰、文鎮化リスクを排除します。',
+      'f8.desc': 'すべてのファームウェアはデジタル署名で検証されます;更新に失敗しても自動で前バージョンへ復帰するため文鎮化しません。バージョン照会中は待機の進捗を表示し、回線が遅い場合は警告して自動でリトライします。',
       'f8.tag1': 'デジタル署名',
-      'f8.tag2': '自動復帰',
+      'f8.tag2': '自動ロールバック',
+      'f8.tag3': '照会の自動リトライ',
       'f9.title': '三層安全保護機構',
       'f9.desc': 'モーター慣らし中、モーターが発生する強力な電磁干渉、水慣らしやロック時の瞬間的な電流急上昇は、高価な競技用モーターを傷つける潜在的リスクです。MotorLab は三層のハードウェア・ファームウェア連携防御を内蔵 — 電磁干渉抑制設計による継続的なパッシブ保護、電流異常時 < 100 ms での緊急電源遮断、システム異常時は数秒以内に自動復旧します。',
       'f9.tag1': '電磁干渉抑制',
@@ -5552,16 +5540,14 @@
       'g.subtitle': '原理から実践まで、ミニ四駆モーター慣らしでよくある疑問と回答をまとめました。',
       'cl.tag': 'CHANGELOG',
       'cl.title': 'ファームウェア更新履歴',
+      'cl.v3111.title': 'ソフトウェア更新の照会に待機表示 &middot; 照会失敗時に自動リトライ',
       'cl.subtitle': 'すべてのバージョンはオンライン更新で有効化済み端末へ自動配信されます。',
       'cl.NEW': '新規',
       'cl.FIX': '修正',
       'cl.IMPROVE': '改善',
       'cl.SECURITY': 'セキュリティ',
-      'cl.v390.title': 'トルク予測を視覚比較図に · 健康管理は変化量表示に · 測定温度を全面表示',
       'cl.v3110.title': 'スマート慣らしが型番でロジックを選択 &middot; 判定方式を刷新(カーボンブラシ) &middot; シャーシと型番を全機設定に',
-      'cl.v3110.note': '銅ブラシ 8 種はスマート慣らし未対応です。<b>アップデート後はまずシステム設定でシャーシを選んでください</b>——型番とシャーシが合わない場合は開始できません。',
       'cl.v3101.title': 'モーターの正転・逆転方向を修正 &middot; スマート慣らしの単一セッション判定 &middot; 健康管理トレンドを刷新',
-      'cl.v3101.note': '<b>アップデート後、モーターの回転方向は以前と逆になります</b>——修正前の「正転」は実際には逆転でした。治具やメモに方向を書いている場合は併せて修正してください。',
       'about.tag': 'ABOUT',
       'about.title': 'MotorLab について',
       'about.p1': 'MotorLab は Mini 4WD<sup>®</sup> モーターの精密測定に特化した独立系スタジオです。',
