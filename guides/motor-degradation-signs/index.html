@@ -1316,6 +1316,15 @@
     color: var(--text-muted);
     font-family: monospace;
   }
+  /* 升級警語:僅用於必要的操作提醒,不放版本明細(沿用 .spec-note 的處理) */
+  .changelog-note {
+    margin: 8px 0 0;
+    font-size: 12.5px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    padding-left: 12px;
+    border-left: 2px solid var(--accent-blue);
+  }
   .changelog-content h4 {
     font-size: 15px;
     margin-bottom: 10px;
@@ -2071,7 +2080,7 @@
 <p data-i18n="g8.c7"><strong>7. 馬達端子片變色或出現過熱痕跡</strong>—端子片外露金屬出現變黃、發黑、或藍色火痕 = 曾經歷高溫事件。</p>
 <p data-i18n="g8.c8"><strong>8. 無電源手轉軸心,阻力比新品明顯大</strong>—拿同型號新品做對照測試。新品手轉應該很順,衰退馬達會明顯感覺「澀」、「卡卡」(magnet field 失衡、brush 黏滯、或軸承拉摩擦)。</p>
 <div class="guide-tip">
-<p data-i18n="g8.adv"><strong>進階補充</strong>:量化觀察(CV 電流變異係數、FFT 異常頻段等)是更精準的數據徵兆,操作方法詳見<a href="../motor-analysis-methodology/">三支柱方法論</a>。</p>
+<p data-i18n="g8.adv"><strong>進階補充</strong>:量化觀察(同轉速的無載電流 I0、電刷接觸落點圖的波形穩定度等)是更精準的數據徵兆,操作方法詳見<a href="../motor-analysis-methodology/">三支柱方法論</a>。</p>
 </div>
 <h2 data-i18n="g8.h5">處置決策:該洗、該退役、還是繼續用?</h2>
 <figure data-i18n="g8.figdec"><img alt="馬達衰退處置決策對照:RPM 下降 &lt;5% 繼續使用、5–10% 洗馬達上油、10–20% 退役候選僅練習用、&gt;20% 或啟動失敗/過熱則退役" class="chart" loading="lazy" src="/images/motor-retire-decision_c.png"/></figure>

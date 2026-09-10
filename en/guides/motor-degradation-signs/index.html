@@ -1316,6 +1316,15 @@
     color: var(--text-muted);
     font-family: monospace;
   }
+  /* 升級警語:僅用於必要的操作提醒,不放版本明細(沿用 .spec-note 的處理) */
+  .changelog-note {
+    margin: 8px 0 0;
+    font-size: 12.5px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    padding-left: 12px;
+    border-left: 2px solid var(--accent-blue);
+  }
   .changelog-content h4 {
     font-size: 15px;
     margin-bottom: 10px;
@@ -2071,7 +2080,7 @@
 <p data-i18n="g8.c7"><strong>7. Terminal-tab discoloration or burn marks</strong> — Exposed metal terminals showing yellowing, blackening, or blue burn marks = the motor has experienced a high-temperature event.</p>
 <p data-i18n="g8.c8"><strong>8. Higher manual-rotation resistance than a new unit</strong> — Test against a new motor of the same type. A new motor's shaft spins freely; a degraded one feels "sticky" or "draggy" (from magnet imbalance, brush stiction, or bearing friction).</p>
 <div class="guide-tip">
-<p data-i18n="g8.adv"><strong>Advanced note</strong>: Quantified observations (current CV — coefficient of variation — and FFT abnormal frequency bands) are more precise data-side signs. See <a href="../motor-analysis-methodology/">the three-pillar methodology</a> for the measurement approach.</p>
+<p data-i18n="g8.adv"><strong>Advanced note</strong>: Quantified observations (no-load current I0 at the same RPM, how steady the brush contact scatter map looks, and so on) are more precise data-side signs. See <a href="../motor-analysis-methodology/">the three-pillar methodology</a> for the measurement approach.</p>
 </div>
 <h2 data-i18n="g8.h5">Decision matrix: Wash, retire, or keep using?</h2>
 <figure data-i18n="g8.figdec"><img alt="Motor degradation decision matrix: RPM drop &lt;5% keep using, 5–10% wash and lube, 10–20% retirement candidate for practice only, &gt;20% or startup fail/overheat retire" class="chart" loading="lazy" src="/images/motor-retire-decision_e.png"/></figure>

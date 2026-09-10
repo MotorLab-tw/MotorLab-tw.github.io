@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Language" content="zh-TW">
 <title>MotorLab — Mini 4WD® 馬達磨合測試系統 | 精密馬達診斷工作室</title>
-<meta name="description" content="MotorLab — 專為 Mini 4WD® 玩家打造的精密馬達磨合測試系統。十八大專業功能:磨合三模式、馬達特性量測、AI 健康管理、AI 扭力預測、FFT 頻譜、電刷接觸落點圖、三層安全保護、線上更新。讓馬達調校可量化。">
+<meta name="description" content="MotorLab — 專為 Mini 4WD® 玩家打造的精密馬達磨合測試系統。十八大專業功能:磨合三模式、馬達特性量測、AI 健康管理、AI 扭力預測、電刷接觸落點圖、三層安全保護、線上更新。讓馬達調校可量化。">
 <meta name="author" content="MotorLab.tw">
 <meta name="keywords" content="馬達磨合, 馬達磨合機, 四驅車馬達磨合, 迷你四驅車馬達磨合, 馬達磨合教學, モーター慣らし, モーター慣らし機, ミニ四駆 モーター慣らし, ミニ四駆のモーター慣らし, モーターブレークイン, MotorLab, Mini 4WD, 田宮迷你四驅車, 迷你四驅車, ミニ四駆, 四驅車, 馬達測試, 馬達調校, 馬達健康診斷, 洗馬達, 紅二馬達, 黑金剛, Hyper Dash, Plasma Dash, 馬達保護, 抗 EMI, 過流保護, 電流急停, Watchdog 自動復原, 安全保護機制, 電磁干擾防護, 馬達燒毀防護, motor break-in, motor test, Tamiya mini 4WD, EMI shielding, overcurrent protection, watchdog recovery, motor safety">
 
@@ -137,7 +137,6 @@
     "單階段精密馬達測試",
     "AI 智慧馬達健康管理",
     "AI 智慧扭力預測(以田宮標準參數為數學模型,預測磨合後 @2.4V / @3.0V 扭力與體質對照)",
-    "FFT 振動頻譜分析",
     "軸承阻力測試(斷電滑行靜止時間量測)",
     "電刷接觸穩定度落點圖",
     "歷史紀錄 50 筆 (JSON / CSV 匯入匯出)",
@@ -1412,6 +1411,15 @@
     color: var(--text-muted);
     font-family: monospace;
   }
+  /* 升級警語:僅用於必要的操作提醒,不放版本明細(沿用 .spec-note 的處理) */
+  .changelog-note {
+    margin: 8px 0 0;
+    font-size: 12.5px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    padding-left: 12px;
+    border-left: 2px solid var(--accent-blue);
+  }
   .changelog-content h4 {
     font-size: 15px;
     margin-bottom: 10px;
@@ -2260,10 +2268,11 @@
           <svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 11-6.219-8.56"/><path d="M22 4l-10 10-3-3"/></svg>
         </div>
         <h3 data-i18n="f3.title">AI 智慧馬達健康管理</h3>
-        <p data-i18n="f3.desc">為每顆馬達建立基準健康指紋,之後每次檢測都以<b>「這次 vs 上次」</b>的方式呈現差異:直接告訴你哪些項目變好、哪些變差、變化多少,不給抽象分數,讓你自己判讀這顆馬達離巔峰還有多遠。</p>
+        <p data-i18n="f3.desc"><b>健康指紋 2.0</b>:磨合完成時建立巔峰狀態指紋(磁力／內部損耗／接觸穩定度／電刷接觸四面向);之後每次檢測呈現<b>從指紋以來的變化</b>——轉速、電流、磁力等直接量測值,<b>每一項配自己的量測誤差範圍</b>:落在帶內是量測本身的重複性,帶外才是真的變了,並附「怎麼讀這張圖」說明。<b>系統只呈現數值與變化,不評分、不判斷該不該更換。</b>沾油或髒污會讓磁力讀值偏低,系統能分辨這種情況並改提示「先清潔後重測」。量測誤差 &#177;5%;磁力數值自動校正,每顆最多 50 筆歷史與長期變化趨勢圖。</p>
         <div class="feature-meta">
-          <span class="feature-tag" data-i18n="f3.tag1">這次 vs 上次</span>
-          <span class="feature-tag" data-i18n="f3.tag2">差異呈現</span>
+          <span class="feature-tag" data-i18n="f3.tag1">指紋以來的變化</span>
+          <span class="feature-tag" data-i18n="f3.tag2">誤差帶判讀</span>
+          <span class="feature-tag" data-i18n="f3.tag3">不評分</span>
           <span class="feature-tag">20 motors</span>
         </div>
       </div>
@@ -2287,11 +2296,11 @@
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M10 8.5l5.5 3.5-5.5 3.5z"/></svg>
         </div>
         <h3 data-i18n="f3c.title">AI 智慧磨合</h3>
-        <p data-i18n="f3c.desc">一鍵全自動磨合:<b>一場磨到這顆的最佳狀態、自動停止</b>——全新品自動完整整型、已磨合品快速確認、嚴重耗損如實告知;主視覺「運轉穩定度」落點圖直讀電刷與整流子的接觸穩定程度,完成顯示磨前後對照。支援田宮全 15 款馬達。</p>
+        <p data-i18n="f3c.desc">一鍵全自動磨合:<b>一場磨到這顆的最佳狀態、自動停止</b>——選型號後系統自動採用對應的磨合方式,以「電流是否還會再創新低」判定磨完,磨到位才停;<b>已磨合品直接告知不需再磨、不空跑</b>、嚴重耗損如實告知;偵測到電流失序時停機並提示檢查電刷與整流子(<b>並非所有損壞都能提前偵測</b>)。主視覺為每輪的電流落點圖,完成顯示磨前後的電流穩定度對照與停止方式。目前支援碳刷類 7 款,銅刷類 8 款暫不支援;正反轉方向依系統設定的底盤自動對應實車。</p>
         <div class="feature-meta">
           <span class="feature-tag" data-i18n="f3c.tag1">單場到位</span>
-          <span class="feature-tag" data-i18n="f3c.tag2">運轉穩定度</span>
-          <span class="feature-tag" data-i18n="f3c.tag3">田宮 15 款</span>
+          <span class="feature-tag" data-i18n="f3c.tag2">電流落點圖</span>
+          <span class="feature-tag" data-i18n="f3c.tag3">碳刷 7 款</span>
         </div>
       </div>
 
@@ -2582,11 +2591,6 @@
             <td class="center"><span class="check">✓</span></td>
           </tr>
           <tr>
-            <td data-i18n="vt.r9">FFT 振動頻譜分析</td>
-            <td class="center"><span class="cross">—</span></td>
-            <td class="center"><span class="check">✓</span></td>
-          </tr>
-          <tr>
             <td data-i18n="vt.r11">健康趨勢曲線追蹤</td>
             <td class="center"><span class="cross">—</span></td>
             <td class="center"><span class="check">✓</span></td>
@@ -2607,11 +2611,6 @@
     </div>
 
     <div class="tech-grid">
-      <div class="tech-card">
-        <div class="tech-name">FFT_ANALYSIS</div>
-        <h4 data-i18n="t1.title">快速傅立葉變換頻譜</h4>
-        <p data-i18n="t1.desc">將馬達電流訊號轉換為頻域，分離出基頻、諧波與雜訊成分。從頻譜特徵即可判讀軸承異音、轉子失衡、整流子缺陷等隱性問題。</p>
-      </div>
       <div class="tech-card">
         <div class="tech-name">CONTACT_MAP</div>
         <h4 data-i18n="t2.title">電刷接觸落點圖</h4>
@@ -2687,7 +2686,7 @@
       <div class="tech-card">
         <div class="tech-name">STEADY_STATE</div>
         <h4 data-i18n="t19.title">單場到位自動判停</h4>
-        <p data-i18n="t19.desc">AI 智慧磨合在一場內持續量測,自動磨到該顆的最佳狀態才停止:全新品完整整型、已磨合品快速確認、嚴重耗損如實告知 —— 磨好了,機器告訴你。</p>
+        <p data-i18n="t19.desc">AI 智慧磨合在一場內持續量測,以電流是否還會再創新低判定,自動磨到該顆的最佳狀態才停止:全新品完整整型、已磨合品直接告知不需再磨、嚴重耗損如實告知 —— 磨好了,機器告訴你。</p>
       </div>
       <div class="tech-card">
         <div class="tech-name">EMI_SUPPRESSION</div>
@@ -2813,7 +2812,7 @@
             <tr><td data-i18n="specs.p.runtime">運轉時間</td><td class="spec-val">10 ~ 600</td><td data-i18n="specs.u.sec">秒</td><td data-i18n="specs.d.bystage">依階段</td></tr>
             <tr><td data-i18n="specs.p.cooltime">冷卻時間</td><td class="spec-val">10 ~ 600</td><td data-i18n="specs.u.sec">秒</td><td data-i18n="specs.d.bystage">依階段</td></tr>
             <tr><td data-i18n="specs.p.tol">穩定電流容差</td><td class="spec-val">2 ~ 50</td><td class="spec-val">±mA</td><td class="spec-val">5</td></tr>
-            <tr><td data-i18n="specs.p.stopmode">判停標準</td><td data-i18n="specs.v.stopv">純時間限制 / 智慧穩定電流</td><td>—</td><td data-i18n="specs.d.smartstop">智慧穩定電流</td></tr>
+            <tr><td data-i18n="specs.p.stopmode">判停標準</td><td data-i18n="specs.v.stopv">純時間限制 / 智慧穩定電流</td><td>—</td><td data-i18n="specs.d.smartstop">智慧穩定電流</td></tr><tr><td data-i18n="specs.p.startcond">啟動條件</td><td data-i18n="specs.v.startcond">型號與底盤軸型須相符(系統設定「馬達與底盤」)</td><td>&#8212;</td><td class="spec-val">&#8212;</td></tr>
           </tbody>
         </table>
       </div>
@@ -2854,14 +2853,14 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td data-i18n="specs.p.timecap">時間上限</td><td data-i18n="specs.v.timecap">磨到完成 / 2h / 3h / 4h</td><td>—</td><td class="spec-val">3h</td></tr>
-            <tr><td data-i18n="specs.p.model">適用型號</td><td data-i18n="specs.v.all15">田宮全 15 款</td><td>—</td><td class="spec-val">Hyper-Dash PRO</td></tr>
-            <tr><td data-i18n="specs.p.coach">完成判定</td><td data-i18n="specs.v.coach">單場到位:自動磨到該顆的最佳狀態停止;已磨合品快速確認;嚴重耗損如實告知不建議續磨</td><td>—</td><td class="spec-val">—</td></tr><tr><td data-i18n="specs.p.mainviz">主視覺</td><td data-i18n="specs.v.mainviz">運轉穩定度落點圖(0~100 固定刻度);完成顯示磨前後對照(磨合前／後轉速與提升幅度)</td><td>—</td><td class="spec-val">—</td></tr>
-            <tr><td data-i18n="specs.p.stopb">停止行為</td><td data-i18n="specs.v.stopb">按停止立即停止,本場數據保留於畫面(不留跨場歷史)</td><td>—</td><td class="spec-val">—</td></tr>
+            <tr><td data-i18n="specs.p.timecap">時間上限</td><td data-i18n="specs.v.timecap">磨到完成 / 2h / 3h / 4h(部分型號由系統設定,不可調)</td><td>—</td><td class="spec-val">3h</td></tr>
+            <tr><td data-i18n="specs.p.session">單場長度</td><td data-i18n="specs.v.session">多數馬達約 1.5~2 小時</td><td>&#8212;</td><td class="spec-val">&#8212;</td></tr><tr><td data-i18n="specs.p.model">適用型號</td><td data-i18n="specs.v.all15">碳刷類 7 款(Hyper-Dash PRO／Mach-Dash PRO／Hyper-Dash 3／Sprint-Dash／Power-Dash／Ultra-Dash／Plasma-Dash),選型號後自動採用對應磨合方式;銅刷類 8 款暫不支援(啟動鈕變灰並說明)</td><td>—</td><td class="spec-val">Hyper-Dash PRO</td></tr>
+            <tr><td data-i18n="specs.p.coach">完成判定</td><td data-i18n="specs.v.coach">以電流是否還會再創新低判定磨完;<b>已磨合品直接告知不需再磨、不空跑</b>;嚴重耗損如實告知不建議續磨</td><td>—</td><td class="spec-val">—</td></tr><tr><td data-i18n="specs.p.chassis">底盤</td><td data-i18n="specs.v.chassis">與系統設定「馬達與底盤」同步;正轉方向依底盤對應實車前進;型號與底盤軸型不符時無法啟動</td><td>&#8212;</td><td class="spec-val">&#8212;</td></tr><tr><td data-i18n="specs.p.efault">電氣失序示警</td><td data-i18n="specs.v.efault">偵測到電流失序時停機並提示檢查電刷與整流子。<b>並非所有損壞都能提前偵測</b></td><td>&#8212;</td><td class="spec-val">&#8212;</td></tr><tr><td data-i18n="specs.p.mainviz">主視覺</td><td data-i18n="specs.v.mainviz">每輪電流落點圖;完成顯示磨前後電流穩定度對照與停止方式</td><td>—</td><td class="spec-val">—</td></tr>
+            <tr><td data-i18n="specs.p.stopb">停止行為</td><td data-i18n="specs.v.stopb">按停止立即停止,本場數據保留於畫面(不留跨場歷史)</td><td>—</td><td class="spec-val">—</td></tr><tr><td data-i18n="specs.p.sampling">判定取樣</td><td data-i18n="specs.v.sampling">首輪為熱身輪(不列入數據與曲線);之後每輪判定量測由系統自動準備後取樣(時間上限保護)</td><td>&#8212;</td><td class="spec-val">自動</td></tr>
           </tbody>
         </table>
       </div>
-      <div class="spec-note" data-i18n="specs.range.g1snote">一鍵自動磨合,一場磨到這顆的最佳狀態自動停止,並以「運轉穩定度」落點圖呈現整個磨合過程。</div>
+      <div class="spec-note" data-i18n="specs.range.g1snote">一鍵自動磨合:選型號後系統自動採用對應的磨合方式,一場磨到這顆的最佳狀態自動停止,並以每輪的電流落點圖呈現整個磨合過程。</div>
 
       <!-- 3.2 馬達測試程式 -->
       <div class="spec-subgroup" data-i18n="specs.range.g2">馬達測試程式（單一階段）</div>
@@ -2880,7 +2879,7 @@
             <tr><td data-i18n="specs.p.dir">運轉方向</td><td data-i18n="specs.v.dir">正轉 / 反轉</td><td>—</td><td data-i18n="specs.d.fwd">正轉</td></tr>
             <tr><td data-i18n="specs.p.runtime">運轉時間</td><td class="spec-val">10 ~ 600</td><td data-i18n="specs.u.sec">秒</td><td class="spec-val">60</td></tr>
             <tr><td data-i18n="specs.p.tol">穩定電流容差</td><td class="spec-val">2 ~ 50</td><td class="spec-val">±mA</td><td class="spec-val">5</td></tr>
-            <tr><td data-i18n="specs.p.stopmode">判停標準</td><td data-i18n="specs.v.stopv">純時間限制 / 智慧穩定電流</td><td>—</td><td data-i18n="specs.d.smartstop">智慧穩定電流</td></tr>
+            <tr><td data-i18n="specs.p.stopmode">判停標準</td><td data-i18n="specs.v.stopv">純時間限制 / 智慧穩定電流</td><td>—</td><td data-i18n="specs.d.smartstop">智慧穩定電流</td></tr><tr><td data-i18n="specs.p.startcond">啟動條件</td><td data-i18n="specs.v.startcond">型號與底盤軸型須相符(系統設定「馬達與底盤」)</td><td>&#8212;</td><td class="spec-val">&#8212;</td></tr>
           </tbody>
         </table>
       </div>
@@ -2888,11 +2887,27 @@
 
       <!-- 3.3 AI 智慧馬達健康管理 -->
       <div class="spec-subgroup" data-i18n="specs.range.g3">AI 智慧馬達健康管理（PRO）</div>
-      <div class="spec-auto" data-i18n="specs.range.g3note">全自動檢測程序,無數值輸入;完整檢測／快速檢測兩種模式,結果直接呈現這次與上次的差異。</div>
+      <div class="spec-auto" data-i18n="specs.range.g3note">全自動檢測程序,無數值輸入;完整檢測／快速檢測兩種模式(快速檢測約 4 分鐘,少一段電刷測試),結果為從指紋以來的變化,各項配自己的量測誤差範圍。</div>
 
       <!-- 3.4 / 3.5 自動程序 -->
       <div class="spec-subgroup" data-i18n="specs.range.g4">馬達特性量測 · AI智慧扭力預測 · 軸承阻力測試 · 電刷接觸穩定測試</div>
-      <div class="spec-auto" data-i18n="specs.range.g4note">全自動量測程序(馬達特性量測可選正/反轉,軸承阻力測試可選 2.4V / 3V),其餘無數值輸入。</div>
+      <div class="spec-auto" data-i18n="specs.range.g4note">全自動量測程序(馬達特性量測可選正/反轉,軸承阻力測試可選 2.4V / 3V),其餘無數值輸入。馬達型號為全機共用設定(田宮 15 款＋「Other」),各功能頁的型號下拉互相同步。</div>
+
+      <!-- 3.6 系統設定 -->
+      <div class="spec-subgroup" data-i18n="specs.range.g5">系統設定</div>
+      <div class="spec-table-wrap">
+        <table class="spec-table">
+          <thead>
+            <tr>
+              <th data-i18n="specs.th.item">項目</th>
+              <th data-i18n="specs.th.rangeu">範圍</th>
+              <th data-i18n="specs.th.default">預設</th>
+            </tr>
+          </thead>
+          <tbody data-i18n="specs.range.g5tbl"><tr><td>高溫鎖定溫度</td><td>25 ~ 60&deg;C</td><td class="spec-val">50&deg;C</td></tr><tr><td>溫度校正補償</td><td>&#177;20&deg;C</td><td class="spec-val">0</td></tr><tr><td>平均轉速容差</td><td>120 ~ 600 RPM</td><td class="spec-val">240</td></tr><tr><td>WiFi 熱點密碼</td><td>8 ~ 63 字</td><td class="spec-val">首次使用請更改</td></tr><tr><td>WiFi 列表</td><td>記憶 8 組外部 WiFi;「新增 WiFi」自動掃描點選帶入(隱藏網路可手動輸入);每組可改密碼;「清空列表」轉手用</td><td class="spec-val">&#8212;</td></tr><tr><td>使用者名稱／國家</td><td>各 32 字內</td><td class="spec-val">&#8212;</td></tr><tr><td>介面語言</td><td>中文／English／日本語</td><td class="spec-val">中文</td></tr><tr><td>馬達型號</td><td>全機共用;各功能頁的型號下拉互相同步;田宮 15 款＋「Other」</td><td class="spec-val">Hyper-Dash PRO</td></tr><tr><td>底盤</td><td>前置馬達／中置馬達／後置馬達三組共 21 款;決定正轉方向＝實車前進;清單依型號軸型自動篩選;型號與底盤不符時智慧磨合／磨合程式／馬達測試無法啟動;運轉中不可更改</td><td class="spec-val">首次使用請選</td></tr><tr><td>正版查驗</td><td>顯示本機 ID,可至官網查驗頁確認</td><td class="spec-val">&#8212;</td></tr><tr><td>RGB 狀態燈</td><td>亮度 0~100%;五組狀態樣式;面板／兩者／內建</td><td class="spec-val">60%／兩者</td></tr><tr><td>WiFi 重設</td><td>機上接點長按 5 秒,僅重設熱點名稱與密碼,其他設定與紀錄全數保留</td><td class="spec-val">&#8212;</td></tr><tr><td>模組校正</td><td>扣除機器自身待機電流。<b>開始前請先把馬達從治具上取下</b>,全程自動約 3 分鐘</td><td class="spec-val">&#8212;</td></tr><tr><td>端子電壓校正</td><td>以電錶回填四點實測值,讓機上顯示電壓與端子實際輸出對齊</td><td class="spec-val">&#8212;</td></tr></tbody>
+        </table>
+      </div>
+      <div class="spec-note" data-i18n="specs.range.g5note">全機共用設定,運轉中此頁只留「回首頁」可按。</div>
     </div>
 
   </div>
@@ -3386,7 +3401,7 @@
         <p data-i18n="g8.c7"><strong>7. 馬達端子片變色或出現過熱痕跡</strong>—端子片外露金屬出現變黃、發黑、或藍色火痕 = 曾經歷高溫事件。</p>
         <p data-i18n="g8.c8"><strong>8. 無電源手轉軸心,阻力比新品明顯大</strong>—拿同型號新品做對照測試。新品手轉應該很順,衰退馬達會明顯感覺「澀」、「卡卡」(magnet field 失衡、brush 黏滯、或軸承拉摩擦)。</p>
         <div class="guide-tip">
-          <p data-i18n="g8.adv"><strong>進階補充</strong>:量化觀察(CV 電流變異係數、FFT 異常頻段等)是更精準的數據徵兆,操作方法詳見<a href="../motor-analysis-methodology/">三支柱方法論</a>。</p>
+          <p data-i18n="g8.adv"><strong>進階補充</strong>:量化觀察(同轉速的無載電流 I0、電刷接觸落點圖的波形穩定度等)是更精準的數據徵兆,操作方法詳見<a href="../motor-analysis-methodology/">三支柱方法論</a>。</p>
         </div>
 
         <h4 data-i18n="g8.h5">處置決策:該洗、該退役、還是繼續用?</h4>
@@ -4090,36 +4105,38 @@
     </div>
 
     <div class="changelog">
+      <!-- v3.11.0 -->
+      <div class="changelog-item">
+        <div class="changelog-meta">
+          <span class="version-badge latest">v3.11.0</span>
+          <span class="changelog-date">2026-09-10</span>
+        </div>
+        <div class="changelog-content">
+          <h4 data-i18n="cl.v3110.title">智慧磨合依型號選邏輯 · 判停改版(碳刷) · 底盤與型號全機設定</h4>
+          <p class="changelog-note" data-i18n="cl.v3110.note">銅刷類 8 款暫不支援智慧磨合;<b>升級後請先到系統設定選底盤</b>,型號與底盤不符時無法啟動。</p>
+        </div>
+      </div>
+
+      <!-- v3.10.1 -->
+      <div class="changelog-item">
+        <div class="changelog-meta">
+          <span class="version-badge">v3.10.1</span>
+          <span class="changelog-date">2026-09-05</span>
+        </div>
+        <div class="changelog-content">
+          <h4 data-i18n="cl.v3101.title">馬達正逆轉方向修正 · 智慧磨合單場判停 · 健康管理趨勢改版</h4>
+          <p class="changelog-note" data-i18n="cl.v3101.note"><b>升級後馬達轉向與升級前相反</b>——修正前的「正轉」實為反轉;若治具或筆記標了方向請一併更正。</p>
+        </div>
+      </div>
+
       <!-- v3.9.0 -->
       <div class="changelog-item">
         <div class="changelog-meta">
-          <span class="version-badge latest">v3.9.0</span>
+          <span class="version-badge">v3.9.0</span>
           <span class="changelog-date">2026-08-22</span>
         </div>
         <div class="changelog-content">
           <h4 data-i18n="cl.v390.title">扭力預測改視覺對照圖 · 健康管理改差異呈現 · 量測溫度全面標示</h4>
-        </div>
-      </div>
-
-      <!-- v3.8.2 -->
-      <div class="changelog-item">
-        <div class="changelog-meta">
-          <span class="version-badge">v3.8.2</span>
-          <span class="changelog-date">2026-08-12</span>
-        </div>
-        <div class="changelog-content">
-          <h4 data-i18n="cl.v382.title">量測狀態用語統一 · 一致性警語移除</h4>
-        </div>
-      </div>
-
-      <!-- v3.8.1 -->
-      <div class="changelog-item">
-        <div class="changelog-meta">
-          <span class="version-badge">v3.8.1</span>
-          <span class="changelog-date">2026-08-11</span>
-        </div>
-        <div class="changelog-content">
-          <h4 data-i18n="cl.v381.title">特性量測高轉速鎖定修復 · 三趟一致性提升</h4>
         </div>
       </div>
 
@@ -4316,19 +4333,20 @@
       'f2.tag2': '即時圖表',
       'f2.tag3': '雙模式',
       'f3.title': 'AI 智慧馬達健康管理',
-      'f3.desc': '為每顆馬達建立基準健康指紋,之後每次檢測都以<b>「這次 vs 上次」</b>的方式呈現差異:直接告訴你哪些項目變好、哪些變差、變化多少,不給抽象分數,讓你自己判讀這顆馬達離巔峰還有多遠。',
-      'f3.tag1': '這次 vs 上次',
-      'f3.tag2': '差異呈現',
+      'f3.desc': '<b>健康指紋 2.0</b>:磨合完成時建立巔峰狀態指紋(磁力／內部損耗／接觸穩定度／電刷接觸四面向);之後每次檢測呈現<b>從指紋以來的變化</b>——轉速、電流、磁力等直接量測值,<b>每一項配自己的量測誤差範圍</b>:落在帶內是量測本身的重複性,帶外才是真的變了,並附「怎麼讀這張圖」說明。<b>系統只呈現數值與變化,不評分、不判斷該不該更換。</b>沾油或髒污會讓磁力讀值偏低,系統能分辨這種情況並改提示「先清潔後重測」。量測誤差 &#177;5%;磁力數值自動校正,每顆最多 50 筆歷史與長期變化趨勢圖。',
+      'f3.tag1': '指紋以來的變化',
+      'f3.tag2': '誤差帶判讀',
+      'f3.tag3': '不評分',
       'f3b.title': 'AI 智慧扭力預測',
       'f3b.desc': '選型號一鍵預測,全自動連續量測後出一張<b>扭力預測圖</b>:田宮官方標準線與本顆的推算線並列,一眼看出本顆落在標準線上或下;@2.4V／@3.0V 各出一個預測扭力值。同型號不同顆結果不同＝反映個體真實差異。結果附量測溫度區間。',
       'f3b.tag1': '@2.4V / @3.0V',
       'f3b.tag2': '視覺對照圖',
       'f3b.tag3': '數學模型',
       'f3c.title': 'AI 智慧磨合',
-      'f3c.desc': '一鍵全自動磨合:<b>一場磨到這顆的最佳狀態、自動停止</b>——全新品自動完整整型、已磨合品快速確認、嚴重耗損如實告知;主視覺「運轉穩定度」落點圖直讀電刷與整流子的接觸穩定程度,完成顯示磨前後對照。支援田宮全 15 款馬達。',
+      'f3c.desc': '一鍵全自動磨合:<b>一場磨到這顆的最佳狀態、自動停止</b>——選型號後系統自動採用對應的磨合方式,以「電流是否還會再創新低」判定磨完,磨到位才停;<b>已磨合品直接告知不需再磨、不空跑</b>、嚴重耗損如實告知;偵測到電流失序時停機並提示檢查電刷與整流子(<b>並非所有損壞都能提前偵測</b>)。主視覺為每輪的電流落點圖,完成顯示磨前後的電流穩定度對照與停止方式。目前支援碳刷類 7 款,銅刷類 8 款暫不支援;正反轉方向依系統設定的底盤自動對應實車。',
       'f3c.tag1': '單場到位',
-      'f3c.tag2': '運轉穩定度',
-      'f3c.tag3': '田宮 15 款',
+      'f3c.tag2': '電流落點圖',
+      'f3c.tag3': '碳刷 7 款',
       'f4.title': '軸承阻力測試',
       'f4.desc': '選擇測試電壓(2.4V / 3V),加速至穩定轉速後直接斷電滑行,量測「完全靜止時間」——<b>時間越久代表阻力越小</b>。只顯示時間供相對比較,不做評定;結果一併標示<b>量測溫度</b>,不同時期的數據才對得起來。',
       'f4.tag1': '斷電滑行',
@@ -4410,13 +4428,10 @@
       'vt.r8': 'AI 智慧馬達健康管理(最多 20 顆)',
       'vt.r8b': 'AI 智慧扭力預測(@2.4V / @3.0V,視覺對照圖)',
       'vt.r8c': 'AI 智慧磨合(單場到位自動磨合)',
-      'vt.r9': 'FFT 振動頻譜分析',
       'vt.r11': '健康趨勢曲線追蹤',
       'tech.tag': 'TECHNOLOGY',
       'tech.title': '內建專業分析技術',
       'tech.subtitle': '每一項數據都來自業界驗證的量測方法。',
-      't1.title': '快速傅立葉變換頻譜',
-      't1.desc': '將馬達電流訊號轉換為頻域,分離出基頻、諧波與雜訊成分。從頻譜特徵即可判讀軸承異音、轉子失衡、整流子缺陷等隱性問題。',
       't2.title': '電刷接觸落點圖',
       't2.desc': '把電刷與整流子的接觸狀態逐點畫成落點圖,波形越穩＝接觸越穩。不給分數、不做判定,供同一顆馬達不同時期、或同型號不同顆互相比較。',
       't3.title': '滑行停止時間量測',
@@ -4452,7 +4467,7 @@
       't18.title': '扭力預測對照圖',
       't18.desc': '以本顆實測數據推算磨合後扭力,並把它與田宮官方標準畫在同一張圖上直接對照 —— 同型號不同顆位置不同,那正是個體差異。',
       't19.title': '單場到位自動判停',
-      't19.desc': 'AI 智慧磨合在一場內持續量測,自動磨到該顆的最佳狀態才停止:全新品完整整型、已磨合品快速確認、嚴重耗損如實告知 —— 磨好了,機器告訴你。',
+      't19.desc': 'AI 智慧磨合在一場內持續量測,以電流是否還會再創新低判定,自動磨到該顆的最佳狀態才停止:全新品完整整型、已磨合品直接告知不需再磨、嚴重耗損如實告知 —— 磨好了,機器告訴你。',
 
       // ===== Specifications 技術規格 =====
       'specs.tag': 'SPECIFICATIONS',
@@ -4499,9 +4514,12 @@
       'specs.range.g2': '馬達測試程式（單一階段）',
       'specs.range.g3': 'AI 智慧馬達健康管理（PRO）',
       'specs.range.g1note': '電壓輸入 0 = 跳過該階段。',
-      'specs.range.g3note': '全自動檢測程序,無數值輸入;完整檢測／快速檢測兩種模式,結果直接呈現這次與上次的差異。',
+      'specs.range.g3note': '全自動檢測程序,無數值輸入;完整檢測／快速檢測兩種模式(快速檢測約 4 分鐘,少一段電刷測試),結果為從指紋以來的變化,各項配自己的量測誤差範圍。',
       'specs.range.g4': '馬達特性量測 · AI智慧扭力預測 · 軸承阻力測試 · 電刷接觸穩定測試',
-      'specs.range.g4note': '全自動量測程序(馬達特性量測可選正/反轉,軸承阻力測試可選 2.4V / 3V),其餘無數值輸入。',
+      'specs.range.g4note': '全自動量測程序(馬達特性量測可選正/反轉,軸承阻力測試可選 2.4V / 3V),其餘無數值輸入。馬達型號為全機共用設定(田宮 15 款＋「Other」),各功能頁的型號下拉互相同步。',
+      'specs.range.g5': '系統設定',
+      'specs.range.g5tbl': '<tr><td>高溫鎖定溫度</td><td>25 ~ 60&deg;C</td><td class="spec-val">50&deg;C</td></tr><tr><td>溫度校正補償</td><td>&#177;20&deg;C</td><td class="spec-val">0</td></tr><tr><td>平均轉速容差</td><td>120 ~ 600 RPM</td><td class="spec-val">240</td></tr><tr><td>WiFi 熱點密碼</td><td>8 ~ 63 字</td><td class="spec-val">首次使用請更改</td></tr><tr><td>WiFi 列表</td><td>記憶 8 組外部 WiFi;「新增 WiFi」自動掃描點選帶入(隱藏網路可手動輸入);每組可改密碼;「清空列表」轉手用</td><td class="spec-val">&#8212;</td></tr><tr><td>使用者名稱／國家</td><td>各 32 字內</td><td class="spec-val">&#8212;</td></tr><tr><td>介面語言</td><td>中文／English／日本語</td><td class="spec-val">中文</td></tr><tr><td>馬達型號</td><td>全機共用;各功能頁的型號下拉互相同步;田宮 15 款＋「Other」</td><td class="spec-val">Hyper-Dash PRO</td></tr><tr><td>底盤</td><td>前置馬達／中置馬達／後置馬達三組共 21 款;決定正轉方向＝實車前進;清單依型號軸型自動篩選;型號與底盤不符時智慧磨合／磨合程式／馬達測試無法啟動;運轉中不可更改</td><td class="spec-val">首次使用請選</td></tr><tr><td>正版查驗</td><td>顯示本機 ID,可至官網查驗頁確認</td><td class="spec-val">&#8212;</td></tr><tr><td>RGB 狀態燈</td><td>亮度 0~100%;五組狀態樣式;面板／兩者／內建</td><td class="spec-val">60%／兩者</td></tr><tr><td>WiFi 重設</td><td>機上接點長按 5 秒,僅重設熱點名稱與密碼,其他設定與紀錄全數保留</td><td class="spec-val">&#8212;</td></tr><tr><td>模組校正</td><td>扣除機器自身待機電流。<b>開始前請先把馬達從治具上取下</b>,全程自動約 3 分鐘</td><td class="spec-val">&#8212;</td></tr><tr><td>端子電壓校正</td><td>以電錶回填四點實測值,讓機上顯示電壓與端子實際輸出對齊</td><td class="spec-val">&#8212;</td></tr>',
+      'specs.range.g5note': '全機共用設定,運轉中此頁只留「回首頁」可按。',
       'specs.p.volt': '電壓',
       'specs.p.dir': '運轉方向',
       'specs.p.runtime': '運轉時間',
@@ -4514,7 +4532,7 @@
       'specs.range.g1r': '馬達磨合程式 · 轉速模式 Beta（1~6 趟 × 10 階段）',
       'specs.range.g1rnote': '電壓穩定即進行換階,運轉時間為上限;跑滿時間仍推不到目標轉速時自動進行換階並標示「未達標」。目標轉速 0 = 跳過該階段。',
       'specs.range.g1s': 'AI 智慧磨合(PRO)',
-      'specs.range.g1snote': '一鍵自動磨合,一場磨到這顆的最佳狀態自動停止,並以「運轉穩定度」落點圖呈現整個磨合過程。',
+      'specs.range.g1snote': '一鍵自動磨合:選型號後系統自動採用對應的磨合方式,一場磨到這顆的最佳狀態自動停止,並以每輪的電流落點圖呈現整個磨合過程。',
       'specs.range.g2note': '判停標準與磨合頁獨立設定。',
       'specs.p.stopmode': '判停標準',
       'specs.p.targetrpm': '目標轉速',
@@ -4525,13 +4543,23 @@
       'specs.v.stopv': '純時間限制 / 智慧穩定電流',
       'specs.v.stoprpm': '嚴格 / 標準 / 寬鬆',
       'specs.v.sameas': '同電壓模式',
-      'specs.v.timecap': '磨到完成 / 2h / 3h / 4h',
+      'specs.v.timecap': '磨到完成 / 2h / 3h / 4h(部分型號由系統設定,不可調)',
       'specs.v.brushed': '碳刷系列',
-      'specs.v.all15': '田宮全 15 款',
+      'specs.v.all15': '碳刷類 7 款(Hyper-Dash PRO／Mach-Dash PRO／Hyper-Dash 3／Sprint-Dash／Power-Dash／Ultra-Dash／Plasma-Dash),選型號後自動採用對應磨合方式;銅刷類 8 款暫不支援(啟動鈕變灰並說明)',
       'specs.p.coach': '完成判定',
       'specs.p.mainviz': '主視覺',
-      'specs.v.mainviz': '運轉穩定度落點圖(0~100 固定刻度);完成顯示磨前後對照(磨合前／後轉速與提升幅度)',
-      'specs.v.coach': '單場到位:自動磨到該顆的最佳狀態停止;已磨合品快速確認;嚴重耗損如實告知不建議續磨',
+      'specs.v.mainviz': '每輪電流落點圖;完成顯示磨前後電流穩定度對照與停止方式',
+      'specs.p.session': '單場長度',
+      'specs.v.session': '多數馬達約 1.5~2 小時',
+      'specs.p.chassis': '底盤',
+      'specs.v.chassis': '與系統設定「馬達與底盤」同步;正轉方向依底盤對應實車前進;型號與底盤軸型不符時無法啟動',
+      'specs.p.efault': '電氣失序示警',
+      'specs.v.efault': '偵測到電流失序時停機並提示檢查電刷與整流子。<b>並非所有損壞都能提前偵測</b>',
+      'specs.p.sampling': '判定取樣',
+      'specs.v.sampling': '首輪為熱身輪(不列入數據與曲線);之後每輪判定量測由系統自動準備後取樣(時間上限保護)',
+      'specs.p.startcond': '啟動條件',
+      'specs.v.startcond': '型號與底盤軸型須相符(系統設定「馬達與底盤」)',
+      'specs.v.coach': '以電流是否還會再創新低判定磨完;<b>已磨合品直接告知不需再磨、不空跑</b>;嚴重耗損如實告知不建議續磨',
       'specs.p.stopb': '停止行為',
       'specs.v.stopb': '按停止立即停止,本場數據保留於畫面(不留跨場歷史)',
       'specs.d.smartstop': '智慧穩定電流',
@@ -4833,7 +4861,7 @@
       'g8.h4': 'C 類:外觀與機械徵兆(2 個不拆解可檢)',
       'g8.c7': '<strong>7. 馬達端子片變色或出現過熱痕跡</strong>—端子片外露金屬出現變黃、發黑、或藍色火痕 = 曾經歷高溫事件。',
       'g8.c8': '<strong>8. 無電源手轉軸心,阻力比新品明顯大</strong>—拿同型號新品做對照測試。新品手轉應該很順,衰退馬達會明顯感覺「澀」、「卡卡」(magnet field 失衡、brush 黏滯、或軸承拉摩擦)。',
-      'g8.adv': '<strong>進階補充</strong>:量化觀察(CV 電流變異係數、FFT 異常頻段等)是更精準的數據徵兆,操作方法詳見<a href="../motor-analysis-methodology/">三支柱方法論</a>。',
+      'g8.adv': '<strong>進階補充</strong>:量化觀察(同轉速的無載電流 I0、電刷接觸落點圖的波形穩定度等)是更精準的數據徵兆,操作方法詳見<a href="../motor-analysis-methodology/">三支柱方法論</a>。',
       'g8.h5': '處置決策:該洗、該退役、還是繼續用?',
       'g8.t.state': '狀態', 'g8.t.rpm': 'RPM 下降幅度', 'g8.t.other': '其他徵兆', 'g8.t.action': '處置',
       'g8.t.r1s': '正常磨耗', 'g8.t.r1r': '&lt; 5%', 'g8.t.r1o': '無', 'g8.t.r1a': '繼續使用',
@@ -5206,8 +5234,10 @@
       'cl.IMPROVE': '改進',
       'cl.SECURITY': '安全',
       'cl.v390.title': '扭力預測改視覺對照圖 · 健康管理改差異呈現 · 量測溫度全面標示',
-      'cl.v382.title': '量測狀態用語統一 · 一致性警語移除',
-      'cl.v381.title': '特性量測高轉速鎖定修復 · 三趟一致性提升',
+      'cl.v3110.title': '智慧磨合依型號選邏輯 · 判停改版(碳刷) · 底盤與型號全機設定',
+      'cl.v3110.note': '銅刷類 8 款暫不支援智慧磨合;<b>升級後請先到系統設定選底盤</b>,型號與底盤不符時無法啟動。',
+      'cl.v3101.title': '馬達正逆轉方向修正 · 智慧磨合單場判停 · 健康管理趨勢改版',
+      'cl.v3101.note': '<b>升級後馬達轉向與升級前相反</b>——修正前的「正轉」實為反轉;若治具或筆記標了方向請一併更正。',
       'about.tag': 'ABOUT',
       'about.title': '關於 MotorLab',
       'about.p1': 'MotorLab 是一個專注於 Mini 4WD<sup>®</sup> 馬達精密測試的獨立工作室。',
@@ -5261,19 +5291,20 @@
       'f2.tag2': 'Live charts',
       'f2.tag3': 'Dual mode',
       'f3.title': 'AI Motor Health Manager',
-      'f3.desc': 'Build a baseline health fingerprint per motor; every later check is presented as <b>&quot;this time vs last time&quot;</b> — showing which items improved, which declined and by how much. No abstract score: you read the change yourself and judge how far the motor is from its peak.',
-      'f3.tag1': 'This vs last',
-      'f3.tag2': 'Change shown',
+      'f3.desc': '<b>Health fingerprint 2.0</b>: a peak-state fingerprint is built when break-in finishes (magnetism / internal loss / contact stability / brush contact). Every later check then shows <b>the change since that fingerprint</b> &#8212; RPM, current, magnetism and other directly measured values, <b>each with its own measurement-error band</b>: inside the band is the repeatability of the measurement itself, outside it is a real change, with a &quot;how to read this chart&quot; note alongside. <b>The system only presents values and changes; it does not score, and it does not judge whether to replace anything.</b> Oil or dirt pulls the magnetism reading low, and the system can tell that case apart and switches to &quot;clean it and re-measure&quot;. Measurement error &#177;5%; magnetism is temperature-corrected, with up to 50 records per motor and a long-term trend chart.',
+      'f3.tag1': 'Change since fingerprint',
+      'f3.tag2': 'Error-band reading',
+      'f3.tag3': 'No scoring',
       'f3b.title': 'AI Torque Prediction',
       'f3b.desc': 'Pick the model, tap once: after a fully automatic measurement run it produces a single <b>torque prediction chart</b> — Tamiya\'s official reference line alongside this unit\'s estimated line, so you see at a glance whether it sits above or below standard; one predicted torque value each at @2.4V and @3.0V. Different units of the same model giving different results = real unit-to-unit variation. The result includes the measurement temperature range.',
       'f3b.tag1': '@2.4V / @3.0V',
       'f3b.tag2': 'Comparison chart',
       'f3b.tag3': 'Math model',
       'f3c.title': 'AI Smart Break-In',
-      'f3c.desc': 'One-tap fully automatic break-in: <b>it breaks the motor in to its best state in a single session, then stops</b> — a brand-new motor gets fully shaped, an already broken-in one is confirmed quickly, and severe wear is reported honestly; the main Running Stability scatter chart reads brush-commutator contact stability directly, and completion shows a before/after comparison. Supports all 15 Tamiya motors.',
-      'f3c.tag1': 'Done in one session',
-      'f3c.tag2': 'Running Stability',
-      'f3c.tag3': '15 Tamiya motors',
+      'f3c.desc': 'One-tap fully-automatic break-in: <b>it breaks the motor in to its best state in a single session, then stops on its own</b> &#8212; pick the model and the system applies the matching break-in method, judging completion by whether the current can still set a new low, and stopping only once it is there. <b>An already broken-in motor is told so directly instead of running for nothing</b>, and severe wear is reported straight. If the current becomes disordered it stops and prompts you to check the brushes and commutator (<b>not every fault can be caught in advance</b>). The main visual is a per-round current scatter chart; on completion it shows current stability before and after, and how it stopped. Currently 7 carbon-brush models are supported; the 8 copper-brush models are not yet. Forward and reverse follow the chassis set in System Settings so they match the real car.',
+      'f3c.tag1': 'One session',
+      'f3c.tag2': 'Current scatter chart',
+      'f3c.tag3': '7 carbon-brush models',
       'f4.title': 'Bearing Resistance Test',
       'f4.desc': 'Pick a test voltage (2.4V / 3V), spin up to steady RPM, then cut power and let it coast — measuring the time to a complete stop. <b>Longer means less drag.</b> Time is shown for relative comparison only, with no rating; the <b>measurement temperature</b> is shown alongside so readings from different days line up.',
       'f4.tag1': 'Coast-down',
@@ -5360,13 +5391,10 @@
       'vt.r8': 'AI Motor Health Manager (up to 20 motors)',
       'vt.r8b': 'AI Torque Prediction (@2.4V / @3.0V, comparison chart)',
       'vt.r8c': 'AI Smart Break-In (done in one session)',
-      'vt.r9': 'FFT vibration spectrum',
       'vt.r11': 'Health trend tracking',
       'tech.tag': 'TECHNOLOGY',
       'tech.title': 'Professional Analysis Built-In',
       'tech.subtitle': 'Every data point comes from industry-validated measurement methods.',
-      't1.title': 'Fast Fourier Transform Spectrum',
-      't1.desc': 'Convert motor current signal to frequency domain, separating fundamental, harmonics, and noise. Spectral signatures reveal bearing anomalies, rotor imbalance, and commutator defects invisible to the naked eye.',
       't2.title': 'Brush contact scatter map',
       't2.desc': 'Plots the brush-to-commutator contact state point by point as a scatter map: the steadier the pattern, the steadier the contact. No score, no judgement — a tool for relative comparison, across time on one motor or between units of the same model.',
       't3.title': 'Coast-Down Stop Time',
@@ -5402,7 +5430,7 @@
       't18.title': 'Torque Prediction Chart',
       't18.desc': 'Predicts post-break-in torque from measurements taken on this very unit, plotted against the Tamiya official standard on one chart — units of the same model land in different places, and that is genuine individual variation.',
       't19.title': 'Single-Session Auto-Stop',
-      't19.desc': 'AI Smart Break-In measures continuously within a single session and only stops once the motor is broken in to its best state: a brand-new one is fully shaped, an already broken-in one is confirmed quickly, and severe wear is reported honestly — when it is done, the machine tells you.',
+      't19.desc': 'AI Smart Break-in measures continuously within one session and judges by whether the current can still set a new low, stopping only once the motor has reached its best state: a brand-new motor gets fully shaped, an already broken-in one is told so directly, and severe wear is reported straight &#8212; when it is done, the machine tells you.',
 
       // ===== Specifications =====
       'specs.tag': 'SPECIFICATIONS',
@@ -5449,9 +5477,12 @@
       'specs.range.g2': 'Motor Test Program (single stage)',
       'specs.range.g3': 'AI Motor Health Manager (PRO)',
       'specs.range.g1note': 'Voltage input of 0 = skip that stage.',
-      'specs.range.g3note': 'A fully automatic check with no numeric inputs; full check and quick check modes, with the result showing the change since last time directly.',
+      'specs.range.g3note': 'A fully automatic check with no numeric inputs; full check and quick check modes (quick takes about 4 minutes, skipping one brush-test stage). The result is the change since the fingerprint, each item with its own measurement-error band.',
       'specs.range.g4': 'Motor Characterization · AI Torque Prediction · Bearing Resistance Test · Brush Contact Stability Test',
-      'specs.range.g4note': 'Fully automated procedures (Motor Characterization: forward/reverse selectable; Bearing Resistance: 2.4V / 3V selectable); no other numeric input.',
+      'specs.range.g4note': 'Fully automatic measurement routines (characterization lets you pick forward/reverse, the bearing test 2.4V or 3V); no other numeric input. The motor model is a machine-wide setting (15 Tamiya models plus &quot;Other&quot;) and the model dropdowns on every page stay in sync.',
+      'specs.range.g5': 'System settings',
+      'specs.range.g5tbl': '<tr><td>Overheat lock temperature</td><td>25 ~ 60&deg;C</td><td class="spec-val">50&deg;C</td></tr><tr><td>Temperature calibration offset</td><td>&#177;20&deg;C</td><td class="spec-val">0</td></tr><tr><td>Average-RPM tolerance</td><td>120 ~ 600 RPM</td><td class="spec-val">240</td></tr><tr><td>WiFi hotspot password</td><td>8 ~ 63 characters</td><td class="spec-val">Change it on first use</td></tr><tr><td>WiFi list</td><td>Remembers 8 external networks; &quot;Add WiFi&quot; scans and fills in the pick (hidden networks can be typed in); each entry\'s password can be changed; &quot;Clear list&quot; for handover</td><td class="spec-val">&#8212;</td></tr><tr><td>User name / country</td><td>Up to 32 characters each</td><td class="spec-val">&#8212;</td></tr><tr><td>Interface language</td><td>Chinese / English / Japanese</td><td class="spec-val">Chinese</td></tr><tr><td>Motor model</td><td>Machine-wide; the model dropdowns on every function page stay in sync; 15 Tamiya models plus &quot;Other&quot;</td><td class="spec-val">Hyper-Dash PRO</td></tr><tr><td>Chassis</td><td>21 chassis in three groups (front / mid / rear motor); sets forward = the car moving forward; the list is filtered by the model\'s shaft type; Smart Break-in, Break-in and Motor Test will not start when the model and chassis do not match; cannot be changed while running</td><td class="spec-val">Pick it on first use</td></tr><tr><td>Authenticity check</td><td>Shows the unit ID for verification on the website</td><td class="spec-val">&#8212;</td></tr><tr><td>RGB status light</td><td>Brightness 0&ndash;100%; five status styles; panel / both / built-in</td><td class="spec-val">60% / both</td></tr><tr><td>WiFi reset</td><td>Hold the on-board contact for 5 s; resets only the hotspot name and password, keeping every other setting and record</td><td class="spec-val">&#8212;</td></tr><tr><td>Module calibration</td><td>Subtracts the machine\'s own idle current. <b>Take the motor off the jig before starting</b>; fully automatic, about 3 minutes</td><td class="spec-val">&#8212;</td></tr><tr><td>Terminal voltage calibration</td><td>Enter four measured values from a multimeter so the displayed voltage matches what the terminals actually output</td><td class="spec-val">&#8212;</td></tr>',
+      'specs.range.g5note': 'Machine-wide settings; while a program is running this page leaves only &quot;Home&quot; active.',
       'specs.p.volt': 'Voltage',
       'specs.p.dir': 'Rotation Direction',
       'specs.p.runtime': 'Run Time',
@@ -5464,7 +5495,7 @@
       'specs.range.g1r': 'Break-in Program · Speed mode Beta (1–6 runs × 10 stages)',
       'specs.range.g1rnote': 'Advances once voltage stabilises; run time is the upper bound. If the target RPM still can\'t be reached after the full run time, it advances automatically and is flagged "not reached." Target RPM 0 = skip that stage.',
       'specs.range.g1s': 'AI Smart Break-In (PRO)',
-      'specs.range.g1snote': 'One-tap auto break-in; breaks the motor in to its best state in a single session then stops, plotting the whole process on the Running Stability scatter chart.',
+      'specs.range.g1snote': 'One-tap automatic break-in: pick the model and the system applies the matching method, breaking the motor in to its best state in a single session before stopping on its own, with a per-round current scatter chart showing the whole process.',
       'specs.range.g2note': 'Stop criterion is set independently from the break-in page.',
       'specs.p.stopmode': 'Stop Criterion',
       'specs.p.targetrpm': 'Target RPM',
@@ -5475,13 +5506,23 @@
       'specs.v.stopv': 'Time limit / Smart stable current',
       'specs.v.stoprpm': 'Strict / Standard / Loose',
       'specs.v.sameas': 'Same as Voltage mode',
-      'specs.v.timecap': 'Until done / 2h / 3h / 4h',
+      'specs.v.timecap': 'Until done / 2h / 3h / 4h (fixed by the system on some models)',
       'specs.v.brushed': 'Brushed series',
-      'specs.v.all15': 'All 15 Tamiya motors',
+      'specs.v.all15': '7 carbon-brush models (Hyper-Dash PRO / Mach-Dash PRO / Hyper-Dash 3 / Sprint-Dash / Power-Dash / Ultra-Dash / Plasma-Dash); picking the model selects the matching break-in method. The 8 copper-brush models are not yet supported (Start greys out with an explanation)',
       'specs.p.coach': 'Completion verdict',
       'specs.p.mainviz': 'Main visual',
-      'specs.v.mainviz': 'Running Stability scatter chart (fixed 0–100 scale); completion shows a before/after comparison (break-in RPM before / after and the gain)',
-      'specs.v.coach': 'Done in one session: breaks in to the motor\'s best state then stops; an already broken-in motor is confirmed quickly; severe wear is reported honestly with further break-in not recommended',
+      'specs.v.mainviz': 'A per-round current scatter chart; on completion it shows current stability before and after, and how it stopped',
+      'specs.p.session': 'Session length',
+      'specs.v.session': 'About 1.5&ndash;2 hours for most motors',
+      'specs.p.chassis': 'Chassis',
+      'specs.v.chassis': 'Synced with System Settings &rarr; Motor &amp; chassis; forward follows the chassis so it matches the car moving forward; it will not start when the model and chassis shaft types do not match',
+      'specs.p.efault': 'Electrical-disorder warning',
+      'specs.v.efault': 'If the current becomes disordered it stops and prompts you to check the brushes and commutator. <b>Not every fault can be caught in advance</b>',
+      'specs.p.sampling': 'Judgment sampling',
+      'specs.v.sampling': 'The first round is a warm-up (not counted in the data or curve); every later judgment measurement is sampled after the system prepares automatically (protected by the time cap)',
+      'specs.p.startcond': 'Start condition',
+      'specs.v.startcond': 'The model and chassis shaft types must match (System Settings &rarr; Motor &amp; chassis)',
+      'specs.v.coach': 'Completion is judged by whether the current can still set a new low; <b>an already broken-in motor is told so directly instead of running for nothing</b>; severe wear is reported straight, with further break-in not recommended',
       'specs.p.stopb': 'Stop behavior',
       'specs.v.stopb': 'Stop halts immediately; this session\'s data stays on screen (no cross-session history)',
       'specs.d.smartstop': 'Smart stable current',
@@ -5788,7 +5829,7 @@
       'g8.h4': 'Category C: External and mechanical signs (2 — no disassembly required)',
       'g8.c7': '<strong>7. Terminal-tab discoloration or burn marks</strong> — Exposed metal terminals showing yellowing, blackening, or blue burn marks = the motor has experienced a high-temperature event.',
       'g8.c8': '<strong>8. Higher manual-rotation resistance than a new unit</strong> — Test against a new motor of the same type. A new motor\'s shaft spins freely; a degraded one feels "sticky" or "draggy" (from magnet imbalance, brush stiction, or bearing friction).',
-      'g8.adv': '<strong>Advanced note</strong>: Quantified observations (current CV — coefficient of variation — and FFT abnormal frequency bands) are more precise data-side signs. See <a href="../motor-analysis-methodology/">the three-pillar methodology</a> for the measurement approach.',
+      'g8.adv': '<strong>Advanced note</strong>: Quantified observations (no-load current I0 at the same RPM, how steady the brush contact scatter map looks, and so on) are more precise data-side signs. See <a href="../motor-analysis-methodology/">the three-pillar methodology</a> for the measurement approach.',
       'g8.h5': 'Decision matrix: Wash, retire, or keep using?',
       'g8.figdec': '<img class="chart" src="/images/motor-retire-decision_e.png" alt="Motor degradation decision matrix: RPM drop <5% keep using, 5–10% wash and lube, 10–20% retirement candidate for practice only, >20% or startup fail/overheat retire" loading="lazy">',
       'g8.t.state': 'State', 'g8.t.rpm': 'RPM drop', 'g8.t.other': 'Other signs', 'g8.t.action': 'Action',
@@ -6362,8 +6403,10 @@
       'cl.IMPROVE': 'IMPROVE',
       'cl.SECURITY': 'SECURITY',
       'cl.v390.title': 'Torque prediction is now a visual comparison chart · Health check shows the change · Measurement temperature shown throughout',
-      'cl.v382.title': 'Unified measurement status wording · Consistency warning removed',
-      'cl.v381.title': 'High-RPM lock fix in characterization · Better 3-pass consistency',
+      'cl.v3110.title': 'Smart Break-in picks its logic by model &middot; New completion test (carbon brush) &middot; Chassis and model set machine-wide',
+      'cl.v3110.note': 'The 8 copper-brush models are not yet supported by Smart Break-in. <b>After updating, pick your chassis in System Settings first</b> &#8212; the machine will not start when the model and chassis do not match.',
+      'cl.v3101.title': 'Motor forward/reverse direction corrected &middot; Single-session completion for Smart Break-in &middot; New health trend view',
+      'cl.v3101.note': '<b>After updating, the motor turns the opposite way</b> &#8212; what earlier firmware called &quot;forward&quot; was actually reverse. If your jig or notes are marked with a direction, update them too.',
       'about.tag': 'ABOUT',
       'about.title': 'About MotorLab',
       'about.p1': 'MotorLab is an independent studio dedicated to precision Mini 4WD<sup>®</sup> motor diagnostics.',
@@ -6417,19 +6460,20 @@
       'f2.tag2': 'リアルタイムグラフ',
       'f2.tag3': 'デュアルモード',
       'f3.title': 'AI スマートモーター健康管理',
-      'f3.desc': 'モーターごとに基準健康指紋を作成し、以降の検査は<b>「今回 vs 前回」</b>の差分で表示。どの項目が良くなり、どれが悪化し、どれだけ変化したかを直接提示します。抽象的なスコアは出さず、ピークからどれだけ離れたかはご自身で判読できます。',
-      'f3.tag1': '今回 vs 前回',
-      'f3.tag2': '変化量表示',
+      'f3.desc': '<b>健康指紋 2.0</b>:慣らし完了時にピーク状態の指紋を作成します(磁力／内部損失／接触安定度／ブラシ接触の 4 側面)。以後の各検査では<b>指紋からの変化</b>を表示——回転数・電流・磁力などの直接測定値に、<b>項目ごとの測定誤差の帯</b>を添えます:帯の内は測定そのものの再現性、帯の外に出て初めて本当の変化で、「このグラフの読み方」も併記します。<b>システムは数値と変化を示すだけで、採点も交換の判断も行いません。</b>油や汚れが付くと磁力の読値が低く出ますが、システムはそれを見分けて「清掃してから再測定」と案内します。測定誤差 &#177;5%;磁力は温度校正済みで、1 個体あたり最大 50 件の履歴と長期トレンド図を保持します。',
+      'f3.tag1': '指紋からの変化',
+      'f3.tag2': '誤差帯で判読',
+      'f3.tag3': '採点なし',
       'f3b.title': 'AI スマートトルク予測',
       'f3b.desc': '型番を選んでワンタップ、全自動の連続測定のあと<b>トルク予測グラフ</b>を 1 枚出力:タミヤ公式標準線とこの個体の推算線を並べ、標準線の上か下かが一目で分かります;@2.4V／@3.0V それぞれに予測トルク値。同型番でも個体ごとに結果が違う＝個体差の反映です。結果には測定温度帯が付きます。',
       'f3b.tag1': '@2.4V / @3.0V',
       'f3b.tag2': '視覚比較図',
       'f3b.tag3': '数学モデル',
       'f3c.title': 'AI スマート慣らし',
-      'f3c.desc': 'ワンタップ全自動慣らし:<b>1 回でこの個体の最良状態まで慣らして自動停止</b>——新品は完全に整形、慣らし済みは素早く確認、重度摩耗は正直に通知;メインの「運転安定度」散布図でブラシと整流子の接触安定度を直読でき、完了時は慣らし前後の対照を表示。タミヤ全 15 機種対応。',
-      'f3c.tag1': '1 回で完了',
-      'f3c.tag2': '運転安定度',
-      'f3c.tag3': 'タミヤ 15 機種',
+      'f3c.desc': 'ワンタップ全自動慣らし:<b>1 セッションでこの個体の最良状態まで慣らし、自動停止</b>します——型番を選ぶとシステムが対応する慣らし方式を自動採用し、「電流がまだ最低値を更新するか」で完了を判定、仕上がるまで止めません。<b>すでに仕上がった個体はその旨を直接伝え、空回りしません</b>;重度の消耗も正直に伝えます。電流の乱れを検知すると停止し、ブラシと整流子の点検を促します(<b>すべての故障を事前に検知できるわけではありません</b>)。メインビジュアルは 1 ラウンドごとの電流散布図で、完了時は慣らし前後の電流安定度と停止のしかたを表示します。現在はカーボンブラシ 7 種に対応、銅ブラシ 8 種は未対応です;正転・逆転はシステム設定のシャーシに従い実車と一致します。',
+      'f3c.tag1': '単一セッション',
+      'f3c.tag2': '電流散布図',
+      'f3c.tag3': 'カーボンブラシ 7 種',
       'f4.title': 'ベアリング抵抗テスト',
       'f4.desc': 'テスト電圧(2.4V / 3V)を選び、安定回転数まで加速してから電源を切って惰性走行させ、「完全停止までの時間」を測定。<b>長いほど抵抗が小さい</b>ことを意味します。時間は相対比較用に表示するのみで評定は行わず、<b>測定温度</b>も併記するので時期をまたいでも比較できます。',
       'f4.tag1': '惰性走行',
@@ -6516,13 +6560,10 @@
       'vt.r8': 'AI スマートモーター健康管理（最大 20 個）',
       'vt.r8b': 'AI スマートトルク予測(@2.4V / @3.0V、視覚比較図)',
       'vt.r8c': 'AI スマート慣らし(1 回で完了)',
-      'vt.r9': 'FFT 振動スペクトル解析',
       'vt.r11': '健康トレンド曲線追跡',
       'tech.tag': 'TECHNOLOGY',
       'tech.title': '内蔵プロ解析技術',
       'tech.subtitle': 'すべてのデータは業界で検証された測定方法に基づいています。',
-      't1.title': '高速フーリエ変換スペクトル',
-      't1.desc': 'モーター電流信号を周波数領域に変換し、基本周波数・高調波・ノイズ成分を分離。スペクトル特徴からベアリング異音、ローター不均衡、整流子欠陥などの潜在的問題を読み取れます。',
       't2.title': 'ブラシ接触散布図',
       't2.desc': 'ブラシと整流子の接触状態を 1 点ずつ散布図に描きます:波形が安定しているほど接触が安定。スコアは出さず良否判定も行わず、同一個体の時期別や同型番の個体間の相対比較に使います。',
       't3.title': '惰性停止時間の測定',
@@ -6558,7 +6599,7 @@
       't18.title': 'トルク予測対照図',
       't18.desc': '実測データからこの個体の慣らし後トルクを推算し、タミヤ公式標準と同じ図上で直接対照 —— 同機種でも個体ごとに位置が違い、それが個体差そのものです。',
       't19.title': '1 回で完了する自動停止',
-      't19.desc': 'AI スマート慣らしは 1 回の中で連続測定し、この個体の最良状態まで慣らしてから停止:新品は完全整形、慣らし済みは素早く確認、重度摩耗は正直に通知 —— 仕上がったら、機械が教えてくれます。',
+      't19.desc': 'AI スマート慣らしは 1 セッション内で測定を続け、「電流がまだ最低値を更新するか」で判定し、その個体の最良状態に達してはじめて自動停止します:新品は完全に整形し、すでに仕上がった個体にはその旨を直接伝え、重度の消耗も正直に伝えます——仕上がったら、機械が教えてくれます。',
       'specs.tag': 'SPECIFICATIONS',
       'specs.title': '技術仕様',
       'specs.subtitle': 'ハードウェアとソフトウェアの完全な仕様、および各機能の数値入力範囲。',
@@ -6603,9 +6644,12 @@
       'specs.range.g2': 'モーターテストプログラム（単一ステージ）',
       'specs.range.g3': 'AI スマートモーター健康管理（PRO）',
       'specs.range.g1note': '電圧入力 0 = そのステージをスキップ。',
-      'specs.range.g3note': '全自動の検査プログラムで数値入力はありません;フル検査／クイック検査の 2 モード、結果は前回との差分を直接表示します。',
+      'specs.range.g3note': '全自動の検査プログラムで数値入力はありません;フル検査／クイック検査の 2 モード(クイックは約 4 分、ブラシテストを 1 段省略)。結果は指紋からの変化で、各項目に固有の測定誤差の帯が付きます。',
       'specs.range.g4': 'モーター特性測定 · AI スマートトルク予測 · ベアリング抵抗テスト · ブラシ接触安定テスト',
-      'specs.range.g4note': '全自動測定プログラム(モーター特性測定は正転/逆転を選択可、ベアリング抵抗テストは 2.4V / 3V を選択可)、その他は数値入力なし。',
+      'specs.range.g4note': '全自動の測定プログラム(特性測定は正転/逆転を選択可、ベアリング抵抗テストは 2.4V / 3V)、その他に数値入力はありません。型番は全機共用の設定(タミヤ 15 種＋「Other」)で、各機能ページのプルダウンは相互に同期します。',
+      'specs.range.g5': 'システム設定',
+      'specs.range.g5tbl': '<tr><td>高温ロック温度</td><td>25 ~ 60&deg;C</td><td class="spec-val">50&deg;C</td></tr><tr><td>温度校正補償</td><td>&#177;20&deg;C</td><td class="spec-val">0</td></tr><tr><td>平均回転数の公差</td><td>120 ~ 600 RPM</td><td class="spec-val">240</td></tr><tr><td>WiFi ホットスポットのパスワード</td><td>8 ~ 63 字</td><td class="spec-val">初回使用時に変更を</td></tr><tr><td>WiFi リスト</td><td>外部 WiFi を 8 件記憶;「WiFi 追加」で自動スキャンして選択入力(ステルスは手動入力可);各件のパスワード変更可;「リスト消去」は譲渡時に</td><td class="spec-val">&#8212;</td></tr><tr><td>ユーザー名／国</td><td>各 32 字以内</td><td class="spec-val">&#8212;</td></tr><tr><td>表示言語</td><td>中国語／English／日本語</td><td class="spec-val">中国語</td></tr><tr><td>モーター型番</td><td>全機共用;各機能ページの型番プルダウンが相互に同期;タミヤ 15 種＋「Other」</td><td class="spec-val">Hyper-Dash PRO</td></tr><tr><td>シャーシ</td><td>フロント／ミッドシップ／リヤモーターの 3 グループ計 21 種;正転方向＝実車の前進を決定;リストは型番の軸型で自動絞り込み;型番とシャーシが合わない場合はスマート慣らし／慣らしプログラム／モーターテストが開始不可;運転中は変更不可</td><td class="spec-val">初回使用時に選択を</td></tr><tr><td>正規品認証</td><td>本機 ID を表示、公式サイトの認証ページで確認可</td><td class="spec-val">&#8212;</td></tr><tr><td>RGB ステータスライト</td><td>明るさ 0~100%;5 種のステータス様式;パネル／両方／内蔵</td><td class="spec-val">60%／両方</td></tr><tr><td>WiFi リセット</td><td>本体の接点を 5 秒長押し;ホットスポット名とパスワードのみリセットし、他の設定と記録はすべて保持</td><td class="spec-val">&#8212;</td></tr><tr><td>モジュール校正</td><td>機器自身の待機電流を差し引きます。<b>開始前にモーターを治具から外してください</b>;全自動で約 3 分</td><td class="spec-val">&#8212;</td></tr><tr><td>端子電圧校正</td><td>テスターで測った 4 点の実測値を入力し、表示電圧と端子の実出力を一致させます</td><td class="spec-val">&#8212;</td></tr>',
+      'specs.range.g5note': '全機共用の設定です。運転中はこのページで「ホームへ」のみ操作できます。',
       'specs.p.volt': '電圧',
       'specs.p.dir': '回転方向',
       'specs.p.runtime': '運転時間',
@@ -6618,7 +6662,7 @@
       'specs.range.g1r': '慣らしプログラム · 回転数モード Beta（1~6 回 × 10 段階）',
       'specs.range.g1rnote': '電圧が安定すると次段階へ、運転時間は上限。時間いっぱい運転しても目標回転数に到達できない場合は自動で次段階へ進み「未達」と表示。目標回転数 0 = そのステージをスキップ。',
       'specs.range.g1s': 'AI スマート慣らし(PRO)',
-      'specs.range.g1snote': 'ワンタップ自動慣らし。1 回でこの個体の最良状態まで慣らして自動停止し、「運転安定度」の散布図で慣らしの全過程を表示します。',
+      'specs.range.g1snote': 'ワンタップ自動慣らし:型番を選ぶとシステムが対応する方式を自動採用し、1 セッションで最良状態まで慣らして自動停止、1 ラウンドごとの電流散布図で全過程を表示します。',
       'specs.range.g2note': '判停基準は慣らしページと独立して設定します。',
       'specs.p.stopmode': '判停基準',
       'specs.p.targetrpm': '目標回転数',
@@ -6629,13 +6673,23 @@
       'specs.v.stopv': '時間制限のみ / スマート安定電流',
       'specs.v.stoprpm': '厳格 / 標準 / 緩め',
       'specs.v.sameas': '電圧モードと同じ',
-      'specs.v.timecap': '完了まで / 2h / 3h / 4h',
+      'specs.v.timecap': '完了まで / 2h / 3h / 4h(一部型番はシステム固定で変更不可)',
       'specs.v.brushed': 'カーボンブラシ系',
-      'specs.v.all15': 'タミヤ全 15 機種',
+      'specs.v.all15': 'カーボンブラシ 7 種(Hyper-Dash PRO／Mach-Dash PRO／Hyper-Dash 3／Sprint-Dash／Power-Dash／Ultra-Dash／Plasma-Dash)、型番選択で対応する慣らし方式を自動採用;銅ブラシ 8 種は未対応(開始ボタンがグレーになり理由を表示)',
       'specs.p.coach': '完了判定',
       'specs.p.mainviz': 'メインビジュアル',
-      'specs.v.mainviz': '運転安定度の散布図(0~100 固定目盛り);完了時は慣らし前後の対照(慣らし前／後の回転数と向上幅)を表示',
-      'specs.v.coach': '1 回で完了:この個体の最良状態まで慣らして停止;慣らし済みは素早く確認;重度摩耗は正直に通知し継続を非推奨',
+      'specs.v.mainviz': '1 ラウンドごとの電流散布図;完了時は慣らし前後の電流安定度と停止のしかたを表示',
+      'specs.p.session': '1 セッションの長さ',
+      'specs.v.session': '多くのモーターで約 1.5~2 時間',
+      'specs.p.chassis': 'シャーシ',
+      'specs.v.chassis': 'システム設定「モーターとシャーシ」と同期;正転方向はシャーシに従い実車の前進と一致;型番とシャーシの軸型が合わない場合は開始できません',
+      'specs.p.efault': '電気的異常の警告',
+      'specs.v.efault': '電流の乱れを検知すると停止し、ブラシと整流子の点検を促します。<b>すべての故障を事前に検知できるわけではありません</b>',
+      'specs.p.sampling': '判定サンプリング',
+      'specs.v.sampling': '初回は暖機ラウンド(データと曲線には含めません);以後の判定測定はシステムの自動準備後にサンプリングします(時間上限で保護)',
+      'specs.p.startcond': '開始条件',
+      'specs.v.startcond': '型番とシャーシの軸型が一致している必要があります(システム設定「モーターとシャーシ」)',
+      'specs.v.coach': '「電流がまだ最低値を更新するか」で完了を判定;<b>すでに仕上がった個体はその旨を直接伝え、空回りしません</b>;重度の消耗も正直に伝え、継続は非推奨とします',
       'specs.p.stopb': '停止動作',
       'specs.v.stopb': '停止で即時停止、今回のデータは画面に保持(セッション横断の履歴は残さない)',
       'specs.d.smartstop': 'スマート安定電流',
@@ -6651,8 +6705,10 @@
       'cl.IMPROVE': '改善',
       'cl.SECURITY': 'セキュリティ',
       'cl.v390.title': 'トルク予測を視覚比較図に · 健康管理は変化量表示に · 測定温度を全面表示',
-      'cl.v382.title': '測定ステータス用語の統一 · 一貫性の警告を削除',
-      'cl.v381.title': '特性測定の高回転ロック修正 · 3 回の一貫性向上',
+      'cl.v3110.title': 'スマート慣らしが型番でロジックを選択 &middot; 判定方式を刷新(カーボンブラシ) &middot; シャーシと型番を全機設定に',
+      'cl.v3110.note': '銅ブラシ 8 種はスマート慣らし未対応です。<b>アップデート後はまずシステム設定でシャーシを選んでください</b>——型番とシャーシが合わない場合は開始できません。',
+      'cl.v3101.title': 'モーターの正転・逆転方向を修正 &middot; スマート慣らしの単一セッション判定 &middot; 健康管理トレンドを刷新',
+      'cl.v3101.note': '<b>アップデート後、モーターの回転方向は以前と逆になります</b>——修正前の「正転」は実際には逆転でした。治具やメモに方向を書いている場合は併せて修正してください。',
       'about.tag': 'ABOUT',
       'about.title': 'MotorLab について',
       'about.p1': 'MotorLab は Mini 4WD<sup>®</sup> モーターの精密測定に特化した独立系スタジオです。',
@@ -6983,7 +7039,7 @@
       'g8.h4': 'C 類:外観と機械サイン(2 つの非分解検査)',
       'g8.c7': '<strong>7. モーター端子片の変色または焼け跡</strong>—端子片の露出金属が黄ばみ、黒ずみ、青い焼け跡を呈する = 高温イベント経験あり。',
       'g8.c8': '<strong>8. 無電源で軸心を手回し、新品より抵抗が明らかに大きい</strong>—同型番の新品と比較テスト。新品はスムーズに回転、衰退モーターは「渋い」「カクカク」感(磁石の不均衡、ブラシの粘着、軸受抵抗のいずれか)。',
-      'g8.adv': '<strong>進階補足</strong>:定量観察(電流 CV、FFT 異常周波数帯など)はより精密なデータ側サインです。測定方法は<a href="../motor-analysis-methodology/">三本柱方法論</a>を参照。',
+      'g8.adv': '<strong>進階補足</strong>:定量観察(同一回転数の無負荷電流 I0、ブラシ接触散布図の波形の安定度など)はより精密なデータ側のサインです。測定方法は<a href="../motor-analysis-methodology/">三本柱方法論</a>を参照。',
       'g8.h5': '判断マトリクス:洗う、引退、それとも続行?',
       'g8.figdec': '<img class="chart" src="/images/motor-retire-decision_j.png" alt="モーター劣化の処置判断:RPM 低下 <5% 続行、5–10% 洗浄注油、10–20% 引退候補で練習用、>20% や起動失敗/過熱で引退" loading="lazy">',
       'g8.t.state': '状態', 'g8.t.rpm': 'RPM 低下幅', 'g8.t.other': 'その他のサイン', 'g8.t.action': '処置',

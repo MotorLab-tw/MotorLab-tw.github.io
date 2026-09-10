@@ -1316,6 +1316,15 @@
     color: var(--text-muted);
     font-family: monospace;
   }
+  /* 升級警語:僅用於必要的操作提醒,不放版本明細(沿用 .spec-note 的處理) */
+  .changelog-note {
+    margin: 8px 0 0;
+    font-size: 12.5px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    padding-left: 12px;
+    border-left: 2px solid var(--accent-blue);
+  }
   .changelog-content h4 {
     font-size: 15px;
     margin-bottom: 10px;
@@ -2071,7 +2080,7 @@
 <p data-i18n="g8.c7"><strong>7. モーター端子片の変色または焼け跡</strong>—端子片の露出金属が黄ばみ、黒ずみ、青い焼け跡を呈する = 高温イベント経験あり。</p>
 <p data-i18n="g8.c8"><strong>8. 無電源で軸心を手回し、新品より抵抗が明らかに大きい</strong>—同型番の新品と比較テスト。新品はスムーズに回転、衰退モーターは「渋い」「カクカク」感(磁石の不均衡、ブラシの粘着、軸受抵抗のいずれか)。</p>
 <div class="guide-tip">
-<p data-i18n="g8.adv"><strong>進階補足</strong>:定量観察(電流 CV、FFT 異常周波数帯など)はより精密なデータ側サインです。測定方法は<a href="../motor-analysis-methodology/">三本柱方法論</a>を参照。</p>
+<p data-i18n="g8.adv"><strong>進階補足</strong>:定量観察(同一回転数の無負荷電流 I0、ブラシ接触散布図の波形の安定度など)はより精密なデータ側のサインです。測定方法は<a href="../motor-analysis-methodology/">三本柱方法論</a>を参照。</p>
 </div>
 <h2 data-i18n="g8.h5">判断マトリクス:洗う、引退、それとも続行?</h2>
 <figure data-i18n="g8.figdec"><img alt="モーター劣化の処置判断:RPM 低下 &lt;5% 続行、5–10% 洗浄注油、10–20% 引退候補で練習用、&gt;20% や起動失敗/過熱で引退" class="chart" loading="lazy" src="/images/motor-retire-decision_j.png"/></figure>
