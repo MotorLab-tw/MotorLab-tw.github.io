@@ -177,7 +177,7 @@
       "name": "Why is real-time telemetry important for motor break-in?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Real-time telemetry turns break-in from 'just run the timer' into 'converge on actual motor state'. MotorLab uses real-time current measurement to detect brush-contact instability and bearing tau decay, judging completion by whether the current can still set a new low and stopping automatically only once it is there."
+        "text": "Real-time telemetry turns break-in from 'just run the timer' into 'converge on actual motor state'. MotorLab uses real-time current measurement to detect brush-contact instability and bearing tau decay, and it stops automatically only once the motor is there."
       }
     },
     {
@@ -2365,7 +2365,7 @@
 <svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M10 8.5l5.5 3.5-5.5 3.5z"></path></svg>
 </div>
 <h3 data-i18n="f3c.title">AI Smart Break-In</h3>
-<p data-i18n="f3c.desc">One-tap fully-automatic break-in: <b>it breaks the motor in to its best state in a single session, then stops on its own</b> — pick the model and the system applies the matching break-in method, judging completion by whether the current can still set a new low, and stopping only once it is there. <b>An already broken-in motor is told so directly instead of running for nothing</b>, and severe wear is reported straight. If the current becomes disordered it stops and prompts you to check the brushes and commutator (<b>not every fault can be caught in advance</b>). The main visual is a per-round current scatter chart; on completion it shows current stability before and after, and how it stopped. Currently 7 carbon-brush models are supported; the 8 copper-brush models are not yet. Forward and reverse follow the chassis set in System Settings so they match the real car.</p>
+<p data-i18n="f3c.desc">One-tap fully-automatic break-in: <b>it breaks the motor in to its best state in a single session, then stops on its own</b> — pick the model and the system applies the matching break-in method, keeps measuring, and stops only once the motor is there. <b>An already broken-in motor is told so directly instead of running for nothing</b>, and severe wear is reported straight. If the current becomes disordered it stops and prompts you to check the brushes and commutator (<b>not every fault can be caught in advance</b>). The main visual is a per-round current scatter chart; on completion it shows current stability before and after, and how it stopped. Currently 7 carbon-brush models are supported; the 8 copper-brush models are not yet. Forward and reverse follow the chassis set in System Settings so they match the real car.</p>
 <div class="feature-meta">
 <span class="feature-tag" data-i18n="f3c.tag1">One session</span>
 <span class="feature-tag" data-i18n="f3c.tag2">Current scatter chart</span>
@@ -2681,13 +2681,7 @@
 <div class="tech-name">STABILITY_LATCH</div>
 <h4 data-i18n="t5.title">Stable Current Latch Algorithm</h4>
 <p data-i18n="t5.desc">Once the current settles over a period, the reading latches — preventing transient perturbations from causing misjudgment and boosting repeatability.</p>
-</div>
-<div class="tech-card">
-<div class="tech-name">NOISE_FLOOR_SUBTRACT</div>
-<h4 data-i18n="t6.title">Noise Floor Subtraction</h4>
-<p data-i18n="t6.desc">The instrument's own noise baseline is captured before measurement and subtracted from the result, isolating the motor's true signal changes so even subtle anomalies cannot hide.</p>
-</div>
-<div class="tech-card">
+</div><div class="tech-card">
 <div class="tech-name">SPEED_LOCK</div>
 <h4 data-i18n="t10.title">Adaptive Closed-Loop Speed Lock</h4>
 <p data-i18n="t10.desc">The system learns each motor's characteristics and uses a closed loop to pin its speed to the target, with steady-state error within ±2%, so every motor is measured at the same operating point — removing the "different speed → incomparable data" confound.</p>
@@ -2735,7 +2729,7 @@
 <div class="tech-card">
 <div class="tech-name">STEADY_STATE</div>
 <h4 data-i18n="t19.title">Single-Session Auto-Stop</h4>
-<p data-i18n="t19.desc">AI Smart Break-in measures continuously within one session and judges by whether the current can still set a new low, stopping only once the motor has reached its best state: a brand-new motor gets fully shaped, an already broken-in one is told so directly, and severe wear is reported straight — when it is done, the machine tells you.</p>
+<p data-i18n="t19.desc">AI Smart Break-in keeps measuring within one session and stops only once the motor has reached its best state: a brand-new motor gets fully shaped, an already broken-in one is told so directly, and severe wear is reported straight — when it is done, the machine tells you.</p>
 </div>
 <div class="tech-card">
 <div class="tech-name">EMI_SUPPRESSION</div>
@@ -2855,7 +2849,7 @@
 <tr><td data-i18n="specs.p.runtime">Run Time</td><td class="spec-val">10 ~ 600</td><td data-i18n="specs.u.sec">sec</td><td data-i18n="specs.d.bystage">Per stage</td></tr>
 <tr><td data-i18n="specs.p.cooltime">Cooling Time</td><td class="spec-val">10 ~ 600</td><td data-i18n="specs.u.sec">sec</td><td data-i18n="specs.d.bystage">Per stage</td></tr>
 <tr><td data-i18n="specs.p.tol">Stable Current Tolerance</td><td class="spec-val">2 ~ 50</td><td class="spec-val">±mA</td><td class="spec-val">5</td></tr>
-<tr><td data-i18n="specs.p.stopmode">Stop Criterion</td><td data-i18n="specs.v.stopv">Time limit / Smart stable current</td><td>—</td><td data-i18n="specs.d.smartstop">Smart stable current</td></tr><tr><td data-i18n="specs.p.startcond">Start condition</td><td data-i18n="specs.v.startcond">The model and chassis shaft types must match (System Settings → Motor &amp; chassis)</td><td>—</td><td class="spec-val">—</td></tr>
+<tr><td data-i18n="specs.p.stopmode">Stop Criterion</td><td data-i18n="specs.v.stopv">Time limit / Smart stable current</td><td>—</td><td data-i18n="specs.d.smartstop">Smart stable current</td></tr>
 </tbody>
 </table>
 </div>
@@ -2875,7 +2869,6 @@
 <tbody>
 <tr><td data-i18n="specs.p.targetrpm">Target RPM</td><td class="spec-val">6,000 ~ 30,000 (step 1,000)</td><td class="spec-val">RPM</td><td class="spec-val">10,000</td></tr>
 <tr><td data-i18n="specs.p.stopmode">Stop Criterion</td><td data-i18n="specs.v.stoprpm">Strict / Standard / Loose</td><td>—</td><td data-i18n="specs.d.std">Standard</td></tr>
-<tr><td data-i18n="specs.p.vlimit">Speed-control Output Cap</td><td class="spec-val">4.0</td><td class="spec-val">V</td><td>—</td></tr>
 <tr><td data-i18n="specs.p.same">Direction / Time / Cooling / Passes</td><td data-i18n="specs.v.sameas">Same as Voltage mode</td><td>—</td><td>—</td></tr>
 </tbody>
 </table>
@@ -2893,12 +2886,7 @@
 <th data-i18n="specs.th.default">Default</th>
 </tr>
 </thead>
-<tbody>
-<tr><td data-i18n="specs.p.timecap">Time Cap</td><td data-i18n="specs.v.timecap">Until done / 2h / 3h / 4h (fixed by the system on some models)</td><td>—</td><td class="spec-val">3h</td></tr>
-<tr><td data-i18n="specs.p.session">Session length</td><td data-i18n="specs.v.session">About 1.5–2 hours for most motors</td><td>—</td><td class="spec-val">—</td></tr><tr><td data-i18n="specs.p.model">Applicable Models</td><td data-i18n="specs.v.all15">7 carbon-brush models (Hyper-Dash PRO / Mach-Dash PRO / Hyper-Dash 3 / Sprint-Dash / Power-Dash / Ultra-Dash / Plasma-Dash); picking the model selects the matching break-in method. The 8 copper-brush models are not yet supported (Start greys out with an explanation)</td><td>—</td><td class="spec-val">Hyper-Dash PRO</td></tr>
-<tr><td data-i18n="specs.p.coach">Completion verdict</td><td data-i18n="specs.v.coach">Completion is judged by whether the current can still set a new low; <b>an already broken-in motor is told so directly instead of running for nothing</b>; severe wear is reported straight, with further break-in not recommended</td><td>—</td><td class="spec-val">—</td></tr><tr><td data-i18n="specs.p.chassis">Chassis</td><td data-i18n="specs.v.chassis">Synced with System Settings → Motor &amp; chassis; forward follows the chassis so it matches the car moving forward; it will not start when the model and chassis shaft types do not match</td><td>—</td><td class="spec-val">—</td></tr><tr><td data-i18n="specs.p.efault">Electrical-disorder warning</td><td data-i18n="specs.v.efault">If the current becomes disordered it stops and prompts you to check the brushes and commutator. <b>Not every fault can be caught in advance</b></td><td>—</td><td class="spec-val">—</td></tr><tr><td data-i18n="specs.p.mainviz">Main visual</td><td data-i18n="specs.v.mainviz">A per-round current scatter chart; on completion it shows current stability before and after, and how it stopped</td><td>—</td><td class="spec-val">—</td></tr>
-<tr><td data-i18n="specs.p.stopb">Stop behavior</td><td data-i18n="specs.v.stopb">Stop halts immediately; this session's data stays on screen (no cross-session history)</td><td>—</td><td class="spec-val">—</td></tr><tr><td data-i18n="specs.p.sampling">Judgment sampling</td><td data-i18n="specs.v.sampling">The first round is a warm-up (not counted in the data or curve); every later judgment measurement is sampled after the system prepares automatically (protected by the time cap)</td><td>—</td><td class="spec-val">自動</td></tr>
-</tbody>
+<tbody data-i18n="specs.range.g1stbl"><tr><td>Time cap</td><td>Until done / 2h / 3h / 4h (fixed by the system on some models)</td><td>—</td><td class="spec-val">3h</td></tr><tr><td>Motor model</td><td>7 carbon-brush models (Hyper-Dash PRO / Mach-Dash PRO / Hyper-Dash 3 / Sprint-Dash / Power-Dash / Ultra-Dash / Plasma-Dash); the 8 copper-brush models are not yet supported</td><td>—</td><td class="spec-val">As set in System Settings → Motor &amp; chassis</td></tr><tr><td>Chassis</td><td>21 chassis in three groups (front / mid / rear motor), filtered by the model's shaft type</td><td>—</td><td class="spec-val">As set in System Settings → Motor &amp; chassis</td></tr><tr><td>Note</td><td>Optional, up to 40 characters</td><td>—</td><td class="spec-val">—</td></tr></tbody>
 </table>
 </div>
 <div class="spec-note" data-i18n="specs.range.g1snote">One-tap automatic break-in: pick the model and the system applies the matching method, breaking the motor in to its best state in a single session before stopping on its own, with a per-round current scatter chart showing the whole process.</div>
@@ -2919,7 +2907,7 @@
 <tr><td data-i18n="specs.p.dir">Rotation Direction</td><td data-i18n="specs.v.dir">Forward / Reverse</td><td>—</td><td data-i18n="specs.d.fwd">Forward</td></tr>
 <tr><td data-i18n="specs.p.runtime">Run Time</td><td class="spec-val">10 ~ 600</td><td data-i18n="specs.u.sec">sec</td><td class="spec-val">60</td></tr>
 <tr><td data-i18n="specs.p.tol">Stable Current Tolerance</td><td class="spec-val">2 ~ 50</td><td class="spec-val">±mA</td><td class="spec-val">5</td></tr>
-<tr><td data-i18n="specs.p.stopmode">Stop Criterion</td><td data-i18n="specs.v.stopv">Time limit / Smart stable current</td><td>—</td><td data-i18n="specs.d.smartstop">Smart stable current</td></tr><tr><td data-i18n="specs.p.startcond">Start condition</td><td data-i18n="specs.v.startcond">The model and chassis shaft types must match (System Settings → Motor &amp; chassis)</td><td>—</td><td class="spec-val">—</td></tr>
+<tr><td data-i18n="specs.p.stopmode">Stop Criterion</td><td data-i18n="specs.v.stopv">Time limit / Smart stable current</td><td>—</td><td data-i18n="specs.d.smartstop">Smart stable current</td></tr>
 </tbody>
 </table>
 </div>
@@ -2941,7 +2929,7 @@
 <th data-i18n="specs.th.default">Default</th>
 </tr>
 </thead>
-<tbody data-i18n="specs.range.g5tbl"><tr><td>Overheat lock temperature</td><td>25 ~ 60°C</td><td class="spec-val">50°C</td></tr><tr><td>Temperature calibration offset</td><td>±20°C</td><td class="spec-val">0</td></tr><tr><td>Average-RPM tolerance</td><td>120 ~ 600 RPM</td><td class="spec-val">240</td></tr><tr><td>WiFi hotspot password</td><td>8 ~ 63 characters</td><td class="spec-val">Change it on first use</td></tr><tr><td>WiFi list</td><td>Remembers 8 external networks; "Add WiFi" scans and fills in the pick (hidden networks can be typed in); each entry's password can be changed; "Clear list" for handover</td><td class="spec-val">—</td></tr><tr><td>User name / country</td><td>Up to 32 characters each</td><td class="spec-val">—</td></tr><tr><td>Interface language</td><td>Chinese / English / Japanese</td><td class="spec-val">Chinese</td></tr><tr><td>Motor model</td><td>Machine-wide; the model dropdowns on every function page stay in sync; 15 Tamiya models plus "Other"</td><td class="spec-val">Hyper-Dash PRO</td></tr><tr><td>Chassis</td><td>21 chassis in three groups (front / mid / rear motor); sets forward = the car moving forward; the list is filtered by the model's shaft type; Smart Break-in, Break-in and Motor Test will not start when the model and chassis do not match; cannot be changed while running</td><td class="spec-val">Pick it on first use</td></tr><tr><td>Authenticity check</td><td>Shows the unit ID for verification on the website</td><td class="spec-val">—</td></tr><tr><td>RGB status light</td><td>Brightness 0–100%; five status styles; panel / both / built-in</td><td class="spec-val">60% / both</td></tr><tr><td>WiFi reset</td><td>Hold the on-board contact for 5 s; resets only the hotspot name and password, keeping every other setting and record</td><td class="spec-val">—</td></tr><tr><td>Module calibration</td><td>Subtracts the machine's own idle current. <b>Take the motor off the jig before starting</b>; fully automatic, about 3 minutes</td><td class="spec-val">—</td></tr><tr><td>Terminal voltage calibration</td><td>Enter four measured values from a multimeter so the displayed voltage matches what the terminals actually output</td><td class="spec-val">—</td></tr></tbody>
+<tbody data-i18n="specs.range.g5tbl"><tr><td>Overheat lock temperature</td><td>25 ~ 60°C</td><td class="spec-val">50°C</td></tr><tr><td>Temperature calibration offset</td><td>±20°C</td><td class="spec-val">0</td></tr><tr><td>Average-RPM tolerance</td><td>120 ~ 600 RPM</td><td class="spec-val">240</td></tr><tr><td>WiFi hotspot password</td><td>8 ~ 63 characters</td><td class="spec-val">Change it on first use</td></tr><tr><td>WiFi list</td><td>Remembers 8 external networks; "Add WiFi" scans and fills in the pick (hidden networks can be typed in); each entry's password can be changed; "Clear list" for handover</td><td class="spec-val">—</td></tr><tr><td>User name / country</td><td>Up to 32 characters each</td><td class="spec-val">—</td></tr><tr><td>Interface language</td><td>Chinese / English / Japanese</td><td class="spec-val">Chinese</td></tr><tr><td>Motor model</td><td>15 Tamiya models plus "Other" (machine-wide)</td><td class="spec-val">Hyper-Dash PRO</td></tr><tr><td>Chassis</td><td>21 chassis in three groups (front / mid / rear motor), filtered by the model's shaft type</td><td class="spec-val">Pick it on first use</td></tr><tr><td>Authenticity check</td><td>Shows the unit ID for verification on the website</td><td class="spec-val">—</td></tr><tr><td>RGB status light</td><td>Brightness 0–100%; five status styles; panel / both / built-in</td><td class="spec-val">60% / both</td></tr><tr><td>WiFi reset</td><td>Hold the on-board contact for 5 s; resets only the hotspot name and password, keeping every other setting and record</td><td class="spec-val">—</td></tr><tr><td>Module calibration</td><td>Subtracts the machine's own idle current. <b>Take the motor off the jig before starting</b>; fully automatic, about 3 minutes</td><td class="spec-val">—</td></tr><tr><td>Terminal voltage calibration</td><td>Enter four measured values from a multimeter so the displayed voltage matches what the terminals actually output</td><td class="spec-val">—</td></tr></tbody>
 </table>
 </div>
 <div class="spec-note" data-i18n="specs.range.g5note">Machine-wide settings; while a program is running this page leaves only "Home" active.</div>
@@ -3185,7 +3173,7 @@
       'f3b.tag2': '視覺對照圖',
       'f3b.tag3': '數學模型',
       'f3c.title': 'AI 智慧磨合',
-      'f3c.desc': '一鍵全自動磨合:<b>一場磨到這顆的最佳狀態、自動停止</b>——選型號後系統自動採用對應的磨合方式,以「電流是否還會再創新低」判定磨完,磨到位才停;<b>已磨合品直接告知不需再磨、不空跑</b>、嚴重耗損如實告知;偵測到電流失序時停機並提示檢查電刷與整流子(<b>並非所有損壞都能提前偵測</b>)。主視覺為每輪的電流落點圖,完成顯示磨前後的電流穩定度對照與停止方式。目前支援碳刷類 7 款,銅刷類 8 款暫不支援;正反轉方向依系統設定的底盤自動對應實車。',
+      'f3c.desc': '一鍵全自動磨合:<b>一場磨到這顆的最佳狀態、自動停止</b>——選型號後系統自動採用對應的磨合方式,持續量測、磨到位才停;<b>已磨合品直接告知不需再磨、不空跑</b>、嚴重耗損如實告知;偵測到電流失序時停機並提示檢查電刷與整流子(<b>並非所有損壞都能提前偵測</b>)。主視覺為每輪的電流落點圖,完成顯示磨前後的電流穩定度對照與停止方式。目前支援碳刷類 7 款,銅刷類 8 款暫不支援;正反轉方向依系統設定的底盤自動對應實車。',
       'f3c.tag1': '單場到位',
       'f3c.tag2': '電流落點圖',
       'f3c.tag3': '碳刷 7 款',
@@ -3283,8 +3271,6 @@
       't4.desc': '為每顆馬達建立首次量測基準,之後每次檢測都以「這次 vs 上次」呈現變化量,採同器同馬達原則排除個體差異 —— 不給抽象分數,只如實告訴你哪裡變了、變多少。',
       't5.title': '穩定電流鎖定演算法',
       't5.desc': '偵測電流在一段時間內趨於平穩後鎖定讀值,避免暫時擾動造成誤判,提升量測重現性。',
-      't6.title': '雜訊底線扣除',
-      't6.desc': '量測前先取得儀器本身的雜訊基準,再從結果中扣除,分離出馬達的真實訊號變化,讓微小異常也無所遁形。',
       't7.title': '電磁干擾抑制設計',
       't7.desc': '電源與感測訊號採用電磁干擾抑制設計,有效抑制馬達高頻雜訊回灌,避免感測讀值受汙染或邏輯被誤觸發。',
       't8.title': '硬體過流保護 (< 100 ms)',
@@ -3310,7 +3296,7 @@
       't18.title': '扭力預測對照圖',
       't18.desc': '以本顆實測數據推算磨合後扭力,並把它與田宮官方標準畫在同一張圖上直接對照 —— 同型號不同顆位置不同,那正是個體差異。',
       't19.title': '單場到位自動判停',
-      't19.desc': 'AI 智慧磨合在一場內持續量測,以電流是否還會再創新低判定,自動磨到該顆的最佳狀態才停止:全新品完整整型、已磨合品直接告知不需再磨、嚴重耗損如實告知 —— 磨好了,機器告訴你。',
+      't19.desc': 'AI 智慧磨合在一場內持續量測,自動磨到該顆的最佳狀態才停止:全新品完整整型、已磨合品直接告知不需再磨、嚴重耗損如實告知 —— 磨好了,機器告訴你。',
 
       // ===== Specifications 技術規格 =====
       'specs.tag': 'SPECIFICATIONS',
@@ -3361,7 +3347,7 @@
       'specs.range.g4': '馬達特性量測 · AI智慧扭力預測 · 軸承阻力測試 · 電刷接觸穩定測試',
       'specs.range.g4note': '全自動量測程序(馬達特性量測可選正/反轉,軸承阻力測試可選 2.4V / 3V),其餘無數值輸入。馬達型號為全機共用設定(田宮 15 款＋「Other」),各功能頁的型號下拉互相同步。',
       'specs.range.g5': '系統設定',
-      'specs.range.g5tbl': '<tr><td>高溫鎖定溫度</td><td>25 ~ 60&deg;C</td><td class="spec-val">50&deg;C</td></tr><tr><td>溫度校正補償</td><td>&#177;20&deg;C</td><td class="spec-val">0</td></tr><tr><td>平均轉速容差</td><td>120 ~ 600 RPM</td><td class="spec-val">240</td></tr><tr><td>WiFi 熱點密碼</td><td>8 ~ 63 字</td><td class="spec-val">首次使用請更改</td></tr><tr><td>WiFi 列表</td><td>記憶 8 組外部 WiFi;「新增 WiFi」自動掃描點選帶入(隱藏網路可手動輸入);每組可改密碼;「清空列表」轉手用</td><td class="spec-val">&#8212;</td></tr><tr><td>使用者名稱／國家</td><td>各 32 字內</td><td class="spec-val">&#8212;</td></tr><tr><td>介面語言</td><td>中文／English／日本語</td><td class="spec-val">中文</td></tr><tr><td>馬達型號</td><td>全機共用;各功能頁的型號下拉互相同步;田宮 15 款＋「Other」</td><td class="spec-val">Hyper-Dash PRO</td></tr><tr><td>底盤</td><td>前置馬達／中置馬達／後置馬達三組共 21 款;決定正轉方向＝實車前進;清單依型號軸型自動篩選;型號與底盤不符時智慧磨合／磨合程式／馬達測試無法啟動;運轉中不可更改</td><td class="spec-val">首次使用請選</td></tr><tr><td>正版查驗</td><td>顯示本機 ID,可至官網查驗頁確認</td><td class="spec-val">&#8212;</td></tr><tr><td>RGB 狀態燈</td><td>亮度 0~100%;五組狀態樣式;面板／兩者／內建</td><td class="spec-val">60%／兩者</td></tr><tr><td>WiFi 重設</td><td>機上接點長按 5 秒,僅重設熱點名稱與密碼,其他設定與紀錄全數保留</td><td class="spec-val">&#8212;</td></tr><tr><td>模組校正</td><td>扣除機器自身待機電流。<b>開始前請先把馬達從治具上取下</b>,全程自動約 3 分鐘</td><td class="spec-val">&#8212;</td></tr><tr><td>端子電壓校正</td><td>以電錶回填四點實測值,讓機上顯示電壓與端子實際輸出對齊</td><td class="spec-val">&#8212;</td></tr>',
+      'specs.range.g5tbl': '<tr><td>高溫鎖定溫度</td><td>25 ~ 60&deg;C</td><td class="spec-val">50&deg;C</td></tr><tr><td>溫度校正補償</td><td>&#177;20&deg;C</td><td class="spec-val">0</td></tr><tr><td>平均轉速容差</td><td>120 ~ 600 RPM</td><td class="spec-val">240</td></tr><tr><td>WiFi 熱點密碼</td><td>8 ~ 63 字</td><td class="spec-val">首次使用請更改</td></tr><tr><td>WiFi 列表</td><td>記憶 8 組外部 WiFi;「新增 WiFi」自動掃描點選帶入(隱藏網路可手動輸入);每組可改密碼;「清空列表」轉手用</td><td class="spec-val">&#8212;</td></tr><tr><td>使用者名稱／國家</td><td>各 32 字內</td><td class="spec-val">&#8212;</td></tr><tr><td>介面語言</td><td>中文／English／日本語</td><td class="spec-val">中文</td></tr><tr><td>馬達型號</td><td>田宮 15 款＋「Other」(全機共用)</td><td class="spec-val">Hyper-Dash PRO</td></tr><tr><td>底盤</td><td>前置馬達／中置馬達／後置馬達三組共 21 款(依型號軸型篩選)</td><td class="spec-val">首次使用請選</td></tr><tr><td>正版查驗</td><td>顯示本機 ID,可至官網查驗頁確認</td><td class="spec-val">&#8212;</td></tr><tr><td>RGB 狀態燈</td><td>亮度 0~100%;五組狀態樣式;面板／兩者／內建</td><td class="spec-val">60%／兩者</td></tr><tr><td>WiFi 重設</td><td>機上接點長按 5 秒,僅重設熱點名稱與密碼,其他設定與紀錄全數保留</td><td class="spec-val">&#8212;</td></tr><tr><td>模組校正</td><td>扣除機器自身待機電流。<b>開始前請先把馬達從治具上取下</b>,全程自動約 3 分鐘</td><td class="spec-val">&#8212;</td></tr><tr><td>端子電壓校正</td><td>以電錶回填四點實測值,讓機上顯示電壓與端子實際輸出對齊</td><td class="spec-val">&#8212;</td></tr>',
       'specs.range.g5note': '全機共用設定,運轉中此頁只留「回首頁」可按。',
       'specs.p.volt': '電壓',
       'specs.p.dir': '運轉方向',
@@ -3375,36 +3361,16 @@
       'specs.range.g1r': '馬達磨合程式 · 轉速模式 Beta（1~6 趟 × 10 階段）',
       'specs.range.g1rnote': '電壓穩定即進行換階,運轉時間為上限;跑滿時間仍推不到目標轉速時自動進行換階並標示「未達標」。目標轉速 0 = 跳過該階段。',
       'specs.range.g1s': 'AI 智慧磨合(PRO)',
+      'specs.range.g1stbl': '<tr><td>時間上限</td><td>磨到完成為止／2h／3h／4h(部分型號由系統設定,不可調)</td><td>&#8212;</td><td class="spec-val">3h</td></tr><tr><td>馬達型號</td><td>碳刷類 7 款(Hyper-Dash PRO／Mach-Dash PRO／Hyper-Dash 3／Sprint-Dash／Power-Dash／Ultra-Dash／Plasma-Dash);銅刷類 8 款暫不支援</td><td>&#8212;</td><td class="spec-val">同系統設定「馬達與底盤」</td></tr><tr><td>底盤</td><td>前置馬達／中置馬達／後置馬達三組共 21 款(依型號軸型篩選)</td><td>&#8212;</td><td class="spec-val">同系統設定「馬達與底盤」</td></tr><tr><td>備註</td><td>選填,40 字內</td><td>&#8212;</td><td class="spec-val">&#8212;</td></tr>',
       'specs.range.g1snote': '一鍵自動磨合:選型號後系統自動採用對應的磨合方式,一場磨到這顆的最佳狀態自動停止,並以每輪的電流落點圖呈現整個磨合過程。',
       'specs.range.g2note': '判停標準與磨合頁獨立設定。',
       'specs.p.stopmode': '判停標準',
       'specs.p.targetrpm': '目標轉速',
-      'specs.p.vlimit': '控速輸出上限',
       'specs.p.same': '方向 / 時間 / 冷卻 / 趟數',
-      'specs.p.timecap': '時間上限',
-      'specs.p.model': '適用型號',
       'specs.v.stopv': '純時間限制 / 智慧穩定電流',
       'specs.v.stoprpm': '嚴格 / 標準 / 寬鬆',
       'specs.v.sameas': '同電壓模式',
-      'specs.v.timecap': '磨到完成 / 2h / 3h / 4h(部分型號由系統設定,不可調)',
       'specs.v.brushed': '碳刷系列',
-      'specs.v.all15': '碳刷類 7 款(Hyper-Dash PRO／Mach-Dash PRO／Hyper-Dash 3／Sprint-Dash／Power-Dash／Ultra-Dash／Plasma-Dash),選型號後自動採用對應磨合方式;銅刷類 8 款暫不支援(啟動鈕變灰並說明)',
-      'specs.p.coach': '完成判定',
-      'specs.p.mainviz': '主視覺',
-      'specs.v.mainviz': '每輪電流落點圖;完成顯示磨前後電流穩定度對照與停止方式',
-      'specs.p.session': '單場長度',
-      'specs.v.session': '多數馬達約 1.5~2 小時',
-      'specs.p.chassis': '底盤',
-      'specs.v.chassis': '與系統設定「馬達與底盤」同步;正轉方向依底盤對應實車前進;型號與底盤軸型不符時無法啟動',
-      'specs.p.efault': '電氣失序示警',
-      'specs.v.efault': '偵測到電流失序時停機並提示檢查電刷與整流子。<b>並非所有損壞都能提前偵測</b>',
-      'specs.p.sampling': '判定取樣',
-      'specs.v.sampling': '首輪為熱身輪(不列入數據與曲線);之後每輪判定量測由系統自動準備後取樣(時間上限保護)',
-      'specs.p.startcond': '啟動條件',
-      'specs.v.startcond': '型號與底盤軸型須相符(系統設定「馬達與底盤」)',
-      'specs.v.coach': '以電流是否還會再創新低判定磨完;<b>已磨合品直接告知不需再磨、不空跑</b>;嚴重耗損如實告知不建議續磨',
-      'specs.p.stopb': '停止行為',
-      'specs.v.stopb': '按停止立即停止,本場數據保留於畫面(不留跨場歷史)',
       'specs.d.smartstop': '智慧穩定電流',
       'specs.d.std': '標準',
 
@@ -4142,7 +4108,7 @@
       'f3b.tag2': 'Comparison chart',
       'f3b.tag3': 'Math model',
       'f3c.title': 'AI Smart Break-In',
-      'f3c.desc': 'One-tap fully-automatic break-in: <b>it breaks the motor in to its best state in a single session, then stops on its own</b> &#8212; pick the model and the system applies the matching break-in method, judging completion by whether the current can still set a new low, and stopping only once it is there. <b>An already broken-in motor is told so directly instead of running for nothing</b>, and severe wear is reported straight. If the current becomes disordered it stops and prompts you to check the brushes and commutator (<b>not every fault can be caught in advance</b>). The main visual is a per-round current scatter chart; on completion it shows current stability before and after, and how it stopped. Currently 7 carbon-brush models are supported; the 8 copper-brush models are not yet. Forward and reverse follow the chassis set in System Settings so they match the real car.',
+      'f3c.desc': 'One-tap fully-automatic break-in: <b>it breaks the motor in to its best state in a single session, then stops on its own</b> &#8212; pick the model and the system applies the matching break-in method, keeps measuring, and stops only once the motor is there. <b>An already broken-in motor is told so directly instead of running for nothing</b>, and severe wear is reported straight. If the current becomes disordered it stops and prompts you to check the brushes and commutator (<b>not every fault can be caught in advance</b>). The main visual is a per-round current scatter chart; on completion it shows current stability before and after, and how it stopped. Currently 7 carbon-brush models are supported; the 8 copper-brush models are not yet. Forward and reverse follow the chassis set in System Settings so they match the real car.',
       'f3c.tag1': 'One session',
       'f3c.tag2': 'Current scatter chart',
       'f3c.tag3': '7 carbon-brush models',
@@ -4245,8 +4211,6 @@
       't4.desc': 'Each motor gets its own first-measurement baseline; every later check is shown as &quot;this time vs last time.&quot; Same-device-same-motor comparison removes individual variance — no abstract score, just what changed and by how much.',
       't5.title': 'Stable Current Latch Algorithm',
       't5.desc': 'Once the current settles over a period, the reading latches — preventing transient perturbations from causing misjudgment and boosting repeatability.',
-      't6.title': 'Noise Floor Subtraction',
-      't6.desc': 'The instrument\'s own noise baseline is captured before measurement and subtracted from the result, isolating the motor\'s true signal changes so even subtle anomalies cannot hide.',
       't7.title': 'EMI Suppression Circuit Design',
       't7.desc': 'Power and sensor lines use EMI-suppression design to effectively curb high-frequency noise fed back from the motor, preventing contamination of sensor readings or logic misfires.',
       't8.title': 'Hardware Overcurrent Cutoff (< 100 ms)',
@@ -4272,7 +4236,7 @@
       't18.title': 'Torque Prediction Chart',
       't18.desc': 'Predicts post-break-in torque from measurements taken on this very unit, plotted against the Tamiya official standard on one chart — units of the same model land in different places, and that is genuine individual variation.',
       't19.title': 'Single-Session Auto-Stop',
-      't19.desc': 'AI Smart Break-in measures continuously within one session and judges by whether the current can still set a new low, stopping only once the motor has reached its best state: a brand-new motor gets fully shaped, an already broken-in one is told so directly, and severe wear is reported straight &#8212; when it is done, the machine tells you.',
+      't19.desc': 'AI Smart Break-in keeps measuring within one session and stops only once the motor has reached its best state: a brand-new motor gets fully shaped, an already broken-in one is told so directly, and severe wear is reported straight &#8212; when it is done, the machine tells you.',
 
       // ===== Specifications =====
       'specs.tag': 'SPECIFICATIONS',
@@ -4323,7 +4287,7 @@
       'specs.range.g4': 'Motor Characterization · AI Torque Prediction · Bearing Resistance Test · Brush Contact Stability Test',
       'specs.range.g4note': 'Fully automatic measurement routines (characterization lets you pick forward/reverse, the bearing test 2.4V or 3V); no other numeric input. The motor model is a machine-wide setting (15 Tamiya models plus &quot;Other&quot;) and the model dropdowns on every page stay in sync.',
       'specs.range.g5': 'System settings',
-      'specs.range.g5tbl': '<tr><td>Overheat lock temperature</td><td>25 ~ 60&deg;C</td><td class="spec-val">50&deg;C</td></tr><tr><td>Temperature calibration offset</td><td>&#177;20&deg;C</td><td class="spec-val">0</td></tr><tr><td>Average-RPM tolerance</td><td>120 ~ 600 RPM</td><td class="spec-val">240</td></tr><tr><td>WiFi hotspot password</td><td>8 ~ 63 characters</td><td class="spec-val">Change it on first use</td></tr><tr><td>WiFi list</td><td>Remembers 8 external networks; &quot;Add WiFi&quot; scans and fills in the pick (hidden networks can be typed in); each entry\'s password can be changed; &quot;Clear list&quot; for handover</td><td class="spec-val">&#8212;</td></tr><tr><td>User name / country</td><td>Up to 32 characters each</td><td class="spec-val">&#8212;</td></tr><tr><td>Interface language</td><td>Chinese / English / Japanese</td><td class="spec-val">Chinese</td></tr><tr><td>Motor model</td><td>Machine-wide; the model dropdowns on every function page stay in sync; 15 Tamiya models plus &quot;Other&quot;</td><td class="spec-val">Hyper-Dash PRO</td></tr><tr><td>Chassis</td><td>21 chassis in three groups (front / mid / rear motor); sets forward = the car moving forward; the list is filtered by the model\'s shaft type; Smart Break-in, Break-in and Motor Test will not start when the model and chassis do not match; cannot be changed while running</td><td class="spec-val">Pick it on first use</td></tr><tr><td>Authenticity check</td><td>Shows the unit ID for verification on the website</td><td class="spec-val">&#8212;</td></tr><tr><td>RGB status light</td><td>Brightness 0&ndash;100%; five status styles; panel / both / built-in</td><td class="spec-val">60% / both</td></tr><tr><td>WiFi reset</td><td>Hold the on-board contact for 5 s; resets only the hotspot name and password, keeping every other setting and record</td><td class="spec-val">&#8212;</td></tr><tr><td>Module calibration</td><td>Subtracts the machine\'s own idle current. <b>Take the motor off the jig before starting</b>; fully automatic, about 3 minutes</td><td class="spec-val">&#8212;</td></tr><tr><td>Terminal voltage calibration</td><td>Enter four measured values from a multimeter so the displayed voltage matches what the terminals actually output</td><td class="spec-val">&#8212;</td></tr>',
+      'specs.range.g5tbl': '<tr><td>Overheat lock temperature</td><td>25 ~ 60&deg;C</td><td class="spec-val">50&deg;C</td></tr><tr><td>Temperature calibration offset</td><td>&#177;20&deg;C</td><td class="spec-val">0</td></tr><tr><td>Average-RPM tolerance</td><td>120 ~ 600 RPM</td><td class="spec-val">240</td></tr><tr><td>WiFi hotspot password</td><td>8 ~ 63 characters</td><td class="spec-val">Change it on first use</td></tr><tr><td>WiFi list</td><td>Remembers 8 external networks; &quot;Add WiFi&quot; scans and fills in the pick (hidden networks can be typed in); each entry\'s password can be changed; &quot;Clear list&quot; for handover</td><td class="spec-val">&#8212;</td></tr><tr><td>User name / country</td><td>Up to 32 characters each</td><td class="spec-val">&#8212;</td></tr><tr><td>Interface language</td><td>Chinese / English / Japanese</td><td class="spec-val">Chinese</td></tr><tr><td>Motor model</td><td>15 Tamiya models plus &quot;Other&quot; (machine-wide)</td><td class="spec-val">Hyper-Dash PRO</td></tr><tr><td>Chassis</td><td>21 chassis in three groups (front / mid / rear motor), filtered by the model\'s shaft type</td><td class="spec-val">Pick it on first use</td></tr><tr><td>Authenticity check</td><td>Shows the unit ID for verification on the website</td><td class="spec-val">&#8212;</td></tr><tr><td>RGB status light</td><td>Brightness 0&ndash;100%; five status styles; panel / both / built-in</td><td class="spec-val">60% / both</td></tr><tr><td>WiFi reset</td><td>Hold the on-board contact for 5 s; resets only the hotspot name and password, keeping every other setting and record</td><td class="spec-val">&#8212;</td></tr><tr><td>Module calibration</td><td>Subtracts the machine\'s own idle current. <b>Take the motor off the jig before starting</b>; fully automatic, about 3 minutes</td><td class="spec-val">&#8212;</td></tr><tr><td>Terminal voltage calibration</td><td>Enter four measured values from a multimeter so the displayed voltage matches what the terminals actually output</td><td class="spec-val">&#8212;</td></tr>',
       'specs.range.g5note': 'Machine-wide settings; while a program is running this page leaves only &quot;Home&quot; active.',
       'specs.p.volt': 'Voltage',
       'specs.p.dir': 'Rotation Direction',
@@ -4337,36 +4301,16 @@
       'specs.range.g1r': 'Break-in Program · Speed mode Beta (1–6 runs × 10 stages)',
       'specs.range.g1rnote': 'Advances once voltage stabilises; run time is the upper bound. If the target RPM still can\'t be reached after the full run time, it advances automatically and is flagged "not reached." Target RPM 0 = skip that stage.',
       'specs.range.g1s': 'AI Smart Break-In (PRO)',
+      'specs.range.g1stbl': '<tr><td>Time cap</td><td>Until done / 2h / 3h / 4h (fixed by the system on some models)</td><td>&#8212;</td><td class="spec-val">3h</td></tr><tr><td>Motor model</td><td>7 carbon-brush models (Hyper-Dash PRO / Mach-Dash PRO / Hyper-Dash 3 / Sprint-Dash / Power-Dash / Ultra-Dash / Plasma-Dash); the 8 copper-brush models are not yet supported</td><td>&#8212;</td><td class="spec-val">As set in System Settings &rarr; Motor &amp; chassis</td></tr><tr><td>Chassis</td><td>21 chassis in three groups (front / mid / rear motor), filtered by the model\'s shaft type</td><td>&#8212;</td><td class="spec-val">As set in System Settings &rarr; Motor &amp; chassis</td></tr><tr><td>Note</td><td>Optional, up to 40 characters</td><td>&#8212;</td><td class="spec-val">&#8212;</td></tr>',
       'specs.range.g1snote': 'One-tap automatic break-in: pick the model and the system applies the matching method, breaking the motor in to its best state in a single session before stopping on its own, with a per-round current scatter chart showing the whole process.',
       'specs.range.g2note': 'Stop criterion is set independently from the break-in page.',
       'specs.p.stopmode': 'Stop Criterion',
       'specs.p.targetrpm': 'Target RPM',
-      'specs.p.vlimit': 'Speed-control Output Cap',
       'specs.p.same': 'Direction / Time / Cooling / Passes',
-      'specs.p.timecap': 'Time Cap',
-      'specs.p.model': 'Applicable Models',
       'specs.v.stopv': 'Time limit / Smart stable current',
       'specs.v.stoprpm': 'Strict / Standard / Loose',
       'specs.v.sameas': 'Same as Voltage mode',
-      'specs.v.timecap': 'Until done / 2h / 3h / 4h (fixed by the system on some models)',
       'specs.v.brushed': 'Brushed series',
-      'specs.v.all15': '7 carbon-brush models (Hyper-Dash PRO / Mach-Dash PRO / Hyper-Dash 3 / Sprint-Dash / Power-Dash / Ultra-Dash / Plasma-Dash); picking the model selects the matching break-in method. The 8 copper-brush models are not yet supported (Start greys out with an explanation)',
-      'specs.p.coach': 'Completion verdict',
-      'specs.p.mainviz': 'Main visual',
-      'specs.v.mainviz': 'A per-round current scatter chart; on completion it shows current stability before and after, and how it stopped',
-      'specs.p.session': 'Session length',
-      'specs.v.session': 'About 1.5&ndash;2 hours for most motors',
-      'specs.p.chassis': 'Chassis',
-      'specs.v.chassis': 'Synced with System Settings &rarr; Motor &amp; chassis; forward follows the chassis so it matches the car moving forward; it will not start when the model and chassis shaft types do not match',
-      'specs.p.efault': 'Electrical-disorder warning',
-      'specs.v.efault': 'If the current becomes disordered it stops and prompts you to check the brushes and commutator. <b>Not every fault can be caught in advance</b>',
-      'specs.p.sampling': 'Judgment sampling',
-      'specs.v.sampling': 'The first round is a warm-up (not counted in the data or curve); every later judgment measurement is sampled after the system prepares automatically (protected by the time cap)',
-      'specs.p.startcond': 'Start condition',
-      'specs.v.startcond': 'The model and chassis shaft types must match (System Settings &rarr; Motor &amp; chassis)',
-      'specs.v.coach': 'Completion is judged by whether the current can still set a new low; <b>an already broken-in motor is told so directly instead of running for nothing</b>; severe wear is reported straight, with further break-in not recommended',
-      'specs.p.stopb': 'Stop behavior',
-      'specs.v.stopb': 'Stop halts immediately; this session\'s data stays on screen (no cross-session history)',
       'specs.d.smartstop': 'Smart stable current',
       'specs.d.std': 'Standard',
 
@@ -5310,7 +5254,7 @@
       'f3b.tag2': '視覚比較図',
       'f3b.tag3': '数学モデル',
       'f3c.title': 'AI スマート慣らし',
-      'f3c.desc': 'ワンタップ全自動慣らし:<b>1 セッションでこの個体の最良状態まで慣らし、自動停止</b>します——型番を選ぶとシステムが対応する慣らし方式を自動採用し、「電流がまだ最低値を更新するか」で完了を判定、仕上がるまで止めません。<b>すでに仕上がった個体はその旨を直接伝え、空回りしません</b>;重度の消耗も正直に伝えます。電流の乱れを検知すると停止し、ブラシと整流子の点検を促します(<b>すべての故障を事前に検知できるわけではありません</b>)。メインビジュアルは 1 ラウンドごとの電流散布図で、完了時は慣らし前後の電流安定度と停止のしかたを表示します。現在はカーボンブラシ 7 種に対応、銅ブラシ 8 種は未対応です;正転・逆転はシステム設定のシャーシに従い実車と一致します。',
+      'f3c.desc': 'ワンタップ全自動慣らし:<b>1 セッションでこの個体の最良状態まで慣らし、自動停止</b>します——型番を選ぶとシステムが対応する慣らし方式を自動採用し、測定を続けて仕上がるまで止めません。<b>すでに仕上がった個体はその旨を直接伝え、空回りしません</b>;重度の消耗も正直に伝えます。電流の乱れを検知すると停止し、ブラシと整流子の点検を促します(<b>すべての故障を事前に検知できるわけではありません</b>)。メインビジュアルは 1 ラウンドごとの電流散布図で、完了時は慣らし前後の電流安定度と停止のしかたを表示します。現在はカーボンブラシ 7 種に対応、銅ブラシ 8 種は未対応です;正転・逆転はシステム設定のシャーシに従い実車と一致します。',
       'f3c.tag1': '単一セッション',
       'f3c.tag2': '電流散布図',
       'f3c.tag3': 'カーボンブラシ 7 種',
@@ -5413,8 +5357,6 @@
       't4.desc': 'モーターごとに初回測定の基準を作成し、以降は「今回 vs 前回」の変化量で表示。同一機器・同一モーターの原則で個体差を排除 —— 抽象的なスコアは出さず、どこがどれだけ変わったかだけを正直に示します。',
       't5.title': '安定電流ロックアルゴリズム',
       't5.desc': '電流が一定時間で安定した後に読値をロックし、一時的な擾乱による誤判定を防ぎ、測定再現性を向上させます。',
-      't6.title': 'ノイズフロア減算',
-      't6.desc': '測定前に機器自体のノイズ基準を取得し、結果から差し引くことでモーターの真の信号変化を分離し、微小な異常も見逃しません。',
       't7.title': '電磁干渉抑制回路設計',
       't7.desc': '電源とセンサー信号に電磁干渉抑制設計を採用し、モーターの高周波ノイズの回り込みを効果的に抑制。センサー読値の汚染やロジックの誤作動を防ぎます。',
       't8.title': 'ハードウェア過電流保護（< 100 ms）',
@@ -5440,7 +5382,7 @@
       't18.title': 'トルク予測対照図',
       't18.desc': '実測データからこの個体の慣らし後トルクを推算し、タミヤ公式標準と同じ図上で直接対照 —— 同機種でも個体ごとに位置が違い、それが個体差そのものです。',
       't19.title': '1 回で完了する自動停止',
-      't19.desc': 'AI スマート慣らしは 1 セッション内で測定を続け、「電流がまだ最低値を更新するか」で判定し、その個体の最良状態に達してはじめて自動停止します:新品は完全に整形し、すでに仕上がった個体にはその旨を直接伝え、重度の消耗も正直に伝えます——仕上がったら、機械が教えてくれます。',
+      't19.desc': 'AI スマート慣らしは 1 セッション内で測定を続け、その個体の最良状態に達してはじめて自動停止します:新品は完全に整形し、すでに仕上がった個体にはその旨を直接伝え、重度の消耗も正直に伝えます——仕上がったら、機械が教えてくれます。',
       'specs.tag': 'SPECIFICATIONS',
       'specs.title': '技術仕様',
       'specs.subtitle': 'ハードウェアとソフトウェアの完全な仕様、および各機能の数値入力範囲。',
@@ -5489,7 +5431,7 @@
       'specs.range.g4': 'モーター特性測定 · AI スマートトルク予測 · ベアリング抵抗テスト · ブラシ接触安定テスト',
       'specs.range.g4note': '全自動の測定プログラム(特性測定は正転/逆転を選択可、ベアリング抵抗テストは 2.4V / 3V)、その他に数値入力はありません。型番は全機共用の設定(タミヤ 15 種＋「Other」)で、各機能ページのプルダウンは相互に同期します。',
       'specs.range.g5': 'システム設定',
-      'specs.range.g5tbl': '<tr><td>高温ロック温度</td><td>25 ~ 60&deg;C</td><td class="spec-val">50&deg;C</td></tr><tr><td>温度校正補償</td><td>&#177;20&deg;C</td><td class="spec-val">0</td></tr><tr><td>平均回転数の公差</td><td>120 ~ 600 RPM</td><td class="spec-val">240</td></tr><tr><td>WiFi ホットスポットのパスワード</td><td>8 ~ 63 字</td><td class="spec-val">初回使用時に変更を</td></tr><tr><td>WiFi リスト</td><td>外部 WiFi を 8 件記憶;「WiFi 追加」で自動スキャンして選択入力(ステルスは手動入力可);各件のパスワード変更可;「リスト消去」は譲渡時に</td><td class="spec-val">&#8212;</td></tr><tr><td>ユーザー名／国</td><td>各 32 字以内</td><td class="spec-val">&#8212;</td></tr><tr><td>表示言語</td><td>中国語／English／日本語</td><td class="spec-val">中国語</td></tr><tr><td>モーター型番</td><td>全機共用;各機能ページの型番プルダウンが相互に同期;タミヤ 15 種＋「Other」</td><td class="spec-val">Hyper-Dash PRO</td></tr><tr><td>シャーシ</td><td>フロント／ミッドシップ／リヤモーターの 3 グループ計 21 種;正転方向＝実車の前進を決定;リストは型番の軸型で自動絞り込み;型番とシャーシが合わない場合はスマート慣らし／慣らしプログラム／モーターテストが開始不可;運転中は変更不可</td><td class="spec-val">初回使用時に選択を</td></tr><tr><td>正規品認証</td><td>本機 ID を表示、公式サイトの認証ページで確認可</td><td class="spec-val">&#8212;</td></tr><tr><td>RGB ステータスライト</td><td>明るさ 0~100%;5 種のステータス様式;パネル／両方／内蔵</td><td class="spec-val">60%／両方</td></tr><tr><td>WiFi リセット</td><td>本体の接点を 5 秒長押し;ホットスポット名とパスワードのみリセットし、他の設定と記録はすべて保持</td><td class="spec-val">&#8212;</td></tr><tr><td>モジュール校正</td><td>機器自身の待機電流を差し引きます。<b>開始前にモーターを治具から外してください</b>;全自動で約 3 分</td><td class="spec-val">&#8212;</td></tr><tr><td>端子電圧校正</td><td>テスターで測った 4 点の実測値を入力し、表示電圧と端子の実出力を一致させます</td><td class="spec-val">&#8212;</td></tr>',
+      'specs.range.g5tbl': '<tr><td>高温ロック温度</td><td>25 ~ 60&deg;C</td><td class="spec-val">50&deg;C</td></tr><tr><td>温度校正補償</td><td>&#177;20&deg;C</td><td class="spec-val">0</td></tr><tr><td>平均回転数の公差</td><td>120 ~ 600 RPM</td><td class="spec-val">240</td></tr><tr><td>WiFi ホットスポットのパスワード</td><td>8 ~ 63 字</td><td class="spec-val">初回使用時に変更を</td></tr><tr><td>WiFi リスト</td><td>外部 WiFi を 8 件記憶;「WiFi 追加」で自動スキャンして選択入力(ステルスは手動入力可);各件のパスワード変更可;「リスト消去」は譲渡時に</td><td class="spec-val">&#8212;</td></tr><tr><td>ユーザー名／国</td><td>各 32 字以内</td><td class="spec-val">&#8212;</td></tr><tr><td>表示言語</td><td>中国語／English／日本語</td><td class="spec-val">中国語</td></tr><tr><td>モーター型番</td><td>タミヤ 15 種＋「Other」(全機共用)</td><td class="spec-val">Hyper-Dash PRO</td></tr><tr><td>シャーシ</td><td>フロント／ミッドシップ／リヤモーターの 3 グループ計 21 種(型番の軸型で絞り込み)</td><td class="spec-val">初回使用時に選択を</td></tr><tr><td>正規品認証</td><td>本機 ID を表示、公式サイトの認証ページで確認可</td><td class="spec-val">&#8212;</td></tr><tr><td>RGB ステータスライト</td><td>明るさ 0~100%;5 種のステータス様式;パネル／両方／内蔵</td><td class="spec-val">60%／両方</td></tr><tr><td>WiFi リセット</td><td>本体の接点を 5 秒長押し;ホットスポット名とパスワードのみリセットし、他の設定と記録はすべて保持</td><td class="spec-val">&#8212;</td></tr><tr><td>モジュール校正</td><td>機器自身の待機電流を差し引きます。<b>開始前にモーターを治具から外してください</b>;全自動で約 3 分</td><td class="spec-val">&#8212;</td></tr><tr><td>端子電圧校正</td><td>テスターで測った 4 点の実測値を入力し、表示電圧と端子の実出力を一致させます</td><td class="spec-val">&#8212;</td></tr>',
       'specs.range.g5note': '全機共用の設定です。運転中はこのページで「ホームへ」のみ操作できます。',
       'specs.p.volt': '電圧',
       'specs.p.dir': '回転方向',
@@ -5503,36 +5445,16 @@
       'specs.range.g1r': '慣らしプログラム · 回転数モード Beta（1~6 回 × 10 段階）',
       'specs.range.g1rnote': '電圧が安定すると次段階へ、運転時間は上限。時間いっぱい運転しても目標回転数に到達できない場合は自動で次段階へ進み「未達」と表示。目標回転数 0 = そのステージをスキップ。',
       'specs.range.g1s': 'AI スマート慣らし(PRO)',
+      'specs.range.g1stbl': '<tr><td>時間上限</td><td>完了まで／2h／3h／4h(一部型番はシステム固定で変更不可)</td><td>&#8212;</td><td class="spec-val">3h</td></tr><tr><td>モーター型番</td><td>カーボンブラシ 7 種(Hyper-Dash PRO／Mach-Dash PRO／Hyper-Dash 3／Sprint-Dash／Power-Dash／Ultra-Dash／Plasma-Dash);銅ブラシ 8 種は未対応</td><td>&#8212;</td><td class="spec-val">システム設定「モーターとシャーシ」に従う</td></tr><tr><td>シャーシ</td><td>フロント／ミッドシップ／リヤモーターの 3 グループ計 21 種(型番の軸型で絞り込み)</td><td>&#8212;</td><td class="spec-val">システム設定「モーターとシャーシ」に従う</td></tr><tr><td>備考</td><td>任意、40 字以内</td><td>&#8212;</td><td class="spec-val">&#8212;</td></tr>',
       'specs.range.g1snote': 'ワンタップ自動慣らし:型番を選ぶとシステムが対応する方式を自動採用し、1 セッションで最良状態まで慣らして自動停止、1 ラウンドごとの電流散布図で全過程を表示します。',
       'specs.range.g2note': '判停基準は慣らしページと独立して設定します。',
       'specs.p.stopmode': '判停基準',
       'specs.p.targetrpm': '目標回転数',
-      'specs.p.vlimit': '速度制御出力上限',
       'specs.p.same': '方向 / 時間 / 冷却 / パス数',
-      'specs.p.timecap': '時間上限',
-      'specs.p.model': '対応機種',
       'specs.v.stopv': '時間制限のみ / スマート安定電流',
       'specs.v.stoprpm': '厳格 / 標準 / 緩め',
       'specs.v.sameas': '電圧モードと同じ',
-      'specs.v.timecap': '完了まで / 2h / 3h / 4h(一部型番はシステム固定で変更不可)',
       'specs.v.brushed': 'カーボンブラシ系',
-      'specs.v.all15': 'カーボンブラシ 7 種(Hyper-Dash PRO／Mach-Dash PRO／Hyper-Dash 3／Sprint-Dash／Power-Dash／Ultra-Dash／Plasma-Dash)、型番選択で対応する慣らし方式を自動採用;銅ブラシ 8 種は未対応(開始ボタンがグレーになり理由を表示)',
-      'specs.p.coach': '完了判定',
-      'specs.p.mainviz': 'メインビジュアル',
-      'specs.v.mainviz': '1 ラウンドごとの電流散布図;完了時は慣らし前後の電流安定度と停止のしかたを表示',
-      'specs.p.session': '1 セッションの長さ',
-      'specs.v.session': '多くのモーターで約 1.5~2 時間',
-      'specs.p.chassis': 'シャーシ',
-      'specs.v.chassis': 'システム設定「モーターとシャーシ」と同期;正転方向はシャーシに従い実車の前進と一致;型番とシャーシの軸型が合わない場合は開始できません',
-      'specs.p.efault': '電気的異常の警告',
-      'specs.v.efault': '電流の乱れを検知すると停止し、ブラシと整流子の点検を促します。<b>すべての故障を事前に検知できるわけではありません</b>',
-      'specs.p.sampling': '判定サンプリング',
-      'specs.v.sampling': '初回は暖機ラウンド(データと曲線には含めません);以後の判定測定はシステムの自動準備後にサンプリングします(時間上限で保護)',
-      'specs.p.startcond': '開始条件',
-      'specs.v.startcond': '型番とシャーシの軸型が一致している必要があります(システム設定「モーターとシャーシ」)',
-      'specs.v.coach': '「電流がまだ最低値を更新するか」で完了を判定;<b>すでに仕上がった個体はその旨を直接伝え、空回りしません</b>;重度の消耗も正直に伝え、継続は非推奨とします',
-      'specs.p.stopb': '停止動作',
-      'specs.v.stopb': '停止で即時停止、今回のデータは画面に保持(セッション横断の履歴は残さない)',
       'specs.d.smartstop': 'スマート安定電流',
       'specs.d.std': '標準',
       'g.tag': 'KNOWLEDGE BASE',
