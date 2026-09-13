@@ -2326,7 +2326,7 @@
           <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg>
         </div>
         <h3 data-i18n="f6.title">歷史紀錄管理</h3>
-        <p data-i18n="f6.desc">50 筆完整磨合紀錄(含本次轉數、電壓／轉速模式、每階段暫停設定與實際等待時間;多趟紀錄逐趟檢視),JSON / CSV 匯出、簽章驗證匯入、配方一鍵套用(模式與各趟參數一併還原)。所有資料離線儲存於裝置,無雲端依賴。</p>
+        <p data-i18n="f6.desc">50 筆完整磨合紀錄(含本次轉數、電壓／轉速模式、每階段平均轉速與暫停設定、實際等待時間;多趟紀錄逐趟檢視),JSON / CSV 匯出、簽章驗證匯入、配方一鍵套用(模式與各趟參數一併還原)。所有資料離線儲存於裝置,無雲端依賴。</p>
         <div class="feature-meta">
           <span class="feature-tag">JSON / CSV</span>
           <span class="feature-tag" data-i18n="f6.tag1">50 筆紀錄</span>
@@ -4092,10 +4092,21 @@
     </div>
 
     <div class="changelog">
+      <!-- v3.12.2 -->
+      <div class="changelog-item">
+        <div class="changelog-meta">
+          <span class="version-badge latest">v3.12.2</span>
+          <span class="changelog-date">2026-09-13</span>
+        </div>
+        <div class="changelog-content">
+          <h4 data-i18n="cl.v3122.title">歷史紀錄平均轉速一律記錄</h4>
+        </div>
+      </div>
+
       <!-- v3.12.1 -->
       <div class="changelog-item">
         <div class="changelog-meta">
-          <span class="version-badge latest">v3.12.1</span>
+          <span class="version-badge">v3.12.1</span>
           <span class="changelog-date">2026-09-13</span>
         </div>
         <div class="changelog-content">
@@ -4114,16 +4125,6 @@
         </div>
       </div>
 
-      <!-- v3.11.1 -->
-      <div class="changelog-item">
-        <div class="changelog-meta">
-          <span class="version-badge">v3.11.1</span>
-          <span class="changelog-date">2026-09-10</span>
-        </div>
-        <div class="changelog-content">
-          <h4 data-i18n="cl.v3111.title">軟體更新查詢等待回饋 · 查詢自動重試</h4>
-        </div>
-      </div>
 
 
 
@@ -4344,7 +4345,7 @@
       'f5.tag1': '落點圖呈現',
       'f5.tag2': '一鍵全自動',
       'f6.title': '歷史紀錄管理',
-      'f6.desc': '50 筆完整磨合紀錄(含本次轉數、電壓／轉速模式、每階段暫停設定與實際等待時間;多趟紀錄逐趟檢視),JSON / CSV 匯出、簽章驗證匯入、配方一鍵套用(模式與各趟參數一併還原)。所有資料離線儲存於裝置,無雲端依賴。',
+      'f6.desc': '50 筆完整磨合紀錄(含本次轉數、電壓／轉速模式、每階段平均轉速與暫停設定、實際等待時間;多趟紀錄逐趟檢視),JSON / CSV 匯出、簽章驗證匯入、配方一鍵套用(模式與各趟參數一併還原)。所有資料離線儲存於裝置,無雲端依賴。',
       'f6.tag2': '離線儲存',
       'f6.tag1': '50 筆紀錄',
       'f6.tag3': '模式一併還原',
@@ -5200,9 +5201,9 @@
 
       'cl.tag': 'CHANGELOG',
       'cl.title': '韌體更新日誌',
+      'cl.v3122.title': '歷史紀錄平均轉速一律記錄',
       'cl.v3121.title': '軟體更新檢查結果保留 · 檢查期間連線自動接回',
       'cl.v3120.title': '磨合階段排程暫停 · 歷史紀錄補記模式與暫停 · 多趟紀錄逐趟檢視',
-      'cl.v3111.title': '軟體更新查詢等待回饋 · 查詢自動重試',
       'cl.subtitle': '所有版本透過線上更新自動推送至已啟用裝置。',
       'cl.NEW': '新增',
       'cl.FIX': '修正',
@@ -5284,7 +5285,7 @@
       'f5.tag1': 'Scatter chart',
       'f5.tag2': 'One-tap automatic',
       'f6.title': 'Records Management',
-      'f6.desc': '50 complete break-in records (including this run\'s revolutions, the voltage / speed mode, and each stage\'s pause setting with the actual wait time; multi-pass records are viewed pass by pass). Export to JSON / CSV, import with signature verification, and apply a recipe in one tap &#8212; the mode and every pass\'s parameters are restored together. All data is stored offline on the device, with no cloud dependency.',
+      'f6.desc': '50 complete break-in records (including this run\'s revolutions, the voltage / speed mode, each stage\'s average RPM and pause setting, and the actual wait time; multi-pass records are viewed pass by pass). Export to JSON / CSV, import with signature verification, and apply a recipe in one tap &#8212; the mode and every pass\'s parameters are restored together. All data is stored offline on the device, with no cloud dependency.',
       'f6.tag2': 'Offline storage',
       'f6.tag1': '50 records',
       'f6.tag3': 'Mode restored too',
@@ -6351,9 +6352,9 @@
 
       'cl.tag': 'CHANGELOG',
       'cl.title': 'Firmware Release Notes',
+      'cl.v3122.title': 'History always records the average RPM',
       'cl.v3121.title': 'Update-check result is kept &middot; Connection reconnects automatically during the check',
       'cl.v3120.title': 'Scheduled stage pause for break-in &middot; History now records mode and pauses &middot; Multi-pass records viewed pass by pass',
-      'cl.v3111.title': 'Update check shows waiting feedback &middot; Automatic retry on the version query',
       'cl.subtitle': 'All versions push automatically to activated devices via OTA update.',
       'cl.NEW': 'NEW',
       'cl.FIX': 'FIX',
@@ -6435,7 +6436,7 @@
       'f5.tag1': '散布図で表示',
       'f5.tag2': 'ワンタップ全自動',
       'f6.title': '履歴記録管理',
-      'f6.desc': '慣らし記録を 50 件保存(今回の回転数、電圧／回転数モード、各段階の一時停止設定と実際の待機時間を含む;複数回の記録は回ごとに閲覧)。JSON / CSV 書き出し、署名検証付き読み込み、レシピのワンタップ適用(モードと各回のパラメータをまとめて復元)。データはすべて端末内にオフライン保存され、クラウドに依存しません。',
+      'f6.desc': '慣らし記録を 50 件保存(今回の回転数、電圧／回転数モード、各段階の平均回転数と一時停止設定、実際の待機時間を含む;複数回の記録は回ごとに閲覧)。JSON / CSV 書き出し、署名検証付き読み込み、レシピのワンタップ適用(モードと各回のパラメータをまとめて復元)。データはすべて端末内にオフライン保存され、クラウドに依存しません。',
       'f6.tag2': 'オフライン保存',
       'f6.tag1': '50 件の記録',
       'f6.tag3': 'モードごと復元',
@@ -6635,9 +6636,9 @@
       'g.subtitle': '原理から実践まで、ミニ四駆モーター慣らしでよくある疑問と回答をまとめました。',
       'cl.tag': 'CHANGELOG',
       'cl.title': 'ファームウェア更新履歴',
+      'cl.v3122.title': '履歴に平均回転数を常に記録',
       'cl.v3121.title': 'ソフトウェア更新の確認結果を保持 &middot; 確認中の接続を自動で復帰',
       'cl.v3120.title': '慣らしの段階スケジュール一時停止 &middot; 履歴にモードと一時停止を追記 &middot; 複数回の記録を回ごとに閲覧',
-      'cl.v3111.title': 'ソフトウェア更新の照会に待機表示 &middot; 照会失敗時に自動リトライ',
       'cl.subtitle': 'すべてのバージョンはオンライン更新で有効化済み端末へ自動配信されます。',
       'cl.NEW': '新規',
       'cl.FIX': '修正',
