@@ -2356,11 +2356,11 @@
           <svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c2-2 3-5 3-9s-1-7-3-9m0 18c-2-2-3-5-3-9s1-7 3-9"/></svg>
         </div>
         <h3 data-i18n="f8.title">線上更新與防偽機制</h3>
-        <p data-i18n="f8.desc">每份韌體皆經數位簽章驗證;更新失敗自動回復前一版本,不變磚;查詢版本時顯示等待進度,連線較慢會提示並自動重試。</p>
+        <p data-i18n="f8.desc">每份韌體皆經數位簽章驗證;更新失敗自動回復前一版本,不變磚;查詢版本時顯示等待進度,連線較慢會提示並自動重試;重新整理或重連後會再顯示一次最近的檢查結果,檢查期間連線短暫中斷會自動接回。</p>
         <div class="feature-meta">
           <span class="feature-tag" data-i18n="f8.tag1">數位簽章</span>
           <span class="feature-tag" data-i18n="f8.tag2">自動回復前版</span>
-          <span class="feature-tag" data-i18n="f8.tag3">查詢自動重試</span>
+          <span class="feature-tag" data-i18n="f8.tag3">結果保留與自動接回</span>
         </div>
       </div>
 
@@ -4092,10 +4092,21 @@
     </div>
 
     <div class="changelog">
+      <!-- v3.12.1 -->
+      <div class="changelog-item">
+        <div class="changelog-meta">
+          <span class="version-badge latest">v3.12.1</span>
+          <span class="changelog-date">2026-09-13</span>
+        </div>
+        <div class="changelog-content">
+          <h4 data-i18n="cl.v3121.title">軟體更新檢查結果保留 · 檢查期間連線自動接回</h4>
+        </div>
+      </div>
+
       <!-- v3.12.0 -->
       <div class="changelog-item">
         <div class="changelog-meta">
-          <span class="version-badge latest">v3.12.0</span>
+          <span class="version-badge">v3.12.0</span>
           <span class="changelog-date">2026-09-13</span>
         </div>
         <div class="changelog-content">
@@ -4114,16 +4125,6 @@
         </div>
       </div>
 
-      <!-- v3.11.0 -->
-      <div class="changelog-item">
-        <div class="changelog-meta">
-          <span class="version-badge">v3.11.0</span>
-          <span class="changelog-date">2026-09-10</span>
-        </div>
-        <div class="changelog-content">
-          <h4 data-i18n="cl.v3110.title">智慧磨合依型號選邏輯 · 判停改版(碳刷) · 底盤與型號全機設定</h4>
-        </div>
-      </div>
 
 
 
@@ -4353,10 +4354,10 @@
       'f7.tag2': '跨平台',
       'f7.tag3': '繁中・EN・日本語',
       'f8.title': '線上更新與防偽機制',
-      'f8.desc': '每份韌體皆經數位簽章驗證;更新失敗自動回復前一版本,不變磚;查詢版本時顯示等待進度,連線較慢會提示並自動重試。',
+      'f8.desc': '每份韌體皆經數位簽章驗證;更新失敗自動回復前一版本,不變磚;查詢版本時顯示等待進度,連線較慢會提示並自動重試;重新整理或重連後會再顯示一次最近的檢查結果,檢查期間連線短暫中斷會自動接回。',
       'f8.tag1': '數位簽章',
       'f8.tag2': '自動回復前版',
-      'f8.tag3': '查詢自動重試',
+      'f8.tag3': '結果保留與自動接回',
       'f9.title': '三層安全保護機制',
       'f9.desc': '馬達磨合過程中,馬達產生的強烈電磁干擾、水磨合或堵轉時的瞬間電流飆升,都是傷害昂貴競賽馬達的潛在風險。MotorLab 內建三層硬體與韌體聯防 — 電磁干擾抑制設計持續被動防護、電流異常 < 100 ms 急停切斷電力、系統異常時數秒內自動恢復。',
       'f9.tag1': '電磁干擾抑制',
@@ -5199,6 +5200,7 @@
 
       'cl.tag': 'CHANGELOG',
       'cl.title': '韌體更新日誌',
+      'cl.v3121.title': '軟體更新檢查結果保留 · 檢查期間連線自動接回',
       'cl.v3120.title': '磨合階段排程暫停 · 歷史紀錄補記模式與暫停 · 多趟紀錄逐趟檢視',
       'cl.v3111.title': '軟體更新查詢等待回饋 · 查詢自動重試',
       'cl.subtitle': '所有版本透過線上更新自動推送至已啟用裝置。',
@@ -5206,7 +5208,6 @@
       'cl.FIX': '修正',
       'cl.IMPROVE': '改進',
       'cl.SECURITY': '安全',
-      'cl.v3110.title': '智慧磨合依型號選邏輯 · 判停改版(碳刷) · 底盤與型號全機設定',
       'about.tag': 'ABOUT',
       'about.title': '關於 MotorLab',
       'about.p1': 'MotorLab 是一個專注於 Mini 4WD<sup>®</sup> 馬達精密測試的獨立工作室。',
@@ -5293,7 +5294,7 @@
       'f7.tag2': 'Cross-platform',
       'f7.tag3': '繁中・EN・日本語',
       'f8.title': 'OTA Update & Tamper Protection',
-      'f8.desc': 'Every firmware image is verified by digital signature; a failed update rolls back to the previous version automatically, so it cannot brick. While it queries for a version it shows the waiting progress, warns you when the connection is slow, and retries automatically.',
+      'f8.desc': 'Every firmware image is verified by digital signature; a failed update rolls back to the previous version automatically, so it cannot brick. While it queries for a version it shows the waiting progress, warns you when the connection is slow, and retries automatically. Refreshing or reconnecting shows the most recent check result once more, and a brief connection drop during a check reconnects on its own.',
       'f8.tag1': 'Digital signature',
       'f9.title': 'Triple-Layer Safety Protection',
       'f9.desc': 'During motor break-in, strong electromagnetic interference from the motor and current surges from water break-in or rotor lockup are all real threats to expensive race motors. MotorLab integrates three layers of hardware + firmware defense: continuous passive EMI suppression, emergency current cutoff within < 100 ms, and automatic recovery within seconds if the system faults.',
@@ -5306,7 +5307,7 @@
       'f15.tag2': '4 detections',
       'f15.tag3': 'Shows reason',
       'f8.tag2': 'Auto rollback',
-      'f8.tag3': 'Query auto-retry',
+      'f8.tag3': 'Result kept, auto-reconnect',
       'f10.title': 'Global Break-in Data Library',
       'f10.desc': 'Share the break-in profiles your machine produces with the world, or download profiles from others — the original file re-imports straight into your machine.',
       'f10.tag1': 'Global',
@@ -6350,6 +6351,7 @@
 
       'cl.tag': 'CHANGELOG',
       'cl.title': 'Firmware Release Notes',
+      'cl.v3121.title': 'Update-check result is kept &middot; Connection reconnects automatically during the check',
       'cl.v3120.title': 'Scheduled stage pause for break-in &middot; History now records mode and pauses &middot; Multi-pass records viewed pass by pass',
       'cl.v3111.title': 'Update check shows waiting feedback &middot; Automatic retry on the version query',
       'cl.subtitle': 'All versions push automatically to activated devices via OTA update.',
@@ -6357,7 +6359,6 @@
       'cl.FIX': 'FIX',
       'cl.IMPROVE': 'IMPROVE',
       'cl.SECURITY': 'SECURITY',
-      'cl.v3110.title': 'Smart Break-in picks its logic by model &middot; New completion test (carbon brush) &middot; Chassis and model set machine-wide',
       'about.tag': 'ABOUT',
       'about.title': 'About MotorLab',
       'about.p1': 'MotorLab is an independent studio dedicated to precision Mini 4WD<sup>®</sup> motor diagnostics.',
@@ -6444,10 +6445,10 @@
       'f7.tag2': 'クロスプラットフォーム',
       'f7.tag3': '繁中・EN・日本語',
       'f8.title': 'オンライン更新と偽造防止機構',
-      'f8.desc': 'すべてのファームウェアはデジタル署名で検証されます;更新に失敗しても自動で前バージョンへ復帰するため文鎮化しません。バージョン照会中は待機の進捗を表示し、回線が遅い場合は警告して自動でリトライします。',
+      'f8.desc': 'すべてのファームウェアはデジタル署名で検証されます;更新に失敗しても自動で前バージョンへ復帰するため文鎮化しません。バージョン照会中は待機の進捗を表示し、回線が遅い場合は警告して自動でリトライします。再読み込みや再接続のあとは直近の確認結果をもう一度表示し、確認中に接続が一時的に切れても自動で復帰します。',
       'f8.tag1': 'デジタル署名',
       'f8.tag2': '自動ロールバック',
-      'f8.tag3': '照会の自動リトライ',
+      'f8.tag3': '結果保持と自動復帰',
       'f9.title': '三層安全保護機構',
       'f9.desc': 'モーター慣らし中、モーターが発生する強力な電磁干渉、水慣らしやロック時の瞬間的な電流急上昇は、高価な競技用モーターを傷つける潜在的リスクです。MotorLab は三層のハードウェア・ファームウェア連携防御を内蔵 — 電磁干渉抑制設計による継続的なパッシブ保護、電流異常時 < 100 ms での緊急電源遮断、システム異常時は数秒以内に自動復旧します。',
       'f9.tag1': '電磁干渉抑制',
@@ -6634,6 +6635,7 @@
       'g.subtitle': '原理から実践まで、ミニ四駆モーター慣らしでよくある疑問と回答をまとめました。',
       'cl.tag': 'CHANGELOG',
       'cl.title': 'ファームウェア更新履歴',
+      'cl.v3121.title': 'ソフトウェア更新の確認結果を保持 &middot; 確認中の接続を自動で復帰',
       'cl.v3120.title': '慣らしの段階スケジュール一時停止 &middot; 履歴にモードと一時停止を追記 &middot; 複数回の記録を回ごとに閲覧',
       'cl.v3111.title': 'ソフトウェア更新の照会に待機表示 &middot; 照会失敗時に自動リトライ',
       'cl.subtitle': 'すべてのバージョンはオンライン更新で有効化済み端末へ自動配信されます。',
@@ -6641,7 +6643,6 @@
       'cl.FIX': '修正',
       'cl.IMPROVE': '改善',
       'cl.SECURITY': 'セキュリティ',
-      'cl.v3110.title': 'スマート慣らしが型番でロジックを選択 &middot; 判定方式を刷新(カーボンブラシ) &middot; シャーシと型番を全機設定に',
       'about.tag': 'ABOUT',
       'about.title': 'MotorLab について',
       'about.p1': 'MotorLab は Mini 4WD<sup>®</sup> モーターの精密測定に特化した独立系スタジオです。',
